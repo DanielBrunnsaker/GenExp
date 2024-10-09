@@ -42,7 +42,7 @@ def save_string_to_json(path_dir, content, prefix, target, N, T, alpha, beta):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     
     # Construct the filename
-    filename = f"{prefix}_{target}_{N}_{T}_{alpha}_{beta}_{timestamp}.json"
+    filename = f"{timestamp}_{prefix}_{target}_{N}_{T}_{alpha}_{beta}.json"
     
     # Combine the path and the filename
     file_path = os.path.join(path_dir, filename)
@@ -89,7 +89,7 @@ def save_string_to_file(path_dir, content, prefix, target, N, T, alpha, beta):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     
     # Construct the filename
-    filename = f"{prefix}_{target}_{N}_{T}_{alpha}_{beta}_{timestamp}.txt"
+    filename = f"{timestamp}_{prefix}_{target}_{N}_{T}_{alpha}_{beta}.txt"
     
     # Combine the path and the filename
     file_path = os.path.join(path_dir, filename)
