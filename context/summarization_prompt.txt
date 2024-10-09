@@ -1,0 +1,12 @@
+Now reduce this protocol down to the following parameters. Do this for every control and experiment. If something is missing, use your knowledge to fill in the gaps. Each perburbation and supplementation combination should be listed as its own experiment. Every dose or slight condition change counts as a new combination. It is very important that you are consistent. Separate each experiment with the following string: ___NEW_EXPERIMENT___
+
+Selected statement: <Integer>
+Strain: <String> 
+Baseline media: <String> 
+Media supplementation: <String> 
+Media supplementation doses: List 
+Perturbation: <String> 
+Perturbation parameters: List 
+Sampling OD: <Float>
+Sampling type: <String>
+Summary: <String>

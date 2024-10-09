@@ -1,0 +1,48 @@
+condition('Treatment: 2.4mM aluminium sulfate','Treatment: 2.4mM aluminium sulfate').
+condition('Treatment: 3.9mM gadolinium (III) chloride hexahydrate','Treatment: 3.9mM gadolinium (III) chloride hexahydrate').
+%condition('standard/undefined','standard/undefined').
+condition('Temperature: elevated temperature (39°C)','Temperature: elevated temperature (39°C)').
+condition('Media: pH 3.8 low pH','Media: pH 3.8 low pH').
+condition('Treatment: 22.45μM cadmium dichloride','Treatment: 22.45μM cadmium dichloride').
+condition('Media: pH 7.5 alkaline conditions, Media:  YPD','Media: pH 7.5 alkaline conditions, Media:  YPD').
+condition('Temperature: elevated temperature (37°C)','Temperature: elevated temperature (37°C)').
+condition('Temperature: permissive temperature (30°C)','Temperature: permissive temperature (30°C)').
+condition('Treated with 0.28% (w/v), pH 2.4 hydrogen chloride','Treated with 0.28% (w/v), pH 2.4 hydrogen chloride').
+condition('Treatment: 0.4M lithium chloride','Treatment: 0.4M lithium chloride').
+condition('Media:  SMM liquid medium','Media:  SMM liquid medium').
+condition('Media:  external pH 3.0','Media:  external pH 3.0').
+condition('Treated with 3.1% (w/v), pH2.9 (S)-lactic acid','Treated with 3.1% (w/v), pH2.9 (S)-lactic acid').
+condition('Treatment: 606.1μM cadmium dichloride','Treatment: 606.1μM cadmium dichloride').
+condition('Assay:  competitive growth for 5 generations in 150 uM curcumin','Assay:  competitive growth for 5 generations in 150 uM curcumin').
+condition('Media:  YPD','Media:  YPD').
+condition('Treatment: 0.1M lithium chloride','Treatment: 0.1M lithium chloride').
+condition('Treated with 0.4% (w/v), pH 4.3 acetic acid','Treated with 0.4% (w/v), pH 4.3 acetic acid').
+condition('Media:  external pH 5.0','Media:  external pH 5.0').
+condition('Treatment: 1.75mM gadolinium','Treatment: 1.75mM gadolinium').
+condition('Treatment: 100mM lithium chloride','Treatment: 100mM lithium chloride').
+condition('pH 3.0','pH 3.0').
+condition('Treatment: 50mM lithium chloride','Treatment: 50mM lithium chloride').
+condition('Media: ethanol/glycerol nonfermentable carbon source','Media: ethanol/glycerol nonfermentable carbon source').
+condition('Treated with 0.24% (w/v), pH 2.6 hydrogen chloride','Treated with 0.24% (w/v), pH 2.6 hydrogen chloride').
+condition('Media: ph 4.5 low pH','Media: ph 4.5 low pH').
+condition('Media:  external pH 7.5','Media:  external pH 7.5').
+condition('Media containing 30% (w/v) sucrose','Media containing 30% (w/v) sucrose').
+condition('Media containing 30% (w/v) glucose','Media containing 30% (w/v) glucose').
+condition('Media:  pH 6.8 to pH 7.5, in steps of 0.1-0.2 pH units','Media:  pH 6.8 to pH 7.5, in steps of 0.1-0.2 pH units').
+condition('Media:  synthetic medium lacking inositol and choline','Media:  synthetic medium lacking inositol and choline').
+condition(' Treated with 0.5% (w/v), pH 4.2 acetic acid',' Treated with 0.5% (w/v), pH 4.2 acetic acid').
+condition('Media: pH 7.8 high pH, Media: pH 8 high pH','Media: pH 7.8 high pH, Media: pH 8 high pH').
+condition('Treatment: 202.03μM cadmium dichloride','Treatment: 202.03μM cadmium dichloride').
+condition('Treatment: 5.0mM gallium trichloride','Treatment: 5.0mM gallium trichloride').
+condition('Media:  pH 4.5','Media:  pH 4.5').
+condition('Treatment: 200mM lithium chloride','Treatment: 200mM lithium chloride').
+condition('Treatment:  SD medium','Treatment:  SD medium').
+condition('Treated with 5.1% (w/v), pH2.7 (S)-lactic acid','Treated with 5.1% (w/v), pH2.7 (S)-lactic acid').
+condition('Treatment: 67.34μM cadmium dichloride','Treatment: 67.34μM cadmium dichloride').
+condition('Treatment: 7.48μM cadmium dichloride','Treatment: 7.48μM cadmium dichloride').
+condition('Treatment: 0.2M lithium chloride','Treatment: 0.2M lithium chloride').
+condition('Media:  YPD; pH 2.6','Media:  YPD; pH 2.6').
+condition('Treatment: 2.6mM indium chloride','Treatment: 2.6mM indium chloride').
+condition('Treatment: 100-150mM lithium chloride','Treatment: 100-150mM lithium chloride').
+condition('Media:  YPD, Media: pH 7.5 alkaline conditions','Media:  YPD, Media: pH 7.5 alkaline conditions').
+condition('Media: pH 4.16 low pH','Media: pH 4.16 low pH').

@@ -1,0 +1,409 @@
+compound_name('CHEBI:77912','mutalomycin sodium salt').
+compound_name('CHEBI:34779','glyoxal').
+compound_name('CHEBI:23378','copper cation').
+compound_name('CHEBI:34887','nickel dichloride').
+compound_name('CHEBI:29101','sodium(1+)').
+compound_name('CHEBI:15366','acetic acid').
+compound_name('CHEBI:40036','amitrole').
+compound_name('CHEBI:17071','glycolaldehyde').
+compound_name('CHEBI:84070','sodium arsenate').
+compound_name('CHEBI:35962','sorbic acid').
+compound_name('CHEBI:15379','dioxygen').
+compound_name('CHEBI:28600','farnesol').
+compound_name('CHEBI:9710','trifluoperazine hydrochloride').
+compound_name('CHEBI:4724','dyclonine').
+compound_name('CHEBI:30769','citric acid').
+compound_name('CHEBI:16240','hydrogen peroxide').
+compound_name('CHEBI:49470','aluminium(3+)').
+compound_name('CHEBI:16261','chitosan').
+compound_name('CHEBI:200420','leucanicidin macrolide antibiotic').
+compound_name('CHEBI:412516','5-hydroxymethylfurfural').
+compound_name('CHEBI:84043','gallium(3+)').
+compound_name('CHEBI:33118','boric acid').
+compound_name('CHEBI:16547','coniferyl aldehyde').
+compound_name('CHEBI:15729','ornithine').
+compound_name('CHEBI:15862','ethylamine').
+compound_name('CHEBI:77936','5-(tetradecyloxy)-2-furoic acid').
+compound_name('CHEBI:82672','pomecin A').
+compound_name('CHEBI:49847','rubidium(1+)').
+compound_name('CHEBI:17076','streptomycin').
+compound_name('CHEBI:27641','cycloheximide').
+compound_name('CHEBI:7565','nifedipine').
+compound_name('CHEBI:75046','phleomycin D1').
+compound_name('CHEBI:35807','N-nitrosodimethylamine').
+compound_name('CHEBI:230243','verrucarin A').
+compound_name('CHEBI:36386','dichloroacetic acid').
+compound_name('CHEBI:27208','unsaturated fatty acid').
+compound_name('CHEBI:78038','3-nitroso-2-phenylimidazo[1,2-a]pyridine').
+compound_name('CHEBI:78156','mucidin').
+compound_name('CHEBI:63945','ferrozine(2-)').
+compound_name('CHEBI:30812','iron dichloride').
+compound_name('CHEBI:83924','strobilurin B').
+compound_name('CHEBI:27701','oxytetracycline').
+compound_name('CHEBI:49668','gefitinib').
+compound_name('CHEBI:78157','bathophenanthrolinebisulfonic acid disodium 4,7-diphenyl-1,10-phenanthroline 4,4-disulfonate').
+compound_name('CHEBI:83634','alkylguanidinium biocide').
+compound_name('CHEBI:68478','everolimus').
+compound_name('CHEBI:78250','valerylsalicylic acid').
+compound_name('CHEBI:77693','7-chlorotetrazolo [5,1-c]benzo[1,2,4]triazine CTBT').
+compound_name('CHEBI:42106','L-1,4-dithiothreitol').
+compound_name('CHEBI:61049','tacrolimus (anhydrous)').
+compound_name('CHEBI:44884','pentan-1-ol').
+compound_name('CHEBI:63041','manganese(II) chloride').
+compound_name('CHEBI:77942','tavaborole').
+compound_name('CHEBI:77880','boromycin').
+compound_name('CHEBI:36383','strontium dichloride').
+compound_name('CHEBI:78673','cumene hydroperoxide').
+compound_name('CHEBI:30763','4-hydroxybenzoic acid').
+compound_name('CHEBI:26523','reactive oxygen species').
+compound_name('CHEBI:3638','chloroquine').
+compound_name('CHEBI:75211','tannic acid').
+compound_name('CHEBI:52717','bortezomib').
+compound_name('CHEBI:49828','praseodymium atom').
+compound_name('CHEBI:28939','N-acetyl-L-cysteine').
+compound_name('CHEBI:29036','copper(2+)').
+compound_name('CHEBI:83161','St. Johns wort extract').
+compound_name('CHEBI:30832','adipic acid').
+compound_name('CHEBI:28928','angelicin').
+compound_name('CHEBI:5100','flucytosine').
+compound_name('CHEBI:40303','lovastatin').
+compound_name('CHEBI:35696','cobalt dichloride').
+compound_name('CHEBI:62946','ammonium sulfate').
+compound_name('CHEBI:83961','zaragozic acid A derivative').
+compound_name('CHEBI:60281','N(6),N(6)-dimethyladenine').
+compound_name('CHEBI:17183','sanguinarine').
+compound_name('CHEBI:4735','ethylenediaminetetraacetic acid').
+compound_name('CHEBI:5385','enantiomer gliotoxin').
+compound_name('CHEBI:83934','zaragozic acid C').
+compound_name('CHEBI:28789','glucitol').
+compound_name('CHEBI:78695','cantharidic acid').
+compound_name('CHEBI:25255','methyl methanesulfonate').
+compound_name('CHEBI:6198','(S)-azetidine-2-carboxylic acid').
+compound_name('CHEBI:69136','latrunculin A').
+compound_name('CHEBI:36550','sorbate').
+compound_name('CHEBI:63609','mefloquine').
+compound_name('CHEBI:49713','lithium(1+)').
+compound_name('CHEBI:45373','sulfanilamide').
+compound_name('CHEBI:22689','bafilomycin A1').
+compound_name('CHEBI:77095','flubendazole').
+compound_name('CHEBI:84057','trapoxin A').
+compound_name('CHEBI:3930','cryptolepine').
+compound_name('CHEBI:17642','pentachlorophenol').
+compound_name('CHEBI:46645','isobutanol').
+compound_name('CHEBI:155904','(+)-albicanol').
+compound_name('CHEBI:7934','paromomycin').
+compound_name('CHEBI:17741','N,N-dimethylformamide').
+compound_name('CHEBI:28755','2,4,6-trichlorophenol').
+compound_name('CHEBI:156524','cleisthantin derivative').
+compound_name('CHEBI:32139','sodium hydrogencarbonate').
+compound_name('CHEBI:24636','proton').
+compound_name('CHEBI:49976','zinc dichloride').
+compound_name('CHEBI:50145','fenpropimorph').
+compound_name('CHEBI:23414','copper(II) sulfate').
+compound_name('CHEBI:156510','CG-1521').
+compound_name('CHEBI:2762','antimycin A').
+compound_name('CHEBI:84073','aminocandin').
+compound_name('CHEBI:7507','neomycin').
+compound_name('CHEBI:45979','thiabendazole').
+compound_name('CHEBI:42068','idarubicin').
+compound_name('CHEBI:28078','4-chlorophenol').
+compound_name('CHEBI:64090','tert-butyl hydroperoxide').
+compound_name('CHEBI:18346','vanillin').
+compound_name('CHEBI:16411','indole-3-acetic acid').
+compound_name('CHEBI:32954','sodium acetate').
+compound_name('CHEBI:63039','caesium chloride').
+compound_name('CHEBI:15854','quinine').
+compound_name('CHEBI:48775','cadmium(2+)').
+compound_name('CHEBI:74619','aclacinomycin A').
+compound_name('CHEBI:47519','ketoconazole').
+compound_name('CHEBI:75400','calmidazolium').
+compound_name('CHEBI:29865','benzo[a]pyrene').
+compound_name('CHEBI:645509','diltiazem hydrochloride').
+compound_name('CHEBI:15343','acetaldehyde').
+compound_name('CHEBI:78649','edelfosine').
+compound_name('CHEBI:16767','3,4-dichloroaniline').
+compound_name('CHEBI:8305','Polygodial').
+compound_name('CHEBI:27607','thymol').
+compound_name('CHEBI:17243','mono(2-ethylhexyl) phthalate').
+compound_name('CHEBI:78161','tetraethylammonium chloride').
+compound_name('CHEBI:609827','L-canavanine').
+compound_name('CHEBI:49786','nickel(2+)').
+compound_name('CHEBI:17158','methylglyoxal').
+compound_name('CHEBI:37947','benzothiazoles').
+compound_name('CHEBI:78013','linoleic acid hydroperoxide').
+compound_name('CHEBI:83948','dihydrocanadensolide').
+compound_name('CHEBI:49703','latrunculin B').
+compound_name('CHEBI:63063','cadmium cation').
+compound_name('CHEBI:34956','ruthenium red').
+compound_name('CHEBI:15365','acetylsalicylic acid').
+compound_name('CHEBI:2504','aflatoxin B1').
+compound_name('CHEBI:44423','hydroxyurea').
+compound_name('CHEBI:44975','1,10-phenanthroline').
+compound_name('CHEBI:32372','palmitoleate').
+compound_name('CHEBI:75283','miltefosine').
+compound_name('CHEBI:84396','chondramide derivative').
+compound_name('CHEBI:28748','doxorubicin').
+compound_name('CHEBI:35456','cadmium dichloride').
+compound_name('CHEBI:8489','propiconazole').
+compound_name('CHEBI:50016','S-{2-[4-(dihydroxyarsino)phenylamino]-2-oxoethyl}-glutathione').
+compound_name('CHEBI:55517','trichothecene').
+compound_name('CHEBI:78160','bleomycin A5').
+compound_name('CHEBI:83950','SDZ 90-215').
+compound_name('CHEBI:82622','leucascandrolide A congener').
+compound_name('CHEBI:73167','concanamycin A').
+compound_name('CHEBI:18176','2-coumaric acid').
+compound_name('CHEBI:31823','mercury dichloride').
+compound_name('CHEBI:156511','poacic acid').
+compound_name('CHEBI:17698','chloramphenicol').
+compound_name('CHEBI:74460','5-chloro-7-iodoquinolin-8-ol').
+compound_name('CHEBI:25461','myxothiazol').
+compound_name('CHEBI:47807','sulforaphane').
+compound_name('CHEBI:41872','dequalinium').
+compound_name('CHEBI:16738','2,4-dichlorophenol').
+compound_name('CHEBI:2663','amiodarone').
+compound_name('CHEBI:82825','neothyonidioside').
+compound_name('CHEBI:16838','polyphosphate').
+compound_name('CHEBI:63056','zinc cation').
+compound_name('CHEBI:24875','iron cation').
+compound_name('CHEBI:28087','glycogen').
+compound_name('CHEBI:4725','dyclonine hydrochloride').
+compound_name('CHEBI:34630','chlorpropham').
+compound_name('CHEBI:84050','trabectedin').
+compound_name('CHEBI:556075','radicicol').
+compound_name('CHEBI:582124','derivative myriocin').
+compound_name('CHEBI:34892','nocodazole').
+compound_name('CHEBI:27666','actinomycin D').
+compound_name('CHEBI:41218','mercaptoethanol').
+compound_name('CHEBI:63632','topotecan').
+compound_name('CHEBI:27732','caffeine').
+compound_name('CHEBI:28876','melphalan').
+compound_name('CHEBI:31941','oxaliplatin').
+compound_name('CHEBI:34698','diethyl maleate').
+compound_name('CHEBI:474180','caspofungin').
+compound_name('CHEBI:16393','sphingosine').
+compound_name('CHEBI:4917','eugenol').
+compound_name('CHEBI:77752','LTX-109').
+compound_name('CHEBI:35176','zinc sulfate').
+compound_name('CHEBI:28545','valinomycin').
+compound_name('CHEBI:6636','magnesium dichloride').
+compound_name('CHEBI:7625','nordihydroguaiaretic acid').
+compound_name('CHEBI:59063','polymyxin B2').
+compound_name('CHEBI:74846','azaserine').
+compound_name('CHEBI:16842','formaldehyde').
+compound_name('CHEBI:39127','magnesium cation').
+compound_name('CHEBI:156433','bis(S-citronellalthiosemicarbazonato)nickel(II)').
+compound_name('CHEBI:3764','clotrimazole').
+compound_name('CHEBI:78661','borrelidin').
+compound_name('CHEBI:17620','ferulic acid').
+compound_name('CHEBI:34873','N-nitrosodiethylamine').
+compound_name('CHEBI:35668','6-azauridine').
+compound_name('CHEBI:48607','lithium chloride').
+compound_name('CHEBI:2666','amitriptyline').
+compound_name('CHEBI:64652','enniatin A1').
+compound_name('CHEBI:22907','bleomycin').
+compound_name('CHEBI:77319','oltipraz').
+compound_name('CHEBI:28885','butan-1-ol').
+compound_name('CHEBI:3647','chlorpromazine').
+compound_name('CHEBI:78887','tirapazamine').
+compound_name('CHEBI:9200','soraphen A').
+compound_name('CHEBI:29832','sulfur(1+)').
+compound_name('CHEBI:171741','cerulenin').
+compound_name('CHEBI:28831','propan-1-ol').
+compound_name('CHEBI:77543','ebselen').
+compound_name('CHEBI:50292','cadmium sulfate').
+compound_name('CHEBI:27656','camptothecin').
+compound_name('CHEBI:77773','sodium selenide').
+compound_name('CHEBI:29016','arginine').
+compound_name('CHEBI:29035','manganese(2+)').
+compound_name('CHEBI:422','(S)-lactic acid').
+compound_name('CHEBI:29582','ascomycin').
+compound_name('CHEBI:17634','D-glucose').
+compound_name('CHEBI:197726','ascosteroside terpenoid').
+compound_name('CHEBI:49664','indium(3+)').
+compound_name('CHEBI:77879','azalomycin B elaiophylin').
+compound_name('CHEBI:48240','chromium trioxide').
+compound_name('CHEBI:53503','cobalt chloride hexahydrate').
+compound_name('CHEBI:156434','5-[[3-(1-phenylethoxy)-4-(2-phenylethoxy)phenyl]methylene]-4-oxo-2-thioxo-3-thiazolidineacetic acid').
+compound_name('CHEBI:5292','geldanamycin').
+compound_name('CHEBI:30772','butyric acid').
+compound_name('CHEBI:168396','mycophenolic acid').
+compound_name('CHEBI:46024','trichostatin A').
+compound_name('CHEBI:83949','N-succinimidyl N-methylcarbamate').
+compound_name('CHEBI:29678','sodium arsenite').
+compound_name('CHEBI:338412','(-)-anisomycin').
+compound_name('CHEBI:78688','2,4-diacetylphloroglucinol').
+compound_name('CHEBI:195528','NPD6433').
+compound_name('CHEBI:3312','calcium dichloride').
+compound_name('CHEBI:69621','trichothecin-3-OH trichothecin').
+compound_name('CHEBI:17790','methanol').
+compound_name('CHEBI:30740','ethylene glycol bis(2-aminoethyl)tetraacetic acid').
+compound_name('CHEBI:31550','epothilon B analog epothilone').
+compound_name('CHEBI:157744','4-methylcyclohexanemethanol').
+compound_name('CHEBI:16389','ubiquinones').
+compound_name('CHEBI:78672','rubidium chloride').
+compound_name('CHEBI:10023','voriconazole').
+compound_name('CHEBI:30089','acetate').
+compound_name('CHEBI:17939','puromycin').
+compound_name('CHEBI:28262','dimethyl sulfoxide').
+compound_name('CHEBI:4356','desferrioxamine B').
+compound_name('CHEBI:138889','6-diazo-5-oxo-L-norleucine').
+compound_name('CHEBI:50836','zinc oxide nanoparticle').
+compound_name('CHEBI:77940','alborixin').
+compound_name('CHEBI:17883','hydrogen chloride').
+compound_name('CHEBI:78758','propyl dihydroferulate').
+compound_name('CHEBI:37943','colistin').
+compound_name('CHEBI:6532','loperamide').
+compound_name('CHEBI:28837','octanoic acid').
+compound_name('CHEBI:53745','6-azauracil').
+compound_name('CHEBI:4883','ethidium bromide').
+compound_name('CHEBI:41977','daunorubicin').
+compound_name('CHEBI:30768','propionic acid').
+compound_name('CHEBI:64648','enniatin derivative enniatin').
+compound_name('CHEBI:16566','sphinganine').
+compound_name('CHEBI:31264','benzethonium chloride').
+compound_name('CHEBI:34905','paraquat').
+compound_name('CHEBI:78153','2-dimethylaminoethyl chloride').
+compound_name('CHEBI:77779','tetrindole mesylate').
+compound_name('CHEBI:201297','enniatin B1 enniatin').
+compound_name('CHEBI:78015','3-nitroso-2-phenylimidazo[1,2-a]pyrimidine').
+compound_name('CHEBI:9448','terbinafine').
+compound_name('CHEBI:28925','mechlorethamine').
+compound_name('CHEBI:15746','spermine').
+compound_name('CHEBI:25675','oligomycin').
+compound_name('CHEBI:15738','derivative staurosporine').
+compound_name('CHEBI:15866','2-deoxy-D-glucose').
+compound_name('CHEBI:31835','methylparaben').
+compound_name('CHEBI:16236','ethanol').
+compound_name('CHEBI:16830','methylamine').
+compound_name('CHEBI:17403','3-chloro-L-alanine').
+compound_name('CHEBI:83160','Echinacea extract').
+compound_name('CHEBI:176579','N-nitroso-N-methyl-4-aminobutyric acid').
+compound_name('CHEBI:27902','tetracycline').
+compound_name('CHEBI:27386','cinnamic acid').
+compound_name('CHEBI:16856','glutathione').
+compound_name('CHEBI:28094','2,2,2-trichloroethanol').
+compound_name('CHEBI:156382','jawsamycin').
+compound_name('CHEBI:26836','sulfuric acid').
+compound_name('CHEBI:15733','N-methylaniline').
+compound_name('CHEBI:172922','ethylzingerone').
+compound_name('CHEBI:7569','nigericin').
+compound_name('CHEBI:30751','formic acid').
+compound_name('CHEBI:6923','miconazole').
+compound_name('CHEBI:50011','Calcofluor White').
+compound_name('CHEBI:25540','Neonicotinoid insectide').
+compound_name('CHEBI:77986','dibenziodolium').
+compound_name('CHEBI:42725','3-methyl-3H-imidazo[4,5-f]quinolin-2-amine').
+compound_name('CHEBI:79377','elesclomol-Cu(II)').
+compound_name('CHEBI:35607','trisodium vanadate').
+compound_name('CHEBI:31355','carboplatin').
+compound_name('CHEBI:17234','glucose').
+compound_name('CHEBI:84037','ravidomycin').
+compound_name('CHEBI:9348','sulfometuron methyl').
+compound_name('CHEBI:30351','2,2-bipyridine').
+compound_name('CHEBI:100147','nalidixic acid').
+compound_name('CHEBI:15368','acrolein').
+compound_name('CHEBI:46345','5-fluorouracil').
+compound_name('CHEBI:45453','sinefungin').
+compound_name('CHEBI:83620','B 581').
+compound_name('CHEBI:41033','benzamidine').
+compound_name('CHEBI:81922','flusilazole').
+compound_name('CHEBI:34653','Congo Red').
+compound_name('CHEBI:28716','palmitoleic acid').
+compound_name('CHEBI:34689','Dichlorophen').
+compound_name('CHEBI:37239','molybdenum cation').
+compound_name('CHEBI:60888','BAPTA').
+compound_name('CHEBI:9168','sirolimus').
+compound_name('CHEBI:27504','mitomycin C').
+compound_name('CHEBI:39099','calcium ion').
+compound_name('CHEBI:6856','methyl caffeate').
+compound_name('CHEBI:81970','penconazole').
+compound_name('CHEBI:32145','sodium hydroxide').
+compound_name('CHEBI:46020','tetramethylammonium').
+compound_name('CHEBI:81781','tebuconazole').
+compound_name('CHEBI:17855','triglyceride').
+compound_name('CHEBI:28216','methylmercury chloride').
+compound_name('CHEBI:42017','2,4-dinitrophenol').
+compound_name('CHEBI:16243','quercetin').
+compound_name('CHEBI:7553','niclosamide').
+compound_name('CHEBI:18320','1,4-dithiothreitol').
+compound_name('CHEBI:29866','arsenite(3-)').
+compound_name('CHEBI:3139','bleomycin A2').
+compound_name('CHEBI:3962','curcumin').
+compound_name('CHEBI:38561','fluvastatin').
+compound_name('CHEBI:17992','sucrose').
+compound_name('CHEBI:16976','hygromycin B').
+compound_name('CHEBI:18135','catechol').
+compound_name('CHEBI:16995','oxalic acid').
+compound_name('CHEBI:82642','dihydromotuporamine C').
+compound_name('CHEBI:45924','trimethoprim').
+compound_name('CHEBI:16543','N(2)-acetyl-L-ornithine').
+compound_name('CHEBI:16196','oleic acid').
+compound_name('CHEBI:4811','epoxiconazole').
+compound_name('CHEBI:49807','lead(2+)').
+compound_name('CHEBI:172376','lithium hexafluorophosphate').
+compound_name('CHEBI:18397','2-phenylethylamine').
+compound_name('CHEBI:164200','triclosan').
+compound_name('CHEBI:52082','pibenzimol').
+compound_name('CHEBI:75458','carbonyl cyanide p-trifluoromethoxyphenylhydrazone').
+compound_name('CHEBI:16397','formamide').
+compound_name('CHEBI:36616','quinoxaline').
+compound_name('CHEBI:34696','dieldrin').
+compound_name('CHEBI:52672','rhodamine 6G').
+compound_name('CHEBI:3015','benomyl').
+compound_name('CHEBI:8984','sodium dodecyl sulfate').
+compound_name('CHEBI:83959','hygrolidin').
+compound_name('CHEBI:38309','GDP-beta-S').
+compound_name('CHEBI:33467','phosphorus(1+)').
+compound_name('CHEBI:34385','4-aminopyridine').
+compound_name('CHEBI:67731','scalaradial').
+compound_name('CHEBI:36272','tungstic acid').
+compound_name('CHEBI:26710','sodium chloride').
+compound_name('CHEBI:77921','21-deoxyconcanamycin A').
+compound_name('CHEBI:52289','wortmannin').
+compound_name('CHEBI:27412','gentamycin C1').
+compound_name('CHEBI:83631','octyl gallate').
+compound_name('CHEBI:65101','2-hydroxyhexadecanoic acid').
+compound_name('CHEBI:78782','pyrrolidine dithiocarbamate').
+compound_name('CHEBI:25516','nickel cation').
+compound_name('CHEBI:75295','compound 48/80').
+compound_name('CHEBI:81788','cymoxanil').
+compound_name('CHEBI:63020','yttrium chloride').
+compound_name('CHEBI:8711','quinacrine').
+compound_name('CHEBI:49701','lanthanum(3+)').
+compound_name('CHEBI:46081','fluconazole').
+compound_name('CHEBI:83162','propolis extract').
+compound_name('CHEBI:49005','deferasirox').
+compound_name('CHEBI:9288','streptozocin').
+compound_name('CHEBI:83928','tubulozole').
+compound_name('CHEBI:7451','naftifine').
+compound_name('CHEBI:30823','oleate').
+compound_name('CHEBI:27585','selenomethionine').
+compound_name('CHEBI:17924','D-glucitol').
+compound_name('CHEBI:31398','ciclopirox olamine').
+compound_name('CHEBI:23336','cobalt cation').
+compound_name('CHEBI:32588','potassium chloride').
+compound_name('CHEBI:77850','toxaphene').
+compound_name('CHEBI:44185','methotrexate').
+compound_name('CHEBI:4031','cyclosporin A').
+compound_name('CHEBI:75044','phleomycin').
+compound_name('CHEBI:8653','pyocyanine').
+compound_name('CHEBI:29103','potassium(1+)').
+compound_name('CHEBI:25155','manganese cation').
+compound_name('CHEBI:27617','monensin A').
+compound_name('CHEBI:27899','cisplatin').
+compound_name('CHEBI:53785','alverine citrate').
+compound_name('CHEBI:84365','cladoniamide derivative').
+compound_name('CHEBI:16907','4-nitroquinoline N-oxide').
+compound_name('CHEBI:24848','inositol').
+compound_name('CHEBI:61148','drimenol').
+compound_name('CHEBI:15428','glycine').
+compound_name('CHEBI:49618','gadolinium(3+)').
+compound_name('CHEBI:88298','FR171456').
+compound_name('CHEBI:29699','tunicamycin').
+compound_name('CHEBI:114786','sodium disulfite').
+compound_name('CHEBI:27616','psoralen').
+compound_name('CHEBI:53001','nickel sulfate').
+compound_name('CHEBI:28741','sodium fluoride').
+compound_name('CHEBI:29014','cordycepin').
+compound_name('CHEBI:8357','pramocaine').
+compound_name('CHEBI:28420','p-chloromercuribenzoic acid').

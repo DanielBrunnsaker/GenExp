@@ -1,0 +1,1190 @@
+[features from good clauses]
+
+[pos cover = 3931 neg cover = 0] [pos-neg] [3931]
+
+feature(1,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C))).
+
+[pos cover = 588 neg cover = 0] [pos-neg] [588]
+
+feature(2,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C))).
+
+[pos cover = 852 neg cover = 0] [pos-neg] [852]
+
+feature(3,(gene(A):-phenotype(A,'decreased metal resistance',B,C))).
+
+[pos cover = 2867 neg cover = 0] [pos-neg] [2867]
+
+feature(4,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C))).
+
+[pos cover = 979 neg cover = 0] [pos-neg] [979]
+
+feature(5,(gene(A):-phenotype(A,'increased heat sensitivity',B,C))).
+
+[pos cover = 899 neg cover = 0] [pos-neg] [899]
+
+feature(6,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C))).
+
+[pos cover = 354 neg cover = 0] [pos-neg] [354]
+
+feature(7,(gene(A):-phenotype(A,'increased metal resistance',B,C))).
+
+[pos cover = 180 neg cover = 0] [pos-neg] [180]
+
+feature(8,(gene(A):-phenotype(A,'increased cell size',B,C))).
+
+[pos cover = 636 neg cover = 0] [pos-neg] [636]
+
+feature(9,(gene(A):-phenotype(A,'increased chemical compound accumulation',B,C))).
+
+[pos cover = 557 neg cover = 0] [pos-neg] [557]
+
+feature(10,(gene(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C))).
+
+[pos cover = 40 neg cover = 0] [pos-neg] [40]
+
+feature(11,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'(+)-albicanol'))).
+
+[pos cover = 487 neg cover = 0] [pos-neg] [487]
+
+feature(24,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,cycloheximide))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(26,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'butan-1-ol'))).
+
+[pos cover = 29 neg cover = 0] [pos-neg] [29]
+
+feature(27,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,glucose))).
+
+[pos cover = 29 neg cover = 0] [pos-neg] [29]
+
+feature(28,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),condition(C,'Media containing 30% (w/v) glucose'))).
+
+[pos cover = 53 neg cover = 0] [pos-neg] [53]
+
+feature(33,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'indole-3-acetic acid'))).
+
+[pos cover = 332 neg cover = 0] [pos-neg] [332]
+
+feature(34,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,bleomycin))).
+
+[pos cover = 393 neg cover = 0] [pos-neg] [393]
+
+feature(35,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'acetic acid'))).
+
+[pos cover = 169 neg cover = 0] [pos-neg] [169]
+
+feature(36,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),condition(C,'Treated with 0.4% (w/v), pH 4.3 acetic acid'))).
+
+[pos cover = 133 neg cover = 0] [pos-neg] [133]
+
+feature(37,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'5-fluorouracil'))).
+
+[pos cover = 205 neg cover = 0] [pos-neg] [205]
+
+feature(39,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,fenpropimorph))).
+
+[pos cover = 162 neg cover = 0] [pos-neg] [162]
+
+feature(40,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,methylamine))).
+
+[pos cover = 189 neg cover = 0] [pos-neg] [189]
+
+feature(41,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'chondramide derivative'))).
+
+[pos cover = 122 neg cover = 0] [pos-neg] [122]
+
+feature(42,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'propolis extract'))).
+
+[pos cover = 819 neg cover = 0] [pos-neg] [819]
+
+feature(43,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'CG-1521'))).
+
+[pos cover = 141 neg cover = 0] [pos-neg] [141]
+
+feature(44,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,mefloquine))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(45,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol))).
+
+[pos cover = 106 neg cover = 0] [pos-neg] [106]
+
+feature(46,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),condition(C,'Media:  YPD'))).
+
+[pos cover = 422 neg cover = 0] [pos-neg] [422]
+
+feature(47,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,hydroxyurea))).
+
+[pos cover = 254 neg cover = 0] [pos-neg] [254]
+
+feature(48,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,fluconazole))).
+
+[pos cover = 316 neg cover = 0] [pos-neg] [316]
+
+feature(49,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'dimethyl sulfoxide'))).
+
+[pos cover = 250 neg cover = 0] [pos-neg] [250]
+
+feature(50,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,quinine))).
+
+[pos cover = 58 neg cover = 0] [pos-neg] [58]
+
+feature(51,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,valinomycin))).
+
+[pos cover = 22 neg cover = 0] [pos-neg] [22]
+
+feature(52,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'enniatin B1 enniatin'))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(53,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,sirolimus))).
+
+[pos cover = 148 neg cover = 0] [pos-neg] [148]
+
+feature(54,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'1,4-dithiothreitol'))).
+
+[pos cover = 42 neg cover = 0] [pos-neg] [42]
+
+feature(55,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'(S)-azetidine-2-carboxylic acid'))).
+
+[pos cover = 448 neg cover = 0] [pos-neg] [448]
+
+feature(56,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'hygromycin B'))).
+
+[pos cover = 32 neg cover = 0] [pos-neg] [32]
+
+feature(57,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'concanamycin A'))).
+
+[pos cover = 132 neg cover = 0] [pos-neg] [132]
+
+feature(58,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,palmitoleate))).
+
+[pos cover = 39 neg cover = 0] [pos-neg] [39]
+
+feature(59,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'adipic acid'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(60,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'ammonium sulfate'))).
+
+[pos cover = 57 neg cover = 0] [pos-neg] [57]
+
+feature(61,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'enniatin derivative enniatin'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(62,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,everolimus))).
+
+[pos cover = 530 neg cover = 0] [pos-neg] [530]
+
+feature(63,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,caffeine))).
+
+[pos cover = 230 neg cover = 0] [pos-neg] [230]
+
+feature(64,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'sodium disulfite'))).
+
+[pos cover = 187 neg cover = 0] [pos-neg] [187]
+
+feature(65,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'calcium dichloride'))).
+
+[pos cover = 153 neg cover = 0] [pos-neg] [153]
+
+feature(66,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,wortmannin))).
+
+[pos cover = 72 neg cover = 0] [pos-neg] [72]
+
+feature(67,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'sulfometuron methyl'))).
+
+[pos cover = 404 neg cover = 0] [pos-neg] [404]
+
+feature(68,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'Congo Red'))).
+
+[pos cover = 130 neg cover = 0] [pos-neg] [130]
+
+feature(69,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'cobalt dichloride'))).
+
+[pos cover = 119 neg cover = 0] [pos-neg] [119]
+
+feature(70,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'palmitoleic acid'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(71,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,cisplatin))).
+
+[pos cover = 714 neg cover = 0] [pos-neg] [714]
+
+feature(72,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'benzo[a]pyrene'))).
+
+[pos cover = 382 neg cover = 0] [pos-neg] [382]
+
+feature(73,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,tunicamycin))).
+
+[pos cover = 247 neg cover = 0] [pos-neg] [247]
+
+feature(74,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'mono(2-ethylhexyl) phthalate'))).
+
+[pos cover = 114 neg cover = 0] [pos-neg] [114]
+
+feature(75,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,triclosan))).
+
+[pos cover = 180 neg cover = 0] [pos-neg] [180]
+
+feature(76,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,sorbate))).
+
+[pos cover = 180 neg cover = 0] [pos-neg] [180]
+
+feature(77,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),condition(C,'Media:  pH 4.5'))).
+
+[pos cover = 215 neg cover = 0] [pos-neg] [215]
+
+feature(78,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,methylglyoxal))).
+
+[pos cover = 53 neg cover = 0] [pos-neg] [53]
+
+feature(79,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'monensin A'))).
+
+[pos cover = 239 neg cover = 0] [pos-neg] [239]
+
+feature(80,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'Calcofluor White'))).
+
+[pos cover = 218 neg cover = 0] [pos-neg] [218]
+
+feature(81,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'mycophenolic acid'))).
+
+[pos cover = 98 neg cover = 0] [pos-neg] [98]
+
+feature(82,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'sodium fluoride'))).
+
+[pos cover = 70 neg cover = 0] [pos-neg] [70]
+
+feature(83,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'lithium hexafluorophosphate'))).
+
+[pos cover = 540 neg cover = 0] [pos-neg] [540]
+
+feature(84,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,cordycepin))).
+
+[pos cover = 169 neg cover = 0] [pos-neg] [169]
+
+feature(85,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,flucytosine))).
+
+[pos cover = 57 neg cover = 0] [pos-neg] [57]
+
+feature(86,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,sulfanilamide))).
+
+[pos cover = 57 neg cover = 0] [pos-neg] [57]
+
+feature(87,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),condition(C,'Media:  SMM liquid medium'))).
+
+[pos cover = 331 neg cover = 0] [pos-neg] [331]
+
+feature(88,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'methyl methanesulfonate'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(102,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'oleic acid'))).
+
+[pos cover = 257 neg cover = 0] [pos-neg] [257]
+
+feature(105,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'yttrium chloride'))).
+
+[pos cover = 201 neg cover = 0] [pos-neg] [201]
+
+feature(106,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,tunicamycin))).
+
+[pos cover = 33 neg cover = 0] [pos-neg] [33]
+
+feature(108,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,caspofungin))).
+
+[pos cover = 871 neg cover = 0] [pos-neg] [871]
+
+feature(109,(gene(A):-phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (37°C)'))).
+
+[pos cover = 253 neg cover = 0] [pos-neg] [253]
+
+feature(120,(gene(A):-phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (39°C)'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(121,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),compound_name(B,'hydrogen peroxide'))).
+
+[pos cover = 13 neg cover = 0] [pos-neg] [13]
+
+feature(136,(gene(A):-phenotype(A,'decreased metal resistance',B,C),compound_name(B,'chromium trioxide'))).
+
+[pos cover = 170 neg cover = 0] [pos-neg] [170]
+
+feature(149,(gene(A):-phenotype(A,'decreased metal resistance',B,C),compound_name(B,'lithium(1+)'))).
+
+[pos cover = 43 neg cover = 0] [pos-neg] [43]
+
+feature(152,(gene(A):-phenotype(A,'decreased metal resistance',B,C),condition(C,'Treatment: 100-150mM lithium chloride'))).
+
+[pos cover = 141 neg cover = 0] [pos-neg] [141]
+
+feature(157,(gene(A):-phenotype(A,'decreased metal resistance',B,C),compound_name(B,'cadmium dichloride'))).
+
+[pos cover = 30 neg cover = 0] [pos-neg] [30]
+
+feature(158,(gene(A):-phenotype(A,'increased chemical compound accumulation',B,C),compound_name(B,'calcium ion'))).
+
+[pos cover = 40 neg cover = 0] [pos-neg] [40]
+
+feature(165,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,'sodium(1+)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(181,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,'potassium(1+)'))).
+
+[pos cover = 33 neg cover = 0] [pos-neg] [33]
+
+feature(182,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,'magnesium cation'))).
+
+[pos cover = 42 neg cover = 0] [pos-neg] [42]
+
+feature(183,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,'cobalt cation'))).
+
+[pos cover = 276 neg cover = 0] [pos-neg] [276]
+
+feature(184,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,glycogen))).
+
+[pos cover = 50 neg cover = 0] [pos-neg] [50]
+
+feature(185,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,'cadmium cation'))).
+
+[pos cover = 353 neg cover = 0] [pos-neg] [353]
+
+feature(186,(gene(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),compound_name(B,'sodium chloride'))).
+
+[pos cover = 223 neg cover = 0] [pos-neg] [223]
+
+feature(193,(gene(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),compound_name(B,sucrose))).
+
+[pos cover = 223 neg cover = 0] [pos-neg] [223]
+
+feature(194,(gene(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),condition(C,'Media containing 30% (w/v) sucrose'))).
+
+[pos cover = 217 neg cover = 0] [pos-neg] [217]
+
+feature(196,(gene(A):-phenotype(A,'increased metal resistance',B,C),compound_name(B,'gadolinium(3+)'))).
+
+[pos cover = 217 neg cover = 0] [pos-neg] [217]
+
+feature(197,(gene(A):-phenotype(A,'increased metal resistance',B,C),condition(C,'Treatment: 3.9mM gadolinium (III) chloride hexahydrate'))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(404,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'NAD'))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(405,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,acetaldehyde))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(406,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'NADH'))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(407,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,ethanol))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(414,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,isobutyraldehyde))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(415,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,tyrosol))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(416,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,acetaldehyde))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(417,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,phenylacetaldehyde))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(418,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'3-methylbutanal'))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(419,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'indol-3-ylacetaldehyde'))).
+
+[pos cover = 649 neg cover = 0] [pos-neg] [649]
+
+feature(420,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'NADH'))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(421,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,isoamylol))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(422,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,tryptophol))).
+
+[pos cover = 649 neg cover = 0] [pos-neg] [649]
+
+feature(423,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'NAD'))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(424,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,methionol))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(425,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'2-methylbutanal'))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(426,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,propanol))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(427,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'2-phenylethanol'))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(428,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'2-methylbutanol'))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(429,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,isobutanol))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(430,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,ethanol))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(431,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,methional))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(432,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,propanal))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(433,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'(4-hydroxyphenyl)acetaldehyde'))).
+
+[pos cover = 996 neg cover = 0] [pos-neg] [996]
+
+feature(434,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'L-glutamate'))).
+
+[pos cover = 803 neg cover = 0] [pos-neg] [803]
+
+feature(435,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'NADP(+)'))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(436,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'2-oxoglutarate'))).
+
+[pos cover = 803 neg cover = 0] [pos-neg] [803]
+
+feature(437,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'NADPH'))).
+
+[pos cover = 254 neg cover = 0] [pos-neg] [254]
+
+feature(438,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,'product/reactant','2-methylcitrate'))).
+
+[pos cover = 254 neg cover = 0] [pos-neg] [254]
+
+feature(439,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,'product/reactant','(2S,3R)-3-hydroxybutane-1,2,3-tricarboxylic acid'))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(441,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'L-aspartate'))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(442,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'AMP'))).
+
+[pos cover = 560 neg cover = 0] [pos-neg] [560]
+
+feature(443,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'ATP'))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(444,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'L-glutamine'))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(445,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'L-asparagine'))).
+
+[pos cover = 416 neg cover = 0] [pos-neg] [416]
+
+feature(447,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,dTMP))).
+
+[pos cover = 416 neg cover = 0] [pos-neg] [416]
+
+feature(448,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,dUMP))).
+
+[pos cover = 416 neg cover = 0] [pos-neg] [416]
+
+feature(449,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'dihydrofolic acid'))).
+
+[pos cover = 416 neg cover = 0] [pos-neg] [416]
+
+feature(450,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'5,10-methylenetetrahydrofolate'))).
+
+[pos cover = 136 neg cover = 0] [pos-neg] [136]
+
+feature(464,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'NAD'))).
+
+[pos cover = 154 neg cover = 0] [pos-neg] [154]
+
+feature(465,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'NADH'))).
+
+[pos cover = 134 neg cover = 0] [pos-neg] [134]
+
+feature(466,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'2-oxoglutarate'))).
+
+[pos cover = 134 neg cover = 0] [pos-neg] [134]
+
+feature(467,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'L-glutamate'))).
+
+[pos cover = 133 neg cover = 0] [pos-neg] [133]
+
+feature(468,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'L-glutamine'))).
+
+[pos cover = 259 neg cover = 0] [pos-neg] [259]
+
+feature(469,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,formate))).
+
+[pos cover = 459 neg cover = 0] [pos-neg] [459]
+
+feature(470,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'NADP(+)'))).
+
+[pos cover = 448 neg cover = 0] [pos-neg] [448]
+
+feature(471,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'NADPH'))).
+
+[pos cover = 259 neg cover = 0] [pos-neg] [259]
+
+feature(472,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,lanosterol))).
+
+[pos cover = 259 neg cover = 0] [pos-neg] [259]
+
+feature(473,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'4,4-dimethyl-5alpha-cholesta-8,14,24-trien-3beta-ol'))).
+
+[pos cover = 316 neg cover = 0] [pos-neg] [316]
+
+feature(474,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,'product/reactant','orotidine 5-(dihydrogen phosphate)'))).
+
+[pos cover = 316 neg cover = 0] [pos-neg] [316]
+
+feature(475,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,'product/reactant','PRPP'))).
+
+[pos cover = 316 neg cover = 0] [pos-neg] [316]
+
+feature(476,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,'product/reactant',orotate))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(478,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,transport,'product/reactant','L-glycine'))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(479,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,transport,'product/reactant','L-phenylalanine'))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(480,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,transport,'product/reactant','L-tyrosine'))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(481,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,transport,'product/reactant','L-cysteine'))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(482,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,transport,'product/reactant','L-tryptophan'))).
+
+[pos cover = 217 neg cover = 0] [pos-neg] [217]
+
+feature(483,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'3-hydroxy-3-methylglutaryl-CoA'))).
+
+[pos cover = 217 neg cover = 0] [pos-neg] [217]
+
+feature(484,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'(R)-mevalonate'))).
+
+[pos cover = 217 neg cover = 0] [pos-neg] [217]
+
+feature(485,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'coenzyme A'))).
+
+[pos cover = 218 neg cover = 0] [pos-neg] [218]
+
+feature(486,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'IMP'))).
+
+[pos cover = 218 neg cover = 0] [pos-neg] [218]
+
+feature(487,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'xanthosine-5-phosphate'))).
+
+[pos cover = 218 neg cover = 0] [pos-neg] [218]
+
+feature(488,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'NADH'))).
+
+[pos cover = 235 neg cover = 0] [pos-neg] [235]
+
+feature(489,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'NAD'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(806,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'palmitoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(807,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-dec-2-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(808,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-hexacos-2-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(809,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'myristoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(810,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'butanoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(811,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'hexadec-2-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(812,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-2,cis-9-octadecadienoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(813,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'octanoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(814,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'lauroyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(815,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'stearoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(816,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-2,cis-7-hexadecadienoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(817,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-2,cis-5-tetradecadienoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(818,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-tetracos-2-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(819,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'hexanoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(820,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-2,cis-7-tetradecadienoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(821,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-icos-2-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(822,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'cis-dodec-5-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(823,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'cis-tetradec-7-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(824,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'decanoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(825,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-tetradec-2-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(826,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-docos-2-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(827,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'cis-hexadec-7-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(828,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-2,cis-5-dodecadienoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(829,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-oct-2-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(830,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'docosanoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(831,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'icosanoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(832,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-hex-2-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(833,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'hexacosanoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(834,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-2,cis-9-hexadecadienoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(835,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'tetracosanoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(836,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'oleoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(837,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'palmitoleoyl-CoA(4-)'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(838,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-octadec-2-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(839,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'cis-tetradec-5-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(840,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'but-2-enoyl-CoA'))).
+
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+
+feature(841,(gene(A):-phenotype(A,'increased resistance to chemicals',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'trans-dodec-2-enoyl-CoA'))).
+
+[pos cover = 65 neg cover = 0] [pos-neg] [65]
+
+feature(909,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol),condition(C,'Media:  YPD'))).
+
+[pos cover = 353 neg cover = 0] [pos-neg] [353]
+
+feature(998,(gene(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,transport,product,'D-glucose'))).
+
+[pos cover = 353 neg cover = 0] [pos-neg] [353]
+
+feature(999,(gene(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,transport,product,glycerol))).
+
+[pos cover = 353 neg cover = 0] [pos-neg] [353]
+
+feature(1000,(gene(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,transport,reactant,glycerol))).
+
+[pos cover = 353 neg cover = 0] [pos-neg] [353]
+
+feature(1001,(gene(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,transport,reactant,'D-glucose'))).
+
+[pos cover = 223 neg cover = 0] [pos-neg] [223]
+
+feature(1007,(gene(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,sucrose))).
+
+[pos cover = 223 neg cover = 0] [pos-neg] [223]
+
+feature(1008,(gene(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'D-fructose'))).
+
+[pos cover = 223 neg cover = 0] [pos-neg] [223]
+
+feature(1009,(gene(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'D-glucose'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1071,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'glutathione disulfide'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1072,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,glutathione))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1073,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,'product/reactant','NADH'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1074,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,'product/reactant','glyceraldehyde 3-phosphate'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1075,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,'product/reactant','1,3-bisphospho-D-glycerate'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1076,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,'product/reactant','NAD'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1077,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'NADP(+)'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1078,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'D-arabinose'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1079,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'D-arabinono-1,4-lactone'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1080,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'NADPH'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1081,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,superoxide))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1082,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,'product/reactant','Ala-Gly'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1083,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,'product/reactant','L-leucine'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1084,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,'product/reactant','Ala-Leu'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1085,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,'product/reactant','L-alanine'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1086,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,'product/reactant','L-glycine'))).
+
+[pos cover = 525 neg cover = 0] [pos-neg] [525]
+
+feature(1087,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'NADPH'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1088,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'hydrogen sulfide'))).
+
+[pos cover = 525 neg cover = 0] [pos-neg] [525]
+
+feature(1089,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'NADP(+)'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1090,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'4,4-dimethyl-5alpha-cholesta-8,14,24-trien-3beta-ol'))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1091,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,formate))).
+
+[pos cover = 503 neg cover = 0] [pos-neg] [503]
+
+feature(1092,(gene(A):-phenotype(A,'decreased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,lanosterol))).
+
+[pos cover = 169 neg cover = 0] [pos-neg] [169]
+
+feature(1295,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'acetic acid'),condition(C,'Treated with 0.4% (w/v), pH 4.3 acetic acid'))).
+
+[pos cover = 170 neg cover = 0] [pos-neg] [170]
+
+feature(1518,(gene(A):-phenotype(A,'decreased metal resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'ADP'))).
+
+[pos cover = 170 neg cover = 0] [pos-neg] [170]
+
+feature(1519,(gene(A):-phenotype(A,'decreased metal resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'NADP(+)'))).
+
+[pos cover = 170 neg cover = 0] [pos-neg] [170]
+
+feature(1520,(gene(A):-phenotype(A,'decreased metal resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'ATP'))).
+
+[pos cover = 170 neg cover = 0] [pos-neg] [170]
+
+feature(1521,(gene(A):-phenotype(A,'decreased metal resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'NADPH'))).
+
+[pos cover = 170 neg cover = 0] [pos-neg] [170]
+
+feature(1522,(gene(A):-phenotype(A,'decreased metal resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'NAD'))).
+
+[pos cover = 170 neg cover = 0] [pos-neg] [170]
+
+feature(1523,(gene(A):-phenotype(A,'decreased metal resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'NADH'))).
+
+[pos cover = 223 neg cover = 0] [pos-neg] [223]
+
+feature(1760,(gene(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),compound_name(B,sucrose),condition(C,'Media containing 30% (w/v) sucrose'))).
+
+[pos cover = 217 neg cover = 0] [pos-neg] [217]
+
+feature(1768,(gene(A):-phenotype(A,'increased metal resistance',B,C),compound_name(B,'gadolinium(3+)'),condition(C,'Treatment: 3.9mM gadolinium (III) chloride hexahydrate'))).
+
+[pos cover = 180 neg cover = 0] [pos-neg] [180]
+
+feature(1903,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,sorbate),condition(C,'Media:  pH 4.5'))).
+
+[pos cover = 43 neg cover = 0] [pos-neg] [43]
+
+feature(1959,(gene(A):-phenotype(A,'decreased metal resistance',B,C),compound_name(B,'lithium(1+)'),condition(C,'Treatment: 100-150mM lithium chloride'))).
+
+[pos cover = 40 neg cover = 0] [pos-neg] [40]
+
+feature(2244,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,transport,product,'ADP'))).
+
+[pos cover = 40 neg cover = 0] [pos-neg] [40]
+
+feature(2245,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,transport,reactant,'ATP'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2259,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:0, 2-18:1, 3-16:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2260,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:1, 2-16:1, 3-16:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2261,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'diglyceride (1-16:1, 2-16:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2262,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:1, 2-18:1, 3-18:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2263,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:1, 2-18:1, 3-16:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2264,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:1, 2-16:1, 3-16:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2265,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:0, 2-18:1, 3-18:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2266,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'stearoyl-CoA'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2267,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'diglyceride (1-16:0, 2-18:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2268,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'diglyceride (1-18:1, 2-18:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2269,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:1, 2-16:1, 3-18:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2270,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:1, 2-16:1, 3-18:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2271,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:0, 2-16:1, 3-18:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2272,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:1, 2-16:1, 3-16:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2273,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:0, 2-16:1, 3-16:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2274,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:1, 2-16:1, 3-16:1)'))).
+
+[pos cover = 71 neg cover = 0] [pos-neg] [71]
+
+feature(2275,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'coenzyme A'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2276,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'diglyceride (1-18:0, 2-18:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2277,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:1, 2-18:1, 3-16:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2278,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:0, 2-16:1, 3-16:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2279,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:1, 2-16:1, 3-18:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2280,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:0, 2-16:1, 3-18:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2281,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'diglyceride (1-18:1, 2-16:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2282,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:0, 2-18:1, 3-18:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2283,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:1, 2-18:1, 3-18:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2284,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'diglyceride (1-16:0, 2-16:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2285,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:0, 2-16:1, 3-18:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2286,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'diglyceride (1-16:1, 2-18:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2287,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'palmitoyl-CoA'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2288,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:1, 2-16:1, 3-18:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2289,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'oleoyl-CoA'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2290,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'palmitoleoyl-CoA(4-)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2291,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:0, 2-16:1, 3-18:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2292,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:0, 2-18:1, 3-16:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2293,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:0, 2-18:1, 3-18:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2294,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:0, 2-18:1, 3-18:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2295,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:0, 2-18:1, 3-16:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2296,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'diglyceride (1-18:0, 2-16:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2297,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:0, 2-16:1, 3-16:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2298,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:0, 2-18:1, 3-16:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2299,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:1, 2-18:1, 3-16:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2300,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:0, 2-16:1, 3-16:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2301,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:1, 2-18:1, 3-18:0)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2302,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-16:1, 2-18:1, 3-16:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2303,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'triglyceride (1-18:1, 2-18:1, 3-18:1)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2304,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'indol-3-ylacetaldehyde'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2305,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,acetate))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2306,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'NADPH'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2307,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'NADH'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2308,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,acetaldehyde))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2309,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'NAD'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2310,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,reactant,'NADP(+)'))).
+
+[pos cover = 68 neg cover = 0] [pos-neg] [68]
+
+feature(2311,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'indole-3-acetate'))).
+
+[pos cover = 57 neg cover = 0] [pos-neg] [57]
+
+feature(2427,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,sulfanilamide),condition(C,'Media:  SMM liquid medium'))).
+
+[pos cover = 40 neg cover = 0] [pos-neg] [40]
+
+feature(2539,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'ADP'))).
+
+[pos cover = 40 neg cover = 0] [pos-neg] [40]
+
+feature(2540,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'NADP(+)'))).
+
+[pos cover = 40 neg cover = 0] [pos-neg] [40]
+
+feature(2541,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'ATP'))).
+
+[pos cover = 40 neg cover = 0] [pos-neg] [40]
+
+feature(2542,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'NADPH'))).
+
+[pos cover = 40 neg cover = 0] [pos-neg] [40]
+
+feature(2543,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'NAD'))).
+
+[pos cover = 40 neg cover = 0] [pos-neg] [40]
+
+feature(2544,(gene(A):-phenotype(A,'decreased chemical compound accumulation',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,reactant,'NADH'))).
+
+[pos cover = 29 neg cover = 0] [pos-neg] [29]
+
+feature(2594,(gene(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,glucose),condition(C,'Media containing 30% (w/v) glucose'))).
+
