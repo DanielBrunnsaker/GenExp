@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+            "number": 2,
+            "reason": "This experiment is feasible in a 96 well format and involves testing resistance to a chemical, which can be assessed through growth assays. Epoxiconazole is a fungicide, and handling it in a well-ventilated area is safe with proper precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).",
+            "number": 5,
+            "reason": "Hydroxyurea is a well-studied compound, and testing resistance to it is feasible in a 96 well format. The experiment can be assessed through growth assays, and hydroxyurea is safe to handle with standard lab precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is a fungicide, and testing resistance to it is feasible in a 96 well format. The experiment can be assessed through growth assays, and handling fenpropimorph is safe with proper precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,'cadmium cation').",
+            "number": 9,
+            "reason": "This experiment involves assessing chemical accumulation, which can be done through metabolomics. Cadmium handling requires caution, but it is feasible with proper safety measures in place."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,formaldehyde).",
+            "number": 10,
+            "reason": "Formaldehyde is a common laboratory chemical, and testing resistance to it is feasible in a 96 well format. The experiment can be assessed through growth assays, and formaldehyde handling is safe with proper ventilation and precautions."
+        }
+    ]
+}

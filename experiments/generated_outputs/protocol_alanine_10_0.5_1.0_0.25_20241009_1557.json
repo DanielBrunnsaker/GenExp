@@ -1,0 +1,49 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,'cadmium cation').",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "cadmium chloride",
+            "treatment_parameters": "50 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Control group with no alanine modulation, exposed to cadmium chloride after 6 hours."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-cycloserine",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": "cadmium chloride",
+            "treatment_parameters": "50 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Low alanine group with 0.1 mM L-cycloserine, exposed to cadmium chloride after 6 hours."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-cycloserine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "cadmium chloride",
+            "treatment_parameters": "50 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Low alanine group with 0.5 mM L-cycloserine, exposed to cadmium chloride after 6 hours."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-cycloserine",
+            "media_supplementation_doses": "1 mM",
+            "treatment": "cadmium chloride",
+            "treatment_parameters": "50 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Low alanine group with 1 mM L-cycloserine, exposed to cadmium chloride after 6 hours."
+        }
+    ]
+}

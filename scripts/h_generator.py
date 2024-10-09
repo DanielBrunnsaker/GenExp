@@ -233,7 +233,10 @@ import argparse
 import numpy as np
 import pandas as pd
 
-os.chdir('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/scripts')
+#os.chdir('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/scripts')
+
+os.chdir(os.getcwd())
+
 from hgen_support import *
 from gpt_support import *
 
