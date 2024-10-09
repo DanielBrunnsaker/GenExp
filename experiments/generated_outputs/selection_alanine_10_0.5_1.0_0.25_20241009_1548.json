@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+            "number": 2,
+            "reason": "This experiment is feasible in a 96 well format, safe to perform, and can be assessed through growth assays. Epoxiconazole is a fungicide, and testing resistance is a common and safe practice."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).",
+            "number": 5,
+            "reason": "Hydroxyurea is a well-studied compound, and testing resistance is feasible and safe. The experiment can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is a fungicide, and testing resistance is feasible and safe. The experiment can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,'cadmium cation').",
+            "number": 9,
+            "reason": "This experiment is feasible and safe to perform. Cadmium accumulation can be assessed through metabolomics, and the experiment can be conducted in a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,formaldehyde).",
+            "number": 10,
+            "reason": "Formaldehyde is a common chemical used in labs, and testing resistance is feasible. The experiment can be assessed through growth assays, but care must be taken due to formaldehyde's toxicity."
+        }
+    ]
+}

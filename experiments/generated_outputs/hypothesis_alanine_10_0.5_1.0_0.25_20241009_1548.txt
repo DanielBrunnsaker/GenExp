@@ -1,0 +1,53 @@
+### Selected Statement
+5. Cells with lower than normal levels of intracellular alanine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).
+
+### Hypothesis
+Reducing intracellular alanine levels in Saccharomyces cerevisiae increases resistance to hydroxyurea.
+
+### Experimental Plan
+
+#### Assumptions
+1. Reduced intracellular alanine can be achieved by modulating media conditions.
+2. Hydroxyurea resistance can be measured by growth rate and viability in the presence of the compound.
+
+#### Experimental Setup
+1. **Strain and Media:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Baseline media: Minimal media without amino acids.
+
+2. **Modulation of Alanine Levels:**
+   - **Control Group:** No alanine modification.
+   - **Alanine Reduction Group:** Supplement media with 3-aminopropionate at concentrations of 0.5 mM, 1 mM, and 2 mM to competitively inhibit alanine synthesis.
+
+3. **Hydroxyurea Treatment:**
+   - Prepare hydroxyurea at concentrations of 0 mM (control), 5 mM, and 10 mM.
+   - Each alanine modulation group will be exposed to each hydroxyurea concentration.
+
+4. **Experimental Conditions:**
+   - Inoculate cultures at 0.05 OD600.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 continuously to monitor growth.
+
+5. **Sampling and Termination:**
+   - Collect samples at t=12h for mass-spectrometry based metabolomics to confirm intracellular alanine levels.
+
+6. **Controls:**
+   - Include a set of wells with alanine supplementation (0.5 mM, 1 mM, 2 mM) without hydroxyurea to observe alanine effects independently.
+
+#### Verification of Assumptions
+- Test the effect of 3-aminopropionate on alanine levels using metabolomics in a separate set of wells.
+- Confirm hydroxyurea resistance by measuring growth rates and comparing to controls.
+
+### Expected Outcomes
+1. **If Hypothesis is Supported:**
+   - Reduced intracellular alanine levels (verified by metabolomics) will show increased growth rates or higher OD600 in the presence of hydroxyurea compared to controls.
+   - A dose-response relationship may be observed with varying levels of 3-aminopropionate.
+
+2. **If Hypothesis is Not Supported:**
+   - No significant difference in hydroxyurea resistance between reduced alanine levels and controls.
+   - Growth rates in hydroxyurea conditions remain similar across all alanine modulation groups.
+
+3. **Independent Effects:**
+   - Alanine supplementation controls will help determine if alanine itself influences hydroxyurea resistance independently of its intracellular concentration.
+
+This design ensures that the relationship between intracellular alanine levels and hydroxyurea resistance is tested while accounting for potential confounders and independent effects of supplements.

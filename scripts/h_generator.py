@@ -198,13 +198,14 @@ def main():
     pretty_json = json.dumps(json_output, indent=2)
     print(pretty_json)
     
+    save_string_to_json('../experiments/generated_outputs', json_output, 'protocol', target, N, T, alpha, beta)
+    save_string_to_json('../experiments/generated_outputs', allowed_programs, 'selection', target, N, T, alpha, beta)
+    save_string_to_file('../experiments/generated_outputs/', hypothesis_text, 'hypothesis', target, N, T, alpha, beta)
     
-    filename = '../experiments/json_outputs/experimental_design.json'
-    with open(filename, 'w') as json_file:
-        json.dump(json_output, json_file, indent=4)
-   
     # Present user with the options
     action = user_prompt()
+    
+    
     
     if action == "go_ahead":
         print("Continuing with the rest of the script.")
@@ -231,6 +232,7 @@ import os
 import argparse
 import numpy as np
 import pandas as pd
+
 os.chdir('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/scripts')
 from hgen_support import *
 from gpt_support import *

@@ -7,6 +7,100 @@ Created on Mon Aug 19 15:55:46 2024
 """
 
 
+def save_string_to_json(path_dir, content, prefix, target, N, T, alpha, beta):
+    
+    import os
+    import json
+    from datetime import datetime
+    
+    """
+    
+    parser.add_argument('--target', type=str, help='Value for the "target" variable.')
+    parser.add_argument('--N', type=str, help='Value for the "N" variable.')
+    parser.add_argument('--T', type=str, help='Value for the "T" variable.')
+    parser.add_argument('--alpha', type=str, help='Value for the "alpha" variable.')
+    parser.add_argument('--beta', type=str, help='Value for the "beta" variable.')
+    
+    Saves the content as JSON to a file in directory B. The filename is generated using
+    target, N, T, alpha, beta, and a timestamp.
+    
+    Args:
+    path_dir (str): The directory where the file will be saved.
+    content (dict): LLM output or data to be saved in JSON format.
+    
+    prefix (str): descriptor of the file.
+    target (str): Which amino acid is the target of the hypothesis.
+    N (int): N hypotheses given to the initial prompt.
+    T (float): temperature of the hypothesis generation step.
+    alpha (str): alpha-coefficient.
+    beta (str): beta-coefficient.
+    
+    Returns:
+    str: The path to the saved file.
+    """
+    # Get the current timestamp
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+    
+    # Construct the filename
+    filename = f"{prefix}_{target}_{N}_{T}_{alpha}_{beta}_{timestamp}.json"
+    
+    # Combine the path and the filename
+    file_path = os.path.join(path_dir, filename)
+    
+    # Write the content to the JSON file
+    with open(file_path, 'w') as file:
+        json.dump(content, file, indent=4)
+    
+    print(f"File saved to: {file_path}")
+    return file_path
+
+def save_string_to_file(path_dir, content, prefix, target, N, T, alpha, beta):
+    
+    import os
+    from datetime import datetime
+    
+    """
+    
+    parser.add_argument('--target', type=str, help='Value for the "target" variable.')
+    parser.add_argument('--N', type=str, help='Value for the "N" variable.')
+    parser.add_argument('--T', type=str, help='Value for the "T" variable.')
+    parser.add_argument('--alpha', type=str, help='Value for the "alpha" variable.')
+    parser.add_argument('--beta', type=str, help='Value for the "beta" variable.')
+    
+    Saves the string A to a text file in directory B. The filename is generated using
+    Variable1, Variable2, Variable3, and a timestamp.
+    
+    Args:
+    path_dir (str): The directory where the file will be saved.
+    
+    content (str): LLM output for that specific step
+    
+    prefix (str): descriptor of the file
+    target (str): Which amino acid is the target of the hypothesis.
+    N (int): N hypotheses given to the initial prompt.
+    T (float): temperature of the hypothesis generation step
+    alpha (str): alpha-coefficient.
+    beta (str): beta-coefficient.
+    
+    Returns:
+    str: The path to the saved file.
+    """
+    # Get the current timestamp
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+    
+    # Construct the filename
+    filename = f"{prefix}_{target}_{N}_{T}_{alpha}_{beta}_{timestamp}.txt"
+    
+    # Combine the path and the filename
+    file_path = os.path.join(path_dir, filename)
+    
+    # Write the content to the file
+    with open(file_path, 'w') as file:
+        file.write(content)
+    
+    print(f"File saved to: {file_path}")
+    return file_path
+
         
 def combinations_start_with_first(lst):
     
