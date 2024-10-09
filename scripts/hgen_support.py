@@ -15,15 +15,6 @@ def save_string_to_json(path_dir, content, prefix, target, N, T, alpha, beta):
     
     """
     
-    parser.add_argument('--target', type=str, help='Value for the "target" variable.')
-    parser.add_argument('--N', type=str, help='Value for the "N" variable.')
-    parser.add_argument('--T', type=str, help='Value for the "T" variable.')
-    parser.add_argument('--alpha', type=str, help='Value for the "alpha" variable.')
-    parser.add_argument('--beta', type=str, help='Value for the "beta" variable.')
-    
-    Saves the content as JSON to a file in directory B. The filename is generated using
-    target, N, T, alpha, beta, and a timestamp.
-    
     Args:
     path_dir (str): The directory where the file will be saved.
     content (dict): LLM output or data to be saved in JSON format.
@@ -60,15 +51,6 @@ def save_string_to_file(path_dir, content, prefix, target, N, T, alpha, beta):
     from datetime import datetime
     
     """
-    
-    parser.add_argument('--target', type=str, help='Value for the "target" variable.')
-    parser.add_argument('--N', type=str, help='Value for the "N" variable.')
-    parser.add_argument('--T', type=str, help='Value for the "T" variable.')
-    parser.add_argument('--alpha', type=str, help='Value for the "alpha" variable.')
-    parser.add_argument('--beta', type=str, help='Value for the "beta" variable.')
-    
-    Saves the string A to a text file in directory B. The filename is generated using
-    Variable1, Variable2, Variable3, and a timestamp.
     
     Args:
     path_dir (str): The directory where the file will be saved.
@@ -238,7 +220,7 @@ def normalize_column(column):
     return [(x - min_val) / (max_val - min_val) for x in column]
 
 # Function to calculate scores for each row based on target column and uniqueness
-def calculate_scores(df, target_column, alpha=1, beta=1):
+def calculate_scores(df, target_column, alpha=1.0, beta=0.25):
     # Target values: maximize absolute values in the target column
     target_values = df[target_column].abs()
     
