@@ -1,0 +1,6 @@
+libChEBIpy==1.0.10
+numpy==1.24.3
+openai==1.51.2
+pandas==1.5.3
+scikit_learn==1.4.0
+scikit_optimize==0.9.0
