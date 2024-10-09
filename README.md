@@ -1,4 +1,6 @@
 # GenExp
+
+Add a key.txt file (see .gitignore) containing only the API key ("sk-proj---XXXXXXXX...") for GPT4 in the root folder. Easiest to generate personal one (I can also give you one if you prefer to use the same).
  
 Run h_generator.py from the scripts folder. e.g. 
 
@@ -17,3 +19,10 @@ Outputs should then be saved to the experiments/generated_outputs folder.
  - protocol: Summarized experimental protocol in JSON.
 
 
+Other:
+
+ - /context - contains the engineered prompts for the different steps.
+ - /prolog - contains all the prolog code, aleph and background files.
+ - /experiments - output of the pipeline
+ - /data - you can guess this one
+ - /results - you can guess this one
