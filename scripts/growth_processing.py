@@ -23,31 +23,29 @@ def well_to_position(well):
     col = int(well[1:])
     return row, col
 
-# Get position of a well in terms of row index (0 to 7) and column index (0 to 11)
 def get_well_index(well):
     row, col = well_to_position(well)
     return ord(row) - ord('A'), col - 1
 
-# Calculate Euclidean distance between two wells based on their positions
 def well_distance(well1, well2):
     row1, col1 = get_well_index(well1)
     row2, col2 = get_well_index(well2)
     return np.sqrt((row1 - row2) ** 2 + (col1 - col2) ** 2)
 
-# Function to subtract the average of the three closest blanks for each well
-def subtract_closest_blanks(df, blank_wells):
+def subtract_closest_blanks(df, blank_wells, n):
     result = df.copy()
     for well in df.index:
-        # Calculate distances from the current well to each blank well
+        
+        # Calculate distances from the current well to each blank well. Maybe change how i calculate this distance? 
+        # Maybe Manhattah makes more sense?
         distances = [(blank, well_distance(well, blank)) for blank in blank_wells]
         
-        # Sort by distance and take the closest three blanks
-        closest_blanks = sorted(distances, key=lambda x: x[1])[:3]
+        # Sort by distance and take the closest n blanks
+        closest_blanks = sorted(distances, key=lambda x: x[1])[:n]
         
-        # Get the values of the closest blank wells for each timestamp
+        # Get the values of the closest blank wells for each timepoint
         closest_blank_values = df.loc[[blank for blank, _ in closest_blanks]].mean()
         
-        # Subtract the average blank values from the current well's values at each timestamp
         result.loc[well] -= closest_blank_values
     
     return result
@@ -60,7 +58,11 @@ def main():
     default values
     python growth_processing.py --path "/Volumes/EVE/20241010 HPLC" --output /Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/growth/20241010_hplc_growth_experiment.txt
     python growth_processing.py --path "/Volumes/EVE/20241010 HPLC" --output "../experiments/growth/20241010_hplc_growth_experiment.txt"
-    python growth_processing.py --path "/Volumes/EVE/20241010 HPLC" --output "../experiments/growth/20241010_hplc_growth_experiment.txt" --blank distance
+    python growth_processing.py --path "/Volumes/EVE/20241010 HPLC" --output "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/amiga_results/data/20241010_hplc_growth_experiment.txt " --blank distance
+    
+    
+    
+    /Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/amiga_results/data/20241010_hplc_growth_experiment.txt 
     
     Then run:
     
@@ -72,6 +74,7 @@ def main():
     parser.add_argument('--path', type=str, help='Value for the "path" variable.')
     parser.add_argument('--output', type=str, help='Value for the "output" variable.')
     parser.add_argument('--blank', type=str, help='Value for the "blank" variable.')
+    parser.add_argument('--n', type=str, help='Value for the "n" variable.')
    
     args = parser.parse_args()
          
@@ -93,6 +96,12 @@ def main():
         #print(f'Variable "target" set to: {target}')
     else:
         print('Variable "blank" not provided.')
+    
+    if args.n is not None:
+        n = args.n
+        #print(f'Variable "target" set to: {target}')
+    else:
+        print('Variable "n" not provided.')
  
 
     
@@ -117,15 +126,16 @@ def main():
         print(f"Processing file: {file_path}")
         try:
             with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
-                # Parse the file content
+                
                 inside_data_section = False
                 for line in file:
+                    
                     # Check if we're in the measurement data section
                     if "Measurement Data" in line:
                         inside_data_section = True
                         continue
                     
-                    # Skip irrelevant lines
+                    # Skip irrelevant lines from the OD file
                     if not inside_data_section or line.strip() == "" or "=" in line:
                         continue
     
@@ -150,13 +160,14 @@ def main():
     
     if blank == 'distance':
     
-        # Example blank wells (you should provide the real list)
+        
+        # This needs to be loaded in somehow when I generate the experimental design. Should not be too hard
         blank_wells = ['A01','B01','C01','D01','E01','F01','G01','H01', 
                        'A07','B07','C07','D07','E07','F07','G07','H07',
                        'A01','B12','C12','D12','E12','F12','G12','H12',]  # Replace with your list of blank wells
         
         # Apply the normalization function
-        data = subtract_closest_blanks(data, blank_wells)
+        data = subtract_closest_blanks(data, blank_wells, n)
         #print(data.iloc[0,:])
         data.to_csv(output, sep='\t')
     else:
