@@ -1,0 +1,36 @@
+**Selected Statement:**  
+Cells with lower than normal levels of intracellular alanine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype: Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).
+
+**Motivation:**  
+The selected statement suggests that lower intracellular alanine levels are associated with increased resistance to hydroxyurea, a known DNA replication inhibitor. This association is intriguing because it suggests a potential metabolic or regulatory link between amino acid metabolism and chemical resistance mechanisms. Investigating this could provide insights into adaptive responses and stress resistance mechanisms in yeast, which are valuable for both basic research and industrial applications. Additionally, hydroxyurea is a well-characterized compound, making it feasible to study in a controlled experimental setup.
+
+**Hypothesis:**  
+Lowering intracellular alanine levels in Saccharomyces cerevisiae will increase the cells' resistance to hydroxyurea, as measured by growth rate and survival in the presence of the compound.
+
+**Experimental Plan:**  
+1. **Strain and Media Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids as a baseline condition.
+
+2. **Experimental Conditions:**
+   - Modulate intracellular alanine levels by using alanine aminotransferase inhibitors. Use three concentrations: 0 mM (control), 0.5 mM, and 1 mM of the inhibitor.
+   - Hydroxyurea will be added at 0 mM (control), 10 mM, and 20 mM to evaluate resistance.
+
+3. **Setup:**
+   - Inoculate each well of a 96-well plate with 0.05 OD600 of yeast culture.
+   - Each combination of alanine modulation and hydroxyurea concentration will have at least 3 replicates.
+
+4. **Measurements:**
+   - Continuously measure OD600 to monitor growth.
+   - At t = 12h, terminate the experiment and collect samples for metabolomics analysis to confirm intracellular alanine levels.
+
+5. **Control Experiments:**
+   - Perform a set of experiments with only alanine modulation (no hydroxyurea) to verify the effect of the inhibitor on intracellular alanine levels.
+   - Conduct another set with hydroxyurea but without alanine modulation to assess its independent effect on growth.
+
+**Expected Outcomes:**  
+- **If the hypothesis is true:** Cells with lower intracellular alanine (achieved by alanine aminotransferase inhibition) will show increased growth or survival rates in the presence of hydroxyurea compared to controls.
+- **Metabolomics data:** Should confirm that intracellular alanine levels are indeed lower in the treated groups compared to controls, validating the modulation approach.
+- **Control outcomes:** Growth should be unaffected by alanine modulation alone, and hydroxyurea should reduce growth in a dose-dependent manner in the absence of alanine modulation.
+
+This experimental design allows us to test the association between intracellular alanine levels and resistance to hydroxyurea, while accounting for potential confounding effects of the treatments independently.

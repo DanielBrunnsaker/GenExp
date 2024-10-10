@@ -1,0 +1,71 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "0 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Control condition with no alanine or epoxiconazole to assess baseline growth."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "10 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Control condition with no alanine and 10 \u00b5M epoxiconazole to assess baseline resistance."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "0 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Assess the effect of 5 mM alanine supplementation on growth without epoxiconazole."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "10 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Test the effect of 5 mM alanine on resistance to 10 \u00b5M epoxiconazole."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "0 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Assess the effect of 10 mM alanine supplementation on growth without epoxiconazole."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "10 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Test the effect of 10 mM alanine on resistance to 10 \u00b5M epoxiconazole."
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+**Selected Statement:**  
+22. Cells with higher than normal levels of intracellular alanine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol),condition(C,'Media:  YPD').
+
+**Motivation:**  
+This statement is intriguing because it suggests a specific relationship between intracellular alanine levels and resistance to ethanol, which is a commonly used stressor in yeast experiments. Additionally, the statement specifies a condition ('Media: YPD'), adding a layer of complexity and specificity to the hypothesis. Testing this association could provide insights into the metabolic and stress-response pathways influenced by alanine.
+
+**Hypothesis:**  
+Increased intracellular alanine levels in Saccharomyces cerevisiae, when grown on YPD media, lead to decreased resistance to ethanol. This suggests that alanine may play a role in modulating the cell's stress response mechanisms specifically in nutrient-rich conditions.
+
+**Experimental Plan:**  
+1. **Strain and Media Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Prepare two types of media: minimal media without amino acids and YPD media.
+
+2. **Experimental Conditions:**
+   - Inoculate all cultures at 0.05 OD600 and grow at 30°C with shaking.
+   - Divide the experiment into three groups:
+     - Control group: No supplementation.
+     - Low alanine group: Supplement minimal media with 0.5 mM alanine.
+     - High alanine group: Supplement minimal media with 5 mM alanine.
+
+3. **Ethanol Resistance Test:**
+   - At t=0h, add 5% ethanol to the YPD media for each group.
+   - Continuously measure OD600 to monitor growth and assess resistance.
+
+4. **Metabolomics Analysis:**
+   - At t=12h, perform mass-spectrometry based metabolomics to confirm intracellular alanine levels.
+
+5. **Controls and Assumptions Testing:**
+   - Verify that alanine supplementation effectively modulates intracellular alanine levels without causing pleiotropic effects.
+   - Ensure ethanol concentration is physiologically relevant and does not completely inhibit growth in control conditions.
+
+**Expected Outcomes:**
+- **Control Group:** Normal growth in YPD with ethanol; serves as a baseline for resistance.
+- **Low Alanine Group:** Similar growth to control if alanine levels do not significantly impact ethanol resistance.
+- **High Alanine Group:** Reduced growth compared to control, indicating decreased resistance to ethanol, consistent with the hypothesis.
+
+The expected outcome is that the high alanine group will demonstrate decreased resistance to ethanol, supporting the hypothesis that increased intracellular alanine levels correlate with reduced ethanol resistance in YPD media. The metabolomics analysis should confirm that the intracellular alanine levels are indeed higher in the supplemented group, validating the experimental setup. If the expected outcomes are observed, this would suggest a novel role for alanine in stress response pathways, potentially offering new targets for metabolic engineering or stress resistance studies in yeast.

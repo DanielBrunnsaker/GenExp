@@ -1,0 +1,42 @@
+**Selected Statement:**  
+5. Cells with lower than normal levels of intracellular alanine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).
+
+**Motivation:**  
+The selected statement is intriguing because it suggests a counterintuitive association where a decrease in an essential amino acid, alanine, correlates with increased resistance to hydroxyurea, a compound known to inhibit ribonucleotide reductase and affect DNA synthesis. This could indicate a novel mechanism of resistance that has not been fully explored in the literature. Understanding this association could lead to insights into cellular stress responses and resistance mechanisms.
+
+**Hypothesis:**  
+Reducing intracellular alanine levels in Saccharomyces cerevisiae will increase resistance to hydroxyurea, as measured by growth rate and survival in the presence of hydroxyurea.
+
+**Experimental Plan:**  
+
+1. **Strain and Media Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Alanine Modulation:**
+   - Use three levels of alanine supplementation: 0 mM (control), 0.5 mM (low), and 1 mM (normal).
+   - Alanine levels will be adjusted through supplementation at inoculation (t=0h).
+
+3. **Hydroxyurea Treatment:**
+   - Prepare hydroxyurea treatment at three concentrations: 0 mM (control), 5 mM, and 10 mM.
+   - Add hydroxyurea at inoculation (t=0h).
+
+4. **Experimental Setup:**
+   - Inoculate cultures at an initial OD600 of 0.05 in a 96-well plate.
+   - Set up three replicates for each condition: combinations of alanine levels and hydroxyurea concentrations.
+   - Standardize shaking and incubate at 30°C.
+
+5. **Measurements:**
+   - Continuously measure OD600 to monitor growth.
+   - At t=12h, terminate the experiment and collect samples for metabolomics analysis using mass spectrometry to confirm intracellular alanine levels.
+
+6. **Control Experiments:**
+   - Verify that alanine supplementation affects intracellular alanine levels without pleiotropic effects on other metabolites.
+   - Confirm the independent effect of hydroxyurea on growth in the absence of alanine supplementation.
+
+**Expected Outcomes:**  
+- **Increased Resistance:** Cultures with reduced alanine levels (0 mM supplementation) are expected to show higher growth rates or survival in the presence of hydroxyurea compared to normal alanine levels.
+- **Metabolomics Confirmation:** Mass spectrometry should confirm lower intracellular alanine levels in the 0 mM supplementation condition.
+- **Control Validation:** Control experiments should show that alanine supplementation specifically modulates alanine levels without broadly affecting other metabolic pathways and that hydroxyurea has a dose-dependent inhibitory effect on growth.
+
+This experiment aims to explore the association between alanine levels and hydroxyurea resistance, potentially uncovering new resistance mechanisms or metabolic pathways involved in stress responses.

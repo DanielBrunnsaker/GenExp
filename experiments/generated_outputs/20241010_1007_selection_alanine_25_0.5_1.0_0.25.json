@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "This program involves testing increased resistance to fenpropimorph, a fungicide. It is feasible to test in a 96 well format and is safe to handle with standard precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,penconazole).",
+            "number": 17,
+            "reason": "Penconazole is another fungicide, and testing for increased resistance is feasible and safe in a 96 well format. It aligns with the constraints of the lab environment."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol),condition(C,'Media:  YPD').",
+            "number": 22,
+            "reason": "Ethanol is a common laboratory chemical, and testing decreased resistance in YPD media is straightforward and safe under controlled conditions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,radicicol).",
+            "number": 23,
+            "reason": "Radicicol is a less hazardous compound, and testing decreased resistance is feasible in a 96 well format. It is manageable within the lab's safety constraints."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'(S)-azetidine-2-carboxylic acid').",
+            "number": 28,
+            "reason": "This compound is less commonly used but testing for decreased resistance is feasible and safe in a 96 well format, fitting within the lab's constraints."
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "logic_program": "Statement 2",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "None",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "Epoxiconazole",
+            "treatment_parameters": "0.5 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "summary": "Control group with no alanine supplementation and epoxiconazole treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Epoxiconazole",
+            "treatment_parameters": "0.5 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "summary": "Treatment group with 5 mM alanine supplementation and epoxiconazole treatment."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "Epoxiconazole",
+            "treatment_parameters": "0.5 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "summary": "Treatment group with 10 mM alanine supplementation and epoxiconazole treatment."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "15 mM",
+            "treatment": "Epoxiconazole",
+            "treatment_parameters": "0.5 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "summary": "Treatment group with 15 mM alanine supplementation and epoxiconazole treatment."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "None",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "None",
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Control group with no alanine supplementation and no epoxiconazole treatment."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "None",
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Control group with 5 mM alanine supplementation and no epoxiconazole treatment."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "None",
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Control group with 10 mM alanine supplementation and no epoxiconazole treatment."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "15 mM",
+            "treatment": "None",
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Control group with 15 mM alanine supplementation and no epoxiconazole treatment."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "None",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "Epoxiconazole",
+            "treatment_parameters": "0.5 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "summary": "Control group with only epoxiconazole treatment to confirm baseline resistance levels."
+        }
+    ]
+}

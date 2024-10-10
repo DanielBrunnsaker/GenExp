@@ -1,0 +1,71 @@
+{
+    "logic_program": "Statement 3: Cells with higher than normal levels of intracellular alanine in standard conditions associate with increased resistance to epoxiconazole.",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "Epoxiconazole",
+            "treatment_parameters": "10 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Control with no alanine and epoxiconazole to assess baseline sensitivity."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Epoxiconazole",
+            "treatment_parameters": "10 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Test increased resistance with 5 mM alanine and epoxiconazole."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "Epoxiconazole",
+            "treatment_parameters": "10 \u00b5M",
+            "sampling_time": 12.0,
+            "summary": "Test increased resistance with 10 mM alanine and epoxiconazole."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "0 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Negative control with no alanine and no epoxiconazole."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Assess independent effect of 5 mM alanine without epoxiconazole."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Assess independent effect of 10 mM alanine without epoxiconazole."
+        }
+    ]
+}

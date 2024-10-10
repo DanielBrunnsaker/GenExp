@@ -1,0 +1,82 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "5 \u03bcg/mL",
+            "sampling_time": 12.0,
+            "summary": "Control with no alanine supplementation and epoxiconazole treatment to evaluate baseline resistance."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "5 \u03bcg/mL",
+            "sampling_time": 12.0,
+            "summary": "Test increased resistance with 5 mM alanine supplementation and epoxiconazole treatment."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "5 \u03bcg/mL",
+            "sampling_time": 12.0,
+            "summary": "Test increased resistance with 10 mM alanine supplementation and epoxiconazole treatment."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "0 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Control with no alanine supplementation and no epoxiconazole treatment to assess baseline growth."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Assess independent effect of 5 mM alanine supplementation on growth without epoxiconazole."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Assess independent effect of 10 mM alanine supplementation on growth without epoxiconazole."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "5 \u03bcg/mL",
+            "sampling_time": 12.0,
+            "summary": "Control with only epoxiconazole treatment to confirm its inhibitory effect."
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "This program involves testing for increased resistance to fenpropimorph, a fungicide. It is feasible to test in a 96 well format by assessing growth in the presence of fenpropimorph. The chemical is relatively safe to handle with standard precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,penconazole).",
+            "number": 17,
+            "reason": "Penconazole is another fungicide, and testing for increased resistance is feasible in a 96 well format. The safety profile is manageable with standard lab precautions, making it a suitable candidate for batch experiments."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'4-chlorophenol').",
+            "number": 15,
+            "reason": "4-chlorophenol is a chemical that can be tested for decreased resistance in a controlled environment. It is feasible to assess in a 96 well format, and while it requires careful handling, it is manageable with proper safety measures."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,formaldehyde).",
+            "number": 10,
+            "reason": "Formaldehyde is a common chemical used in labs, and testing for decreased resistance is feasible. It requires careful handling due to its toxicity, but it is a well-understood chemical with established safety protocols."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,radicicol).",
+            "number": 23,
+            "reason": "Radicicol is a chemical that can be tested for decreased resistance in a 96 well format. It is relatively safe to handle with standard precautions, making it a feasible option for batch experiments."
+        }
+    ]
+}

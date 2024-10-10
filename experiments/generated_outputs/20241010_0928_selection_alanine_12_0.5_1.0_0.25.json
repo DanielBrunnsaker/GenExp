@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+            "number": 2,
+            "reason": "This experiment is feasible in a 96 well format, safe to perform, and can be assessed through growth assays. Epoxiconazole is a fungicide, and its use in controlled concentrations is manageable in a lab setting."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).",
+            "number": 5,
+            "reason": "Hydroxyurea is a well-studied compound, and its effects on yeast can be safely tested in a microplate format. The experiment is feasible and can be assessed through growth inhibition assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is another fungicide that can be safely handled in a lab setting. The experiment is feasible in a 96 well format and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased oxidative stress resistance',B,C),compound_name(B,dioxygen).",
+            "number": 11,
+            "reason": "This experiment involves assessing oxidative stress resistance, which is feasible in a 96 well format. It is safe to perform as it does not require additional chemicals beyond standard lab conditions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (37\u00b0C)').",
+            "number": 12,
+            "reason": "Testing heat sensitivity is feasible and safe in a 96 well format. It requires only temperature control, which is manageable within the lab's constraints."
+        }
+    ]
+}

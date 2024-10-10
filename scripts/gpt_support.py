@@ -12,7 +12,7 @@ def prompt_gpt_for_hypothesis(prompted_statements, temp, key):
     import os
     
     os.environ["OPENAI_API_KEY"] = key
-    print('Generating hypotheses... \n')
+    print(' Generating hypotheses... \n')
     
     client = OpenAI()
     
@@ -50,7 +50,7 @@ def prompt_gpt_for_experimental_plan(hypothesis, key):
 
     client = OpenAI()
     
-    print('Designing experimental plan... \n')
+    print(' Designing experimental plan... \n')
     # Redefine a new one.
     # Open a text file in read mode
     with open('../context/expdesign_context.txt', 'r') as file:
@@ -123,7 +123,7 @@ def safety_feasibility_prompt(full_prompt, key):
      import os
      
      os.environ["OPENAI_API_KEY"] = key
-     print('Selecting clauses based on safety and feasibility... \n')
+     print(' Selecting clauses based on safety and feasibility... \n')
      
      client = OpenAI()
      

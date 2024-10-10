@@ -1,0 +1,42 @@
+**Selected Statement:**  
+12. Cells with higher than normal levels of intracellular alanine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (37°C)').
+
+**Motivation:**  
+This statement is selected due to its potential novelty and relevance to understanding stress responses in Saccharomyces cerevisiae. Increased heat sensitivity is a critical phenotype that can affect yeast viability and productivity in industrial applications. Exploring the association between intracellular alanine levels and heat sensitivity could provide insights into metabolic pathways and stress response mechanisms.
+
+**Hypothesis:**  
+Elevated intracellular alanine levels in Saccharomyces cerevisiae lead to increased sensitivity to elevated temperatures, specifically at 37°C.
+
+**Experimental Plan:**  
+1. **Strain and Media Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids as the baseline condition.
+
+2. **Experimental Setup:**
+   - Divide the 96-well plate into different sections for control and treatment groups.
+   - Control group: No alanine supplementation.
+   - Treatment groups: Supplement with alanine at three different concentrations (0.5 mM, 1.0 mM, and 2.0 mM) to modulate intracellular alanine levels.
+   - Each group will have wells incubated at 30°C (normal temperature) and 37°C (elevated temperature).
+
+3. **Assumption Verification:**
+   - Perform a preliminary experiment to confirm that alanine supplementation increases intracellular alanine levels. Use mass-spectrometry-based metabolomics to measure alanine levels at t=12h.
+
+4. **Experimental Conditions:**
+   - Inoculate cultures at an initial OD600 of 0.05.
+   - Incubate all cultures with shaking at the specified temperatures for 12 hours.
+   - Continuously measure OD600 to monitor growth.
+
+5. **Sampling and Analysis:**
+   - At t=12h, measure cell viability and growth (OD600) in each well.
+   - Use mass-spectrometry to analyze intracellular alanine levels and other metabolic changes.
+
+6. **Controls:**
+   - Include wells with no alanine supplementation at both 30°C and 37°C to serve as controls for temperature effects.
+
+**Expected Outcomes:**  
+- **Increased Alanine Levels:** Wells with alanine supplementation should show elevated intracellular alanine concentrations compared to controls.
+- **Growth and Viability at 30°C:** Alanine supplementation may not significantly affect growth or viability at 30°C.
+- **Growth and Viability at 37°C:** Wells with higher alanine levels (1.0 mM and 2.0 mM) are expected to show decreased growth and viability compared to controls, supporting the hypothesis of increased heat sensitivity.
+- **Control Comparison:** Any observed decrease in growth or viability at 37°C should be more pronounced in the presence of higher alanine levels than in the control group without alanine supplementation.
+
+This experimental design allows us to test the association between intracellular alanine levels and heat sensitivity while controlling for potential confounders and verifying assumptions.

@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased oxidative stress resistance',B,C),compound_name(B,'hydrogen peroxide').",
+            "number": 3,
+            "reason": "Hydrogen peroxide is a common reagent in labs and its handling is well understood. The phenotype of increased oxidative stress resistance is assessable through growth assays and metabolomics, making it feasible for a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased acid pH resistance',B,C),compound_name(B,'propionic acid').",
+            "number": 2,
+            "reason": "Propionic acid is a relatively safe compound to handle with standard precautions. The phenotype can be assessed through growth assays under varying pH conditions, which is feasible in a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fluconazole).",
+            "number": 19,
+            "reason": "Fluconazole is a commonly used antifungal agent, and its effects on yeast can be easily monitored through growth assays. This makes it suitable for batch experiments in a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'octanoic acid').",
+            "number": 6,
+            "reason": "Octanoic acid is a fatty acid that is relatively safe to handle. The decreased resistance phenotype can be assessed through growth inhibition assays, which are feasible in a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,valinomycin).",
+            "number": 20,
+            "reason": "Valinomycin is a well-studied ionophore, and its effects on yeast can be monitored through growth assays. The increased resistance phenotype is assessable in a 96 well format."
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+**Selected Statement:**  
+21. Cells with higher than normal levels of intracellular alanine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol).
+
+**Motivation:**  
+This statement is intriguing because it suggests a potential vulnerability in yeast cells with elevated alanine levels, specifically to ethanol. Understanding this relationship could provide insights into the metabolic pathways involved in stress responses and highlight potential targets for genetic or chemical modulation. Ethanol is a relevant stressor in industrial and laboratory settings, making this association both practical and significant.
+
+**Hypothesis:**  
+Elevated intracellular alanine levels decrease the resistance of Saccharomyces cerevisiae to ethanol, as measured by growth inhibition in the presence of ethanol.
+
+**Experimental Plan:**  
+
+1. **Strain and Media Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Alanine Supplementation:**
+   - Supplement the media with alanine at three concentrations: 0 mM (control), 5 mM, and 10 mM. These concentrations are chosen to modulate intracellular alanine levels without causing pleiotropy.
+
+3. **Ethanol Treatment:**
+   - Add ethanol to the media at a concentration of 5% (v/v), which is physiologically relevant and known to induce stress in yeast cells.
+
+4. **Experimental Setup:**
+   - Inoculate cultures at 0.05 OD600 in a 96-well plate.
+   - Include controls for each alanine concentration without ethanol to assess the independent effect of alanine supplementation.
+   - Ensure continuous shaking and maintain a temperature of 30°C.
+
+5. **Measurement and Sampling:**
+   - Continuously measure OD600 to monitor growth.
+   - At 12 hours, terminate the experiment and perform mass-spectrometry based metabolomics to confirm intracellular alanine levels.
+
+6. **Assumption Tests:**
+   - Verify that alanine supplementation effectively increases intracellular alanine levels through metabolomics analysis.
+   - Confirm that ethanol concentration is sufficient to induce stress without completely inhibiting growth in control conditions.
+
+**Expected Outcomes:**  
+
+1. **Increased Alanine Levels:**
+   - Expect metabolomics analysis to show higher intracellular alanine levels in conditions with 5 mM and 10 mM alanine supplementation compared to the control.
+
+2. **Growth Inhibition by Ethanol:**
+   - If the hypothesis is correct, cultures with higher alanine levels (5 mM and 10 mM) will show greater growth inhibition in the presence of ethanol compared to the control (0 mM alanine).
+
+3. **Control Conditions:**
+   - In the absence of ethanol, alanine supplementation alone should not significantly affect growth, confirming that observed effects are due to the interaction with ethanol.
+
+4. **Verification of Assumptions:**
+   - Control experiments should confirm that any growth differences are due to alanine levels affecting ethanol resistance, not other pleiotropic effects.
+
+By following this plan, we can effectively evaluate the association between elevated alanine levels and decreased ethanol resistance, providing insights into the metabolic interactions at play.

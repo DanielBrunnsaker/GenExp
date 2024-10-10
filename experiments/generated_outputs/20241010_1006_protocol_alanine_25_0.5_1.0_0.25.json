@@ -1,0 +1,71 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol).",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "Ethanol",
+            "treatment_parameters": "5% (v/v)",
+            "sampling_time": 12.0,
+            "summary": "Control experiment with no alanine supplementation and ethanol treatment to assess baseline ethanol resistance."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "Ethanol",
+            "treatment_parameters": "5% (v/v)",
+            "sampling_time": 12.0,
+            "summary": "Experiment with 10 mM alanine supplementation and ethanol treatment to test the effect of increased alanine on ethanol resistance."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "20 mM",
+            "treatment": "Ethanol",
+            "treatment_parameters": "5% (v/v)",
+            "sampling_time": 12.0,
+            "summary": "Experiment with 20 mM alanine supplementation and ethanol treatment to test the effect of further increased alanine on ethanol resistance."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "0 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Control experiment with no alanine supplementation and no ethanol treatment to assess baseline growth."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Experiment with 10 mM alanine supplementation and no ethanol treatment to assess the independent effect of alanine on growth."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-alanine",
+            "media_supplementation_doses": "20 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "summary": "Experiment with 20 mM alanine supplementation and no ethanol treatment to assess the independent effect of alanine on growth."
+        }
+    ]
+}

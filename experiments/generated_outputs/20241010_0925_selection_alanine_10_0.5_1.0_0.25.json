@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+            "number": 2,
+            "reason": "This experiment is feasible in a 96 well format and involves assessing resistance to a chemical, which can be done through growth assays. Epoxiconazole is a fungicide, and handling it in a well-ventilated area is safe with proper precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ascomycin).",
+            "number": 3,
+            "reason": "This experiment is feasible and involves testing chemical resistance, which can be assessed through growth assays. Ascomycin is an immunosuppressant, but it can be handled safely with standard lab precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,palmitoleate).",
+            "number": 7,
+            "reason": "This experiment is feasible in a 96 well format and involves testing resistance to a fatty acid, which is safe to handle and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "This experiment is feasible and involves assessing resistance to a chemical, which can be done through growth assays. Fenpropimorph is a fungicide, and handling it in a well-ventilated area is safe with proper precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased oxidative stress resistance',B,C),compound_name(B,dioxygen).",
+            "number": 11,
+            "reason": "This experiment is feasible and involves assessing oxidative stress resistance, which can be done through growth assays. Dioxygen is naturally present in the environment, so no additional safety concerns are present."
+        }
+    ]
+}

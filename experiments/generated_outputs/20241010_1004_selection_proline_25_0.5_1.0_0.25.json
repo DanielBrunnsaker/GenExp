@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,cycloheximide).",
+            "number": 12,
+            "reason": "Cycloheximide is a well-known inhibitor of protein synthesis in eukaryotic organisms, and its effects on yeast are well-documented. Testing increased resistance to cycloheximide is feasible in a 96 well format and can be assessed through growth assays. The chemical is handled with standard laboratory precautions, making it safe for use."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,tebuconazole).",
+            "number": 13,
+            "reason": "Tebuconazole is a fungicide that can be used to test resistance in yeast. It is feasible to use in a 96 well format and can be assessed through growth assays. The chemical is relatively safe to handle with appropriate precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,fluconazole).",
+            "number": 22,
+            "reason": "Fluconazole is an antifungal medication commonly used in yeast research. Testing decreased resistance is feasible in a 96 well format and can be assessed through growth assays. It is safe to handle with standard laboratory precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,chloroquine).",
+            "number": 17,
+            "reason": "Chloroquine is a known compound with established safety protocols. Testing decreased resistance to chloroquine is feasible in a 96 well format and can be assessed through growth assays. It is safe to handle with standard laboratory precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,amiodarone).",
+            "number": 20,
+            "reason": "Amiodarone is a compound that can be used to test chemical resistance in yeast. It is feasible to use in a 96 well format and can be assessed through growth assays. The chemical is safe to handle with appropriate precautions."
+        }
+    ]
+}

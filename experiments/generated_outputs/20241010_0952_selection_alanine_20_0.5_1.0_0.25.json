@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "This experiment involves assessing increased resistance to fenpropimorph, a fungicide. It is feasible in a 96 well format and safe to handle with standard precautions. The results can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,penconazole).",
+            "number": 17,
+            "reason": "Penconazole is another fungicide, and testing for increased resistance is feasible and safe. Growth assays can be used to assess the phenotype, making it suitable for a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol).",
+            "number": 21,
+            "reason": "Ethanol is a common laboratory chemical, and testing for decreased resistance is safe and feasible. The experiment can be conducted in a 96 well format, and growth inhibition can be easily measured."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol),condition(C,'Media:  YPD').",
+            "number": 22,
+            "reason": "This is similar to program 21 but specifies YPD media, which is a standard growth medium. It is safe, feasible, and allows for straightforward growth assessment in a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (37\u00b0C)').",
+            "number": 12,
+            "reason": "Testing for increased heat sensitivity at 37\u00b0C is feasible and safe. It can be conducted in a 96 well format, and growth can be monitored to assess the phenotype."
+        }
+    ]
+}

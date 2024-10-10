@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+            "number": 2,
+            "reason": "This program involves testing resistance to epoxiconazole, a fungicide, which is feasible and safe to handle in a well-ventilated area. It can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).",
+            "number": 5,
+            "reason": "Hydroxyurea is a manageable chemical in a lab setting, and testing for increased resistance is feasible in a 96 well format. Growth assays can be used for assessment."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is a fungicide that can be safely handled with standard precautions. Resistance can be assessed through growth assays, making it suitable for batch experiments."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,penconazole).",
+            "number": 17,
+            "reason": "Penconazole is another fungicide that is safe to handle with appropriate precautions. Resistance testing is feasible in a 96 well format and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased metal resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'ADP').",
+            "number": 18,
+            "reason": "This program involves testing metal resistance, which is feasible and safe. The interaction with ADP can be assessed through metabolomics, making it suitable for batch experiments."
+        }
+    ]
+}

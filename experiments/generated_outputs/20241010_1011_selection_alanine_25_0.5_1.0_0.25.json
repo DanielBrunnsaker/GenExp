@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "This program involves increased resistance to fenpropimorph, a fungicide. It is feasible to test in a 96 well format by assessing growth in the presence of fenpropimorph. The chemical is relatively safe to handle with standard precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,penconazole).",
+            "number": 17,
+            "reason": "Penconazole is another fungicide, and testing for increased resistance is feasible in a 96 well format. It is safe to handle with appropriate lab safety measures."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased oxidative stress resistance',B,C),compound_name(B,dioxygen).",
+            "number": 11,
+            "reason": "Decreased oxidative stress resistance can be assessed by measuring growth under oxidative stress conditions, which is feasible in a 96 well format. The experiment is safe as it involves natural oxygen levels."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (37\u00b0C)').",
+            "number": 12,
+            "reason": "Increased heat sensitivity can be tested by growing cells at elevated temperatures, which is straightforward in a 96 well format. The experiment is safe and does not require additional chemicals."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),compound_name(B,'sodium chloride').",
+            "number": 19,
+            "reason": "Testing for decreased hyperosmotic stress resistance using sodium chloride is feasible in a 96 well format. Sodium chloride is safe to handle and inexpensive, fitting within budget constraints."
+        }
+    ]
+}

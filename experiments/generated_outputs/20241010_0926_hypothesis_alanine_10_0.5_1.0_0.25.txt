@@ -1,0 +1,36 @@
+Selected Statement: 
+12. Cells with higher than normal levels of intracellular alanine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (37°C)').
+
+Motivation:
+The association between higher intracellular alanine levels and increased heat sensitivity is intriguing as it suggests a potential metabolic link between amino acid metabolism and stress response. This statement is chosen due to its novelty and the physiological relevance of heat stress, which is a common environmental challenge for yeast cells. Understanding this association could provide insights into the metabolic adjustments that occur under heat stress and how alanine levels might modulate these responses.
+
+Hypothesis:
+Higher intracellular alanine levels in Saccharomyces cerevisiae increase sensitivity to elevated temperatures (37°C) compared to standard conditions (30°C).
+
+Experimental Plan:
+1. **Strain and Culture Conditions:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids at 30°C as the baseline condition.
+
+2. **Experimental Setup:**
+   - Divide the experiment into two main conditions: standard temperature (30°C) and elevated temperature (37°C).
+   - For each temperature condition, prepare three sets of cultures:
+     1. Control (no supplementation).
+     2. Alanine supplementation at 1 mM.
+     3. Alanine supplementation at 5 mM.
+   - Each condition will have a total of six biological replicates to ensure statistical significance.
+
+3. **Measurement and Monitoring:**
+   - Continuously measure OD600 to monitor growth.
+   - At the end of the experiment (t = 12h), harvest cells for metabolomics analysis to confirm intracellular alanine levels.
+
+4. **Assumptions Verification:**
+   - Confirm that alanine supplementation results in elevated intracellular alanine levels without affecting other metabolic pathways significantly.
+   - Ensure that the heat stress condition (37°C) is physiologically relevant and does not cause general cellular damage that could confound results.
+
+Expected Outcomes:
+- If the hypothesis is correct, cultures supplemented with alanine (both 1 mM and 5 mM) at 37°C should show reduced growth (lower OD600) compared to the control at the same temperature, indicating increased heat sensitivity.
+- At 30°C, alanine-supplemented cultures should not show significant differences in growth compared to the control, confirming that the effect is specific to heat stress conditions.
+- Metabolomics analysis should confirm elevated intracellular alanine levels in supplemented cultures, verifying the assumption that alanine supplementation effectively increases intracellular alanine without widespread metabolic disruption.
+
+By carefully controlling the experimental conditions and verifying assumptions, this experimental plan aims to elucidate the relationship between alanine levels and heat sensitivity in yeast, providing insights into metabolic regulation under stress conditions.

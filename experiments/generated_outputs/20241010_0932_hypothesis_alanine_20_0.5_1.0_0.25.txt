@@ -1,0 +1,39 @@
+Selected Statement: 2. Cells with higher than normal levels of intracellular alanine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).
+
+Motivation: This statement suggests a novel association between intracellular alanine levels and chemical resistance, specifically to epoxiconazole. Investigating this association can provide insights into the metabolic pathways that contribute to chemical resistance in yeast, a topic with potential applications in biotechnology and agriculture. The focus on a specific chemical, epoxiconazole, allows for a targeted study with clear experimental endpoints.
+
+Hypothesis: Increasing intracellular alanine levels in Saccharomyces cerevisiae will lead to increased resistance to epoxiconazole, as measured by growth rate and survival in the presence of the compound.
+
+Experimental Plan:
+1. **Strain and Media Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Prepare minimal media without amino acids as the base condition.
+
+2. **Alanine Supplementation:**
+   - Supplement the media with three levels of alanine: 0 mM (control), 5 mM, and 10 mM. These concentrations are chosen based on physiological relevance and minimal pleiotropy.
+
+3. **Epoxiconazole Treatment:**
+   - Prepare media with and without 10 µM epoxiconazole, a concentration selected based on literature to ensure measurable impact without complete growth inhibition.
+
+4. **Experimental Setup:**
+   - Inoculate cultures at 0.05 OD600 in 96-well plates.
+   - Set up four conditions for each alanine level: with and without epoxiconazole, resulting in a total of 12 conditions (4 conditions x 3 alanine levels).
+   - Include replicates for each condition to ensure statistical robustness.
+
+5. **Continuous Monitoring:**
+   - Measure OD600 every hour to monitor growth dynamics.
+
+6. **Metabolomics Analysis:**
+   - At t = 12h, collect samples for mass-spectrometry based metabolomics to quantify intracellular alanine levels and verify the effectiveness of supplementation.
+
+7. **Control Experiments:**
+   - Test the independent effect of alanine supplementation on growth in the absence of epoxiconazole.
+   - Confirm no significant pleiotropic effects by comparing growth and metabolite profiles across alanine levels without epoxiconazole.
+
+Expected Outcomes:
+- If the hypothesis is correct, cultures with higher alanine supplementation (5 mM and 10 mM) will show increased growth rates and higher final OD600 in the presence of epoxiconazole compared to the control (0 mM alanine).
+- Metabolomics should confirm increased intracellular alanine levels correlating with the supplemented concentrations.
+- In the absence of epoxiconazole, alanine supplementation should not significantly alter growth, indicating that observed resistance is specific to epoxiconazole exposure.
+- These outcomes would support the association between higher intracellular alanine levels and increased resistance to epoxiconazole, providing a basis for further mechanistic studies.
+
+By systematically evaluating the relationship between alanine levels and chemical resistance, this experiment aims to elucidate metabolic influences on stress responses in yeast.

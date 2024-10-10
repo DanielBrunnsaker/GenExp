@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "This program involves increased resistance to fenpropimorph, which is a fungicide. It is feasible to test in a 96 well format and safe to handle with standard precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,'cadmium cation').",
+            "number": 9,
+            "reason": "This program involves decreased accumulation of cadmium cations, which can be assessed through growth and metabolomics. Cadmium handling requires care, but it is feasible with proper precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,wortmannin).",
+            "number": 13,
+            "reason": "Wortmannin is a chemical that can be safely handled in a well-ventilated area. The decreased resistance phenotype is assessable through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ascomycin).",
+            "number": 3,
+            "reason": "Ascomycin is an immunosuppressant that can be handled safely with standard lab precautions. The phenotype is assessable through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,formaldehyde).",
+            "number": 10,
+            "reason": "Formaldehyde is a common laboratory chemical, and its effects on resistance can be assessed in a 96 well format. Proper ventilation and safety measures are necessary."
+        }
+    ]
+}

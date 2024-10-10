@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).",
+            "number": 5,
+            "reason": "Hydroxyurea is a relatively safe compound to handle, and the experiment can be easily set up in a 96 well format to assess resistance through growth assays. The increased resistance phenotype is straightforward to measure."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is a fungicide, and testing resistance to it is feasible in a microplate format. The safety profile is acceptable with standard lab precautions, and resistance can be assessed through growth inhibition assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol).",
+            "number": 21,
+            "reason": "Ethanol is a common laboratory chemical with well-understood safety protocols. The decreased resistance phenotype can be easily measured through growth assays in a 96 well plate."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased oxidative stress resistance',B,C),compound_name(B,dioxygen).",
+            "number": 11,
+            "reason": "Assessing oxidative stress resistance is feasible in a microplate format using growth assays. The experiment is safe as it involves standard oxygen levels, and the phenotype is relevant to cellular metabolism."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (37\u00b0C)').",
+            "number": 12,
+            "reason": "Heat sensitivity can be tested by incubating the microplate at 37\u00b0C, which is a standard laboratory condition. The experiment is safe and cost-effective, and growth can be easily monitored."
+        }
+    ]
+}

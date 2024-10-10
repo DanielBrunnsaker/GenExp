@@ -118,7 +118,7 @@ def main():
     filtered_sorted_specifity_all = sorted_specifity[sorted_specifity[target] != 0]
     filtered_sorted_specifity = sorted_specifity[target][sorted_specifity[target] != 0]
     
-    print('Generating logic programs... \n')
+    print('\n Generating logic programs... \n')
     
     hypothesis_counter = 0
     full_prompt = ''

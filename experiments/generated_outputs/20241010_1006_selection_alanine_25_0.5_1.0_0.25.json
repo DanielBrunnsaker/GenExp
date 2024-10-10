@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "This experiment is feasible in a 96 well format as it involves testing resistance to a chemical, fenpropimorph, which is safe to handle under standard lab conditions. The phenotype can be assessed through growth assays, making it suitable for batch experiments."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,penconazole).",
+            "number": 17,
+            "reason": "Penconazole is a fungicide that can be safely handled in a well-ventilated lab. The increased resistance phenotype can be measured through growth assays, making it feasible for a 96 well microplate setup."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased metal resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'ADP').",
+            "number": 18,
+            "reason": "This program involves assessing metal resistance, which can be done using growth assays. The interaction with ADP can be explored through metabolomics, fitting the constraints of a 96 well format. The experiment is safe and feasible within budget."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol).",
+            "number": 21,
+            "reason": "Ethanol is a common laboratory chemical, and its effects on yeast can be safely tested in a well-ventilated area. The decreased resistance phenotype can be assessed through growth assays, making it suitable for batch experiments."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,wortmannin).",
+            "number": 13,
+            "reason": "Wortmannin is a chemical that can be handled with standard precautions. The decreased resistance phenotype can be assessed through growth assays, making it feasible for a 96 well microplate setup. The experiment is safe and within budget constraints."
+        }
+    ]
+}

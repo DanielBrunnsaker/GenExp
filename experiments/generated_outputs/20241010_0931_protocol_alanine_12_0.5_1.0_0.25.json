@@ -1,0 +1,104 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "fenpropimorph",
+            "treatment_parameters": "0 \u03bcM",
+            "sampling_time": 12.0,
+            "summary": "Control group with no alanine modulation and no fenpropimorph treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "aminooxyacetic acid",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": "fenpropimorph",
+            "treatment_parameters": "0 \u03bcM",
+            "sampling_time": 12.0,
+            "summary": "Low alanine group with AOA treatment and no fenpropimorph."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "fenpropimorph",
+            "treatment_parameters": "0 \u03bcM",
+            "sampling_time": 12.0,
+            "summary": "Alanine supplementation group with no fenpropimorph."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "fenpropimorph",
+            "treatment_parameters": "10 \u03bcM",
+            "sampling_time": 12.0,
+            "summary": "Control group with no alanine modulation and 10 \u03bcM fenpropimorph treatment."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "aminooxyacetic acid",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": "fenpropimorph",
+            "treatment_parameters": "10 \u03bcM",
+            "sampling_time": 12.0,
+            "summary": "Low alanine group with AOA treatment and 10 \u03bcM fenpropimorph."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "fenpropimorph",
+            "treatment_parameters": "10 \u03bcM",
+            "sampling_time": 12.0,
+            "summary": "Alanine supplementation group with 10 \u03bcM fenpropimorph."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "fenpropimorph",
+            "treatment_parameters": "50 \u03bcM",
+            "sampling_time": 12.0,
+            "summary": "Control group with no alanine modulation and 50 \u03bcM fenpropimorph treatment."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "aminooxyacetic acid",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": "fenpropimorph",
+            "treatment_parameters": "50 \u03bcM",
+            "sampling_time": 12.0,
+            "summary": "Low alanine group with AOA treatment and 50 \u03bcM fenpropimorph."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "fenpropimorph",
+            "treatment_parameters": "50 \u03bcM",
+            "sampling_time": 12.0,
+            "summary": "Alanine supplementation group with 50 \u03bcM fenpropimorph."
+        }
+    ]
+}

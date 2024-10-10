@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+            "number": 2,
+            "reason": "This experiment involves testing resistance to epoxiconazole, a fungicide, which is feasible and safe to handle in a well-ventilated area. The resistance phenotype can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).",
+            "number": 5,
+            "reason": "Hydroxyurea is a manageable chemical in a lab setting, and testing for increased resistance is feasible through growth assays. It is safe to handle with standard precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is another fungicide, and testing for increased resistance is feasible and safe. Growth assays can be used to assess resistance."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,formaldehyde).",
+            "number": 10,
+            "reason": "Formaldehyde is a common laboratory chemical, and testing for decreased resistance is feasible. Proper ventilation and safety measures make this experiment safe."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,penconazole).",
+            "number": 17,
+            "reason": "Penconazole is a fungicide, and testing for increased resistance is feasible and safe. Growth assays can be used to assess resistance."
+        }
+    ]
+}

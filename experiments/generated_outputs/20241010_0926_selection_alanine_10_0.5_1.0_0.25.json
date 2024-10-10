@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (37\u00b0C)').",
+            "number": 12,
+            "reason": "This experiment is feasible in a 96 well format as it involves temperature control, which can be managed with a standard incubator. It is safe and does not require handling hazardous chemicals."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased oxidative stress resistance',B,C),compound_name(B,dioxygen).",
+            "number": 11,
+            "reason": "This experiment can be conducted in a well-ventilated area without the need for additional gas control. It is safe and feasible to assess oxidative stress resistance through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is a fungicide that can be safely handled with standard lab precautions. The experiment is feasible in a 96 well format and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,palmitoleate).",
+            "number": 7,
+            "reason": "Palmitoleate is a fatty acid that can be safely handled. The experiment is feasible in a 96 well format and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased metal resistance',B,C),compound_name(B,'zinc dichloride').",
+            "number": 6,
+            "reason": "Zinc dichloride is a manageable chemical in a lab setting with proper precautions. The experiment is feasible in a 96 well format and can be assessed through growth assays."
+        }
+    ]
+}

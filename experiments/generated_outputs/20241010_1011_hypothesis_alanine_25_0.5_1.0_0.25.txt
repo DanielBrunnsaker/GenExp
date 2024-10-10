@@ -1,0 +1,42 @@
+**Selected Statement:**  
+11. Cells with higher than normal levels of intracellular alanine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased oxidative stress resistance',B,C),compound_name(B,dioxygen).
+
+**Motivation:**  
+The statement is selected because it links intracellular alanine levels with oxidative stress resistance, a fundamental cellular process. Understanding this association could provide insight into how metabolic states influence stress responses, which is a crucial aspect of yeast physiology and has broader implications for stress-related research in other organisms. Additionally, this statement is testable under controlled conditions and can be explored using metabolomics and standard stress assays.
+
+**Hypothesis:**  
+Elevated intracellular levels of alanine in Saccharomyces cerevisiae lead to decreased resistance to oxidative stress when grown in minimal media without amino acids.
+
+**Experimental Plan:**  
+1. **Strain and Culture Conditions:**  
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cultures in minimal media without amino acids.  
+   - Inoculate at an initial OD600 of 0.05.
+
+2. **Alanine Supplementation:**  
+   - Prepare three conditions with alanine supplementation:  
+     - Control: 0 mM alanine (baseline condition).
+     - Low: 5 mM alanine.
+     - High: 10 mM alanine.
+
+3. **Oxidative Stress Challenge:**  
+   - At t = 12h, introduce oxidative stress using hydrogen peroxide (H2O2) at a concentration of 0.5 mM to all cultures.
+
+4. **Measurements:**  
+   - Continuously measure OD600 to monitor growth.
+   - At t = 12h, collect samples for mass-spectrometry-based metabolomics to quantify intracellular alanine levels.
+   - Assess oxidative stress resistance by comparing survival rates post H2O2 exposure using colony-forming units (CFU) assay.
+
+5. **Controls:**  
+   - Include a no-stress control for each alanine level to account for growth effects independent of oxidative stress.
+
+6. **Verification of Assumptions:**  
+   - Confirm that alanine supplementation alters intracellular alanine levels using metabolomics.
+   - Ensure that H2O2 concentration is physiologically relevant and induces oxidative stress without causing excessive cell death in control conditions.
+
+**Expected Outcomes:**  
+- **Control Condition (0 mM Alanine):** Baseline stress resistance is expected, providing a reference for comparison.
+- **Low Alanine (5 mM):** A moderate increase in intracellular alanine, potentially resulting in slightly reduced oxidative stress resistance compared to control.
+- **High Alanine (10 mM):** A significant increase in intracellular alanine is expected to correlate with a marked decrease in oxidative stress resistance, evidenced by lower survival rates post H2O2 exposure.
+
+These outcomes will support or refute the hypothesis that higher intracellular alanine levels are associated with decreased oxidative stress resistance. The experiment will also verify that alanine supplementation effectively modulates intracellular alanine levels without introducing pleiotropic effects.

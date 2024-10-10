@@ -1,0 +1,71 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (37\u00b0C)')",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "none",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "temperature",
+            "treatment_parameters": "30\u00b0C",
+            "sampling_time": 12.0,
+            "summary": "Control at 30\u00b0C with no alanine supplementation."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "1 mM",
+            "treatment": "temperature",
+            "treatment_parameters": "30\u00b0C",
+            "sampling_time": 12.0,
+            "summary": "1 mM alanine supplementation at 30\u00b0C."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "temperature",
+            "treatment_parameters": "30\u00b0C",
+            "sampling_time": 12.0,
+            "summary": "5 mM alanine supplementation at 30\u00b0C."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "37\u00b0C",
+            "media_supplementation": "none",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "temperature",
+            "treatment_parameters": "37\u00b0C",
+            "sampling_time": 12.0,
+            "summary": "Control at 37\u00b0C with no alanine supplementation."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "37\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "1 mM",
+            "treatment": "temperature",
+            "treatment_parameters": "37\u00b0C",
+            "sampling_time": 12.0,
+            "summary": "1 mM alanine supplementation at 37\u00b0C."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "37\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "temperature",
+            "treatment_parameters": "37\u00b0C",
+            "sampling_time": 12.0,
+            "summary": "5 mM alanine supplementation at 37\u00b0C."
+        }
+    ]
+}

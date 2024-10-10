@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+            "number": 2,
+            "reason": "This experiment is feasible in a 96 well format and involves testing resistance to a chemical, which can be assessed through growth assays. Epoxiconazole is a fungicide, and handling it in a well-ventilated area is reasonable."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).",
+            "number": 5,
+            "reason": "Hydroxyurea is a manageable chemical in a lab setting, and testing for increased resistance is feasible through growth assays. This aligns with the constraints of a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is another fungicide, and testing for increased resistance is feasible in a 96 well format. The experiment is safe and assessable through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,'cadmium cation').",
+            "number": 9,
+            "reason": "This experiment involves testing for decreased accumulation of cadmium, which can be assessed through metabolomics. Cadmium handling requires caution, but it is feasible in a well-ventilated area."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,formaldehyde).",
+            "number": 10,
+            "reason": "Formaldehyde is a common laboratory chemical, and testing for decreased resistance is feasible in a 96 well format. The experiment can be safely conducted with proper ventilation."
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is a fungicide, and testing increased resistance is feasible and safe in a 96 well format. The experiment can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,penconazole).",
+            "number": 17,
+            "reason": "Penconazole is another fungicide, and testing increased resistance is feasible and safe. Growth assays can be used to assess the phenotype."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol),condition(C,'Media:  YPD').",
+            "number": 22,
+            "reason": "Ethanol is a common chemical in labs, and testing decreased resistance is safe and feasible. The experiment can be assessed through growth assays in YPD media."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (37\u00b0C)').",
+            "number": 12,
+            "reason": "Testing increased heat sensitivity is feasible and safe. It can be assessed by incubating the microplate at 37\u00b0C and monitoring growth."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,wortmannin).",
+            "number": 13,
+            "reason": "Wortmannin is a known inhibitor, and testing decreased resistance is feasible and safe. The experiment can be assessed through growth assays."
+        }
+    ]
+}

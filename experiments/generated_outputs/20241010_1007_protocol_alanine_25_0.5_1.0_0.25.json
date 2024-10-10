@@ -1,0 +1,38 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol),condition(C,'Media:  YPD')",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "None",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "Ethanol",
+            "treatment_parameters": "5% ethanol in YPD",
+            "sampling_time": 12.0,
+            "summary": "Control group with no alanine supplementation, testing ethanol resistance in YPD."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "Ethanol",
+            "treatment_parameters": "5% ethanol in YPD",
+            "sampling_time": 12.0,
+            "summary": "Low alanine group with 0.5 mM alanine supplementation, testing ethanol resistance in YPD."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Ethanol",
+            "treatment_parameters": "5% ethanol in YPD",
+            "sampling_time": 12.0,
+            "summary": "High alanine group with 5 mM alanine supplementation, testing ethanol resistance in YPD."
+        }
+    ]
+}

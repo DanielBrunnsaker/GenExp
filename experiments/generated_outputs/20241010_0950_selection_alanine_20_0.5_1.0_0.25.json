@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+            "number": 2,
+            "reason": "Testing increased resistance to epoxiconazole is feasible in a 96 well format and safe, as epoxiconazole is a common fungicide with manageable safety protocols."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is another fungicide, and testing for increased resistance is feasible and safe in a well-ventilated area."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,formaldehyde).",
+            "number": 10,
+            "reason": "Formaldehyde is a common laboratory chemical, and testing decreased resistance is feasible with proper safety measures in place."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,penconazole).",
+            "number": 17,
+            "reason": "Penconazole is a fungicide, and testing for increased resistance is feasible and safe with standard laboratory precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),compound_name(B,'sodium chloride').",
+            "number": 19,
+            "reason": "Sodium chloride is safe and easy to handle, and testing for hyperosmotic stress resistance is feasible in a 96 well format."
+        }
+    ]
+}
