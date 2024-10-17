@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fluconazole).",
+            "number": 17,
+            "reason": "This experiment is feasible in a 96 well format as it involves testing resistance to fluconazole, a common antifungal agent. It is safe to handle with standard laboratory precautions and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'derivative myriocin').",
+            "number": 16,
+            "reason": "Testing resistance to myriocin derivatives is feasible and safe in a 96 well format. The experiment can be assessed through growth assays, and myriocin is a well-studied compound with known handling protocols."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased cell size',B,C).",
+            "number": 6,
+            "reason": "Increased cell size can be assessed through microscopy or flow cytometry, both of which are feasible in a 96 well format. The experiment is safe and does not require hazardous chemicals."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased acid pH resistance',B,C).",
+            "number": 11,
+            "reason": "This experiment involves testing resistance to acidic conditions, which is feasible in a 96 well format. It is safe to perform and can be assessed through growth assays at different pH levels."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C).",
+            "number": 13,
+            "reason": "Testing for hyperosmotic stress resistance is feasible in a 96 well format and safe to perform. It can be assessed through growth assays by adjusting osmotic conditions in the media."
+        }
+    ]
+}
