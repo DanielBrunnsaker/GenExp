@@ -4,3 +4,4 @@ openai==1.51.2
 pandas==1.5.3
 scikit_learn==1.4.0
 scikit_optimize==0.9.0
+xlrd==2.0.1
