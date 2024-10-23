@@ -11394,35 +11394,61 @@
     
 
 
+<<<<<<< HEAD
     <!-- http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1009 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1009">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APO_0000095"/>
         <observableHasQualifier rdf:resource="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1009"/>
         <phenotypeImpliesPhenotype rdf:resource="http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1009-2"/>
+=======
+    <!-- http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_0921 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_0921">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APO_0000095"/>
+        <observableHasQualifier rdf:resource="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0921"/>
+>>>>>>> 69b2f281e95cee6e8d52bc89b0f39c23dec186d5
     </owl:NamedIndividual>
     
 
 
+<<<<<<< HEAD
     <!-- http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1009-2 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1009-2">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APO_0000087"/>
         <observableHasQualifier rdf:resource="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1009-2"/>
+=======
+    <!-- http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_0921-2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_0921-2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APO_0000087"/>
+        <observableHasQualifier rdf:resource="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0921-2"/>
+>>>>>>> 69b2f281e95cee6e8d52bc89b0f39c23dec186d5
     </owl:NamedIndividual>
     
 
 
+<<<<<<< HEAD
     <!-- http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1010 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1010">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APO_0000095"/>
         <observableHasQualifier rdf:resource="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1010"/>
         <phenotypeImpliesPhenotype rdf:resource="http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1010-2"/>
+=======
+    <!-- http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_0922 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_0922">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APO_0000095"/>
+        <observableHasQualifier rdf:resource="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0922"/>
+        <rdfs:comment>alanine</rdfs:comment>
+>>>>>>> 69b2f281e95cee6e8d52bc89b0f39c23dec186d5
     </owl:NamedIndividual>
     
 
 
+<<<<<<< HEAD
     <!-- http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1010-2 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1010-2">
@@ -11446,6 +11472,14 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1011-2">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APO_0000083"/>
+=======
+    <!-- http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_0922-2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_0922-2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APO_0000095"/>
+        <observableHasQualifier rdf:resource="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0922-2"/>
+        <rdfs:comment>cadmium cations</rdfs:comment>
+>>>>>>> 69b2f281e95cee6e8d52bc89b0f39c23dec186d5
     </owl:NamedIndividual>
     
 
@@ -11523,6 +11557,7 @@
     
 
 
+<<<<<<< HEAD
     <!-- http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1009 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1009">
@@ -11558,14 +11593,41 @@
     <!-- http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1011 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1011">
+=======
+    <!-- http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0921 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0921">
+>>>>>>> 69b2f281e95cee6e8d52bc89b0f39c23dec186d5
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APO_0000004"/>
     </owl:NamedIndividual>
     
 
 
+<<<<<<< HEAD
     <!-- http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1011-2 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1011-2">
+=======
+    <!-- http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0921-2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0921-2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APO_0000004"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0922 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0922">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APO_0000003"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0922-2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0922-2">
+>>>>>>> 69b2f281e95cee6e8d52bc89b0f39c23dec186d5
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/APO_0000003"/>
     </owl:NamedIndividual>
     
@@ -11663,5 +11725,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
