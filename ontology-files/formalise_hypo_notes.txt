@@ -20,9 +20,31 @@ Increasing intracellular serine levels in Saccharomyces cerevisiae enhances resi
 enhances - implies?
 induced by hydrogen peroxide - captured by experimental conditions instead?
 
+# 20241010_1011
+- Elevated intracellular levels of alanine in Saccharomyces cerevisiae lead to decreased resistance to oxidative stress when grown in minimal media without amino acids.
+
+leads to ... when ...
+elevated intracellular ... AND grown in minimal media ... IMPLIES decreassed resistance ... ?
+minimal media w/o AA?? something in metabolism and growth?
+
+# 20241010_1010
+- Lower intracellular alanine levels in Saccharomyces cerevisiae lead to decreased accumulation of cadmium cations due to changes in transport or sequestration mechanisms.
+
+due to <EXPLANATION> - should this be captured in some way?
+
+# 20241010_1009
+- Lowering intracellular alanine levels in Saccharomyces cerevisiae results in decreased resistance to formaldehyde exposure.
+
+resistance to chemicals -> formaldehyde in ChEBI ?
+
+# 20241010_1007
+- Increased intracellular alanine levels in Saccharomyces cerevisiae, when grown on YPD media, lead to decreased resistance to ethanol. This suggests that alanine may play a role in modulating the cell's stress response mechanisms specifically in nutrient-rich conditions.
 
 
-
+how much emphasis to "link" word? some suggest implication/some causal relationship some something more like correlation. How much care abouut this? Do we think LLM actually "considers" this difference?
 
 
 left out chemicals
+
+
+should we rather than creating instances like now, maybe create subclasses for eg decreased chem accu - then instance of this class - allows for AND OR between these classes
