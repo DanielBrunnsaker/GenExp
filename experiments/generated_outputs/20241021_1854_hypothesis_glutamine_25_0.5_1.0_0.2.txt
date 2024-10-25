@@ -1,0 +1,44 @@
+**Selected Statement:**  
+Cells with higher than normal levels of intracellular glutamine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'nickel sulfate').
+
+**Motivation:**  
+This statement is selected due to its novelty and potential implications for understanding the role of glutamine in conferring resistance to heavy metals, such as nickel sulfate. Testing this association provides insights into cellular mechanisms that could be leveraged for biotechnological applications, such as bio-remediation or the development of yeast strains with enhanced resistance to heavy metal stress.
+
+**Hypothesis:**  
+Elevated intracellular glutamine levels in Saccharomyces cerevisiae lead to increased resistance to nickel sulfate.
+
+**Experimental Plan:**  
+
+1. **Strain and Media Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Glutamine Supplementation:**
+   - Supplement the media with glutamine at three concentrations: 0 mM (control), 5 mM, and 10 mM.
+   - Ensure that glutamine concentrations are physiologically relevant and do not exceed known tolerable limits for yeast.
+
+3. **Nickel Sulfate Exposure:**
+   - Prepare nickel sulfate solutions at three concentrations: 0 mM (control), 1 mM, and 2 mM.
+   - Add nickel sulfate to the cultures at t=0h.
+
+4. **Experimental Setup:**
+   - Inoculate cultures at 0.05 OD600 in a 96-well plate.
+   - Each well represents a unique combination of glutamine and nickel sulfate concentration.
+   - Include triplicates for each condition to ensure statistical robustness.
+
+5. **Growth Monitoring:**
+   - Measure OD600 every 20 minutes for 12 hours to assess growth kinetics and resistance.
+
+6. **Metabolomics Analysis:**
+   - At experiment termination, perform mass-spectrometry based metabolomics to measure intracellular glutamine levels and verify supplementation effects.
+
+7. **Controls:**
+   - Include wells with no glutamine and no nickel sulfate to establish baseline growth and resistance.
+   - Include wells with only glutamine or only nickel sulfate to assess independent effects.
+
+**Expected Outcomes:**  
+- **Increased Resistance:** If higher intracellular glutamine levels confer increased resistance, cultures supplemented with 5 mM and 10 mM glutamine should exhibit higher growth rates and final OD600 in the presence of nickel sulfate compared to the control (0 mM glutamine).
+- **Independent Effects:** Wells with only glutamine supplementation should not show increased resistance compared to the control, confirming that the observed effect is due to the interaction with nickel sulfate.
+- **Metabolomics Verification:** Mass-spectrometry should confirm elevated intracellular glutamine levels in supplemented cultures, verifying the assumption that supplementation modulates intracellular concentrations.
+
+By systematically varying glutamine and nickel sulfate concentrations, this experiment aims to elucidate the relationship between intracellular glutamine levels and nickel sulfate resistance, providing a robust test of the selected statement.

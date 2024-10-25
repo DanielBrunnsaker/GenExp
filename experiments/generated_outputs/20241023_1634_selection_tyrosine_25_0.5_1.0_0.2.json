@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'sodium dodecyl sulfate').",
+            "number": 2,
+            "reason": "Sodium dodecyl sulfate (SDS) is a common laboratory reagent that is safe to handle with standard precautions. It is feasible to test in a 96 well format and can be assessed through growth inhibition assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'adipic acid').",
+            "number": 5,
+            "reason": "Adipic acid is a relatively safe compound to handle and is not volatile, making it suitable for use in a ventilated area. It is also cost-effective and can be used in growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased alkaline pH resistance',B,C).",
+            "number": 8,
+            "reason": "Testing for pH resistance is feasible in a 96 well format by adjusting the pH of the media. It is safe and does not require additional chemicals, making it budget-friendly."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased chemical compound accumulation',B,C),compound_name(B,proton),condition(C,'Media:  external pH 7.5').",
+            "number": 12,
+            "reason": "This program involves testing proton accumulation, which can be assessed by measuring pH changes. It is safe and feasible in a 96 well format without additional chemical hazards."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,cycloheximide).",
+            "number": 23,
+            "reason": "Cycloheximide is a well-known antifungal agent used in yeast research. It is safe to handle with standard precautions and can be used in growth assays to assess resistance."
+        }
+    ]
+}

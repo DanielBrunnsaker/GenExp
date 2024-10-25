@@ -1,0 +1,50 @@
+### Selected Statement:
+Cells with higher than normal levels of intracellular glutamate in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'formic acid').
+
+### Motivation:
+This statement is selected due to its potential implications in understanding the metabolic and stress response pathways in Saccharomyces cerevisiae. Glutamate is a central metabolite, and its intracellular accumulation could provide insights into cellular stress responses, particularly to formic acid, a common industrial inhibitor. This statement is chosen because it offers a clear, testable association and has practical relevance in industrial fermentation processes.
+
+### Hypothesis:
+Cells with higher than normal levels of intracellular glutamate will exhibit decreased resistance to formic acid compared to cells with normal glutamate levels.
+
+### Experimental Plan:
+
+1. **Objective:** To investigate whether increased intracellular glutamate levels correlate with decreased resistance to formic acid in Saccharomyces cerevisiae.
+
+2. **Strain and Growth Conditions:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids, inoculated at 0.05 OD600.
+   - Incubate at 30°C with shaking.
+
+3. **Experimental Groups:**
+   - **Control Group:** No glutamate supplementation.
+   - **Experimental Groups:** Supplement with glutamate at three concentrations: 1 mM, 5 mM, and 10 mM.
+
+4. **Formic Acid Challenge:**
+   - At t=0h, add formic acid to each well to achieve final concentrations of 0 mM (control), 10 mM, 20 mM, and 40 mM.
+   - Each glutamate condition will be tested across all formic acid concentrations.
+
+5. **OD600 Measurement:**
+   - Measure OD600 every 20 minutes for 12 hours to monitor growth kinetics.
+
+6. **Metabolomics Analysis:**
+   - At the end of the experiment, collect samples for mass-spectrometry-based metabolomics to confirm intracellular glutamate levels.
+
+7. **Assumptions Testing:**
+   - Verify that glutamate supplementation increases intracellular glutamate levels without significantly affecting other metabolic pathways. Perform a preliminary test with metabolomics on samples from each supplementation level without formic acid.
+
+8. **Controls:**
+   - Include wells without formic acid to assess the independent effect of glutamate supplementation on growth.
+   - Include wells with formic acid but no glutamate supplementation to assess baseline resistance.
+
+### Expected Outcomes:
+
+- **Hypothesis Support:** If increased glutamate results in decreased growth rate or final OD600 in the presence of formic acid compared to control conditions, it would support the hypothesis that higher glutamate levels decrease resistance to formic acid.
+  
+- **Hypothesis Refutation:** If there is no difference in growth rates or final OD600 between glutamate-supplemented and control groups in the presence of formic acid, the hypothesis would be refuted.
+
+- **Assumptions Verification:** Successful increase in intracellular glutamate levels confirmed by metabolomics without affecting other pathways would validate the experimental setup.
+
+- **Control Outcomes:** Growth in wells without formic acid should not be significantly different across glutamate concentrations, confirming that glutamate supplementation does not independently affect growth.
+
+This experimental design ensures that the effects of intracellular glutamate levels on formic acid resistance are isolated and measurable, allowing for a robust test of the hypothesis.

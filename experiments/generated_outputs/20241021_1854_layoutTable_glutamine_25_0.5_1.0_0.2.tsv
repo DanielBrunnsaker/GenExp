@@ -1,0 +1,97 @@
+	plateID	well	CONCuM	Summary
+0	plate_1	A01	glutamine: 10 mM & nickel sulfate: 0 mM	Growth with 10 mM glutamine, no nickel sulfate.
+1	plate_1	A02	glutamine: 10 mM & nickel sulfate: 1 mM	Growth with 10 mM glutamine and 1 mM nickel sulfate.
+2	plate_1	A03	glutamine: 0 mM & nickel sulfate: 1 mM	Growth with 1 mM nickel sulfate, no glutamine.
+3	plate_1	A04	glutamine: 5 mM & nickel sulfate: 1 mM	Growth with 5 mM glutamine and 1 mM nickel sulfate.
+4	plate_1	A05	Media control	
+5	plate_1	A06	glutamine: 5 mM & nickel sulfate: 0 mM	Growth with 5 mM glutamine, no nickel sulfate.
+6	plate_1	A07	glutamine: 10 mM & nickel sulfate: 2 mM	Growth with 10 mM glutamine and 2 mM nickel sulfate.
+7	plate_1	A08	glutamine: 5 mM & nickel sulfate: 2 mM	Growth with 5 mM glutamine and 2 mM nickel sulfate.
+8	plate_1	A09	Media control	
+9	plate_1	A10	glutamine: 10 mM & nickel sulfate: 1 mM	Growth with 10 mM glutamine and 1 mM nickel sulfate.
+10	plate_1	A11	glutamine: 0 mM & nickel sulfate: 2 mM	Growth with 2 mM nickel sulfate, no glutamine.
+11	plate_1	A12	glutamine: 0 mM & nickel sulfate: 0 mM	Baseline growth with no glutamine or nickel sulfate.
+12	plate_1	B01	glutamine: 5 mM & nickel sulfate: 2 mM	Growth with 5 mM glutamine and 2 mM nickel sulfate.
+13	plate_1	B02	glutamine: 10 mM & nickel sulfate: 0 mM	Growth with 10 mM glutamine, no nickel sulfate.
+14	plate_1	B03	Media control	
+15	plate_1	B04	glutamine: 0 mM & nickel sulfate: 0 mM	Baseline growth with no glutamine or nickel sulfate.
+16	plate_1	B05	glutamine: 10 mM & nickel sulfate: 2 mM	Growth with 10 mM glutamine and 2 mM nickel sulfate.
+17	plate_1	B06	glutamine: 10 mM & nickel sulfate: 2 mM	Growth with 10 mM glutamine and 2 mM nickel sulfate.
+18	plate_1	B07	glutamine: 5 mM & nickel sulfate: 1 mM	Growth with 5 mM glutamine and 1 mM nickel sulfate.
+19	plate_1	B08	glutamine: 5 mM & nickel sulfate: 1 mM	Growth with 5 mM glutamine and 1 mM nickel sulfate.
+20	plate_1	B09	glutamine: 0 mM & nickel sulfate: 1 mM	Growth with 1 mM nickel sulfate, no glutamine.
+21	plate_1	B10	glutamine: 5 mM & nickel sulfate: 0 mM	Growth with 5 mM glutamine, no nickel sulfate.
+22	plate_1	B11	glutamine: 10 mM & nickel sulfate: 1 mM	Growth with 10 mM glutamine and 1 mM nickel sulfate.
+23	plate_1	B12	glutamine: 0 mM & nickel sulfate: 2 mM	Growth with 2 mM nickel sulfate, no glutamine.
+24	plate_1	C01	glutamine: 10 mM & nickel sulfate: 2 mM	Growth with 10 mM glutamine and 2 mM nickel sulfate.
+25	plate_1	C02	Media control	
+26	plate_1	C03	glutamine: 0 mM & nickel sulfate: 0 mM	Baseline growth with no glutamine or nickel sulfate.
+27	plate_1	C04	glutamine: 0 mM & nickel sulfate: 1 mM	Growth with 1 mM nickel sulfate, no glutamine.
+28	plate_1	C05	glutamine: 10 mM & nickel sulfate: 1 mM	Growth with 10 mM glutamine and 1 mM nickel sulfate.
+29	plate_1	C06	glutamine: 5 mM & nickel sulfate: 1 mM	Growth with 5 mM glutamine and 1 mM nickel sulfate.
+30	plate_1	C07	glutamine: 5 mM & nickel sulfate: 2 mM	Growth with 5 mM glutamine and 2 mM nickel sulfate.
+31	plate_1	C08	Media control	
+32	plate_1	C09	glutamine: 5 mM & nickel sulfate: 0 mM	Growth with 5 mM glutamine, no nickel sulfate.
+33	plate_1	C10	glutamine: 0 mM & nickel sulfate: 2 mM	Growth with 2 mM nickel sulfate, no glutamine.
+34	plate_1	C11	glutamine: 0 mM & nickel sulfate: 1 mM	Growth with 1 mM nickel sulfate, no glutamine.
+35	plate_1	C12	glutamine: 10 mM & nickel sulfate: 0 mM	Growth with 10 mM glutamine, no nickel sulfate.
+36	plate_1	D01	glutamine: 5 mM & nickel sulfate: 1 mM	Growth with 5 mM glutamine and 1 mM nickel sulfate.
+37	plate_1	D02	glutamine: 10 mM & nickel sulfate: 2 mM	Growth with 10 mM glutamine and 2 mM nickel sulfate.
+38	plate_1	D03	glutamine: 5 mM & nickel sulfate: 2 mM	Growth with 5 mM glutamine and 2 mM nickel sulfate.
+39	plate_1	D04	glutamine: 0 mM & nickel sulfate: 2 mM	Growth with 2 mM nickel sulfate, no glutamine.
+40	plate_1	D05	glutamine: 0 mM & nickel sulfate: 1 mM	Growth with 1 mM nickel sulfate, no glutamine.
+41	plate_1	D06	Media control	
+42	plate_1	D07	Media control	
+43	plate_1	D08	glutamine: 10 mM & nickel sulfate: 0 mM	Growth with 10 mM glutamine, no nickel sulfate.
+44	plate_1	D09	glutamine: 10 mM & nickel sulfate: 1 mM	Growth with 10 mM glutamine and 1 mM nickel sulfate.
+45	plate_1	D10	glutamine: 0 mM & nickel sulfate: 0 mM	Baseline growth with no glutamine or nickel sulfate.
+46	plate_1	D11	glutamine: 5 mM & nickel sulfate: 0 mM	Growth with 5 mM glutamine, no nickel sulfate.
+47	plate_1	D12	glutamine: 5 mM & nickel sulfate: 0 mM	Growth with 5 mM glutamine, no nickel sulfate.
+48	plate_1	E01	glutamine: 0 mM & nickel sulfate: 1 mM	Growth with 1 mM nickel sulfate, no glutamine.
+49	plate_1	E02	glutamine: 5 mM & nickel sulfate: 2 mM	Growth with 5 mM glutamine and 2 mM nickel sulfate.
+50	plate_1	E03	glutamine: 10 mM & nickel sulfate: 0 mM	Growth with 10 mM glutamine, no nickel sulfate.
+51	plate_1	E04	glutamine: 5 mM & nickel sulfate: 0 mM	Growth with 5 mM glutamine, no nickel sulfate.
+52	plate_1	E05	Media control	
+53	plate_1	E06	glutamine: 0 mM & nickel sulfate: 2 mM	Growth with 2 mM nickel sulfate, no glutamine.
+54	plate_1	E07	glutamine: 0 mM & nickel sulfate: 0 mM	Baseline growth with no glutamine or nickel sulfate.
+55	plate_1	E08	glutamine: 0 mM & nickel sulfate: 0 mM	Baseline growth with no glutamine or nickel sulfate.
+56	plate_1	E09	glutamine: 5 mM & nickel sulfate: 1 mM	Growth with 5 mM glutamine and 1 mM nickel sulfate.
+57	plate_1	E10	Media control	
+58	plate_1	E11	glutamine: 10 mM & nickel sulfate: 2 mM	Growth with 10 mM glutamine and 2 mM nickel sulfate.
+59	plate_1	E12	glutamine: 10 mM & nickel sulfate: 1 mM	Growth with 10 mM glutamine and 1 mM nickel sulfate.
+60	plate_1	F01	glutamine: 5 mM & nickel sulfate: 0 mM	Growth with 5 mM glutamine, no nickel sulfate.
+61	plate_1	F02	glutamine: 0 mM & nickel sulfate: 2 mM	Growth with 2 mM nickel sulfate, no glutamine.
+62	plate_1	F03	Media control	
+63	plate_1	F04	glutamine: 10 mM & nickel sulfate: 2 mM	Growth with 10 mM glutamine and 2 mM nickel sulfate.
+64	plate_1	F05	glutamine: 5 mM & nickel sulfate: 1 mM	Growth with 5 mM glutamine and 1 mM nickel sulfate.
+65	plate_1	F06	glutamine: 5 mM & nickel sulfate: 2 mM	Growth with 5 mM glutamine and 2 mM nickel sulfate.
+66	plate_1	F07	Media control	
+67	plate_1	F08	glutamine: 10 mM & nickel sulfate: 1 mM	Growth with 10 mM glutamine and 1 mM nickel sulfate.
+68	plate_1	F09	glutamine: 10 mM & nickel sulfate: 0 mM	Growth with 10 mM glutamine, no nickel sulfate.
+69	plate_1	F10	glutamine: 5 mM & nickel sulfate: 2 mM	Growth with 5 mM glutamine and 2 mM nickel sulfate.
+70	plate_1	F11	glutamine: 0 mM & nickel sulfate: 0 mM	Baseline growth with no glutamine or nickel sulfate.
+71	plate_1	F12	glutamine: 0 mM & nickel sulfate: 1 mM	Growth with 1 mM nickel sulfate, no glutamine.
+72	plate_1	G01	Media control	
+73	plate_1	G02	glutamine: 0 mM & nickel sulfate: 0 mM	Baseline growth with no glutamine or nickel sulfate.
+74	plate_1	G03	glutamine: 10 mM & nickel sulfate: 2 mM	Growth with 10 mM glutamine and 2 mM nickel sulfate.
+75	plate_1	G04	glutamine: 10 mM & nickel sulfate: 0 mM	Growth with 10 mM glutamine, no nickel sulfate.
+76	plate_1	G05	glutamine: 0 mM & nickel sulfate: 2 mM	Growth with 2 mM nickel sulfate, no glutamine.
+77	plate_1	G06	glutamine: 0 mM & nickel sulfate: 1 mM	Growth with 1 mM nickel sulfate, no glutamine.
+78	plate_1	G07	glutamine: 10 mM & nickel sulfate: 1 mM	Growth with 10 mM glutamine and 1 mM nickel sulfate.
+79	plate_1	G08	glutamine: 5 mM & nickel sulfate: 0 mM	Growth with 5 mM glutamine, no nickel sulfate.
+80	plate_1	G09	glutamine: 0 mM & nickel sulfate: 2 mM	Growth with 2 mM nickel sulfate, no glutamine.
+81	plate_1	G10	glutamine: 5 mM & nickel sulfate: 1 mM	Growth with 5 mM glutamine and 1 mM nickel sulfate.
+82	plate_1	G11	glutamine: 5 mM & nickel sulfate: 2 mM	Growth with 5 mM glutamine and 2 mM nickel sulfate.
+83	plate_1	G12	Media control	
+84	plate_1	H01	glutamine: 10 mM & nickel sulfate: 1 mM	Growth with 10 mM glutamine and 1 mM nickel sulfate.
+85	plate_1	H02	glutamine: 0 mM & nickel sulfate: 1 mM	Growth with 1 mM nickel sulfate, no glutamine.
+86	plate_1	H03	glutamine: 5 mM & nickel sulfate: 1 mM	Growth with 5 mM glutamine and 1 mM nickel sulfate.
+87	plate_1	H04	Media control	
+88	plate_1	H05	glutamine: 10 mM & nickel sulfate: 0 mM	Growth with 10 mM glutamine, no nickel sulfate.
+89	plate_1	H06	glutamine: 0 mM & nickel sulfate: 0 mM	Baseline growth with no glutamine or nickel sulfate.
+90	plate_1	H07	glutamine: 5 mM & nickel sulfate: 0 mM	Growth with 5 mM glutamine, no nickel sulfate.
+91	plate_1	H08	glutamine: 0 mM & nickel sulfate: 2 mM	Growth with 2 mM nickel sulfate, no glutamine.
+92	plate_1	H09	glutamine: 10 mM & nickel sulfate: 2 mM	Growth with 10 mM glutamine and 2 mM nickel sulfate.
+93	plate_1	H10	glutamine: 10 mM & nickel sulfate: 0 mM	Growth with 10 mM glutamine, no nickel sulfate.
+94	plate_1	H11	Media control	
+95	plate_1	H12	glutamine: 5 mM & nickel sulfate: 2 mM	Growth with 5 mM glutamine and 2 mM nickel sulfate.

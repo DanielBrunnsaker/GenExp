@@ -1,3 +1,4 @@
+gene('YPL045W').
 gene('YAL002W').
 gene('YAL004W').
 gene('YAL005C').

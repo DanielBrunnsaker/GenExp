@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'formic acid').",
+            "number": 3,
+            "reason": "Formic acid is a relatively simple and safe compound to handle in a ventilated area. The experiment is feasible in a 96 well format and can be assessed through growth inhibition assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'sodium arsenite').",
+            "number": 14,
+            "reason": "Sodium arsenite is a well-studied compound with known effects on yeast cells. It is feasible to use in a controlled, ventilated environment and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'5-chloro-7-iodoquinolin-8-ol').",
+            "number": 16,
+            "reason": "This compound is feasible to handle in a ventilated area and can be used to assess chemical resistance through growth assays in a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'latrunculin A').",
+            "number": 21,
+            "reason": "Latrunculin A is a compound that can be safely handled in a ventilated area and is suitable for assessing growth inhibition in yeast cells."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,neothyonidioside).",
+            "number": 23,
+            "reason": "Neothyonidioside is a compound that can be safely handled in a ventilated area and is suitable for assessing growth inhibition in yeast cells."
+        }
+    ]
+}

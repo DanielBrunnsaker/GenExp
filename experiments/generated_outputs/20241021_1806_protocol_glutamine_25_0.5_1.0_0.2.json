@@ -1,0 +1,113 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,caffeine)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Baseline growth in minimal media without any supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Growth with 5 mM glutamine supplementation to assess its independent effect."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Growth with 10 mM glutamine supplementation to assess its independent effect."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "caffeine",
+            "treatment_parameters": "5 mM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Growth with 5 mM caffeine treatment to assess its independent effect."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "caffeine",
+            "treatment_parameters": "10 mM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Growth with 10 mM caffeine treatment to assess its independent effect."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "caffeine",
+            "treatment_parameters": "5 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with 5 mM glutamine and 5 mM caffeine to test interaction effects."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "caffeine",
+            "treatment_parameters": "10 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with 5 mM glutamine and 10 mM caffeine to test interaction effects."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "caffeine",
+            "treatment_parameters": "5 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with 10 mM glutamine and 5 mM caffeine to test interaction effects."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "caffeine",
+            "treatment_parameters": "10 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with 10 mM glutamine and 10 mM caffeine to test interaction effects."
+        }
+    ]
+}

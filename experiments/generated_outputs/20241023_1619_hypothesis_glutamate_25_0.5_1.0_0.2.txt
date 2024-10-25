@@ -1,0 +1,39 @@
+**Selected Statement:**  
+14. Cells with higher than normal levels of intracellular glutamate in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'sodium arsenite').
+
+**Motivation:**  
+Sodium arsenite is a well-studied chemical that poses significant stress to cells, and understanding how glutamate levels may influence resistance to it could provide insights into metabolic pathways and stress response mechanisms. This statement is of particular interest due to the potential implications for understanding how metabolic states influence chemical resistance, which can have broader applications in biotechnology and stress physiology. Moreover, sodium arsenite is a common environmental toxin, making this investigation relevant to environmental and industrial contexts.
+
+**Hypothesis:**  
+Higher than normal intracellular levels of glutamate in Saccharomyces cerevisiae are associated with decreased resistance to sodium arsenite.
+
+**Experimental Plan:**  
+1. **Strain and Culture Conditions:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cultures in minimal media without amino acids, starting at an OD600 of 0.05.
+
+2. **Modulation of Intracellular Glutamate Levels:**
+   - Supplement cultures with ammonium sulfate (0 mM, 10 mM, 20 mM) to modulate intracellular glutamate levels, as ammonium can serve as a nitrogen source influencing glutamate synthesis.
+   - Verify the effect of ammonium sulfate on intracellular glutamate levels using mass-spectrometry based metabolomics at the end of the experiment.
+
+3. **Sodium Arsenite Treatment:**
+   - Expose cultures to sodium arsenite at three concentrations (0 mM, 0.5 mM, 1.0 mM) at t=0h.
+
+4. **Controls:**
+   - Include controls without sodium arsenite for each level of ammonium sulfate to assess the independent effect of glutamate modulation.
+   - Include a control with sodium arsenite but without ammonium sulfate to assess the baseline resistance.
+
+5. **Monitoring and Measurements:**
+   - Measure OD600 every 20 minutes to assess growth and resistance.
+   - At 12 hours, terminate the experiment and measure intracellular glutamate levels using mass-spectrometry.
+
+6. **Verification of Assumptions:**
+   - Confirm that ammonium sulfate supplementation results in increased intracellular glutamate levels.
+   - Ensure that sodium arsenite concentrations used are within a physiologically relevant range that allows for observable differences in resistance.
+
+**Expected Outcomes:**  
+- If higher intracellular glutamate levels are associated with decreased resistance to sodium arsenite, we expect to see reduced growth (lower OD600) in cultures with higher ammonium sulfate supplementation when exposed to sodium arsenite, compared to controls.
+- Mass-spectrometry should confirm that ammonium sulfate supplementation results in increased intracellular glutamate levels.
+- The control experiments should demonstrate that any observed decrease in resistance is specifically related to the combination of increased glutamate and sodium arsenite exposure, rather than a general effect of ammonium sulfate or sodium arsenite alone.
+
+By carefully controlling and monitoring these variables, the experiment aims to support or refute the association between intracellular glutamate levels and sodium arsenite resistance in Saccharomyces cerevisiae.

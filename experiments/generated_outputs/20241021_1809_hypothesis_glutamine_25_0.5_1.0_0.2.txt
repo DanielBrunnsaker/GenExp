@@ -1,0 +1,55 @@
+**Selected Statement:**
+
+2. Cells with higher than normal levels of intracellular glutamine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,caffeine).
+
+**Motivation:**
+
+This statement is intriguing because it suggests a potential vulnerability of cells with elevated glutamine levels to a widely used stimulant, caffeine. Understanding this relationship could have implications for metabolic regulation and stress response in yeast, which can be extrapolated to other eukaryotic systems. Additionally, caffeine's effects are well-documented, making it a manageable compound for experimental manipulation.
+
+**Hypothesis:**
+
+Cells with elevated intracellular glutamine levels have decreased resistance to caffeine, resulting in altered growth dynamics when exposed to caffeine compared to cells with normal glutamine levels.
+
+**Experimental Plan:**
+
+1. **Strain and Media Preparation:**
+   - Use a reference wild-type Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids as the baseline condition.
+
+2. **Glutamine Modulation:**
+   - Supplement media with glutamine at three concentrations: 0 mM (control), 2 mM, and 5 mM to modulate intracellular glutamine levels.
+
+3. **Caffeine Treatment:**
+   - Treat cells with caffeine at three concentrations: 0 mM (control), 2 mM, and 5 mM to evaluate resistance.
+
+4. **Experimental Setup:**
+   - Inoculate cultures at 0.05 OD600 in 96-well plates.
+   - Each well will contain a specific combination of glutamine and caffeine concentration.
+   - Include triplicates for each condition.
+   - Measure OD600 every 20 minutes over a 12-hour period to monitor growth.
+
+5. **Metabolomics Analysis:**
+   - At experiment termination (12 hours), perform mass-spectrometry based metabolomics to measure intracellular glutamine levels to verify modulation.
+
+6. **Control Experiments:**
+   - Grow cells with only glutamine supplementation (without caffeine) to observe the independent effect of glutamine on growth.
+   - Grow cells with only caffeine treatment (without glutamine supplementation) to observe the independent effect of caffeine on growth.
+
+**Expected Outcomes:**
+
+1. **Growth Dynamics:**
+   - Cells with higher glutamine levels (2 mM and 5 mM supplementation) are expected to show decreased growth in the presence of caffeine (2 mM and 5 mM) compared to control (0 mM glutamine).
+   - If intracellular glutamine is indeed linked to decreased caffeine resistance, a significant reduction in growth rate or final OD600 would be expected in high glutamine-high caffeine conditions compared to other conditions.
+
+2. **Metabolomics Verification:**
+   - Intracellular glutamine levels should correlate with the supplementation levels, confirming the modulation effect.
+
+3. **Independent Effects:**
+   - Glutamine supplementation alone should not significantly alter growth compared to control unless it affects general metabolic health.
+   - Caffeine treatment alone should show a dose-dependent growth inhibition, verifying its effect on yeast.
+
+4. **Assumptions:**
+   - The intracellular glutamine levels are effectively modulated by external supplementation.
+   - Caffeine affects growth through mechanisms sensitive to glutamine levels.
+
+By confirming these outcomes, we can support the hypothesis that elevated glutamine levels correlate with decreased resistance to caffeine, providing insights into metabolic interactions in yeast.

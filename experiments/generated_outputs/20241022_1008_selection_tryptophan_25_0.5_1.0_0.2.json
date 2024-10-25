@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased chemical compound excretion',B,C),compound_name(B,glutathione),condition(C,'Treatment:  SD medium').",
+            "number": 5,
+            "reason": "This program involves the excretion of glutathione, a non-toxic compound, which can be safely measured in a 96 well format using metabolomics. The use of SD medium is feasible and cost-effective."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,streptomycin).",
+            "number": 18,
+            "reason": "Streptomycin is a well-known antibiotic, and its effects on yeast can be safely tested in a ventilated area. The decreased resistance phenotype can be assessed through growth assays, which are feasible in a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,amiodarone).",
+            "number": 9,
+            "reason": "Amiodarone is a common pharmaceutical compound, and its impact on yeast resistance can be safely tested. The experiment is feasible in a 96 well format and can be assessed through growth inhibition assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,miconazole).",
+            "number": 2,
+            "reason": "Miconazole is an antifungal agent, and testing its effects on yeast is safe and feasible. The decreased resistance phenotype can be measured through growth assays in a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,benomyl).",
+            "number": 14,
+            "reason": "Benomyl is a fungicide, and its effects on yeast can be safely tested. The decreased resistance phenotype can be assessed through growth assays, which are feasible in a 96 well format."
+        }
+    ]
+}

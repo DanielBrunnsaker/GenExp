@@ -1,0 +1,45 @@
+**Selected Statement:**  
+Cells with higher than normal levels of intracellular glutamate in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,edelfosine).
+
+**Motivation:**  
+I selected this statement because edelfosine is a well-studied alkyl-lysophospholipid with known effects on cellular membranes and signaling pathways. Investigating the association between glutamate levels and resistance to edelfosine could provide insights into how intracellular glutamate concentrations influence membrane integrity and stress responses. This could be novel in understanding the interplay between amino acid metabolism and drug resistance.
+
+**Hypothesis:**  
+Cells with higher intracellular glutamate levels have decreased resistance to edelfosine, possibly due to glutamate's role in cellular stress responses or membrane-related processes.
+
+**Experimental Plan:**  
+
+1. **Strain and Media Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cultures in minimal media without amino acids at 30°C with shaking.
+
+2. **Glutamate Modulation:**
+   - Supplement cultures with glutamate at three concentrations: 0 mM (control), 5 mM, and 10 mM at t=0h.
+
+3. **Edelfosine Treatment:**
+   - At t=0h, treat cultures with edelfosine at three concentrations: 0 µg/mL (control), 5 µg/mL, and 10 µg/mL.
+   - Each glutamate concentration will be tested with each edelfosine concentration, resulting in a 3x3 matrix of conditions.
+
+4. **Growth Monitoring:**
+   - Measure OD600 every 20 minutes to assess growth and resistance over 12 hours.
+
+5. **Metabolomics Analysis:**
+   - At experiment termination, perform mass-spectrometry-based metabolomics to measure intracellular glutamate levels.
+
+6. **Control Experiments:**
+   - Verify the independent effect of glutamate supplementation on growth without edelfosine.
+   - Verify the independent effect of edelfosine on growth without glutamate supplementation.
+
+**Expected Outcomes:**  
+
+1. **Growth and Resistance:**
+   - If higher intracellular glutamate is associated with decreased resistance, cultures with 5 mM and 10 mM glutamate should show reduced growth in the presence of edelfosine compared to the control (0 mM glutamate).
+
+2. **Metabolomics Confirmation:**
+   - Mass-spectrometry should confirm increased intracellular glutamate levels in supplemented cultures compared to the control.
+
+3. **Independent Effects:**
+   - Glutamate supplementation alone should not significantly affect growth in the absence of edelfosine, confirming its role in modifying resistance rather than general growth.
+   - Edelfosine should reduce growth in a dose-dependent manner in the absence of glutamate supplementation, establishing its baseline toxicity.
+
+Through this experiment, we aim to elucidate whether the observed association between glutamate levels and edelfosine resistance holds under controlled conditions, thereby contributing to the understanding of amino acid metabolism's role in chemical stress responses.

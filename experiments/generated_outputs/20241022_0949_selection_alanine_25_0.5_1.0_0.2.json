@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+            "number": 3,
+            "reason": "This program involves increased resistance to a chemical, which is safer to handle and can be assessed through growth assays. Epoxiconazole is a fungicide, and its use in controlled concentrations is feasible in a ventilated area."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased metal resistance',B,C),drug_target(B,'through inhibition',D),interacts_with_metabolite(D,catalysis,product,'ADP').",
+            "number": 18,
+            "reason": "Increased metal resistance can be safely tested using non-toxic metal concentrations. The interaction with ADP can be assessed through metabolomics, making it feasible for a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased hyperosmotic stress resistance',B,C),compound_name(B,'sodium chloride').",
+            "number": 20,
+            "reason": "Sodium chloride is safe to handle, and hyperosmotic stress can be easily tested in a 96 well format. This experiment is cost-effective and feasible."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is a fungicide, and testing increased resistance is safer and feasible. Growth assays can be used to assess resistance, fitting the 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased oxidative stress resistance',B,C),compound_name(B,dioxygen).",
+            "number": 14,
+            "reason": "Dioxygen is naturally present, and oxidative stress can be assessed through growth and metabolomics. This experiment is safe and feasible in a ventilated area."
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,penconazole).",
+            "number": 17,
+            "reason": "Penconazole is a fungicide, and testing increased resistance to it is feasible in a 96 well format. It is relatively safe to handle with standard precautions, and the phenotype can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+            "number": 3,
+            "reason": "Epoxiconazole is another fungicide, similar to penconazole, making it feasible and safe to test in a 96 well format. Growth assays can be used to assess resistance."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is a fungicide, and testing increased resistance is feasible in a 96 well format. It is safe to handle with standard lab precautions, and growth assays can be used for assessment."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol).",
+            "number": 21,
+            "reason": "Ethanol is a common laboratory chemical, and testing decreased resistance is feasible and safe. Growth assays can be used to assess the phenotype, and it is cost-effective."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,wortmannin).",
+            "number": 13,
+            "reason": "Wortmannin is a known inhibitor, and testing decreased resistance is feasible in a 96 well format. It is safe to handle with standard precautions, and growth assays can be used for assessment."
+        }
+    ]
+}

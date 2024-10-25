@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'formic acid').",
+            "number": 3,
+            "reason": "Formic acid is a relatively simple and safe compound to handle in a ventilated area. The experiment is feasible in a 96 well format and can be assessed through growth inhibition assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'5-chloro-7-iodoquinolin-8-ol').",
+            "number": 16,
+            "reason": "5-chloro-7-iodoquinolin-8-ol is a compound that can be safely handled with standard laboratory precautions. The phenotype can be assessed through growth assays, making it suitable for a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'latrunculin A').",
+            "number": 21,
+            "reason": "Latrunculin A is a well-studied compound with known effects on cell growth, making it feasible for growth assays in a 96 well format. It can be handled safely with appropriate precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,edelfosine).",
+            "number": 25,
+            "reason": "Edelfosine is a compound that can be used to assess cell growth and viability, suitable for a 96 well format. It is safe to handle with standard laboratory precautions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,neothyonidioside).",
+            "number": 23,
+            "reason": "Neothyonidioside is a compound that can be used in growth assays to assess resistance phenotypes. It is feasible for use in a 96 well format and can be handled safely with standard precautions."
+        }
+    ]
+}

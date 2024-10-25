@@ -1,0 +1,149 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,amiodarone)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Baseline growth without any supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.01 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Growth with low tryptophan supplementation, no amiodarone."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Growth with high tryptophan supplementation, no amiodarone."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "amiodarone",
+            "treatment_parameters": "5 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Growth with low amiodarone treatment, no tryptophan supplementation."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "amiodarone",
+            "treatment_parameters": "10 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Growth with medium amiodarone treatment, no tryptophan supplementation."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "amiodarone",
+            "treatment_parameters": "20 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Growth with high amiodarone treatment, no tryptophan supplementation."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.01 mM",
+            "treatment": "amiodarone",
+            "treatment_parameters": "5 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with low tryptophan and low amiodarone treatment."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.01 mM",
+            "treatment": "amiodarone",
+            "treatment_parameters": "10 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with low tryptophan and medium amiodarone treatment."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.01 mM",
+            "treatment": "amiodarone",
+            "treatment_parameters": "20 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with low tryptophan and high amiodarone treatment."
+        },
+        {
+            "experiment": 10,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": "amiodarone",
+            "treatment_parameters": "5 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with high tryptophan and low amiodarone treatment."
+        },
+        {
+            "experiment": 11,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": "amiodarone",
+            "treatment_parameters": "10 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with high tryptophan and medium amiodarone treatment."
+        },
+        {
+            "experiment": 12,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": "amiodarone",
+            "treatment_parameters": "20 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with high tryptophan and high amiodarone treatment."
+        }
+    ]
+}

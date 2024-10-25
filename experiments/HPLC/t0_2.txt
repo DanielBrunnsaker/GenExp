@@ -1,0 +1,33 @@
+[Header]
+Application Name	LabSolutions
+Version	5.111
+Data File Name	C:\LabSolutions\Data\Users\ErikB\20241021\t0_2_10212024_10.lcd
+Output Date	10/22/2024
+Output Time	12:17:58 PM
+
+[Configuration]
+Instrument Name	F21NWLD-Instrument1
+Instrument #	1
+Line #	1
+# of Detectors	2
+Detector ID	Detector A	Detector B
+Detector Name	Detector A	Detector B
+# of Channels	1	1
+
+[Compound Results(Detector A)]
+# of IDs	4
+ID#	Name	R.Time	Area	Height	Conc.	Curve	3rd	2nd	1st	Constant	Area Ratio	Height Ratio	Conc. %	Norm Conc.
+1	Pyruvate	9.301	28516	1165	0.002	Linear	0.000000e+00	0.000000e+00	9.963145e+006	9.955683e+003	0	0	5.690	5.690
+2	Succinate	0.000	0	0	0.000	Linear	0.000000e+00	0.000000e+00	5.294906e+005	8.440414e+002	0	0	0.000	0.000
+3	Acetate	14.634	11291	541	0.031	Linear	0.000000e+00	0.000000e+00	5.424679e+005	-5.460000e+003	0	0	94.310	94.310
+4	Acrylic acid	0.000	0	0	0.000	Linear	0.000000e+00	0.000000e+00	0.000000e+00	0.000000e+00	0	0	0.000	0.000
+
+[Compound Results(Detector B)]
+# of IDs	5
+ID#	Name	R.Time	Area	Height	Conc.	Curve	3rd	2nd	1st	Constant	Area Ratio	Height Ratio	Conc. %	Norm Conc.
+1	GLU	9.345	2495028	145557	18.932	Linear	0.000000e+00	0.000000e+00	1.316952e+005	1.734678e+003	0	0	78.300	78.300
+2	SUC	11.651	4858	206	0.017	Linear	0.000000e+00	0.000000e+00	8.271494e+004	3.448680e+003	0	0	0.070	0.070
+3	GLY	13.550	2763	142	0.028	Linear	0.000000e+00	0.000000e+00	9.895675e+004	-2.598568e+001	0	0	0.117	0.117
+4	ACE	0.000	0	0	0.000	Linear	0.000000e+00	0.000000e+00	5.886202e+004	-1.618514e+003	0	0	0.000	0.000
+5	ETH	20.970	275669	8490	5.202	Linear	0.000000e+00	0.000000e+00	5.369035e+004	-3.615250e+003	0	0	21.513	21.513
+

@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).",
+            "number": 7,
+            "reason": "Hydroxyurea is a relatively safe compound to handle, and the experiment can be easily set up in a 96 well format. The phenotype of increased resistance is straightforward to assess through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+            "number": 8,
+            "reason": "Fenpropimorph is a fungicide, but it is manageable in a lab setting with proper precautions. The increased resistance phenotype is suitable for growth assays, making it feasible for a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol).",
+            "number": 21,
+            "reason": "Ethanol is a common laboratory chemical, and its effects on yeast can be easily monitored through growth assays. The experiment is safe and cost-effective."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,wortmannin).",
+            "number": 13,
+            "reason": "Wortmannin is a manageable compound in a lab setting, and decreased resistance can be assessed through growth inhibition assays. This makes it feasible for a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'4-chlorophenol').",
+            "number": 11,
+            "reason": "4-chlorophenol is a chemical that can be handled with care in a ventilated area. The decreased resistance phenotype can be assessed through growth assays, making it suitable for a 96 well format."
+        }
+    ]
+}

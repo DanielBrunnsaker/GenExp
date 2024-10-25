@@ -1,0 +1,149 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,caffeine).",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Control group with no glutamine or caffeine supplementation."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "2 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Low glutamine supplementation without caffeine."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Medium glutamine supplementation without caffeine."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "High glutamine supplementation without caffeine."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "caffeine",
+            "treatment_parameters": "2 mM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Caffeine treatment at 2 mM without glutamine supplementation."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "caffeine",
+            "treatment_parameters": "4 mM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Caffeine treatment at 4 mM without glutamine supplementation."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "2 mM",
+            "treatment": "caffeine",
+            "treatment_parameters": "2 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Low glutamine supplementation with 2 mM caffeine treatment."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "2 mM",
+            "treatment": "caffeine",
+            "treatment_parameters": "4 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Low glutamine supplementation with 4 mM caffeine treatment."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "caffeine",
+            "treatment_parameters": "2 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Medium glutamine supplementation with 2 mM caffeine treatment."
+        },
+        {
+            "experiment": 10,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "caffeine",
+            "treatment_parameters": "4 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Medium glutamine supplementation with 4 mM caffeine treatment."
+        },
+        {
+            "experiment": 11,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "caffeine",
+            "treatment_parameters": "2 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "High glutamine supplementation with 2 mM caffeine treatment."
+        },
+        {
+            "experiment": 12,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "caffeine",
+            "treatment_parameters": "4 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "High glutamine supplementation with 4 mM caffeine treatment."
+        }
+    ]
+}

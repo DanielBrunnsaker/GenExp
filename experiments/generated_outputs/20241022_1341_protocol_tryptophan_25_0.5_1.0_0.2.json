@@ -1,0 +1,113 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,amiodarone)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Cells grown in minimal media without any supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.01 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Cells supplemented with low tryptophan without amiodarone treatment."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Cells supplemented with high tryptophan without amiodarone treatment."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "amiodarone",
+            "treatment_parameters": "5 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Cells treated with low amiodarone without tryptophan supplementation."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "amiodarone",
+            "treatment_parameters": "20 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Cells treated with high amiodarone without tryptophan supplementation."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.01 mM",
+            "treatment": "amiodarone",
+            "treatment_parameters": "5 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Cells with low tryptophan supplementation treated with low amiodarone."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.01 mM",
+            "treatment": "amiodarone",
+            "treatment_parameters": "20 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Cells with low tryptophan supplementation treated with high amiodarone."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": "amiodarone",
+            "treatment_parameters": "5 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Cells with high tryptophan supplementation treated with low amiodarone."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": "amiodarone",
+            "treatment_parameters": "20 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Cells with high tryptophan supplementation treated with high amiodarone."
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'formic acid').",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Control with no glutamate or formic acid supplementation."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamate",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "5 mM glutamate supplementation without formic acid."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamate",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "10 mM glutamate supplementation without formic acid."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "formic acid",
+            "treatment_parameters": "10 mM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "10 mM formic acid treatment without glutamate supplementation."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "formic acid",
+            "treatment_parameters": "20 mM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "20 mM formic acid treatment without glutamate supplementation."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamate",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "formic acid",
+            "treatment_parameters": "10 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "5 mM glutamate and 10 mM formic acid treatment."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamate",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "formic acid",
+            "treatment_parameters": "20 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "5 mM glutamate and 20 mM formic acid treatment."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamate",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "formic acid",
+            "treatment_parameters": "10 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "10 mM glutamate and 10 mM formic acid treatment."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamate",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "formic acid",
+            "treatment_parameters": "20 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "10 mM glutamate and 20 mM formic acid treatment."
+        }
+    ]
+}

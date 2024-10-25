@@ -28,8 +28,6 @@ def correlation_remover(dataset):
 
 
 def define_aa(df, first_example):
-    
-    import pandas as pd
 
     aaSet_reduced = df
     
@@ -92,6 +90,8 @@ def generate_frequent_features(target_folder):
 
 def create_datasets(pos_index, colname): 
 
+    import pandas as pd
+    
     pos = pd.read_csv('../prolog/generated_features/frequent_features.txt', sep = ' ', header = None).iloc[:,:-1]
     pos.index = pos_index
     pos = rename_columns_with_ilp(pos, colname)
@@ -104,6 +104,8 @@ def create_datasets(pos_index, colname):
 
 
 def create_datasets_nored(pos_index, colname): 
+    
+    import pandas as pd
 
     pos = pd.read_csv('../prolog/generated_features/frequent_features.txt', sep = ' ', header = None).iloc[:,:-1]
     pos.index = pos_index
@@ -111,7 +113,7 @@ def create_datasets_nored(pos_index, colname):
     
     return pos
 
-
+'''
 def transform_data(X_train_complete, X_test_complete):
     
    
@@ -156,7 +158,7 @@ def rank_rows_by_deviation(df):
     df_ranked = df.iloc[row_deviations_total.argsort()[::-1]]
 
     return df_ranked
-
+'''
 
 def remove_or_update_duplicate_columns(df, duplicates_dict):
     # List to track columns that should be removed (duplicates only)
@@ -197,6 +199,9 @@ def remove_or_update_duplicate_columns(df, duplicates_dict):
     return df, duplicates_dict
 
 def filter_lines(input_file, output_file):
+    
+    import re
+    
     # Open the input file in read mode
     with open(input_file, 'r') as infile:
         # Read all lines into a list
@@ -245,6 +250,9 @@ def filter_lines(input_file, output_file):
     return kept_feature_numbers
 
 def filter_lines(input_file, output_file):
+    
+    import re
+    
     # Open the input file in read mode
     with open(input_file, 'r') as infile:
         # Read all lines into a list
@@ -302,6 +310,9 @@ def filter_lines(input_file, output_file):
 
 
 def filter_dataframe_columns(df, kept_feature_numbers):
+    
+    import re
+    
     # Convert kept_feature_numbers to a set for faster lookups
     kept_feature_set = set(kept_feature_numbers)
 

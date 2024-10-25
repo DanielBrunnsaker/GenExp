@@ -1,0 +1,44 @@
+### Selected Statement
+Statement 20: Cells with higher than normal levels of intracellular glutamate in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased metal resistance',B,C),compound_name(B,'copper(II) sulfate').
+
+### Motivation
+This statement was selected because copper(II) sulfate is a well-studied compound with known effects on cellular physiology, making it feasible to design a controlled experiment. The association with decreased metal resistance is intriguing and relevant for understanding how intracellular glutamate levels might affect metal ion homeostasis and stress responses. Additionally, copper(II) sulfate's effects are well-documented, allowing for a clear interpretation of results.
+
+### Hypothesis
+Cells with higher than normal levels of intracellular glutamate will show decreased resistance to copper(II) sulfate, leading to reduced growth when exposed to this compound.
+
+### Experimental Plan
+1. **Strain and Media Preparation**: 
+   - Use a reference or wild-type Saccharomyces cerevisiae strain.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Glutamate Modulation**:
+   - Supplement the media with three concentrations of glutamate (1 mM, 5 mM, and 10 mM) to modulate intracellular levels.
+   - Include a control group without glutamate supplementation.
+
+3. **Copper(II) Sulfate Exposure**:
+   - Prepare copper(II) sulfate solutions at three concentrations (0.1 mM, 0.5 mM, and 1 mM).
+   - Add copper(II) sulfate to the cultures at these concentrations at t=0h.
+
+4. **Culture Conditions**:
+   - Inoculate cultures at 0.05 OD600.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes for 12 hours to monitor growth.
+
+5. **Metabolomics Analysis**:
+   - At the end of the experiment (12 hours), harvest cells for mass-spectrometry based metabolomics to measure intracellular glutamate concentrations.
+
+6. **Assumption Verification**:
+   - Conduct a preliminary experiment to confirm that glutamate supplementation effectively increases intracellular levels without causing pleiotropic effects.
+   - Test the independent effect of copper(II) sulfate on cell growth without glutamate supplementation.
+
+### Expected Outcomes
+- **Increased Glutamate Levels**: Cultures supplemented with glutamate should show higher intracellular glutamate concentrations compared to controls.
+- **Growth Response to Copper(II) Sulfate**:
+  - If the hypothesis is correct, cultures with increased glutamate levels will exhibit decreased growth (OD600) in response to copper(II) sulfate compared to unsupplemented controls.
+  - Growth inhibition should correlate with both the concentration of glutamate and copper(II) sulfate.
+- **Control Verification**:
+  - Cultures without glutamate supplementation should show a standard growth response to copper(II) sulfate, validating that observed effects are due to altered glutamate levels.
+
+### Conclusion
+This experimental design will help elucidate the relationship between intracellular glutamate levels and copper resistance in yeast, providing insights into cellular metal ion homeostasis and stress response mechanisms. The results will confirm or refute the association stated in the selected statement.

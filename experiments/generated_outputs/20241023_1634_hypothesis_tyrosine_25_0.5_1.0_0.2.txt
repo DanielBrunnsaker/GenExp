@@ -1,0 +1,36 @@
+Selected Statement: 12. Cells with higher than normal levels of intracellular tyrosine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'increased chemical compound accumulation',B,C),compound_name(B,proton),condition(C,'Media:  external pH 7.5').
+
+Motivation: This statement is intriguing because it suggests a link between intracellular tyrosine levels and proton accumulation under specific pH conditions. Understanding how intracellular amino acid levels influence proton accumulation can provide insights into cellular pH regulation and metabolic processes. Additionally, the manipulation of pH is a common experimental condition, making this statement feasible to test.
+
+Hypothesis: Cells with higher than normal intracellular tyrosine levels will show increased proton accumulation when grown in media with an external pH of 7.5.
+
+Experimental Plan:
+1. **Culture Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids, inoculate at an initial OD600 of 0.05.
+
+2. **Supplementation to Modulate Tyrosine Levels:**
+   - Supplement cultures with tyrosine at three concentrations: 0 mM (control), 0.1 mM, and 0.5 mM at the start of the experiment (t=0h) to modulate intracellular tyrosine levels.
+
+3. **pH Condition:**
+   - Adjust the media to an external pH of 7.5 across all experiments.
+
+4. **Control Experiments:**
+   - Include a set of cultures without tyrosine supplementation to serve as a baseline.
+   - Conduct parallel experiments at a standard pH (e.g., pH 5.5) to assess the effect of pH independently.
+
+5. **Monitoring and Sampling:**
+   - Measure OD600 every 20 minutes to monitor growth.
+   - At the end of 12 hours, collect cells for mass-spectrometry based metabolomics to measure intracellular proton levels.
+
+6. **Verification of Assumptions:**
+   - Verify that tyrosine supplementation leads to increased intracellular tyrosine levels using metabolomics.
+   - Confirm that pH 7.5 is maintained throughout the experiment.
+
+Expected Outcomes:
+- **If the hypothesis is correct:** Cultures with higher tyrosine supplementation (0.5 mM) will show increased proton accumulation compared to the control (0 mM tyrosine) at pH 7.5.
+- **If the hypothesis is incorrect:** No significant difference in proton accumulation will be observed across different tyrosine levels, or the trend will not correlate with tyrosine concentration.
+- **Independent Effect of pH:** In experiments conducted at standard pH (5.5), proton accumulation should not correlate with tyrosine levels, confirming the specific interaction at pH 7.5.
+- **Verification of Assumptions:** Successful verification of increased intracellular tyrosine levels with supplementation and stable pH conditions will support the validity of the experimental setup.
+
+This experimental design allows for the testing of the association between intracellular tyrosine levels and proton accumulation at a specific pH, while controlling for potential confounding factors.

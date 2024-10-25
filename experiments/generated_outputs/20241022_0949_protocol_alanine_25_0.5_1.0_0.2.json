@@ -1,0 +1,77 @@
+{
+    "logic_program": "Experimental Design for Testing Alanine's Effect on Oxidative Stress Resistance",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Control group with no alanine supplementation and no dioxygen exposure."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Group with 5 mM alanine supplementation and no dioxygen exposure."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Group with 10 mM alanine supplementation and no dioxygen exposure."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "Dioxygen exposure",
+            "treatment_parameters": "Consistent exposure from t=6h",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Control group with no alanine supplementation and dioxygen exposure."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Dioxygen exposure",
+            "treatment_parameters": "Consistent exposure from t=6h",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Group with 5 mM alanine supplementation and dioxygen exposure."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "Dioxygen exposure",
+            "treatment_parameters": "Consistent exposure from t=6h",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Group with 10 mM alanine supplementation and dioxygen exposure."
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+**Selected Statement:**  
+3. Cells with higher than normal levels of intracellular serine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'increased oxidative stress resistance',B,C),compound_name(B,'hydrogen peroxide').
+
+**Motivation:**  
+This statement is selected due to its potential novelty and relevance in understanding the role of serine in oxidative stress resistance, a vital aspect of cellular metabolism and survival under stress conditions. The relationship between serine levels and oxidative stress resistance is intriguing and could provide insights into metabolic regulation and stress response mechanisms.
+
+**Hypothesis:**  
+Increasing intracellular serine levels in Saccharomyces cerevisiae will enhance the cells' resistance to oxidative stress induced by hydrogen peroxide.
+
+**Experimental Plan:**  
+
+1. **Strain and Media:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids as the baseline condition.
+
+2. **Serine Supplementation:**
+   - Supplement the media with serine at three different concentrations: 0 mM (control), 1 mM, and 5 mM. These concentrations are chosen to ensure a physiologically relevant range that can modulate intracellular serine levels.
+
+3. **Oxidative Stress Induction:**
+   - At the start of the experiment (t=0h), add hydrogen peroxide to each well to a final concentration of 0 mM (control), 0.5 mM, and 1 mM to test oxidative stress resistance.
+
+4. **Experimental Setup:**
+   - Inoculate each well to an initial OD600 of 0.05.
+   - Measure OD600 every 20 minutes for 12 hours to monitor growth.
+   - At experiment termination, harvest cells for intracellular serine concentration measurement using mass-spectrometry based metabolomics.
+
+5. **Controls and Assumptions Testing:**
+   - Include wells with no serine and no hydrogen peroxide to serve as a baseline control.
+   - Verify that serine supplementation effectively increases intracellular serine levels by comparing the mass spectrometry results across different serine concentrations.
+   - Ensure that hydrogen peroxide concentrations are sufficient to induce oxidative stress without causing complete cell death in the absence of serine supplementation.
+
+**Expected Outcomes:**
+
+- **Increased Serine Levels:**  
+  Wells supplemented with serine are expected to show higher intracellular serine concentrations compared to the control.
+
+- **Growth Under Oxidative Stress:**  
+  If the hypothesis is correct, wells with higher serine supplementation should demonstrate increased growth (higher OD600) in the presence of hydrogen peroxide compared to those without serine supplementation, indicating enhanced oxidative stress resistance.
+
+- **Verification of Assumptions:**  
+  Successful verification of increased intracellular serine levels with supplementation and the induction of oxidative stress by hydrogen peroxide will support the experimental setup's validity.
+
+By examining the growth patterns and intracellular serine levels, the experiment aims to either support or refute the association between elevated serine levels and increased oxidative stress resistance in yeast cells.

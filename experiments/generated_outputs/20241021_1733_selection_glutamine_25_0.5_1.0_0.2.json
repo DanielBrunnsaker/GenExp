@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,glyoxal).",
+            "number": 1,
+            "reason": "Glyoxal is a relatively safe compound to handle in a ventilated area, and its effects on yeast can be assessed through growth inhibition assays, making it feasible for a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,caffeine).",
+            "number": 2,
+            "reason": "Caffeine is a common and safe compound to work with, and its impact on yeast growth can be easily measured, fitting well within the constraints of a 96 well microplate experiment."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,formamide).",
+            "number": 4,
+            "reason": "Formamide is manageable in a ventilated area and can be used to assess chemical resistance in yeast, making it suitable for batch experiments in a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'nickel sulfate').",
+            "number": 20,
+            "reason": "Nickel sulfate is a compound that can be safely handled with appropriate precautions, and its effects on yeast resistance can be measured, making it feasible for the experimental setup."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,tebuconazole).",
+            "number": 24,
+            "reason": "Tebuconazole is a fungicide that can be used to test resistance in yeast, and its handling is safe under controlled conditions, suitable for a 96 well format."
+        }
+    ]
+}

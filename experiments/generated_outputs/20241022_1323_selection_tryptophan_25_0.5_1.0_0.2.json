@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,miconazole).",
+            "number": 2,
+            "reason": "Miconazole is a common antifungal agent, and its effects on yeast can be safely studied in a 96 well format. The experiment is feasible and can be assessed through growth inhibition assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,amiodarone).",
+            "number": 9,
+            "reason": "Amiodarone is a well-studied compound with known effects on yeast cells. It is safe to handle in a ventilated area and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,streptomycin).",
+            "number": 18,
+            "reason": "Streptomycin is an antibiotic that is safe to handle and commonly used in laboratory settings. Its effects on yeast can be easily monitored through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,benomyl).",
+            "number": 14,
+            "reason": "Benomyl is a fungicide that is safe to handle with proper precautions. Its impact on yeast growth can be assessed in a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,sirolimus).",
+            "number": 23,
+            "reason": "Sirolimus is an immunosuppressant with known effects on yeast. It is feasible to study in a 96 well format and can be assessed through growth and metabolomics."
+        }
+    ]
+}

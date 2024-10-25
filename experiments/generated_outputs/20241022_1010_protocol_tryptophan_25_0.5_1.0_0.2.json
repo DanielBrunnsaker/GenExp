@@ -1,0 +1,149 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,sirolimus)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Control condition with no supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "5-methyltryptophan",
+            "media_supplementation_doses": "0.01 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Low tryptophan condition with 5-methyltryptophan supplementation."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "1 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "High tryptophan condition with tryptophan supplementation."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "sirolimus",
+            "treatment_parameters": "0 nM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Control condition with sirolimus treatment at 0 nM."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "sirolimus",
+            "treatment_parameters": "10 nM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Control condition with sirolimus treatment at 10 nM."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "sirolimus",
+            "treatment_parameters": "100 nM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Control condition with sirolimus treatment at 100 nM."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "5-methyltryptophan",
+            "media_supplementation_doses": "0.01 mM",
+            "treatment": "sirolimus",
+            "treatment_parameters": "0 nM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Low tryptophan condition with 5-methyltryptophan and sirolimus treatment at 0 nM."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "5-methyltryptophan",
+            "media_supplementation_doses": "0.01 mM",
+            "treatment": "sirolimus",
+            "treatment_parameters": "10 nM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Low tryptophan condition with 5-methyltryptophan and sirolimus treatment at 10 nM."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "5-methyltryptophan",
+            "media_supplementation_doses": "0.01 mM",
+            "treatment": "sirolimus",
+            "treatment_parameters": "100 nM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Low tryptophan condition with 5-methyltryptophan and sirolimus treatment at 100 nM."
+        },
+        {
+            "experiment": 10,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "1 mM",
+            "treatment": "sirolimus",
+            "treatment_parameters": "0 nM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "High tryptophan condition with tryptophan and sirolimus treatment at 0 nM."
+        },
+        {
+            "experiment": 11,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "1 mM",
+            "treatment": "sirolimus",
+            "treatment_parameters": "10 nM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "High tryptophan condition with tryptophan and sirolimus treatment at 10 nM."
+        },
+        {
+            "experiment": 12,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "1 mM",
+            "treatment": "sirolimus",
+            "treatment_parameters": "100 nM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "High tryptophan condition with tryptophan and sirolimus treatment at 100 nM."
+        }
+    ]
+}

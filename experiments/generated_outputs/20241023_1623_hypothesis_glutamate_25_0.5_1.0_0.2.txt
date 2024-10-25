@@ -1,0 +1,49 @@
+**Selected Statement:**  
+Cells with higher than normal levels of intracellular glutamate in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'formic acid').
+
+**Motivation:**  
+This statement was selected because formic acid is a well-characterized compound with known effects on cellular processes, making it feasible to study its impact on yeast cells. Additionally, the potential link between glutamate levels and resistance to formic acid is novel and could provide insights into metabolic regulation and stress responses in Saccharomyces cerevisiae. The simplicity of formic acid as a chemical stressor also allows for a more controlled experimental setup, minimizing potential confounders.
+
+**Hypothesis:**  
+Increased intracellular glutamate levels in Saccharomyces cerevisiae lead to decreased resistance to formic acid when grown in minimal media without amino acids.
+
+**Experimental Plan:**
+
+1. **Strain and Media Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Glutamate Supplementation:**
+   - Supplement the media with three levels of glutamate: 0 mM (control), 5 mM, and 10 mM.
+   - Verify that these concentrations increase intracellular glutamate levels by measuring intracellular glutamate using mass-spectrometry based metabolomics at the end of the experiment.
+
+3. **Formic Acid Treatment:**
+   - Subject cells to three concentrations of formic acid: 0 mM (control), 10 mM, and 20 mM.
+   - Each glutamate level will be tested against each formic acid concentration, creating a matrix of 9 conditions.
+
+4. **Experimental Conditions:**
+   - Inoculate cultures at 0.05 OD600.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes for 12 hours to monitor growth.
+
+5. **Controls:**
+   - Include all possible controls: glutamate concentration without formic acid and formic acid concentration without glutamate to account for their independent effects.
+
+6. **Assumption Verification:**
+   - Verify that glutamate supplementation increases intracellular glutamate using mass-spectrometry at the end of the experiment.
+   - Confirm that formic acid concentrations used are physiologically relevant and do not completely inhibit growth in control conditions.
+
+**Expected Outcomes:**
+
+- **Increased Glutamate Levels:**
+  - Expect to observe increased intracellular glutamate concentrations in cultures supplemented with 5 mM and 10 mM glutamate compared to control.
+
+- **Growth Response:**
+  - If the hypothesis is correct, cultures with higher glutamate levels (5 mM and 10 mM) will show decreased growth (lower OD600) in the presence of formic acid compared to control glutamate levels.
+  - The reduction in growth should be more pronounced at higher formic acid concentrations.
+
+- **Control Observations:**
+  - Cultures without formic acid should show normal growth regardless of glutamate supplementation, confirming that glutamate alone does not affect growth under these conditions.
+  - Cultures with formic acid but no glutamate supplementation should show a baseline level of resistance to formic acid.
+
+These outcomes will help determine if there is an associative link between high intracellular glutamate levels and decreased resistance to formic acid, supporting or refuting the selected statement.

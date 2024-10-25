@@ -1,0 +1,113 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Control with no supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "3-mercaptopropionate",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "3-MP supplementation at 0.5 mM to deplete alanine."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "3-mercaptopropionate",
+            "media_supplementation_doses": "1 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "3-MP supplementation at 1 mM to deplete alanine."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "hydroxyurea",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Hydroxyurea treatment at 50 mM."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "hydroxyurea",
+            "treatment_parameters": "100 mM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Hydroxyurea treatment at 100 mM."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "3-mercaptopropionate",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "hydroxyurea",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "3-MP at 0.5 mM and hydroxyurea at 50 mM."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "3-mercaptopropionate",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "hydroxyurea",
+            "treatment_parameters": "100 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "3-MP at 0.5 mM and hydroxyurea at 100 mM."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "3-mercaptopropionate",
+            "media_supplementation_doses": "1 mM",
+            "treatment": "hydroxyurea",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "3-MP at 1 mM and hydroxyurea at 50 mM."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "3-mercaptopropionate",
+            "media_supplementation_doses": "1 mM",
+            "treatment": "hydroxyurea",
+            "treatment_parameters": "100 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "3-MP at 1 mM and hydroxyurea at 100 mM."
+        }
+    ]
+}

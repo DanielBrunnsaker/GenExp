@@ -1,0 +1,43 @@
+**Selected Statement:**  
+10. Cells with lower than normal levels of intracellular tyrosine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,miconazole).
+
+**Motivation:**  
+This statement is selected because it suggests an association between lower intracellular tyrosine levels and decreased resistance to miconazole, an antifungal agent. This association is novel and can be feasibly tested in a controlled experimental setup. Understanding this relationship is important as it could provide insights into the role of amino acid levels in antifungal resistance, which has implications for both basic yeast biology and potential applications in antifungal treatment strategies.
+
+**Hypothesis:**  
+Lowering intracellular tyrosine levels in Saccharomyces cerevisiae will lead to decreased resistance to miconazole, as measured by growth inhibition.
+
+**Experimental Plan:**  
+
+1. **Experimental Setup:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids as the baseline condition.
+   - Inoculate cultures at an initial OD600 of 0.05.
+   - Conduct the experiment at 30°C with shaking.
+
+2. **Treatment Conditions:**
+   - Modulate intracellular tyrosine levels using p-fluorophenylalanine (p-FPA), a known inhibitor of tyrosine biosynthesis, at three concentrations: 0 mM (control), 0.5 mM, and 1 mM.
+   - Verify the effect of p-FPA on intracellular tyrosine levels using mass-spectrometry based metabolomics at the end of the experiment.
+
+3. **Miconazole Exposure:**
+   - Add miconazole at a concentration of 0, 5, and 10 µg/mL to each tyrosine level condition to assess the dose-response relationship.
+
+4. **Controls:**
+   - Include a no-treatment control (no p-FPA and no miconazole) to establish baseline growth.
+   - Include a condition with only miconazole (0, 5, and 10 µg/mL) without p-FPA to assess the independent effect of miconazole.
+
+5. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth.
+   - At the end of the 12-hour experiment, sample cultures for metabolomics to confirm intracellular tyrosine levels.
+
+6. **Assumptions Testing:**
+   - Confirm that p-FPA effectively reduces intracellular tyrosine levels without causing pleiotropic effects by comparing growth and metabolite profiles across treatments.
+   - Ensure that miconazole's effect on growth is consistent with known literature to validate experimental conditions.
+
+**Expected Outcomes:**  
+- **Hypothesis Support:** If cells with reduced tyrosine levels (via p-FPA treatment) exhibit greater growth inhibition in the presence of miconazole compared to control cells, this would support the hypothesis that lower tyrosine levels decrease resistance to miconazole.
+- **Hypothesis Refutation:** If there is no significant difference in miconazole sensitivity between cells with reduced tyrosine levels and control cells, this would refute the hypothesis.
+- **Control Outcomes:** Growth in miconazole without p-FPA should show expected antifungal effects, confirming that miconazole is active under experimental conditions.
+- **Verification of Tyrosine Modulation:** Metabolomics should show decreased tyrosine levels in cells treated with p-FPA compared to controls, validating the effectiveness of the inhibitor.
+
+This experimental design allows for a robust test of the association between tyrosine levels and miconazole resistance, accounting for confounding factors and ensuring reliable results.

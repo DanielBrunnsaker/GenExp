@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,glyoxal).",
+            "number": 1,
+            "reason": "Glyoxal is a relatively safe compound to handle in a ventilated area, and its effects on yeast can be assessed through growth inhibition assays, making it feasible for a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,caffeine).",
+            "number": 2,
+            "reason": "Caffeine is a common and safe compound to work with, and its impact on yeast growth can be easily measured, making it suitable for batch experiments."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,formamide).",
+            "number": 4,
+            "reason": "Formamide is manageable under standard lab safety protocols, and its effects on yeast can be monitored through growth assays, fitting the 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased chemical compound excretion',B,C),compound_name(B,glutathione),condition(C,'Treatment:  SD medium').",
+            "number": 17,
+            "reason": "Glutathione excretion can be assessed through metabolomics, and the use of SD medium is feasible in a 96 well format, making this a viable experiment."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'nickel sulfate').",
+            "number": 20,
+            "reason": "Nickel sulfate is a compound that can be safely handled with proper precautions, and its effects on yeast resistance can be evaluated in a 96 well format."
+        }
+    ]
+}

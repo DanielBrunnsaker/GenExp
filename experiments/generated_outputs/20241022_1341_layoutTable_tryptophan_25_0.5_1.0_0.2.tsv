@@ -1,0 +1,97 @@
+	plateID	well	CONCuM	Summary
+0	plate_1	A01	tryptophan: 0.1 mM & amiodarone: 0 mM	Cells supplemented with high tryptophan without amiodarone treatment.
+1	plate_1	A02	tryptophan: 0.1 mM & amiodarone: 5 µM	Cells with high tryptophan supplementation treated with low amiodarone.
+2	plate_1	A03	tryptophan: 0 mM & amiodarone: 5 µM	Cells treated with low amiodarone without tryptophan supplementation.
+3	plate_1	A04	tryptophan: 0.01 mM & amiodarone: 5 µM	Cells with low tryptophan supplementation treated with low amiodarone.
+4	plate_1	A05	Media control	
+5	plate_1	A06	tryptophan: 0.01 mM & amiodarone: 0 mM	Cells supplemented with low tryptophan without amiodarone treatment.
+6	plate_1	A07	tryptophan: 0.1 mM & amiodarone: 20 µM	Cells with high tryptophan supplementation treated with high amiodarone.
+7	plate_1	A08	tryptophan: 0.01 mM & amiodarone: 20 µM	Cells with low tryptophan supplementation treated with high amiodarone.
+8	plate_1	A09	Media control	
+9	plate_1	A10	tryptophan: 0.1 mM & amiodarone: 5 µM	Cells with high tryptophan supplementation treated with low amiodarone.
+10	plate_1	A11	tryptophan: 0 mM & amiodarone: 20 µM	Cells treated with high amiodarone without tryptophan supplementation.
+11	plate_1	A12	tryptophan: 0 mM & amiodarone: 0 mM	Cells grown in minimal media without any supplementation or treatment.
+12	plate_1	B01	tryptophan: 0.01 mM & amiodarone: 20 µM	Cells with low tryptophan supplementation treated with high amiodarone.
+13	plate_1	B02	tryptophan: 0.1 mM & amiodarone: 0 mM	Cells supplemented with high tryptophan without amiodarone treatment.
+14	plate_1	B03	Media control	
+15	plate_1	B04	tryptophan: 0 mM & amiodarone: 0 mM	Cells grown in minimal media without any supplementation or treatment.
+16	plate_1	B05	tryptophan: 0.1 mM & amiodarone: 20 µM	Cells with high tryptophan supplementation treated with high amiodarone.
+17	plate_1	B06	tryptophan: 0.1 mM & amiodarone: 20 µM	Cells with high tryptophan supplementation treated with high amiodarone.
+18	plate_1	B07	tryptophan: 0.01 mM & amiodarone: 5 µM	Cells with low tryptophan supplementation treated with low amiodarone.
+19	plate_1	B08	tryptophan: 0.01 mM & amiodarone: 5 µM	Cells with low tryptophan supplementation treated with low amiodarone.
+20	plate_1	B09	tryptophan: 0 mM & amiodarone: 5 µM	Cells treated with low amiodarone without tryptophan supplementation.
+21	plate_1	B10	tryptophan: 0.01 mM & amiodarone: 0 mM	Cells supplemented with low tryptophan without amiodarone treatment.
+22	plate_1	B11	tryptophan: 0.1 mM & amiodarone: 5 µM	Cells with high tryptophan supplementation treated with low amiodarone.
+23	plate_1	B12	tryptophan: 0 mM & amiodarone: 20 µM	Cells treated with high amiodarone without tryptophan supplementation.
+24	plate_1	C01	tryptophan: 0.1 mM & amiodarone: 20 µM	Cells with high tryptophan supplementation treated with high amiodarone.
+25	plate_1	C02	Media control	
+26	plate_1	C03	tryptophan: 0 mM & amiodarone: 0 mM	Cells grown in minimal media without any supplementation or treatment.
+27	plate_1	C04	tryptophan: 0 mM & amiodarone: 5 µM	Cells treated with low amiodarone without tryptophan supplementation.
+28	plate_1	C05	tryptophan: 0.1 mM & amiodarone: 5 µM	Cells with high tryptophan supplementation treated with low amiodarone.
+29	plate_1	C06	tryptophan: 0.01 mM & amiodarone: 5 µM	Cells with low tryptophan supplementation treated with low amiodarone.
+30	plate_1	C07	tryptophan: 0.01 mM & amiodarone: 20 µM	Cells with low tryptophan supplementation treated with high amiodarone.
+31	plate_1	C08	Media control	
+32	plate_1	C09	tryptophan: 0.01 mM & amiodarone: 0 mM	Cells supplemented with low tryptophan without amiodarone treatment.
+33	plate_1	C10	tryptophan: 0 mM & amiodarone: 20 µM	Cells treated with high amiodarone without tryptophan supplementation.
+34	plate_1	C11	tryptophan: 0 mM & amiodarone: 5 µM	Cells treated with low amiodarone without tryptophan supplementation.
+35	plate_1	C12	tryptophan: 0.1 mM & amiodarone: 0 mM	Cells supplemented with high tryptophan without amiodarone treatment.
+36	plate_1	D01	tryptophan: 0.01 mM & amiodarone: 5 µM	Cells with low tryptophan supplementation treated with low amiodarone.
+37	plate_1	D02	tryptophan: 0.1 mM & amiodarone: 20 µM	Cells with high tryptophan supplementation treated with high amiodarone.
+38	plate_1	D03	tryptophan: 0.01 mM & amiodarone: 20 µM	Cells with low tryptophan supplementation treated with high amiodarone.
+39	plate_1	D04	tryptophan: 0 mM & amiodarone: 20 µM	Cells treated with high amiodarone without tryptophan supplementation.
+40	plate_1	D05	tryptophan: 0 mM & amiodarone: 5 µM	Cells treated with low amiodarone without tryptophan supplementation.
+41	plate_1	D06	Media control	
+42	plate_1	D07	Media control	
+43	plate_1	D08	tryptophan: 0.1 mM & amiodarone: 0 mM	Cells supplemented with high tryptophan without amiodarone treatment.
+44	plate_1	D09	tryptophan: 0.1 mM & amiodarone: 5 µM	Cells with high tryptophan supplementation treated with low amiodarone.
+45	plate_1	D10	tryptophan: 0 mM & amiodarone: 0 mM	Cells grown in minimal media without any supplementation or treatment.
+46	plate_1	D11	tryptophan: 0.01 mM & amiodarone: 0 mM	Cells supplemented with low tryptophan without amiodarone treatment.
+47	plate_1	D12	tryptophan: 0.01 mM & amiodarone: 0 mM	Cells supplemented with low tryptophan without amiodarone treatment.
+48	plate_1	E01	tryptophan: 0 mM & amiodarone: 5 µM	Cells treated with low amiodarone without tryptophan supplementation.
+49	plate_1	E02	tryptophan: 0.01 mM & amiodarone: 20 µM	Cells with low tryptophan supplementation treated with high amiodarone.
+50	plate_1	E03	tryptophan: 0.1 mM & amiodarone: 0 mM	Cells supplemented with high tryptophan without amiodarone treatment.
+51	plate_1	E04	tryptophan: 0.01 mM & amiodarone: 0 mM	Cells supplemented with low tryptophan without amiodarone treatment.
+52	plate_1	E05	Media control	
+53	plate_1	E06	tryptophan: 0 mM & amiodarone: 20 µM	Cells treated with high amiodarone without tryptophan supplementation.
+54	plate_1	E07	tryptophan: 0 mM & amiodarone: 0 mM	Cells grown in minimal media without any supplementation or treatment.
+55	plate_1	E08	tryptophan: 0 mM & amiodarone: 0 mM	Cells grown in minimal media without any supplementation or treatment.
+56	plate_1	E09	tryptophan: 0.01 mM & amiodarone: 5 µM	Cells with low tryptophan supplementation treated with low amiodarone.
+57	plate_1	E10	Media control	
+58	plate_1	E11	tryptophan: 0.1 mM & amiodarone: 20 µM	Cells with high tryptophan supplementation treated with high amiodarone.
+59	plate_1	E12	tryptophan: 0.1 mM & amiodarone: 5 µM	Cells with high tryptophan supplementation treated with low amiodarone.
+60	plate_1	F01	tryptophan: 0.01 mM & amiodarone: 0 mM	Cells supplemented with low tryptophan without amiodarone treatment.
+61	plate_1	F02	tryptophan: 0 mM & amiodarone: 20 µM	Cells treated with high amiodarone without tryptophan supplementation.
+62	plate_1	F03	Media control	
+63	plate_1	F04	tryptophan: 0.1 mM & amiodarone: 20 µM	Cells with high tryptophan supplementation treated with high amiodarone.
+64	plate_1	F05	tryptophan: 0.01 mM & amiodarone: 5 µM	Cells with low tryptophan supplementation treated with low amiodarone.
+65	plate_1	F06	tryptophan: 0.01 mM & amiodarone: 20 µM	Cells with low tryptophan supplementation treated with high amiodarone.
+66	plate_1	F07	Media control	
+67	plate_1	F08	tryptophan: 0.1 mM & amiodarone: 5 µM	Cells with high tryptophan supplementation treated with low amiodarone.
+68	plate_1	F09	tryptophan: 0.1 mM & amiodarone: 0 mM	Cells supplemented with high tryptophan without amiodarone treatment.
+69	plate_1	F10	tryptophan: 0.01 mM & amiodarone: 20 µM	Cells with low tryptophan supplementation treated with high amiodarone.
+70	plate_1	F11	tryptophan: 0 mM & amiodarone: 0 mM	Cells grown in minimal media without any supplementation or treatment.
+71	plate_1	F12	tryptophan: 0 mM & amiodarone: 5 µM	Cells treated with low amiodarone without tryptophan supplementation.
+72	plate_1	G01	Media control	
+73	plate_1	G02	tryptophan: 0 mM & amiodarone: 0 mM	Cells grown in minimal media without any supplementation or treatment.
+74	plate_1	G03	tryptophan: 0.1 mM & amiodarone: 20 µM	Cells with high tryptophan supplementation treated with high amiodarone.
+75	plate_1	G04	tryptophan: 0.1 mM & amiodarone: 0 mM	Cells supplemented with high tryptophan without amiodarone treatment.
+76	plate_1	G05	tryptophan: 0 mM & amiodarone: 20 µM	Cells treated with high amiodarone without tryptophan supplementation.
+77	plate_1	G06	tryptophan: 0 mM & amiodarone: 5 µM	Cells treated with low amiodarone without tryptophan supplementation.
+78	plate_1	G07	tryptophan: 0.1 mM & amiodarone: 5 µM	Cells with high tryptophan supplementation treated with low amiodarone.
+79	plate_1	G08	tryptophan: 0.01 mM & amiodarone: 0 mM	Cells supplemented with low tryptophan without amiodarone treatment.
+80	plate_1	G09	tryptophan: 0 mM & amiodarone: 20 µM	Cells treated with high amiodarone without tryptophan supplementation.
+81	plate_1	G10	tryptophan: 0.01 mM & amiodarone: 5 µM	Cells with low tryptophan supplementation treated with low amiodarone.
+82	plate_1	G11	tryptophan: 0.01 mM & amiodarone: 20 µM	Cells with low tryptophan supplementation treated with high amiodarone.
+83	plate_1	G12	Media control	
+84	plate_1	H01	tryptophan: 0.1 mM & amiodarone: 5 µM	Cells with high tryptophan supplementation treated with low amiodarone.
+85	plate_1	H02	tryptophan: 0 mM & amiodarone: 5 µM	Cells treated with low amiodarone without tryptophan supplementation.
+86	plate_1	H03	tryptophan: 0.01 mM & amiodarone: 5 µM	Cells with low tryptophan supplementation treated with low amiodarone.
+87	plate_1	H04	Media control	
+88	plate_1	H05	tryptophan: 0.1 mM & amiodarone: 0 mM	Cells supplemented with high tryptophan without amiodarone treatment.
+89	plate_1	H06	tryptophan: 0 mM & amiodarone: 0 mM	Cells grown in minimal media without any supplementation or treatment.
+90	plate_1	H07	tryptophan: 0.01 mM & amiodarone: 0 mM	Cells supplemented with low tryptophan without amiodarone treatment.
+91	plate_1	H08	tryptophan: 0 mM & amiodarone: 20 µM	Cells treated with high amiodarone without tryptophan supplementation.
+92	plate_1	H09	tryptophan: 0.1 mM & amiodarone: 20 µM	Cells with high tryptophan supplementation treated with high amiodarone.
+93	plate_1	H10	tryptophan: 0.1 mM & amiodarone: 0 mM	Cells supplemented with high tryptophan without amiodarone treatment.
+94	plate_1	H11	Media control	
+95	plate_1	H12	tryptophan: 0.01 mM & amiodarone: 20 µM	Cells with low tryptophan supplementation treated with high amiodarone.

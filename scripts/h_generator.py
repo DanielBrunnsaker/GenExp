@@ -25,69 +25,45 @@ Created on Fri Aug 30 15:24:19 2024
         B. Present several and evaluate after somehow?
 '''
 
+def parse_arguments():
+    import argparse
+    parser = argparse.ArgumentParser(description="Hypothesis Generator with adjustable parameters.")
+    
+    # Define arguments with default values
+    parser.add_argument('--target', type=str, default="alanine", help='Predictive target (e.g., amino acid).')
+    parser.add_argument('--N', type=int, default=25, help='Number of patterns to pass to the initial prompt.')
+    parser.add_argument('--T', type=float, default=0.5, help='LLM temperature for hypothesis generation step.')
+    parser.add_argument('--alpha', type=float, default=1.0, help='Parameter for weighing the linear coefficients for pattern ranking.')
+    parser.add_argument('--beta', type=float, default=0.20, help='Parameter that penalizes the pattern ranking through the summation of alternative targets.')
 
+    # Parse arguments
+    args = parser.parse_args()
+    
+    # Return as a dictionary for easy access and logging
+    return vars(args)
 
 def main():
     
     
     '''
-    python hypothesis_generator.py --target "XXX" --domain "YYY" --N "ZZZ" --methods "XYZ"
-    
-    --target: predictive target (e.g. amino acid)
-    --N: How many patterns to pass to the initial prompt in the sequence (feasibility and safety assessment)
-    --T: The temperature on the hypothesis/experimental design generator
-    --alpha: parameter for ranking the linear coefficient of of the pattern, given the target
-    --beta: parameter for estimating uniqueness of the pattern, given target and all other (non-declared) targets
-    
-    default values
-    python h_generator.py --target "alanine" --N 10 --T 0.5 --alpha 1.0 --beta 0.25
-        
-    
-    '''
-    
-    parser = argparse.ArgumentParser(description='Script with a command-line argument.')
-    parser.add_argument('--target', type=str, help='Value for the "target" variable.')
-    parser.add_argument('--N', type=str, help='Value for the "N" variable.')
-    parser.add_argument('--T', type=str, help='Value for the "T" variable.')
-    parser.add_argument('--alpha', type=str, help='Value for the "alpha" variable.')
-    parser.add_argument('--beta', type=str, help='Value for the "beta" variable.')
 
-    args = parser.parse_args()
-         
-    if args.target is not None:
-        target = args.target
-        print(f'Variable "target" set to: {target}')
-    else:
-        print('Variable "target" not provided.')
- 
-    if args.N is not None:
-        N = args.N
-        print(f'Variable "N" set to: {N}')
-        N = int(N)
-    else:
-        print('Variable "N" not provided.')
+    default values
+    python h_generator.py --target "alanine" --N 25 --T 0.5 --alpha 1.0 --beta 0.20
         
-    # Temp 0.5 seems ok
-    if args.T is not None:
-        T = args.T
-        print(f'Variable "T" set to: {T}')
-        T = float(T)
-    else:
-        print('Variable "T" not provided.')
-        
-    if args.alpha is not None:
-        alpha = args.alpha
-        print(f'Variable "alpha" set to: {alpha}')
-        alpha = float(alpha)
-    else:
-        print('Variable "alpha" not provided.')
-        
-    if args.beta is not None:
-        beta = args.beta
-        print(f'Variable "beta" set to: {beta}')
-        beta = float(beta)
-    else:
-        print('Variable "beta" not provided.')
+    '''
+    # Parse arguments
+    args = parse_arguments()
+
+    # Log each variable setting
+    for arg, value in args.items():
+        print(f'Variable "{arg}" set to: {value}')
+
+    # Example usage of parsed values
+    target = args['target']
+    N = args['N']
+    T = args['T']
+    alpha = args['alpha']
+    beta = args['beta']
     
     relevance_scores = {
         # predicates
@@ -198,18 +174,26 @@ def main():
     pretty_json = json.dumps(json_output, indent=2)
     print(pretty_json)
     
-    save_string_to_json('../experiments/generated_outputs', json_output, 'protocol', target, N, T, alpha, beta)
+    return_path = save_string_to_json('../experiments/generated_outputs', json_output, 'protocol', target, N, T, alpha, beta)
     save_string_to_json('../experiments/generated_outputs', allowed_programs, 'selection', target, N, T, alpha, beta)
     save_string_to_file('../experiments/generated_outputs/', hypothesis_text, 'hypothesis', target, N, T, alpha, beta)
-    
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     # Present user with the options
     action = user_prompt()
     
     
     
     if action == "go_ahead":
-        print("Continuing with the rest of the script.")
+        #print("Continuing with the rest of the script.")
         # Continue with the rest of the script
+        
+        # Construct the filename
+        plate_layout = generate_layout(return_path, '../plaid/reference_plate.json', f"../experiments/generated_outputs/{timestamp}_layout_{target}_{N}_{T}_{alpha}_{beta}.json")
+        plate_layout.to_csv(f"../experiments/generated_outputs/{timestamp}_layoutTable_{target}_{N}_{T}_{alpha}_{beta}.tsv", sep = '\t')
+        
+        #print(plate_layout)
+        return_hamilton_concentrations(return_path, plate_layout)
+        
     elif action == "retry":
         print("Retrying the previous operation.")
         # You can loop back to retry the operation
@@ -222,23 +206,24 @@ def main():
         exit()
     
     
-    
+from datetime import datetime
 import pandas as pd
-import json
-import re
 import json
 import pickle
 import os
-import argparse
 import numpy as np
-import pandas as pd
 
 #os.chdir('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/scripts')
 
-os.chdir(os.getcwd())
+#os.chdir(os.getcwd())
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(script_dir)
 
 from hgen_support import *
 from gpt_support import *
+from layout_generator import *
+from dose_calculator import *
 
 # Set starting point of the disallowed formulations. Note that the starting point here are all logic programs 
 # which have no meaning without a second, descriptive, predicate/atom.
@@ -251,7 +236,8 @@ disallowed_clauses = ["Cell(A):-phenotype(A,'increased chemical compound accumul
               "Cell(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,proton)",
               "Cell(A):-phenotype(A,'increased chemical compound accumulation',B,C),compound_name(B,proton)."]
 
-main()
+if __name__ == "__main__":
+    main()
 
 
 

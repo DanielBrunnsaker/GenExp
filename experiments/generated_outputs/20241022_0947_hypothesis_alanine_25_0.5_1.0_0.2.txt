@@ -1,0 +1,37 @@
+### Selected Statement
+Cells with lower than normal levels of intracellular alanine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea).
+
+### Motivation
+This statement is selected because it suggests an association between low intracellular alanine levels and increased resistance to hydroxyurea, a chemical known to inhibit DNA replication. Understanding this association could provide insights into mechanisms of chemical resistance, which is valuable for both fundamental yeast biology and potential biotechnological applications. The novelty lies in potentially uncovering a metabolic link to chemical resistance.
+
+### Hypothesis
+Cells with lower than normal levels of intracellular alanine exhibit increased resistance to hydroxyurea due to altered metabolic pathways or stress response mechanisms.
+
+### Experimental Plan
+1. **Strains and Media**: Use a wild-type Saccharomyces cerevisiae strain. Grow cells in minimal media without amino acids as baseline conditions.
+
+2. **Experimental Conditions**: 
+   - Control: No supplementation.
+   - Alanine Depletion: Use 3-mercaptopropionate (3-MP) at three concentrations (0 mM, 0.5 mM, 1 mM) to inhibit alanine biosynthesis. Verify alanine levels using mass-spectrometry based metabolomics at the end of the experiment.
+   - Hydroxyurea Treatment: Add hydroxyurea at 0 mM, 50 mM, and 100 mM at the start of the experiment.
+
+3. **Experimental Setup**: 
+   - Inoculate cultures at 0.05 OD600.
+   - Measure OD600 every 20 minutes to monitor growth.
+   - Terminate experiment at 12 hours for metabolomics analysis.
+
+4. **Controls**: 
+   - Include a set of wells with only hydroxyurea (without alanine depletion) to assess its independent effect.
+   - Include a set of wells with only 3-MP to confirm its effect on alanine levels.
+
+5. **Verification of Assumptions**:
+   - Determine intracellular alanine levels using mass-spectrometry at the end of the experiment for all conditions.
+   - Ensure that 3-MP specifically reduces alanine levels without broadly affecting other amino acids.
+
+### Expected Outcomes
+- **Increased Resistance**: If cells with reduced alanine levels show higher growth rates or final biomass in the presence of hydroxyurea compared to control, it supports the hypothesis that low alanine levels are associated with increased resistance.
+- **Alanine Level Verification**: Mass-spectrometry should confirm lower alanine levels in 3-MP treated samples compared to control.
+- **Independent Effects**: Any growth changes observed in the presence of hydroxyurea alone or 3-MP alone should be accounted for to isolate the combined effect.
+
+### Conclusion
+The experiment aims to explore the association between low intracellular alanine levels and resistance to hydroxyurea. By systematically varying alanine levels and hydroxyurea concentrations, and measuring growth and metabolite profiles, the study will provide insights into the metabolic basis for chemical resistance in yeast.

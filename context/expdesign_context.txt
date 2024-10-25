@@ -16,10 +16,11 @@ Here is the template, do not include any escape tokens in the output:
   "treatment": <String>,
   "treatment_parameters": <String>,
   "sampling_time": <Float>,
+  "type": <String>,
   "summary": <String>
 }, ... ]}
 
-If a category is not applicable, set it to null. OD is always monitored.
+If a category is not applicable, set it to null. OD is always monitored. "type" can be one of "control" (no supplementation or treatment), "supplementation control" (only supplement), "treatment control" (only treatment) or "experiment" (both). All of these should be present.
 
 
 

@@ -1,0 +1,113 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,edelfosine)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Wild-type S. cerevisiae grown in minimal media without any supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamate",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Wild-type S. cerevisiae supplemented with 5 mM glutamate, no edelfosine treatment."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamate",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Wild-type S. cerevisiae supplemented with 10 mM glutamate, no edelfosine treatment."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "edelfosine",
+            "treatment_parameters": "5 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Wild-type S. cerevisiae treated with 5 \u00b5g/mL edelfosine, no glutamate supplementation."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "edelfosine",
+            "treatment_parameters": "10 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Wild-type S. cerevisiae treated with 10 \u00b5g/mL edelfosine, no glutamate supplementation."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamate",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "edelfosine",
+            "treatment_parameters": "5 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Wild-type S. cerevisiae supplemented with 5 mM glutamate and treated with 5 \u00b5g/mL edelfosine."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamate",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "edelfosine",
+            "treatment_parameters": "10 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Wild-type S. cerevisiae supplemented with 5 mM glutamate and treated with 10 \u00b5g/mL edelfosine."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamate",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "edelfosine",
+            "treatment_parameters": "5 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Wild-type S. cerevisiae supplemented with 10 mM glutamate and treated with 5 \u00b5g/mL edelfosine."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "glutamate",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "edelfosine",
+            "treatment_parameters": "10 \u00b5g/mL",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Wild-type S. cerevisiae supplemented with 10 mM glutamate and treated with 10 \u00b5g/mL edelfosine."
+        }
+    ]
+}

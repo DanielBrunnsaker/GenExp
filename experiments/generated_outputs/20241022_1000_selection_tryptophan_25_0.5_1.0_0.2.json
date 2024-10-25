@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased chemical compound excretion',B,C),compound_name(B,glutathione),condition(C,'Treatment:  SD medium').",
+            "number": 5,
+            "reason": "This program involves the excretion of glutathione, a non-toxic compound, and can be assessed through metabolomics. It is safe and feasible in a 96 well format."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,streptomycin).",
+            "number": 18,
+            "reason": "Streptomycin is a well-known antibiotic, and its effects on yeast can be safely tested in a ventilated area. The experiment is feasible and can be assessed through growth inhibition assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,amiodarone).",
+            "number": 9,
+            "reason": "Amiodarone is a common pharmaceutical compound, and its impact on yeast can be safely tested. The experiment is feasible and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,miconazole).",
+            "number": 2,
+            "reason": "Miconazole is an antifungal agent, and its effects on yeast are relevant and safe to test. The experiment is feasible and can be assessed through growth inhibition assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,benomyl).",
+            "number": 14,
+            "reason": "Benomyl is a fungicide, and its effects on yeast can be safely tested. The experiment is feasible and can be assessed through growth assays."
+        }
+    ]
+}

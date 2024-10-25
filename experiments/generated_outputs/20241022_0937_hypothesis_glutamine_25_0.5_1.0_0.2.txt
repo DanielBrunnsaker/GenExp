@@ -1,0 +1,51 @@
+**Selected Statement:**  
+Cells with higher than normal levels of intracellular glutamine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,glyoxal).
+
+**Motivation:**  
+The selected statement is intriguing due to its focus on glyoxal, a reactive carbonyl compound that can cause cellular stress, which is relevant for understanding stress response mechanisms in Saccharomyces cerevisiae. Exploring the association between elevated glutamine levels and glyoxal resistance may provide insights into metabolic states affecting stress responses. Furthermore, the relationship between glutamine levels and chemical resistance is less explored, offering potential novelty in understanding cellular metabolic adaptations.
+
+**Hypothesis:**  
+Higher intracellular levels of glutamine reduce the resistance of Saccharomyces cerevisiae to glyoxal, possibly due to altered metabolic pathways or stress response mechanisms.
+
+**Experimental Plan:**  
+
+1. **Objective:** To determine if elevated intracellular glutamine levels affect the resistance of S. cerevisiae to glyoxal.
+
+2. **Strain and Culture Conditions:**  
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cultures in minimal media without amino acids.
+   - Inoculate cultures at 0.05 OD600.
+
+3. **Glutamine Supplementation:**  
+   - Supplement media with L-glutamine at three concentrations: 0 mM (control), 10 mM, and 20 mM.
+   - Verify intracellular glutamine levels using mass-spectrometry based metabolomics at experiment termination.
+
+4. **Glyoxal Treatment:**  
+   - Introduce glyoxal at 0 mM (control), 1 mM, and 2 mM at t=0h.
+   - Ensure that glyoxal concentrations are within a physiologically relevant range.
+
+5. **Experimental Setup:**  
+   - 96-well plate format with triplicates for each condition.
+   - Measure OD600 every 20 minutes to monitor growth dynamics.
+
+6. **Controls:**  
+   - Include wells with only glutamine supplementation and no glyoxal to assess the independent effect of glutamine on growth.
+   - Include wells with only glyoxal treatment and no glutamine to assess baseline resistance.
+
+7. **Assumption Verification:**  
+   - Conduct a preliminary experiment to confirm that the chosen concentrations of glutamine result in higher intracellular levels compared to the control.
+   - Ensure that glyoxal concentrations used are sub-lethal for the control conditions.
+
+8. **Temperature and Shaking:**  
+   - Maintain cultures at 30°C with standardized shaking.
+
+9. **Experiment Termination:**  
+   - Terminate experiments at 12 hours and analyze samples for intracellular glutamine levels and growth data.
+
+**Expected Outcomes:**  
+- If the hypothesis is correct, cultures with elevated glutamine levels and glyoxal treatment should show decreased growth compared to control conditions, indicating reduced resistance.
+- Control conditions with only glutamine supplementation should show normal growth, confirming that glutamine alone does not affect growth adversely.
+- Glyoxal-only controls should exhibit reduced growth compared to untreated controls, validating the effect of glyoxal.
+- Mass-spectrometry results should confirm elevated intracellular glutamine levels in supplemented conditions.
+
+By carefully controlling and varying glutamine and glyoxal concentrations, the experiment will elucidate the relationship between glutamine levels and glyoxal resistance, potentially uncovering novel metabolic interactions.

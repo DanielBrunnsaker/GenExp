@@ -1,0 +1,101 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole).",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Wild-type strain cultured in minimal media without any supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "1 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Wild-type strain supplemented with 1 mM alanine without epoxiconazole treatment."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Wild-type strain supplemented with 5 mM alanine without epoxiconazole treatment."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Wild-type strain supplemented with 10 mM alanine without epoxiconazole treatment."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "10 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Wild-type strain treated with 10 \u00b5M epoxiconazole without alanine supplementation."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "1 mM",
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "10 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Wild-type strain supplemented with 1 mM alanine and treated with 10 \u00b5M epoxiconazole."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "10 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Wild-type strain supplemented with 5 mM alanine and treated with 10 \u00b5M epoxiconazole."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "epoxiconazole",
+            "treatment_parameters": "10 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Wild-type strain supplemented with 10 mM alanine and treated with 10 \u00b5M epoxiconazole."
+        }
+    ]
+}

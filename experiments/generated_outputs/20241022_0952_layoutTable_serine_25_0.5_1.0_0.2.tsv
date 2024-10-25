@@ -1,0 +1,97 @@
+	plateID	well	CONCuM	Summary
+0	plate_1	A01	serine: 5 mM & hydrogen peroxide: 0 mM	Serine supplementation at 5 mM without hydrogen peroxide treatment.
+1	plate_1	A02	serine: 5 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 0.5 mM.
+2	plate_1	A03	serine: 0 mM & hydrogen peroxide: 0.5 mM	Hydrogen peroxide treatment at 0.5 mM without serine supplementation.
+3	plate_1	A04	serine: 1 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 0.5 mM.
+4	plate_1	A05	Media control	
+5	plate_1	A06	serine: 1 mM & hydrogen peroxide: 0 mM	Serine supplementation at 1 mM without hydrogen peroxide treatment.
+6	plate_1	A07	serine: 5 mM & hydrogen peroxide: 1 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 1 mM.
+7	plate_1	A08	serine: 1 mM & hydrogen peroxide: 1 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 1 mM.
+8	plate_1	A09	Media control	
+9	plate_1	A10	serine: 5 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 0.5 mM.
+10	plate_1	A11	serine: 0 mM & hydrogen peroxide: 1 mM	Hydrogen peroxide treatment at 1 mM without serine supplementation.
+11	plate_1	A12	serine: 0 mM & hydrogen peroxide: 0 mM	Baseline control with no serine supplementation and no hydrogen peroxide treatment.
+12	plate_1	B01	serine: 1 mM & hydrogen peroxide: 1 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 1 mM.
+13	plate_1	B02	serine: 5 mM & hydrogen peroxide: 0 mM	Serine supplementation at 5 mM without hydrogen peroxide treatment.
+14	plate_1	B03	Media control	
+15	plate_1	B04	serine: 0 mM & hydrogen peroxide: 0 mM	Baseline control with no serine supplementation and no hydrogen peroxide treatment.
+16	plate_1	B05	serine: 5 mM & hydrogen peroxide: 1 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 1 mM.
+17	plate_1	B06	serine: 5 mM & hydrogen peroxide: 1 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 1 mM.
+18	plate_1	B07	serine: 1 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 0.5 mM.
+19	plate_1	B08	serine: 1 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 0.5 mM.
+20	plate_1	B09	serine: 0 mM & hydrogen peroxide: 0.5 mM	Hydrogen peroxide treatment at 0.5 mM without serine supplementation.
+21	plate_1	B10	serine: 1 mM & hydrogen peroxide: 0 mM	Serine supplementation at 1 mM without hydrogen peroxide treatment.
+22	plate_1	B11	serine: 5 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 0.5 mM.
+23	plate_1	B12	serine: 0 mM & hydrogen peroxide: 1 mM	Hydrogen peroxide treatment at 1 mM without serine supplementation.
+24	plate_1	C01	serine: 5 mM & hydrogen peroxide: 1 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 1 mM.
+25	plate_1	C02	Media control	
+26	plate_1	C03	serine: 0 mM & hydrogen peroxide: 0 mM	Baseline control with no serine supplementation and no hydrogen peroxide treatment.
+27	plate_1	C04	serine: 0 mM & hydrogen peroxide: 0.5 mM	Hydrogen peroxide treatment at 0.5 mM without serine supplementation.
+28	plate_1	C05	serine: 5 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 0.5 mM.
+29	plate_1	C06	serine: 1 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 0.5 mM.
+30	plate_1	C07	serine: 1 mM & hydrogen peroxide: 1 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 1 mM.
+31	plate_1	C08	Media control	
+32	plate_1	C09	serine: 1 mM & hydrogen peroxide: 0 mM	Serine supplementation at 1 mM without hydrogen peroxide treatment.
+33	plate_1	C10	serine: 0 mM & hydrogen peroxide: 1 mM	Hydrogen peroxide treatment at 1 mM without serine supplementation.
+34	plate_1	C11	serine: 0 mM & hydrogen peroxide: 0.5 mM	Hydrogen peroxide treatment at 0.5 mM without serine supplementation.
+35	plate_1	C12	serine: 5 mM & hydrogen peroxide: 0 mM	Serine supplementation at 5 mM without hydrogen peroxide treatment.
+36	plate_1	D01	serine: 1 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 0.5 mM.
+37	plate_1	D02	serine: 5 mM & hydrogen peroxide: 1 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 1 mM.
+38	plate_1	D03	serine: 1 mM & hydrogen peroxide: 1 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 1 mM.
+39	plate_1	D04	serine: 0 mM & hydrogen peroxide: 1 mM	Hydrogen peroxide treatment at 1 mM without serine supplementation.
+40	plate_1	D05	serine: 0 mM & hydrogen peroxide: 0.5 mM	Hydrogen peroxide treatment at 0.5 mM without serine supplementation.
+41	plate_1	D06	Media control	
+42	plate_1	D07	Media control	
+43	plate_1	D08	serine: 5 mM & hydrogen peroxide: 0 mM	Serine supplementation at 5 mM without hydrogen peroxide treatment.
+44	plate_1	D09	serine: 5 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 0.5 mM.
+45	plate_1	D10	serine: 0 mM & hydrogen peroxide: 0 mM	Baseline control with no serine supplementation and no hydrogen peroxide treatment.
+46	plate_1	D11	serine: 1 mM & hydrogen peroxide: 0 mM	Serine supplementation at 1 mM without hydrogen peroxide treatment.
+47	plate_1	D12	serine: 1 mM & hydrogen peroxide: 0 mM	Serine supplementation at 1 mM without hydrogen peroxide treatment.
+48	plate_1	E01	serine: 0 mM & hydrogen peroxide: 0.5 mM	Hydrogen peroxide treatment at 0.5 mM without serine supplementation.
+49	plate_1	E02	serine: 1 mM & hydrogen peroxide: 1 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 1 mM.
+50	plate_1	E03	serine: 5 mM & hydrogen peroxide: 0 mM	Serine supplementation at 5 mM without hydrogen peroxide treatment.
+51	plate_1	E04	serine: 1 mM & hydrogen peroxide: 0 mM	Serine supplementation at 1 mM without hydrogen peroxide treatment.
+52	plate_1	E05	Media control	
+53	plate_1	E06	serine: 0 mM & hydrogen peroxide: 1 mM	Hydrogen peroxide treatment at 1 mM without serine supplementation.
+54	plate_1	E07	serine: 0 mM & hydrogen peroxide: 0 mM	Baseline control with no serine supplementation and no hydrogen peroxide treatment.
+55	plate_1	E08	serine: 0 mM & hydrogen peroxide: 0 mM	Baseline control with no serine supplementation and no hydrogen peroxide treatment.
+56	plate_1	E09	serine: 1 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 0.5 mM.
+57	plate_1	E10	Media control	
+58	plate_1	E11	serine: 5 mM & hydrogen peroxide: 1 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 1 mM.
+59	plate_1	E12	serine: 5 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 0.5 mM.
+60	plate_1	F01	serine: 1 mM & hydrogen peroxide: 0 mM	Serine supplementation at 1 mM without hydrogen peroxide treatment.
+61	plate_1	F02	serine: 0 mM & hydrogen peroxide: 1 mM	Hydrogen peroxide treatment at 1 mM without serine supplementation.
+62	plate_1	F03	Media control	
+63	plate_1	F04	serine: 5 mM & hydrogen peroxide: 1 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 1 mM.
+64	plate_1	F05	serine: 1 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 0.5 mM.
+65	plate_1	F06	serine: 1 mM & hydrogen peroxide: 1 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 1 mM.
+66	plate_1	F07	Media control	
+67	plate_1	F08	serine: 5 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 0.5 mM.
+68	plate_1	F09	serine: 5 mM & hydrogen peroxide: 0 mM	Serine supplementation at 5 mM without hydrogen peroxide treatment.
+69	plate_1	F10	serine: 1 mM & hydrogen peroxide: 1 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 1 mM.
+70	plate_1	F11	serine: 0 mM & hydrogen peroxide: 0 mM	Baseline control with no serine supplementation and no hydrogen peroxide treatment.
+71	plate_1	F12	serine: 0 mM & hydrogen peroxide: 0.5 mM	Hydrogen peroxide treatment at 0.5 mM without serine supplementation.
+72	plate_1	G01	Media control	
+73	plate_1	G02	serine: 0 mM & hydrogen peroxide: 0 mM	Baseline control with no serine supplementation and no hydrogen peroxide treatment.
+74	plate_1	G03	serine: 5 mM & hydrogen peroxide: 1 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 1 mM.
+75	plate_1	G04	serine: 5 mM & hydrogen peroxide: 0 mM	Serine supplementation at 5 mM without hydrogen peroxide treatment.
+76	plate_1	G05	serine: 0 mM & hydrogen peroxide: 1 mM	Hydrogen peroxide treatment at 1 mM without serine supplementation.
+77	plate_1	G06	serine: 0 mM & hydrogen peroxide: 0.5 mM	Hydrogen peroxide treatment at 0.5 mM without serine supplementation.
+78	plate_1	G07	serine: 5 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 0.5 mM.
+79	plate_1	G08	serine: 1 mM & hydrogen peroxide: 0 mM	Serine supplementation at 1 mM without hydrogen peroxide treatment.
+80	plate_1	G09	serine: 0 mM & hydrogen peroxide: 1 mM	Hydrogen peroxide treatment at 1 mM without serine supplementation.
+81	plate_1	G10	serine: 1 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 0.5 mM.
+82	plate_1	G11	serine: 1 mM & hydrogen peroxide: 1 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 1 mM.
+83	plate_1	G12	Media control	
+84	plate_1	H01	serine: 5 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 0.5 mM.
+85	plate_1	H02	serine: 0 mM & hydrogen peroxide: 0.5 mM	Hydrogen peroxide treatment at 0.5 mM without serine supplementation.
+86	plate_1	H03	serine: 1 mM & hydrogen peroxide: 0.5 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 0.5 mM.
+87	plate_1	H04	Media control	
+88	plate_1	H05	serine: 5 mM & hydrogen peroxide: 0 mM	Serine supplementation at 5 mM without hydrogen peroxide treatment.
+89	plate_1	H06	serine: 0 mM & hydrogen peroxide: 0 mM	Baseline control with no serine supplementation and no hydrogen peroxide treatment.
+90	plate_1	H07	serine: 1 mM & hydrogen peroxide: 0 mM	Serine supplementation at 1 mM without hydrogen peroxide treatment.
+91	plate_1	H08	serine: 0 mM & hydrogen peroxide: 1 mM	Hydrogen peroxide treatment at 1 mM without serine supplementation.
+92	plate_1	H09	serine: 5 mM & hydrogen peroxide: 1 mM	Serine supplementation at 5 mM with hydrogen peroxide treatment at 1 mM.
+93	plate_1	H10	serine: 5 mM & hydrogen peroxide: 0 mM	Serine supplementation at 5 mM without hydrogen peroxide treatment.
+94	plate_1	H11	Media control	
+95	plate_1	H12	serine: 1 mM & hydrogen peroxide: 1 mM	Serine supplementation at 1 mM with hydrogen peroxide treatment at 1 mM.

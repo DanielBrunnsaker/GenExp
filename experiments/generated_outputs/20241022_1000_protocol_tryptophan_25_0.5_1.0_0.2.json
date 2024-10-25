@@ -1,0 +1,113 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,miconazole).",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Wild-type yeast grown in minimal media without any supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "10 \u00b5M",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Wild-type yeast with 10 \u00b5M tryptophan supplementation, no miconazole treatment."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "50 \u00b5M",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Wild-type yeast with 50 \u00b5M tryptophan supplementation, no miconazole treatment."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "miconazole",
+            "treatment_parameters": "5 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Wild-type yeast with 5 \u00b5M miconazole treatment, no tryptophan supplementation."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "miconazole",
+            "treatment_parameters": "20 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Wild-type yeast with 20 \u00b5M miconazole treatment, no tryptophan supplementation."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "10 \u00b5M",
+            "treatment": "miconazole",
+            "treatment_parameters": "5 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Wild-type yeast with 10 \u00b5M tryptophan supplementation and 5 \u00b5M miconazole treatment."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "10 \u00b5M",
+            "treatment": "miconazole",
+            "treatment_parameters": "20 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Wild-type yeast with 10 \u00b5M tryptophan supplementation and 20 \u00b5M miconazole treatment."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "50 \u00b5M",
+            "treatment": "miconazole",
+            "treatment_parameters": "5 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Wild-type yeast with 50 \u00b5M tryptophan supplementation and 5 \u00b5M miconazole treatment."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "tryptophan",
+            "media_supplementation_doses": "50 \u00b5M",
+            "treatment": "miconazole",
+            "treatment_parameters": "20 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Wild-type yeast with 50 \u00b5M tryptophan supplementation and 20 \u00b5M miconazole treatment."
+        }
+    ]
+}

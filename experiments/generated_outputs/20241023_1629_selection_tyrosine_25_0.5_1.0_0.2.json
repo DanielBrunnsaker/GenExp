@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'sodium dodecyl sulfate').",
+            "number": 2,
+            "reason": "Sodium dodecyl sulfate (SDS) is a common laboratory reagent that is relatively safe to handle with standard precautions. It is feasible to use in a 96 well format and can be assessed through growth inhibition assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,miconazole).",
+            "number": 10,
+            "reason": "Miconazole is an antifungal agent that is safe to handle in a laboratory setting. It is feasible to use in a 96 well format and can be assessed through growth inhibition assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,fluconazole).",
+            "number": 24,
+            "reason": "Fluconazole is a widely used antifungal that is safe to handle with standard laboratory precautions. It is feasible for use in a 96 well format and can be assessed through growth inhibition assays."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,cycloheximide).",
+            "number": 23,
+            "reason": "Cycloheximide is a well-known inhibitor of protein synthesis in eukaryotic organisms. It is feasible to use in a 96 well format and can be assessed through growth inhibition assays, though care must be taken due to its toxicity."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'Calcofluor White').",
+            "number": 25,
+            "reason": "Calcofluor White is a fluorescent stain that binds to chitin and cellulose, commonly used in yeast research. It is safe to handle with standard precautions and feasible for use in a 96 well format."
+        }
+    ]
+}
