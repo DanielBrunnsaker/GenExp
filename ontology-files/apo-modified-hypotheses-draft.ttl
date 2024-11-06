@@ -7,12 +7,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
 @prefix terms: <http://purl.org/dc/terms/> .
+@prefix ruleml: <http://www.w3.org/2003/11/swrl#> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
 @base <http://purl.obolibrary.org/obo/apo.owl#> .
 
 <http://purl.obolibrary.org/obo/apo.owl> rdf:type owl:Ontology ;
                                           owl:versionIRI <http://purl.obolibrary.org/obo/apo/releases/2024-09-18/apo.owl> ;
+                                          owl:imports <http://www.w3.org/2003/11/swrl> ;
                                           dc:contributor "Maria Costanzo" ,
                                                          "Suzi Aleksander" ;
                                           dc:creator <https://www.yeastgenome.org/> ;
@@ -98,6 +101,10 @@ dc:title rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/license
 terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.geneontology.org/formats/oboInOwl#NamespaceIdRule
@@ -190,16 +197,39 @@ owl:deprecated rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://purl.obolibrary.org/obo/apo.owl#accumulationOfChemical
+:accumulationOfChemical rdf:type owl:ObjectProperty ;
+                        rdfs:domain obo:APO_0000017 ,
+                                    obo:APO_0000094 ,
+                                    obo:APO_0000095 ;
+                        rdfs:range :chemical .
+
+
 ###  http://purl.obolibrary.org/obo/apo.owl#observableHasQualifier
 :observableHasQualifier rdf:type owl:ObjectProperty ;
                         rdfs:domain obo:APO_0000017 ;
                         rdfs:range obo:APO_0000001 .
 
 
+###  http://purl.obolibrary.org/obo/apo.owl#observedInExperiment
+:observedInExperiment rdf:type owl:ObjectProperty ;
+                      rdfs:domain obo:APO_0000017 ;
+                      rdfs:range :experiment .
+
+
 ###  http://purl.obolibrary.org/obo/apo.owl#phenotypeImpliesPhenotype
 :phenotypeImpliesPhenotype rdf:type owl:ObjectProperty ;
                            rdfs:domain obo:APO_0000017 ;
                            rdfs:range obo:APO_0000017 .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#resistanceToChemical
+:resistanceToChemical rdf:type owl:ObjectProperty ;
+                      rdfs:domain obo:APO_0000017 ,
+                                  obo:APO_0000066 ,
+                                  obo:APO_0000080 ,
+                                  obo:APO_0000087 ;
+                      rdfs:range :chemical .
 
 
 #################################################################
@@ -9729,12 +9759,103 @@ apo:curators rdf:type owl:Class ;
              owl:deprecated "true"^^xsd:boolean .
 
 
+###  http://purl.obolibrary.org/obo/apo.owl#camptothecin
+:camptothecin rdf:type owl:Class ;
+              rdfs:subClassOf :chemical .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#chemical
+:chemical rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#experiment
+:experiment rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#methionine
+:methionine rdf:type owl:Class ;
+            rdfs:subClassOf :chemical .
+
+
 #################################################################
 #    Individuals
 #################################################################
 
+###  http://purl.obolibrary.org/obo/apo.owl#ATOM-20241010_1700-01
+:ATOM-20241010_1700-01 rdf:type owl:NamedIndividual ,
+                                ruleml:Atom ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ruleml:argument1 ;
+                                  owl:allValuesFrom owl:Thing
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ruleml:classPredicate ;
+                                  owl:allValuesFrom owl:Class
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ruleml:argument1 ;
+                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ruleml:classPredicate ;
+                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                                ] .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#BODY-20241010_1700
+:BODY-20241010_1700 rdf:type owl:NamedIndividual ,
+                             <http://org.semanticweb.owlapi/error#Error26> ,
+                             <http://org.semanticweb.owlapi/error#Error27> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty rdf:first ;
+                               owl:allValuesFrom ruleml:Atom
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty rdf:rest ;
+                               owl:allValuesFrom ruleml:AtomList
+                             ] .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#HEAD-20241010_1700
+:HEAD-20241010_1700 rdf:type owl:NamedIndividual ,
+                             <http://org.semanticweb.owlapi/error#Error26> ,
+                             <http://org.semanticweb.owlapi/error#Error27> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty rdf:first ;
+                               owl:allValuesFrom ruleml:Atom
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty rdf:rest ;
+                               owl:allValuesFrom ruleml:AtomList
+                             ] .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#IMP-20241010_1700
+:IMP-20241010_1700 rdf:type owl:NamedIndividual ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ruleml:body ;
+                              owl:allValuesFrom ruleml:AtomList
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ruleml:head ;
+                              owl:allValuesFrom ruleml:AtomList
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ruleml:body ;
+                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ruleml:head ;
+                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                            ] ;
+                   ruleml:body :BODY-20241010_1700 ;
+                   ruleml:head :HEAD-20241010_1700 .
+
+
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-01
 :PHENO-01 rdf:type owl:NamedIndividual ,
+                   obo:APO_0000017 ,
+                   obo:APO_0000094 ,
                    obo:APO_0000095 ;
           :observableHasQualifier :QUAL-01 ;
           :phenotypeImpliesPhenotype :increasedHeatSensitivity .
@@ -9742,18 +9863,25 @@ apo:curators rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_0921
 :PHENO-20241010_0921 rdf:type owl:NamedIndividual ,
+                              obo:APO_0000017 ,
+                              obo:APO_0000094 ,
                               obo:APO_0000095 ;
                      :observableHasQualifier :QUAL-20241010_0921 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_0921-2
 :PHENO-20241010_0921-2 rdf:type owl:NamedIndividual ,
+                                obo:APO_0000017 ,
+                                obo:APO_0000066 ,
+                                obo:APO_0000080 ,
                                 obo:APO_0000087 ;
                        :observableHasQualifier :QUAL-20241010_0921-2 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_0922
 :PHENO-20241010_0922 rdf:type owl:NamedIndividual ,
+                              obo:APO_0000017 ,
+                              obo:APO_0000094 ,
                               obo:APO_0000095 ;
                      :observableHasQualifier :QUAL-20241010_0922 ;
                      rdfs:comment "alanine" .
@@ -9761,6 +9889,8 @@ apo:curators rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_0922-2
 :PHENO-20241010_0922-2 rdf:type owl:NamedIndividual ,
+                                obo:APO_0000017 ,
+                                obo:APO_0000094 ,
                                 obo:APO_0000095 ;
                        :observableHasQualifier :QUAL-20241010_0922-2 ;
                        rdfs:comment "cadmium cations" .
@@ -9768,6 +9898,8 @@ apo:curators rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1009
 :PHENO-20241010_1009 rdf:type owl:NamedIndividual ,
+                              obo:APO_0000017 ,
+                              obo:APO_0000094 ,
                               obo:APO_0000095 ;
                      :observableHasQualifier :QUAL-20241010_1009 ;
                      :phenotypeImpliesPhenotype :PHENO-20241010_1009-2 .
@@ -9775,12 +9907,17 @@ apo:curators rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1009-2
 :PHENO-20241010_1009-2 rdf:type owl:NamedIndividual ,
+                                obo:APO_0000017 ,
+                                obo:APO_0000066 ,
+                                obo:APO_0000080 ,
                                 obo:APO_0000087 ;
                        :observableHasQualifier :QUAL-20241010_1009-2 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1010
 :PHENO-20241010_1010 rdf:type owl:NamedIndividual ,
+                              obo:APO_0000017 ,
+                              obo:APO_0000094 ,
                               obo:APO_0000095 ;
                      :observableHasQualifier :QUAL-20241010_1010 ;
                      :phenotypeImpliesPhenotype :PHENO-20241010_1010-2 .
@@ -9788,12 +9925,16 @@ apo:curators rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1010-2
 :PHENO-20241010_1010-2 rdf:type owl:NamedIndividual ,
+                                obo:APO_0000017 ,
+                                obo:APO_0000094 ,
                                 obo:APO_0000095 ;
                        :observableHasQualifier :QUAL-20241010_1010-2 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1011
 :PHENO-20241010_1011 rdf:type owl:NamedIndividual ,
+                              obo:APO_0000017 ,
+                              obo:APO_0000094 ,
                               obo:APO_0000095 ;
                      :observableHasQualifier :QUAL-20241010_1011 ;
                      :phenotypeImpliesPhenotype :PHENO-20241010_1011-2 .
@@ -9801,11 +9942,17 @@ apo:curators rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1011-2
 :PHENO-20241010_1011-2 rdf:type owl:NamedIndividual ,
-                                obo:APO_0000083 .
+                                obo:APO_0000017 ,
+                                obo:APO_0000066 ,
+                                obo:APO_0000080 ,
+                                obo:APO_0000083 ,
+                                obo:APO_0000087 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1014
 :PHENO-20241010_1014 rdf:type owl:NamedIndividual ,
+                              obo:APO_0000017 ,
+                              obo:APO_0000094 ,
                               obo:APO_0000095 ;
                      :observableHasQualifier :QUAL-20241010_1014 ;
                      :phenotypeImpliesPhenotype :PHENO-20241010_1014-2 .
@@ -9813,24 +9960,36 @@ apo:curators rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1014-2
 :PHENO-20241010_1014-2 rdf:type owl:NamedIndividual ,
-                                obo:APO_0000083 ;
+                                obo:APO_0000017 ,
+                                obo:APO_0000066 ,
+                                obo:APO_0000080 ,
+                                obo:APO_0000083 ,
+                                obo:APO_0000087 ;
                        :observableHasQualifier :QUAL-20241010_1014-2 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1036
 :PHENO-20241010_1036 rdf:type owl:NamedIndividual ,
+                              obo:APO_0000017 ,
+                              obo:APO_0000094 ,
                               obo:APO_0000095 ;
                      :observableHasQualifier :QUAL-20241010_1036 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1036-2
 :PHENO-20241010_1036-2 rdf:type owl:NamedIndividual ,
-                                obo:APO_0000083 ;
+                                obo:APO_0000017 ,
+                                obo:APO_0000066 ,
+                                obo:APO_0000080 ,
+                                obo:APO_0000083 ,
+                                obo:APO_0000087 ;
                        :observableHasQualifier :QUAL-20241010_1036-2 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1658
 :PHENO-20241010_1658 rdf:type owl:NamedIndividual ,
+                              obo:APO_0000017 ,
+                              obo:APO_0000094 ,
                               obo:APO_0000095 ;
                      :observableHasQualifier :QUAL-20241010_1658 ;
                      :phenotypeImpliesPhenotype :PHENO-20241010_1658-2 .
@@ -9838,114 +9997,180 @@ apo:curators rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1658-2
 :PHENO-20241010_1658-2 rdf:type owl:NamedIndividual ,
+                                obo:APO_0000017 ,
+                                obo:APO_0000066 ,
+                                obo:APO_0000080 ,
+                                obo:APO_0000087 ,
                                 obo:APO_0000201 ;
                        :observableHasQualifier :QUAL-20241010_1658-2 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1700
 :PHENO-20241010_1700 rdf:type owl:NamedIndividual ,
+                              obo:APO_0000017 ,
+                              obo:APO_0000094 ,
                               obo:APO_0000095 ;
-                     :observableHasQualifier :QUAL-20241010_1700 .
+                     :observableHasQualifier :QUAL-20241010_1700 ;
+                     rdfs:comment "methionine" .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#PHENO-20241010_1700-2
+:PHENO-20241010_1700-2 rdf:type owl:NamedIndividual ,
+                                obo:APO_0000017 ,
+                                obo:APO_0000066 ,
+                                obo:APO_0000080 ,
+                                obo:APO_0000087 ;
+                       rdfs:comment "camptothecin" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-01
 :QUAL-01 rdf:type owl:NamedIndividual ,
+                  obo:APO_0000001 ,
+                  obo:APO_0000002 ,
                   obo:APO_0000004 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0921
 :QUAL-20241010_0921 rdf:type owl:NamedIndividual ,
+                             obo:APO_0000001 ,
+                             obo:APO_0000002 ,
                              obo:APO_0000004 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0921-2
 :QUAL-20241010_0921-2 rdf:type owl:NamedIndividual ,
+                               obo:APO_0000001 ,
+                               obo:APO_0000002 ,
                                obo:APO_0000004 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0922
 :QUAL-20241010_0922 rdf:type owl:NamedIndividual ,
+                             obo:APO_0000001 ,
+                             obo:APO_0000002 ,
                              obo:APO_0000003 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_0922-2
 :QUAL-20241010_0922-2 rdf:type owl:NamedIndividual ,
+                               obo:APO_0000001 ,
+                               obo:APO_0000002 ,
                                obo:APO_0000003 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1009
 :QUAL-20241010_1009 rdf:type owl:NamedIndividual ,
+                             obo:APO_0000001 ,
+                             obo:APO_0000002 ,
                              obo:APO_0000003 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1009-2
 :QUAL-20241010_1009-2 rdf:type owl:NamedIndividual ,
+                               obo:APO_0000001 ,
+                               obo:APO_0000002 ,
                                obo:APO_0000003 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1010
 :QUAL-20241010_1010 rdf:type owl:NamedIndividual ,
+                             obo:APO_0000001 ,
+                             obo:APO_0000002 ,
                              obo:APO_0000003 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1010-2
 :QUAL-20241010_1010-2 rdf:type owl:NamedIndividual ,
+                               obo:APO_0000001 ,
+                               obo:APO_0000002 ,
                                obo:APO_0000003 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1011
 :QUAL-20241010_1011 rdf:type owl:NamedIndividual ,
+                             obo:APO_0000001 ,
+                             obo:APO_0000002 ,
                              obo:APO_0000004 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1011-2
 :QUAL-20241010_1011-2 rdf:type owl:NamedIndividual ,
+                               obo:APO_0000001 ,
+                               obo:APO_0000002 ,
                                obo:APO_0000003 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1014
 :QUAL-20241010_1014 rdf:type owl:NamedIndividual ,
+                             obo:APO_0000001 ,
+                             obo:APO_0000002 ,
                              obo:APO_0000004 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1014-2
 :QUAL-20241010_1014-2 rdf:type owl:NamedIndividual ,
+                               obo:APO_0000001 ,
+                               obo:APO_0000002 ,
                                obo:APO_0000004 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1036
 :QUAL-20241010_1036 rdf:type owl:NamedIndividual ,
+                             obo:APO_0000001 ,
+                             obo:APO_0000002 ,
                              obo:APO_0000004 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1036-2
 :QUAL-20241010_1036-2 rdf:type owl:NamedIndividual ,
+                               obo:APO_0000001 ,
+                               obo:APO_0000002 ,
                                obo:APO_0000004 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1658
 :QUAL-20241010_1658 rdf:type owl:NamedIndividual ,
+                             obo:APO_0000001 ,
+                             obo:APO_0000002 ,
                              obo:APO_0000003 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1658-2
 :QUAL-20241010_1658-2 rdf:type owl:NamedIndividual ,
+                               obo:APO_0000001 ,
+                               obo:APO_0000002 ,
                                obo:APO_0000003 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1700
 :QUAL-20241010_1700 rdf:type owl:NamedIndividual ,
+                             obo:APO_0000001 ,
+                             obo:APO_0000002 ,
                              obo:APO_0000003 .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#QUAL-20241010_1700-2
+:QUAL-20241010_1700-2 rdf:type owl:NamedIndividual ,
+                               obo:APO_0000001 ,
+                               obo:APO_0000002 ,
+                               obo:APO_0000003 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#increasedHeatSensitivity
 :increasedHeatSensitivity rdf:type owl:NamedIndividual ,
+                                   obo:APO_0000017 ,
+                                   obo:APO_0000066 ,
+                                   obo:APO_0000080 ,
+                                   obo:APO_0000092 ,
                                    obo:APO_0000147 .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#increasedHeatSensitivityIncrease
 :increasedHeatSensitivityIncrease rdf:type owl:NamedIndividual ,
-                                           obo:APO_0000004 ;
+                                           obo:APO_0000001 ,
+                                           obo:APO_0000002 ,
+                                           obo:APO_0000004 ,
+                                           obo:APO_0000017 ;
                                   :observableHasQualifier :increasedHeatSensitivityIncrease .
 
 
@@ -9961,4 +10186,114 @@ apo:curators rdf:type owl:Class ;
 :test2 rdf:type owl:NamedIndividual .
 
 
-###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
+#################################################################
+#    Rules
+#################################################################
+
+:e rdf:type ruleml:Variable .
+
+:p1 rdf:type ruleml:Variable .
+
+:c1 rdf:type ruleml:Variable .
+
+:q1 rdf:type ruleml:Variable .
+
+:p2 rdf:type ruleml:Variable .
+
+:c2 rdf:type ruleml:Variable .
+
+:q2 rdf:type ruleml:Variable .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Cells with lower intracellular methionine levels exhibit decreased resistance to camptothecin" ;
+   rdfs:label "HYP-20241010_1700" ;
+   rdf:type ruleml:Imp ;
+   ruleml:body [ rdf:type ruleml:AtomList ;
+                 rdf:first [ rdf:type ruleml:ClassAtom ;
+                             ruleml:classPredicate :experiment ;
+                             ruleml:argument1 :e
+                           ] ;
+                 rdf:rest [ rdf:type ruleml:AtomList ;
+                            rdf:first [ rdf:type ruleml:ClassAtom ;
+                                        ruleml:classPredicate obo:APO_0000095 ;
+                                        ruleml:argument1 :p1
+                                      ] ;
+                            rdf:rest [ rdf:type ruleml:AtomList ;
+                                       rdf:first [ rdf:type ruleml:IndividualPropertyAtom ;
+                                                   ruleml:propertyPredicate :accumulationOfChemical ;
+                                                   ruleml:argument1 :p1 ;
+                                                   ruleml:argument2 :c1
+                                                 ] ;
+                                       rdf:rest [ rdf:type ruleml:AtomList ;
+                                                  rdf:first [ rdf:type ruleml:ClassAtom ;
+                                                              ruleml:classPredicate :methionine ;
+                                                              ruleml:argument1 :c1
+                                                            ] ;
+                                                  rdf:rest [ rdf:type ruleml:AtomList ;
+                                                             rdf:first [ rdf:type ruleml:IndividualPropertyAtom ;
+                                                                         ruleml:propertyPredicate :observableHasQualifier ;
+                                                                         ruleml:argument1 :p1 ;
+                                                                         ruleml:argument2 :q1
+                                                                       ] ;
+                                                             rdf:rest [ rdf:type ruleml:AtomList ;
+                                                                        rdf:first [ rdf:type ruleml:ClassAtom ;
+                                                                                    ruleml:classPredicate obo:APO_0000003 ;
+                                                                                    ruleml:argument1 :q1
+                                                                                  ] ;
+                                                                        rdf:rest [ rdf:type ruleml:AtomList ;
+                                                                                   rdf:first [ rdf:type ruleml:IndividualPropertyAtom ;
+                                                                                               ruleml:propertyPredicate :observedInExperiment ;
+                                                                                               ruleml:argument1 :p1 ;
+                                                                                               ruleml:argument2 :e
+                                                                                             ] ;
+                                                                                   rdf:rest [ rdf:type ruleml:AtomList ;
+                                                                                              rdf:first [ rdf:type ruleml:ClassAtom ;
+                                                                                                          ruleml:classPredicate obo:APO_0000087 ;
+                                                                                                          ruleml:argument1 :p2
+                                                                                                        ] ;
+                                                                                              rdf:rest [ rdf:type ruleml:AtomList ;
+                                                                                                         rdf:first [ rdf:type ruleml:IndividualPropertyAtom ;
+                                                                                                                     ruleml:propertyPredicate :resistanceToChemical ;
+                                                                                                                     ruleml:argument1 :p2 ;
+                                                                                                                     ruleml:argument2 :c2
+                                                                                                                   ] ;
+                                                                                                         rdf:rest [ rdf:type ruleml:AtomList ;
+                                                                                                                    rdf:first [ rdf:type ruleml:ClassAtom ;
+                                                                                                                                ruleml:classPredicate :camptothecin ;
+                                                                                                                                ruleml:argument1 :c2
+                                                                                                                              ] ;
+                                                                                                                    rdf:rest [ rdf:type ruleml:AtomList ;
+                                                                                                                               rdf:first [ rdf:type ruleml:IndividualPropertyAtom ;
+                                                                                                                                           ruleml:propertyPredicate :observableHasQualifier ;
+                                                                                                                                           ruleml:argument1 :p2 ;
+                                                                                                                                           ruleml:argument2 :q2
+                                                                                                                                         ] ;
+                                                                                                                               rdf:rest [ rdf:type ruleml:AtomList ;
+                                                                                                                                          rdf:first [ rdf:type ruleml:IndividualPropertyAtom ;
+                                                                                                                                                      ruleml:propertyPredicate :observedInExperiment ;
+                                                                                                                                                      ruleml:argument1 :p2 ;
+                                                                                                                                                      ruleml:argument2 :e
+                                                                                                                                                    ] ;
+                                                                                                                                          rdf:rest rdf:nil
+                                                                                                                                        ]
+                                                                                                                             ]
+                                                                                                                  ]
+                                                                                                       ]
+                                                                                            ]
+                                                                                 ]
+                                                                      ]
+                                                           ]
+                                                ]
+                                     ]
+                          ]
+               ] ;
+   ruleml:head [ rdf:type ruleml:AtomList ;
+                 rdf:first [ rdf:type ruleml:ClassAtom ;
+                             ruleml:classPredicate obo:APO_0000003 ;
+                             ruleml:argument1 :q2
+                           ] ;
+                 rdf:rest rdf:nil
+               ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
