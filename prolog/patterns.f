@@ -1,4 +1,4 @@
-gene('YPL045W').
+gene('YKL212W').
 gene('YAL002W').
 gene('YAL004W').
 gene('YAL005C').
@@ -2654,7 +2654,6 @@ gene('YKL205W').
 gene('YKL206C').
 gene('YKL207W').
 gene('YKL208W').
-gene('YKL212W').
 gene('YKL213C').
 gene('YKL214C').
 gene('YKL215C').

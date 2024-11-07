@@ -48,7 +48,7 @@ def main():
     '''
 
     default values
-    python h_generator.py --target "alanine" --N 25 --T 0.5 --alpha 1.0 --beta 0.20
+    python h_generator.py --target "alanine" --N 10 --T 1.0 --alpha 1.0 --beta 0.10
         
     '''
     # Parse arguments
@@ -65,12 +65,15 @@ def main():
     alpha = args['alpha']
     beta = args['beta']
     
+    
+    # Load this in instead, as a JSON?
     relevance_scores = {
         # predicates
         'compound_name': 10, # Reward patterns with a specific condition in mind (if there is one)
         'condition': 10, # Reward patterns with a specific chemical in mind (if there is one)
-        'interacts_with_metabolite': 5,
+        'interacts_with_metabolite': 5, 
         'biological_target': 3,
+        ## Add perturbation?
     }
     
     # Load supports
@@ -85,7 +88,7 @@ def main():
 
     # Load reference data
     aaSet = pd.read_excel('../data/AA.xls', sheet_name = 'intracellular_concentration_mM').set_index('ORF').iloc[:,1:]
-    path = '../results/coefficients/'
+    path = '../results/coefficients/20241025/'
     
     hypotheses, all_hypotheses = load_all_hypotheses(path, target, aaSet)
     
@@ -189,10 +192,11 @@ def main():
         
         # Construct the filename
         plate_layout = generate_layout(return_path, '../plaid/reference_plate.json', f"../experiments/generated_outputs/{timestamp}_layout_{target}_{N}_{T}_{alpha}_{beta}.json")
-        plate_layout.to_csv(f"../experiments/generated_outputs/{timestamp}_layoutTable_{target}_{N}_{T}_{alpha}_{beta}.tsv", sep = '\t')
+        plate_save_path = f"../experiments/generated_outputs/{timestamp}_layoutTable_{target}_{N}_{T}_{alpha}_{beta}.tsv"
+        plate_layout.to_csv(plate_save_path, sep = '\t')
         
         #print(plate_layout)
-        return_hamilton_concentrations(return_path, plate_layout)
+        return_hamilton_concentrations(return_path, plate_save_path)
         
     elif action == "retry":
         print("Retrying the previous operation.")
@@ -223,7 +227,7 @@ os.chdir(script_dir)
 from hgen_support import *
 from gpt_support import *
 from layout_generator import *
-from dose_calculator import *
+from dose_calculator2 import *
 
 # Set starting point of the disallowed formulations. Note that the starting point here are all logic programs 
 # which have no meaning without a second, descriptive, predicate/atom.

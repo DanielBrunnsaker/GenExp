@@ -1,0 +1,125 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,quinine).",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Negative control with no serine and no quinine."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "serine",
+            "media_supplementation_doses": "1.0 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Positive control with normal serine levels and no quinine."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "serine",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "quinine",
+            "treatment_parameters": "50 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Test with no serine and low quinine stress."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "serine",
+            "media_supplementation_doses": "0 mM",
+            "treatment": "quinine",
+            "treatment_parameters": "100 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Test with no serine and high quinine stress."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "serine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "quinine",
+            "treatment_parameters": "50 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Test with moderate serine reduction and low quinine stress."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "serine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "quinine",
+            "treatment_parameters": "100 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Test with moderate serine reduction and high quinine stress."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "serine",
+            "media_supplementation_doses": "1.0 mM",
+            "treatment": "quinine",
+            "treatment_parameters": "50 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Test with normal serine levels and low quinine stress."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "serine",
+            "media_supplementation_doses": "1.0 mM",
+            "treatment": "quinine",
+            "treatment_parameters": "100 \u00b5M",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Test with normal serine levels and high quinine stress."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "serine",
+            "media_supplementation_doses": "0 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Test with no serine and no quinine to check serine's independent effect."
+        },
+        {
+            "experiment": 10,
+            "baseline_media": "minimal media without amino acids",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "serine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Test with moderate serine reduction and no quinine to check serine's independent effect."
+        }
+    ]
+}

@@ -228,7 +228,7 @@ def generate_layout(json_data, reference_layout, output_path):
     reference_layout['compound_concentration_names'] = [combinations]
     
     #for repl in [16, 14, 12, 10, 8, 6, 4]:
-    for repl in range(14,5,-1):
+    for repl in range(14,4,-1):
         
         reference_layout['compound_replicates'] = [repl]
         #save_json(reference_layout, '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/plaid/reference_plate_etoh.json')
@@ -236,25 +236,24 @@ def generate_layout(json_data, reference_layout, output_path):
         save_json(reference_layout, output_path)
         output = run_minizinc_command(output_path)
         
-        
-        
         if output == '=====UNSATISFIABLE=====\n':
             #print('Layout infeasible.')
             continue
         else:
             plate_layout = output_to_dataframe(output)
             print(plate_layout.shape[0])
+            
             if 96-plate_layout.shape[0] < repl:
                 continue
             
             print('Layout completed.')
     
             # Fill in plate layout
-            plate_layout = plate_filler(plate_layout)
+            #plate_layout = plate_filler(plate_layout)
             
             break
     
-    
+    plate_layout = plate_filler(plate_layout)
     plate_layout = plate_layout.merge(df, 
                                       left_on = 'CONCuM', 
                                       right_on = 'Experiment parameters', 

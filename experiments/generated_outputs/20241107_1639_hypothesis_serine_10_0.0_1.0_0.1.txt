@@ -1,0 +1,43 @@
+Selected Statement: 
+```prolog
+Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,quinine).
+```
+
+Motivation:
+The selected statement suggests an association between lower intracellular serine levels and decreased resistance to quinine, a compound known for its antimalarial properties and potential effects on cellular processes. This statement is intriguing because it explores the relationship between amino acid metabolism and chemical resistance, which could have implications for understanding stress responses in yeast. Additionally, the focus on quinine provides a novel angle, as it is not a typical stressor studied in yeast, offering potential insights into unique resistance mechanisms.
+
+Hypothesis:
+Cells with lower than normal levels of intracellular serine will exhibit decreased resistance to quinine, as measured by growth rate and survival in the presence of quinine.
+
+Experimental Plan:
+1. **Strain and Media Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Serine Modulation:**
+   - Supplement the media with serine at three levels: 0 mM (control), 0.5 mM (moderate reduction), and 1.0 mM (normal level).
+   - Verify intracellular serine levels using mass-spectrometry based metabolomics at the end of the experiment to confirm modulation.
+
+3. **Quinine Treatment:**
+   - Add quinine to the media at three concentrations: 0 µM (control), 50 µM (low stress), and 100 µM (high stress).
+   - Ensure that quinine concentrations are physiologically relevant and do not cause complete growth inhibition in wild-type strains.
+
+4. **Experimental Setup:**
+   - Inoculate cultures at 0.05 OD600 in 96-well plates.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes for 12 hours to monitor growth.
+
+5. **Controls:**
+   - Include wells with no serine and no quinine as negative controls.
+   - Include wells with normal serine levels and no quinine as positive controls.
+
+6. **Assumption Testing:**
+   - Conduct a separate set of experiments to confirm that serine supplementation does not independently affect quinine resistance by testing serine levels without quinine.
+
+Expected Outcomes:
+- If the hypothesis is correct, cells with lower serine levels (0 mM supplementation) will show reduced growth and survival in the presence of quinine compared to cells with normal serine levels (1.0 mM supplementation).
+- A dose-response relationship is expected, where the degree of resistance decreases with lower serine levels and higher quinine concentrations.
+- The independent effect of serine supplementation should show no significant change in quinine resistance when quinine is absent, confirming that the observed effects are due to the interaction between serine levels and quinine stress.
+- Mass-spectrometry results should confirm that intracellular serine levels correlate with the supplementation levels, validating the experimental setup.
+
+By systematically varying serine and quinine levels, this experiment aims to elucidate the relationship between serine metabolism and chemical resistance, providing insights into the cellular mechanisms underlying stress responses in yeast.

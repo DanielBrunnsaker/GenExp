@@ -39,8 +39,7 @@ for kk, aa in enumerate(aap_set.columns[:19]):
 
     print(aa)
     # Save scores and predictions per amino acid
-    full_frequent_dataset = pd.read_feather('../patterns/datasets/frequent_20240926.feather') #CHANGE THIS LINE
-
+    full_frequent_dataset = pd.read_feather('../results/patterns/datasets/frequent_20241024.feather') #CHANGE THIS LINE
     full_frequent_dataset.set_index('ORF', inplace = True)
     coefficients = pd.DataFrame(index = full_frequent_dataset.columns)
 
@@ -82,12 +81,13 @@ for kk, aa in enumerate(aap_set.columns[:19]):
         
         # Append the new row to the DataFrame
         result_df_linear = pd.concat([result_df_linear, new_row_df], ignore_index=True)
-        result_df_linear.to_csv('../results/metrics/eCV_results.csv')
+        result_df_linear.to_csv('../results/metrics/eCV_results_20241025.csv')
 
         # Define the coefficients
         coefficients = coefficients.merge(pd.DataFrame(elasticnet.coef_, index = filtered_dx.columns, columns = [str(fold)]), how = 'left', left_index = True, right_index = True)
         
         
         # Save the indices and coefficients for downstream analysis
-        coefficients.to_csv('../results/coefficients/'+aa+'_eCV_coefficients.csv')
-        
+        coefficients.to_csv('../results/coefficients/20241025/'+aa+'_eCV_coefficients.csv')
+
+avg_results = result_df_linear.groupby('Amino acid').mean()        

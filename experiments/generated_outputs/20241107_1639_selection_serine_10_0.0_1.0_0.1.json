@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,glycogen).",
+            "number": 1,
+            "reason": "This experiment is feasible in a 96 well format as it involves measuring glycogen levels, which can be done using colorimetric or fluorometric assays. It is safe to perform as it does not involve hazardous chemicals. The phenotype is assessable through metabolomics."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased acid pH resistance',B,C),compound_name(B,'propionic acid').",
+            "number": 3,
+            "reason": "Propionic acid is a relatively safe compound to handle, and the experiment can be conducted in a 96 well format by adjusting pH levels. The phenotype can be assessed through growth assays under different pH conditions."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased oxidative stress resistance',B,C),drug_target(B,'through activation',D),interacts_with_metabolite(D,catalysis,product,'glutathione disulfide').",
+            "number": 4,
+            "reason": "This experiment is feasible as it involves measuring oxidative stress resistance, which can be done using assays for glutathione disulfide levels. It is safe and assessable through metabolomics."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'octanoic acid').",
+            "number": 5,
+            "reason": "Octanoic acid is a medium-chain fatty acid that is safe to handle. The experiment can be conducted in a 96 well format by exposing cells to octanoic acid and measuring growth inhibition."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,quinine).",
+            "number": 9,
+            "reason": "Quinine is a compound that can be safely handled in a laboratory setting. The experiment can be performed in a 96 well format by assessing cell growth in the presence of quinine."
+        }
+    ]
+}

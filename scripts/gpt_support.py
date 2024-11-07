@@ -26,6 +26,8 @@ def prompt_gpt_for_hypothesis(prompted_statements, temp, key):
     completion = client.chat.completions.create(
         #model="gpt-4o-mini",
         model="gpt-4o",
+        #model = 'o1-preview',
+        #model = 'o1-mini',
         temperature = temp,
         messages=[
             {"role": "system", "content": context},
