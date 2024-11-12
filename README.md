@@ -41,9 +41,9 @@ python pattern_selector.py --target <string> --N <integer> --alpha <float>
 This extracts several pattern (given the `target` and `N`), and passes it as an initial prompt to the LLM. The expected return is a list of feasible patterns, along with a short description of their relevance. It will also create the folder structure for the project. Additional outputs are the selection summaries (`hypothesis/feasibility/selection.json`) and the given prompt (`hypothesis/patterns/prompt.txt`)
 
 ```
-python hypothesis_generation.py --target <string> --folder <path>
+python hypothesis_generation.py --T <string> --folder <path>
 ```
-Generates the hypothesis, given the selected metabolite observable and the path to the previously generated experiment folder. Output is the generated hypothesis text (`hypothesis/generated_hypothesis.txt`)
+Generates the hypothesis, given the path to the previously generated experiment folder. `T` denotes the temperature of the LLM. Output is the generated hypothesis text (`hypothesis/generated_hypothesis.txt`)
 
 ```
 python autoformalize_protocol.py --folder <path>
