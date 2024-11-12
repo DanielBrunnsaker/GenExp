@@ -1,28 +1,68 @@
 # GenExp
 
+## Install Python dependencies
+
+Using Python 3.10.13 the dependencies can be installed from the requirements.txt file, e.g. using conda and the following commands:
+```
+$ conda create --name genExp python=3.10.13 && \\
+    conda activate genExp && \\
+    pip install -r requirements.txt
+```
+## Install SWI-Prolog
+
+Follow download and install instructions [here](https://www.swi-prolog.org/download/stable). It can also be installed using package managers such as apt, snap, and brew. For more instructions on how to generate the patterns used for the hypothesis generation steps, see the `/prolog` folder.
+
+## Setting up an API-key
+
 Add a key.txt file (see .gitignore) containing only the API key ("sk-proj---XXXXXXXX...") for GPT4 in the root folder. Easiest to generate personal one (I can also give you one if you prefer to use the same).
- 
-Run h_generator.py from the scripts folder. e.g. 
 
-python h_generator.py --target "alanine" --N 10 --T 0.5 --alpha 1.0 --beta 0.25
+## Generating an hypothesis, experimental design and liquid handling scripts
 
- - target: Amino acid to base the hypothesis around (i.e. the coefficients to use)
- - N: number of patterns to present to the LLM. Tested with 10, performance decreases with more, and a bit boring with less than five.
- - T: temperature of the hypothesis generation step. Only given as a parameter for one step, as the best results come with the other steps (selection and protocol) fixed with a low temperature.
- - alpha/beta: alpha * target_values (normalized coefficients for selected target) - beta * penalty_values (where the penalty is the sum of the normalized coefficients of the row, e.g. all amino acids except target). Point is to prioritize patterns that are more specific to one amino acid. Otherwise the conclusions will be quite unclear (can also be adapted so that we take more amino acids into account, but complicates the hypothesis, and i do not think it is needed for a proof of concept). High alpha, emphasise the coefficient of the target, high beta will penalize the score if the pattern is relevant for many other amino acids.
+From the `/script` folder, run the following command in the terminal (fill in the blanks):
+
+```
+python hgen.py --target <string> --N <integer> --alpha <float> --volume <integer>
+```
+
+- `target` denotes the metabolite observable used for the implication (an amino acid, in this case).
+- `N` denotes the number of patterns passed to the hypothesis generation step (a higher number will allow for more variance, but lower ranked patterns are less likely to be true).
+- `alpha` is a float between 0 and 1 that is used to penalize patterns not unique to the specific metabolite observable (a number closer to 1 will ensure that patterns that are only deemed important for your specific target will rank higher).
+- `volume` denotes the final cultivation volume (e.g. 225 uL for a regular 96 well plate).
+
+Alternatively you can run the steps in sequence:
+
+```
+python pattern_selector.py --target <string> --N <integer> --alpha <float>
+```
+This extracts several pattern (given the `target` and `N`), and passes it as an initial prompt to the LLM. The expected return is a list of feasible patterns, along with a short description of their relevance. It will also create the folder structure for the project. 
+
+```
+python hypothesis_generation.py --target <string> --folder <path>
+```
+Generates the hypothesis, given the selected metabolite observable and the path to the previously generated experiment folder. 
+
+```
+python autoformalize_protocol.py --folder <path>
+```
+Autoformalizes parts of the hypothesis and rough experimental protocol into a JSON-file containing all the needed parameters for subsequent automation.
+
+```
+python plate_layout.py --folder <path>
+```
+Reads the formalized protocol and generates a plate-layout using PLAID [1]. 
+
+```
+python hamilton_protocol.py --folder <path> --volume <integer> --S <string> --Treatment <string>
+```
+Uses the plate layout and the formalized protocol design a runlist for a Hamilton Microlab Star. `S` denotes stock concentration of the media supplement (typically an amino acid, but can differ). `Treatment` denotes the stock concentration of the chemical treatment (if applicable). Any unit of concentration (e.g. mM (preferrable), mg/ml or % (v/v) should work). These, along with the final well `volume`, are needed to calculate the exact amount of volume to dispense in the plate preparation steps.
 
 
-Outputs should then be saved to the experiments/generated_outputs folder.
+## TODO:
 
- - selection (json): Filters down the given patterns to a set of five, based on feasibility and safety, given a rough explanation of our setting. The output here is a JSON-file with the selected pattern(s) and a brief summary.
- - hypothesis: Main text, contains the hypothesis and experimental plan. Output is a text file.
- - protocol: Summarized experimental protocol in JSON.
+- Still need the AutonoMS parts
+- Hypothesis formalization
+- Autoamted testing
 
 
-Other:
-
- - /context - contains the engineered prompts for the different steps.
- - /prolog - contains all the prolog code, aleph and background files.
- - /experiments - output of the pipeline
- - /data - you can guess this one
- - /results - you can guess this one
+### References:
+1. https://www.sciencedirect.com/science/article/pii/S266731852300017X?via%3Dihub
