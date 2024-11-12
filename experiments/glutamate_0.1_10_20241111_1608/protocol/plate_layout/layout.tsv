@@ -1,0 +1,97 @@
+	plateID	well	CONCuM	Summary
+0	plate_1	A01	L-Glutamate: 10 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate.
+1	plate_1	A02	L-Glutamate: 10 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+2	plate_1	A03	L-Glutamate: 0 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae treated with 0.5 µg/mL derivative myriocin.
+3	plate_1	A04	L-Glutamate: 5 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+4	plate_1	A05	Media control	
+5	plate_1	A06	L-Glutamate: 5 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate.
+6	plate_1	A07	L-Glutamate: 10 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+7	plate_1	A08	L-Glutamate: 5 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+8	plate_1	A09	Media control	
+9	plate_1	A10	L-Glutamate: 10 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+10	plate_1	A11	L-Glutamate: 0 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae treated with 1.0 µg/mL derivative myriocin.
+11	plate_1	A12	L-Glutamate: 0 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae grown without any supplementation or treatment.
+12	plate_1	B01	L-Glutamate: 5 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+13	plate_1	B02	L-Glutamate: 10 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate.
+14	plate_1	B03	Media control	
+15	plate_1	B04	L-Glutamate: 0 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae grown without any supplementation or treatment.
+16	plate_1	B05	L-Glutamate: 10 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+17	plate_1	B06	L-Glutamate: 10 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+18	plate_1	B07	L-Glutamate: 5 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+19	plate_1	B08	L-Glutamate: 5 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+20	plate_1	B09	L-Glutamate: 0 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae treated with 0.5 µg/mL derivative myriocin.
+21	plate_1	B10	L-Glutamate: 5 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate.
+22	plate_1	B11	L-Glutamate: 10 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+23	plate_1	B12	L-Glutamate: 0 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae treated with 1.0 µg/mL derivative myriocin.
+24	plate_1	C01	L-Glutamate: 10 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+25	plate_1	C02	Media control	
+26	plate_1	C03	L-Glutamate: 0 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae grown without any supplementation or treatment.
+27	plate_1	C04	L-Glutamate: 0 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae treated with 0.5 µg/mL derivative myriocin.
+28	plate_1	C05	L-Glutamate: 10 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+29	plate_1	C06	L-Glutamate: 5 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+30	plate_1	C07	L-Glutamate: 5 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+31	plate_1	C08	Media control	
+32	plate_1	C09	L-Glutamate: 5 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate.
+33	plate_1	C10	L-Glutamate: 0 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae treated with 1.0 µg/mL derivative myriocin.
+34	plate_1	C11	L-Glutamate: 0 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae treated with 0.5 µg/mL derivative myriocin.
+35	plate_1	C12	L-Glutamate: 10 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate.
+36	plate_1	D01	L-Glutamate: 5 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+37	plate_1	D02	L-Glutamate: 10 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+38	plate_1	D03	L-Glutamate: 5 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+39	plate_1	D04	L-Glutamate: 0 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae treated with 1.0 µg/mL derivative myriocin.
+40	plate_1	D05	L-Glutamate: 0 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae treated with 0.5 µg/mL derivative myriocin.
+41	plate_1	D06	Media control	
+42	plate_1	D07	Media control	
+43	plate_1	D08	L-Glutamate: 10 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate.
+44	plate_1	D09	L-Glutamate: 10 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+45	plate_1	D10	L-Glutamate: 0 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae grown without any supplementation or treatment.
+46	plate_1	D11	L-Glutamate: 5 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate.
+47	plate_1	D12	L-Glutamate: 5 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate.
+48	plate_1	E01	L-Glutamate: 0 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae treated with 0.5 µg/mL derivative myriocin.
+49	plate_1	E02	L-Glutamate: 5 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+50	plate_1	E03	L-Glutamate: 10 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate.
+51	plate_1	E04	L-Glutamate: 5 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate.
+52	plate_1	E05	Media control	
+53	plate_1	E06	L-Glutamate: 0 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae treated with 1.0 µg/mL derivative myriocin.
+54	plate_1	E07	L-Glutamate: 0 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae grown without any supplementation or treatment.
+55	plate_1	E08	L-Glutamate: 0 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae grown without any supplementation or treatment.
+56	plate_1	E09	L-Glutamate: 5 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+57	plate_1	E10	Media control	
+58	plate_1	E11	L-Glutamate: 10 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+59	plate_1	E12	L-Glutamate: 10 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+60	plate_1	F01	L-Glutamate: 5 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate.
+61	plate_1	F02	L-Glutamate: 0 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae treated with 1.0 µg/mL derivative myriocin.
+62	plate_1	F03	Media control	
+63	plate_1	F04	L-Glutamate: 10 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+64	plate_1	F05	L-Glutamate: 5 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+65	plate_1	F06	L-Glutamate: 5 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+66	plate_1	F07	Media control	
+67	plate_1	F08	L-Glutamate: 10 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+68	plate_1	F09	L-Glutamate: 10 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate.
+69	plate_1	F10	L-Glutamate: 5 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+70	plate_1	F11	L-Glutamate: 0 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae grown without any supplementation or treatment.
+71	plate_1	F12	L-Glutamate: 0 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae treated with 0.5 µg/mL derivative myriocin.
+72	plate_1	G01	Media control	
+73	plate_1	G02	L-Glutamate: 0 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae grown without any supplementation or treatment.
+74	plate_1	G03	L-Glutamate: 10 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+75	plate_1	G04	L-Glutamate: 10 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate.
+76	plate_1	G05	L-Glutamate: 0 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae treated with 1.0 µg/mL derivative myriocin.
+77	plate_1	G06	L-Glutamate: 0 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae treated with 0.5 µg/mL derivative myriocin.
+78	plate_1	G07	L-Glutamate: 10 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+79	plate_1	G08	L-Glutamate: 5 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate.
+80	plate_1	G09	L-Glutamate: 0 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae treated with 1.0 µg/mL derivative myriocin.
+81	plate_1	G10	L-Glutamate: 5 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+82	plate_1	G11	L-Glutamate: 5 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+83	plate_1	G12	Media control	
+84	plate_1	H01	L-Glutamate: 10 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+85	plate_1	H02	L-Glutamate: 0 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae treated with 0.5 µg/mL derivative myriocin.
+86	plate_1	H03	L-Glutamate: 5 mM & derivative myriocin: 0.5 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 0.5 µg/mL derivative myriocin.
+87	plate_1	H04	Media control	
+88	plate_1	H05	L-Glutamate: 10 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate.
+89	plate_1	H06	L-Glutamate: 0 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae grown without any supplementation or treatment.
+90	plate_1	H07	L-Glutamate: 5 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate.
+91	plate_1	H08	L-Glutamate: 0 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae treated with 1.0 µg/mL derivative myriocin.
+92	plate_1	H09	L-Glutamate: 10 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.
+93	plate_1	H10	L-Glutamate: 10 mM & derivative myriocin: 0 mM	Wild-type Saccharomyces cerevisiae supplemented with 10 mM L-Glutamate.
+94	plate_1	H11	Media control	
+95	plate_1	H12	L-Glutamate: 5 mM & derivative myriocin: 1.0 µg/mL	Wild-type Saccharomyces cerevisiae supplemented with 5 mM L-Glutamate and treated with 1.0 µg/mL derivative myriocin.

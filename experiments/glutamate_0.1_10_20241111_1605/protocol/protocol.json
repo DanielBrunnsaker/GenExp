@@ -1,0 +1,113 @@
+{
+    "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'formic acid').",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Control group with no supplementation or formic acid treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-glutamate",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Low glutamate supplementation without formic acid treatment."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-glutamate",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "High glutamate supplementation without formic acid treatment."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "Formic acid",
+            "treatment_parameters": "5 mM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "No glutamate supplementation with 5 mM formic acid treatment."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "Formic acid",
+            "treatment_parameters": "10 mM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "No glutamate supplementation with 10 mM formic acid treatment."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-glutamate",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": "Formic acid",
+            "treatment_parameters": "5 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Low glutamate supplementation with 5 mM formic acid treatment."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "Minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-glutamate",
+            "media_supplementation_doses": "0.1 mM",
+            "treatment": "Formic acid",
+            "treatment_parameters": "10 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Low glutamate supplementation with 10 mM formic acid treatment."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "Minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-glutamate",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "Formic acid",
+            "treatment_parameters": "5 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "High glutamate supplementation with 5 mM formic acid treatment."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "Minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-glutamate",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "Formic acid",
+            "treatment_parameters": "10 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "High glutamate supplementation with 10 mM formic acid treatment."
+        }
+    ]
+}

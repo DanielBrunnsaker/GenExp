@@ -1,0 +1,48 @@
+### Selected Statement
+```prolog
+Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'formic acid').
+```
+
+### Motivation
+The selected statement suggests an association between high intracellular glutamate levels and decreased resistance to formic acid. This statement is chosen because formic acid is a relatively common chemical and its effects on yeast are well-documented, making this hypothesis feasible to test. Additionally, the management of intracellular glutamate levels and the observation of resistance phenotypes can be effectively controlled and measured. Furthermore, formic acid's impact on cells provides a clear and measurable phenotype in yeast growth, which is critical for reliable experimental outcomes.
+
+### Hypothesis
+Cells with higher than normal levels of intracellular glutamate will show decreased resistance to formic acid compared to cells with normal intracellular glutamate levels.
+
+### Experimental Plan
+1. **Objective**: To determine if increased intracellular glutamate levels correlate with decreased resistance to formic acid in yeast.
+
+2. **Strain and Culture Conditions**: Use a wild-type Saccharomyces cerevisiae strain. Cultures will be grown in minimal media (without amino acids) starting at an OD600 of 0.05. The experiment will be conducted with shaking at 30°C.
+
+3. **Modulation of Intracellular Glutamate**:
+   - Control (C): No supplementation.
+   - Low Glutamate (LG): Supplement with 0.1 mM L-glutamate.
+   - High Glutamate (HG): Supplement with 10 mM L-glutamate.
+   
+   These concentrations are chosen to safely manipulate intracellular glutamate levels without causing pleiotropic effects. 
+
+4. **Formic Acid Treatment**:
+   - Control (no formic acid).
+   - 5 mM Formic Acid.
+   - 10 mM Formic Acid.
+   
+   Formic acid concentrations are chosen to cover a range of potential cellular resistances.
+
+5. **Experimental Groups**: Each combination of glutamate supplementation and formic acid concentration will be tested, resulting in 9 experimental conditions (3 glutamate levels × 3 formic acid levels).
+
+6. **Measurements**:
+   - Intracellular glutamate levels will be verified through mass-spectrometry based metabolomics at the end of the experiment (12 hours).
+   - OD600 will be measured every 20 minutes to assess growth curves and infer resistance.
+
+7. **Assumptions Verification**:
+   - Confirm that glutamate supplementation effectively alters intracellular glutamate levels without affecting other pathways significantly.
+   - Confirm that formic acid concentrations chosen do not have off-target effects that could confound results.
+
+8. **Controls**: Include wells with no formic acid to determine baseline growth under different glutamate conditions.
+
+### Expected Outcomes
+- An observable decrease in growth (OD600) in high glutamate groups (HG) upon formic acid treatment would support the hypothesis.
+- If growth inhibition is not observed in HG groups compared to controls, it would refute the hypothesis.
+- Verification experiments should confirm that glutamate levels are effectively altered and that formic acid does not induce unintended stress responses independent of glutamate levels.
+
+By demonstrating a differential growth response under these conditions, we can strengthen or refute the association between intracellular glutamate levels and chemical resistance to formic acid in yeast.

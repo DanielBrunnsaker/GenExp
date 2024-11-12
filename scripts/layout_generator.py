@@ -12,7 +12,6 @@ import subprocess
 import pandas as pd
 import io
 
-
 # Function to load a JSON file
 def load_json(file_path):
     try:
