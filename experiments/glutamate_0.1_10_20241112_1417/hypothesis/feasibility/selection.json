@@ -1,0 +1,29 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'formic acid').",
+            "number": 5,
+            "reason": "Formic acid is a relatively simple and safe compound to handle in a ventilated area. It is feasible to assess its effects on yeast growth and metabolomics in a 96 well format. The experiment is cost-effective and aligns with the lab's constraints."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'1,4-dithiothreitol').",
+            "number": 9,
+            "reason": "1,4-dithiothreitol (DTT) is commonly used in labs and is manageable in a ventilated area. It is feasible to measure its impact on yeast growth and metabolomics. The experiment is within budget and safe to perform."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,spermine).",
+            "number": 1,
+            "reason": "Spermine is a polyamine that is relatively safe to handle and can be used in a ventilated area. It is feasible to assess its effects on yeast growth and metabolomics in a 96 well format. The experiment is cost-effective."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,boromycin).",
+            "number": 7,
+            "reason": "Boromycin is an antibiotic that can be handled safely with proper precautions in a ventilated area. It is feasible to assess its effects on yeast growth and metabolomics in a 96 well format. The experiment is within budget."
+        },
+        {
+            "logic_program": "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'derivative myriocin').",
+            "number": 10,
+            "reason": "Derivative myriocin is a compound that can be handled with care in a ventilated area. It is feasible to assess its effects on yeast growth and metabolomics in a 96 well format. The experiment is cost-effective and provides insight into increased resistance phenotypes."
+        }
+    ]
+}
