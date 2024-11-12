@@ -53,7 +53,7 @@ Autoformalizes parts of the hypothesis and rough experimental protocol into a JS
 ```
 python plate_layout.py --folder <path>
 ```
-Reads the formalized protocol and generates a robust plate-layout with constraint pgoramming, using PLAID [1]. Outputs are the plate layout in a tabular format (`protocol/plate_layout/plate_layout.tsv`) and the JSON file used to generate the layout in minizinc (`protocol/plate_layout/minzinc_reference.json`).
+Reads the formalized protocol and generates a robust plate-layout with constraint programming, using PLAID [1]. Outputs are the plate layout in a tabular format (`protocol/plate_layout/plate_layout.tsv`) and the JSON file used to generate the layout in minizinc (`protocol/plate_layout/minzinc_reference.json`). Note that this currently only works with a 96 well format (might fix at some point).
 
 ```
 python hamilton_protocol.py --folder <path> --volume <integer> --S <string> --Treatment <string>
@@ -62,11 +62,10 @@ Uses the plate layout and the formalized protocol design a runlist for a Hamilto
 
 
 ## TODO:
-
-- Still need the AutonoMS parts
-- Hypothesis formalization
-- Autoamted testing
-
+- Potentially generate the Overlord-protocol (e.g. replace some variables in the reference protocol such as sampling time and regenerate)
+- Still need the AutonoMS parts (should be somewhat trivial, as AutonoMS outputs an annotated tsv with peak areas)
+- Hypothesis formalization (alec & filip)
+- Automated testing (daniel & alec & filip)
 
 ### References:
 1. https://www.sciencedirect.com/science/article/pii/S266731852300017X?via%3Dihub
