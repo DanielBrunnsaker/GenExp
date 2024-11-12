@@ -9,9 +9,10 @@ Experiment folder
 │   │   
 │   └───feasibility
 │   │    │   file111.txt
-│   │    │   file112.txt
-│   │    │   ...
+│   │    │   
 │   └───patterns
+│        │ prompt.txt
+│        │
 └───folder2
     │   file021.txt
     │   file022.txt
