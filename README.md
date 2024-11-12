@@ -34,27 +34,27 @@ Alternatively you can run the steps in sequence:
 ```
 python pattern_selector.py --target <string> --N <integer> --alpha <float>
 ```
-This extracts several pattern (given the `target` and `N`), and passes it as an initial prompt to the LLM. The expected return is a list of feasible patterns, along with a short description of their relevance. It will also create the folder structure for the project. 
+This extracts several pattern (given the `target` and `N`), and passes it as an initial prompt to the LLM. The expected return is a list of feasible patterns, along with a short description of their relevance. It will also create the folder structure for the project. Additional outputs are the selection summaries (`hypothesis/feasibility/selection.json`) and the given prompt (`hypothesis/patterns/prompt.txt`)
 
 ```
 python hypothesis_generation.py --target <string> --folder <path>
 ```
-Generates the hypothesis, given the selected metabolite observable and the path to the previously generated experiment folder. 
+Generates the hypothesis, given the selected metabolite observable and the path to the previously generated experiment folder. Output is the generated hypothesis text (`hypothesis/generated_hypothesis.txt`)
 
 ```
 python autoformalize_protocol.py --folder <path>
 ```
-Autoformalizes parts of the hypothesis and rough experimental protocol into a JSON-file containing all the needed parameters for subsequent automation.
+Autoformalizes parts of the hypothesis and rough experimental protocol into a JSON-file containing all the needed parameters for subsequent automation. Output is the formalized protocol in JSON-format (`protocol/protocol.json`).
 
 ```
 python plate_layout.py --folder <path>
 ```
-Reads the formalized protocol and generates a plate-layout using PLAID [1]. 
+Reads the formalized protocol and generates a plate-layout using PLAID [1]. Outputs are the plate layout in a tabular format (`protocol/plate_layout/plate_layout.tsv`) and the JSON file used to generate the layout in minizinc (`protocol/plate_layout/minzinc_reference.json`).
 
 ```
 python hamilton_protocol.py --folder <path> --volume <integer> --S <string> --Treatment <string>
 ```
-Uses the plate layout and the formalized protocol design a runlist for a Hamilton Microlab Star. `S` denotes stock concentration of the media supplement (typically an amino acid, but can differ). `Treatment` denotes the stock concentration of the chemical treatment (if applicable). Any unit of concentration (e.g. mM (preferrable), mg/ml or % (v/v) should work). These, along with the final well `volume`, are needed to calculate the exact amount of volume to dispense in the plate preparation steps.
+Uses the plate layout and the formalized protocol design a runlist for a Hamilton Microlab Star. `S` denotes stock concentration of the media supplement (typically an amino acid, but can differ). `Treatment` denotes the stock concentration of the chemical treatment (if applicable). Any unit of concentration (e.g. mM (preferrable), mg/ml or % (v/v) should work). These, along with the final well `volume`, are needed to calculate the exact amount of volume to dispense in the plate preparation steps. Outputs include the the experimental layout along with a summary of each variable combination (`protocol/hamilton/pipetting_layout.xlsx`), a Hamilton Microlab Star runlist (`protocol/hamilton/runlist.xlsx`) and instructions for detailed liquid channel usage (`protocol/hamilton/channels/`).
 
 
 ## TODO:
