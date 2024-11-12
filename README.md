@@ -63,9 +63,10 @@ Uses the plate layout and the formalized protocol design a runlist for a Hamilto
 
 ## TODO:
 - Potentially generate the Overlord-protocol (e.g. replace some variables in the reference protocol such as sampling time and regenerate)
-- Still need the AutonoMS parts (should be somewhat trivial, as AutonoMS outputs an annotated tsv with peak areas)
+- Still need the AutonoMS parts [2] (should be somewhat trivial, as AutonoMS outputs an annotated tsv with peak areas)
 - Hypothesis formalization (alec & filip)
 - Automated testing (daniel & alec & filip)
 
 ### References:
 1. https://www.sciencedirect.com/science/article/pii/S266731852300017X?via%3Dihub
+2. https://pubs.acs.org/doi/10.1021/jasms.3c00396
