@@ -63,6 +63,7 @@ Uses the plate layout and the formalized protocol design a runlist for a Hamilto
 
 ## TODO:
 - Potentially generate the Overlord-protocol (e.g. replace some variables in the reference protocol such as sampling time and regenerate)
+- Need to generate a SPE-IMS runlist using the plate-layout (connected to AutonoMS)
 - Still need the AutonoMS parts [2] (should be somewhat trivial, as AutonoMS outputs an annotated tsv with peak areas)
 - Hypothesis formalization (alec & filip)
 - Automated testing (daniel & alec & filip)
