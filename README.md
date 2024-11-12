@@ -27,7 +27,7 @@ python hgen.py --target <string> --N <integer> --alpha <float> --volume <integer
 - `target` denotes the metabolite observable used for the implication (an amino acid, in this case).
 - `N` denotes the number of patterns passed to the hypothesis generation step (a higher number will allow for more variance, but lower ranked patterns are less likely to be true).
 - `alpha` is a float between 0 and 1 that is used to penalize patterns not unique to the specific metabolite observable (a number closer to 1 will ensure that patterns that are only deemed important for your specific target will rank higher).
-- `volume` denotes the final cultivation volume (e.g. 225 uL for a regular 96 well plate).
+- `volume` denotes the final cultivation volume in microliters (e.g. 225 uL for a regular 96 well plate).
 
 This will create a folder in `/experiments` with all of the details regarding the experiments (e.g. hypothesis, protocol, liquid handling scripts, ...). Note that you will be prompted for stock concentrations (if applicable) during the run.
 
