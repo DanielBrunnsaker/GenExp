@@ -21,13 +21,15 @@ Add a key.txt file (see .gitignore) containing only the API key ("sk-proj---XXXX
 From the `/script` folder, run the following command in the terminal (fill in the blanks):
 
 ```
-python hgen.py --target <string> --N <integer> --alpha <float> --volume <integer>
+python hgen.py --target <string> --N <integer> --alpha <float> --volume <integer> --T <float>
 ```
 
 - `target` denotes the metabolite observable used for the implication (an amino acid, in this case).
-- `N` denotes the number of patterns passed to the hypothesis generation step (a higher number will allow for more variance, but lower ranked patterns are less likely to be true).
-- `alpha` is a float between 0 and 1 that is used to penalize patterns not unique to the specific metabolite observable (a number closer to 1 will ensure that patterns that are only deemed important for your specific target will rank higher).
+- `N` denotes the number of patterns passed to the hypothesis generation step (a higher number will allow for more variance, but lower ranked patterns are less likely to be true). Default at 10.
+- `alpha` is a float between 0 and 1 that is used to penalize patterns not unique to the specific metabolite observable (a number closer to 1 will ensure that patterns that are only deemed important for your specific target will rank higher). Default at 0.1
 - `volume` denotes the final cultivation volume in microliters (e.g. 225 uL for a regular 96 well plate).
+- `T` denotes the temperature in the prompting step. Keep between 0 and 1. (0 more deterministic, 1 less deterministic). Reasonable default around 0.3-0.7.
+
 
 This will create a folder in `/experiments` with all of the details regarding the experiments (e.g. hypothesis, protocol, liquid handling scripts, ...). Note that you will be prompted for stock concentrations (if applicable) during the run.
 
