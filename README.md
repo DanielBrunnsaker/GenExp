@@ -53,7 +53,7 @@ Autoformalizes parts of the hypothesis and rough experimental protocol into a JS
 ```
 python plate_layout.py --folder <path>
 ```
-Reads the formalized protocol and generates a plate-layout using PLAID [1]. Outputs are the plate layout in a tabular format (`protocol/plate_layout/plate_layout.tsv`) and the JSON file used to generate the layout in minizinc (`protocol/plate_layout/minzinc_reference.json`).
+Reads the formalized protocol and generates a robust plate-layout with constraint pgoramming, using PLAID [1]. Outputs are the plate layout in a tabular format (`protocol/plate_layout/plate_layout.tsv`) and the JSON file used to generate the layout in minizinc (`protocol/plate_layout/minzinc_reference.json`).
 
 ```
 python hamilton_protocol.py --folder <path> --volume <integer> --S <string> --Treatment <string>
