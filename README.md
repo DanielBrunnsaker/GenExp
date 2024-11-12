@@ -29,9 +29,8 @@ python hgen.py --target <string> --N <integer> --alpha <float> --volume <integer
 - `alpha` is a float between 0 and 1 that is used to penalize patterns not unique to the specific metabolite observable (a number closer to 1 will ensure that patterns that are only deemed important for your specific target will rank higher).
 - `volume` denotes the final cultivation volume (e.g. 225 uL for a regular 96 well plate).
 
-
-
-
+This will create a folder in `/experiments` with all of the details regarding the experiments (e.g. hypothesis, protocol, liquid handling scripts, ...)
+<br/>
 Alternatively you can run the steps in sequence:
 
 ```
