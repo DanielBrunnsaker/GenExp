@@ -196,6 +196,12 @@ owl:deprecated rdf:type owl:AnnotationProperty .
                     rdfs:range obo:APO_0000017 .
 
 
+###  http://purl.obolibrary.org/obo/resistanceToChemical
+obo:resistanceToChemical rdf:type owl:ObjectProperty ;
+                         rdfs:domain obo:APO_0000087 ;
+                         rdfs:range obo:CHEBI_24431 .
+
+
 ###  http://purl.obolibrary.org/obo/apo.owl#absentComparedTo
 :absentComparedTo rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :decreasedComparedTo .
