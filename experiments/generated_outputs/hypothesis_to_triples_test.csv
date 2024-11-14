@@ -1,0 +1,8 @@
+"hyp_time","target","direction","clause"
+20241010_0921,"alanine","increased","Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole)."
+20241010_0922,"alanine","decreased","Cell(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,'cadmium cation')."
+20241010_0923,"alanine","decreased","Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea)."
+20241010_0925,"alanine","increased","Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole)."
+20241010_0926,"alanine","increased","Cell(A):-phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (37\u00b0C)')."
+20241010_0929,"alanine","increased","Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,epoxiconazole)."
+20241010_0930,"alanine","decreased","Cell(A):-phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,hydroxyurea)."
