@@ -7191,6 +7191,12 @@ obo:CHEBI_24431 rdf:type owl:Class ;
                 rdfs:label "chemical entity" .
 
 
+###  http://purl.obolibrary.org/obo/NCIT_C16612
+obo:NCIT_C16612 rdf:type owl:Class ;
+                oboInOwl:id "NCIT:C16612" ;
+                rdfs:label "Gene" .
+
+
 ###  http://purl.obolibrary.org/obo/YPO_0000001
 obo:YPO_0000001 rdf:type owl:Class ;
                 obo:IAO_0000231 obo:IAO_0000227 ;
