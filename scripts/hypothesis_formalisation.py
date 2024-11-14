@@ -16,8 +16,22 @@ def role_between_classes(a, b, r):
     trips.append((a, RDFS.subClassOf, bn))
     return trips
 
+
+
 hypo_graph = rdflib.Graph()
 hypo_graph.parse(os.path.join(BASE_DIR, 'ontology-files/hypo.ttl'))
+
+def term_from_label(label):
+    term = hypo_graph.value(predicate=RDFS.label,
+                        object=rdflib.Literal(label, datatype=rdflib.URIRef('http://www.w3.org/2001/XMLSchema#string')))
+    if term == None:
+        term = hypo_graph.value(predicate=RDFS.label,
+                        object=rdflib.Literal(label, lang='en'))
+    if term == None:
+        term = hypo_graph.value(predicate=RDFS.label,
+                        object=rdflib.Literal(label))
+    return term
+
 
 """
 Add A subClassOf B
@@ -27,4 +41,5 @@ hypo_graph.add((HYPO.A, RDFS.subClassOf, HYPO.B))
 Add A <exists>rel.B
 for t in role_between_classes(HYPO.A, HYPO.B, HYPO.rel):
     hypo_graph.add((t))
+
 """
