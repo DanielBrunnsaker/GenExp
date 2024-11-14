@@ -1,4 +1,4 @@
-gene('YKL212W').
+gene('YJL051W').
 gene('YAL002W').
 gene('YAL004W').
 gene('YAL005C').
@@ -2250,7 +2250,6 @@ gene('YJL047C').
 gene('YJL047C-A').
 gene('YJL048C').
 gene('YJL049W').
-gene('YJL051W').
 gene('YJL052W').
 gene('YJL053W').
 gene('YJL055W').
@@ -2654,6 +2653,7 @@ gene('YKL205W').
 gene('YKL206C').
 gene('YKL207W').
 gene('YKL208W').
+gene('YKL212W').
 gene('YKL213C').
 gene('YKL214C').
 gene('YKL215C').

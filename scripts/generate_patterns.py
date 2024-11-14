@@ -5,7 +5,43 @@
 
 #warnings.simplefilter("ignore", category=ConvergenceWarning)
 
-
+def greedily_select_first_examples(df, n_FE):
+    import pandas as pd
+    
+    # Combine into easily manageable phenotypic profiles
+    df['Phenotypic_Profile'] = df['Gene > Phenotypes > Observable'] +'_'+ df['Gene > Phenotypes > Qualifier'] +'_'+ df['Gene > Phenotypes > Chemical'] +'_'+ df['Gene > Phenotypes > Condition']
+    
+    # Map genes to their phenotypic profiles
+    gene_profiles = df.groupby('Gene > Systematic Name')['Phenotypic_Profile'].apply(set).to_dict()
+    
+    # Step 1: Initialize variables
+    selected_genes = []
+    covered_profiles = set()
+    remaining_genes = set(gene_profiles.keys())
+    
+    # Step 2: Iteratively and greedily select genes with maximal phenotypic coverage
+    while len(selected_genes) < n_FE and remaining_genes:
+        max_new_profiles = -1
+        best_gene = None
+        
+        for gene in sorted(remaining_genes):  
+            new_profiles = gene_profiles[gene] - covered_profiles
+            num_new_profiles = len(new_profiles)
+            if num_new_profiles > max_new_profiles:
+                max_new_profiles = num_new_profiles
+                best_gene = gene
+                
+        if best_gene is None:
+            break 
+        
+        selected_genes.append(best_gene)
+        covered_profiles.update(gene_profiles[best_gene])
+        remaining_genes.remove(best_gene)
+    
+        #print(best_gene, max_new_profiles)
+    
+    print("Selected Genes:", selected_genes)
+    return selected_genes
 
 def main():
     
@@ -20,6 +56,8 @@ def main():
         print(f'Variable "N" set to: {n_FE}')
     else:
         print('Variable "N" not provided.')
+    
+    print('new version')
     
     # set the terminal path
     target_folder = '../prolog'
@@ -40,8 +78,8 @@ def main():
     phenotypes = phenotypes[phenotypes['Gene > Phenotypes > Observable'] != 'cell size']
     phenotypes = phenotypes[phenotypes['Gene > Phenotypes > Observable'] != 'cell shape']
     
-    list_of_genes_to_try = list(phenotypes['Gene > Systematic Name'].value_counts().nlargest(n_FE).index)
-    
+    #list_of_genes_to_try = list(phenotypes['Gene > Systematic Name'].value_counts().nlargest(n_FE).index)
+    list_of_genes_to_try = greedily_select_first_examples(phenotypes, n_FE)
     # Example loop usage
     duplicates_dict = {}
     
@@ -82,7 +120,7 @@ def main():
         # Ensure no duplicate columns exist after concatenation
         full_frequent_dataset = full_frequent_dataset.loc[:,~full_frequent_dataset.columns.duplicated()]
         
-        print(f"Total amount of features: {full_frequent_dataset.shape[1]}")
+        print(f"Total amount of unique features: {full_frequent_dataset.shape[1]}")
         
         with open('../prolog/generated_features/frequent_explanation_new.txt', 'r') as file:
             input_features = file.readlines()
@@ -105,7 +143,7 @@ def main():
         with open('../results/patterns/feature_dict.pickle', 'wb') as handle:
             pickle.dump(duplicates_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
     
-        full_frequent_dataset.reset_index().to_feather('../results/patterns/datasets/frequent_20241024.feather')
+        full_frequent_dataset.reset_index().to_feather('../results/patterns/datasets/frequent_20241114.feather')
     
     
     ## Rerun this?

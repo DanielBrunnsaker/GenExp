@@ -6,6 +6,29 @@ Created on Mon Nov 11 10:26:00 2024
 @author: danbru
 """
 
+def get_entry_details(data, logic_program):
+    # Loop through each entry in the 'allowed' list
+    for entry in data['allowed']:
+        # Check if the logic program matches
+        if entry['logic_program'] == logic_program:
+            # Return the number if a match is found
+            return entry
+            #return entry['number']
+    # Return None if no match is found
+    return None
+
+def extract_logic_program(text):
+    
+    import re 
+    
+    # Updated regex pattern to capture logic program starting with "Cell(A):-exhibits_phenotype"
+    pattern = r"Cell\(A\):-exhibits_phenotype.*?\."
+    match = re.search(pattern, text, re.DOTALL)
+    # If a match is found, return the logic program
+    if match:
+        return match.group(0)
+    return None
+
 def parse_arguments():
     import argparse
     parser = argparse.ArgumentParser(description="Hypothesis Generator with adjustable parameters.")
@@ -47,6 +70,9 @@ def main():
     with open('hypothesis/feasibility/selection.json', 'r') as file:
         allowed_programs = json.load(file)
         
+    #with open('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/proline_0.1_10_20241114_1603/hypothesis/feasibility/selection.json', 'r') as file:
+    #    allowed_programs = json.load(file)
+        
     full_prompt = open("hypothesis/patterns/prompt.txt", "r")
     full_prompt = full_prompt.read()
 
@@ -62,11 +88,22 @@ def main():
     #hypothesis_text = prompt_gpt_for_hypothesis('../../context/hypgen_context.txt', revised_prompt, T, key)
     hypothesis_text = prompt_gpt_for_hypothesis('../../context/hypgen_context.txt', revised_prompt, T, key)
     
-    #print(hypothesis_text)
+    
+    selected_logic_program = extract_logic_program(hypothesis_text)
+    hypothesis_details = get_entry_details(allowed_programs, selected_logic_program)
+    
+    with open('hypothesis/hypothesis_details.json', 'w') as f:
+        json.dump(hypothesis_details, f)
+    # Selected hypothesis
+    #"Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,chitosan)."
+    
+    print(hypothesis_text)
 
     # Save prompt
     with open('hypothesis/generated_hypothesis.txt', 'w') as file:
         file.write(hypothesis_text)
+    
+    
 
 
 import json

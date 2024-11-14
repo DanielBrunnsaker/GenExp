@@ -1,0 +1,49 @@
+Selected Statement:
+```prolog
+Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,camptothecin).
+```
+
+Motivation:
+This statement is selected due to its potential novelty and feasibility. Camptothecin is a well-known chemotherapeutic agent, and understanding the relationship between methionine levels and resistance to such chemicals could have significant implications for yeast biology and potentially broader applications in biotechnology and medicine. Moreover, the relationship between methionine levels and resistance to camptothecin is relatively unexplored, providing an opportunity to contribute new insights.
+
+Hypothesis:
+Cells with lower than normal levels of intracellular methionine in standard conditions exhibit decreased resistance to camptothecin.
+
+Experimental Plan:
+1. **Objective:** To determine if lower intracellular methionine levels are associated with decreased resistance to camptothecin.
+   
+2. **Strain and Conditions:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cultures in minimal media without amino acids.
+   - Inoculate cultures at 0.05 OD600.
+
+3. **Methionine Modulation:**
+   - Supplement cultures with varying levels of methionine to modulate intracellular concentrations.
+   - Levels: 
+     - Control: No methionine supplementation.
+     - Low: 0.1 mM methionine.
+     - High: 1 mM methionine.
+
+4. **Camptothecin Treatment:**
+   - At t=0h, treat all cultures with camptothecin at a concentration of 10 µM.
+
+5. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth.
+   - At experiment termination (12 hours), perform mass-spectrometry based metabolomics to quantify intracellular methionine levels.
+   - Assess cell viability and resistance by measuring final OD600 and comparing it to untreated controls.
+
+6. **Controls:**
+   - Include a set of cultures without camptothecin treatment to serve as growth controls.
+   - Verify that methionine supplementation alone does not affect resistance by conducting parallel experiments without camptothecin.
+
+7. **Assumptions Testing:**
+   - Confirm that methionine supplementation effectively modulates intracellular methionine levels using metabolomics data.
+   - Ensure that camptothecin concentration is sub-lethal under control conditions to observe differences in resistance.
+
+Expected Outcomes:
+- **Hypothesis Supported:** If cells with lower methionine supplementation (0.1 mM) exhibit significantly lower OD600 and decreased viability compared to control and high methionine supplementation (1 mM) when treated with camptothecin, it supports the hypothesis.
+- **Hypothesis Refuted:** If there is no significant difference in resistance to camptothecin across different methionine levels, it refutes the hypothesis.
+- **Independent Effects:** Methionine supplementation alone should not significantly affect cell growth or viability in the absence of camptothecin.
+- **Assumptions Verification:** Successful modulation of intracellular methionine levels should be confirmed by metabolomics, and camptothecin should show a differential impact based on methionine levels, validating the experimental setup.
+
+This experiment will elucidate the relationship between methionine levels and camptothecin resistance, potentially uncovering novel insights into yeast stress responses and metabolic regulation.

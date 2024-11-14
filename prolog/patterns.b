@@ -12,19 +12,17 @@
 % mode declarations (note that ORF and gene are interchangeable in this specific context)
 :- modeh(*, gene(+orf)).
 :- modeb(*, compound_name(+value, #compound)).
-:- modeb(*, drug_target(+value, #action, -orf_through)).
+:- modeb(*, compound_modulates_target(+value, #action, -orf_through)).
 :- modeb(*, condition(+cond, #cond_desc)).
-:- modeb(*, phenotype(+orf, #state, -value, -cond)).
-:- modeb(*, interacts_with_metabolite(+orf_through, #type, #reaction, #metabolite)).
-:- modeb(*, perturbation_in_metabolism_of(+orf, #metabolite2, #type2, #reaction2)).
+:- modeb(*, exhibits_phenotype(+orf, #state, -value, -cond)).
+:- modeb(*, participates_in_metabolism(+orf_through, #type, #metabolite)).
 
 % determinations
 :- determination(gene/1, compound_name/2).
-:- determination(gene/1, drug_target/3).
+:- determination(gene/1, compound_modulates_target/3).
 :- determination(gene/1, condition/2).
-:- determination(gene/1, phenotype/4).
-:- determination(gene/1, interacts_with_metabolite/4).
-:- determination(gene/1, perturbation_in_metabolism_of/4).
+:- determination(gene/1, exhibits_phenotype/4).
+:- determination(gene/1, participates_in_metabolism/3).
 
 % loading in background knowledge
 :- ['kb/phenotypes.dl'].
@@ -32,13 +30,6 @@
 :- ['kb/target.dl'].
 :- ['kb/conditions.dl'].
 :- ['kb/metabolites.dl'].
-
-% Change the naming convention and order of the constants, as to make it more readable in natural language (for the meaning it is intended to give
-% when having it directly connected through a positive example, or indirectly through a drug target).
-
-perturbation_in_metabolism_of(Orf, Metabolite, Type, Reaction) :-
-	interacts_with_metabolite(Orf, Reaction, Type, Metabolite).
-
 
 % show examples as boolean vectors, included to provide an output of the "induce features" mode, as per the aleph manual. Allows for printing out and saving the features.
 :- set(portray_examples,true).

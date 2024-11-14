@@ -66,12 +66,22 @@ def main():
     key = key.read()
     
     # Load this in instead, as a JSON or excel?
+    #relevance_scores = {
+    #    # predicates
+    #    'compound_name': 10, # Reward patterns with a specific condition in mind (if there is one)
+    #    'condition': 10, # Reward patterns with a specific chemical in mind (if there is one)
+    #    'interacts_with_metabolite': 5, 
+    #    'biological_target': 3 # add production? should make more sense as we are measuring accumulations
+    #}
+    
     relevance_scores = {
         # predicates
         'compound_name': 10, # Reward patterns with a specific condition in mind (if there is one)
         'condition': 10, # Reward patterns with a specific chemical in mind (if there is one)
-        'interacts_with_metabolite': 5, 
-        'biological_target': 3
+        'participates_in_metabolism': 5, 
+        'compound_modulates_target': 3, # add production? should make more sense as we are measuring accumulations
+        'production of': 2,
+        'consumption of': 1
     }
     
     # Load supports. Directly save as dict instead?
@@ -84,7 +94,8 @@ def main():
     
     # Load reference data
     aaSet = pd.read_excel('../data/AA.xls', sheet_name = 'intracellular_concentration_mM').set_index('ORF').iloc[:,1:]
-    path = '../results/coefficients/20241025/'
+    #path = '../results/coefficients/20241025/'
+    path = '../results/coefficients/20241114/'
     
     # Calculate scoring for hypotheses
     hypotheses, all_hypotheses = load_all_hypotheses(path, target, aaSet)    
@@ -95,6 +106,9 @@ def main():
     #print('\n Generating logic programs... \n')
     
     # Maybe i should pack this into one function?
+    
+    
+    
     hypothesis_counter = 0
     full_prompt = ''
     for counter, hypothesis in enumerate(filtered_sorted_specifity.index):
@@ -131,9 +145,7 @@ def main():
         else:
             # Produce the custom output:
             hypothesis_counter += 1
-            prompt_part = f"{counter}. Cells with {directionality} than normal levels of intracellular {target} in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: "
-            
-            #prompt_part = f"{hypothesis_counter}. Cells with {directionality} than normal levels of intracellular {target} in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: "
+            prompt_part = f"{counter}. Cells with {directionality} than normal levels of intracellular {target} in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: "            
             full_prompt = full_prompt + prompt_part + clause + '. '
             
             # Restrict to N generated clauses

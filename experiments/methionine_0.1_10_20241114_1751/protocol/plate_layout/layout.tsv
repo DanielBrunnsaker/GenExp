@@ -1,0 +1,97 @@
+	plateID	well	CONCuM	Summary
+0	plate_1	A01	methionine: 0.1 mM & quinine: 0.1 mM	Growth with normal methionine and low quinine.
+1	plate_1	A02	Media control	
+2	plate_1	A03	methionine: 1.0 mM & quinine: 1.0 mM	Growth with high methionine and high quinine.
+3	plate_1	A04	methionine: 1.0 mM & quinine: 0 mM	Growth with high methionine supplementation, no quinine.
+4	plate_1	A05	methionine: 0 mM & quinine: 0 mM	Baseline growth without methionine or quinine.
+5	plate_1	A06	methionine: 1.0 mM & quinine: 0.5 mM	Growth with high methionine and medium quinine.
+6	plate_1	A07	Media control	
+7	plate_1	A08	methionine: 0.01 mM & quinine: 0.5 mM	Growth with low methionine and medium quinine.
+8	plate_1	A09	methionine: 0.01 mM & quinine: 0.1 mM	Growth with low methionine and low quinine.
+9	plate_1	A10	methionine: 0 mM & quinine: 0.5 mM	Growth with medium quinine treatment, no methionine.
+10	plate_1	A11	methionine: 0.01 mM & quinine: 1.0 mM	Growth with low methionine and high quinine.
+11	plate_1	A12	methionine: 0.1 mM & quinine: 0 mM	Growth with normal methionine supplementation, no quinine.
+12	plate_1	B01	methionine: 0.01 mM & quinine: 0.1 mM	Growth with low methionine and low quinine.
+13	plate_1	B02	methionine: 0.1 mM & quinine: 0.1 mM	Growth with normal methionine and low quinine.
+14	plate_1	B03	methionine: 0 mM & quinine: 1.0 mM	Growth with high quinine treatment, no methionine.
+15	plate_1	B04	Media control	
+16	plate_1	B05	methionine: 0 mM & quinine: 0.1 mM	Growth with low quinine treatment, no methionine.
+17	plate_1	B06	methionine: 0.01 mM & quinine: 1.0 mM	Growth with low methionine and high quinine.
+18	plate_1	B07	methionine: 1.0 mM & quinine: 1.0 mM	Growth with high methionine and high quinine.
+19	plate_1	B08	methionine: 0 mM & quinine: 0.5 mM	Growth with medium quinine treatment, no methionine.
+20	plate_1	B09	Media control	
+21	plate_1	B10	methionine: 0.01 mM & quinine: 0 mM	Growth with low methionine supplementation, no quinine.
+22	plate_1	B11	methionine: 1.0 mM & quinine: 0.1 mM	Growth with high methionine and low quinine.
+23	plate_1	B12	methionine: 0.1 mM & quinine: 1.0 mM	Growth with normal methionine and high quinine.
+24	plate_1	C01	methionine: 1.0 mM & quinine: 0 mM	Growth with high methionine supplementation, no quinine.
+25	plate_1	C02	methionine: 0.01 mM & quinine: 1.0 mM	Growth with low methionine and high quinine.
+26	plate_1	C03	methionine: 0 mM & quinine: 0 mM	Baseline growth without methionine or quinine.
+27	plate_1	C04	methionine: 0.01 mM & quinine: 0.5 mM	Growth with low methionine and medium quinine.
+28	plate_1	C05	Media control	
+29	plate_1	C06	methionine: 0.1 mM & quinine: 0.5 mM	Growth with normal methionine and medium quinine.
+30	plate_1	C07	methionine: 0 mM & quinine: 0.5 mM	Growth with medium quinine treatment, no methionine.
+31	plate_1	C08	methionine: 0.01 mM & quinine: 0 mM	Growth with low methionine supplementation, no quinine.
+32	plate_1	C09	methionine: 1.0 mM & quinine: 0.1 mM	Growth with high methionine and low quinine.
+33	plate_1	C10	methionine: 0 mM & quinine: 1.0 mM	Growth with high quinine treatment, no methionine.
+34	plate_1	C11	methionine: 0.1 mM & quinine: 1.0 mM	Growth with normal methionine and high quinine.
+35	plate_1	C12	Media control	
+36	plate_1	D01	methionine: 1.0 mM & quinine: 0.5 mM	Growth with high methionine and medium quinine.
+37	plate_1	D02	methionine: 0 mM & quinine: 0.1 mM	Growth with low quinine treatment, no methionine.
+38	plate_1	D03	methionine: 0.1 mM & quinine: 1.0 mM	Growth with normal methionine and high quinine.
+39	plate_1	D04	methionine: 0.1 mM & quinine: 0 mM	Growth with normal methionine supplementation, no quinine.
+40	plate_1	D05	methionine: 0.1 mM & quinine: 0.5 mM	Growth with normal methionine and medium quinine.
+41	plate_1	D06	Media control	
+42	plate_1	D07	methionine: 0 mM & quinine: 0 mM	Baseline growth without methionine or quinine.
+43	plate_1	D08	Media control	
+44	plate_1	D09	methionine: 0.1 mM & quinine: 0.1 mM	Growth with normal methionine and low quinine.
+45	plate_1	D10	methionine: 1.0 mM & quinine: 1.0 mM	Growth with high methionine and high quinine.
+46	plate_1	D11	methionine: 0.01 mM & quinine: 0 mM	Growth with low methionine supplementation, no quinine.
+47	plate_1	D12	methionine: 0.01 mM & quinine: 0.1 mM	Growth with low methionine and low quinine.
+48	plate_1	E01	methionine: 0.1 mM & quinine: 1.0 mM	Growth with normal methionine and high quinine.
+49	plate_1	E02	methionine: 1.0 mM & quinine: 0.1 mM	Growth with high methionine and low quinine.
+50	plate_1	E03	methionine: 0.1 mM & quinine: 0 mM	Growth with normal methionine supplementation, no quinine.
+51	plate_1	E04	methionine: 1.0 mM & quinine: 0.5 mM	Growth with high methionine and medium quinine.
+52	plate_1	E05	Media control	
+53	plate_1	E06	methionine: 1.0 mM & quinine: 0 mM	Growth with high methionine supplementation, no quinine.
+54	plate_1	E07	methionine: 0.1 mM & quinine: 0.5 mM	Growth with normal methionine and medium quinine.
+55	plate_1	E08	Media control	
+56	plate_1	E09	methionine: 0 mM & quinine: 0.5 mM	Growth with medium quinine treatment, no methionine.
+57	plate_1	E10	methionine: 0.01 mM & quinine: 0.5 mM	Growth with low methionine and medium quinine.
+58	plate_1	E11	methionine: 0 mM & quinine: 1.0 mM	Growth with high quinine treatment, no methionine.
+59	plate_1	E12	methionine: 0 mM & quinine: 0.1 mM	Growth with low quinine treatment, no methionine.
+60	plate_1	F01	Media control	
+61	plate_1	F02	methionine: 1.0 mM & quinine: 0 mM	Growth with high methionine supplementation, no quinine.
+62	plate_1	F03	methionine: 0.01 mM & quinine: 1.0 mM	Growth with low methionine and high quinine.
+63	plate_1	F04	methionine: 0 mM & quinine: 1.0 mM	Growth with high quinine treatment, no methionine.
+64	plate_1	F05	methionine: 1.0 mM & quinine: 1.0 mM	Growth with high methionine and high quinine.
+65	plate_1	F06	methionine: 0.1 mM & quinine: 0 mM	Growth with normal methionine supplementation, no quinine.
+66	plate_1	F07	Media control	
+67	plate_1	F08	methionine: 1.0 mM & quinine: 0.5 mM	Growth with high methionine and medium quinine.
+68	plate_1	F09	methionine: 0 mM & quinine: 0 mM	Baseline growth without methionine or quinine.
+69	plate_1	F10	methionine: 1.0 mM & quinine: 0.1 mM	Growth with high methionine and low quinine.
+70	plate_1	F11	methionine: 0.1 mM & quinine: 0.1 mM	Growth with normal methionine and low quinine.
+71	plate_1	F12	methionine: 0.01 mM & quinine: 0 mM	Growth with low methionine supplementation, no quinine.
+72	plate_1	G01	methionine: 0.1 mM & quinine: 0.5 mM	Growth with normal methionine and medium quinine.
+73	plate_1	G02	methionine: 1.0 mM & quinine: 1.0 mM	Growth with high methionine and high quinine.
+74	plate_1	G03	methionine: 1.0 mM & quinine: 0 mM	Growth with high methionine supplementation, no quinine.
+75	plate_1	G04	Media control	
+76	plate_1	G05	methionine: 0.1 mM & quinine: 0 mM	Growth with normal methionine supplementation, no quinine.
+77	plate_1	G06	methionine: 0.1 mM & quinine: 1.0 mM	Growth with normal methionine and high quinine.
+78	plate_1	G07	methionine: 0 mM & quinine: 0.1 mM	Growth with low quinine treatment, no methionine.
+79	plate_1	G08	methionine: 0 mM & quinine: 0 mM	Baseline growth without methionine or quinine.
+80	plate_1	G09	methionine: 1.0 mM & quinine: 0.5 mM	Growth with high methionine and medium quinine.
+81	plate_1	G10	Media control	
+82	plate_1	G11	methionine: 0.01 mM & quinine: 0.1 mM	Growth with low methionine and low quinine.
+83	plate_1	G12	methionine: 0.01 mM & quinine: 0.5 mM	Growth with low methionine and medium quinine.
+84	plate_1	H01	methionine: 0.01 mM & quinine: 0 mM	Growth with low methionine supplementation, no quinine.
+85	plate_1	H02	methionine: 0.01 mM & quinine: 0.1 mM	Growth with low methionine and low quinine.
+86	plate_1	H03	Media control	
+87	plate_1	H04	methionine: 0 mM & quinine: 0.5 mM	Growth with medium quinine treatment, no methionine.
+88	plate_1	H05	methionine: 0.01 mM & quinine: 0.5 mM	Growth with low methionine and medium quinine.
+89	plate_1	H06	methionine: 0 mM & quinine: 1.0 mM	Growth with high quinine treatment, no methionine.
+90	plate_1	H07	methionine: 0.1 mM & quinine: 0.1 mM	Growth with normal methionine and low quinine.
+91	plate_1	H08	methionine: 0.01 mM & quinine: 1.0 mM	Growth with low methionine and high quinine.
+92	plate_1	H09	methionine: 0.1 mM & quinine: 0.5 mM	Growth with normal methionine and medium quinine.
+93	plate_1	H10	methionine: 0 mM & quinine: 0.1 mM	Growth with low quinine treatment, no methionine.
+94	plate_1	H11	Media control	
+95	plate_1	H12	methionine: 1.0 mM & quinine: 0.1 mM	Growth with high methionine and low quinine.

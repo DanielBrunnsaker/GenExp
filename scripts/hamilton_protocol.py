@@ -193,6 +193,11 @@ def main():
             if '%' in experiment['treatment_parameters']:
                 t_dose = experiment['treatment_parameters'][:-1]
                 t_dose_unit = experiment['treatment_parameters'][-1]
+                t_dose_unit = re.sub(r'(\d+%)\s*\(.*?\)', r'\1', t_dose_unit)
+                #t_dose = re.sub("%","",experiment['treatment_parameters'][:-1])
+                
+                t_dose = re.search(r'(\d+)%', experiment['treatment_parameters']).group(1)
+                
             else:
                 t_dose = experiment['treatment_parameters'].split(' ')[0]
                 t_dose_unit = experiment['treatment_parameters'].split(' ')[1]
@@ -216,10 +221,19 @@ def main():
             if '%' in experiment['treatment_parameters']:
                 t_dose = experiment['treatment_parameters'][:-1]
                 t_dose_unit = experiment['treatment_parameters'][-1]
+                t_dose_unit = re.sub(r'(\d+%)\s*\(.*?\)', r'\1', t_dose_unit)
+                
+                t_dose = re.search(r'(\d+)%', experiment['treatment_parameters']).group(1)
             else:
                 t_dose = experiment['treatment_parameters'].split(' ')[0]
                 t_dose_unit = experiment['treatment_parameters'].split(' ')[1]
             
+            
+            
+            
+            with open('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/tyrosine_0.1_10_20241114_1735/protocol/protocol.json', 'r') as file:
+                data = json.load(file)
+                #print(data)
             
             # Both supplement and treatment are added
             s_C_final = Q_(float(s_dose), s_dose_unit)
@@ -249,6 +263,7 @@ def main():
         if t_C_final.magnitude > 0:
             if '%' in t_dose_unit:
                 # Handle percentage-based treatment
+                
                 final_conc_percent = float(t_dose)
                 t_V1 = percentage_to_volume(final_conc_percent, V_total, ureg)
             else:
@@ -369,6 +384,7 @@ def main():
     print(tabulate(dosing_with_wells[['Media (uL)', 'Inoculated Media (uL)', 'Supplement (uL)', 'Treatment (uL)', 'MilliQ (uL)', 'well']], headers='keys', tablefmt='psql'))
 
 
+import re
 import os
 import json
 import pubchempy as pcp

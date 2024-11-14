@@ -1,0 +1,650 @@
+[features from good clauses]
+
+[pos cover = 3931 neg cover = 0] [pos-neg] [3931]
+
+feature(1,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C))).
+
+[pos cover = 2867 neg cover = 0] [pos-neg] [2867]
+
+feature(2,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C))).
+
+[pos cover = 852 neg cover = 0] [pos-neg] [852]
+
+feature(3,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C))).
+
+[pos cover = 979 neg cover = 0] [pos-neg] [979]
+
+feature(4,(gene(A):-exhibits_phenotype(A,'increased heat sensitivity',B,C))).
+
+[pos cover = 290 neg cover = 0] [pos-neg] [290]
+
+feature(5,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C))).
+
+[pos cover = 899 neg cover = 0] [pos-neg] [899]
+
+feature(6,(gene(A):-exhibits_phenotype(A,'decreased oxidative stress resistance',B,C))).
+
+[pos cover = 316 neg cover = 0] [pos-neg] [316]
+
+feature(7,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'dimethyl sulfoxide'))).
+
+[pos cover = 23 neg cover = 0] [pos-neg] [23]
+
+feature(16,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,boromycin))).
+
+[pos cover = 22 neg cover = 0] [pos-neg] [22]
+
+feature(17,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ascomycin))).
+
+[pos cover = 714 neg cover = 0] [pos-neg] [714]
+
+feature(18,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'benzo[a]pyrene'))).
+
+[pos cover = 31 neg cover = 0] [pos-neg] [31]
+
+feature(20,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,benzothiazoles))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(21,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,sirolimus))).
+
+[pos cover = 153 neg cover = 0] [pos-neg] [153]
+
+feature(23,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'phleomycin D1'))).
+
+[pos cover = 57 neg cover = 0] [pos-neg] [57]
+
+feature(24,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'ferulic acid'))).
+
+[pos cover = 31 neg cover = 0] [pos-neg] [31]
+
+feature(25,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'trifluoperazine hydrochloride'))).
+
+[pos cover = 58 neg cover = 0] [pos-neg] [58]
+
+feature(26,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,chlorpromazine))).
+
+[pos cover = 151 neg cover = 0] [pos-neg] [151]
+
+feature(27,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,glycolaldehyde))).
+
+[pos cover = 233 neg cover = 0] [pos-neg] [233]
+
+feature(28,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'hydrogen chloride'))).
+
+[pos cover = 113 neg cover = 0] [pos-neg] [113]
+
+feature(29,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,alborixin))).
+
+[pos cover = 37 neg cover = 0] [pos-neg] [37]
+
+feature(30,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'mutalomycin sodium salt'))).
+
+[pos cover = 220 neg cover = 0] [pos-neg] [220]
+
+feature(31,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'N-nitrosodiethylamine'))).
+
+[pos cover = 189 neg cover = 0] [pos-neg] [189]
+
+feature(32,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'chondramide derivative'))).
+
+[pos cover = 259 neg cover = 0] [pos-neg] [259]
+
+feature(33,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'lanthanum(3+)'))).
+
+[pos cover = 230 neg cover = 0] [pos-neg] [230]
+
+feature(34,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'sodium disulfite'))).
+
+[pos cover = 530 neg cover = 0] [pos-neg] [530]
+
+feature(35,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,caffeine))).
+
+[pos cover = 122 neg cover = 0] [pos-neg] [122]
+
+feature(36,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'propolis extract'))).
+
+[pos cover = 95 neg cover = 0] [pos-neg] [95]
+
+feature(37,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'sodium dodecyl sulfate'))).
+
+[pos cover = 247 neg cover = 0] [pos-neg] [247]
+
+feature(38,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'sodium selenide'))).
+
+[pos cover = 218 neg cover = 0] [pos-neg] [218]
+
+feature(39,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'actinomycin D'))).
+
+[pos cover = 187 neg cover = 0] [pos-neg] [187]
+
+feature(40,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'calcium dichloride'))).
+
+[pos cover = 29 neg cover = 0] [pos-neg] [29]
+
+feature(41,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,amitriptyline))).
+
+[pos cover = 141 neg cover = 0] [pos-neg] [141]
+
+feature(42,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,mefloquine))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(43,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,ethanol))).
+
+[pos cover = 121 neg cover = 0] [pos-neg] [121]
+
+feature(44,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,nigericin))).
+
+[pos cover = 448 neg cover = 0] [pos-neg] [448]
+
+feature(45,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'hygromycin B'))).
+
+[pos cover = 50 neg cover = 0] [pos-neg] [50]
+
+feature(46,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,miltefosine))).
+
+[pos cover = 305 neg cover = 0] [pos-neg] [305]
+
+feature(54,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,dieldrin))).
+
+[pos cover = 75 neg cover = 0] [pos-neg] [75]
+
+feature(56,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,wortmannin))).
+
+[pos cover = 109 neg cover = 0] [pos-neg] [109]
+
+feature(57,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'nickel sulfate'))).
+
+[pos cover = 32 neg cover = 0] [pos-neg] [32]
+
+feature(58,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'nickel(2+)'))).
+
+[pos cover = 523 neg cover = 0] [pos-neg] [523]
+
+feature(59,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,toxaphene))).
+
+[pos cover = 294 neg cover = 0] [pos-neg] [294]
+
+feature(60,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'benzo[a]pyrene'))).
+
+[pos cover = 253 neg cover = 0] [pos-neg] [253]
+
+feature(61,(gene(A):-exhibits_phenotype(A,'increased heat sensitivity',B,C),condition(C,'Temperature: elevated temperature (39°C)'))).
+
+[pos cover = 430 neg cover = 0] [pos-neg] [430]
+
+feature(67,(gene(A):-exhibits_phenotype(A,'decreased oxidative stress resistance',B,C),compound_name(B,paraquat))).
+
+[pos cover = 141 neg cover = 0] [pos-neg] [141]
+
+feature(72,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'cadmium dichloride'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(79,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'aluminium(3+)'))).
+
+[pos cover = 163 neg cover = 0] [pos-neg] [163]
+
+feature(81,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),condition(C,'Treatment: 2.4mM aluminium sulfate'))).
+
+[pos cover = 149 neg cover = 0] [pos-neg] [149]
+
+feature(84,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'gadolinium(3+)'))).
+
+[pos cover = 149 neg cover = 0] [pos-neg] [149]
+
+feature(85,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),condition(C,'Treatment: 3.9mM gadolinium (III) chloride hexahydrate'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(86,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_name(B,inositol))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(88,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),condition(C,'Media:  synthetic medium lacking inositol and choline'))).
+
+[pos cover = 239 neg cover = 0] [pos-neg] [239]
+
+feature(94,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_name(B,glutathione))).
+
+[pos cover = 239 neg cover = 0] [pos-neg] [239]
+
+feature(95,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),condition(C,'Treatment:  SD medium'))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(209,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of','L-aspartate'))).
+
+[pos cover = 996 neg cover = 0] [pos-neg] [996]
+
+feature(210,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of','L-glutamate'))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(211,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of','L-glutamine'))).
+
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+
+feature(212,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of','L-asparagine'))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(214,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of',acetaldehyde))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(215,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of',ethanol))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(216,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of',isobutyraldehyde))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(217,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of',tyrosol))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(218,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of',acetaldehyde))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(219,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of',phenylacetaldehyde))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(220,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of','3-methylbutanal'))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(221,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of','indol-3-ylacetaldehyde'))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(222,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of',isoamylol))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(223,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of',tryptophol))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(224,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of',methionol))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(225,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of','2-methylbutanal'))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(226,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of',propanol))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(227,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of','2-phenylethanol'))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(228,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of','2-methylbutanol'))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(229,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of',isobutanol))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(230,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of',ethanol))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(231,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of',methional))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(232,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of',propanal))).
+
+[pos cover = 802 neg cover = 0] [pos-neg] [802]
+
+feature(233,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of','(4-hydroxyphenyl)acetaldehyde'))).
+
+[pos cover = 648 neg cover = 0] [pos-neg] [648]
+
+feature(234,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of','2-oxoglutarate'))).
+
+[pos cover = 316 neg cover = 0] [pos-neg] [316]
+
+feature(235,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'metabolism of','orotidine 5-(dihydrogen phosphate)'))).
+
+[pos cover = 316 neg cover = 0] [pos-neg] [316]
+
+feature(236,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'metabolism of','PRPP'))).
+
+[pos cover = 316 neg cover = 0] [pos-neg] [316]
+
+feature(237,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'metabolism of',orotate))).
+
+[pos cover = 305 neg cover = 0] [pos-neg] [305]
+
+feature(247,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','glutathione disulfide'))).
+
+[pos cover = 305 neg cover = 0] [pos-neg] [305]
+
+feature(248,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of',glutathione))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(458,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'metabolism of',citrate))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(459,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'metabolism of','cis-aconitate'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(460,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'metabolism of',isocitrate))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(467,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-acylglycerophosphoserine (16:0)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(468,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylethanolamine (1-18:1, 2-18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(469,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','1-acylglycerophosphoethanolamine (16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(470,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','1-acylglycerophosphoserine (18:0)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(471,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-acylglycerophosphoserine (16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(472,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of',palmitate))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(473,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','1-acylglycerophosphoethanolamine (18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(474,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylethanolamine (1-18:0, 2-16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(475,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','1-acylglycerophosphoserine (16:0)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(476,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','1-acylglycerophosphoserine (16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(477,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-acylglycerophosphoethanolamine (16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(478,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','sn-glycero-3-phosphoserine'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(479,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylethanolamine (1-16:1, 2-16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(480,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-acylglycerophosphoserine (18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(481,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidyl-L-serine (1-18:0, 2-16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(482,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','sn-glycero-3-phosphoethanolamine'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(483,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidyl-L-serine (1-16:0, 2-18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(484,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of',palmitoleate))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(485,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-acylglycerophosphoethanolamine (18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(486,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylethanolamine (1-18:0, 2-18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(487,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidyl-L-serine (1-18:1, 2-18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(488,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidyl-L-serine (1-16:1, 2-18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(489,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-acylglycerophosphoethanolamine (16:0)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(490,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylethanolamine (1-18:1, 2-16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(491,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidyl-L-serine (1-18:0, 2-18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(492,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','1-acylglycerophosphoserine (18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(493,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylethanolamine (1-16:0, 2-16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(494,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','1-acylglycerophosphoethanolamine (18:0)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(495,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidyl-L-serine (1-16:1, 2-16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(496,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidyl-L-serine (1-16:0, 2-16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(497,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylethanolamine (1-16:0, 2-18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(498,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylethanolamine (1-16:1, 2-18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(499,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of',stearate))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(500,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-acylglycerophosphoethanolamine (18:0)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(501,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-acylglycerophosphoserine (18:0)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(502,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidyl-L-serine (1-18:1, 2-16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(503,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','1-acylglycerophosphoethanolamine (16:0)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(504,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of',oleate))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(505,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','1-acylglycerophosphocholine (18:0)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(506,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylcholine (1-16:1, 2-18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(507,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylcholine (1-16:0, 2-18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(508,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','1-acylglycerophosphocholine (18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(509,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','1-acylglycerophosphocholine (16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(510,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylcholine (1-18:1, 2-16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(511,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-acylglycerophosphocholine (18:0)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(512,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','1-acylglycerophosphocholine (16:0)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(513,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylcholine (1-18:0, 2-16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(514,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-acylglycerophosphocholine (16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(515,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylcholine (1-16:1, 2-16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(516,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylcholine (1-18:1, 2-18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(517,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','sn-glycero-3-phosphocholine'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(518,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylcholine (1-18:0, 2-18:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(519,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','phosphatidylcholine (1-16:0, 2-16:1)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(520,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-acylglycerophosphocholine (16:0)'))).
+
+[pos cover = 182 neg cover = 0] [pos-neg] [182]
+
+feature(521,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-acylglycerophosphocholine (18:1)'))).
+
+[pos cover = 239 neg cover = 0] [pos-neg] [239]
+
+feature(629,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_name(B,glutathione),condition(C,'Treatment:  SD medium'))).
+
+[pos cover = 163 neg cover = 0] [pos-neg] [163]
+
+feature(663,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'aluminium(3+)'),condition(C,'Treatment: 2.4mM aluminium sulfate'))).
+
+[pos cover = 149 neg cover = 0] [pos-neg] [149]
+
+feature(701,(gene(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'gadolinium(3+)'),condition(C,'Treatment: 3.9mM gadolinium (III) chloride hexahydrate'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(771,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_name(B,inositol),condition(C,'Media:  synthetic medium lacking inositol and choline'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(777,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','CDP-diacylglycerol (1-18:1, 2-18:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(778,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-phosphatidyl-1D-myo-inositol (1-18:1, 2-16:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(779,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-phosphatidyl-1D-myo-inositol (1-16:1, 2-16:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(780,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','CDP-diacylglycerol (1-16:1, 2-16:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(781,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-phosphatidyl-1D-myo-inositol (1-18:1, 2-18:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(782,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','CDP-diacylglycerol (1-18:0, 2-16:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(783,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-phosphatidyl-1D-myo-inositol (1-18:0, 2-16:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(784,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-phosphatidyl-1D-myo-inositol (1-18:0, 2-18:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(785,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','CDP-diacylglycerol (1-16:1, 2-18:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(786,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','CDP-diacylglycerol (1-18:1, 2-16:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(787,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','CDP-diacylglycerol (1-16:0, 2-16:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(788,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','CDP-diacylglycerol (1-18:0, 2-18:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(789,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-phosphatidyl-1D-myo-inositol (1-16:0, 2-18:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(790,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-phosphatidyl-1D-myo-inositol (1-16:0, 2-16:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(791,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','myo-inositol'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(792,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'production of','1-phosphatidyl-1D-myo-inositol (1-16:1, 2-18:1)'))).
+
+[pos cover = 80 neg cover = 0] [pos-neg] [80]
+
+feature(793,(gene(A):-exhibits_phenotype(A,'increased chemical compound excretion',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'consumption of','CDP-diacylglycerol (1-16:0, 2-18:1)'))).
+

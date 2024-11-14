@@ -223,7 +223,7 @@ def filter_lines(input_file, output_file):
                 continue
             
             # Count the occurrences of the word "phenotype" in the current line (case insensitive)
-            count = lines[i].lower().count('phenotype')
+            count = lines[i].lower().count('exhibits_phenotype')
 
             # If "phenotype" appears more than once, set skip_next to True to skip the next line
             if count > 1:
@@ -231,7 +231,7 @@ def filter_lines(input_file, output_file):
                 continue
 
             # Write the current line to the output file if it's not being skipped
-            if i > 0 and lines[i-1].lower().count('phenotype') <= 1:
+            if i > 0 and lines[i-1].lower().count('exhibits_phenotype') <= 1:
                 outfile.write(lines[i-1])
 
                 # Extract the feature number using regex and store it
@@ -274,7 +274,7 @@ def filter_lines(input_file, output_file):
                 continue
 
             # Count the occurrences of the word "phenotype" in the current line (case insensitive)
-            count = lines[i].lower().count('phenotype')
+            count = lines[i].lower().count('exhibits_phenotype')
 
             # If "phenotype" appears more than once, set skip_next to True to skip the next line
             if count > 1:
@@ -282,13 +282,13 @@ def filter_lines(input_file, output_file):
                 continue
 
             # Check for the "biological_target" without "interacts_with_metabolite" condition
-            if 'drug_target' in lines[i] and 'interacts_with_metabolite' not in lines[i]:
+            if 'compound_modulates_target' in lines[i] and 'participates_in_metabolism' not in lines[i]:
                 continue  # Skip this line
 
             # Write the current line to the output file if it's not being skipped
             if i > 0 and lines[i-1].lower().count('phenotype') <= 1:
                 # Ensure it doesn't violate the biological_target condition
-                if 'drug_target' not in lines[i-1] or 'interacts_with_metabolite' in lines[i-1]:
+                if 'compound_modulates_target' not in lines[i-1] or 'participates_in_metabolism' in lines[i-1]:
                     outfile.write(lines[i-1])
 
                     # Extract the feature number using regex and store it
@@ -298,7 +298,7 @@ def filter_lines(input_file, output_file):
 
             if i == len(lines) - 1 and count <= 1:
                 # Ensure it doesn't violate the biological_target condition
-                if 'drug_target' not in lines[i] or 'interacts_with_metabolite' in lines[i]:
+                if 'compound_modulates_target' not in lines[i] or 'participates_in_metabolism' in lines[i]:
                     outfile.write(lines[i])
 
                     # Extract the feature number using regex and store it
