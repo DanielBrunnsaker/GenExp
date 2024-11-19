@@ -7,6 +7,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OBO = rdflib.Namespace('http://purl.obolibrary.org/obo/')
 HYPO = rdflib.Namespace('http://hypo.project-genesis.io#')
 
+
+term = rdflib.URIRef('http://purl.obolibrary.org/obo/')
+
+
 def role_between_classes(a, b, r):
     bn = rdflib.BNode()
     trips = []
@@ -39,7 +43,20 @@ Add A subClassOf B
 hypo_graph.add((HYPO.A, RDFS.subClassOf, HYPO.B))
 
 Add A <exists>rel.B
-for t in role_between_classes(HYPO.A, HYPO.B, HYPO.rel):
+for t in role_between_classes(OBO.A, HYPO.B, HYPO.rel):
     hypo_graph.add((t))
 
 """
+
+
+
+"""
+for sparql store:
+this graph can be treated as a normal rdflib graph - (with caveat that I haven't written to graph like this, I think it should work as long as backend server allows for it)
+"""
+
+from rdflib.plugins.stores import sparqlstore
+
+kg_endpoint='http://localhost:3030/kg'
+sp_store = sparqlstore.SPARQLStore(kg_endpoint)
+kg = rdflib.Graph(store=sp_store)
