@@ -220,7 +220,8 @@ def normalize_column(column):
     return [(x - min_val) / (max_val - min_val) for x in column]
 
 # Function to calculate scores for each row based on target column and uniqueness
-def calculate_scores(df, target_column, alpha=1.0, beta=0.25):
+#def calculate_scores(df, target_column, alpha=1.0, beta=0.25):
+def calculate_scores(df, target_column, alpha=0.1):
     # Target values: maximize absolute values in the target column
     target_values = df[target_column].abs()
     
@@ -228,7 +229,8 @@ def calculate_scores(df, target_column, alpha=1.0, beta=0.25):
     penalty_values = df.drop(columns=[target_column]).abs().sum(axis=1)
     
     # Calculate the score: prioritize high target values, penalize non-unique rows
-    scores = alpha * target_values - beta * penalty_values
+    #scores = alpha * target_values - beta * penalty_values
+    scores = target_values - alpha * penalty_values
     
     # Add the scores to the DataFrame
     df['score'] = scores
@@ -301,19 +303,23 @@ def user_prompt():
         print("Choose an option:")
         print("[1] Go ahead with experiment")
         print("[2] Unsafe experiment, reprompt")
-        print("[3] Cancel")
+        print("[3] Reprompt")
+        print("[4] Cancel")
         
         # Get user input
-        choice = input("Enter your choice (1, 2, or 3): ")
+        choice = input("Enter your choice (1, 2, 3 or 4): ")
 
         # Handle the different choices
         if choice == "1":
-            print("Proceeding with the script...")
+            #print("Proceeding with the script...")
             return "go_ahead"
         elif choice == "2":
             print("Retrying...")
             return "retry"
         elif choice == "3":
+            print("Retrying...")
+            return "reprompt"
+        elif choice == "4":
             print("Cancelling the script...")
             return "cancel"
         else:

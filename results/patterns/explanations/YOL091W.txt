@@ -1,0 +1,38 @@
+[features from good clauses]
+
+[pos cover = 2867 neg cover = 0] [pos-neg] [2867]
+
+feature(1,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C))).
+
+[pos cover = 3931 neg cover = 0] [pos-neg] [3931]
+
+feature(2,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C))).
+
+[pos cover = 233 neg cover = 0] [pos-neg] [233]
+
+feature(3,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,sulforaphane))).
+
+[pos cover = 393 neg cover = 0] [pos-neg] [393]
+
+feature(7,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'acetic acid'))).
+
+[pos cover = 169 neg cover = 0] [pos-neg] [169]
+
+feature(8,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),condition(C,'Treated with 0.4% (w/v), pH 4.3 acetic acid'))).
+
+[pos cover = 540 neg cover = 0] [pos-neg] [540]
+
+feature(10,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,amitrole))).
+
+[pos cover = 233 neg cover = 0] [pos-neg] [233]
+
+feature(11,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'bis(S-citronellalthiosemicarbazonato)nickel(II)'))).
+
+[pos cover = 50 neg cover = 0] [pos-neg] [50]
+
+feature(15,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,miltefosine))).
+
+[pos cover = 169 neg cover = 0] [pos-neg] [169]
+
+feature(50,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'acetic acid'),condition(C,'Treated with 0.4% (w/v), pH 4.3 acetic acid'))).
+

@@ -6,18 +6,19 @@ Created on Mon Sep  9 17:47:07 2024
 @author: danbru
 """
 
-def prompt_gpt_for_hypothesis(prompted_statements, temp, key):
+def prompt_gpt_for_hypothesis(context_path, prompted_statements, temp, key):
     
     from openai import OpenAI
     import os
     
     os.environ["OPENAI_API_KEY"] = key
-    print(' Generating hypotheses... \n')
+    #print(' Generating hypotheses... \n')
     
     client = OpenAI()
     
     # Open a text file in read mode
-    with open('../context/hypgen_context.txt', 'r') as file:
+    #with open('../context/hypgen_context.txt', 'r') as file:
+    with open(context_path, 'r') as file:
         # Read the entire file content
         context = file.read()
     
@@ -26,6 +27,8 @@ def prompt_gpt_for_hypothesis(prompted_statements, temp, key):
     completion = client.chat.completions.create(
         #model="gpt-4o-mini",
         model="gpt-4o",
+        #model = 'o1-preview',
+        #model = 'o1-mini',
         temperature = temp,
         messages=[
             {"role": "system", "content": context},
@@ -41,7 +44,7 @@ def prompt_gpt_for_hypothesis(prompted_statements, temp, key):
     
     return hypothesis
 
-def prompt_gpt_for_experimental_plan(hypothesis, key):
+def prompt_gpt_for_experimental_plan(context_path, hypothesis, key):
     
     from openai import OpenAI
     import os
@@ -50,10 +53,11 @@ def prompt_gpt_for_experimental_plan(hypothesis, key):
 
     client = OpenAI()
     
-    print(' Designing experimental plan... \n')
+    #print(' Designing experimental plan... \n')
     # Redefine a new one.
     # Open a text file in read mode
-    with open('../context/expdesign_context.txt', 'r') as file:
+    #with open('../context/expdesign_context.txt', 'r') as file:
+    with open(context_path, 'r') as file:
         # Read the entire file content
         exp_context = file.read()
     
@@ -87,7 +91,7 @@ def is_valid_json(filename):
     except Exception:
         return False  # Any other exception also indicates failure
 
-def retry_experimental_plan(hypothesis, key, retries=3):
+def retry_experimental_plan(context_path, hypothesis, key, retries=3):
     
     import json
     
@@ -95,7 +99,7 @@ def retry_experimental_plan(hypothesis, key, retries=3):
     success = False
     
     while attempts < retries and not success:
-        experimental_plan = prompt_gpt_for_experimental_plan(hypothesis, key)
+        experimental_plan = prompt_gpt_for_experimental_plan(context_path,hypothesis, key)
         json_string_cleaned = experimental_plan.replace("\\'", "'")
         
         try:
@@ -123,7 +127,7 @@ def safety_feasibility_prompt(full_prompt, key):
      import os
      
      os.environ["OPENAI_API_KEY"] = key
-     print(' Selecting clauses based on safety and feasibility... \n')
+     #print(' Selecting clauses based on safety and feasibility... \n')
      
      client = OpenAI()
      
@@ -168,3 +172,33 @@ def extract_statements(text, numbers):
     extracted_statements = [statement for statement in all_statements if int(statement.split('.')[0]) in numbers]
 
     return extracted_statements
+
+def create_folder_structure(base_path, main_folder, subfolders_structure):
+    
+    import os
+    
+    # Define the main folder path
+    main_folder_path = os.path.join(base_path, main_folder)
+    
+    # Create the main folder if it doesn't exist
+    if not os.path.exists(main_folder_path):
+        os.makedirs(main_folder_path)
+        #print(f"Created main folder: {main_folder_path}")
+    
+    
+    # Create subfolders and their subsubfolders
+    for subfolder, subsubfolders in subfolders_structure.items():
+        # Path for each subfolder
+        subfolder_path = os.path.join(main_folder_path, subfolder)
+        if not os.path.exists(subfolder_path):
+            os.makedirs(subfolder_path)
+            #print(f"Created subfolder: {subfolder_path}")
+        
+
+        # Create each subsubfolder within the current subfolder
+        for subsubfolder in subsubfolders:
+            subsubfolder_path = os.path.join(subfolder_path, subsubfolder)
+            if not os.path.exists(subsubfolder_path):
+                os.makedirs(subsubfolder_path)
+                #print(f"Created subsubfolder: {subsubfolder_path}")
+            

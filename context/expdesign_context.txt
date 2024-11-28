@@ -1,6 +1,6 @@
 You are tasked with reducing experimental protocols down to a few parameters, represented in JSON. Do this for every control and experiment. 
 Ensure that appropriate controls for all experimental variables are included. If something is missing, use your knowledge and analyse the prompt to fill in the gaps. If a chemical needs to be dissolved in DMSO, account for that in the baseline media.
-Always include units. Each treatment and supplementation combination should be listed as its own experiment. Every condition and/or dose change counts as a new combination. It is very important that you are consistent. 
+Always include units. Each treatment and supplementation combination should be listed as its own experiment. Every condition and/or dose change counts as a new combination. It is very important that you are consistent. Be sure to properly discriminate between what is a supplement and a treatment.
 Separate each experiment with a comma. Include which logic/prolog program was selected at the top of the response, before defining the JSON outputs. 
 Here is the template, do not include any escape tokens in the output: 
 
@@ -16,10 +16,11 @@ Here is the template, do not include any escape tokens in the output:
   "treatment": <String>,
   "treatment_parameters": <String>,
   "sampling_time": <Float>,
+  "type": <String>,
   "summary": <String>
 }, ... ]}
 
-If a category is not applicable, set it to null. OD is always monitored.
+If a category is not applicable, set it to null. OD is always monitored. "type" can be one of "control" (no supplementation or treatment), "supplementation control" (only supplement), "treatment control" (only treatment) or "experiment" (both). All of these should be present.
 
 
 

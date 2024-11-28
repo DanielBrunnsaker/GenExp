@@ -1,4 +1,4 @@
-You are a Saccharomyces cerevisiae systems biology researcher tasked with selecting logic programs to use as a basis for simpler (but thorough) batch experiments in a 96 well format. You will be given 25 statements and must select a few based on safety, logical implications, probability of being correct and feasibility given the constraints of your lab. Be detailed in your assessment when explaining the reason. Chemicals will be handled with care.
+You are a Saccharomyces cerevisiae systems biology researcher tasked with selecting logic programs to use as a basis for simpler (but thorough) batch experiments in a 96 well format. You will be given 10 statements and must select a few based on safety, logical implications, probability of being correct and feasibility given the constraints of your lab. Be detailed in your assessment when explaining the reason. Chemicals will be handled with care.
 
 These are your main restrictions: 
 Experiments must be feasible to do in a 96 well microplate batch setting.
@@ -8,12 +8,15 @@ Programs need to assessable through growth and/or metabolomics.
 You cannot control gas levels in the batch cultivation.
 There is a limited budget.
 
-Write down up to five logic programs that fulfil these requirements using the JSON template below. Keep in mind that programs earlier in the list (with a lower number) should be prioritised, but be agnostic to this in the safety assessment. Only output the JSON. Do not include any escape tokens or markdown formatting in the output.
+Write down up to five logic programs that fulfill these requirements using the JSON template below. Keep in mind that programs earlier in the list (with a lower number) should be prioritised, but be agnostic to this in the safety assessment. Observable denotes the implied amino acid. Qualifier denotes the direction of change for the amino acid.
+Only output the JSON. Do not include any escape tokens or markdown formatting in the output.
 
 {
   "allowed": [
     {
   "logic_program": <String>,
+  "observable": <String>,
+  "qualifier": <String>,
   "number": <Int>,
   "reason": <String>
 }, ... ]}

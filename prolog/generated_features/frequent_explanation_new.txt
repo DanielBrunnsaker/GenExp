@@ -1,0 +1,55 @@
+[features from good clauses]
+[pos cover = 3931 neg cover = 0] [pos-neg] [3931]
+feature(1,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C))).
+[pos cover = 2867 neg cover = 0] [pos-neg] [2867]
+feature(2,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C))).
+[pos cover = 332 neg cover = 0] [pos-neg] [332]
+feature(3,(gene(A):-exhibits_phenotype(A,'decreased acid pH resistance',B,C))).
+[pos cover = 422 neg cover = 0] [pos-neg] [422]
+feature(8,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,hydroxyurea))).
+[pos cover = 55 neg cover = 0] [pos-neg] [55]
+feature(10,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'cadmium dichloride'))).
+[pos cover = 404 neg cover = 0] [pos-neg] [404]
+feature(11,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'Congo Red'))).
+[pos cover = 111 neg cover = 0] [pos-neg] [111]
+feature(12,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'2,4-dinitrophenol'))).
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+feature(13,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,sirolimus))).
+[pos cover = 714 neg cover = 0] [pos-neg] [714]
+feature(15,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'benzo[a]pyrene'))).
+[pos cover = 540 neg cover = 0] [pos-neg] [540]
+feature(16,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,amitrole))).
+[pos cover = 17 neg cover = 0] [pos-neg] [17]
+feature(17,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'ethylenediaminetetraacetic acid'))).
+[pos cover = 279 neg cover = 0] [pos-neg] [279]
+feature(18,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'CG-1521'))).
+[pos cover = 108 neg cover = 0] [pos-neg] [108]
+feature(22,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'(S)-lactic acid'))).
+[pos cover = 44 neg cover = 0] [pos-neg] [44]
+feature(23,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),condition(C,'Treated with 5.1% (w/v), pH2.7 (S)-lactic acid'))).
+[pos cover = 223 neg cover = 0] [pos-neg] [223]
+feature(25,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'Polygodial'))).
+[pos cover = 171 neg cover = 0] [pos-neg] [171]
+feature(26,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'derivative myriocin'))).
+[pos cover = 87 neg cover = 0] [pos-neg] [87]
+feature(27,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),condition(C,'Media:  YPD; pH 2.6'))).
+[pos cover = 47 neg cover = 0] [pos-neg] [47]
+feature(28,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'hydrogen chloride'))).
+[pos cover = 47 neg cover = 0] [pos-neg] [47]
+feature(29,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),condition(C,'Treated with 0.28% (w/v), pH 2.4 hydrogen chloride'))).
+[pos cover = 8 neg cover = 0] [pos-neg] [8]
+feature(30,(gene(A):-exhibits_phenotype(A,'decreased acid pH resistance',B,C),compound_name(B,'acetic acid'))).
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+feature(95,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of','L-aspartate'))).
+[pos cover = 996 neg cover = 0] [pos-neg] [996]
+feature(96,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of','L-glutamate'))).
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+feature(97,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'consumption of','L-glutamine'))).
+[pos cover = 559 neg cover = 0] [pos-neg] [559]
+feature(98,(gene(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_modulates_target(B,'through activation',D),participates_in_metabolism(D,'production of','L-asparagine'))).
+[pos cover = 44 neg cover = 0] [pos-neg] [44]
+feature(150,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'(S)-lactic acid'),condition(C,'Treated with 5.1% (w/v), pH2.7 (S)-lactic acid'))).
+[pos cover = 87 neg cover = 0] [pos-neg] [87]
+feature(154,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'(S)-lactic acid'),condition(C,'Media:  YPD; pH 2.6'))).
+[pos cover = 47 neg cover = 0] [pos-neg] [47]
+feature(160,(gene(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'hydrogen chloride'),condition(C,'Treated with 0.28% (w/v), pH 2.4 hydrogen chloride'))).

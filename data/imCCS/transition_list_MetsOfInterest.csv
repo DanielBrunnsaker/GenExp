@@ -1,0 +1,7 @@
+Molecule List Name;Precursor Name;Precursor Formula;Precursor Adduct;Precursor Charge;Product m/z;Product Charge;CCS
+allccs;Glycogen;C24H42O21;[M+H]+;1;667.2292;1;229.6
+allccs;Glycogen;C24H42O21;[M-H]-;-1;665.2146;-1;225.7
+allccs;Glycogen;C24H42O21;[M+Na]+;1;689.2112;1;232.3
+allccs;Glycogen;C24H42O21;[M+HCOO]-;-1;711.2201;-1;237.4
+allccs;Glycogen;C24H42O21;[M+NH4]+;1;684.2558;1;230.8
+allccs;Glycogen;C24H42O21;[M-H2O+H]+;1;649.2186;1;231.1

@@ -1,0 +1,113 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'zinc dichloride').",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "control",
+            "summary": "Baseline growth without any supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-glutamate",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Growth with low glutamate supplementation, no zinc dichloride."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-glutamate",
+            "media_supplementation_doses": "50 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 12.0,
+            "type": "supplementation control",
+            "summary": "Growth with high glutamate supplementation, no zinc dichloride."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "zinc dichloride",
+            "treatment_parameters": "0.5 mM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Growth with moderate zinc dichloride treatment, no glutamate."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "zinc dichloride",
+            "treatment_parameters": "1.0 mM",
+            "sampling_time": 12.0,
+            "type": "treatment control",
+            "summary": "Growth with high zinc dichloride treatment, no glutamate."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-glutamate",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "zinc dichloride",
+            "treatment_parameters": "0.5 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with low glutamate supplementation and moderate zinc dichloride treatment."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-glutamate",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "zinc dichloride",
+            "treatment_parameters": "1.0 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with low glutamate supplementation and high zinc dichloride treatment."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-glutamate",
+            "media_supplementation_doses": "50 mM",
+            "treatment": "zinc dichloride",
+            "treatment_parameters": "0.5 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with high glutamate supplementation and moderate zinc dichloride treatment."
+        },
+        {
+            "experiment": 9,
+            "baseline_media": "minimal media",
+            "cultivation_temperature": "30\u00b0C",
+            "media_supplementation": "L-glutamate",
+            "media_supplementation_doses": "50 mM",
+            "treatment": "zinc dichloride",
+            "treatment_parameters": "1.0 mM",
+            "sampling_time": 12.0,
+            "type": "experiment",
+            "summary": "Growth with high glutamate supplementation and high zinc dichloride treatment."
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "allowed": [
+        {
+            "logic_program": "Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'butyric acid').",
+            "observable": "methionine",
+            "qualifier": "lower",
+            "number": 5,
+            "reason": "Butyric acid is relatively safe to handle and can be used in a ventilated area. The experiment is feasible in a 96 well format and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,quinine).",
+            "observable": "methionine",
+            "qualifier": "lower",
+            "number": 8,
+            "reason": "Quinine is a safe compound to handle in a ventilated area. The experiment is feasible in a 96 well format and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,camptothecin).",
+            "observable": "methionine",
+            "qualifier": "lower",
+            "number": 10,
+            "reason": "Camptothecin is a known compound for research purposes and can be handled with care in a ventilated area. The experiment is feasible in a 96 well format and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,mefloquine).",
+            "observable": "methionine",
+            "qualifier": "higher",
+            "number": 6,
+            "reason": "Mefloquine is a compound that can be handled safely with precautions. The experiment is feasible in a 96 well format and can be assessed through growth assays."
+        },
+        {
+            "logic_program": "Cell(A):-exhibits_phenotype(A,'decreased hyperosmotic stress resistance',B,C).",
+            "observable": "methionine",
+            "qualifier": "lower",
+            "number": 9,
+            "reason": "This experiment does not involve any additional chemicals, making it safe and cost-effective. It can be assessed through growth assays in a 96 well format."
+        }
+    ]
+}
