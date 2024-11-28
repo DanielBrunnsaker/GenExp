@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 OBO = rdflib.Namespace('http://purl.obolibrary.org/obo/')
 HYPO = rdflib.Namespace('http://hypo.project-genesis.io#')
-
+OBOINOWL = rdflib.Namespace('http://www.geneontology.org/formats/oboInOwl#')
 
 term = rdflib.URIRef('http://purl.obolibrary.org/obo/')
 
@@ -35,6 +35,12 @@ def term_from_label(label, g):
                                 object=rdflib.Literal(label, lang='en'))
     if term == None:
         term = g.value(predicate=RDFS.label,
+                                object=rdflib.Literal(label))
+    if term == None:
+        term = hypo_graph.value(predicate=OBOINOWL.hasExactSynonym,
+                                object=rdflib.Literal(label))
+    if term == None:
+        term = hypo_graph.value(predicate=OBOINOWL.hasRelatedSynonym,
                                 object=rdflib.Literal(label))
     return term
 
