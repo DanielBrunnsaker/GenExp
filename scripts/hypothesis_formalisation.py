@@ -1,6 +1,12 @@
+from rdflib import Graph, Literal, URIRef, BNode
+import rdflib.graph
+from rdflib.plugins.stores import sparqlstore
 import rdflib
 from rdflib.namespace import RDFS, RDF, OWL
 import os
+import requests
+
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -21,21 +27,19 @@ def role_between_classes(a, b, r):
     return trips
 
 
-
-hypo_graph = rdflib.Graph()
-hypo_graph.parse(os.path.join(BASE_DIR, 'ontology-files/hypo.ttl'))
-
 def term_from_label(label):
     term = hypo_graph.value(predicate=RDFS.label,
-                        object=rdflib.Literal(label, datatype=rdflib.URIRef('http://www.w3.org/2001/XMLSchema#string')))
+                            object=rdflib.Literal(label, datatype=rdflib.URIRef('http://www.w3.org/2001/XMLSchema#string')))
     if term == None:
         term = hypo_graph.value(predicate=RDFS.label,
-                        object=rdflib.Literal(label, lang='en'))
+                                object=rdflib.Literal(label, lang='en'))
     if term == None:
         term = hypo_graph.value(predicate=RDFS.label,
-                        object=rdflib.Literal(label))
+                                object=rdflib.Literal(label))
     return term
 
+hypo_graph = rdflib.Graph()
+hypo_graph.parse(os.path.join(BASE_DIR, 'ontology-files/hypo.ttl'), format='turtle')
 
 """
 Add A subClassOf B
@@ -48,15 +52,3 @@ for t in role_between_classes(OBO.A, HYPO.B, HYPO.rel):
 
 """
 
-
-
-"""
-for sparql store:
-this graph can be treated as a normal rdflib graph - (with caveat that I haven't written to graph like this, I think it should work as long as backend server allows for it)
-"""
-
-from rdflib.plugins.stores import sparqlstore
-
-kg_endpoint='http://localhost:3030/kg'
-sp_store = sparqlstore.SPARQLStore(kg_endpoint)
-kg = rdflib.Graph(store=sp_store)
