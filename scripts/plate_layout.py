@@ -28,7 +28,7 @@ def save_json(data, file_path):
 def run_minizinc_command(plate_file):
     # Use absolute paths for minizinc and files
     minizinc_path = "/Applications/MiniZincIDE.app/Contents/Resources/minizinc"
-    mzn_file = "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/plaid/plate-design.mzn"
+    mzn_file = os.environ["GEN_EXP_ROOT_DIR"] + "/plaid/plate-design.mzn"
     json_file = plate_file
     
     command = f"{minizinc_path} --solver Gecode {mzn_file} {json_file}"

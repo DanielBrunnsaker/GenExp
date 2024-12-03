@@ -353,9 +353,9 @@ def main():
     default values
     python growth_processing.py --path "/Volumes/EVE/20241010 HPLC" --output /Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/growth/20241010_hplc_growth_experiment.txt
     python growth_processing.py --path "/Volumes/EVE/20241010 HPLC" --output "../experiments/growth/20241010_hplc_growth_experiment.txt"
-    python growth_processing.py --path "/Volumes/EVE/20241010 HPLC" --output "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/amiga_results/data/20241010_hplc_growth_experiment.txt " --blank distance
+    python growth_processing.py --path "/Volumes/EVE/20241010 HPLC" --output os.environ["GEN_EXP_ROOT_DIR"] + "/experiments/amiga_results/data/20241010_hplc_growth_experiment.txt " --blank distance
     
-    python growth_processing.py --path "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/growth/20241010 HPLC" --output "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/amiga_results/data/20241010_hplc_growth_experiment.txt" --correction "yes" --n 3 --filtering "yes"
+    python growth_processing.py --path os.environ["GEN_EXP_ROOT_DIR"] + "/experiments/growth/20241010 HPLC" --output os.environ["GEN_EXP_ROOT_DIR"] + "/experiments/amiga_results/data/20241010_hplc_growth_experiment.txt" --correction "yes" --n 3 --filtering "yes"
     
     /Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/amiga_results/data/20241010_hplc_growth_experiment.txt 
     
@@ -520,7 +520,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import os
-os.chdir('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/scripts')
+os.chdir(os.environ["GEN_EXP_ROOT_DIR"] + '/scripts')
 main()
 
 

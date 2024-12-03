@@ -6,6 +6,7 @@ Created on Sat Oct 19 13:52:18 2024
 @author: danbru
 """
 
+import os
 import itertools
 import json
 import subprocess
@@ -33,7 +34,7 @@ def save_json(data, file_path):
 def run_minizinc_command(plate_file):
     # Use absolute paths for minizinc and files
     minizinc_path = "/Applications/MiniZincIDE.app/Contents/Resources/minizinc"
-    mzn_file = "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/plaid/plate-design.mzn"
+    mzn_file = os.environ["GEN_EXP_ROOT_DIR"] + "/plaid/plate-design.mzn"
     json_file = plate_file
     
     command = f"{minizinc_path} --solver Gecode {mzn_file} {json_file}"
@@ -231,7 +232,7 @@ def generate_layout(json_data, reference_layout, output_path):
         
         reference_layout['compound_replicates'] = [repl]
         #save_json(reference_layout, os.environ["GEN_EXP_ROOT_DIR"] + '/plaid/reference_plate_etoh.json')
-        #output = run_minizinc_command("/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/plaid/reference_plate_etoh.json")
+        #output = run_minizinc_command(os.environ["GEN_EXP_ROOT_DIR"] + "/plaid/reference_plate_etoh.json")
         save_json(reference_layout, output_path)
         output = run_minizinc_command(output_path)
         
