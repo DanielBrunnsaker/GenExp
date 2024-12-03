@@ -135,17 +135,17 @@ def main():
         exit()
 
 
-    print('Designing plate layout... \n')
-    command4 = f"python plate_layout.py --folder {output_folder}"
-    run_script(command4)
+    # print('Designing plate layout... \n')
+    # command4 = f"python plate_layout.py --folder {output_folder}"
+    # run_script(command4)
 
-    # Run script5 with optional input
-    input_text_S = args.S if args.S else input("Please provide stock concentration for supplement 1 if applicable: ")
-    input_text_T = args.Treatment if args.Treatment else input("Please provide stock concentration for treatment 1 if applicable: ")
+    # # Run script5 with optional input
+    # input_text_S = args.S if args.S else input("Please provide stock concentration for supplement 1 if applicable: ")
+    # input_text_T = args.Treatment if args.Treatment else input("Please provide stock concentration for treatment 1 if applicable: ")
     
-    print('Generating hamilton runlists... \n')
-    command5 = f"python hamilton_protocol.py --volume {args.volume} --folder {output_folder} --S {input_text_S} --Treatment {input_text_T}"
-    run_script(command5)
+    # print('Generating hamilton runlists... \n')
+    # command5 = f"python hamilton_protocol.py --volume {args.volume} --folder {output_folder} --S {input_text_S} --Treatment {input_text_T}"
+    # run_script(command5)
 
     print("All steps completed successfully.")
 
