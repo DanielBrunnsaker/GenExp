@@ -90,13 +90,16 @@ for t in role_between_classes(OBO.A, HYPO.B, HYPO.rel):
 
 """
 
-hypotheses_dir = os.path.join(BASE_DIR, "experiments/plans")
+hypotheses_dir = os.path.join(BASE_DIR, "experiments")
 
 hypotheses = []
 
 for folder in os.listdir(hypotheses_dir):
-    with open(os.path.join(hypotheses_dir, folder, "hypothesis/hypothesis_details.json"), "r") as fi:
-        hypotheses.append(json.load(fi))
+    try:
+        with open(os.path.join(hypotheses_dir, folder, "hypothesis/hypothesis_details.json"), "r") as fi:
+            hypotheses.append(json.load(fi))
+    except FileNotFoundError:
+        continue
 
 CHEM_COMP_ACC = term_from_label("chemical compound accumulation", hypo_graph)
 CHEM_ACC_OF = term_from_label("accumulationOfChemical", hypo_graph)
