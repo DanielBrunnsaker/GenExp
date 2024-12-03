@@ -62,8 +62,8 @@ def main():
     alpha = args['alpha']
     
     # Load OpenAI-key
-    key = open("../key.txt", "r")
-    key = key.read()
+    with open("../key.txt", "r") as fi:
+        key = fi.read()
     
     # Load this in instead, as a JSON or excel?
     #relevance_scores = {
@@ -177,22 +177,22 @@ def main():
     with open(f'../experiments/{main_folder}/hypothesis/patterns/prompt.txt', 'w') as file:
         file.write(full_prompt)
         
-    # Save config
-    config_variables = {
-        "folder": main_folder,
-        "alpha": alpha,
-        "N": N
-    }
+    # # Save config
+    # config_variables = {
+    #     "folder": main_folder,
+    #     "alpha": alpha,
+    #     "N": N
+    # }
     
-    text_template = '{{"folder": "{folder}", "alpha": {alpha}, "N": "{N}"}}'
-    formatted_text = text_template.format(**config_variables)
+    # text_template = '{{"folder": "{folder}", "alpha": {alpha}, "N": "{N}"}}'
+    # formatted_text = text_template.format(**config_variables)
         
-    # Convert the formatted string to a JSON-compatible Python object
-    json_data = json.loads(formatted_text)
+    # # Convert the formatted string to a JSON-compatible Python object
+    # json_data = json.loads(formatted_text)
         
-    # Save the JSON data to a file
-    with open(f'../experiments/{main_folder}/config.json', 'w') as file:
-        json.dump(json_data, file, indent=4)  
+    # # Save the JSON data to a file
+    # with open(f'../experiments/{main_folder}/config.json', 'w') as file:
+    #     json.dump(json_data, file, indent=4)  
     
     print(f"{base_path}/{main_folder}")
     

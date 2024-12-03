@@ -51,6 +51,29 @@ def main():
         print("Failed to retrieve output folder from pattern_selector")
         exit(1)
 
+    ###########################################################################
+    # Save config (moved here from `pattern_selection.py` script)
+    main_folder = output_folder.rsplit("/", 1)[1]
+    config_variables = {
+        "folder": main_folder,
+        "target": args.target,
+        "alpha": args.alpha,
+        "N": args.N,
+        "T": args.T,
+        "volume": args.volume
+    }
+    
+    text_template = '{{"folder": "{folder}", "target": "{target}", "alpha": {alpha}, "N": "{N}", "T": "{T}", "volume": "{volume}"}}'
+    formatted_text = text_template.format(**config_variables)
+        
+    # Convert the formatted string to a JSON-compatible Python object
+    json_data = json.loads(formatted_text)
+        
+    # Save the JSON data to a file
+    with open(f'../experiments/{main_folder}/config.json', 'w') as file:
+        json.dump(json_data, file, indent=4) 
+    ###########################################################################
+
     # Use the captured folder for subsequent scripts
     #command2 = f'python hypothesis_generation.py --T 0.7 --folder "{output_folder}"'
     print('Generating hypothesis... \n')
