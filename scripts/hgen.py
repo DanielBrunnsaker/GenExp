@@ -23,6 +23,8 @@ def main():
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
     os.chdir(script_dir)
+    GEN_EXP_ROOT_DIR = os.path.abspath("./..")
+    os.environ["GEN_EXP_ROOT_DIR"] = GEN_EXP_ROOT_DIR
     
     # Set up argument parsing
     parser = argparse.ArgumentParser(description="Run all scripts in sequence with appropriate flags.")

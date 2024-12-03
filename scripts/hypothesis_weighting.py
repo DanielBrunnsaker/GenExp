@@ -20,7 +20,7 @@ import warnings
 warnings.simplefilter("ignore")
 os.environ["PYTHONWARNINGS"] = "ignore" # Also affect subprocesses
 
-os.chdir('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/scripts')
+os.chdir(os.environ["GEN_EXP_ROOT_DIR"] + '/scripts')
 #os.chdir('/home/danbru/Projects/DRM/scripts')
 
 aap_set = pd.read_excel('../data/AA.xls', 

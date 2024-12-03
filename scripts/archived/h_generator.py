@@ -221,7 +221,7 @@ import pickle
 import os
 import numpy as np
 
-#os.chdir('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/scripts')
+#os.chdir(os.environ["GEN_EXP_ROOT_DIR"] + '/scripts')
 
 #os.chdir(os.getcwd())
 

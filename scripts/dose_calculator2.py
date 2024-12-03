@@ -6,6 +6,7 @@ Created on Thu Nov  7 13:14:52 2024
 @author: danbru
 """
 
+import os
 import json
 import pubchempy as pcp
 from pint import UnitRegistry
@@ -51,8 +52,8 @@ def return_hamilton_concentrations(protocol_path, plate_layout_path):
     Q_ = ureg.Quantity
 
 
-    protocol_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/generated_outputs/20241108_1022_protocol_glutamate_10_0.0_1.0_0.1.json'
-    plate_layout_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/generated_outputs/20241108_1022_layoutTable_glutamate_10_0.0_1.0_0.1.tsv'
+    protocol_path = os.environ["GEN_EXP_ROOT_DIR"] + '/experiments/generated_outputs/20241108_1022_protocol_glutamate_10_0.0_1.0_0.1.json'
+    plate_layout_path = os.environ["GEN_EXP_ROOT_DIR"] + '/experiments/generated_outputs/20241108_1022_layoutTable_glutamate_10_0.0_1.0_0.1.tsv'
     
     # Load protocol and plate layout
     protocol = load_json(protocol_path)

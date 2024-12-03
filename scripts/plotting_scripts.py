@@ -5,11 +5,12 @@ Created on Tue Oct 22 11:02:15 2024
 
 @author: danbru
 """
+import os
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-gdata = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/amiga_results/data/20241010_hplc_growth_experiment.txt', sep = '\t', index_col = 0)
+gdata = pd.read_csv(os.environ["GEN_EXP_ROOT_DIR"] + '/experiments/amiga_results/data/20241010_hplc_growth_experiment.txt', sep = '\t', index_col = 0)
 
 
 # Plot wells that were sampled at 10h and those that were sampled at 12h

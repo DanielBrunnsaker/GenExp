@@ -39,9 +39,9 @@ def return_hamilton_concentrations(protocol_path, plate_layout):
     import pandas as pd
     from tabulate import tabulate
     
-    #plate_layout = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/generated_outputs/20241021_1833_layoutTable_glutamine_25_0.5_1.0_0.2.tsv', sep = '\t', index_col = 0)
+    #plate_layout = pd.read_csv(os.environ["GEN_EXP_ROOT_DIR"] + '/experiments/generated_outputs/20241021_1833_layoutTable_glutamine_25_0.5_1.0_0.2.tsv', sep = '\t', index_col = 0)
     
-   # protocol = load_json('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/generated_outputs/20241021_1833_protocol_glutamine_25_0.5_1.0_0.2.json')
+   # protocol = load_json(os.environ["GEN_EXP_ROOT_DIR"] + '/experiments/generated_outputs/20241021_1833_protocol_glutamine_25_0.5_1.0_0.2.json')
     #experiment = protocol['experiments'][5]
     protocol = load_json(protocol_path)
     

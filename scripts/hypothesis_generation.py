@@ -70,7 +70,7 @@ def main():
     with open('hypothesis/feasibility/selection.json', 'r') as file:
         allowed_programs = json.load(file)
         
-    #with open('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/proline_0.1_10_20241114_1603/hypothesis/feasibility/selection.json', 'r') as file:
+    #with open(os.environ["GEN_EXP_ROOT_DIR"] + '/experiments/proline_0.1_10_20241114_1603/hypothesis/feasibility/selection.json', 'r') as file:
     #    allowed_programs = json.load(file)
         
     full_prompt = open("hypothesis/patterns/prompt.txt", "r")

@@ -6,6 +6,7 @@ Created on Tue Oct 29 09:51:42 2024
 @author: danbru
 """
 
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
@@ -16,7 +17,7 @@ import pandas as pd
 time_data = np.array([0, 10, 12])  # Time in hours
 glucose_data = np.array([(19.760+18.392+20.170)/3, (13.909+13.921+14.140)/3, (10.921+9.496+11.047)/3])  # Glucose concentration (arbitrary units)
 
-biomass_data = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/amiga_results/data/20241002_24_growth_experiment.txt', sep = '\t', index_col = 0)
+biomass_data = pd.read_csv(os.environ["GEN_EXP_ROOT_DIR"] + '/experiments/amiga_results/data/20241002_24_growth_experiment.txt', sep = '\t', index_col = 0)
 biomass_data = biomass_data[['0','36000','43200']]
 biomass_data = biomass_data.loc[['A03','A11','D04','F09','H09']].mean(axis = 0).to_numpy()#*0.34
 
@@ -34,7 +35,7 @@ glucose_data = np.array([(19.760+18.392+20.170)/3, (13.909+13.921+14.140)/3, (10
 # Extend the time data for growth measurements
 time_data_growth = np.array([0, 10, 12, 14, 16, 18, 20])  # Time in hours
 #biomass_data_growth = np.array([0.1, 0.8, 1.2, 1.6, 2.0, 2.4])  # Extended biomass concentrations
-biomass_data = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/amiga_results/data/20241002_24_growth_experiment.txt', sep = '\t', index_col = 0)
+biomass_data = pd.read_csv(os.environ["GEN_EXP_ROOT_DIR"] + '/experiments/amiga_results/data/20241002_24_growth_experiment.txt', sep = '\t', index_col = 0)
 biomass_data = biomass_data[['0','36000','43200','50400','57600','64800','72000']]
 biomass_data_growth = biomass_data.loc[['A02','A03','A04','E03','D03','F03']].mean(axis = 0).to_numpy()*0.34
 

@@ -231,7 +231,7 @@ def main():
             
             
             
-            with open('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/tyrosine_0.1_10_20241114_1735/protocol/protocol.json', 'r') as file:
+            with open(os.environ["GEN_EXP_ROOT_DIR"] + '/experiments/tyrosine_0.1_10_20241114_1735/protocol/protocol.json', 'r') as file:
                 data = json.load(file)
                 #print(data)
             

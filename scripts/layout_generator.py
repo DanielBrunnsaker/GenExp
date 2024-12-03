@@ -179,8 +179,8 @@ def plate_filler(plate_layout):
 
 def generate_layout(json_data, reference_layout, output_path):
 
-    #json_data = load_json('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/generated_outputs/20241021_1833_protocol_glutamine_25_0.5_1.0_0.2.json')
-    #reference_layout = load_json('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/plaid/reference_plate.json')
+    #json_data = load_json(os.environ["GEN_EXP_ROOT_DIR"] + '/experiments/generated_outputs/20241021_1833_protocol_glutamine_25_0.5_1.0_0.2.json')
+    #reference_layout = load_json(os.environ["GEN_EXP_ROOT_DIR"] + '/plaid/reference_plate.json')
     json_data = load_json(json_data)
     reference_layout = load_json(reference_layout)
     
@@ -230,7 +230,7 @@ def generate_layout(json_data, reference_layout, output_path):
     for repl in range(14,4,-1):
         
         reference_layout['compound_replicates'] = [repl]
-        #save_json(reference_layout, '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/plaid/reference_plate_etoh.json')
+        #save_json(reference_layout, os.environ["GEN_EXP_ROOT_DIR"] + '/plaid/reference_plate_etoh.json')
         #output = run_minizinc_command("/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/plaid/reference_plate_etoh.json")
         save_json(reference_layout, output_path)
         output = run_minizinc_command(output_path)
