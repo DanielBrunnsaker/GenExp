@@ -172,104 +172,117 @@ owl:deprecated rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://hypo.project-genesis.io#accumulationOfChemical
-:accumulationOfChemical rdf:type owl:ObjectProperty ;
-                        rdfs:domain obo:APO_0000095 ;
-                        rdfs:range obo:CHEBI_24431 .
-
-
-###  http://hypo.project-genesis.io#implies
-:implies rdf:type owl:ObjectProperty ;
-         rdfs:domain :organismState ;
-         rdfs:range :organismState .
-
-
-###  http://hypo.project-genesis.io#stateHasMutation
-:stateHasMutation rdf:type owl:ObjectProperty ;
-                  rdfs:domain :organismState ;
-                  rdfs:range obo:APO_0000006 .
-
-
-###  http://hypo.project-genesis.io#stateHasObservable
-:stateHasObservable rdf:type owl:ObjectProperty ;
-                    rdfs:domain :organismState ;
-                    rdfs:range obo:APO_0000017 .
-
-
 ###  http://purl.obolibrary.org/obo/resistanceToChemical
 obo:resistanceToChemical rdf:type owl:ObjectProperty ;
                          rdfs:domain obo:APO_0000087 ;
-                         rdfs:range obo:CHEBI_24431 .
+                         rdfs:range obo:CHEBI_24431 ;
+                         rdfs:label "resistanceToChemical" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#absentComparedTo
 :absentComparedTo rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :decreasedComparedTo .
+                  rdfs:subPropertyOf :decreasedComparedTo ;
+                  rdfs:label "absentComparedTo" .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#accumulationOfChemical
+:accumulationOfChemical rdf:type owl:ObjectProperty ;
+                        rdfs:domain obo:APO_0000095 ;
+                        rdfs:range obo:CHEBI_24431 ;
+                        rdfs:label "accumulationOfChemical" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#arrestedComparedTo
 :arrestedComparedTo rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :differsFrom .
+                    rdfs:subPropertyOf :differsFrom ;
+                    rdfs:label "arrestedComparedTo" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#decreasedComparedTo
 :decreasedComparedTo rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :differsFrom ;
-                     obo:IAO_0000115 "The observed feature is decreased in the source phenotype compared to that in the target phenotype (faster, stronger, higher, larger, etc.)." .
+                     obo:IAO_0000115 "The observed feature is decreased in the source phenotype compared to that in the target phenotype (faster, stronger, higher, larger, etc.)." ;
+                     rdfs:label "decreasedComparedTo" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#decreasedDurationComparedTo
 :decreasedDurationComparedTo rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf :differsFrom .
+                             rdfs:subPropertyOf :differsFrom ;
+                             rdfs:label "decreasedDurationComparedTo" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#decreasedRateComparedTo
 :decreasedRateComparedTo rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf :differsFrom .
+                         rdfs:subPropertyOf :differsFrom ;
+                         rdfs:label "decreasedRateComparedTo" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#delayedComparedTo
 :delayedComparedTo rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf :differsFrom .
+                   rdfs:subPropertyOf :differsFrom ;
+                   rdfs:label "delayedComparedTo" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#differsFrom
-:differsFrom rdf:type owl:ObjectProperty .
+:differsFrom rdf:type owl:ObjectProperty ;
+             rdfs:label "differsFrom" .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#implies
+:implies rdf:type owl:ObjectProperty ;
+         rdfs:domain :organismState ;
+         rdfs:range :organismState ;
+         rdfs:label "implies" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#increasedComparedTo
 :increasedComparedTo rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :differsFrom ;
-                     obo:IAO_0000115 "The observed feature is increased in the source phenotype compared to that in the target phenotype (faster, stronger, higher, larger, etc.)." .
+                     obo:IAO_0000115 "The observed feature is increased in the source phenotype compared to that in the target phenotype (faster, stronger, higher, larger, etc.)." ;
+                     rdfs:label "increasedComparedTo" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#increasedDurationComparedTo
 :increasedDurationComparedTo rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf :differsFrom .
+                             rdfs:subPropertyOf :differsFrom ;
+                             rdfs:label "increasedDurationComparedTo" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#increasedRateComparedTo
 :increasedRateComparedTo rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf :differsFrom .
+                         rdfs:subPropertyOf :differsFrom ;
+                         rdfs:label "increasedRateComparedTo" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#notDiffersFrom
 :notDiffersFrom rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf owl:topObjectProperty .
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:label "notDiffersFrom" .
 
 
 ###  http://purl.obolibrary.org/obo/apo.owl#prematureComparedTo
 :prematureComparedTo rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :differsFrom .
+                     rdfs:subPropertyOf :differsFrom ;
+                     rdfs:label "prematureComparedTo" .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#stateHasMutation
+:stateHasMutation rdf:type owl:ObjectProperty ;
+                  rdfs:domain :organismState ;
+                  rdfs:range obo:APO_0000006 ;
+                  rdfs:label "stateHasMutation" .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#stateHasObservable
+:stateHasObservable rdf:type owl:ObjectProperty ;
+                    rdfs:domain :organismState ;
+                    rdfs:range obo:APO_0000017 ;
+                    rdfs:label "stateHasObservable" .
 
 
 #################################################################
 #    Classes
 #################################################################
-
-###  http://hypo.project-genesis.io#organismState
-:organismState rdf:type owl:Class .
-
 
 ###  http://purl.obolibrary.org/obo/APO_0000001
 obo:APO_0000001 rdf:type owl:Class ;
@@ -9141,6 +9154,11 @@ apo:curators rdf:type owl:Class ;
              obo:IAO_0100001 obo:APO_0000245 ,
                              obo:APO_0000273 ;
              owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.obolibrary.org/obo/apo.owl#organismState
+:organismState rdf:type owl:Class ;
+               rdfs:label "organismState" .
 
 
 #################################################################
