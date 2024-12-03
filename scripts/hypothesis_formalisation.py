@@ -57,9 +57,7 @@ def term_from_label(label, g):
     return term
 
 
-hypo_graph = rdflib.Graph()
-hypo_graph.parse(os.path.join(
-    BASE_DIR, 'ontology-files/hypo.ttl'), format='turtle')
+
 
 # Set up Fuseki endpoint to create new SPARQL store
 host = "localhost"
@@ -75,6 +73,11 @@ chebi_query_endpoint = f'http://{host}:{chebi_fuseki_port}/genesis/query'
 chebi_store = sparqlstore.SPARQLStore(chebi_query_endpoint)
 
 chebi = Graph(chebi_store, rdflib.graph.DATASET_DEFAULT_GRAPH_ID)
+
+# Create local graph for hypothesis ontology
+hypo_graph = rdflib.Graph()
+hypo_graph.parse(os.path.join(
+    BASE_DIR, 'ontology-files/hypo.ttl'), format='turtle')
 
 """
 Add A subClassOf B
@@ -137,7 +140,7 @@ def find_or_create_node(
     qres = graph.query(query)
 
     if len(qres) == 0:
-        # print("Need to add this node.")
+        print("Need to add this node.")
         node_uri = namespace[create_id(prefix=id_prefix)]
         node_triples = [
             tuple(map(lambda v: node_uri if v is None else v, t)) for t in triples]
@@ -177,7 +180,8 @@ def logic_program_to_state(logic_program):
             REFERENCE_STATE, None, STATE_HAS_OBSERVABLE) + [(None, RDFS.subClassOf, phtype)]
         ref_phtype = find_or_create_node(
             hypo_graph, ref_query_trips, id_prefix="P-REF", namespace=HYPO)
-        # print(ref_phtype)
+        print(ref_phtype)
+        ## TODO Add Label or other property to make querying easier
 
         # Fetch the compared phenotype from the graph if it exists,
         # create it if it doesn't exist.
@@ -187,8 +191,9 @@ def logic_program_to_state(logic_program):
             None, ref_phtype, qualifying_relation) + [(None, RDFS.subClassOf, phtype)]
         comp_phtype = find_or_create_node(
             hypo_graph, comp_query_trips, id_prefix="P", namespace=HYPO)
-        # print(comp_phtype)
+        print(comp_phtype)
         phenotype_uri_list.append(comp_phtype)
+        ## TODO Add Label or other property to make querying easier
 
         # triples.extend(role_between_classes(
         #     HYPO[stateid], HYPO[phid], STATE_HAS_OBSERVABLE))
@@ -203,6 +208,7 @@ def logic_program_to_state(logic_program):
     state = find_or_create_node(
         hypo_graph, state_triples, id_prefix="S", namespace=HYPO
     )
+    ## TODO Add Label or other property to make querying easier
     return state
 
 
@@ -214,10 +220,12 @@ def hypothesis_to_triples(h):
     print(amino_acid)
 
     # Generate `observable` concepts for the reference
-    triples.append((HYPO.P1, RDF.type, CHEM_COMP_ACC))
-    triples.append((HYPO.P1, CHEM_ACC_OF, amino_acid))
+    # triples.append((HYPO.P1, RDF.type, CHEM_COMP_ACC))
+    # triples.append((HYPO.P1, CHEM_ACC_OF, amino_acid))
     # triples.extend(role_between_classes())
     # Split the formula
+
+    # State implies State
 
     return triples
 
