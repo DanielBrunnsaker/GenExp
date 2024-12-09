@@ -37,7 +37,7 @@ def main():
     os.chdir(folder)
     
     # Load hypothesis text
-    hypothesis_text = open("hypothesis/generated_hypothesis.txt", "r")
+    hypothesis_text = open("hypothesis/selected_hypothesis/hypothesis.txt", "r")
     hypothesis_text = hypothesis_text.read()
     
     # Autoformalize hypothesis text into valid experimental protocol
@@ -47,14 +47,20 @@ def main():
         print('Faulty plan.')
         exit()
     
+    # Replace with the correct logic program
+    with open('hypothesis/selected_hypothesis/hypothesis_details.json', 'r') as file:
+        details = json.load(file)
+    
+    json_output['logic_program'] = details['logic_program']
+    
     # Write the content to the JSON file
     with open('protocol/protocol.json', 'w') as file:
         json.dump(json_output, file, indent=4)
     
 
 import os
-from hgen_support import *
-from gpt_support import *
+from utils.hgen_support import *
+from utils.gpt_support import *
 import json
 
 if __name__ == "__main__":

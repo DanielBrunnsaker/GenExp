@@ -1,0 +1,42 @@
+**Motivation:**
+
+The aim of this experiment is to investigate the association between elevated intracellular glutamate levels and decreased resistance to formic acid in Saccharomyces cerevisiae. Understanding this relationship could provide insights into the metabolic pathways and resistance mechanisms involving glutamate.
+
+**Hypothesis:**
+
+Cells with increased intracellular glutamate levels, as compared to normal levels, exhibit decreased resistance to formic acid. The potential mechanism could be that elevated glutamate levels disrupt the cellular homeostasis or stress response pathways, leading to a compromised ability to cope with formic acid exposure.
+
+**Experimental Plan:**
+
+1. **Strain and Culture Conditions:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cells in 96-well plates with minimal media without amino acids at 30°C with shaking.
+   - Inoculate cultures at an initial OD600 of 0.05.
+
+2. **Experimental Setup:**
+   - **Control Group:** No glutamate supplementation, mimicking normal intracellular levels.
+   - **Low Glutamate Supplementation:** Add 10 mM glutamate to the media to modestly increase intracellular levels.
+   - **High Glutamate Supplementation:** Add 30 mM glutamate to the media to significantly increase intracellular levels.
+
+3. **Chemical Resistance Assay:**
+   - At t=0h, add formic acid to each well to a final concentration of 5 mM.
+   - Measure OD600 every 20 minutes to assess growth over 14 hours.
+
+4. **Metabolomics:**
+   - At experiment termination (14 hours), harvest cells for mass spectrometry-based metabolomics to measure intracellular glutamate concentrations.
+
+5. **Controls and Assumption Testing:**
+   - Include wells with only formic acid (no glutamate supplementation) to verify its impact independently.
+   - Include wells with only glutamate (without formic acid) to assess independent impacts on growth and metabolism.
+
+**Expected Outcomes:**
+
+- **Control Group:** Cells grow normally with standard resistance to formic acid, confirming baseline resistance levels.
+- **Low Glutamate Supplementation:** If cells show decreased growth in the presence of formic acid and elevated intracellular glutamate, it supports the hypothesis that increased glutamate leads to decreased resistance.
+- **High Glutamate Supplementation:** A more pronounced decrease in growth compared to the control group would further substantiate the hypothesis.
+- **Metabolomics Results:** Intracellular glutamate levels should correlate with supplementation levels, confirming effective modulation.
+- **Independent Effects:** 
+  - If growth is affected in wells with only glutamate (without formic acid), it suggests a pleiotropic effect, requiring careful interpretation.
+  - Any decrease in growth in the presence of formic acid alone (without glutamate) would serve as a baseline for resistance levels.
+
+By comparing growth rates in all conditions, we can conclude whether elevated intracellular glutamate levels are associated with decreased resistance to formic acid, as proposed.

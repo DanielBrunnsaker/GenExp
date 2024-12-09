@@ -1,0 +1,6 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,spermine)",
+    "observable": "glutamate",
+    "qualifier": "higher",
+    "coefficient": 0.6593935352696771
+}

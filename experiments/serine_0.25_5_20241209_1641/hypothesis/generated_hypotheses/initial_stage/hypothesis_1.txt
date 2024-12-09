@@ -1,0 +1,46 @@
+### Motivation
+
+The statement suggests an association between higher intracellular serine levels and decreased resistance to praseodymium in Saccharomyces cerevisiae. This experiment aims to explore whether increased intracellular serine concentrations correlate with decreased resistance to praseodymium by modulating serine levels and measuring the yeast's growth rate in the presence of praseodymium.
+
+### Hypothesis
+
+Increasing intracellular serine levels in Saccharomyces cerevisiae will correlate with decreased resistance to praseodymium, as indicated by a reduced growth rate in the presence of praseodymium compared to control conditions. The potential mechanism could involve serine's role in metabolic pathways that influence cellular stress responses, which might impact the cell's ability to manage the stress induced by praseodymium.
+
+### Experimental Plan
+
+1. **Culture Preparation**
+   - Use a reference/wild-type prototrophic Saccharomyces cerevisiae strain.
+   - Inoculate cultures at 0.05 OD600 in minimal media without amino acids.
+
+2. **Serine Supplementation**
+   - Prepare three conditions:
+     - Control: No serine supplementation.
+     - Low Serine: Add serine to a final concentration of 0.5 mM.
+     - High Serine: Add serine to a final concentration of 2 mM.
+   - Justification: Serine is known to be taken up by yeast cells, affecting intracellular levels and metabolic pathways.
+
+3. **Praseodymium Treatment**
+   - Prepare three conditions for each serine level:
+     - Control: No praseodymium.
+     - Low Praseodymium: Add praseodymium to a final concentration of 0.1 mM.
+     - High Praseodymium: Add praseodymium to a final concentration of 0.5 mM.
+   - Justification: These concentrations are used to test the yeast's resistance to praseodymium while ensuring viability for measurable growth differences.
+
+4. **Experimental Setup**
+   - Incubate all cultures at 30°C with standardized shaking.
+   - Measure OD600 every 20 minutes to monitor growth.
+   - Terminate the experiment at 14 hours.
+
+5. **Metabolomics Analysis**
+   - At the end of the experiment, perform mass spectrometry-based metabolomics to measure intracellular serine levels, ensuring that the supplementation effectively modulated serine concentrations.
+
+6. **Control Experiments**
+   - Include no-praseodymium and no-serine conditions to establish baseline growth rates and serine levels.
+
+### Expected Outcomes
+
+- **Increased Serine Levels**: Cultures supplemented with serine are expected to show higher intracellular serine concentrations compared to controls.
+- **Growth Rate in Praseodymium**: If the hypothesis is correct, cultures with higher serine levels will exhibit a reduced growth rate in the presence of praseodymium compared to those without serine supplementation.
+- **Independent Effects**: Serine supplementation may independently affect growth rates due to its role in various metabolic pathways. This will be accounted for by comparing growth rates across different praseodymium concentrations in the absence of serine supplementation.
+
+This experimental design allows for evaluating the association between intracellular serine levels and resistance to praseodymium, while controlling for potential confounding factors and ensuring that the effects of serine supplementation are independently assessed.

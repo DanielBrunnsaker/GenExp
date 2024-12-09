@@ -1,0 +1,46 @@
+### Motivation
+
+The statement suggests an association between elevated intracellular glutamate levels and decreased resistance to the chemical spermine in Saccharomyces cerevisiae. Understanding this relationship could provide insights into glutamate's role in stress response mechanisms, particularly in conditions involving polyamines like spermine.
+
+### Hypothesis
+
+Increased intracellular glutamate levels might alter cellular metabolism or stress response pathways, leading to decreased resistance to spermine. This could be due to glutamate's role in amino acid biosynthesis and cellular redox balance, potentially affecting the cell's ability to handle oxidative stress induced by spermine.
+
+### Experimental Plan
+
+1. **Experimental Setup:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids.
+   - Inoculate cultures at an initial OD600 of 0.05.
+
+2. **Glutamate Modulation:**
+   - **Control Group:** No supplementation.
+   - **Low Glutamate Group:** Supplement with 0.5 mM L-glutamic acid.
+   - **High Glutamate Group:** Supplement with 5 mM L-glutamic acid.
+   - Verify intracellular glutamate levels using mass-spectrometry based metabolomics at experiment termination.
+
+3. **Spermine Treatment:**
+   - Add spermine at 0 mM (control), 0.5 mM, and 1 mM concentrations to each glutamate condition at t=0h.
+
+4. **Monitoring:**
+   - Measure OD600 every 20 minutes to assess growth rate and viability.
+   - Terminate the experiment at 12 hours and measure intracellular glutamate concentrations using mass-spectrometry.
+
+5. **Assumption Verification:**
+   - Confirm that glutamate supplementation increases intracellular glutamate levels without significantly affecting other metabolites.
+   - Conduct a separate control experiment with only spermine (0.5 mM and 1 mM) in minimal media to observe its independent effect on growth.
+
+### Expected Outcomes
+
+- **Increased Glutamate Levels:**
+  - If intracellular glutamate levels are indeed associated with decreased resistance to spermine, cultures with higher glutamate should show reduced growth rates or viability in the presence of spermine compared to the control group.
+  - If glutamate does not affect spermine resistance, growth rates should remain consistent across glutamate conditions when spermine is present.
+
+- **Independent Spermine Effects:**
+  - Spermine alone is expected to reduce growth rates in a dose-dependent manner, regardless of glutamate levels.
+
+- **Assumption Verification:**
+  - Mass-spectrometry should confirm elevated intracellular glutamate levels in supplemented groups.
+  - Glutamate supplementation should not significantly alter other metabolic pathways, as indicated by stable growth in the absence of spermine.
+
+By comparing growth rates and viability across different glutamate and spermine conditions, we can determine if there is a direct association between increased intracellular glutamate levels and decreased resistance to spermine.

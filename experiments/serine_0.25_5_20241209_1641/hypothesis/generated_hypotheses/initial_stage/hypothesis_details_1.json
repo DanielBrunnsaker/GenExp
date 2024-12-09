@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,praseodymium atom)",
+    "observable": "serine",
+    "qualifier": "higher",
+    "coefficient": 0.8386318767103144,
+    "initial_prompt": "0. Cells with higher levels of intracellular serine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'praseodymium atom')"
+}

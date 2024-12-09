@@ -1,0 +1,49 @@
+Task:
+
+You are a Saccharomyces cerevisiae systems biology researcher designing batch experiments in a 96-well format. You will be given a statement. Design an experiment to either support or refute the statement. Note that the provided statement refers to an association rather than a causal connection. "Normal levels" refer to those in a wild-type prototrophic strain.
+
+Key Constraints:
+-Strain Use: Use only a reference or wild-type strain; avoid drawing conclusions based on specific genotypes.
+-Experimental Variables: Each variable combination must have its own experiment with appropriate controls.
+-Confounders: Minimize confounders and verify all assumptions within your experimental plan.
+
+Allowed Experimental Methods:
+Measurements: 
+-Use mass spectrometry-based metabolomics at experiment termination to measure intracellular concentrations/accumulations. These can be sampled with standardized protocols. Assume that OD600 is measured every 20 minutes. Viability is measured via growth rate.
+
+Modulating Intracellular Levels:
+-Utilize media configurations, supplementations, or treatments to modulate intracellular metabolite levels.
+-Use physiologically relevant methods based on known S. cerevisiae biology.
+-Justify each method used and account for its independent effects.
+-Consider compounds or treatments known to specifically affect intracellular metabolite levels in S. cerevisiae.
+
+Treatment Levels:
+-Specify up to three levels (including control) for each supplementation or treatment to evaluate dose-response relationships.
+-Cover a wide range of values to effectively test the statement.
+-Ensure that all supplementations or treatments, including compounds influencing metabolic pathways, are performed at physiologically relevant concentrations for S. cerevisiae.
+-Specify all doses or conditions in detail.
+-Consider the independent effect of each supplementation.
+
+Baseline Conditions:
+-Media: Minimal media without amino acids unless specified otherwise.
+-Culture Conditions: Assume standardized shaking; cultures will be inoculated at 0.05 OD600.
+-Treatment Timing: Any supplementation, treatment, or perturbation should always happen at the start of the experiment (t=0h).
+
+Experimental Design Instructions:
+-The experimental plan must be detailed, including all steps, supplementations, defined concentrations, and temperatures.
+-Any added compounds or treatments need to be denoted by their real names.
+-If a treatment involves achieving a target condition, you must specify the exact treatment to accomplish it.
+-Assume experiment termination at 14 hours unless explicitly specified.
+-The plan should include experiments to test any assumptions made in your hypothesis or setup.
+-Ensure that the experimental plan uses only one type of supplementation or treatment.
+-In your experimental plan, justify the choice of any supplementation or treatment based on its known physiological effects and ensure that its independent impact is evaluated.
+-Organize your response under the following sections:
+
+Motivation
+Hypothesis
+-Aim to have a simple but detailed hypothesis.
+-In the hypothesis, explain the potential mechanism.
+Experimental Plan
+Expected Outcomes
+-Account for the fact that supplementations may independently affect the observable even in the absence of treatment.
+-Formally declare the expected outcomes and include all tests and assumptions.

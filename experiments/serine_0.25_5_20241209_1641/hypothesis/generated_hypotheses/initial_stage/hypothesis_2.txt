@@ -1,0 +1,42 @@
+### Motivation
+
+The statement suggests an association between lower intracellular serine levels and decreased glycogen accumulation in Saccharomyces cerevisiae. Understanding this relationship can provide insights into metabolic regulation and potential metabolic engineering strategies.
+
+### Hypothesis
+
+Lower levels of intracellular serine in Saccharomyces cerevisiae lead to decreased accumulation of glycogen. This may occur because serine is a precursor for several metabolic pathways, including those that produce intermediates necessary for glycogen biosynthesis. By limiting serine availability, the flux through these pathways could be reduced, resulting in lower glycogen accumulation.
+
+### Experimental Plan
+
+1. **Strain and Media Preparation:**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Serine Supplementation:**
+   - Prepare three different media conditions:
+     - **Control**: Minimal media without serine supplementation.
+     - **Low Serine**: Minimal media supplemented with 0.5 mM serine.
+     - **High Serine**: Minimal media supplemented with 2 mM serine.
+   - Justification: Serine is involved in several biosynthetic pathways, and its supplementation can modulate intracellular levels. The chosen concentrations are physiologically relevant and allow for dose-response analysis.
+
+3. **Experimental Setup:**
+   - Inoculate each well of a 96-well plate with yeast cultures at an initial OD600 of 0.05.
+   - Allocate wells for each condition in triplicate to ensure statistical validity.
+   - Incubate at 30°C with shaking to maintain aerobic conditions.
+
+4. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth rate and viability.
+   - At 14 hours, terminate the experiment and harvest cells for metabolomics analysis.
+   - Use mass spectrometry to measure intracellular serine and glycogen levels.
+
+5. **Control for Confounders:**
+   - Include wells with no yeast inoculation as negative controls to account for any non-biological changes in media.
+   - Include additional wells with serine supplementation but no yeast to control for potential chemical interactions between serine and media components.
+
+### Expected Outcomes
+
+- **Control Condition**: Baseline levels of serine and glycogen should be observed.
+- **Low Serine Condition**: Expected to show decreased intracellular serine levels and potentially lower glycogen accumulation if the hypothesis holds.
+- **High Serine Condition**: Likely to result in increased intracellular serine levels, potentially leading to normal or increased glycogen accumulation compared to the control, indicating a dose-dependent relationship.
+
+This experiment will help determine if there is a correlation between intracellular serine levels and glycogen accumulation, supporting or refuting the initial statement. It will also provide insights into the metabolic impact of serine on glycogen biosynthesis pathways.

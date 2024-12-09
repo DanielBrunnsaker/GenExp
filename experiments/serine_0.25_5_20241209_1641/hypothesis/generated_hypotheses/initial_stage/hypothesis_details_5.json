@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,normal resistance to chemicals,B,C),compound_name(B,oligomycin)",
+    "observable": "serine",
+    "qualifier": "higher",
+    "coefficient": 0.41474100266207886,
+    "initial_prompt": "4. Cells with higher levels of intracellular serine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'normal resistance to chemicals',B,C),compound_name(B,oligomycin)"
+}

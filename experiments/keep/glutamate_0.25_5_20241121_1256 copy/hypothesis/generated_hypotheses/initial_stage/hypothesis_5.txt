@@ -1,0 +1,51 @@
+**Motivation:**
+The aim is to investigate whether higher than normal levels of intracellular glutamate in Saccharomyces cerevisiae are associated with decreased resistance to sodium arsenite. Sodium arsenite is a known chemical stressor, and understanding the relationship between glutamate levels and chemical resistance could provide insights into cellular stress responses and metabolic regulation.
+
+**Hypothesis:**
+Cells with elevated intracellular glutamate levels will exhibit decreased resistance to sodium arsenite. This may be due to glutamate's role in cellular metabolism and stress response, potentially affecting pathways involved in detoxification or stress mitigation.
+
+**Experimental Plan:**
+
+1. **Strain and Media Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Glutamate Supplementation:**
+   - Supplement the media with L-glutamate at three different concentrations:
+     - Control: 0 mM (no supplementation)
+     - Low: 5 mM
+     - High: 10 mM
+   - These concentrations are chosen based on known physiological relevance to modulate intracellular glutamate levels without causing pleiotropic effects.
+
+3. **Sodium Arsenite Treatment:**
+   - Introduce sodium arsenite at a concentration of 0.5 mM to all wells at the start of the experiment (t=0h), including controls.
+
+4. **Experimental Setup:**
+   - Inoculate cultures at an initial OD600 of 0.05 in a 96-well plate.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes to monitor growth and assess viability.
+
+5. **Metabolomics Analysis:**
+   - At the end of the 14-hour experiment, perform mass spectrometry-based metabolomics to measure intracellular glutamate levels in each condition.
+   - Validate that supplementation effectively modulates intracellular glutamate levels.
+
+6. **Controls:**
+   - Include wells with no sodium arsenite to evaluate the independent effect of glutamate supplementation on growth.
+   - Include wells with sodium arsenite but without glutamate supplementation to assess the baseline resistance.
+
+**Expected Outcomes:**
+
+1. **Growth and Viability:**
+   - If the hypothesis is correct, cells with higher glutamate supplementation (5 mM and 10 mM) will show reduced growth rates and lower OD600 compared to the control when exposed to sodium arsenite, indicating decreased resistance.
+
+2. **Intracellular Glutamate Levels:**
+   - Mass spectrometry should confirm increased intracellular glutamate levels in supplemented conditions compared to control.
+
+3. **Independent Effects:**
+   - In the absence of sodium arsenite, any observed growth differences due to glutamate supplementation alone will indicate independent effects of glutamate on growth.
+
+4. **Assumptions and Verification:**
+   - The assumption that glutamate supplementation increases intracellular levels will be verified through metabolomics.
+   - Any observed decrease in resistance must be correlated with increased glutamate levels and not solely due to other factors.
+
+By examining the growth profiles and intracellular glutamate levels, we can determine if there is an association between elevated glutamate and decreased resistance to sodium arsenite. If the hypothesis is supported, this may suggest a role for glutamate in modulating stress responses in yeast.

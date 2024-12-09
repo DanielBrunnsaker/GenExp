@@ -1,0 +1,48 @@
+### Motivation
+
+The statement suggests that higher than normal levels of intracellular glutamate in Saccharomyces cerevisiae are associated with decreased resistance to cadmium(2+) toxicity. This experiment aims to investigate whether elevated intracellular glutamate levels correlate with this phenotype by modulating glutamate levels and observing the yeast's response to cadmium dichloride.
+
+### Hypothesis
+
+Elevated intracellular glutamate levels in Saccharomyces cerevisiae lead to decreased resistance to cadmium toxicity by potentially altering the intracellular ion balance or affecting stress response pathways. This hypothesis will be tested by manipulating glutamate levels and assessing the yeast's growth in the presence of cadmium dichloride.
+
+### Experimental Plan
+
+1. **Culture Setup:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Grow cultures in 96-well plates containing 200 μL of minimal media without amino acids.
+   - Inoculate each well to an initial OD600 of 0.05.
+
+2. **Glutamate Supplementation:**
+   - Prepare three sets of wells with different glutamate concentrations:
+     - Control: No glutamate supplementation.
+     - Low Glutamate: 2 mM L-glutamate.
+     - High Glutamate: 10 mM L-glutamate.
+
+3. **Cadmium Dichloride Treatment:**
+   - At t=0h, add cadmium dichloride to achieve a final concentration of 606.1 μM in all wells.
+
+4. **Controls:**
+   - Include wells with no cadmium dichloride treatment for each glutamate level to assess the independent effect of glutamate on growth.
+
+5. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth rate and viability.
+   - At the end of the 14-hour experiment, perform mass spectrometry-based metabolomics to quantify intracellular glutamate levels.
+
+6. **Verification of Assumptions:**
+   - Conduct a preliminary experiment to confirm that the chosen glutamate concentrations (2 mM and 10 mM) lead to increased intracellular glutamate levels without causing significant pleiotropic effects.
+
+### Expected Outcomes
+
+- **If the hypothesis is correct:**
+  - Yeast cells with higher intracellular glutamate levels (10 mM supplementation) will show decreased growth rates in the presence of 606.1 μM cadmium dichloride compared to control and low glutamate conditions.
+  - Metabolomics will confirm elevated intracellular glutamate levels in the supplemented groups.
+
+- **If the hypothesis is incorrect:**
+  - There will be no significant difference in growth rates between the different glutamate supplementation levels when exposed to cadmium dichloride.
+  - Intracellular glutamate levels will not correlate with changes in cadmium resistance.
+
+- **Independent effects of glutamate:**
+  - In the absence of cadmium dichloride, any growth rate differences across glutamate levels will indicate an independent effect of glutamate on growth, which should be accounted for in the analysis.
+
+This experimental setup will allow us to assess whether increased intracellular glutamate levels are associated with decreased resistance to cadmium(2+) toxicity in Saccharomyces cerevisiae.

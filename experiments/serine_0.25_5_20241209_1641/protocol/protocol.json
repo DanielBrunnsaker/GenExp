@@ -1,0 +1,71 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,normal resistance to chemicals,B,C),compound_name(B,ketoconazole)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 14.0,
+            "type": "control",
+            "summary": "Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Serine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 14.0,
+            "type": "supplementation control",
+            "summary": "Growth of S. cerevisiae with low serine supplementation to assess its independent effect."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Serine",
+            "media_supplementation_doses": "2.0 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 14.0,
+            "type": "supplementation control",
+            "summary": "Growth of S. cerevisiae with high serine supplementation to assess its independent effect."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "Ketoconazole",
+            "treatment_parameters": "10 \u00b5g/mL",
+            "sampling_time": 14.0,
+            "type": "treatment control",
+            "summary": "Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Serine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "Ketoconazole",
+            "treatment_parameters": "10 \u00b5g/mL",
+            "sampling_time": 14.0,
+            "type": "experiment",
+            "summary": "Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Serine",
+            "media_supplementation_doses": "2.0 mM",
+            "treatment": "Ketoconazole",
+            "treatment_parameters": "10 \u00b5g/mL",
+            "sampling_time": 14.0,
+            "type": "experiment",
+            "summary": "Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance."
+        }
+    ]
+}

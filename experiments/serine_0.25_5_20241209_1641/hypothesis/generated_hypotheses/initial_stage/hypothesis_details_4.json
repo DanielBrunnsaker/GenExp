@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,4-nitroquinoline N-oxide)",
+    "observable": "serine",
+    "qualifier": "higher",
+    "coefficient": 0.5790748178843492,
+    "initial_prompt": "3. Cells with higher levels of intracellular serine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'4-nitroquinoline N-oxide')"
+}

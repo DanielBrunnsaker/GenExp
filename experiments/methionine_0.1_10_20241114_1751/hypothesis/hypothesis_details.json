@@ -1,1 +1,0 @@
-{"logic_program": "Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,quinine).", "observable": "methionine", "qualifier": "lower", "number": 8, "reason": "Quinine is a well-studied compound with known safety protocols. It is feasible to use in a 96 well format and can be assessed through growth assays."}

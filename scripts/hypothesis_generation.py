@@ -6,28 +6,6 @@ Created on Mon Nov 11 10:26:00 2024
 @author: danbru
 """
 
-def get_entry_details(data, logic_program):
-    # Loop through each entry in the 'allowed' list
-    for entry in data['allowed']:
-        # Check if the logic program matches
-        if entry['logic_program'] == logic_program:
-            # Return the number if a match is found
-            return entry
-            #return entry['number']
-    # Return None if no match is found
-    return None
-
-def extract_logic_program(text):
-    
-    import re 
-    
-    # Updated regex pattern to capture logic program starting with "Cell(A):-exhibits_phenotype"
-    pattern = r"Cell\(A\):-exhibits_phenotype.*?\."
-    match = re.search(pattern, text, re.DOTALL)
-    # If a match is found, return the logic program
-    if match:
-        return match.group(0)
-    return None
 
 def parse_arguments():
     import argparse
@@ -36,6 +14,7 @@ def parse_arguments():
     # Define arguments with default values
     parser.add_argument('--folder', type=str, help='Working folder for experiment.')
     parser.add_argument('--T', type=float, default=0.7, help='Temperature for the hypothesis generation step.')
+    parser.add_argument('--N', type=int, help='Number of hypotheses to choose from.')
 
     # Parse arguments
     args = parser.parse_args()
@@ -44,10 +23,7 @@ def parse_arguments():
     return vars(args)
 
 def main():
-    
-    #script_dir = os.path.dirname(os.path.abspath(__file__))
-    #os.chdir(script_dir)
-    
+
     # Parse arguments
     args = parse_arguments()
 
@@ -58,60 +34,71 @@ def main():
     # Example usage of parsed values
     folder = args['folder']
     T = args['T']
-    
+    N = args['N']
     # Set working folder
     
     os.chdir(f"{folder}")
-    #print(os.getcwd())
     # Load OpenAI-key
     key = open("../../key.txt", "r")
     key = key.read()
     
-    with open('hypothesis/feasibility/selection.json', 'r') as file:
-        allowed_programs = json.load(file)
+    complete_prompt = ''
+    for nr_hyp in range(1,N+1):
+        complete_prompt += f'####### GENERATED HYPOTHESIS {nr_hyp} #######\n'
+        hyp_text = open(f"hypothesis/generated_hypotheses/initial_stage/hypothesis_{nr_hyp}.txt", "r").read()
+        complete_prompt += hyp_text +'\n\n'
         
-    #with open('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/proline_0.1_10_20241114_1603/hypothesis/feasibility/selection.json', 'r') as file:
-    #    allowed_programs = json.load(file)
+    final_selection_text = prompt_gpt_for_hypothesis('../../context/hypothesis_selection.txt', complete_prompt, T, key)
+    print(final_selection_text)
+    
+    # Extract the hypothesis number
+    N_extracted = int(re.search(r"HYPOTHESIS NUMBER #(\d+)", final_selection_text).group(1))
+   
+    selected_hypothesis = open(f"hypothesis/generated_hypotheses/initial_stage/hypothesis_{N_extracted}.txt", "r").read()
+    hypothesis_details = load_json(f"hypothesis/generated_hypotheses/initial_stage/hypothesis_details_{N_extracted}.json")
+    
+    # Add the motivation behind selecting it
+    hypothesis_details['motivation'] = final_selection_text
+    with open('hypothesis/selected_hypothesis/hypothesis_details.json', 'w') as file:
+        json.dump(hypothesis_details, file, indent=4)
+
+    variants = '####### OPTION 1 #######\n\n' + selected_hypothesis
+    with open('hypothesis/generated_hypotheses/second_stage/hypothesis_1.txt', 'w') as file:
+        file.write(selected_hypothesis)
+    
+    for i, variants_iter in enumerate(range(2,4)):
+        variants += f'\n\n####### OPTION {variants_iter} #######\n'
+        new_variant = prompt_gpt_for_hypothesis('../../context/hypgen_per_pattern.txt', hypothesis_details['initial_prompt'], T, key)
+        with open(f'hypothesis/generated_hypotheses/second_stage/hypothesis_{variants_iter}.txt', 'w') as file:
+            file.write(new_variant)
         
-    full_prompt = open("hypothesis/patterns/prompt.txt", "r")
-    full_prompt = full_prompt.read()
+        variants += new_variant
+        
+    with open('hypothesis/selected_hypothesis/variants.txt', 'w') as file:
+        file.write(variants)
+    
+    final_selection_text = prompt_gpt_for_hypothesis('../../context/refine_plan.txt', variants, T, key)
+    with open('hypothesis/selected_hypothesis/reasoning.txt', 'w') as file:
+        file.write(final_selection_text)
+    
+    N_extracted = int(re.search(r"HYPOTHESIS NUMBER #(\d+)", final_selection_text).group(1))
+    finalized_hypothesis = open(f"hypothesis/generated_hypotheses/second_stage/hypothesis_{N_extracted}.txt", "r").read()
+    
+    with open('hypothesis/selected_hypothesis/hypothesis.txt', 'w') as file:
+        file.write(finalized_hypothesis)
 
-    allowed_numbers = []
-    for program in allowed_programs['allowed']:
-        allowed_numbers.append(program['number'])
-    allowed_numbers = sorted(allowed_numbers)
+        
     
-    revised_prompt = extract_statements(full_prompt, allowed_numbers)
-    revised_prompt = ' '.join(revised_prompt)
-    
-    #hypothesis_text = prompt_gpt_for_hypothesis(revised_prompt, T, key)
-    #hypothesis_text = prompt_gpt_for_hypothesis('../../context/hypgen_context.txt', revised_prompt, T, key)
-    hypothesis_text = prompt_gpt_for_hypothesis('../../context/hypgen_context.txt', revised_prompt, T, key)
-    
-    
-    selected_logic_program = extract_logic_program(hypothesis_text)
-    hypothesis_details = get_entry_details(allowed_programs, selected_logic_program)
-    
-    with open('hypothesis/hypothesis_details.json', 'w') as f:
-        json.dump(hypothesis_details, f)
-    # Selected hypothesis
-    #"Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,chitosan)."
-    
-    print(hypothesis_text)
-
-    # Save prompt
-    with open('hypothesis/generated_hypothesis.txt', 'w') as file:
-        file.write(hypothesis_text)
     
     
 
-
+import re
 import json
 import os
 script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)
-from hgen_support import *
-from gpt_support import *
+from utils.hgen_support import *
+from utils.gpt_support import *
 
 if __name__ == "__main__":
     main()

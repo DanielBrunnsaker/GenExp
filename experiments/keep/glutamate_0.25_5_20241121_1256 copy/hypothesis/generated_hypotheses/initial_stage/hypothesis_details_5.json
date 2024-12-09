@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,sodium arsenite)",
+    "observable": "glutamate",
+    "qualifier": "higher",
+    "coefficient": 0.24882167318215,
+    "initial_prompt": "14. Cells with higher than normal levels of intracellular glutamate in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'sodium arsenite')"
+}

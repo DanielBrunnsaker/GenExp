@@ -1,0 +1,46 @@
+### Motivation
+
+The statement suggests an association between higher intracellular levels of serine and normal resistance to the chemical oligomycin in Saccharomyces cerevisiae. Oligomycin is known to inhibit ATP synthase, which can affect cellular energy production. Our goal is to design an experiment to explore whether increased serine levels correlate with this resistance. Understanding this relationship can provide insights into metabolic pathways influencing chemical resistance.
+
+### Hypothesis
+
+Cells with elevated intracellular serine levels exhibit normal resistance to oligomycin due to serine's role in supporting metabolic pathways that contribute to cellular energy homeostasis and stress responses. Specifically, serine may enhance the synthesis of metabolites or proteins that mitigate the effects of oligomycin on ATP production.
+
+### Experimental Plan
+
+1. **Experimental Setup:**
+   - Use a prototrophic wild-type Saccharomyces cerevisiae strain.
+   - Grow yeast cultures in a 96-well plate format with minimal media without amino acids.
+   - Inoculate cultures at an initial OD600 of 0.05.
+   - Incubate all cultures at 30°C with shaking.
+
+2. **Serine Supplementation:**
+   - Prepare three levels of serine supplementation:
+     - Control: 0 mM serine (no supplementation).
+     - Low serine: 0.5 mM serine.
+     - High serine: 2.0 mM serine.
+   - Serine is chosen because it is a central amino acid involved in numerous biosynthetic pathways, including nucleotide and lipid synthesis, and can influence stress responses.
+
+3. **Oligomycin Treatment:**
+   - Administer oligomycin at a concentration of 0.1 µg/mL to all wells at t=0h to test resistance.
+   - This concentration is chosen based on known inhibitory effects on yeast ATP synthase while allowing for the assessment of differential resistance.
+
+4. **Controls:**
+   - Include wells without oligomycin to assess the baseline growth and viability with varying serine levels.
+   - Include wells with oligomycin but without serine supplementation to evaluate the baseline resistance.
+
+5. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth and calculate growth rates.
+   - At experiment termination (14 hours), perform mass spectrometry-based metabolomics to measure intracellular serine concentrations and other metabolites that may indicate resistance mechanisms.
+
+6. **Assumption Verification:**
+   - Validate that serine supplementation effectively increases intracellular serine levels using metabolomics data.
+   - Ensure oligomycin's effect on growth is consistent across different serine levels without confounding variables.
+
+### Expected Outcomes
+
+- **Higher Serine Levels:** If higher intracellular serine levels correlate with increased resistance to oligomycin, we expect to see higher growth rates in the serine-supplemented wells compared to the control under oligomycin treatment.
+- **Control Outcomes:** Wells without oligomycin should show normal growth across all serine levels, confirming that serine supplementation independently does not affect growth adversely.
+- **Independent Effects:** Any observed resistance should be attributable to serine's metabolic roles rather than general growth enhancement, as confirmed by metabolomics showing specific pathways activated by serine.
+
+This experimental design will help determine if there is a true association between serine levels and oligomycin resistance, providing insights into the underlying biological mechanisms.

@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,normal resistance to chemicals,B,C),compound_name(B,ketoconazole)",
+    "observable": "serine",
+    "qualifier": "higher",
+    "coefficient": 0.493953065640847,
+    "initial_prompt": "2. Cells with higher levels of intracellular serine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'normal resistance to chemicals',B,C),compound_name(B,ketoconazole)"
+}

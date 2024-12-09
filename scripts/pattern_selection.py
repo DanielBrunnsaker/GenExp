@@ -26,6 +26,24 @@ Created on Fri Aug 30 15:24:19 2024
         B. Present several and evaluate after somehow?
 '''
 
+def create_folder_structure_recursively(base_path, folder_structure):
+    import os
+
+    def create_folders_recursively(current_path, structure):
+        for folder, sub_structure in structure.items():
+            # Create the current folder
+            folder_path = os.path.join(current_path, folder)
+            if not os.path.exists(folder_path):
+                os.makedirs(folder_path)
+                #print(f"Created folder: {folder_path}")
+
+            # If the current folder has subfolders, create them recursively
+            if isinstance(sub_structure, dict):
+                create_folders_recursively(folder_path, sub_structure)
+
+    # Start creating folders from the base path
+    create_folders_recursively(base_path, folder_structure)
+
 def parse_arguments():
     import argparse
     parser = argparse.ArgumentParser(description="Hypothesis Generator with adjustable parameters.")
@@ -61,18 +79,49 @@ def main():
     N = args['N']
     alpha = args['alpha']
     
+    
     # Load OpenAI-key
     key = open("../key.txt", "r")
     key = key.read()
     
-    # Load this in instead, as a JSON or excel?
-    #relevance_scores = {
-    #    # predicates
-    #    'compound_name': 10, # Reward patterns with a specific condition in mind (if there is one)
-    #    'condition': 10, # Reward patterns with a specific chemical in mind (if there is one)
-    #    'interacts_with_metabolite': 5, 
-    #    'biological_target': 3 # add production? should make more sense as we are measuring accumulations
+    
+    
+    
+    # Create a new folder?
+    base_path = '../experiments' 
+    main_folder = f'{target}_{alpha}_{N}_{datetime.now().strftime("%Y%m%d_%H%M")}'
+    #subfolders_structure = {
+    #    'hypothesis': ['generated_hypotheses', 'selected_hypothesis'],
+    #    'protocol': ['hamilton', 'EVE', 'plate_layout'],
+    #    'results': ['growth', 'metabolomics']
     #}
+    
+    
+    base_path = '../experiments' 
+    folder_structure = {
+        main_folder: {
+            "hypothesis": {
+                "generated_hypotheses": {
+                    "initial_stage": {},
+                    "second_stage": {}
+                },
+                "selected_hypothesis": {}
+            },
+            "protocol": {
+                "EVE": {},
+                "hamilton": {},
+                "plate_layout": {},
+            },
+            "results": {
+                "Subsubfolder1": {}
+            }
+            
+        }
+    }
+    
+    create_folder_structure_recursively(base_path, folder_structure)
+    #create_folder_structure(base_path, main_folder, subfolders_structure)
+    
     
     relevance_scores = {
         # predicates
@@ -103,18 +152,13 @@ def main():
     filtered_sorted_specifity_all = sorted_specifity[sorted_specifity[target] != 0]
     filtered_sorted_specifity = sorted_specifity[target][sorted_specifity[target] != 0]
     
-    #print('\n Generating logic programs... \n')
-    
-    # Maybe i should pack this into one function?
-    
-    
-    
     hypothesis_counter = 0
     full_prompt = ''
     for counter, hypothesis in enumerate(filtered_sorted_specifity.index):
-
-        directionality = 'higher' if np.sign(hypotheses.loc[hypothesis]) == 1.0 else 'lower'
         
+        #ind_statement = ''
+        directionality = 'higher' if np.sign(hypotheses.loc[hypothesis]) == 1.0 else 'lower'
+        #break
         # Find potential alternative hypotheses?
         with open('../results/patterns/feature_dict.pickle', 'rb') as handle:
             duplicate_dict = pickle.load(handle)
@@ -137,20 +181,52 @@ def main():
         h_explanation = find_row_with_string(f'../results/patterns/explanations/{first_example}.txt', f"({current_clause.split('_')[1].split('p')[1]},")
         clause = h_explanation.split(',(')[1][:-3].replace('gene(A):-','Cell(A):-')
         
-        
         # Check for disallowed statements
-        if any(clause in s for s in disallowed_clauses):
+        if any(clause.replace("'","") in s for s in disallowed_clauses):
             continue
         
         else:
             # Produce the custom output:
+            #print(clause)
             hypothesis_counter += 1
-            prompt_part = f"{counter}. Cells with {directionality} than normal levels of intracellular {target} in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: "            
-            full_prompt = full_prompt + prompt_part + clause + '. '
+            #prompt_part = f"{counter}. Cells with {directionality} than normal levels of intracellular {target} in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: "            
+            prompt_part = f"{counter}. Cells with {directionality} levels of intracellular {target} in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: "            
+            
+            ind_statement = prompt_part + clause
+            #full_prompt = full_prompt + prompt_part + clause + '. '
+            
+            hypothesis_text = prompt_gpt_for_hypothesis('../context/hypgen_per_pattern.txt', ind_statement, 0.5, key)
+            
+            # Save hypothesis, along with the pattern and the clause?
+            #print(hypothesis_text)
+            
+            # Save details
+            rev_clause = clause.replace("'","")
+            details = {"logic_program": rev_clause, 
+                       "observable": target, 
+                       "qualifier": directionality, 
+                       "coefficient": filtered_sorted_specifity[hypothesis], 
+                       "initial_prompt": ind_statement}
+            
+            #details = f'{{"logic_program": "{rev_clause}", "observable": "{target}", "qualifier": "{directionality}", "coefficient": {filtered_sorted_specifity[hypothesis]}}}'
+            
+            # Save prompt../experiments/{main_folder}/
+            with open(f'../experiments/{main_folder}/hypothesis/generated_hypotheses/initial_stage/hypothesis_{hypothesis_counter}.txt', 'w') as file:
+                file.write(hypothesis_text)
+                
+            with open(f'../experiments/{main_folder}/hypothesis/generated_hypotheses/initial_stage/hypothesis_details_{hypothesis_counter}.json', 'w') as file:
+                #json.dump(json.loads(details), file, indent=4)
+                json.dump(details, file, indent=4)
             
             # Restrict to N generated clauses
             if hypothesis_counter == int(N):
                 break
+    
+    
+    print(f"{base_path}/{main_folder}")
+    
+    
+    '''
     
     # Create a new folder?
     base_path = '../experiments' 
@@ -195,7 +271,7 @@ def main():
         json.dump(json_data, file, indent=4)  
     
     print(f"{base_path}/{main_folder}")
-    
+    '''
 
 from datetime import datetime
 import pandas as pd
@@ -203,28 +279,23 @@ import json
 import pickle
 import os
 import numpy as np
-
 script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)
-from hgen_support import *
-from gpt_support import *
-from layout_generator import *
-from dose_calculator2 import *
-
-# Set starting point of the disallowed formulations. Note that the starting point here are all logic programs 
-# which have no meaning without a second, descriptive, predicate/atom.
-#disallowed_clauses = ["Cell(A):-phenotype(A,'increased chemical compound accumulation',B,C)",
-#              "Cell(A):-phenotype(A,'decreased chemical compound accumulation',B,C)",
-#              "Cell(A):-phenotype(A,'increased chemical compound excretion',B,C)",
-#              "Cell(A):-phenotype(A,'decreased chemical compound excretion',B,C)",
-#              "Cell(A):-phenotype(A,'increased resistance to chemicals',B,C)",
-#              "Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C)",
-#              "Cell(A):-phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,proton)",
-#              "Cell(A):-phenotype(A,'increased chemical compound accumulation',B,C),compound_name(B,proton)."]
+from utils.hgen_support import *
+from utils.gpt_support import *
+#from layout_generator import *
+#from dose_calculator2 import *
 
 with open('../experiments/forbidden_patterns.txt', "r") as file:
     disallowed_clauses = file.readlines()
+    
 disallowed_clauses = [line.strip() for line in disallowed_clauses]
+
+with open('../experiments/succesful_patterns.txt', "r") as file:
+    successful_clauses = file.readlines()
+    
+successful_clauses = [line.strip() for line in successful_clauses]
+disallowed_clauses = disallowed_clauses + successful_clauses
 
 if __name__ == "__main__":
     main()
@@ -233,6 +304,6 @@ if __name__ == "__main__":
 
 
 
-
+#os.chdir('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/scripts')
 
 

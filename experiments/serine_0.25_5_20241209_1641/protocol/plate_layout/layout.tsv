@@ -1,0 +1,97 @@
+	plateID	well	CONCuM	Summary
+0	plate_1	A01	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+1	plate_1	A02	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+2	plate_1	A03	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+3	plate_1	A04	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.
+4	plate_1	A05	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.
+5	plate_1	A06	Media control	
+6	plate_1	A07	Media control	
+7	plate_1	A08	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+8	plate_1	A09	Media control	
+9	plate_1	A10	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+10	plate_1	A11	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+11	plate_1	A12	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+12	plate_1	B01	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.
+13	plate_1	B02	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+14	plate_1	B03	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+15	plate_1	B04	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+16	plate_1	B05	Media control	
+17	plate_1	B06	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+18	plate_1	B07	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+19	plate_1	B08	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+20	plate_1	B09	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+21	plate_1	B10	Media control	
+22	plate_1	B11	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+23	plate_1	B12	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+24	plate_1	C01	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+25	plate_1	C02	Media control	
+26	plate_1	C03	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+27	plate_1	C04	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+28	plate_1	C05	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+29	plate_1	C06	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+30	plate_1	C07	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.
+31	plate_1	C08	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+32	plate_1	C09	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+33	plate_1	C10	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+34	plate_1	C11	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.
+35	plate_1	C12	Media control	
+36	plate_1	D01	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+37	plate_1	D02	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+38	plate_1	D03	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.
+39	plate_1	D04	Media control	
+40	plate_1	D05	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+41	plate_1	D06	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+42	plate_1	D07	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+43	plate_1	D08	Media control	
+44	plate_1	D09	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+45	plate_1	D10	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.
+46	plate_1	D11	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+47	plate_1	D12	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+48	plate_1	E01	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+49	plate_1	E02	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.
+50	plate_1	E03	Media control	
+51	plate_1	E04	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+52	plate_1	E05	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+53	plate_1	E06	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+54	plate_1	E07	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+55	plate_1	E08	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+56	plate_1	E09	Media control	
+57	plate_1	E10	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+58	plate_1	E11	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+59	plate_1	E12	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+60	plate_1	F01	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+61	plate_1	F02	Media control	
+62	plate_1	F03	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+63	plate_1	F04	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+64	plate_1	F05	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+65	plate_1	F06	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.
+66	plate_1	F07	Media control	
+67	plate_1	F08	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+68	plate_1	F09	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+69	plate_1	F10	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+70	plate_1	F11	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.
+71	plate_1	F12	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+72	plate_1	G01	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+73	plate_1	G02	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+74	plate_1	G03	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+75	plate_1	G04	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+76	plate_1	G05	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+77	plate_1	G06	Media control	
+78	plate_1	G07	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+79	plate_1	G08	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+80	plate_1	G09	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.
+81	plate_1	G10	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+82	plate_1	G11	Media control	
+83	plate_1	G12	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+84	plate_1	H01	Media control	
+85	plate_1	H02	Serine: 2.0 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with high serine supplementation to assess its independent effect.
+86	plate_1	H03	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+87	plate_1	H04	Serine: 0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with ketoconazole treatment to establish baseline resistance.
+88	plate_1	H05	Media control	
+89	plate_1	H06	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+90	plate_1	H07	Serine: 0.5 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with low serine supplementation and ketoconazole treatment to assess resistance.
+91	plate_1	H08	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.
+92	plate_1	H09	Serine: 0.5 mM & Ketoconazole: 0 mM	Growth of S. cerevisiae with low serine supplementation to assess its independent effect.
+93	plate_1	H10	Media control	
+94	plate_1	H11	Serine: 2.0 mM & Ketoconazole: 10 µg/mL	Growth of S. cerevisiae with high serine supplementation and ketoconazole treatment to assess resistance.
+95	plate_1	H12	Serine: 0 mM & Ketoconazole: 0 mM	Baseline growth of S. cerevisiae in minimal media without any supplementation or treatment.

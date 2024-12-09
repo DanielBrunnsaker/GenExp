@@ -10,7 +10,6 @@ Here is the template, do not include any escape tokens in the output:
     {
   "experiment": <INT>,
   "baseline_media": <String>,
-  "cultivation_temperature": <String>,
   "media_supplementation": <String>,
   "media_supplementation_doses": <String>,
   "treatment": <String>,
@@ -21,6 +20,5 @@ Here is the template, do not include any escape tokens in the output:
 }, ... ]}
 
 If a category is not applicable, set it to null. OD is always monitored. "type" can be one of "control" (no supplementation or treatment), "supplementation control" (only supplement), "treatment control" (only treatment) or "experiment" (both). All of these should be present.
-
 
 

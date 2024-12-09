@@ -1,7 +1,1 @@
-Cell(A):-phenotype(A,'increased chemical compound accumulation',B,C)
-Cell(A):-phenotype(A,'decreased chemical compound accumulation',B,C)
-Cell(A):-phenotype(A,'increased chemical compound excretion',B,C)
-Cell(A):-phenotype(A,'decreased chemical compound excretion',B,C)
-Cell(A):-phenotype(A,'increased resistance to chemicals',B,C)
-Cell(A):-phenotype(A,'decreased resistance to chemicals',B,C)
-Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'Congo Red').
+

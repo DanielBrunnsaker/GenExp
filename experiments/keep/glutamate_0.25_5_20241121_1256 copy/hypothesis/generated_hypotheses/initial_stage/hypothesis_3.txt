@@ -1,0 +1,50 @@
+**Motivation:**
+
+The statement suggests that Saccharomyces cerevisiae cells with elevated intracellular glutamate levels exhibit decreased resistance to boromycin, an antibiotic compound. Understanding this association could provide insights into the cellular mechanisms that contribute to antibiotic resistance and the metabolic pathways involved in glutamate regulation.
+
+**Hypothesis:**
+
+Cells with higher than normal intracellular glutamate levels will exhibit decreased resistance to boromycin due to potential metabolic shifts that affect membrane integrity or efflux mechanisms. Elevated glutamate might alter the cell's metabolic state, possibly affecting the synthesis of other metabolites or cellular components that are critical for boromycin resistance.
+
+**Experimental Plan:**
+
+1. **Objective:** To determine the effect of elevated intracellular glutamate levels on boromycin resistance in Saccharomyces cerevisiae.
+
+2. **Strain and Conditions:**
+   - Use a wild-type prototrophic Saccharomyces cerevisiae strain.
+   - Grow all cultures in minimal media without amino acids at 30°C with shaking.
+
+3. **Supplementation to Modulate Glutamate Levels:**
+   - Control: No supplementation.
+   - Low Glutamate Supplementation: Add 0.1 mM L-glutamate at t=0h.
+   - High Glutamate Supplementation: Add 1 mM L-glutamate at t=0h.
+
+4. **Boromycin Treatment:**
+   - Boromycin concentrations to test: 0 μg/mL (control), 1 μg/mL, and 5 μg/mL.
+
+5. **Experimental Setup:**
+   - Inoculate cultures at an initial OD600 of 0.05.
+   - Measure OD600 every 20 minutes to assess growth and calculate growth rates.
+   - At 14 hours, harvest cells for metabolomic analysis using mass spectrometry to confirm intracellular glutamate levels.
+
+6. **Controls:**
+   - Growth in minimal media without glutamate and boromycin to establish baseline growth and resistance.
+   - Cultures with boromycin but without glutamate supplementation to assess the independent effect of boromycin.
+
+7. **Verification of Assumptions:**
+   - Confirm that glutamate supplementation effectively increases intracellular glutamate levels using mass spectrometry.
+   - Ensure that boromycin concentrations used are within a range that allows for observing differences in growth rates.
+
+**Expected Outcomes:**
+
+1. **Increased Intracellular Glutamate:**
+   - Mass spectrometry should show elevated intracellular glutamate levels in the supplemented conditions compared to the control.
+
+2. **Growth and Boromycin Resistance:**
+   - If the hypothesis is correct, cultures with high glutamate levels will exhibit decreased growth rates in the presence of boromycin compared to the control and low-glutamate conditions.
+   - The control and low-glutamate conditions should show similar growth rates, indicating that only elevated glutamate levels affect boromycin resistance.
+
+3. **Independent Effects:**
+   - Glutamate supplementation alone (without boromycin) should not significantly affect growth rates, confirming that any observed effects are due to the interaction with boromycin.
+
+By systematically varying glutamate and boromycin concentrations, we aim to elucidate the relationship between intracellular glutamate levels and boromycin resistance, supporting or refuting the initial association.

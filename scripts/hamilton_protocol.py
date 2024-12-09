@@ -6,82 +6,6 @@ Created on Mon Nov 11 11:14:20 2024
 @author: danbru
 """
 
-def save_series_to_file(series, file_path):
-    # Convert the series to a single string
-    series_string = ''.join(map(str, series))
-    
-    # Save the string to a text file
-    with open(file_path, 'w') as file:
-        file.write(series_string)
-    
-    print(f"Series saved to {file_path}")
-
-def create_folder_structure(base_path, main_folder, subfolders_structure):
-    
-    import os
-    
-    # Define the main folder path
-    main_folder_path = os.path.join(base_path, main_folder)
-    
-    # Create the main folder if it doesn't exist
-    if not os.path.exists(main_folder_path):
-        os.makedirs(main_folder_path)
-        print(f"Created main folder: {main_folder_path}")
-    else:
-        print(f"Main folder already exists: {main_folder_path}")
-    
-    # Create subfolders and their subsubfolders
-    for subfolder, subsubfolders in subfolders_structure.items():
-        # Path for each subfolder
-        subfolder_path = os.path.join(main_folder_path, subfolder)
-        if not os.path.exists(subfolder_path):
-            os.makedirs(subfolder_path)
-            print(f"Created subfolder: {subfolder_path}")
-        else:
-            print(f"Subfolder already exists: {subfolder_path}")
-
-        # Create each subsubfolder within the current subfolder
-        for subsubfolder in subsubfolders:
-            subsubfolder_path = os.path.join(subfolder_path, subsubfolder)
-            if not os.path.exists(subsubfolder_path):
-                os.makedirs(subsubfolder_path)
-                print(f"Created subsubfolder: {subsubfolder_path}")
-            else:
-                print(f"Subsubfolder already exists: {subsubfolder_path}")
-
-
-def load_json(file_path):
-    """
-    Load a JSON file and return its content.
-    """
-    try:
-        with open(file_path, 'r') as file:
-            data = json.load(file)
-            return data
-    except Exception as e:
-        print(f"Error loading JSON file: {e}")
-        return None
-
-def convert_to_molar(concentration, molecular_weight):
-    if concentration.check('[mass] / [volume]'):  # Check if concentration is mass/volume
-        return (concentration / molecular_weight).to('mM')  # Convert mass-based to molar
-    return concentration.to('mM')  # Already in molar units
-
-def calculate_volume(C_stock, C_final, V_total, ureg):
-    """
-    Calculate the volume to dispense from stock to achieve desired final concentration.
-    """
-    V1 = (C_final * V_total / C_stock).to('microliter')
-    return V1.magnitude  # Return as float
-
-def percentage_to_volume(final_concentration_percent, total_volume, ureg):
-    """
-    Convert percentage concentration to volume of solute.
-    """
-    return (final_concentration_percent / 100) * total_volume.to('microliter').magnitude  # Return as float
-
-#def return_hamilton_concentrations(protocol_path, plate_layout_path):
-
 def parse_arguments():
     import argparse
     parser = argparse.ArgumentParser(description="Hypothesis Generator with adjustable parameters.")
@@ -91,14 +15,20 @@ def parse_arguments():
     parser.add_argument('--volume', type=int, help='Working well volume in microliters.')
     parser.add_argument('--S', type=str, help='Stock concentration for supplement.')
     parser.add_argument('--Treatment', type=str, help='Stock concentration for treatment.')
+    parser.add_argument('--environmental', type=int, default=0, help='1 of if environmental treatment, 0 otherwise.')
 
     # Parse arguments
     args = parser.parse_args()
     
     # Return as a dictionary for easy access and logging
-    return vars(args)    
+    return vars(args)  
 
 def main():
+    '''
+    
+    Description of what this does? Not the prettiest thing ever...
+    
+    '''
     
     # Parse arguments
     args = parse_arguments()
@@ -112,6 +42,7 @@ def main():
     vol = int(args['volume'])
     s_stock_input = args['S']
     t_stock_input = args['Treatment']
+    environmental = args['environmental']
     os.chdir(folder)
     
     """
@@ -127,7 +58,7 @@ def main():
     # Load protocol and plate layout
     protocol = load_json(protocol_path)
     if protocol is None:
-        return
+        raise ValueError("Protocol-JSON could not be loaded.")
 
     plate_layout = pd.read_csv(plate_layout_path, sep='\t', index_col=0)
     plate_layout = plate_layout.fillna('Media control')
@@ -135,13 +66,10 @@ def main():
     # Initialize dosing table with necessary columns
     dosing_table = pd.DataFrame(columns=['Summary', 'Media (uL)', 'Inoculated Media (uL)', 
                                          'Supplement (uL)', 'Treatment (uL)', 'MilliQ (uL)'])
-
-    # Prompt user for well volume
     
     # Define fixed parameters
     V_total = Q_(vol, 'microliter')  # Total final volume per well
-    #V_total = Q_(225, 'microliter')  # Total final volume per well
-    D_pre_culture = 20  # Pre-culture dilution factor
+    D_pre_culture = 10  # Pre-culture dilution factor
     V_pre_culture = (V_total / D_pre_culture).to('microliter').magnitude  # Calculated inoculation volume
     
     # Extract supplement and treatment names from the first experiment
@@ -153,178 +81,122 @@ def main():
         s_name = 'Supplement'
         t_name = 'Treatment'
     
-    # Prompt user for stock concentrations
-    #print(f"Enter stock concentration for {s_name} (e.g., '10 mM', '5 mg/mL' or 10%):")
-    #s_stock_input = input().strip()
-    s_C_stock = Q_(s_stock_input.strip())
-
-    #print(f"Enter stock concentration for {t_name} (e.g., '10 mM', '5 mg/mL' or 10%):")
-    #t_stock_input = input()
-    t_C_stock = Q_(t_stock_input.strip())
-
+    # Parse stock concentrations
+    s_stock_type, s_C_stock, s_stock_percentage_type = parse_concentration(s_stock_input, Q_)
+    t_stock_type, t_C_stock, t_stock_percentage_type = parse_concentration(t_stock_input, Q_)
+    
+    # Adjust stock_percentage handling
+    if s_stock_type == 'percentage':
+        s_stock_percentage = s_C_stock.magnitude
+    else:
+        s_stock_percentage = None
+    
+    if t_stock_type == 'percentage':
+        t_stock_percentage = t_C_stock.magnitude
+    else:
+        t_stock_percentage = None
+    
     for experiment in protocol['experiments']:
         experiment_type = experiment.get('type', '').lower()
-
-        # Initialize concentrations and volumes
+    
+        # Initialize volumes
         s_V1 = 0.0  # Supplement volume
         t_V1 = 0.0  # Treatment volume
-
-        # Handle different experiment types
-        if experiment_type == 'control':
-            # No supplement or treatment
-            s_C_final = Q_(0, 'mM')
-            t_C_final = Q_(0, 'mM')
-        elif experiment_type == 'supplementation control':
-            
-            
-            if '%' in experiment['media_supplementation_doses']:
-                s_dose = experiment['media_supplementation_doses'][:-1]
-                s_dose_unit = experiment['media_supplementation_doses'][-1]
-            else:
-                s_dose = experiment['media_supplementation_doses'].split(' ')[0]
-                s_dose_unit = experiment['media_supplementation_doses'].split(' ')[1]
-                
-            # Only supplement is added
-            s_C_final = Q_(float(s_dose), s_dose_unit)
-            t_C_final = Q_(0, 'mM')
-        elif experiment_type == 'treatment control':
-            
-            
-            if '%' in experiment['treatment_parameters']:
-                t_dose = experiment['treatment_parameters'][:-1]
-                t_dose_unit = experiment['treatment_parameters'][-1]
-                t_dose_unit = re.sub(r'(\d+%)\s*\(.*?\)', r'\1', t_dose_unit)
-                #t_dose = re.sub("%","",experiment['treatment_parameters'][:-1])
-                
-                t_dose = re.search(r'(\d+)%', experiment['treatment_parameters']).group(1)
-                
-            else:
-                t_dose = experiment['treatment_parameters'].split(' ')[0]
-                t_dose_unit = experiment['treatment_parameters'].split(' ')[1]
-            
-            # Only treatment is added
-            s_C_final = Q_(0, 'mM')
-            t_C_final = Q_(float(t_dose), t_dose_unit)
-        elif experiment_type == 'experiment':
-            
-            
-            # S
-            if '%' in experiment['media_supplementation_doses']:
-                s_dose = experiment['media_supplementation_doses'][:-1]
-                s_dose_unit = experiment['media_supplementation_doses'][-1]
-            else:
-                s_dose = experiment['media_supplementation_doses'].split(' ')[0]
-                s_dose_unit = experiment['media_supplementation_doses'].split(' ')[1]
-            
-            
-            # T
-            if '%' in experiment['treatment_parameters']:
-                t_dose = experiment['treatment_parameters'][:-1]
-                t_dose_unit = experiment['treatment_parameters'][-1]
-                t_dose_unit = re.sub(r'(\d+%)\s*\(.*?\)', r'\1', t_dose_unit)
-                
-                t_dose = re.search(r'(\d+)%', experiment['treatment_parameters']).group(1)
-            else:
-                t_dose = experiment['treatment_parameters'].split(' ')[0]
-                t_dose_unit = experiment['treatment_parameters'].split(' ')[1]
-            
-            
-            
-            
-            with open('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/tyrosine_0.1_10_20241114_1735/protocol/protocol.json', 'r') as file:
-                data = json.load(file)
-                #print(data)
-            
-            # Both supplement and treatment are added
-            s_C_final = Q_(float(s_dose), s_dose_unit)
-            t_C_final = Q_(float(t_dose), t_dose_unit)
-        else:
-            # Undefined experiment type; skip or handle accordingly
-            continue
-
-        # Convert supplement final concentration to molar if necessary
+    
+        # Extract and parse concentrations
+        s_conc_str = experiment.get('media_supplementation_doses', '0')
+        t_conc_str = experiment.get('treatment_parameters', '0')
+    
+        s_C_final_type, s_C_final, s_final_percentage_type = parse_concentration(s_conc_str, Q_)
+        t_C_final_type, t_C_final, t_final_percentage_type = parse_concentration(t_conc_str, Q_)
+    
+        # Handle Supplement
         if s_C_final.magnitude > 0:
-            # Get molecular weight from PubChem
-            compounds = pcp.get_compounds(s_name, 'name')
-            if compounds:
-                molecular_weight = float(compounds[0].molecular_weight) * ureg('g/mol')
-                s_C_final = convert_to_molar(s_C_final, molecular_weight)
-                s_C_stock_converted = convert_to_molar(s_C_stock, molecular_weight)
+            if s_C_final_type == 'percentage':
+                if s_stock_type != 'percentage':
+                    raise ValueError("Stock concentration and final concentration units do not match for supplement.")
+                s_V1 = calculate_percentage_volume(
+                    s_C_final.magnitude,
+                    V_total,
+                    s_final_percentage_type,
+                    s_stock_percentage,
+                    Q_
+                )
             else:
-                print(f"Error: Compound '{s_name}' not found in PubChem.")
-                continue
-
-            # Calculate Supplement Volume (s_V1)
-            s_V1 = calculate_volume(s_C_stock_converted, s_C_final, V_total, ureg)
+                # Convert to molar if needed
+                compounds = pcp.get_compounds(s_name, 'name')
+                if compounds:
+                    molecular_weight = float(compounds[0].molecular_weight) * ureg('g/mol')
+                    s_C_final_molar = convert_to_molar(s_C_final, molecular_weight)
+                    s_C_stock_converted = convert_to_molar(s_C_stock, molecular_weight)
+                    s_V1 = calculate_volume(s_C_stock_converted, s_C_final_molar, V_total)
+                else:
+                    print(f"Error: Compound '{s_name}' not found in PubChem.")
+                    continue
         else:
             s_V1 = 0.0
-
-        # Convert treatment final concentration to molar if necessary
+    
+        # Handle Treatment
         if t_C_final.magnitude > 0:
-            if '%' in t_dose_unit:
-                # Handle percentage-based treatment
-                
-                final_conc_percent = float(t_dose)
-                t_V1 = percentage_to_volume(final_conc_percent, V_total, ureg)
+            if t_C_final_type == 'percentage':
+                if t_stock_type != 'percentage':
+                    raise ValueError("Stock concentration and final concentration units do not match for treatment.")
+                t_V1 = calculate_percentage_volume(
+                    t_C_final.magnitude,
+                    V_total,
+                    t_final_percentage_type,
+                    t_stock_percentage,
+                    Q_
+                )
             else:
-                # Get molecular weight from PubChem
+                # Convert to molar if needed
                 compounds = pcp.get_compounds(t_name, 'name')
                 if compounds:
                     molecular_weight = float(compounds[0].molecular_weight) * ureg('g/mol')
-                    t_C_final = convert_to_molar(t_C_final, molecular_weight)
+                    t_C_final_molar = convert_to_molar(t_C_final, molecular_weight)
                     t_C_stock_converted = convert_to_molar(t_C_stock, molecular_weight)
+                    t_V1 = calculate_volume(t_C_stock_converted, t_C_final_molar, V_total)
                 else:
                     print(f"Error: Compound '{t_name}' not found in PubChem.")
                     continue
-
-                # Calculate Treatment Volume (t_V1)
-                t_V1 = calculate_volume(t_C_stock_converted, t_C_final, V_total, ureg)
         else:
             t_V1 = 0.0
-
-        V_rest = V_total - (V_pre_culture * ureg('uL'))-(t_V1*ureg('uL'))-(s_V1*ureg('uL'))
-        V_additions = (t_V1*ureg('uL'))+(s_V1*ureg('uL'))
-
-        # How much 2x media to add 
-        V_media = V_additions+(V_rest-V_additions)/2
-        V_milliQ = (V_rest-V_additions)/2
-
-        # Check so that volumes match
-        V_pre_culture*ureg('uL') + V_additions + V_media + V_milliQ
-        
-        # Simple asserts to ensure valid volumes
-        # E.g. Total volume adds up and that no volumes are negative (due to too low stock concentrations)
-        
-        #print(V_pre_culture*ureg('uL'),V_additions,V_media,V_milliQ)
-        
-        assert V_milliQ > 0, 'Too low stock concentrations'
-        assert round(V_pre_culture*ureg('uL') + V_additions + V_media + V_milliQ) == V_total, 'Incorrect total volume.'
-
+    
+        # Calculate remaining volumes
+        V_rest = V_total - (V_pre_culture * ureg('uL')) - (t_V1 * ureg('uL')) - (s_V1 * ureg('uL'))
+        V_additions = (t_V1 * ureg('uL')) + (s_V1 * ureg('uL'))
+    
+        # Calculate volumes for media and MilliQ
+        V_media = V_additions + (V_rest - V_additions) / 2
+        V_milliQ = (V_rest - V_additions) / 2
+    
+        # Ensure volumes are valid
+        assert V_milliQ > 0, 'Too low stock concentrations resulting in negative MilliQ volume.'
+        assert round(V_pre_culture + V_additions.magnitude + V_media.magnitude + V_milliQ.magnitude) == V_total.magnitude, 'Incorrect total volume.'
+    
         # Create a new row with calculated volumes
         new_row = {
             'Summary': experiment.get('summary', 'Unnamed Experiment'),
-            'Media (uL)': V_media.m,
+            'Media (uL)': V_media.magnitude,
             'Inoculated Media (uL)': V_pre_culture,
             'Supplement (uL)': s_V1,
             'Treatment (uL)': t_V1,
-            'MilliQ (uL)': V_milliQ.m
+            'MilliQ (uL)': V_milliQ.magnitude
         }
-
+    
         # Append the new row to the dosing table
         dosing_table = pd.concat([dosing_table, pd.DataFrame([new_row])], ignore_index=True)
 
-    
     # Add Media Control (no pre-culture, supplement, or treatment)
     media_control_row = {
         'Summary': 'Media control',
-        'Media (uL)': (V_total/2).m, # Complete to total volume (µL)
+        'Media (uL)': (V_total / 2).magnitude,  # Complete to total volume (µL)
         'Inoculated Media (uL)': 0.0,
         'Supplement (uL)': 0.0,
         'Treatment (uL)': 0.0,
-        'MilliQ (uL)': (V_total/2).m  # Complete to total volume (µL)
+        'MilliQ (uL)': (V_total / 2).magnitude  # Complete to total volume (µL)
     }
     dosing_table = pd.concat([dosing_table, pd.DataFrame([media_control_row])], ignore_index=True)
-
 
     # Merge dosing table with plate layout
     plate_layout = plate_layout.reset_index()  # Ensure 'Summary' is a column
@@ -352,10 +224,8 @@ def main():
         'inoculant': [],
     }
 
-    create_folder_structure(base_path, main_folder, subfolders_structure)
-    
+    create_folder_structure(base_path, main_folder, subfolders_structure)    
     # Step 3: Save each number group to a separate sheet in Excel
-    #with pd.ExcelWriter(plate_layout_path.replace('layoutTable','HamiltonRunlist').replace('.tsv','.xlsx')) as writer:
     with pd.ExcelWriter('protocol/hamilton/runlist.xlsx') as writer:
         for num in range(1, 13):
             # Filter rows for the current number
@@ -378,19 +248,18 @@ def main():
     # Merge the result back into df1 to keep the original structure
     dosing_with_wells = pd.merge(dosing_table, result, on='Summary', how='left')
     dosing_with_wells.iloc[:, [1, 2, 3]] = dosing_with_wells.iloc[:, [1, 2, 3]].apply(pd.to_numeric, errors='coerce')
-    
-    
-    #['Summary', 'Media (uL)', 'Inoculated Media (uL)', 'Supplement (uL)', 'Treatment (uL)', 'MilliQ (uL)', 'well']
-    print(tabulate(dosing_with_wells[['Media (uL)', 'Inoculated Media (uL)', 'Supplement (uL)', 'Treatment (uL)', 'MilliQ (uL)', 'well']], headers='keys', tablefmt='psql'))
 
+    # Extract "treatment_parameters" values
+    if environmental > 0:
+        copy_excel_file('protocol/hamilton/runlist.xlsx', len({experiment["treatment_parameters"] for experiment in protocol["experiments"]}))
+    
 
-import re
 import os
-import json
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 import pubchempy as pcp
 from pint import UnitRegistry
 import pandas as pd
-from tabulate import tabulate
+from utils.plate_utils import *
 
 if __name__ == "__main__":
     main()

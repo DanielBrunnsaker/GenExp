@@ -363,6 +363,14 @@ def main():
     
     python "../amiga-master/amiga.py" summarize -i ../experiments/amiga_results/data/20241010_hplc_growth_experiment.txt
     
+    
+    path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_0.25_5_20241121_1256 copy/results/growth/Formic acid'
+    output = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_0.25_5_20241121_1256 copy/results/growth/FA.txt'
+    correction = "yes"
+    filtering = "no"
+    layout_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_0.25_5_20241121_1256 copy/protocol/hamilton/pipetting_layout.xlsx'
+    
+    
     '''
     
     parser = argparse.ArgumentParser(description='Script with a command-line argument.')
@@ -455,10 +463,19 @@ def main():
     
     
     data = pd.DataFrame.from_dict(data_dict, orient = 'index', columns = [i * 1200 for i in range(len(files))])
+    
+    
+    layout = pd.read_excel(layout_path)
+    blank_wells = layout['well'][layout['Summary'] == 'Media control']
+    blank_wells = blank_wells.apply(lambda x: f"{x[0]}{int(x[1:]):02d}")
+    
     #data.to_csv('../experiments/growth/20241010_hplc_growth_experiment.txt', sep='\t')
-    blank_wells = ['A01','B01','C01','D01','E01','F01','G01','H01', 
-                   'A07','B07','C07','D07','E07','F07','G07','H07',
-                   'A01','B12','C12','D12','E12','F12','G12','H12',]  # Replace with your list of blank wells
+   # blank_wells = ['A01','B01','C01','D01','E01','F01','G01','H01', 
+   #                'A07','B07','C07','D07','E07','F07','G07','H07',
+   #                'A01','B12','C12','D12','E12','F12','G12','H12',]  # Replace with your list of blank wells
+    
+    
+    
     
     if correction == 'yes':
     
@@ -468,34 +485,17 @@ def main():
         
         # Apply the normalization function
         data = subtract_closest_blanks(data, blank_wells, n)
+        output = output.replace('.txt','_corrected.txt')
         #print(data.iloc[0,:])
         #data.to_csv(output, sep='\t')
    
     if filtering == 'yes':
-       #data, outliers = remove_timepoint_outliers_mad(data, blank_wells, threshold = 2.0)
-       
-       #data = remove_outliers_per_well_mad(data, threshold=2)
-       
        
        datatemp = remove_outliers_based_on_growth_rate(data, max_growth_rate=0.5*0.34, max_drop_rate=-0.5*0.34)
-       #data = combined_outlier_detection(data, max_growth_rate=0.45/0.34, max_drop_rate=-0.45/0.34, mad_threshold=1.5)
-       #data = combined_outlier_detection(data, max_growth_rate=0.45, max_drop_rate=-0.45, mad_threshold=1.5)
-       
-       #data = pd.DataFrame.from_dict(data_dict, orient = 'index', columns = [i * 1200 for i in range(len(files))])
-       #data = apply_mad_on_residuals(df, mad_threshold=1.5)
-       #data = mad_sliding_window(data, window_size=10, mad_threshold=2)
-       
-       #data = apply_rolling_median_filter(data, window_size=5)
-       #tempdata = hampel_filter(data, window_size=3, n_sigma=2)
-       #tempdata = kalman_smoothing(data)
-       #tempdata = iterative_mad_outlier_removal(data, mad_threshold=2, max_iterations=5)
-       
+      
        
        tempdata = apply_rolling_median_filter(data, window_size=3)
        tempdata = remove_outliers_based_on_growth_rate(tempdata, max_growth_rate=0.5*0.34, max_drop_rate=-0.5*0.34)
-       
-       #data, outliers = remove_timepoint_outliers_derivative(data[data.index.isin(blank_wells)], max_change=0.5)
-       #max_change=0.5
     
     data.to_csv(output, sep='\t')
     #data, outliers = remove_timepoint_outliers_derivative(data, max_change=0.5)

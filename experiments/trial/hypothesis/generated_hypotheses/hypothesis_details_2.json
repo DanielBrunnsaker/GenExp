@@ -1,0 +1,6 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,cobalt dichloride)",
+    "observable": "glutamate",
+    "qualifier": "higher",
+    "coefficient": 1.0
+}
