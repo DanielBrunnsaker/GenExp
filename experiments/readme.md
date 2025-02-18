@@ -6,7 +6,7 @@ Alec & Filip, does this seem like a reasonable structure? Feel free to make subf
   
   - hypothesis/
     - generated_hypotheses/
-      - initial_stage/  # Contains hypotheses and experimental plans from the pattern selection step (number will be equal to N)
+      - initial_stage/  (Contains hypotheses and experimental plans from the pattern selection step (number will be equal to N))
       - second_stage/  # Contains all of the generated variants (after pattern selection, M variants will be generated, best one is selected)
     - selected_hypothesis/
       - hypothesis_details.json  # basic information regarding the selected hypothesis
