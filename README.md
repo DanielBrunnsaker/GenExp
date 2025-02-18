@@ -19,6 +19,7 @@ Add a key.txt file (see .gitignore) containing only the API key ("sk-proj---XXXX
 ## Generation and experiment execution parameters
 
 Settings regarding the runs can be found in `scripts/config.py`.
+Note that you will need to change paths to relevant executables in the config-file.
 
 ## Generating an hypothesis, experimental design and liquid handling scripts
 
