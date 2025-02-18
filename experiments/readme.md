@@ -17,7 +17,7 @@ Alec & Filip, does this seem like a reasonable structure? Feel free to make subf
   - protocol/
     - EVE/  # Contains the generated OVERLORD-protocol (not done yet)
     - hamilton/ # contains the files needed for the hamilton automation
-       - channels/  # specifies activation and deactivation of hamilton-channels to avoid cross-contamination
+     - channels/  # specifies activation and deactivation of hamilton-channels to avoid cross-contamination
          
     - mass_spectrometry/ # contains generated runlist and experimental template for AutonoMS
     - plate_layout/ # contains metadata for PLAID, and the generated layout
