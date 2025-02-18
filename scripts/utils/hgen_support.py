@@ -8,13 +8,71 @@ Created on Mon Aug 19 15:55:46 2024
 
 import json
 import re 
-import os
 from datetime import datetime
-from itertools import combinations
 import pandas as pd
 from libchebipy._chebi_entity import ChebiEntity
+import numpy as np
 
-def load_json(file_path):
+def create_experiment_folder(target, alpha, N, EXPERIMENTS_DIR): #genexp.py
+    """
+    Creates the required folder structure for the experiment.
+    
+    Args:
+        target (str): The target molecule.
+        alpha (float): The pattern ranking weight.
+        N (int): The number of hypotheses.
+
+    Returns:
+        str: Path to the created experiment folder.
+    """
+
+    main_folder = EXPERIMENTS_DIR / f"{target}_{datetime.now().strftime('%Y%m%d%H%M')}"
+    folder_structure = {
+        "hypothesis": {
+            "generated_hypotheses": {
+                "initial_stage": {},
+                "second_stage": {}
+            },
+            "selected_hypothesis": {}
+        },
+        "protocol": {
+            "EVE": {},
+            "hamilton": {},
+            "plate_layout": {},
+            "mass_spectrometry": {},
+        },
+        "results": {
+            "metabolomics": {
+                "processed": {},
+                "raw": {},
+                "tests": {
+                    "models": {}}},
+            "growth": {
+                "processed": {},
+                "raw": {},
+                "tests": {
+                    "models": {}}},
+            "plots": {}
+        },
+        "versions": {}
+    }
+
+    def create_folders_recursively(base_path, structure):
+        """ Recursively creates folder structure """
+        for folder, sub_structure in structure.items():
+            folder_path = base_path / folder
+            folder_path.mkdir(parents=True, exist_ok=True)
+
+            if isinstance(sub_structure, dict):
+                create_folders_recursively(folder_path, sub_structure)
+
+    create_folders_recursively(main_folder, folder_structure)
+
+   # print(f"Experiment folder created at: {main_folder}")
+    return str(main_folder)
+
+
+def load_json(file_path): #genexp.py
     """
     Load a JSON file and return its content.
     """
@@ -38,8 +96,6 @@ def get_entry_details(data, logic_program):
 
 def extract_logic_program(text):
     
-    
-    
     # Updated regex pattern to capture logic program starting with "Cell(A):-exhibits_phenotype"
     pattern = r"Cell\(A\):-exhibits_phenotype.*?\."
     match = re.search(pattern, text, re.DOTALL)
@@ -48,90 +104,6 @@ def extract_logic_program(text):
         return match.group(0)
     return None
 
-def save_string_to_json(path_dir, content, prefix, target, N, T, alpha, beta):
-    
-    
-    """
-    
-    Args:
-    path_dir (str): The directory where the file will be saved.
-    content (dict): LLM output or data to be saved in JSON format.
-    
-    prefix (str): descriptor of the file.
-    target (str): Which amino acid is the target of the hypothesis.
-    N (int): N hypotheses given to the initial prompt.
-    T (float): temperature of the hypothesis generation step.
-    alpha (str): alpha-coefficient.
-    beta (str): beta-coefficient.
-    
-    Returns:
-    str: The path to the saved file.
-    """
-    # Get the current timestamp
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
-    
-    # Construct the filename
-    filename = f"{timestamp}_{prefix}_{target}_{N}_{T}_{alpha}_{beta}.json"
-    
-    # Combine the path and the filename
-    file_path = os.path.join(path_dir, filename)
-    
-    # Write the content to the JSON file
-    with open(file_path, 'w') as file:
-        json.dump(content, file, indent=4)
-    
-    print(f"File saved to: {file_path}")
-    return file_path
-
-def save_string_to_file(path_dir, content, prefix, target, N, T, alpha, beta):
-    
-    
-    
-    """
-    
-    Args:
-    path_dir (str): The directory where the file will be saved.
-    
-    content (str): LLM output for that specific step
-    
-    prefix (str): descriptor of the file
-    target (str): Which amino acid is the target of the hypothesis.
-    N (int): N hypotheses given to the initial prompt.
-    T (float): temperature of the hypothesis generation step
-    alpha (str): alpha-coefficient.
-    beta (str): beta-coefficient.
-    
-    Returns:
-    str: The path to the saved file.
-    """
-    # Get the current timestamp
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
-    
-    # Construct the filename
-    filename = f"{timestamp}_{prefix}_{target}_{N}_{T}_{alpha}_{beta}.txt"
-    
-    # Combine the path and the filename
-    file_path = os.path.join(path_dir, filename)
-    
-    # Write the content to the file
-    with open(file_path, 'w') as file:
-        file.write(content)
-    
-    print(f"File saved to: {file_path}")
-    return file_path
-
-        
-def combinations_start_with_first(lst):
-    
-    first_item = lst[0]
-    result = []
-    
-    for r in range(1, len(lst) + 1):  # lengths from 1 to N
-        for comb in combinations(lst[1:], r - 1):  # generate combinations for the rest of the list
-            result.append((first_item,) + comb)  # prepend the first item
-
-    return result   
-
 def find_row_with_string(filename, target_string):
     with open(filename, 'r') as file:
         for line in file:
@@ -139,17 +111,6 @@ def find_row_with_string(filename, target_string):
                 return line.strip()  # Return the line without leading/trailing whitespace
     return None  # If the string is not found in any line
 
-def split_program_into_atoms(program):
-        
-    # Regular expression pattern to match atoms
-    atom_pattern = r"(phenotype_chemical|phenotype|chebi_name|chebi|condition)\(([^)]+)\)"
-
-    # Find all matches of atoms in the program
-    atoms = re.findall(atom_pattern, program)
-
-    # Format and return the atoms
-    formatted_atoms = [(predicate, arguments.split(',')) for predicate, arguments in atoms]
-    return formatted_atoms
 
 def check_predicate_match(tuples_list, target_string):
     predicate_count = 0
@@ -246,22 +207,15 @@ def normalize_column(column):
     max_val = max(column)
     return [(x - min_val) / (max_val - min_val) for x in column]
 
-# Function to calculate scores for each row based on target column and uniqueness
-def calculate_scores(df, target_column, alpha=0.1):
-    # Target values: maximize absolute values in the target column
-    target_values = df[target_column].abs()
+
+def calculate_scores(df, target_column, alpha):
+    # Absolute values
+    target_col_abs = df[target_column].abs()
+    other_cols_abs_sum = df.drop(columns=[target_column]).abs().sum(axis=1) ** alpha
     
-    # Non-uniqueness penalty: sum of absolute values across other columns
-    penalty_values = df.drop(columns=[target_column]).abs().sum(axis=1)
-    
-    # Calculate the score: prioritize high target values, penalize non-unique rows
-    scores = target_values - alpha * penalty_values
-    
-    # Add the scores to the DataFrame
-    df['score'] = scores
-    
-    # Sort by the score column in descending order
-    df_sorted = df.sort_values(by='score', ascending=False).drop(columns=['score'])
+    # Logarithmic uniqueness score
+    df['weighted_score'] = np.log(1 + target_col_abs) / np.log(1 + target_col_abs + other_cols_abs_sum)
+    df_sorted = df.sort_values(by='weighted_score', ascending=False).drop('weighted_score', axis = 1)
     
     return df_sorted
 
@@ -277,9 +231,9 @@ def load_hypotheses(path, target):
 
 def load_all_hypotheses(path, target, aaSet):
         
-    st = pd.DataFrame(pd.read_csv(f'{path}alanine_eCV_coefficients.csv', index_col = 0).mean(axis = 1), columns = ['alanine'])
+    st = pd.DataFrame(pd.read_csv(f'{path}/alanine_eCV_coefficients.csv', index_col = 0).mean(axis = 1), columns = ['alanine'])
     for trg in aaSet.columns[1:]:
-        tmp = pd.DataFrame(pd.read_csv(f'{path}{trg}_eCV_coefficients.csv', index_col = 0).mean(axis = 1), columns = [trg])
+        tmp = pd.DataFrame(pd.read_csv(f'{path}/{trg}_eCV_coefficients.csv', index_col = 0).mean(axis = 1), columns = [trg])
         st = st.merge(tmp, left_index = True, right_index = True)
 
     hypotheses = st[target]
@@ -287,7 +241,6 @@ def load_all_hypotheses(path, target, aaSet):
     hypotheses.columns = [target]
      
     return hypotheses, st/st.abs().max(axis = 0)
-
 
 
 def calculate_string_score(string, word_scores):
@@ -316,37 +269,5 @@ def calculate_string_score(string, word_scores):
         total_score += count * score
 
     return total_score
-
-def user_prompt():
-    
-    while True:
-        # Present the user with options
-        print('##########################')
-        print("Choose an option:")
-        print("[1] Go ahead with experiment")
-        print("[2] Unsafe experiment (will cancel and will disallow the pattern in the future)")
-        print("[3] Reprompt")
-        print("[4] Cancel")
-        
-        # Get user input
-        choice = input("Enter your choice (1, 2, 3 or 4): ")
-
-        # Handle the different choices
-        if choice == "1":
-            #print("Proceeding with the script...")
-            return "go_ahead"
-        elif choice == "2":
-            print("Adding pattern to disallowed clauses...")
-            return "forbidding pattern"
-        elif choice == "3":
-            print("Retrying...")
-            return "reprompt"
-        elif choice == "4":
-            print("Cancelling the script...")
-            return "cancel"
-        else:
-            print("Invalid choice, please try again.")
-            
-            
 
 

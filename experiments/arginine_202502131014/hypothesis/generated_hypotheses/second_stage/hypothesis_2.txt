@@ -1,0 +1,46 @@
+### Motivation
+
+The statement suggests that cells with lower intracellular arginine levels are associated with increased resistance to caffeine. To explore this association, we will design a batch experiment that modulates intracellular arginine levels and measures the resistance to caffeine, using a wild-type Saccharomyces cerevisiae strain. By manipulating arginine levels and exposing the cells to caffeine, we can determine if there is a correlation between arginine concentration and caffeine resistance.
+
+### Hypothesis
+
+Lower intracellular arginine levels in Saccharomyces cerevisiae cells result in increased resistance to caffeine, potentially due to alterations in metabolic pathways or stress response mechanisms that are influenced by arginine availability.
+
+### Experimental Plan
+
+1. **Media Preparation:**
+   - Use minimal media without amino acids as the baseline condition.
+
+2. **Arginine Supplementation Levels:**
+   - Control: No arginine supplementation.
+   - Low Arginine: 0.1 mM arginine supplementation.
+   - High Arginine: 1 mM arginine supplementation.
+
+3. **Caffeine Treatment Levels:**
+   - Control: No caffeine.
+   - Caffeine Treatment: 5 mM caffeine.
+
+4. **Negative Control:**
+   - Use serine as the negative control at 1 mM, which is equimolar to the highest arginine supplementation level, since serine is not directly involved in the pathways related to caffeine resistance.
+
+5. **Experimental Conditions:**
+   - Prepare 96-well plates with the following combinations:
+     - 3 arginine levels (Control, Low, High) x 2 caffeine levels (Control, Treatment) = 6 conditions.
+     - Include serine negative control with and without caffeine (2 additional conditions).
+   - Total of 8 conditions.
+
+6. **Experimental Setup:**
+   - Inoculate each well with a predefined concentration of wild-type Saccharomyces cerevisiae.
+   - Incubate at 30°C with shaking.
+   - Monitor OD600 every 20 minutes to assess growth curves.
+   - Terminate the experiment at 20 hours.
+
+7. **Measurements:**
+   - Use mass spectrometry-based metabolomics to measure intracellular arginine levels at the end of the experiment.
+   - Assess viability and growth to determine caffeine resistance.
+
+### Expected Outcomes
+
+- If the hypothesis is correct, we expect to see a dose-dependent relationship where lower arginine supplementation correlates with increased growth in the presence of caffeine, indicating increased resistance.
+- The negative control with serine should show no significant change in caffeine resistance, confirming that the observed effects are specific to arginine modulation.
+- Independent effects of arginine supplementation might include changes in general growth rates or metabolic profiles, which should be considered when interpreting results.

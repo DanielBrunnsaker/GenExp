@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,indium(3+)),condition(C,Treatment: 2.6mM indium chloride)",
+    "observable": "proline",
+    "qualifier": "higher",
+    "coefficient": 0.17482616320981167,
+    "initial_prompt": "16. Cells with higher levels of intracellular proline in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'indium(3+)'),condition(C,'Treatment: 2.6mM indium chloride')"
+}

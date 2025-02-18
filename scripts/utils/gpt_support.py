@@ -5,31 +5,26 @@ Created on Mon Sep  9 17:47:07 2024
 
 @author: danbru
 """
+import os
+import json
+import re
 
-def prompt_gpt_for_hypothesis(context_path, prompted_statements, temp, key):
+from openai import OpenAI
+
+import config
+
+def prompt_gpt_for_hypothesis(context_path, prompted_statements, key, T ,llm_version='gpt-4o'):
     
-    from openai import OpenAI
-    import os
-    
-    os.environ["OPENAI_API_KEY"] = key
-    #print(' Generating hypotheses... \n')
-    
+    os.environ["OPENAI_API_KEY"] = key    
     client = OpenAI()
-    
-    # Open a text file in read mode
-    #with open('../context/hypgen_context.txt', 'r') as file:
+   
     with open(context_path, 'r') as file:
         # Read the entire file content
         context = file.read()
-    
-    #prompted_statements = "1. Cells with higher than normal levels of intracellular proline in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B),compound_name(B,niclosamide) 2. Cells with higher than normal levels of intracellular proline in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B),compound_name(B,'5-[[3-(1-phenylethoxy)-4-(2-phenylethoxy)phenyl]methylene]-4-oxo-2-thioxo-3-thiazolidineacetic acid') 3. Cells with higher than normal levels of intracellular proline in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'increased chemical compound accumulation',B),compound_name(B,'lithium(1+)')"
-    
+   
     completion = client.chat.completions.create(
-        #model="gpt-4o-mini",
-        model="gpt-4o",
-        #model = 'o1-preview',
-        #model = 'o1-mini',
-        temperature = temp,
+        model = llm_version,
+        temperature = T,
         messages=[
             {"role": "system", "content": context},
             {
@@ -38,33 +33,20 @@ def prompt_gpt_for_hypothesis(context_path, prompted_statements, temp, key):
             }
         ]
     )
-    
-    message = completion.choices[0].message
-    hypothesis = message.content
-    
-    return hypothesis
+    return completion
 
 def prompt_gpt_for_experimental_plan(context_path, hypothesis, key):
     
-    from openai import OpenAI
-    import os
-    
     os.environ["OPENAI_API_KEY"] = key
-
     client = OpenAI()
-    
-    #print(' Designing experimental plan... \n')
-    # Redefine a new one.
-    # Open a text file in read mode
-    #with open('../context/expdesign_context.txt', 'r') as file:
+
     with open(context_path, 'r') as file:
         # Read the entire file content
         exp_context = file.read()
     
     completion = client.chat.completions.create(
-        #model="gpt-4o-mini",
-        model="gpt-4o",
-        temperature = 0.0,
+        model = config.LLM_AUTOFORMALIZATION_MODEL,
+        temperature = config.LLM_AUTOFORMALIZATION_TEMPERATURE,
         messages=[
             {"role": "system", "content": exp_context},
             {
@@ -74,14 +56,10 @@ def prompt_gpt_for_experimental_plan(context_path, hypothesis, key):
         ]
     )
     
-    message = completion.choices[0].message
-    experimental_plan = message.content
-    return experimental_plan
+    # Save the model used for the prompt
+    return completion
 
-def is_valid_json(filename):
-    
-    import json
-    
+def is_valid_json(filename):    
     try:
         with open(filename, 'r') as json_file:
             json.load(json_file)  # Attempt to load the file
@@ -92,75 +70,37 @@ def is_valid_json(filename):
         return False  # Any other exception also indicates failure
 
 def retry_experimental_plan(context_path, hypothesis, key, retries=3):
-    
-    import json
-    
+
     attempts = 0
     success = False
     
     while attempts < retries and not success:
-        experimental_plan = prompt_gpt_for_experimental_plan(context_path,hypothesis, key)
+        completion = prompt_gpt_for_experimental_plan(context_path,hypothesis, key)
+        experimental_plan = completion.choices[0].message.content
         json_string_cleaned = experimental_plan.replace("\\'", "'")
+        
+        # Sometimes the output is formatted as markdown, code below is to avoid any errors when compiling into json
+        json_string_cleaned = json_string_cleaned.replace("'''", "")
+        json_string_cleaned = json_string_cleaned.replace("json", "")
+        json_string_cleaned = json_string_cleaned.replace("```", "")
         
         try:
             # Attempt to load the JSON
             data = json.loads(json_string_cleaned)
-            
-            print("JSON saved successfully!")
             success = True  # Mark success to exit the loop
-            
-            return data, experimental_plan
+            return data, experimental_plan, completion
             
         except json.JSONDecodeError as e:
+            print(json_string_cleaned)
             attempts += 1
             print(f"Failed to load JSON on attempt {attempts}: {e}")
             if attempts < retries:
                 print(f"Retrying... ({retries - attempts} attempts left)")
             else:
-                print("Maximum retry limit reached. Exiting.")
-                return None
-            
-            
-def safety_feasibility_prompt(full_prompt, key):
- 
-     from openai import OpenAI
-     import os
-     
-     os.environ["OPENAI_API_KEY"] = key
-     #print(' Selecting clauses based on safety and feasibility... \n')
-     
-     client = OpenAI()
-     
-     # Open a text file in read mode
-     with open('../context/feasibility_context.txt', 'r') as file:
-         # Read the entire file content
-         context = file.read()
-     
-     #prompted_statements = "1. Cells with higher than normal levels of intracellular proline in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B),compound_name(B,niclosamide) 2. Cells with higher than normal levels of intracellular proline in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'decreased resistance to chemicals',B),compound_name(B,'5-[[3-(1-phenylethoxy)-4-(2-phenylethoxy)phenyl]methylene]-4-oxo-2-thioxo-3-thiazolidineacetic acid') 3. Cells with higher than normal levels of intracellular proline in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-phenotype(A,'increased chemical compound accumulation',B),compound_name(B,'lithium(1+)')"
-     
-     completion = client.chat.completions.create(
-         #model="gpt-4o-mini",
-         model="gpt-4o",
-         temperature = 0.0,
-         messages=[
-             {"role": "system", "content": context},
-             {
-                 "role": "user",
-                 "content": full_prompt
-             }
-         ]
-     )
-     
-     message = completion.choices[0].message
-     hypothesis = message.content
-     
-     #print(hypothesis)
- 
-     return hypothesis
+                print("Maximum retry limit reached. Exiting. Please regenerate hypothesis.")
+                exit()
 
 def extract_statements(text, numbers):
-    
-    import re
     
     # Create a regex pattern to match each numbered statement
     pattern = r"(\d+\.\s[\s\S]*?(?=\d+\.\s|$))"
@@ -173,32 +113,3 @@ def extract_statements(text, numbers):
 
     return extracted_statements
 
-def create_folder_structure(base_path, main_folder, subfolders_structure):
-    
-    import os
-    
-    # Define the main folder path
-    main_folder_path = os.path.join(base_path, main_folder)
-    
-    # Create the main folder if it doesn't exist
-    if not os.path.exists(main_folder_path):
-        os.makedirs(main_folder_path)
-        #print(f"Created main folder: {main_folder_path}")
-    
-    
-    # Create subfolders and their subsubfolders
-    for subfolder, subsubfolders in subfolders_structure.items():
-        # Path for each subfolder
-        subfolder_path = os.path.join(main_folder_path, subfolder)
-        if not os.path.exists(subfolder_path):
-            os.makedirs(subfolder_path)
-            #print(f"Created subfolder: {subfolder_path}")
-        
-
-        # Create each subsubfolder within the current subfolder
-        for subsubfolder in subsubfolders:
-            subsubfolder_path = os.path.join(subfolder_path, subsubfolder)
-            if not os.path.exists(subsubfolder_path):
-                os.makedirs(subsubfolder_path)
-                #print(f"Created subsubfolder: {subsubfolder_path}")
-            

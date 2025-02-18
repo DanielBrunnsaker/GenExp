@@ -1,0 +1,90 @@
+	mu	AUC	MaxOD	Summary
+A1	0.2594538969558492	19517.064000000002	1.4131133333333334	Low proline supplementation without lactic acid treatment.
+A2	0.20951191718091705	17196.464	1.0118933333333335	Low proline supplementation with lactic acid treatment.
+A3	0.33798863298079995	10698.387999999999	0.9870866666666667	Lactic acid treatment without proline supplementation.
+A4	0.234325077517766	19641.816	1.2532266666666667	Control group with no supplementation or treatment.
+A5	0.23119459846572116	21788.076	1.3928133333333335	Control group with no supplementation or treatment.
+A6	0.0	35.296	0.0	Media control
+A8	0.22989257156419735	8116.4839999999995	0.48922	High proline supplementation with lactic acid treatment.
+A9	0.0	6.539999999999969	0.0	Media control
+A10	0.4436377197502914	9257.223999999998	0.9091333333333333	Lactic acid treatment without proline supplementation.
+A11	0.21245073402926998	25978.611999999997	1.4867333333333332	High proline supplementation without lactic acid treatment.
+A12	0.22516887686982787	23475.684	1.4707133333333333	Low proline supplementation without lactic acid treatment.
+B1	0.1959741965049758	33624.136	1.80712	Control group with no supplementation or treatment.
+B2	0.23145808826795602	19904.456	1.1217733333333333	High proline supplementation with lactic acid treatment.
+B4	0.27185164214249813	21491.32	0.9088933333333333	High proline supplementation without lactic acid treatment.
+B5	0.0	490.9600000000001	0.0	Media control
+B6	0.23670914163339535	14854.283999999998	0.9249933333333333	Low proline supplementation with lactic acid treatment.
+B7	0.2375325495899378	24393.580000000005	1.4215333333333333	Low proline supplementation without lactic acid treatment.
+B8	0.24767155069960936	6333.7119999999995	0.42188	Lactic acid treatment without proline supplementation.
+B9	0.26044078162194906	6813.740000000002	0.43914	Low proline supplementation with lactic acid treatment.
+B11	0.21670454571089617	10808.632	0.6438533333333334	Lactic acid treatment without proline supplementation.
+B12	0.251695573824571	17489.896	1.1968933333333331	High proline supplementation with lactic acid treatment.
+C1	0.20040759618826484	33066.268000000004	1.7818999999999998	High proline supplementation without lactic acid treatment.
+C2	0.0	429.98799999999983	0.0	Media control
+C3	0.27033436241558	18969.04	0.82288	Low proline supplementation without lactic acid treatment.
+C4	0.25917507582031346	11829.991999999998	0.7612133333333333	High proline supplementation with lactic acid treatment.
+C5	0.2289844038769373	25331.680000000008	1.5758933333333336	Low proline supplementation without lactic acid treatment.
+C6	0.26213748406697035	8373.46	0.4996333333333333	Lactic acid treatment without proline supplementation.
+C7	0.24761184455193194	23752.52	1.38548	Control group with no supplementation or treatment.
+C8	0.2770819666155538	8101.82	0.48912666666666665	Low proline supplementation with lactic acid treatment.
+C9	0.21026151735785167	10157.071999999998	0.5802666666666667	Lactic acid treatment without proline supplementation.
+C10	0.26469154777947845	5999.936000000001	0.3875733333333333	Low proline supplementation with lactic acid treatment.
+C11	0.24779453505143995	19540.848	1.173433333333333	Control group with no supplementation or treatment.
+C12	0.0	27.944000000000084	0.0	Media control
+D1	0.2501543112060948	12528.24	0.8594066666666667	Low proline supplementation with lactic acid treatment.
+D2	0.2052733920529584	15898.720000000001	0.8840399999999999	Lactic acid treatment without proline supplementation.
+D3	0.23392416201922522	20759.656	1.36406	Control group with no supplementation or treatment.
+D4	0.0	16.67199999999999	0.0	Media control
+D5	0.24919137648960554	11404.119999999997	0.7314666666666667	High proline supplementation with lactic acid treatment.
+D7	0.21438389772021754	24663.556	1.4360133333333334	High proline supplementation without lactic acid treatment.
+D8	0.0	95.71199999999999	0.0	Media control
+D9	0.21397126450646278	13854.584	0.8242533333333334	High proline supplementation with lactic acid treatment.
+D10	0.23164688194240737	18876.248	1.2058933333333335	Control group with no supplementation or treatment.
+D11	0.23856910959150032	20636.668	1.3655	Low proline supplementation without lactic acid treatment.
+D12	0.3505186468140069	11094.12	1.0532	Low proline supplementation with lactic acid treatment.
+E1	0.2199850361413452	15339.216	0.9633066666666668	Lactic acid treatment without proline supplementation.
+E2	0.22488801825677307	31887.956000000002	1.7825266666666664	Control group with no supplementation or treatment.
+E3	0.0	106.23199999999989	0.0	Media control
+E4	0.23098017885787808	22390.54	1.3323933333333333	High proline supplementation without lactic acid treatment.
+E5	0.2306759025697869	10193.943999999998	0.5587133333333334	Lactic acid treatment without proline supplementation.
+E6	0.25672530155924317	15369.764	1.1025066666666667	High proline supplementation without lactic acid treatment.
+E7	0.2814062955123156	4813.240000000001	0.17428	High proline supplementation with lactic acid treatment.
+E8	0.2550517278566687	24812.712	1.5068133333333333	Low proline supplementation without lactic acid treatment.
+E9	0.0	0.0	0.0	Media control
+E10	0.25022069207187847	14956.059999999998	1.0584466666666665	High proline supplementation without lactic acid treatment.
+E11	0.21034653112541898	15425.655999999999	0.8888533333333333	Low proline supplementation with lactic acid treatment.
+E12	0.2996297427820415	12249.404	0.9948133333333334	High proline supplementation with lactic acid treatment.
+F1	0.2039390084741114	33428.151999999995	1.85764	Low proline supplementation without lactic acid treatment.
+F2	0.0	33.400000000000055	0.0	Media control
+F3	0.2461115685903046	20898.528000000002	1.0506933333333333	High proline supplementation without lactic acid treatment.
+F4	0.23198726593425198	10007.452	0.5993133333333333	Low proline supplementation with lactic acid treatment.
+F5	0.20977511970110196	28287.244	1.6291133333333334	High proline supplementation without lactic acid treatment.
+F6	0.20717689674409864	30513.068000000007	1.6910333333333334	Control group with no supplementation or treatment.
+F8	0.22620151321436105	11468.055999999999	0.6379133333333333	Low proline supplementation with lactic acid treatment.
+F9	0.2721861959077581	18347.079999999998	0.9401533333333333	High proline supplementation without lactic acid treatment.
+F10	0.24048387949771668	11455.423999999999	0.6254666666666666	High proline supplementation with lactic acid treatment.
+F11	0.21149528598258632	27185.587999999996	1.5373666666666665	Control group with no supplementation or treatment.
+F12	0.24866592807153523	17146.980000000003	1.2615000000000003	Lactic acid treatment without proline supplementation.
+G2	0.2114657241666068	30588.376	1.7477	Low proline supplementation without lactic acid treatment.
+G3	0.23069919879275602	16159.26	0.94102	Low proline supplementation with lactic acid treatment.
+G4	0.22818530544788101	22237.552	1.4393333333333334	Low proline supplementation without lactic acid treatment.
+G5	0.2259731270287226	12745.328000000001	0.7468533333333334	Low proline supplementation with lactic acid treatment.
+G6	0.0	2.664000000000006	0.0	Media control
+G7	0.2630513494829784	7725.2880000000005	0.5196133333333333	Lactic acid treatment without proline supplementation.
+G8	0.21446041211730865	31436.212000000003	1.6785266666666665	High proline supplementation without lactic acid treatment.
+G9	0.26304266857974773	23181.356	1.6295666666666666	Control group with no supplementation or treatment.
+G10	0.21068203438145644	29866.603999999996	1.7086266666666667	Low proline supplementation without lactic acid treatment.
+G11	0.0	0.0400000000000289	0.0	Media control
+G12	0.23697851507743006	16809.951999999997	1.1099666666666665	High proline supplementation without lactic acid treatment.
+H1	0.0	358.2520000000003	0.0	Media control
+H2	0.2773175466284816	16095.036000000002	1.26854	High proline supplementation without lactic acid treatment.
+H3	0.5170813916598475	7074.66	0.8090999999999999	Lactic acid treatment without proline supplementation.
+H4	0.30764280963754376	12274.108	1.0330133333333333	Lactic acid treatment without proline supplementation.
+H5	0.0	92.11600000000001	0.0	Media control
+H6	0.2392381452114458	11177.883999999998	0.7259933333333333	High proline supplementation with lactic acid treatment.
+H7	0.22995363551518758	11538.248000000001	0.7257733333333334	Low proline supplementation with lactic acid treatment.
+H8	0.2213420073023086	25872.523999999998	1.5930733333333333	Control group with no supplementation or treatment.
+H9	0.26875326866218935	16784.600000000002	1.2754533333333333	Low proline supplementation without lactic acid treatment.
+H11	0.24455510336525527	14416.768	0.9627466666666665	High proline supplementation with lactic acid treatment.
+H12	0.2711877929855995	18509.251999999997	0.9472466666666666	Control group with no supplementation or treatment.

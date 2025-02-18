@@ -1,7 +1,0 @@
-{
-    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,formic acid)",
-    "observable": "glutamate",
-    "qualifier": "higher",
-    "coefficient": 0.39035061700928053,
-    "initial_prompt": "2. Cells with higher than normal levels of intracellular glutamate in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'formic acid')"
-}

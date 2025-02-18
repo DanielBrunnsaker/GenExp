@@ -1,6 +1,0 @@
-{
-    "logic_program": "Cell(A):-exhibits_phenotype(A,increased resistance to chemicals,B,C),compound_name(B,nickel(2+))",
-    "observable": "glutamate",
-    "qualifier": "lower",
-    "coefficient": -0.265448052341362
-}

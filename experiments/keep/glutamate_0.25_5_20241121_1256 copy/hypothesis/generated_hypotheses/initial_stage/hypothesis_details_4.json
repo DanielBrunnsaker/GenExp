@@ -1,7 +1,0 @@
-{
-    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,cadmium(2+)),condition(C,Treatment: 606.1\u03bcM cadmium dichloride)",
-    "observable": "glutamate",
-    "qualifier": "higher",
-    "coefficient": 0.15642873263557552,
-    "initial_prompt": "10. Cells with higher than normal levels of intracellular glutamate in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'cadmium(2+)'),condition(C,'Treatment: 606.1\u03bcM cadmium dichloride')"
-}

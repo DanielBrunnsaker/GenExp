@@ -1,7 +1,0 @@
-{
-    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased chemical compound accumulation,B,C),compound_name(B,glycogen)",
-    "observable": "serine",
-    "qualifier": "lower",
-    "coefficient": -0.8929597482656744,
-    "initial_prompt": "1. Cells with lower levels of intracellular serine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'decreased chemical compound accumulation',B,C),compound_name(B,glycogen)"
-}

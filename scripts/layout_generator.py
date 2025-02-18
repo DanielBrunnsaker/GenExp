@@ -11,6 +11,8 @@ import json
 import subprocess
 import pandas as pd
 import io
+from pathlib import Path
+
 
 # Function to load a JSON file
 def load_json(file_path):
@@ -94,61 +96,7 @@ def visualize_grid(plate_layout):
     # Display the final grid
     print(tabulate(grid, headers='keys', tablefmt='psql'))
     #print(grid)
-'''
-def visualize_grid(plate_layout):
-    import numpy as np
-    import pandas as pd
-    from tabulate import tabulate
-    
-    # Create an empty grid (8 rows for A-H and 12 columns for 01-12)
-    grid = pd.DataFrame(np.nan, index=list("ABCDEFGH"), columns=[f"{i:02d}" for i in range(1, 13)])
 
-    # Extract unique values for the first and second compound from the 'CONCuM' strings
-    def parse_concums(concum):
-        """Helper function to extract concentrations from the CONCuM string."""
-        parts = concum.split(' & ')
-        compound1 = parts[0].split(': ')[1]  # Get the concentration of the first compound (glutamine)
-        compound2 = parts[1].split(': ')[1]  # Get the concentration of the second compound (nickel sulfate)
-        return compound1, compound2
-
-    # Get unique concentrations for the first and second compounds
-    concum_parsed = plate_layout['CONCuM'].apply(parse_concums)
-    unique_s_values = sorted(concum_parsed.apply(lambda x: x[0]).unique())
-    unique_t_values = sorted(concum_parsed.apply(lambda x: x[1]).unique())
-
-    # Create mappings for S (first compound) and T (second compound)
-    s_mapping = {val: idx for idx, val in enumerate(unique_s_values)}
-    t_mapping = {val: idx for idx, val in enumerate(unique_t_values)}
-
-    print("S Mapping (First Compound):", s_mapping)  # Optional: Print S mapping
-    print("T Mapping (Second Compound):", t_mapping)  # Optional: Print T mapping
-
-    # Populate the grid with the corresponding SxTy values
-    for _, row in plate_layout.iterrows():
-        well = row['well']
-        concum_value = row['CONCuM']
-        
-        # Parse the concentration values
-        s_value, t_value = parse_concums(concum_value)
-        
-        # Get the S and T codes
-        s_code = s_mapping[s_value]
-        t_code = t_mapping[t_value]
-        
-        # Create the SxTy value (e.g., "S2T0")
-        value = f"S{s_code}T{t_code}"
-        
-        # Parse the well string (e.g., "A01" -> row "A", column "01")
-        row_label = well[0]  # The first character (A-H)
-        col_label = well[1:]  # The remaining part (01-12) 
-        
-        # Assign the SxTy value to the correct position in the grid
-        grid.at[row_label, col_label] = value
-    
-    # Display the final grid
-    print(tabulate(grid, headers='keys', tablefmt='psql'))
-
-'''
 def plate_filler(plate_layout):
 
     # Define the list of all well positions (A01 to H12)
@@ -174,14 +122,13 @@ def plate_filler(plate_layout):
 
     return df_filled
 
+def generate_layout(output_path):
 
-
-
-def generate_layout(json_data, reference_layout, output_path):
+    EXPERIMENT_DIR = Path(output_path).resolve()
 
     #json_data = load_json('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/generated_outputs/20241021_1833_protocol_glutamine_25_0.5_1.0_0.2.json')
     #reference_layout = load_json('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/plaid/reference_plate.json')
-    json_data = load_json(json_data)
+    json_data = load_json(EXPERIMENT_DIR / 'protocol/protocol.json')
     reference_layout = load_json(reference_layout)
     
     experiment_entry = [entry for entry in  json_data['experiments'] if 'type' in entry and 'experiment' in entry['type'].lower()][0]

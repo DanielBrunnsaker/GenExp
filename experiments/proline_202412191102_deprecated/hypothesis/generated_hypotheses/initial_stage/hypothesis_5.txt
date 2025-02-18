@@ -1,0 +1,39 @@
+**Motivation:**
+
+The goal of this experiment is to investigate the association between intracellular proline levels and the phenotype of decreased resistance to the chemical 5-hydroxymethylfurfural (5-HMF) in Saccharomyces cerevisiae. Understanding this relationship can provide insights into the metabolic pathways and stress responses involved in chemical resistance, potentially informing strategies for improving industrial yeast strains.
+
+**Hypothesis:**
+
+Cells with lower intracellular proline levels exhibit decreased resistance to 5-hydroxymethylfurfural. Proline may play a role in cellular stress response mechanisms, possibly by stabilizing protein structures or acting as an osmoprotectant. By modulating proline levels, we can observe changes in the yeast's ability to withstand 5-HMF exposure.
+
+**Experimental Plan:**
+
+1. **Strain and Media Preparation:**
+   - Use a reference/wild-type prototrophic Saccharomyces cerevisiae strain.
+   - Prepare minimal media without any amino acids for baseline conditions.
+
+2. **Supplementation to Modulate Proline Levels:**
+   - **Control Group:** No supplementation (baseline proline levels).
+   - **Low Proline Group:** Add 1 mM of L-thiazolidine-4-carboxylic acid (T4C), a known inhibitor of proline biosynthesis, to decrease intracellular proline levels.
+   - **High Proline Group:** Add 2 mM of L-proline to increase intracellular proline levels.
+
+3. **Experimental Setup:**
+   - Inoculate cultures at 0.05 OD600 in a 96-well plate format.
+   - Incubate at 30°C with shaking for aeration.
+   - Add 5-HMF to all wells at a concentration of 10 mM at t=0h to simulate chemical stress.
+
+4. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth and assess viability.
+   - At the end of the 14-hour experiment, perform mass spectrometry-based metabolomics to measure intracellular proline concentrations.
+
+5. **Control Experiments:**
+   - Confirm the effect of T4C on proline levels by comparing intracellular proline concentrations in the low proline group to the control group.
+   - Assess the independent effect of L-proline supplementation on growth in the absence of 5-HMF by conducting parallel experiments without 5-HMF.
+
+**Expected Outcomes:**
+
+- **Control Group:** Expected to show baseline resistance to 5-HMF.
+- **Low Proline Group:** If the hypothesis is correct, cells with decreased proline levels due to T4C treatment will exhibit reduced growth and viability in the presence of 5-HMF, indicating decreased resistance.
+- **High Proline Group:** May show increased resistance to 5-HMF compared to the control group, supporting the protective role of proline.
+
+The results will provide evidence for or against the association between proline levels and resistance to 5-HMF, helping to elucidate the role of proline in chemical stress responses in yeast.

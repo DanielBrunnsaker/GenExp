@@ -1,0 +1,44 @@
+### Motivation
+
+The statement suggests an association between higher intracellular proline levels and decreased resistance to chromium trioxide in Saccharomyces cerevisiae. Understanding this association can provide insights into how intracellular metabolite levels influence cellular stress responses, particularly to toxic compounds like chromium trioxide.
+
+### Hypothesis
+
+Cells with elevated intracellular proline levels exhibit decreased resistance to chromium trioxide due to potential interference with stress response pathways. Proline might modulate the expression or activity of proteins involved in detoxification or stress response, potentially by affecting redox balance or osmotic stress regulation.
+
+### Experimental Plan
+
+1. **Strain and Media Preparation**
+   - Use a reference/wild-type prototrophic strain of S. cerevisiae.
+   - Grow cultures in minimal media without amino acids to ensure baseline conditions.
+
+2. **Proline Supplementation**
+   - Control: No proline supplementation.
+   - Low Proline: Supplement media with 0.1 mM proline.
+   - High Proline: Supplement media with 1 mM proline.
+   - Rationale: These concentrations are selected based on known physiological ranges to modulate intracellular proline levels without causing toxicity or significant osmotic stress.
+
+3. **Chromium Trioxide Treatment**
+   - Add chromium trioxide to all wells at a final concentration of 50 µM at t=0h, a concentration known to induce stress without completely inhibiting growth.
+
+4. **Experimental Setup**
+   - Each well in the 96-well plate will be inoculated with cultures at an initial OD600 of 0.05.
+   - Incubate at 30°C with shaking to ensure aeration.
+   - Measure OD600 every 20 minutes to monitor growth rates.
+   - Terminate the experiment at 14 hours.
+
+5. **Metabolomics Analysis**
+   - At termination, perform mass spectrometry-based metabolomics to quantify intracellular proline levels and other metabolites involved in stress response pathways.
+
+6. **Controls and Assumptions Verification**
+   - Include wells without chromium trioxide for each proline level to assess the independent effect of proline on growth.
+   - Include a set of wells with chromium trioxide but without proline supplementation to serve as a baseline for resistance.
+
+### Expected Outcomes
+
+- **Increased Proline Levels**: It is expected that wells with proline supplementation will show higher intracellular proline concentrations.
+- **Growth Rate Analysis**: If higher proline levels are associated with decreased resistance, wells with proline supplementation should exhibit reduced growth rates compared to the control when exposed to chromium trioxide.
+- **Independent Effects**: Proline alone (without chromium trioxide) should not significantly impact growth, verifying that any observed effects in the presence of chromium trioxide are due to the interaction between proline levels and chromium trioxide stress.
+- **Metabolomics Data**: Should reveal elevated proline levels in supplemented conditions and potentially altered levels of stress-related metabolites, supporting the hypothesis of modulated stress response pathways.
+
+This experimental design aims to test the association between intracellular proline levels and resistance to chromium trioxide while controlling for confounding variables and verifying the independent effects of proline supplementation.

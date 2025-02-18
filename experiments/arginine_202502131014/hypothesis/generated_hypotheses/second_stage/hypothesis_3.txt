@@ -1,0 +1,50 @@
+### Motivation
+
+The statement suggests an association between lower intracellular levels of arginine and increased resistance to caffeine in Saccharomyces cerevisiae. Arginine is a key amino acid involved in various metabolic pathways, and its intracellular concentration could influence stress response mechanisms, potentially affecting resistance to chemicals like caffeine. Investigating this association could provide insights into the metabolic adaptations that confer chemical resistance.
+
+### Hypothesis
+
+Cells with reduced intracellular arginine levels exhibit increased resistance to caffeine, potentially due to altered metabolic fluxes that enhance stress response pathways or reduce caffeine's deleterious effects.
+
+### Experimental Plan
+
+1. **Strain and Media Preparation**
+   - Use a reference/wild-type prototrophic Saccharomyces cerevisiae strain.
+   - Prepare minimal media without amino acids for baseline conditions.
+
+2. **Arginine Modulation**
+   - **Control**: No arginine supplementation.
+   - **Low Arginine**: Supplement with 0.1 mM arginine to reduce intracellular levels.
+   - **High Arginine**: Supplement with 2 mM arginine to maintain high intracellular levels.
+
+3. **Caffeine Treatment**
+   - **Control**: No caffeine treatment.
+   - **Caffeine**: Add 5 mM caffeine to the media, a concentration known to stress yeast cells.
+
+4. **Negative Control**
+   - Use lysine at 2 mM as a negative control for amino acid supplementation. Lysine is not directly involved in pathways related to caffeine resistance, making it a suitable control.
+
+5. **Experimental Conditions**
+   - Combine each level of arginine supplementation with caffeine treatment and control.
+   - Conditions: 
+     - No arginine + No caffeine
+     - No arginine + Caffeine
+     - Low arginine + No caffeine
+     - Low arginine + Caffeine
+     - High arginine + No caffeine
+     - High arginine + Caffeine
+     - Lysine control + No caffeine
+     - Lysine control + Caffeine
+
+6. **Measurements**
+   - Monitor OD600 every 20 minutes to assess growth and viability.
+   - At 20 hours, terminate the experiment and perform mass spectrometry-based metabolomics to measure intracellular arginine levels.
+
+### Expected Outcomes
+
+- **No Arginine + Caffeine**: If the hypothesis is correct, cells may show increased resistance to caffeine, indicated by a better growth curve compared to high arginine conditions.
+- **Low Arginine + Caffeine**: Expect a similar or enhanced resistance compared to the no arginine condition, depending on the degree of arginine reduction.
+- **High Arginine + Caffeine**: Cells may exhibit decreased resistance, with reduced growth compared to low or no arginine conditions.
+- **Controls**: Lysine control conditions should not show significant changes in caffeine resistance, confirming the specific role of arginine modulation.
+
+This experimental setup will help determine if the association between intracellular arginine levels and caffeine resistance holds under controlled conditions.

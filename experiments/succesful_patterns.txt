@@ -1,0 +1,6 @@
+glutamate:Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,zinc dichloride)
+proline:Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,aluminium(3+)),condition(C,Treatment: 2.4mM aluminium sulfate)
+proline:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,Calcofluor White)
+proline:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,chitosan)
+glutamate:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,spermine)
+glutamate:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,formic acid)

@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,increased resistance to chemicals,B,C),compound_name(B,(S)-lactic acid)",
+    "observable": "proline",
+    "qualifier": "higher",
+    "coefficient": 0.0585505823978405,
+    "initial_prompt": "13. Cells with higher levels of intracellular proline in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'(S)-lactic acid')"
+}

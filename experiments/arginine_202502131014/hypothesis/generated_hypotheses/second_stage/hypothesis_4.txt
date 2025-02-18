@@ -1,0 +1,56 @@
+### Motivation
+
+The motivation behind this experiment is to investigate the association between intracellular arginine levels and increased resistance to caffeine in Saccharomyces cerevisiae. Understanding this relationship may provide insights into how amino acid metabolism influences stress resistance mechanisms in yeast.
+
+### Hypothesis
+
+Cells with lower intracellular arginine levels exhibit increased resistance to caffeine, potentially due to altered metabolic pathways or stress response mechanisms that are activated under reduced arginine conditions.
+
+### Experimental Plan
+
+1. **Experimental Setup:**
+   - Use a reference/wild-type prototrophic strain of S. cerevisiae.
+   - Grow cells in minimal media without amino acids to ensure baseline conditions.
+   - Supplement with different levels of arginine to modulate intracellular levels.
+   - Include caffeine treatment to test resistance.
+
+2. **Supplementation Levels:**
+   - Control: No arginine supplementation.
+   - Low Arginine: 0.5 mM arginine.
+   - High Arginine: 2.0 mM arginine.
+
+3. **Treatment Levels:**
+   - Control: No caffeine.
+   - Caffeine Treatment: 5 mM caffeine.
+
+4. **Negative Control:**
+   - Use threonine as a negative control at 2.0 mM (equimolar to the highest arginine level).
+
+5. **Experimental Conditions:**
+   - 96-well plate format.
+   - Each condition in triplicate.
+   - Incubate at 30°C with shaking.
+   - Terminate experiment at 20 hours.
+
+6. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth.
+   - At experiment termination, use mass spectrometry-based metabolomics to measure intracellular arginine levels.
+
+7. **Experimental Combinations (Total 8 Conditions):**
+   - Control (No arginine, no caffeine)
+   - Low Arginine (0.5 mM), No Caffeine
+   - High Arginine (2.0 mM), No Caffeine
+   - Control (No arginine), Caffeine (5 mM)
+   - Low Arginine (0.5 mM), Caffeine (5 mM)
+   - High Arginine (2.0 mM), Caffeine (5 mM)
+   - Threonine (2.0 mM), No Caffeine (Negative Control)
+   - Threonine (2.0 mM), Caffeine (5 mM) (Negative Control)
+
+### Expected Outcomes
+
+- **No Arginine, Caffeine:** If lower arginine levels are associated with increased caffeine resistance, cells in this condition may exhibit better growth or viability compared to other caffeine-treated conditions.
+- **Low Arginine, Caffeine:** A moderate increase in resistance may be observed compared to high arginine, assuming a dose-response relationship.
+- **High Arginine, Caffeine:** Potentially reduced resistance to caffeine, indicating that higher arginine may not activate the same stress response pathways.
+- **Negative Controls (Threonine):** These should show no significant change in resistance, confirming that the observed effects are specific to arginine modulation.
+
+This experimental design allows for the testing of the hypothesis by examining the relationship between intracellular arginine levels and caffeine resistance in yeast.

@@ -1,0 +1,44 @@
+### Motivation
+
+The statement suggests an association between higher intracellular proline levels and decreased metal resistance, specifically to indium chloride, in Saccharomyces cerevisiae. Understanding this relationship could provide insights into the role of proline in metal stress response and potentially inform strategies for enhancing yeast metal tolerance.
+
+### Hypothesis
+
+Cells with elevated intracellular proline levels exhibit decreased resistance to indium chloride due to proline's potential role in modulating stress response pathways. Proline might interfere with metal detoxification processes or cellular stress signaling, leading to increased sensitivity to indium chloride.
+
+### Experimental Plan
+
+1. **Strain and Media Preparation:**
+   - Use a wild-type prototrophic Saccharomyces cerevisiae strain.
+   - Prepare minimal media without amino acids as the baseline condition.
+   
+2. **Proline Supplementation:**
+   - Design three levels of proline supplementation to modulate intracellular proline levels:
+     - Control: No proline supplementation.
+     - Low Proline: 10 mM proline supplementation.
+     - High Proline: 50 mM proline supplementation.
+   - Justification: Proline supplementation is known to increase intracellular proline levels and is physiologically relevant for studying its effects on stress responses.
+
+3. **Indium Chloride Treatment:**
+   - At t=0h, add 2.6 mM indium chloride to all wells to simulate metal stress conditions.
+   
+4. **Experimental Setup:**
+   - Inoculate cultures at 0.05 OD600 in a 96-well plate.
+   - Each condition (control, low proline, high proline) will be run in triplicate to ensure reproducibility.
+   - Include wells with no indium chloride as additional controls to assess the independent effect of proline on growth.
+
+5. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth and viability.
+   - At 14 hours, terminate the experiment and perform mass spectrometry-based metabolomics to quantify intracellular proline levels.
+
+6. **Controls:**
+   - Include a set of wells with no indium chloride and no proline supplementation to serve as a baseline control for growth without metal stress or proline modulation.
+   - Include a set of wells with indium chloride but no proline supplementation to serve as a control for the effect of indium chloride alone.
+
+### Expected Outcomes
+
+- **Control (No Proline):** Cells should exhibit standard growth and metal resistance profiles, serving as a baseline for comparison.
+- **Low Proline:** Cells may show slight variations in growth and metal resistance due to moderate changes in intracellular proline.
+- **High Proline:** If the hypothesis is correct, these cells will exhibit decreased growth and increased sensitivity to indium chloride, indicating decreased metal resistance.
+  
+By comparing growth rates and metabolomics data, we can determine if higher intracellular proline levels correlate with decreased metal resistance. Additionally, any independent effects of proline on growth in the absence of indium chloride will be assessed to ensure the observed phenotype is specifically related to metal stress.

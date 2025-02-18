@@ -18,7 +18,7 @@ from statannotations.Annotator import Annotator
 ### Get OD
 
 #/Users/danbru/Downloads/AUTOMATED___no barcode detected_.DAT
-od_data = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_0.25_5_20241121_1256 copy/results/growth/FA_corrected.txt', sep = '\t', index_col = 0)
+od_data = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/keep/glutamate_0.25_5_20241121_1256 copy/results/growth/FA_corrected.txt', sep = '\t', index_col = 0)
 od_data = pd.DataFrame(od_data.iloc[:,-1])
 
 #od_data.columns = [['Well','OD']]
@@ -29,7 +29,7 @@ od_data[od_data['OD'] < 0] = 0
 
 
 # Compare the active wells?
-layout = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_0.25_5_20241121_1256 copy/protocol/plate_layout/layout.tsv', sep = '\t')
+layout = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/keep/glutamate_0.25_5_20241121_1256 copy/protocol/plate_layout/layout.tsv', sep = '\t')
 layout['well'] = layout['well'].str.replace(r'(\D)0+(\d+)', r'\1\2', regex=True)
 
 # Only keep the relevant wells
@@ -41,11 +41,11 @@ custom_group_names = {
     "L-glutamate: 15 mM & Formic acid: 0 mM": "High Glutamate"
 }
 
-TIC = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/Results/faPOSCHROM.tsv', sep = '\t')
+TIC = pd.read_csv('/Users/danbru/Downloads/drive-download-20241212T153410Z-001/full_resultsCHROM.tsv', sep = '\t')
 TIC = TIC[TIC['FragmentIon'] == 'Summed'][['FileName','TotalArea']]
 
 
-data = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/Results/faPOS.csv')
+data = pd.read_csv('/Users/danbru/Downloads/full_results.csv')
 data['Well'] = data['Replicate'].str.extract(r'Expt1-([A-H]\d{1,2})')
 data['Peptide'] = data['Peptide'].str.replace('L-Glutamic acid','L-Glutamic Acid')
 
@@ -67,7 +67,7 @@ data['Biomass'] = data['Well'].map(
 # Apply the combined normalization formula:
 # Final Normalized Area = (Area - Blank) / (TIC * Biomass)
 data['Normalized_Area'] = data.apply(
-    lambda row: (row['Area'] / (row['TotalArea'] * row['Biomass']))
+    lambda row: (row['Area'] / (row['TotalArea']))
     if pd.notnull(row['Area']) and row['TotalArea'] > 0 and row['Biomass'] > 0 else np.nan,
     axis=1
 )
@@ -219,10 +219,10 @@ comparison_df['Adjusted P-Value'] = comparison_df.groupby('Peptide')['P-Value'].
 
 
 # Biomass gradient!
-TIC = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/Results/gradient_posCHROM.tsv', sep = '\t')
+TIC = pd.read_csv('/Users/danbru/Downloads/drive-download-20241212T153410Z-001/gradient_posCHROM.tsv', sep = '\t')
 TIC = TIC[TIC['FragmentIon'] == 'Summed'][['FileName','TotalArea']]
 
-data = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/Results/GradientPOS.csv')
+data = pd.read_csv('/Users/danbru/Downloads/drive-download-20241212T153410Z-001/gradient_results.csv')
 data['Well'] = data['Replicate'].str.extract(r'test-([A-H]\d{1,2})')
 data['Peptide'] = data['Peptide'].str.replace('L-Glutamic acid','L-Glutamic Acid')
 
@@ -272,6 +272,7 @@ grouped = df.groupby(['Peptide', 'Column'])['Normalized_Area'].mean().reset_inde
 
 # Pivot the data to structure it for plotting
 pivot_df = grouped.pivot(index='Column', columns='Peptide', values='Normalized_Area')
+pivot_df = pivot_df.drop('L-Valine', axis = 1)#[['L-Arginine','L-Asparagine']]
 
 # Plotting
 plt.figure(figsize=(10, 6))
@@ -295,7 +296,7 @@ plt.show()
 
 
 # Compare the active wells?
-layout = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_0.25_5_20241121_1256 copy/protocol/plate_layout/layout.tsv', sep = '\t')
+layout = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/keep/glutamate_0.25_5_20241121_1256 copy/protocol/plate_layout/layout.tsv', sep = '\t')
 layout['well'] = layout['well'].str.replace(r'(\D)0+(\d+)', r'\1\2', regex=True)
 
 # Only keep the relevant wells
@@ -307,13 +308,16 @@ custom_group_names = {
     "L-glutamate: 15 mM & Formic acid: 0 mM": "High Glutamate"
 }
 
-TIC = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/Results/faPOSCHROM.tsv', sep = '\t')
-TIC = TIC[TIC['FragmentIon'] == 'Summed'][['FileName','TotalArea']]
+#TIC = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/Results/faPOSCHROM.tsv', sep = '\t')
+#TIC = TIC[TIC['FragmentIon'] == 'Summed'][['FileName','TotalArea']]
 
-data = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/Results/faPOS.csv')
-data['Well'] = data['Replicate'].str.extract(r'Expt1-([A-H]\d{1,2})')
+
+
+
+data = pd.read_csv('/Users/danbru/Downloads/Transition Results.csv')
+data['Well'] = data['Replicate'].str.extract(r'Expt-([A-H]\d{1,2})') # Potentially problematic line
 data['Peptide'] = data['Peptide'].str.replace('L-Glutamic acid','L-Glutamic Acid')
-data = data[~data['Replicate'].str.startswith(('009', '010', '011', '012'))]
+#data = data[~data['Replicate'].str.startswith(('009', '010', '011', '012'))]
 
 
 # First, select an adduct for every amino acid (pick our specific comparison)
@@ -323,10 +327,12 @@ peptides_to_remove = data[data['Well'].isin(list(layout['well']))].groupby('Pept
 data = data[~data['Peptide'].isin(peptides_to_remove[peptides_to_remove].index)]
 
 # Filter out rows with zero or NA in the 'Area' column
-df_filtered = data[data['Area'].notna() & (data['Area'] != 0)]
+df_filtered_temp = data[data['Area'].notna() & (data['Area'] != 0)]
+df_filtered = data[data['Area'].notna()]
+
 
 # Group by 'Peptide', 'Protein', 'Precursor Mz' and count non-zero, non-NA values in the 'Area' column
-grouped = df_filtered.groupby(['Peptide', 'Protein', 'Precursor Mz'])['Area'].count().reset_index()
+grouped = df_filtered_temp.groupby(['Peptide', 'Protein', 'Precursor Mz'])['Area'].count().reset_index()
 
 # Find the combination with the maximum count for each unique 'Peptide'
 max_combinations = grouped.loc[grouped.groupby('Peptide')['Area'].idxmax()]
@@ -342,7 +348,7 @@ reduced_data['Area'] = reduced_data['Area'].fillna(0)
 
 # Step 1: Define a function to extract the well identifier
 def extract_well(replicate):
-    if replicate.endswith('MAT1'):  # For blanks (MAT1 entries), use the first number
+    if 'MAT1' in replicate:  # For blanks (MAT1 entries), use the first number
         #return 'blank-'+replicate.split('-')[0]
         return 'blank'
     else:  # For other entries, use the last part (e.g., A1, B7, H12)
@@ -365,7 +371,7 @@ print(wide_data)
 
 
 # First, remove anything whose signal is lower than the blank?
-blank_averages = wide_data.loc['blank']*0.5
+blank_averages = wide_data.loc['blank']*1
 
 # Step 3: Replace values lower than the blank average with NaN
 def mask_below_blank_average(row):
@@ -518,6 +524,107 @@ comparison_df = pd.DataFrame(comparison_results)
 comparison_df['Adjusted P-Value'] = comparison_df.groupby('Peptide')['P-Value'].transform(
     lambda x: multipletests(x, method='fdr_bh')[1]
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Lets use wide data for now?
+# Filter the dataframe to include only rows where the index contains 'A'
+filtered_df = wide_data[wide_data.index.str.startswith('H')]
+# Reset the index to work with the well names directly
+filtered_df = filtered_df.reset_index()
+
+# Extract the well numbers and sort the dataframe by these numbers
+filtered_df['Well_Number'] = filtered_df['Well'].str.extract(r'(\d+)').astype(int)
+filtered_df = filtered_df.sort_values(by='Well_Number')
+
+
+Met = 'L-Arginine'
+
+
+# Plot the values for the metabolite X
+plt.figure(figsize=(10, 6))
+plt.plot(filtered_df['Well_Number'], filtered_df[Met], marker='o', linestyle='-', label=f'Metabolite {Met}')
+plt.title(f'Values of Metabolite {Met} for Wells Containing H')
+plt.xlabel('Well Number')
+plt.ylabel(f'{Met} Value')
+plt.xticks(filtered_df['Well_Number'])
+plt.legend()
+plt.grid(True)
+plt.show()
+
+
+
+
+
+
+
+
+
+data
+
+
+
+
+
+import requests
+
+def query_hmdb(metabolite_name):
+    # Define the base API endpoint
+    url = "https://hmdb.ca/unearth/q"
+    params = {
+        "utf8": "✓",
+        "query": metabolite_name,  # Metabolite name or identifier
+        "searcher": "metabolites"
+    }
+    
+    # Send GET request to HMDB
+    response = requests.get(url, params=params)
+    
+    if response.status_code == 200:
+        # Parse the response (HTML or JSON depending on the result)
+        data = response.text  # Sometimes the result is not JSON
+        return data
+    else:
+        print("Failed to fetch data:", response.status_code)
+        return None
+
+# Example usage
+metabolite_name = "L-arginine"
+result = query_hmdb(metabolite_name)
+print(result)
+
+
+from bs4 import BeautifulSoup
+
+def extract_ccs(data):
+    soup = BeautifulSoup(data, "html.parser")
+    # Look for specific tags or sections related to CCS
+    ccs_section = soup.find("section", id="collision_cross_section")
+    if ccs_section:
+        return ccs_section.text.strip()
+    return "CCS data not found"
+
+ccs_data = extract_ccs(result)
+print("Extracted CCS Data:", ccs_data)
+
+
+
+
+
+
+
+
+# Let's start over!
 
 
 

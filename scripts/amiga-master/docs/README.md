@@ -1,1 +1,0 @@
-GithHub Pages for AMiGA.
