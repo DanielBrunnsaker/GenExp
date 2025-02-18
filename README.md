@@ -16,7 +16,7 @@ Follow download and install instructions [here](https://www.swi-prolog.org/downl
 
 Add a key.txt file (see .gitignore) containing only the API key ("sk-proj---XXXXXXXX...") for GPT4 in the root folder. Easiest to generate personal one (I can also give you one if you prefer to use the same).
 
-## Setting up an API-key
+## Generation and experiment execution parameters
 
 Settings regarding the runs can be found in `scripts/config.py`.
 
