@@ -33,7 +33,7 @@ python genexp.py --target <string> --N <integer> --alpha <float>
 - `alpha` is a float between 0 and 1 that is used to penalize patterns not unique to the specific metabolite observable (a number closer to 1 will ensure that patterns that are only deemed important for your specific target will rank higher). Default at 0.0
 
 
-This will create a folder in `/experiments` with all of the details regarding the experiments (e.g. hypothesis, protocol, liquid handling scripts, ...). Note that you will be prompted for stock concentrations (if applicable) during the run.
+This will create a folder in `/experiments` with all of the details regarding the experiments (e.g. hypothesis, protocol, liquid handling scripts, ...). Note that you will be prompted for stock concentrations (if compounds are not present in the library) during the run.
 
 ## TODO:
 - Potentially generate the Overlord-protocol (e.g. replace some variables in the reference protocol such as sampling time and regenerate)
