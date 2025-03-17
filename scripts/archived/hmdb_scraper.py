@@ -2,7 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import time
-
+import json
+import numpy as np
 # Crawl-delay specified in robots.txt
 
 # Define common adduct types and their contributions
@@ -225,7 +226,7 @@ def scrape_metabolites(hmdb_ids, output_csv="metabolites_data.csv"):
         
         time.sleep(5)  # Respect crawl-delay between queries
         
-    return df
+    return new_df
 
 CRAWL_DELAY = 5  # seconds
 # Example usage
@@ -250,16 +251,6 @@ adducts = {
     "[M-2H]-": {"mass": -1.007276, "charge": -2}
 }
 
-
-
-
-# WE read in the ymdb-compounds and get their hmdb_id?
-
-ymdb_compounds = pd.read_csv('/Users/danbru/Downloads/yeast-compounds-YMDB-2025-02-02')
-
-import requests
-from bs4 import BeautifulSoup
-import time
 
 def get_hmdb_id(ymdb_id):
     # Construct the URL
@@ -286,6 +277,13 @@ def get_hmdb_id(ymdb_id):
         return None
 
 
+# WE read in the ymdb-compounds and get their hmdb_id?
+
+ymdb_compounds = pd.read_csv('/Users/danbru/Downloads/yeast-compounds-YMDB-2025-02-02')
+
+
+
+
 # Example usage with a list of YMDB IDs
 #ymdb_ids = ['YMDB00001', 'YMDB00002', 'YMDB00003']  # Replace with your actual list of YMDB IDs
 
@@ -301,47 +299,196 @@ for ymdb_id in ymdb_ids:
     # Add a 1-second delay
     time.sleep(1)
 
+pd.DataFrame.from_dict(results, orient = 'index', 
+                       columns = ['HMDB']).to_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/data/ion_mobility_library/ymdb_hmdb.tsv', sep = '\t')
+
+ymdb_ids = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/data/ion_mobility_library/ymdb_hmdb_curated.tsv', sep = '\t', index_col = 0)
+ymdb_ids = ymdb_ids.merge(ymdb_compounds.set_index('MET_ID')[['INCHIKEY']], left_index = True, right_index = True)
+
+
+#ccs_compendium = ccs_compendium.merge(ymdb_ids.reset_index(), left_on  = 'InChI Key', right_on = 'INCHIKEY', how = 'right').drop_duplicates()
+
+
 #hmdb_ids = [get_hmdb_id(ymdb_id) for ymdb_id in ymdb_ids]
-hmdb_ids = [value for value in results.values() if value is not None]
+hmdb_ids = [value for value in ymdb_ids['HMDB'] if value is not np.nan]
 
+hmdb_ids = ["HMDB0000201"]
 
-# Matched via pubchem and HMDB
-'''
-hmdb_ids = ["HMDB0000161", # Alanine
-            "HMDB0000517", # Arginine
-            "HMDB0000168", # Asparagine
-            "HMDB0000191", # Aspartic acid
-            "HMDB0000148", # Glutamic acid
-            "HMDB0000641", # Glutamine
-            "HMDB0000123", # Glycine
-            "HMDB0000177", # Histidine
-            "HMDB0000172", # Isoleucine
-            "HMDB0000687", # Leucine
-            "HMDB0000182", # Lysine
-            "HMDB0000696", # Methionine
-            "HMDB0000159", # Phenylalanine
-            "HMDB0000162", # Prolinne
-            "HMDB0000187", # Serine
-            "HMDB0000167", # Threonine
-            "HMDB0000929", # Tryptophan
-            "HMDB0000158", # Tyrosine
-            "HMDB0000883", # Valine
-            "HMDB0006471", # Methylisocitric acid
-            "HMDB0000125", # Glutathione
-            "HMDB0006899", # Ala-Gly
-            "HMDB0000193", # Isocitrate
-            "HMDB0000227", # Mevalonic acid
-            "HMDB0001375", # 3-Hydroxy-3-methylglutaryl-CoA
-            ]  
-
-'''
-#hmdb_ids = results.items()
-
-
-hmdb_ids = ["HMDB00159"]
-
-df = scrape_metabolites(hmdb_ids, output_csv="/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/data/imCCS/ymdb_lib2.csv")
+df = scrape_metabolites(hmdb_ids, output_csv="/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/genExp_images/ymdb_lib3.csv")
 df = df.dropna()
+
+
+
+ymdb_ids = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/data/ion_mobility_library/ymdb_hmdb_curated.tsv', sep = '\t', index_col = 0)
+ymdb_ids = ymdb_ids.merge(ymdb_compounds.set_index('MET_ID')[['INCHIKEY']], left_index = True, right_index = True)
+
+hmdb_ccs = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/genExp_images/ymdb_lib_complete.csv')
+hmdb_ccs.columns = ['Name','Monoisotopic Mass','Adduct Type','CCS Type','Data Source / Predictor','m/z','CCS Value (Å²)',
+              'Reference','InChI Key','Chemical Formula']
+
+#hmdb_ccs2 = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/genExp_images/ymdb_lib_stragglers.csv')
+#hmdb_ccs2.columns = ['Name','Monoisotopic Mass','Adduct Type','CCS Type','Data Source / Predictor','m/z','CCS Value (Å²)',
+#              'Reference','InChI Key','Chemical Formula']
+
+
+#hmdb_ccs = pd.concat([hmdb_ccs, hmdb_ccs2], axis = 0).drop_duplicates()
+#hmdb_ccs.to_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/genExp_images/ymdb_lib_complete.csv')
+
+
+
+hmdb_ccs = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/genExp_images/ymdb_lib_complete.csv', index_col = 0)
+ccs_database = ymdb_ids.reset_index().merge(hmdb_ccs, right_on = 'InChI Key', left_on = 'INCHIKEY', how = 'left')
+
+# Add data from the unified CCS compendium?
+ccs_compendium = pd.read_csv('/Users/danbru/Downloads/UnifiedCCSCompendium_FullDataSet_2025-02-03.csv')[['Compound','Neutral.Formula','InChiKey','mz','Ion.Species','Ion.Species.Agilent','CCS','Sources']]
+ccs_compendium['Ion.Species'] = ccs_compendium['Ion.Species'] + ccs_compendium['Ion.Species.Agilent'].str[-1]
+ccs_compendium = ccs_compendium.drop('Ion.Species.Agilent', axis = 1)
+ccs_compendium.columns = ['Name', 'Chemical Formula', 'InChI Key','m/z','Adduct Type','CCS Value (Å²)','Reference']
+ccs_compendium['Adduct Type'] = ccs_compendium['Adduct Type'].replace('[M-2H+Na]-', '[M+Na-2H]-')
+ccs_compendium['Adduct Type'] = ccs_compendium['Adduct Type'].replace('[M+2H]2', '[M+2H]2+')
+ccs_compendium['Adduct Type'] = ccs_compendium['Adduct Type'].replace('[M-2H]-', '[M-2H]2-')
+ccs_compendium['Adduct Type'] = ccs_compendium['Adduct Type'].replace('[M+H-H2O]]', '[M-H2O+H]+')
+
+ccs_compendium['CCS Type'] = 'Experimental'
+ccs_compendium['Data Source / Predictor'] = 'CCS Compendium'
+
+ymdb_exp = ymdb_ids.reset_index().merge(ccs_compendium, left_on = 'INCHIKEY', right_on = 'InChI Key').drop(['InChI Key'], axis = 1)
+
+
+
+complete_database = pd.concat([ymdb_exp, ccs_database.dropna(subset = ['m/z']).drop(['InChI Key', 'Monoisotopic Mass'], axis = 1)], axis = 0)
+complete_database['CCS Value (Å²)'] = complete_database['CCS Value (Å²)'].round(1)
+complete_database.drop_duplicates(subset = ['INCHIKEY', 'Adduct Type','CCS Value (Å²)'], keep = 'first').to_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/data/ion_mobility_library/imccs_lib.csv')
+
+# complete_database = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/data/ion_mobility_library/imccs_lib.csv', index_col = 0)
+
+# Ensure same naming convention. Take the YMDB names
+correct_names = complete_database[complete_database["CCS Type"].str.contains("Predicted")].groupby("INCHIKEY")["Name"].first()
+complete_database["Name"] = complete_database["INCHIKEY"].map(correct_names)
+
+
+
+# Save the transition-list?
+
+# Format it so that it works with the transition list in Skyline?
+transitionList = pd.DataFrame()
+transitionList['Molecule List Name'] = complete_database['Data Source / Predictor']+'-'+complete_database['Reference'].astype(str).str.replace(", ", "")
+transitionList['Precursor Name'] = complete_database['Name']
+transitionList['Precursor Formula'] = complete_database['Chemical Formula']
+transitionList['Precursor Adduct'] = complete_database['Adduct Type']
+transitionList['Precursor Charge'] = transitionList['Precursor Adduct'].map(lambda x: adducts[x]['charge'] if x in adducts else None)
+transitionList['Product m/z'] = complete_database['m/z'].round(4)
+transitionList['Product Charge'] = transitionList['Precursor Adduct'].map(lambda x: adducts[x]['charge'] if x in adducts else None)
+transitionList['CCS'] = complete_database['CCS Value (Å²)'].astype(float).round(1)
+transitionList = transitionList.drop_duplicates()
+
+# Curate list?
+# Remove m/z under 50 (not measureable in our setup)
+transitionList = transitionList[transitionList['Product m/z'] >= 50]
+transitionList = transitionList[~(transitionList["Precursor Adduct"].str.contains("O") & ~transitionList["Precursor Formula"].str.contains("O"))]
+
+# Is this fine?
+
+len(transitionList['Precursor Name'].unique())
+# Check for positive adducts only?
+postransitionList = transitionList.copy()
+postransitionList = postransitionList[postransitionList['Precursor Charge'] > 0]
+len(postransitionList['Precursor Name'].unique())
+
+
+
+# Keep only things from AllCCS and compendium?
+
+reduced_postransitionList = postransitionList[postransitionList['Precursor Name'].isin(['L-Alanine',
+                                                                               'L-Valine',
+                                                                               'Leucine',
+                                                                               'Isoleucine',
+                                                                               'Methionine',
+                                                                               'Phenylalanine',
+                                                                               'L-Tryptophan',
+                                                                               'Proline',
+                                                                               'Histidine',
+                                                                               'Lysine',
+                                                                               'L-Arginine',
+                                                                               'L-Aspartic acid',
+                                                                               'Glutamic acid',
+                                                                               'Serine',
+                                                                               'L-Threonine',
+                                                                               'L-Cysteine',
+                                                                               'L-Tyrosine',
+                                                                               'L-Asparagine',
+                                                                               'Glutamine',
+                                                                               'Glycine'])]
+
+reduced_postransitionList = reduced_postransitionList[~reduced_postransitionList['Molecule List Name'].str.contains('DeepCCS')]
+reduced_postransitionList = reduced_postransitionList[~reduced_postransitionList['Molecule List Name'].str.contains('DarkChem')]
+
+
+reduced_postransitionList.to_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/data/posTransitionListonlyAA.csv')
+
+reduced_postransitionList['Precursor Name'].unique()
+
+postransitionList.to_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/data/posTransitionList.csv')
+
+# Make sure to ignore the first clumn / ndex?
+
+
+
+
+
+
+len(complete_database['index'].unique())
+
+
+len(complete_database[complete_database['CCS Type'] == 'Experimental']['index'].unique())
+
+
+# Round to one dec?
+complete_database.drop_duplicates(subset = ['INCHIKEY', 'Adduct Type','CCS Value (Å²)'], keep = 'first')
+
+
+
+complete_database.drop_duplicates()
+
+complete_database = ccs_database.merge(ccs_compendium[['InChI Key','m/z','Adduct Type','CCS Value (Å²)']], left_on = 'INCHIKEY',right_on = 'InChI Key', how = 'left')
+
+
+
+#ccs_compendium = ccs_compendium[ccs_compendium['InChI Key'].isin(ccs_database['INCHIKEY'])]
+#ccs_compendium = ccs_compendium.merge(ccs_database.drop(['InChI Key']), left_on  = 'InChI Key', right_on = 'INCHIKEY', how = 'right').drop_duplicates()
+
+# Combine the predicted and experimental tables
+df_total = pd.concat([df, ccs_compendium])
+
+
+
+
+
+
+
+
+
+
+# Double_check that all HMDB-ids have been found?
+#ccs_database[ccs_database['Name'].isna()].drop_duplicates()
+hmdb_ids_recheck = [value for value in ccs_database[ccs_database['Name'].isna()]['HMDB'].drop_duplicates() if value is not np.nan]
+df = scrape_metabolites(hmdb_ids_recheck, output_csv="/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/genExp_images/ymdb_lib_stragglers.csv")
+
+
+
+
+
+
+
+len(ccs_database['index'].unique())
+
+
+
+
+
+
+
+
 
 
 df = pd.read_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/data/imCCS/ymdb_lib.csv')
@@ -418,4 +565,13 @@ transition_list = transition_list.drop_duplicates()
 
 
 transition_list.to_csv('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/data/imCCS/transitionList_new.csv')
+
+
+
+
+### REMEMBER TO REMOVE MZ UNDER 50
+## CHECK FOR CASES WHERE THE H2O ADDUCT IS NOT VIABLE
+
+
+
 

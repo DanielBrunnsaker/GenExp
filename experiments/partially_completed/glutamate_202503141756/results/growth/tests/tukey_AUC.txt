@@ -1,0 +1,33 @@
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05            
+==========================================================================
+   group1       group2      meandiff  p-adj     lower      upper    reject
+--------------------------------------------------------------------------
+None_NegHigh    None_None   6606.9513 0.0495      7.6729 13206.2296   True
+None_NegHigh None_PosHigh   8991.4153  0.001   2568.1495 15414.6812   True
+None_NegHigh  None_PosLow   7341.0027 0.0142    917.7368 13764.2685   True
+None_NegHigh  Yes_NegHigh   7440.3487 0.0123   1017.0828 13863.6145   True
+None_NegHigh     Yes_None  -5279.2667 0.1856 -11702.5325  1143.9992  False
+None_NegHigh  Yes_PosHigh    837.3087 0.9999  -5585.9572  7260.5745  False
+None_NegHigh   Yes_PosLow  -5410.1007 0.1624 -11833.3665  1013.1652  False
+   None_None None_PosHigh   2384.4641 0.9483  -4214.8143  8983.7424  False
+   None_None  None_PosLow    734.0514    1.0  -5865.2269  7333.3297  False
+   None_None  Yes_NegHigh    833.3974 0.9999  -5765.8809  7432.6757  False
+   None_None     Yes_None -11886.2179    0.0 -18485.4963 -5286.9396   True
+   None_None  Yes_PosHigh  -5769.6426 0.1305 -12368.9209   829.6357  False
+   None_None   Yes_PosLow -12017.0519    0.0 -18616.3303 -5417.7736   True
+None_PosHigh  None_PosLow  -1650.4127 0.9925  -8073.6785  4772.8532  False
+None_PosHigh  Yes_NegHigh  -1551.0667 0.9948  -7974.3325  4872.1992  False
+None_PosHigh     Yes_None  -14270.682    0.0 -20693.9479 -7847.4161   True
+None_PosHigh  Yes_PosHigh  -8154.1067 0.0041 -14577.3725 -1730.8408   True
+None_PosHigh   Yes_PosLow  -14401.516    0.0 -20824.7819 -7978.2501   True
+ None_PosLow  Yes_NegHigh      99.346    1.0  -6323.9199  6522.6119  False
+ None_PosLow     Yes_None -12620.2693    0.0 -19043.5352 -6197.0035   True
+ None_PosLow  Yes_PosHigh   -6503.694 0.0451 -12926.9599   -80.4281   True
+ None_PosLow   Yes_PosLow -12751.1033    0.0 -19174.3692 -6327.8375   True
+ Yes_NegHigh     Yes_None -12719.6153    0.0 -19142.8812 -6296.3495   True
+ Yes_NegHigh  Yes_PosHigh    -6603.04 0.0396 -13026.3059  -179.7741   True
+ Yes_NegHigh   Yes_PosLow -12850.4493    0.0 -19273.7152 -6427.1835   True
+    Yes_None  Yes_PosHigh   6116.5753 0.0733   -306.6905 12539.8412  False
+    Yes_None   Yes_PosLow    -130.834    1.0  -6554.0999  6292.4319  False
+ Yes_PosHigh   Yes_PosLow  -6247.4093 0.0624 -12670.6752   175.8565  False
+--------------------------------------------------------------------------

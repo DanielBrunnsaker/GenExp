@@ -1,0 +1,47 @@
+### Motivation
+The statement suggests an association between lower intracellular arginine levels and decreased metal resistance, specifically in the presence of lithium chloride. To explore this, we will design an experiment to modulate intracellular arginine levels and assess the yeast's growth and viability in the presence of lithium chloride. This will help determine if there is a correlation between arginine levels and lithium tolerance.
+
+### Hypothesis
+Cells with lower intracellular arginine levels exhibit decreased resistance to lithium chloride, potentially due to arginine's role in stress response pathways or ion homeostasis.
+
+### Experimental Plan
+1. **Strain and Media**: Use a wild-type prototrophic Saccharomyces cerevisiae strain. Grow cells in minimal media without amino acids.
+
+2. **Supplementation Levels**:
+   - **Arginine Supplementation**:
+     - Control: No arginine supplementation.
+     - Low: 0.1 mM arginine.
+     - High: 10 mM arginine (supraphysiological concentration).
+
+3. **Lithium Chloride Treatment**:
+   - Control: No lithium chloride.
+   - Treatment: 0.1 M lithium chloride.
+
+4. **Negative Control**:
+   - Use lysine as a negative control at 10 mM, since it is an amino acid unrelated to arginine's metabolic pathway and should not affect lithium resistance.
+
+5. **Experimental Conditions**:
+   - Set up 96-well plates with the following conditions:
+     - Arginine levels (3): Control, Low, High.
+     - Lithium treatment (2): Control, 0.1 M lithium chloride.
+     - Negative Control (2): Lysine with and without lithium treatment.
+   - Total combinations: \(3 \times 2 + 2 = 8\) conditions.
+
+6. **Procedure**:
+   - Inoculate each well with yeast to a standard initial OD600.
+   - Add arginine and lysine as per the defined concentrations.
+   - Add lithium chloride to designated wells.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes to monitor growth.
+   - At 20 hours, terminate the experiment and perform mass spectrometry-based metabolomics to measure intracellular arginine levels.
+
+### Expected Outcomes
+- **Growth Analysis**: 
+  - In the presence of 0.1 M lithium chloride, cells with lower arginine supplementation may show reduced growth compared to those with higher arginine levels, indicating decreased metal resistance.
+  - The negative control with lysine should not exhibit a change in lithium resistance, confirming the specificity of arginine's role.
+
+- **Metabolomics**:
+  - Verify that intracellular arginine levels correlate with the external supplementation levels.
+  - Confirm that changes in growth in lithium chloride conditions are associated with intracellular arginine levels rather than other confounding factors.
+
+This experimental setup will help elucidate the role of arginine in metal resistance, particularly in lithium chloride conditions, and determine if the observed association is supported by the data.

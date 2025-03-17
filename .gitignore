@@ -1,3 +1,6 @@
 key.txt
 .DS_Store
 .Rproj.user
+experiments/archived/
+scripts/archived/
+scripts/plotting_scripts/

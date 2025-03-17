@@ -27,12 +27,18 @@ def extract_growth_rates(layout, data):
         if well in list(layout['well'][layout['Summary'] == 'Media control']):
             mu = 0
         else:
-            temp_curve = data.iloc[:,:-1].loc[well]
-            temp_curve.index = np.array(data.loc[well].index[:-1])/3600
-            results = process_curve(temp_curve)
-            mu = results.growth_phases[0][2]
-            start = results.growth_phases[0][0]
-            end = results.growth_phases[0][1]
+            try:
+                temp_curve = data.iloc[:,:-1].loc[well]
+                temp_curve.index = np.array(data.loc[well].index[:-1])/3600
+                results = process_curve(temp_curve)
+                mu = results.growth_phases[0][2]
+                start = results.growth_phases[0][0]
+                end = results.growth_phases[0][1]
+            except:
+                print(f'No growth rate could be calculated for well {well}')
+                start = 0
+                end = 0
+                mu = 0
         
         mu_dict[well] = [mu, start, end]
         
@@ -147,29 +153,12 @@ def process_measurement_data(directory_path):
     
     return data_df
 
-
-def filter_outlier_growth_curves(df: pd.DataFrame, group_col: str = "Summary", method: str = "mad", threshold: float = 3.0) -> pd.DataFrame:
-    """
-    Remove entire growth curves that are outliers within their experimental group.
-
-    Parameters
-    ----------
-    df : pd.DataFrame
-        DataFrame where rows = samples, columns = time points + experimental conditions.
-    group_col : str
-        The column representing experimental groups (e.g., "Summary").
-    method : str
-        "zscore" for standard deviation-based filtering.
-        "iqr" for interquartile range-based filtering.
-        "mad" for median absolute deviation filtering.
-    threshold : float
-        The threshold for detecting outliers (default: 3 for z-score, 1.5 for IQR).
-
-    Returns
-    -------
-    pd.DataFrame
-        A filtered DataFrame with outlier growth curves removed.
-    """
+'''
+def filter_outlier_growth_curves(layout, df, group_col = "Summary", method = "iqr", threshold = 1.5):
+    
+    
+    df.index = df.index.map(lambda x: unify_well_format(str(x)))
+    df = df.merge(layout[['well','Summary']], left_index = True, right_on = 'well').set_index('well')
     # Identify numeric (time-series) columns
     numeric_cols = df.select_dtypes(include=["float", "int"]).columns
 
@@ -202,9 +191,108 @@ def filter_outlier_growth_curves(df: pd.DataFrame, group_col: str = "Summary", m
     df_filtered = df[df['outlier'] == False].drop(columns=['growth_summary', 'outlier'])
 
     return df_filtered
+'''
+def filter_outlier_growth_curves(layout, df, group_col="Summary", method="iqr", threshold=1.5):
+    # Standardize well names in df index and layout.
+    df = df.copy()
+    df.index = df.index.map(lambda x: unify_well_format(str(x)))
+    layout = layout.copy()
+    layout['well'] = layout['well'].astype(str).apply(unify_well_format)
+    
+    # Merge layout information (e.g. Summary) into the data.
+    df = df.merge(layout[['well', 'Summary']], left_index=True, right_on='well').set_index('well')
+    
+    # Identify numeric (time-series) columns.
+    numeric_cols = df.select_dtypes(include=["float", "int"]).columns
+    
+    # Compute summary metric per curve (e.g., AUC) and final value metric.
+    df['growth_summary'] = df[numeric_cols].sum(axis=1)  
+    # Assuming the last numeric column represents the final time point:
+    final_metric = numeric_cols[-1]
+    df['final_value'] = df[final_metric]
+    
+    def detect_outliers(group):
+        # Not enough data to reliably detect outliers.
+        if len(group) < 3:
+            group['outlier'] = False
+            return group
+        
+        if method == "zscore":
+            outlier_sum = np.abs(zscore(group['growth_summary'])) > threshold
+            outlier_final = np.abs(zscore(group['final_value'])) > threshold
+            group['outlier'] = outlier_sum | outlier_final
+
+        elif method == "iqr":
+            # Outlier detection on the summary metric.
+            Q1_sum, Q3_sum = group['growth_summary'].quantile([0.25, 0.75])
+            IQR_sum = Q3_sum - Q1_sum
+            lower_bound_sum, upper_bound_sum = Q1_sum - threshold * IQR_sum, Q3_sum + threshold * IQR_sum
+            outlier_sum = (group['growth_summary'] < lower_bound_sum) | (group['growth_summary'] > upper_bound_sum)
+            
+            # Outlier detection on the final value.
+            Q1_final, Q3_final = group['final_value'].quantile([0.25, 0.75])
+            IQR_final = Q3_final - Q1_final
+            lower_bound_final, upper_bound_final = Q1_final - threshold * IQR_final, Q3_final + threshold * IQR_final
+            outlier_final = (group['final_value'] < lower_bound_final) | (group['final_value'] > upper_bound_final)
+            
+            group['outlier'] = outlier_sum | outlier_final
+
+        elif method == "mad":
+            # Using the Median Absolute Deviation for the summary metric.
+            median_sum = group['growth_summary'].median()
+            mad_sum = np.median(np.abs(group['growth_summary'] - median_sum))
+            modified_z_sum = 0.6745 * (group['growth_summary'] - median_sum) / (mad_sum + 1e-9)
+            outlier_sum = np.abs(modified_z_sum) > threshold
+            
+            # Using the Median Absolute Deviation for the final value.
+            median_final = group['final_value'].median()
+            mad_final = np.median(np.abs(group['final_value'] - median_final))
+            modified_z_final = 0.6745 * (group['final_value'] - median_final) / (mad_final + 1e-9)
+            outlier_final = np.abs(modified_z_final) > threshold
+            
+            group['outlier'] = outlier_sum | outlier_final
+
+        return group
+
+    # Apply outlier detection within each experimental group.
+    df = df.groupby(group_col, group_keys=False).apply(detect_outliers)
+    
+    # Keep only non-outlier curves and drop the temporary columns.
+    df_filtered = df[df['outlier'] == False].drop(columns=['growth_summary', 'final_value', 'outlier'])
+    
+    return df_filtered
 
 
-def subtract_closest_blanks(df, blank_wells, n):
+def subtract_and_impute_blanks(layout, data, n_blanks = 3,fillin_value = 0.01, blank_bool = True):
+
+    #blank_wells = layout['well'][layout['Summary'] == 'Media control']
+    #blank_wells = blank_wells.apply(lambda x: f"{x[0]}{int(x[1:]):02d}")
+    
+    blanked_data = data.copy()
+    blank_wells = blanked_data[blanked_data['Summary'] == 'Media control'].index
+    blanked_data.iloc[:,:-1] = subtract_closest_blanks(blanked_data.iloc[:,:-1], blank_wells, n_blanks, blank_bool)
+
+    # Subtract blanks
+    
+    subtracted = blanked_data.iloc[:,:-1].copy()
+    subtracted[subtracted < 0] = fillin_value
+    blanked_data.iloc[:,:-1] = subtracted
+        
+    #blanked_data.iloc[:,:-1] = subtract_closest_blanks(blanked_data.iloc[:,:-1], blank_wells, n_blanks, blank_bool)
+    #blanked_data.iloc[:,:-1] = blanked_data.iloc[:,:-1][blanked_data.iloc[:,:-1] < 0] = fillin_value
+    
+    #blanked_data = blanked_data.copy()
+    #blanked_data.index = blanked_data.index.map(lambda x: unify_well_format(str(x)))
+    
+    # If df_meta has well in a column named well_col (e.g. "well"):
+    #layout = layout.copy()
+    #layout['well'] = layout['well'].astype(str).apply(unify_well_format)
+    #blanked_data = blanked_data.merge(layout[['well','Summary']], left_index = True, right_on = 'well').set_index('well')
+    
+    return blanked_data
+
+
+def subtract_closest_blanks(df, blank_wells, n, blank_subtraction):
     
     def well_to_position(well):
         row = well[0]
@@ -230,10 +318,15 @@ def subtract_closest_blanks(df, blank_wells, n):
         # Sort by distance and take the closest n blanks
         closest_blanks = sorted(distances, key=lambda x: x[1])[:n]
         
+        
+        
         # Get the values of the closest blank wells for each timepoint
         closest_blank_values = df.loc[[blank for blank, _ in closest_blanks]].mean()
         
-        result.loc[well] -= closest_blank_values
+        if blank_subtraction:
+            result.loc[well] -= closest_blank_values
+        else:
+            result 
     
     return result
 
@@ -319,34 +412,11 @@ def compute_auc(df):
 
 
 def plot_group_averages_in_hours(df: pd.DataFrame, group_col: str = "Summary"):
-    """
-    Plot publication-ready average growth curves by group, converting time from seconds to hours.
-    
-    Parameters
-    ----------
-    df : pd.DataFrame
-        DataFrame containing:
-         - numeric time columns (e.g. 0, 1200, 2400, ...)
-         - a column named `group_col` specifying each well's group
-    group_col : str
-        The column in df that indicates the group each row belongs to.
-    """
-    # ----------------------------------------------------------------
-    # STEP 1: Identify numeric columns (time points)
-    # ----------------------------------------------------------------
+
     numeric_cols = df.select_dtypes(include=["float", "int"]).columns
     numeric_cols = numeric_cols.drop(group_col, errors="ignore")  # in case group_col is numeric dtype
-
-    # ----------------------------------------------------------------
-    # STEP 2: Compute the mean of each numeric column, grouped by group_col
-    #         (Each row is now a group, columns are time points.)
-    # ----------------------------------------------------------------
     df_avg = df.groupby(group_col)[numeric_cols].mean().reset_index()
 
-    # ----------------------------------------------------------------
-    # STEP 3: Reshape (melt) so that each row is (group, time_in_sec, value)
-    #         Then convert to hours.
-    # ----------------------------------------------------------------
     df_melt = df_avg.melt(id_vars=group_col, var_name="Time_Seconds", value_name="Mean Growth")
 
     # Convert melted time column from string to numeric
@@ -355,12 +425,8 @@ def plot_group_averages_in_hours(df: pd.DataFrame, group_col: str = "Summary"):
     # Sort by time so lines plot left to right
     df_melt.sort_values(by="Time_Seconds", inplace=True)
 
-    # --- CONVERT SECONDS TO HOURS ---
     df_melt["Time_Hours"] = df_melt["Time_Seconds"] / 3600.0
 
-    # ----------------------------------------------------------------
-    # STEP 4: Plot with Seaborn
-    # ----------------------------------------------------------------
     sns.set_style("whitegrid")
     plt.figure(figsize=(8, 5))
 
@@ -382,33 +448,16 @@ def plot_group_averages_in_hours(df: pd.DataFrame, group_col: str = "Summary"):
     # Legend inside the plot
     ax.legend(title=group_col, loc="best", fontsize=10, title_fontsize=11)
 
+    #ax.set_ylim([0,2.5])
+    ax.set_ylim([0, df.drop(columns='Summary').max().max()+0.25])
+
     # Remove top and right spines to get a clean look
     sns.despine()
 
     plt.tight_layout()
-    plt.show()
+    #plt.show()
 
 
-
-
-def subtract_and_impute_blanks(layout, data, n_blanks = 3,fillin_value = 0.01):
-
-    blank_wells = layout['well'][layout['Summary'] == 'Media control']
-    blank_wells = blank_wells.apply(lambda x: f"{x[0]}{int(x[1:]):02d}")
-    
-    # Subtract blanks
-    blanked_data = subtract_closest_blanks(data, blank_wells, n_blanks)
-    blanked_data[blanked_data < 0] = fillin_value
-    
-    blanked_data = blanked_data.copy()
-    blanked_data.index = blanked_data.index.map(lambda x: unify_well_format(str(x)))
-    
-    # If df_meta has well in a column named well_col (e.g. "well"):
-    layout = layout.copy()
-    layout['well'] = layout['well'].astype(str).apply(unify_well_format)
-    blanked_data = blanked_data.merge(layout[['well','Summary']], left_index = True, right_on = 'well').set_index('well')
-    
-    return blanked_data
 
 
 
@@ -487,6 +536,7 @@ def plot_growth_curves(growth_df, color_map=None, annotations_df=None):
             
             # Hide tick labels on all subplots by default.
             ax.tick_params(labelbottom=False, labelleft=False)
+            ax.set_ylim([0, growth_df.drop(columns='Summary').max().max()+0.25])
             
             # For the bottom row, add the column label.
             if i == 7:
@@ -509,7 +559,45 @@ def plot_growth_curves(growth_df, color_map=None, annotations_df=None):
     fig.subplots_adjust(bottom=0.2)
     
     plt.tight_layout()
-    plt.show()
+    #plt.show()
+
+def plot_boxplots(df, color_map=None):
+    
+    # Generate a consistent color mapping if not provided.
+    if color_map is None:
+        color_map = get_summary_color_map(df, palette_name="tab10")
+    
+    # Create a figure with two subplots.
+    fig, axes = plt.subplots(1, 2, figsize=(12, 6))
+    
+    # Left subplot: AUC boxplot.
+    sns.boxplot(x="Summary", y="AUC", data=df, ax=axes[0], palette=color_map)
+    axes[0].set_title("AUC")
+    axes[0].set_xlabel("")
+    axes[0].set_xticklabels([])  # Remove x-axis tick labels.
+    axes[0].set_ylabel("AUC")
+    
+    # Right subplot: Growth rate (mu) boxplot.
+    sns.boxplot(x="Summary", y="mu", data=df, ax=axes[1], palette=color_map)
+    axes[1].set_title("Growth Rate (mu)")
+    axes[1].set_xlabel("")
+    axes[1].set_xticklabels([])  # Remove x-axis tick labels.
+    axes[1].set_ylabel("mu")
+    
+    # Create legend handles from the color_map.
+    legend_handles = [
+        Line2D([0], [0], marker='o', color='w', label=str(group),
+               markerfacecolor=color, markersize=10)
+        for group, color in sorted(color_map.items())
+    ]
+    
+    # Add the legend beneath the plots.
+    fig.legend(handles=legend_handles, loc='lower center',
+               ncol=min(len(color_map), 3), fontsize=9, frameon=False)
+    fig.subplots_adjust(bottom=0.25)
+    
+    # plt.show() can be called outside the function if desired.
+
 
 def plot_violinplots(df, color_map=None):
     """
@@ -532,7 +620,7 @@ def plot_violinplots(df, color_map=None):
     fig, axes = plt.subplots(1, 2, figsize=(12, 6))
     
     # Left subplot: AUC violin plot with a boxplot inside.
-    sns.violinplot(x="Summary", y="AUC", data=df, ax=axes[0],
+    sns.boxplot(x="Summary", y="AUC", data=df, ax=axes[0],
                    inner="box", palette=color_map)
     axes[0].set_title("AUC")
     axes[0].set_xlabel("")
@@ -540,7 +628,7 @@ def plot_violinplots(df, color_map=None):
     axes[0].set_ylabel("AUC")
     
     # Right subplot: Growth rate (mu) violin plot with a boxplot inside.
-    sns.violinplot(x="Summary", y="mu", data=df, ax=axes[1],
+    sns.boxplot(x="Summary", y="mu", data=df, ax=axes[1],
                    inner="box", palette=color_map)
     axes[1].set_title("Growth Rate (mu)")
     axes[1].set_xlabel("")
@@ -557,4 +645,4 @@ def plot_violinplots(df, color_map=None):
                ncol=min(len(color_map), 3), fontsize=9, frameon=False)
     fig.subplots_adjust(bottom=0.25)
     
-    plt.show()
+    #plt.show()

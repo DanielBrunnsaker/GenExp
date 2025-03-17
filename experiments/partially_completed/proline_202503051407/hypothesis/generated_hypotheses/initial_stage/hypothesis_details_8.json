@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,increased resistance to chemicals,B,C),compound_name(B,tirapazamine)",
+    "observable": "proline",
+    "qualifier": "lower",
+    "coefficient": -0.2650848819839829,
+    "initial_prompt": "14. Cells with lower levels of intracellular proline in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,tirapazamine)"
+}

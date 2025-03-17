@@ -1,0 +1,49 @@
+### Motivation
+
+The statement suggests an association between higher intracellular glutamate levels and decreased resistance to formic acid in Saccharomyces cerevisiae. Understanding this relationship is crucial for elucidating how intracellular metabolite levels can influence yeast cell resistance to environmental stressors.
+
+### Hypothesis
+
+Cells with elevated intracellular glutamate levels exhibit decreased resistance to formic acid due to glutamate's role in cellular stress response pathways, potentially affecting the regulation of detoxification processes or membrane integrity.
+
+### Experimental Plan
+
+1. **Strain and Media:**
+   - Use a reference/wild-type prototrophic Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids, except for specific supplementation as described below.
+
+2. **Supplementation Levels:**
+   - Control (no glutamate supplementation).
+   - Physiological glutamate supplementation: 5 mM.
+   - Supraphysiological glutamate supplementation: 20 mM.
+   - Each supplementation level will be tested with and without formic acid treatment.
+
+3. **Formic Acid Treatment Levels:**
+   - Control (no formic acid).
+   - Formic acid treatment: 50 mM.
+
+4. **Negative Control:**
+   - Use leucine at 20 mM as a negative control to ensure that any observed effects are specific to glutamate and not due to general amino acid supplementation.
+
+5. **Experimental Conditions:**
+   - All conditions will be set up at the start of the experiment (t=0h).
+   - Incubate at 30°C with shaking to ensure uniform growth conditions.
+   - Measure OD600 every 20 minutes to monitor growth curves.
+   - Terminate the experiment at 20 hours for metabolite extraction and analysis.
+
+6. **Metabolomics Analysis:**
+   - Use mass spectrometry-based metabolomics to measure intracellular glutamate levels and assess any changes in metabolite profiles due to formic acid treatment.
+
+7. **Experimental Setup:**
+   - Total conditions: 3 glutamate levels x 2 formic acid levels + 2 negative control conditions = 8 conditions.
+   - Replicates: Assume predefined number of replicates for statistical robustness.
+
+### Expected Outcomes
+
+- If higher intracellular glutamate levels are associated with decreased resistance to formic acid, we expect:
+  - Reduced growth or viability in conditions with elevated glutamate (20 mM) and formic acid (50 mM) compared to control conditions without formic acid.
+  - Potential alterations in metabolite profiles indicating stress response pathways are disrupted or overwhelmed by excess glutamate.
+
+- If no association exists, growth and metabolite profiles should be similar across all conditions, indicating that intracellular glutamate levels do not influence formic acid resistance.
+
+This experimental setup will help determine if there is a causal relationship between glutamate levels and formic acid resistance and elucidate potential mechanisms underlying the observed association.

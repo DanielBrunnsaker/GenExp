@@ -47,14 +47,40 @@ def generate_runlist(wells_df, samples_in_sequence=3, tune_interval=4, randomize
     # Initialize the runlist
     runlist = []
     
-    # Pre run wash
-    #for i in range(2):
-    #    runlist.append({"Description": 'Wash', "Well": 'WASH1', "Notes": 'Acqeous Wash', "Sample_Type": 'WASH'})
-    #    runlist.append({"Description": 'Wash', "Well": 'WASH2', "Notes": 'Organic Wash', "Sample_Type": 'WASH'})
-    
     # Add a tune injection at the start
-    runlist.append({"Description": "Tune", "Well": "MAT3", "Notes": 'Tuning mix injection', "Sample_Type": 'TUNE'})
-    sequence = ["Blank", "Blank", "QC"] + ["Random Sample"] * samples_in_sequence + ["QC","Blank"]
+    runlist.append({"Description": "Tune", "Well": "MAT1", "Notes": 'Placeholder to work around AutonoMS', "Sample_Type": 'TUNE'})
+    runlist.append({"Description": "Blank", "Well": "MAT1", "Notes": 'Blank', "Sample_Type": 'BLANK'})
+    runlist.append({"Description": "Blank", "Well": "MAT1", "Notes": 'Blank', "Sample_Type": 'BLANK'})
+    runlist.append({"Description": "Blank", "Well": "MAT1", "Notes": 'Blank', "Sample_Type": 'BLANK'})
+    runlist.append({"Description": "Blank", "Well": "MAT1", "Notes": 'Blank', "Sample_Type": 'BLANK'})
+    
+    #sequence = ["QC","QC"] + ["Random Sample"] * samples_in_sequence + ["QC","QC","Blank","Blank","Blank","Blank","Blank"]
+    
+    mid = samples_in_sequence // 2  # integer division
+    
+    # Build a sequence that puts one QC mid-sample-block and one QC at the end
+    sequence = ["QC", "QC"] + ["Random Sample"] * mid + ['QC'] + ["Random Sample"] * (samples_in_sequence - mid) + ['QC'] + ["Blank", "Blank", "Blank", "Blank", "Blank"]
+    
+    # Start with two QCs at the beginning
+    #sequence += ["QC", "QC"]
+    
+    # Inject half of the random samples
+    #mid = samples_in_sequence // 2  # integer division
+    #sequence += ["Random Sample"] * mid
+    
+    # Mid-block QC
+    #sequence.append("QC")
+    
+    # Remaining random samples
+    #sequence += ["Random Sample"] * (samples_in_sequence - mid)
+    
+    # End-of-block QC
+    #sequence.append("QC")
+    
+    # 5 blanks at the end of the block
+    #sequence += ["Blank", "Blank", "Blank", "Blank", "Blank"]
+    
+    
     
     # Iterate over randomized samples and construct the runlist
     sample_idx = 0  # Track position in the randomized sample list
@@ -80,19 +106,6 @@ def generate_runlist(wells_df, samples_in_sequence=3, tune_interval=4, randomize
                     sample_idx += 1
 
         sequence_count += 1
-
-        # Add a Tune injection every tune_interval sequences
-        if sequence_count % tune_interval == 0:
-            #runlist.append({"Description": step, "Well": 'WASH1', "Notes": 'Acqeous Wash', "Sample_Type": 'WASH'})
-            #runlist.append({"Description": step, "Well": 'WASH2', "Notes": 'Organic Wash', "Sample_Type": 'WASH'})
-            runlist.append({"Description": step, "Well": "MAT1", "Notes": 'Blank', "Sample_Type": 'BLANK'})
-            runlist.append({"Description": "Tune", "Well": "MAT3", "Notes": 'Tuning mix injection', "Sample_Type": 'TUNE'})
-            runlist.append({"Description": step, "Well": "MAT1", "Notes": 'Blank', "Sample_Type": 'BLANK'})
-    
-    # Post run wash
-    for i in range(2):
-        runlist.append({"Description": step, "Well": 'WASH1', "Notes": 'Acqeous Wash', "Sample_Type": 'WASH'})
-        runlist.append({"Description": step, "Well": 'WASH2', "Notes": 'Organic Wash', "Sample_Type": 'WASH'})
         
     return pd.DataFrame(runlist)
 

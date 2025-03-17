@@ -19,5 +19,12 @@ glutamate:Cell(A):-exhibits_phenotype(A,normal resistance to chemicals,B,C)
 arginine:Cell(A):-exhibits_phenotype(A,normal resistance to chemicals,B,C)
 proline:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,bis(S-citronellalthiosemicarbazonato)nickel(II))
 proline:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,N-nitrosodimethylamine)
-
 arginine:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_modulates_target(B,through inhibition,D),participates_in_metabolism(D,production of,(R)-mevalonate)
+glutamine:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,N-nitrosodimethylamine)
+glutamine:Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,cadmium dichloride)
+glutamine:Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,arsenite(3-))
+glutamine:Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,hygromycin B)
+glutamine:Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,chromium trioxide)
+
+proline:Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,aluminium(3+)),condition(C,Treatment: 2.4mM aluminium sulfate)
+arginine:Cell(A):-exhibits_phenotype(A,increased resistance to chemicals,B,C),compound_name(B,caffeine)

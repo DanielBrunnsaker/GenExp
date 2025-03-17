@@ -39,22 +39,28 @@ LLM_PATTERN_SELECTION_TEMPERATURE = 0.5
 LLM_VARIATION_TEMPERATURE = 0.5
 LLM_EXPERIMENT_SELECTION_TEMPERATURE = 0.5
 LLM_AUTOFORMALIZATION_TEMPERATURE = 0.05
-VARIATIONS = 10 # How many variations to generate from the pattern selection step
+VARIATIONS = 5 # How many variations to generate from the pattern selection step
 
 # Mass spectrometry settings
 PERFORM_MASS_SPEC = True
-SAMPLES_IN_SEQUENCE = 6 # How many samples to include in sample blocks
-TUNE_INTERVAL = 4 # How many sample-blocks (blank, qc, sample, qc, blank) to have inbetween reference tuning injections
+SAMPLES_IN_SEQUENCE = 10 # How many samples to include in sample blocks
+TUNE_INTERVAL = 0 # How many sample-blocks (blank, qc, sample, qc, blank) to have inbetween reference tuning injections
 RF_SETTINGS_FILE = '../data/rf_params/AutonoMS_template.xlsx'
 RUNLIST_RANDOMIZATION = True # If one wants to randomize the runlit. Recommended!
 MS_POLARITY = 'Positive'
 METHOD_NAME = '2024-10-10_AminoAcids_test_1_Pos.m' # Mass spec method
-COLUMN_TYPE = 'HILIC_241126'
+COLUMN_TYPE = 'H'
 PLATE_TYPE = 'P96'
 
 
 # Growth analysis settings
-N_CLOSEST_BLANKS = 3 # How many of the closest blanks to use for blank-normalization in OD processing
+BLANK_SUBTRACTION = True
+N_CLOSEST_BLANKS = 5 # How many of the closest blanks to use for blank-normalization in OD processing
 BLANK_FILLIN_VALUE = 0 # If negative value after blank subtraction, what value to set to instead
-ROLLING_MEDIAN_WINDOWSIZE = 5 # Windowsize for smoothing
-MAD_THRESHOLD = 3 # MAD-threshold to use for curve fitering. 
+
+OUTLIER_METHOD = 'mad'
+ROLLING_MEAN_WINDOWSIZE = 3 # Windowsize for smoothing
+THRESHOLD = 3 # MAD-threshold to use for curve fitering. #3 for MAD, 1.5 for IQR?
+
+
+

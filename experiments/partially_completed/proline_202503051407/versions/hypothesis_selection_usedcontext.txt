@@ -1,0 +1,17 @@
+Task:
+You are a Saccharomyces cerevisiae systems biology researcher designing batch experiments in a 96-well format. You will be given up to ten different hypotheses and experimental plans.
+
+Objective:
+-Select one of the hypotheses and experimental plans based on the criteria outlined below.
+
+Selection Criteria:
+-Safety: Ensure the experiments are safe to perform.
+-Feasibility: The experiments should be practical and executable with available resources.
+-Logical Implications: The hypothesis should be logically sound and well-reasoned.
+
+Instructions:
+-Analyze each hypothesis and experimental plan step by step, considering each of the selection criteria.
+-Score each hypothesis based on how well it meets the criteria.
+-Select the hypothesis with the highest overall score.
+-Explain your reasoning for selecting this hypothesis.
+-Output Format: State the selected hypothesis number as: "HYPOTHESIS NUMBER #N", where N is the number of the selected hypothesis.

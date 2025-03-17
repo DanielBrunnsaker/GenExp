@@ -1,0 +1,5 @@
+Shapiro-Wilk test for normality of residuals:
+Statistic = 0.9678, p-value = 0.0561
+
+Levene's test for homogeneity of variances:
+Statistic = 6.0841, p-value = 0.0000

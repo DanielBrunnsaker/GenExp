@@ -1,0 +1,418 @@
+,Molecule List Name,Molecule,Formula,Adduct,Precursor Charge,PrecursorMz,Product Charge,CCS
+753,Other,2-(1H-INDOL-3-YL)ACETAMIDE,C10H10N2O,[M+H]+,1.0,175.0866,1.0,137.4
+754,Other,2-(1H-INDOL-3-YL)ACETAMIDE,C10H10N2O,[M+Na]+,1.0,197.0686,1.0,143.9
+425,Other,"2-(3,6-DIHYDROXYPHENYL)ACETIC ACID",C8H8O4,[M-H2O+H]+,1.0,151.039,1.0,136.0
+2264,Other,2-Amino-4-Mercapto-Butyric Acid,C4H9NO2S,[M+H]+,1.0,136.0427,1.0,130.1
+4940,Other,2-Deoxy-D-Glucose,C6H12O5,[M+Na]+,1.0,187.0578,1.0,136.8
+4583,Other,2-Isopropylmalic acid,C7H12O5,[M+Na]+,1.0,199.0578,1.0,140.9
+4506,Other,2-Oxoadipic acid,C6H8O5,[M+Na]+,1.0,183.0265,1.0,137.1
+4601,Other,"2,3-Diphospho-D-glyceric acid",C3H8O10P2,[M+Na]+,1.0,288.9486,1.0,152.4
+2856,Other,2'-Deoxyadenosine 5'-monophosphate (dAMP),C10H14N5O6P,[M+H]+,1.0,332.0755,1.0,168.6
+2857,Other,2'-Deoxyadenosine 5'-monophosphate (dAMP),C10H14N5O6P,[M+Na]+,1.0,354.0575,1.0,173.8
+2775,Other,2'-Deoxycytidine,C9H13N3O4,[M+Na]+,1.0,250.0799,1.0,155.9
+2776,Other,2'-Deoxycytidine,C9H13N3O4,[M+K]+,1.0,266.0538,1.0,158.5
+2796,Other,2'-Deoxycytidine 5'-triphosphate,C9H16N3O13P3,[M+H]+,1.0,467.9969,1.0,185.4
+2907,Other,2'-Deoxycytidine diphosphate (dCDP),C9H15N3O10P2,[M+H]+,1.0,388.0306,1.0,172.1
+2908,Other,2'-Deoxycytidine diphosphate (dCDP),C9H15N3O10P2,[M+Na]+,1.0,410.0126,1.0,175.0
+2867,Other,2'-Deoxycytidine-5'-Monophosphate,C9H14N3O7P,[M+H]+,1.0,308.0642,1.0,165.6
+2868,Other,2'-Deoxycytidine-5'-Monophosphate,C9H14N3O7P,[M+Na]+,1.0,330.0462,1.0,165.5
+2785,Other,2'-Deoxyguanosine-5'-Diphosphate,C10H15N5O10P2,[M+H]+,1.0,428.0367,1.0,188.5
+2786,Other,2'-Deoxyguanosine-5'-Diphosphate,C10H15N5O10P2,[M+Na]+,1.0,450.0187,1.0,185.0
+2805,Other,2'-Deoxyguanosine-5'-Monophosphate,C10H14N5O7P,[M+H]+,1.0,348.0704,1.0,179.0
+2806,Other,2'-Deoxyguanosine-5'-Monophosphate,C10H14N5O7P,[M+Na]+,1.0,370.0524,1.0,171.2
+4525,Other,2'-Deoxyinosine,C10H12N4O4,[M+H]+,1.0,253.0932,1.0,151.9
+4516,Other,2'-Deoxyuridine,C9H12N2O5,[M+Na]+,1.0,251.0639,1.0,157.2
+2827,Other,2'-deoxyuridylic acid,C9H13N2O8P,[M+Na]+,1.0,331.0303,1.0,168.0
+4626,Other,3-Dehydroshikimate,C7H8O5,[M+H]+,1.0,173.0445,1.0,132.7
+4627,Other,3-Dehydroshikimate,C7H8O5,[M+Na]+,1.0,195.0265,1.0,149.3
+4653,Other,3-Hydroxy-3-Methylglutaryl-Coa,C27H44N7O20P3S,[M+H]+,1.0,912.1648,1.0,265.5
+4654,Other,3-Hydroxy-3-Methylglutaryl-Coa,C27H44N7O20P3S,[M+Na]+,1.0,934.1468,1.0,265.2
+55,Other,3-Hydroxy-L-kynurenine,C10H12N2O4,[M-H2O+H]+,1.0,207.0764,1.0,137.5
+73,Other,3-Hydroxyanthranilic Acid,C7H7NO3,[M+H]+,1.0,154.0499,1.0,131.3
+3468,Other,3-Methylhistidine,C7H11N3O2,[M+H]+,1.0,170.0924,1.0,134.5
+3469,Other,3-Methylhistidine,C7H11N3O2,[M+Na]+,1.0,192.0744,1.0,138.8
+3928,Other,3-Phosphoglycerol,C3H9O6P,[M+Na]+,1.0,195.003,1.0,138.9
+5238,Other,4-Acetamidobutanoic Acid,C6H11NO3,[M+Na]+,1.0,168.0632,1.0,136.7
+47,Other,4-Guanidinobutyric acid,C5H11N3O2,[M+H]+,1.0,146.0924,1.0,130.5
+5204,Other,5-Hydroxyindoleacetate,C10H9NO3,[M+H]+,1.0,192.0655,1.0,141.1
+5205,Other,5-Hydroxyindoleacetate,C10H9NO3,[M+Na]+,1.0,214.0475,1.0,148.8
+451,Other,5-Methylcytosine,C5H7N3O,[M+Na]+,1.0,148.0482,1.0,135.9
+10,Other,5'-Deoxy-5'-Methylthioadenosine,C11H15N5O3S,[M+H]+,1.0,298.0969,1.0,167.9
+11,Other,5'-Deoxy-5'-Methylthioadenosine,C11H15N5O3S,[M+Na]+,1.0,320.0789,1.0,173.2
+1135,Other,5'-Deoxyadenosine,C10H13N5O3,[M+H]+,1.0,252.1091,1.0,162.1
+1136,Other,5'-Deoxyadenosine,C10H13N5O3,[M+Na]+,1.0,274.0911,1.0,168.8
+5544,Other,6-phospho-D-gluconic acid,C6H13O10P,[M+Na]+,1.0,299.0139,1.0,159.6
+5495,Other,Acetyl coenzyme A (Acetyl-CoA),C23H38N7O17P3S,[M+H]+,1.0,810.1331,1.0,247.7
+5496,Other,Acetyl coenzyme A (Acetyl-CoA),C23H38N7O17P3S,[M+Na]+,1.0,832.1151,1.0,263.1
+1236,Other,Acetylcysteine,C5H9NO3S,[M+Na]+,1.0,186.0196,1.0,140.9
+4302,Other,Ademetionine,C15H22N6O5S,[M+H]+,1.0,399.1445,1.0,186.2
+5514,Other,Adenine,C5H5N5,[M+H]+,1.0,136.0618,1.0,125.7
+5515,Other,Adenine,C5H5N5,[M+Na]+,1.0,158.0438,1.0,136.7
+5474,Other,Adenosine,C10H13N5O4,[M+H]+,1.0,268.1041,1.0,156.5
+5475,Other,Adenosine,C10H13N5O4,[M+Na]+,1.0,290.0861,1.0,167.1
+4644,Other,"Adenosine 2',3'-Cyclic Phosphate",C10H12N5O6P,[M+H]+,1.0,330.0598,1.0,168.0
+5484,Other,Adenosine 5'-diphosphate (ADP),C10H15N5O10P2,[M+H]+,1.0,428.0367,1.0,187.4
+5485,Other,Adenosine 5'-diphosphate (ADP),C10H15N5O10P2,[M+Na]+,1.0,450.0187,1.0,194.5
+0,Other,Adenosine 5'-phosphosulfate,C10H14N5O10PS,[M+Na]+,1.0,450.0092,1.0,190.9
+5580,Other,Adenosine Diphosphate Ribose,C15H23N5O14P2,[M+H]+,1.0,560.079,1.0,212.4
+5581,Other,Adenosine Diphosphate Ribose,C15H23N5O14P2,[M+Na]+,1.0,582.061,1.0,217.8
+5463,Other,Adenosine phosphate,C10H14N5O7P,[M+H]+,1.0,348.0704,1.0,172.0
+5464,Other,Adenosine phosphate,C10H14N5O7P,[M+Na]+,1.0,370.0524,1.0,178.4
+5439,Other,Adenosine-3'-5'-Diphosphate,C10H15N5O10P2,[M+H]+,1.0,428.0367,1.0,183.1
+5440,Other,Adenosine-3'-5'-Diphosphate,C10H15N5O10P2,[M+Na]+,1.0,450.0187,1.0,188.2
+5451,Other,AICA ribonucleotide,C9H15N4O8P,[M+H]+,1.0,339.0701,1.0,172.0
+5452,Other,AICA ribonucleotide,C9H15N4O8P,[M+Na]+,1.0,361.0521,1.0,168.9
+5554,Other,Allantoate/Allantoic acid,C4H8N4O4,[M+Na]+,1.0,199.0439,1.0,143.2
+5562,Other,Allantoin,C4H6N4O3,[M+Na]+,1.0,181.0333,1.0,143.4
+5534,Other,Alpha-D-Galactose-1-Phosphate,C6H13O9P,[M+Na]+,1.0,283.019,1.0,157.5
+5535,Other,Alpha-D-Galactose-1-Phosphate,C6H13O9P,[M+K]+,1.0,298.9929,1.0,158.1
+5222,Other,Alpha-D-Glucose,C6H12O6,[M+Na]+,1.0,203.0527,1.0,146.9
+3323,Other,alpha-D-glucose-1-phosphate,C6H13O9P,[M+Na]+,1.0,283.019,1.0,158.3
+2299,Other,Aminoadipate,C6H11NO4,[M+H]+,1.0,162.0761,1.0,134.5
+2300,Other,Aminoadipate,C6H11NO4,[M+Na]+,1.0,184.0581,1.0,139.0
+30,Other,Aminobenzoic acid,C7H7NO2,[M+H]+,1.0,138.055,1.0,131.9
+5600,Other,Aminolevulinic acid,C5H9NO3,[M+H]+,1.0,132.0655,1.0,130.7
+5505,Other,Anthranilic acid,C7H7NO2,[M-H2O+H]+,1.0,120.0444,1.0,118.7
+2319,Other,Arabitol,C5H12O5,[M+Na]+,1.0,175.0578,1.0,136.4
+920,Other,Arachidic acid,C20H40O2,[M+Na]+,1.0,335.2921,1.0,200.0
+1443,Other,Argininosuccinic acid,C10H18N4O6,[M+H]+,1.0,291.1299,1.0,165.8
+1444,Other,Argininosuccinic acid,C10H18N4O6,[M+Na]+,1.0,313.1119,1.0,172.2
+719,Other,Ascorbic acid,C6H8O6,[M+Na]+,1.0,199.0214,1.0,146.1
+2237,AminoAcids,Asparagine,C4H8N2O3,[M+H]+,1.0,133.0608,1.0,130.7
+2238,AminoAcids,Asparagine,C4H8N2O3,[M+Na]+,1.0,155.0428,1.0,129.3
+2242,AminoAcids,Asparagine,C4H8N2O3,[M+NH4]+,1.0,150.0874,1.0,130.2
+2243,AminoAcids,Asparagine,C4H8N2O3,[M-H2O+H]+,1.0,115.0502,1.0,127.4
+3130,Other,ATP,C10H16N5O13P3,[M+H]+,1.0,508.003,1.0,196.8
+3131,Other,ATP,C10H16N5O13P3,[M+Na]+,1.0,529.985,1.0,204.5
+683,Other,Benzoic Acid,C7H6O2,[M+H]+,1.0,123.0441,1.0,122.2
+5186,Other,Beta-D-Fructose 6-phosphate,C6H13O9P,[M+H]+,1.0,261.037,1.0,149.5
+3184,Other,Biotin,C10H16N2O3S,[M+H]+,1.0,245.0955,1.0,151.3
+3185,Other,Biotin,C10H16N2O3S,[M+Na]+,1.0,267.0775,1.0,161.9
+3186,Other,Biotin,C10H16N2O3S,[M+K]+,1.0,283.0514,1.0,161.1
+5154,Other,Carnosine,C9H14N4O3,[M+H]+,1.0,227.1139,1.0,150.8
+5155,Other,Carnosine,C9H14N4O3,[M+Na]+,1.0,249.0959,1.0,154.2
+4955,Other,Cholesterol,C27H46O,[M-H2O+H]+,1.0,369.3516,1.0,204.6
+4956,Other,Cholesterol,C27H46O,[M+Na]+,1.0,409.3442,1.0,237.4
+3243,Other,Choline,C5H14NO,[M+H]+,1.0,105.1148,1.0,117.7
+3251,Other,Cis-Aconitic Acid,C6H6O6,[M+H]+,1.0,175.0237,1.0,152.2
+3252,Other,Cis-Aconitic Acid,C6H6O6,[M+Na]+,1.0,197.0057,1.0,146.8
+3141,Other,Citicoline,C14H26N4O11P2,[M+H]+,1.0,489.1146,1.0,198.7
+3142,Other,Citicoline,C14H26N4O11P2,[M+Na]+,1.0,511.0966,1.0,208.6
+3121,Other,Citric Acid,C6H8O7,[M+Na]+,1.0,215.0163,1.0,142.7
+3303,Other,Coenzyme A,C21H36N7O16P3S,[M+H]+,1.0,768.1225,1.0,241.4
+1116,Other,Creatinine,C4H7N3O,[M+H]+,1.0,114.0662,1.0,123.4
+1117,Other,Creatinine,C4H7N3O,[M+Na]+,1.0,136.0482,1.0,133.0
+4563,Other,Cyclic adenosine monophosphate,C10H12N5O6P,[M+H]+,1.0,330.0598,1.0,179.8
+4564,Other,Cyclic adenosine monophosphate,C10H12N5O6P,[M+Na]+,1.0,352.0418,1.0,191.1
+4573,Other,Cyclic GMP,C10H12N5O7P,[M+H]+,1.0,346.0547,1.0,172.6
+4574,Other,Cyclic GMP,C10H12N5O7P,[M+Na]+,1.0,368.0367,1.0,184.1
+1198,Other,Cysteinesulfonic Acid,C3H7NO5S,[M+H]+,1.0,170.0118,1.0,140.3
+1199,Other,Cysteinesulfonic Acid,C3H7NO5S,[M+Na]+,1.0,191.9938,1.0,148.4
+2107,Other,Cystine,C6H12N2O4S2,[M+H]+,1.0,241.0311,1.0,149.5
+3163,Other,Cytidine,C9H13N3O5,[M+H]+,1.0,244.0928,1.0,154.2
+3164,Other,Cytidine,C9H13N3O5,[M+Na]+,1.0,266.0748,1.0,159.7
+1244,Other,"Cytidine 2',3'-Cyclic Phosphate",C9H12N3O7P,[M+H]+,1.0,306.0486,1.0,163.1
+1245,Other,"Cytidine 2',3'-Cyclic Phosphate",C9H12N3O7P,[M+Na]+,1.0,328.0306,1.0,167.5
+1246,Other,"Cytidine 2',3'-Cyclic Phosphate",C9H12N3O7P,[M+K]+,1.0,344.0045,1.0,167.8
+3152,Other,Cytidine-5'-Diphosphate,C9H15N3O11P2,[M+H]+,1.0,404.0255,1.0,175.5
+3153,Other,Cytidine-5'-Diphosphate,C9H15N3O11P2,[M+Na]+,1.0,426.0075,1.0,179.9
+3173,Other,Cytidine-5'-Monophosphate,C9H14N3O8P,[M+H]+,1.0,324.0592,1.0,167.3
+3174,Other,Cytidine-5'-Monophosphate,C9H14N3O8P,[M+Na]+,1.0,346.0412,1.0,169.2
+3196,Other,Cytidine-5'-Triphosphate,C9H16N3O14P3,[M+H]+,1.0,483.9918,1.0,188.6
+3197,Other,Cytidine-5'-Triphosphate,C9H16N3O14P3,[M+Na]+,1.0,505.9738,1.0,196.5
+3270,Other,Cytosine,C4H5N3O,[M+H]+,1.0,112.0506,1.0,119.3
+4884,Other,D-(+)-Melibiose,C12H22O11,[M+H]+,1.0,343.1235,1.0,180.2
+4885,Other,D-(+)-Melibiose,C12H22O11,[M+Na]+,1.0,365.1055,1.0,178.0
+4886,Other,D-(+)-Melibiose,C12H22O11,[M+K]+,1.0,381.0794,1.0,179.6
+1180,Other,D-(+)-Turanose,C12H22O11,[M+Na]+,1.0,365.1055,1.0,177.0
+2934,Other,d-Desthiobiotin,C10H18N2O3,[M+H]+,1.0,215.139,1.0,144.9
+2935,Other,d-Desthiobiotin,C10H18N2O3,[M+Na]+,1.0,237.121,1.0,156.8
+2936,Other,d-Desthiobiotin,C10H18N2O3,[M+K]+,1.0,253.0949,1.0,156.4
+5195,Other,D-Fructose,C6H12O6,[M+Na]+,1.0,203.0527,1.0,141.9
+3278,Other,D-Galactose,C6H12O6,[M+Na]+,1.0,203.0527,1.0,142.4
+3286,Other,D-Glucose,C6H12O6,[M+Na]+,1.0,203.0527,1.0,147.7
+3216,Other,D-Glucose 6-phosphate,C6H13O9P,[M+Na]+,1.0,283.019,1.0,159.7
+5247,Other,D-Glucuronolactone,C6H8O6,[M+Na]+,1.0,199.0214,1.0,146.2
+3234,Other,D-Mannose,C6H12O6,[M+Na]+,1.0,203.0527,1.0,141.5
+1513,Other,D-Pantothenic Acid,C9H17NO5,[M+H]+,1.0,220.118,1.0,150.2
+1514,Other,D-Pantothenic Acid,C9H17NO5,[M+Na]+,1.0,242.1,1.0,152.3
+3226,Other,D-Ribose,C5H10O5,[M+Na]+,1.0,173.0421,1.0,135.8
+728,Other,D-Ribose 5-Phosphate,C5H11O8P,[M+Na]+,1.0,253.0085,1.0,150.3
+2946,Other,D-Ribulose 5-Phosphate,C5H11O8P,[M+Na]+,1.0,253.0085,1.0,153.3
+2918,Other,D-Xylose,C5H10O5,[M+Na]+,1.0,173.0421,1.0,134.2
+2845,Other,dATP,C10H16N5O12P3,[M+H]+,1.0,492.0081,1.0,195.1
+2846,Other,dATP,C10H16N5O12P3,[M+Na]+,1.0,513.9901,1.0,202.1
+4544,Other,Deoxyadenosine,C10H13N5O3,[M+H]+,1.0,252.1091,1.0,157.6
+4545,Other,Deoxyadenosine,C10H13N5O3,[M+Na]+,1.0,274.0911,1.0,163.6
+4534,Other,Deoxyguanosine,C10H13N5O4,[M+Na]+,1.0,290.0861,1.0,172.0
+4535,Other,Deoxyguanosine,C10H13N5O4,[M+K]+,1.0,306.06,1.0,171.7
+4664,Other,Deoxyribose,C5H10O4,[M+Na]+,1.0,157.0472,1.0,135.1
+1784,Other,Deoxythymidine,C10H14N2O5,[M+Na]+,1.0,265.0796,1.0,162.9
+2971,Other,Deoxyuridine-5'-Triphosphate,C9H15N2O14P3,[M+Na]+,1.0,490.9629,1.0,184.9
+63,Other,Dexfosfoserine,C3H8NO6P,[M+Na]+,1.0,207.9982,1.0,140.9
+2765,Other,Dihydrofolic Acid,C19H21N7O6,[M+H]+,1.0,444.1626,1.0,194.1
+2926,Other,Dihydroxyacetone phosphate,C3H7O6P,[M+Na]+,1.0,192.9873,1.0,145.5
+3535,Other,Dodecyl-Coa,C33H58N7O17P3S,[M+H]+,1.0,950.2896,1.0,285.2
+3261,Other,Erythose-4-Phosphate,C4H9O7P,[M+Na]+,1.0,222.9979,1.0,153.9
+2888,Other,Flavin adenine dinucleotide,C27H33N9O15P2,[M+H]+,1.0,786.1644,1.0,249.0
+2889,Other,Flavin adenine dinucleotide,C27H33N9O15P2,[M+Na]+,1.0,808.1464,1.0,250.7
+3863,Other,Flavin mononucleotide,C17H21N4O9P,[M+H]+,1.0,457.1119,1.0,200.6
+3864,Other,Flavin mononucleotide,C17H21N4O9P,[M+Na]+,1.0,479.0939,1.0,210.7
+3831,Other,Folic Acid,C19H19N7O6,[M+H]+,1.0,442.147,1.0,195.5
+3832,Other,Folic Acid,C19H19N7O6,[M+Na]+,1.0,464.129,1.0,204.6
+3313,Other,Fructose 6-Phosphate,C6H13O9P,[M+Na]+,1.0,283.019,1.0,154.2
+3975,Other,Fumaric Acid,C4H4O4,[M+Na]+,1.0,139.0003,1.0,133.6
+763,Other,Galactose,C6H12O6,[M+Na]+,1.0,203.0527,1.0,142.2
+2192,Other,gamma-Glutamylcysteine,C8H14N2O5S,[M+H]+,1.0,251.0696,1.0,157.9
+5175,Other,Glucaric acid,C6H10O8,[M+Na]+,1.0,233.0269,1.0,148.5
+5176,Other,Glucaric acid,C6H10O8,[M+K]+,1.0,249.0008,1.0,148.5
+701,Other,Gluconic Acid,C6H12O7,[M+H]+,1.0,197.0656,1.0,141.9
+702,Other,Gluconic Acid,C6H12O7,[M+Na]+,1.0,219.0476,1.0,147.3
+5255,Other,Glucosamine,C6H13NO5,[M+H]+,1.0,180.0867,1.0,135.6
+5256,Other,Glucosamine,C6H13NO5,[M+Na]+,1.0,202.0687,1.0,144.9
+5590,Other,Glucosamine 6-Phosphate,C6H14NO8P,[M+H]+,1.0,260.053,1.0,155.3
+5591,Other,Glucosamine 6-Phosphate,C6H14NO8P,[M+Na]+,1.0,282.035,1.0,161.6
+2072,AminoAcids,Glutamic Acid,C5H9NO4,[M+H]+,1.0,148.0605,1.0,130.9
+2073,AminoAcids,Glutamic Acid,C5H9NO4,[M+Na]+,1.0,170.0425,1.0,142.4
+2074,AminoAcids,Glutamic Acid,C5H9NO4,[M+NH4]+,1.0,165.0871,1.0,134.1
+2075,AminoAcids,Glutamic Acid,C5H9NO4,[M-H2O+H]+,1.0,130.0499,1.0,127.4
+2075,AminoAcids,Glutamic Acid,C5H9NO4,[M+K]+,1.0,186.0169,1.0,149.3
+3842,Other,Glutathione,C10H17N3O6S,[M+H]+,1.0,308.0911,1.0,167.9
+3843,Other,Glutathione,C10H17N3O6S,[M+Na]+,1.0,330.0731,1.0,167.5
+1226,Other,Glycerol-2-Phosphate,C3H9O6P,[M+Na]+,1.0,195.003,1.0,140.6
+2337,AminoAcids,Glycine,C2H5NO2,[M+H]+,1.0,76.0393,1.0,127.7
+2338,AminoAcids,Glycine,C2H5NO2,[M+Na]+,1.0,98.0213,1.0,127.7
+2339,AminoAcids,Glycine,C2H5NO2,[M+NH4]+,1.0,93.0659,1.0,128.0
+2340,AminoAcids,Glycine,C2H5NO2,[M-H2O+H]+,1.0,58.0287,1.0,130.8
+3984,Other,Guanine,C5H5N5O,[M+H]+,1.0,152.0567,1.0,131.0
+3985,Other,Guanine,C5H5N5O,[M+Na]+,1.0,174.0387,1.0,137.5
+3986,Other,Guanine,C5H5N5O,[M+K]+,1.0,190.0126,1.0,136.4
+3875,Other,Guanosine,C10H13N5O5,[M+H]+,1.0,284.099,1.0,163.4
+3876,Other,Guanosine,C10H13N5O5,[M+Na]+,1.0,306.081,1.0,175.3
+3877,Other,Guanosine,C10H13N5O5,[M+K]+,1.0,322.0549,1.0,174.3
+3853,Other,Guanosine diphosphate mannose,C16H25N5O16P2,[M+H]+,1.0,606.0845,1.0,227.9
+3854,Other,Guanosine diphosphate mannose,C16H25N5O16P2,[M+Na]+,1.0,628.0665,1.0,222.3
+3898,Other,Guanosine-5'-Diphosphate,C10H15N5O11P2,[M+H]+,1.0,444.0316,1.0,192.1
+3899,Other,Guanosine-5'-Diphosphate,C10H15N5O11P2,[M+Na]+,1.0,466.0136,1.0,188.4
+3917,Other,Guanosine-5'-Monophosphate,C10H14N5O8P,[M+H]+,1.0,364.0653,1.0,180.1
+3918,Other,Guanosine-5'-Monophosphate,C10H14N5O8P,[M+Na]+,1.0,386.0473,1.0,175.4
+2097,AminoAcids,Histidine,C6H9N3O2,[M+H]+,1.0,156.0768,1.0,132.3
+2098,AminoAcids,Histidine,C6H9N3O2,[M+Na]+,1.0,178.0588,1.0,134.9
+2102,AminoAcids,Histidine,C6H9N3O2,[M+NH4]+,1.0,173.1034,1.0,133.1
+2103,AminoAcids,Histidine,C6H9N3O2,[M-H2O+H]+,1.0,138.0662,1.0,131.7
+3822,Other,Homocitrate,C7H10O7,[M+Na]+,1.0,229.032,1.0,145.2
+434,Other,Hydroquinone,C6H6O2,[M+H]+,1.0,111.0441,1.0,128.8
+369,Other,Hydroxyproline,C5H9NO3,[M+H]+,1.0,132.0655,1.0,128.7
+370,Other,Hydroxyproline,C5H9NO3,[M+Na]+,1.0,154.0475,1.0,139.5
+3964,Other,Hypoxanthine,C5H4N4O,[M+H]+,1.0,137.0458,1.0,128.8
+3965,Other,Hypoxanthine,C5H4N4O,[M+Na]+,1.0,159.0278,1.0,138.9
+5214,Other,Imidazoleacetic acid,C5H6N2O2,[M+H]+,1.0,127.0502,1.0,124.8
+1926,Other,Indole-3-Ethanol,C10H11NO,[M+H]+,1.0,162.0914,1.0,133.9
+4013,Other,Indoleacetaldehyde,C10H9NO,[M+H]+,1.0,160.0757,1.0,132.4
+3955,Other,Indoleacetic acid,C10H9NO2,[M+H]+,1.0,176.0706,1.0,136.8
+3956,Other,Indoleacetic acid,C10H9NO2,[M+Na]+,1.0,198.0526,1.0,143.5
+2156,Other,Inosine,C10H12N4O5,[M+H]+,1.0,269.0881,1.0,159.3
+2157,Other,Inosine,C10H12N4O5,[M+Na]+,1.0,291.0701,1.0,171.7
+3994,Other,Inosine 5'-Diphosphate,C10H14N4O11P2,[M+H]+,1.0,429.0207,1.0,186.4
+3995,Other,Inosine 5'-Diphosphate,C10H14N4O11P2,[M+Na]+,1.0,451.0027,1.0,183.8
+2145,Other,Inosine triphosphate,C10H15N4O14P3,[M+H]+,1.0,508.9871,1.0,192.6
+2146,Other,Inosine triphosphate,C10H15N4O14P3,[M+Na]+,1.0,530.9691,1.0,196.6
+3887,Other,Inosinic Acid,C10H13N4O8P,[M+H]+,1.0,349.0544,1.0,175.4
+3888,Other,Inosinic Acid,C10H13N4O8P,[M+Na]+,1.0,371.0364,1.0,171.7
+3642,Other,Inositol,C6H12O6,[M+Na]+,1.0,203.0527,1.0,149.8
+2060,Other,Isocitrate,C6H8O7,[M+Na]+,1.0,215.0163,1.0,144.2
+2088,AminoAcids,Isoleucine,C6H13NO2,[M+H]+,1.0,132.1019,1.0,133.3
+2091,AminoAcids,Isoleucine,C6H13NO2,[M+Na]+,1.0,154.0839,1.0,138.0
+2092,AminoAcids,Isoleucine,C6H13NO2,[M+NH4]+,1.0,149.1285,1.0,136.1
+2093,AminoAcids,Isoleucine,C6H13NO2,[M-H2O+H]+,1.0,114.0913,1.0,126.6
+1153,Other,Isomaltose,C12H22O11,[M+Na]+,1.0,365.1055,1.0,178.0
+2328,Other,Itaconate,C5H6O4,[M+Na]+,1.0,153.0159,1.0,132.1
+929,Other,Kynurenic Acid,C10H7NO3,[M+H]+,1.0,190.0499,1.0,137.8
+930,Other,Kynurenic Acid,C10H7NO3,[M+Na]+,1.0,212.0319,1.0,152.2
+2219,Other,L-2-Amino-4-[2-Aminophenyl]-4-Oxobutanoic Acid,C10H12N2O3,[M+H]+,1.0,209.0921,1.0,149.3
+2220,Other,L-2-Amino-4-[2-Aminophenyl]-4-Oxobutanoic Acid,C10H12N2O3,[M+Na]+,1.0,231.0741,1.0,152.9
+2344,AminoAcids,L-Alanine,C3H7NO2,[M+H]+,1.0,90.055,1.0,124.8
+2345,AminoAcids,L-Alanine,C3H7NO2,[M+Na]+,1.0,112.037,1.0,128.6
+2346,AminoAcids,L-Alanine,C3H7NO2,[M+NH4]+,1.0,107.0816,1.0,126.9
+2347,AminoAcids,L-Alanine,C3H7NO2,[M-H2O+H]+,1.0,72.0444,1.0,120.4
+5165,Other,L-Anserine,C10H16N4O3,[M+H]+,1.0,241.1295,1.0,154.6
+5166,Other,L-Anserine,C10H16N4O3,[M+Na]+,1.0,263.1115,1.0,157.7
+2283,Other,L-Arabinose,C5H10O5,[M+Na]+,1.0,173.0421,1.0,141.9
+2116,AminoAcids,L-Arginine,C6H14N4O2,[M+H]+,1.0,175.119,1.0,136.6
+2117,AminoAcids,L-Arginine,C6H14N4O2,[M+Na]+,1.0,197.101,1.0,147.9
+2121,AminoAcids,L-Arginine,C6H14N4O2,[M+NH4]+,1.0,192.1456,1.0,146.0
+2122,AminoAcids,L-Arginine,C6H14N4O2,[M-H2O+H]+,1.0,157.1084,1.0,132.2
+2248,AminoAcids,L-Aspartic Acid,C4H7NO4,[M+H]+,1.0,134.0448,1.0,131.7
+2249,AminoAcids,L-Aspartic Acid,C4H7NO4,[M-H2O+H]+,1.0,116.0342,1.0,127.6
+2250,AminoAcids,L-Aspartic Acid,C4H7NO4,[M+NH4]+,1.0,151.0714,1.0,135.5
+2251,AminoAcids,L-Aspartic Acid,C4H7NO4,[M+Na]+,1.0,156.0268,1.0,136.6
+2210,Other,L-Citrulline,C6H13N3O3,[M+H]+,1.0,176.103,1.0,137.7
+2049,Other,L-Cystathionine,C7H14N2O4S,[M+H]+,1.0,223.0747,1.0,147.3
+2050,Other,L-Cystathionine,C7H14N2O4S,[M+Na]+,1.0,245.0567,1.0,147.3
+2228,AminoAcids,L-Cysteine,C3H7NO2S,[M+Na]+,1.0,144.009,1.0,150.4
+2230,AminoAcids,L-Cysteine,C3H7NO2S,[M+H]+,1.0,122.027,1.0,148.6
+2232,AminoAcids,L-Cysteine,C3H7NO2S,[M+NH4]+,1.0,139.0536,1.0,145.8
+2233,AminoAcids,L-Cysteine,C3H7NO2S,[M-H2O+H]+,1.0,104.0164,1.0,130.5
+2126,AminoAcids,L-Glutamine,C5H10N2O3,[M+H]+,1.0,147.0764,1.0,130.9
+2127,AminoAcids,L-Glutamine,C5H10N2O3,[M+Na]+,1.0,169.0584,1.0,137.2
+2131,AminoAcids,L-Glutamine,C5H10N2O3,[M+NH4]+,1.0,164.103,1.0,134.0
+2132,AminoAcids,L-Glutamine,C5H10N2O3,[M-H2O+H]+,1.0,129.0658,1.0,131.1
+2174,Other,L-Histidinol,C6H11N3O,[M+H]+,1.0,142.0975,1.0,129.2
+2175,Other,L-Histidinol,C6H11N3O,[M+Na]+,1.0,164.0795,1.0,133.5
+2310,Other,L-Homoserine,C4H9NO3,[M+H]+,1.0,120.0655,1.0,126.2
+692,Other,L-Iditol,C6H14O6,[M+Na]+,1.0,205.0683,1.0,143.1
+2136,AminoAcids,L-Leucine,C6H13NO2,[M+H]+,1.0,132.1019,1.0,135.1
+2139,AminoAcids,L-Leucine,C6H13NO2,[M+Na]+,1.0,154.0839,1.0,139.7
+2140,AminoAcids,L-Leucine,C6H13NO2,[M+NH4]+,1.0,149.1285,1.0,138.2
+2141,AminoAcids,L-Leucine,C6H13NO2,[M-H2O+H]+,1.0,114.0913,1.0,127.9
+2200,AminoAcids,L-Lysine,C6H14N2O2,[M+H]+,1.0,147.1128,1.0,131.5
+2201,AminoAcids,L-Lysine,C6H14N2O2,[M+Na]+,1.0,169.0948,1.0,135.2
+2205,AminoAcids,L-Lysine,C6H14N2O2,[M+NH4]+,1.0,164.1394,1.0,133.4
+2206,AminoAcids,L-Lysine,C6H14N2O2,[M-H2O+H]+,1.0,129.1022,1.0,131.5
+2255,AminoAcids,L-Phenylalanine,C9H11NO2,[M+Na]+,1.0,188.0683,1.0,138.2
+2257,AminoAcids,L-Phenylalanine,C9H11NO2,[M+H]+,1.0,166.0863,1.0,140.8
+2259,AminoAcids,L-Phenylalanine,C9H11NO2,[M+NH4]+,1.0,183.1129,1.0,137.8
+2260,AminoAcids,L-Phenylalanine,C9H11NO2,[M-H2O+H]+,1.0,148.0757,1.0,135.9
+3612,AminoAcids,L-Threonine,C4H9NO3,[M+H]+,1.0,120.0655,1.0,127.3
+3615,AminoAcids,L-Threonine,C4H9NO3,[M+Na]+,1.0,142.0475,1.0,131.3
+3616,AminoAcids,L-Threonine,C4H9NO3,[M+NH4]+,1.0,137.0921,1.0,129.7
+3617,AminoAcids,L-Threonine,C4H9NO3,[M-H2O+H]+,1.0,102.0549,1.0,124.3
+3632,AminoAcids,L-Tryptophan,C11H12N2O2,[M+H]+,1.0,205.0972,1.0,151.3
+3633,AminoAcids,L-Tryptophan,C11H12N2O2,[M+Na]+,1.0,227.0792,1.0,147.2
+3637,AminoAcids,L-Tryptophan,C11H12N2O2,[M+NH4]+,1.0,222.1238,1.0,147.3
+3638,AminoAcids,L-Tryptophan,C11H12N2O2,[M-H2O+H]+,1.0,187.0866,1.0,141.3
+3488,AminoAcids,L-Tyrosine,C9H11NO3,[M+H]+,1.0,182.0812,1.0,146.0
+3489,AminoAcids,L-Tyrosine,C9H11NO3,[M+Na]+,1.0,204.0632,1.0,143.2
+3493,AminoAcids,L-Tyrosine,C9H11NO3,[M+NH4]+,1.0,199.1078,1.0,142.2
+3494,AminoAcids,L-Tyrosine,C9H11NO3,[M-H2O+H]+,1.0,164.0706,1.0,137.6
+3498,AminoAcids,L-Valine,C5H11NO2,[M+H]+,1.0,118.0863,1.0,120.8
+3499,AminoAcids,L-Valine,C5H11NO2,[M+Na]+,1.0,140.0683,1.0,133.1
+3503,AminoAcids,L-Valine,C5H11NO2,[M+NH4]+,1.0,135.1129,1.0,140.0
+3504,AminoAcids,L-Valine,C5H11NO2,[M-H2O+H]+,1.0,100.0757,1.0,119.1
+3553,Other,Lanosterol,C30H50O,[M-H2O+H]+,1.0,409.3829,1.0,207.8
+3651,Other,Leukotriene B4,C20H32O4,[M+Na]+,1.0,359.2194,1.0,196.0
+1480,Other,Levocarnitine,C7H15NO3,[M+H]+,1.0,162.1125,1.0,132.9
+5622,Other,Levomefolic acid,C20H25N7O6,[M+H]+,1.0,460.1939,1.0,197.3
+379,Other,Linoleic acid,C18H32O2,[M+Na]+,1.0,303.2295,1.0,176.8
+3561,Other,Lipoamide,C8H15NOS2,[M+H]+,1.0,206.0668,1.0,139.3
+3562,Other,Lipoamide,C8H15NOS2,[M+Na]+,1.0,228.0488,1.0,150.7
+711,Other,Lipoic Acid,C8H14O2S2,[M-H2O+H]+,1.0,189.0402,1.0,134.3
+3668,Other,Maltose,C12H22O11,[M+Na]+,1.0,365.1055,1.0,178.5
+3669,Other,Maltose,C12H22O11,[M+K]+,1.0,381.0794,1.0,181.3
+1162,Other,Maltotriose,C18H32O16,[M+Na]+,1.0,527.1583,1.0,213.6
+4895,Other,Mannitol,C6H14O6,[M+Na]+,1.0,205.0683,1.0,141.4
+3332,Other,Mannose 6-Phosphate,C6H13O9P,[M+Na]+,1.0,283.019,1.0,156.1
+2274,AminoAcids,Methionine,C5H11NO2S,[M+H]+,1.0,150.0583,1.0,133.6
+2277,AminoAcids,Methionine,C5H11NO2S,[M+Na]+,1.0,172.0403,1.0,138.7
+2278,AminoAcids,Methionine,C5H11NO2S,[M+NH4]+,1.0,167.0849,1.0,136.9
+2279,AminoAcids,Methionine,C5H11NO2S,[M-H2O+H]+,1.0,132.0477,1.0,131.8
+1523,Other,Mevalonic acid,C6H12O4,[M+Na]+,1.0,171.0629,1.0,132.9
+1504,Other,Mevalonic Acid 5-Phosphate,C6H13O7P,[M+Na]+,1.0,251.0292,1.0,152.3
+2184,Other,N-(5-Amino-5-Carboxypentyl)Glutamic Acid,C11H20N2O6,[M+H]+,1.0,277.1394,1.0,160.1
+1189,Other,N-Acetyl-D-glucosamine,C8H15NO6,[M+Na]+,1.0,244.0792,1.0,160.4
+3544,Other,N-acetyl-D-glucosamine-6-phosphate,C8H16NO9P,[M+Na]+,1.0,324.0456,1.0,164.3
+3621,Other,N-Acetyl-L-Glutamate,C7H11NO5,[M+H]+,1.0,190.071,1.0,139.0
+3622,Other,N-Acetyl-L-Glutamate,C7H11NO5,[M+Na]+,1.0,212.053,1.0,144.9
+1217,Other,N-Acetylmethionine,C7H13NO3S,[M+Na]+,1.0,214.0509,1.0,150.3
+3478,Other,N-Acetylputrescine,C6H14N2O,[M+H]+,1.0,131.1179,1.0,129.1
+3479,Other,N-Acetylputrescine,C6H14N2O,[M+Na]+,1.0,153.0999,1.0,135.3
+3588,Other,N-Carbamoyl-L-Aspartate,C5H8N2O5,[M+Na]+,1.0,199.0326,1.0,139.2
+3687,Other,N1-Acetylspermine,C12H28N4O,[M+H]+,1.0,245.2336,1.0,158.2
+3688,Other,N1-Acetylspermine,C12H28N4O,[M+Na]+,1.0,267.2156,1.0,162.7
+3596,Other,N2-Acetyl-L-ornithine,C7H14N2O3,[M+H]+,1.0,175.1077,1.0,136.9
+3579,Other,Niacin,C6H5NO2,[M+H]+,1.0,124.0393,1.0,125.1
+3570,Other,Nicotinamide,C6H6N2O,[M+H]+,1.0,123.0553,1.0,126.2
+3571,Other,Nicotinamide,C6H6N2O,[M+Na]+,1.0,145.0373,1.0,137.3
+2546,Other,Nicotinamide ribotide,C11H15N2O8P,[M+H]+,1.0,335.0639,1.0,165.8
+2596,Other,O-acetyl-L-serine,C5H9NO4,[M+H]+,1.0,148.0605,1.0,130.4
+2554,Other,O-Phospho-L-homoserine,C4H10NO6P,[M+Na]+,1.0,222.0139,1.0,141.6
+2570,Other,O-Succinyl-L-homoserine,C8H13NO6,[M+H]+,1.0,220.0816,1.0,146.5
+2571,Other,O-Succinyl-L-homoserine,C8H13NO6,[M+Na]+,1.0,242.0636,1.0,146.2
+2482,Other,Oleic acid,C18H34O2,[M+Na]+,1.0,305.2452,1.0,181.4
+2518,Other,Orotic Acid,C5H4N2O4,[M+H]+,1.0,157.0244,1.0,138.8
+2580,Other,Oxaloacetic Acid,C4H4O5,[M+H]+,1.0,133.0132,1.0,139.4
+21,Other,P-Hydroxybenzoic Acid,C7H6O3,[M-H2O+H]+,1.0,121.0284,1.0,118.9
+1170,Other,Palatinose,C12H22O11,[M+Na]+,1.0,365.1055,1.0,176.5
+1171,Other,Palatinose,C12H22O11,[M+K]+,1.0,381.0794,1.0,177.8
+2491,Other,Palmitic Acid,C16H32O2,[M+Na]+,1.0,279.2295,1.0,181.7
+5230,Other,Perillic Acid (-),C10H14O2,[M+H]+,1.0,167.1067,1.0,124.9
+4610,Other,Phenylethyl alcohol,C8H10O,[M+H]+,1.0,123.0805,1.0,121.2
+2464,Other,Phosphoenolpyruvate,C3H5O6P,[M+Na]+,1.0,190.9717,1.0,137.9
+1126,Other,Phosphonotyrosine,C9H12NO6P,[M+H]+,1.0,262.0475,1.0,162.8
+3678,Other,Phytate,C6H18O24P6,[M+H]+,1.0,660.8687,1.0,215.2
+2537,Other,Phytosphingosine,C18H39NO3,[M+H]+,1.0,318.3003,1.0,196.8
+4875,Other,Pidolic Acid,C5H7NO3,[M+H]+,1.0,130.0499,1.0,130.4
+2562,Other,Prephenate,C10H10O6,[M+Na]+,1.0,249.037,1.0,155.2
+2079,AminoAcids,Proline,C5H9NO2,[M+H]+,1.0,116.0706,1.0,125.8
+2082,AminoAcids,Proline,C5H9NO2,[M-H2O+H]+,1.0,98.06,1.0,120.3
+2083,AminoAcids,Proline,C5H9NO2,[M+NH4]+,1.0,133.0972,1.0,129.5
+2084,AminoAcids,Proline,C5H9NO2,[M+Na]+,1.0,138.0526,1.0,130.8
+4231,Other,Pyridoxal,C8H9NO3,[M+H]+,1.0,168.0655,1.0,132.1
+4183,Other,Pyridoxal phosphate,C8H10NO6P,[M+H]+,1.0,248.0319,1.0,152.1
+4184,Other,Pyridoxal phosphate,C8H10NO6P,[M+Na]+,1.0,270.0139,1.0,162.2
+4248,Other,Pyridoxamine,C8H12N2O2,[M+H]+,1.0,169.0972,1.0,134.5
+4249,Other,Pyridoxamine,C8H12N2O2,[M+Na]+,1.0,191.0792,1.0,145.8
+4240,Other,Pyridoxamine-5'-Phosphate,C8H13N2O5P,[M+H]+,1.0,249.0635,1.0,151.1
+4163,Other,Pyridoxine,C8H11NO3,[M+H]+,1.0,170.0812,1.0,134.7
+4164,Other,Pyridoxine,C8H11NO3,[M+Na]+,1.0,192.0632,1.0,145.6
+4223,Other,Pyridoxine phosphate,C8H12NO6P,[M+H]+,1.0,250.0475,1.0,150.6
+2963,Other,Pyrophosphoric acid,H4O7P2,[M+Na]+,1.0,200.9325,1.0,145.6
+940,Other,Quinaldic Acid,C10H7NO2,[M+H]+,1.0,174.055,1.0,132.6
+4213,Other,Quinolinic Acid,C7H5NO4,[M+H]+,1.0,168.0292,1.0,134.7
+4214,Other,Quinolinic Acid,C7H5NO4,[M-H2O+H]+,1.0,150.0186,1.0,130.5
+4904,Other,Raffinose,C18H32O16,[M+Na]+,1.0,527.1583,1.0,208.8
+4173,Other,Riboflavin,C17H20N4O6,[M+H]+,1.0,377.1456,1.0,189.4
+4174,Other,Riboflavin,C17H20N4O6,[M+Na]+,1.0,399.1276,1.0,199.4
+4143,Other,S-adenosyl-L-homocysteine,C14H20N6O5S,[M+H]+,1.0,385.1289,1.0,183.1
+4144,Other,S-adenosyl-L-homocysteine,C14H20N6O5S,[M+Na]+,1.0,407.1109,1.0,189.7
+1454,Other,S-Lactoylglutathione,C13H21N3O8S,[M+H]+,1.0,380.1122,1.0,188.2
+3605,AminoAcids,Serine,C3H7NO3,[M+H]+,1.0,106.0499,1.0,140.1
+3606,AminoAcids,Serine,C3H7NO3,[M+Na]+,1.0,128.0319,1.0,138.0
+3607,AminoAcids,Serine,C3H7NO3,[M+NH4]+,1.0,123.0765,1.0,136.6
+3608,AminoAcids,Serine,C3H7NO3,[M-H2O+H]+,1.0,88.0393,1.0,145.3
+3207,Other,Sorbitol,C6H14O6,[M+Na]+,1.0,205.0683,1.0,143.0
+4276,Other,Spermidine,C7H19N3,[M+H]+,1.0,146.1652,1.0,131.7
+4277,Other,Spermidine,C7H19N3,[M+Na]+,1.0,168.1472,1.0,136.2
+4267,Other,Spermine,C10H26N4,[M+H]+,1.0,203.223,1.0,148.5
+4268,Other,Spermine,C10H26N4,[M+Na]+,1.0,225.205,1.0,151.2
+4258,Other,Sphinganine,C18H39NO2,[M+H]+,1.0,302.3054,1.0,188.6
+4259,Other,Sphinganine,C18H39NO2,[M+Na]+,1.0,324.2874,1.0,190.6
+415,Other,Stachyose,C24H42O21,[M+Na]+,1.0,689.2112,1.0,234.9
+4153,Other,Stearic acid,C18H36O2,[M+H]+,1.0,285.2788,1.0,205.1
+4154,Other,Stearic acid,C18H36O2,[M+Na]+,1.0,307.2608,1.0,191.8
+4285,Other,Succinic acid,C4H6O4,[M+H]+,1.0,119.0339,1.0,129.4
+4202,Other,Sucrose,C12H22O11,[M+Na]+,1.0,365.1055,1.0,174.1
+4203,Other,Sucrose,C12H22O11,[M+K]+,1.0,381.0794,1.0,175.6
+4134,Other,Taurine,C2H7NO3S,[M+H]+,1.0,126.022,1.0,137.4
+3526,Other,Tetracosanoic acid,C24H48O2,[M+Na]+,1.0,391.3547,1.0,216.9
+2877,Other,Thymidine monophosphate,C10H15N2O8P,[M+H]+,1.0,323.0639,1.0,163.8
+2878,Other,Thymidine monophosphate,C10H15N2O8P,[M+Na]+,1.0,345.0459,1.0,172.5
+2816,Other,Thymidine-5'- Diphosphate,C10H16N2O11P2,[M+Na]+,1.0,425.0122,1.0,178.0
+2955,Other,Thymidine-5'-Triphosphate,C10H17N2O14P3,[M+Na]+,1.0,504.9786,1.0,207.4
+396,Other,Thymine,C5H6N2O2,[M+H]+,1.0,127.0502,1.0,123.0
+1896,Other,Trans-Aconitic Acid,C6H6O6,[M+H]+,1.0,175.0237,1.0,153.0
+1897,Other,Trans-Aconitic Acid,C6H6O6,[M+Na]+,1.0,197.0057,1.0,149.1
+1876,Other,Trehalose,C12H22O11,[M+Na]+,1.0,365.1055,1.0,175.4
+1877,Other,Trehalose,C12H22O11,[M+K]+,1.0,381.0794,1.0,179.5
+5571,Other,Trehalose-6-Phosphate,C12H23O14P,[M+Na]+,1.0,445.0718,1.0,192.4
+1887,Other,Uracil,C4H4N2O2,[M+H]+,1.0,113.0346,1.0,122.7
+1846,Other,Uridine,C9H12N2O6,[M+Na]+,1.0,267.0588,1.0,161.8
+1793,Other,Uridine 5'-triphosphate,C9H15N2O15P3,[M+H]+,1.0,484.9758,1.0,186.8
+1794,Other,Uridine 5'-triphosphate,C9H15N2O15P3,[M+Na]+,1.0,506.9578,1.0,188.1
+1906,Other,Uridine diphosphate glucose,C15H24N2O17P2,[M+Na]+,1.0,589.0443,1.0,210.6
+1916,Other,Uridine Diphosphategalactose,C15H24N2O17P2,[M+Na]+,1.0,589.0443,1.0,209.9
+1825,Other,Uridine monophosphate,C9H13N2O9P,[M+H]+,1.0,325.0432,1.0,166.7
+1826,Other,Uridine monophosphate,C9H13N2O9P,[M+Na]+,1.0,347.0252,1.0,172.7
+1836,Other,Uridine-5'-Diphosphate,C9H14N2O12P2,[M+H]+,1.0,405.0095,1.0,176.4
+1804,Other,Uridine-Diphosphate-N-Acetylglucosamine,C17H27N3O17P2,[M+H]+,1.0,608.0889,1.0,209.9
+1805,Other,Uridine-Diphosphate-N-Acetylglucosamine,C17H27N3O17P2,[M+Na]+,1.0,630.0709,1.0,217.6
+5524,Other,Xanthine,C5H4N4O2,[M+H]+,1.0,153.0407,1.0,134.2
+5525,Other,Xanthine,C5H4N4O2,[M+Na]+,1.0,175.0227,1.0,152.6
+1855,Other,Xanthosine,C10H12N4O6,[M+H]+,1.0,285.083,1.0,163.6
+1856,Other,Xanthosine,C10H12N4O6,[M+Na]+,1.0,307.065,1.0,174.4
+1857,Other,Xanthosine,C10H12N4O6,[M+K]+,1.0,323.0389,1.0,172.8
+405,Other,Xanthurenic acid,C10H7NO4,[M+H]+,1.0,206.0448,1.0,140.4
+406,Other,Xanthurenic acid,C10H7NO4,[M+Na]+,1.0,228.0268,1.0,148.1
+1815,Other,Xanthylic acid （XMP),C10H13N4O9P,[M+H]+,1.0,365.0493,1.0,175.3
+1816,Other,Xanthylic acid （XMP),C10H13N4O9P,[M+Na]+,1.0,387.0313,1.0,176.6
+1867,Other,Xylitol,C5H12O5,[M+Na]+,1.0,175.0578,1.0,138.1

@@ -1,0 +1,8 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,lithium(1+)),condition(C,Treatment: 0.1M lithium chloride)",
+    "observable": "arginine",
+    "qualifier": "lower",
+    "coefficient": -0.18003483422378316,
+    "initial_prompt": "6. Cells with lower levels of intracellular arginine in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'lithium(1+)'),condition(C,'Treatment: 0.1M lithium chloride')",
+    "motivation": "not applicable"
+}
