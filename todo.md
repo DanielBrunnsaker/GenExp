@@ -1,0 +1,3 @@
+- [ ] Rewrite Fuseki database script to write to `Dataset` rather than `Graph`.
+- [ ] Implement logic for all phenotypes in Daniel's logic formulae
+    - [ ] Resistance to chemicals
