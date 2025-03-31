@@ -75,8 +75,12 @@ chebi_store = sparqlstore.SPARQLStore(chebi_query_endpoint)
 
 chebi = Graph(chebi_store, rdflib.graph.DATASET_DEFAULT_GRAPH_ID)
 
+# Create a local dataset for hypotheses
+hypo_ds = rdflib.Dataset()
+hypo_ds.bind("hypo", HYPO)
+
 # Create local graph for hypothesis ontology
-hypo_graph = rdflib.Graph()
+hypo_graph = hypo_ds.graph(rdflib.URIRef("http://hypo.project-genesis.io"))
 hypo_graph.parse(os.path.join(BASE_DIR, "ontology-files/hypo.ttl"), format="turtle")
 
 """
