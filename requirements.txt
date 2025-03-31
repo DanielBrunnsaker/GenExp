@@ -9,3 +9,4 @@ rdflib
 pubchempy
 pint
 tabulate
+uuid6
