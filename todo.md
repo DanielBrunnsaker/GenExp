@@ -1,6 +1,10 @@
-- [ ] Rewrite Fuseki database script to write to `Dataset` rather than `Graph`.
+- [x] Rewrite Fuseki database script to write to `Dataset` rather than `Graph`.
 - [ ] Implement logic for all phenotypes in Daniel's logic formulae
-    - [ ] Resistance to chemicals
+    - [x] Resistance to chemicals
+    - [x] Metal resistance
+    - [ ] Accumulation of chemical
+- [ ] Currently the state has observable triples for the reference state are written to the phenotypes graph, but should be in the states graph
+- [ ] The function for amino acid is mid-draft and will break if tried to run. Needs rewriting.
 
 ## Future
 

@@ -85,21 +85,35 @@ hypo_ds = rdflib.Dataset()
 hypo_ds.bind("hypo", HYPO)
 
 # Create local graph for hypothesis ontology
-hypo_onto_graph = hypo_ds.graph(
+ontology = hypo_ds.graph(
     rdflib.URIRef("http://hypo.project-genesis.io"))
-hypo_onto_graph.parse(os.path.join(
+ontology.parse(os.path.join(
     BASE_DIR, "ontology-files/hypo.ttl"), format="turtle")
-hypo_base_graph = hypo_ds.graph(
-    rdflib.URIRef("http://hypo.project-genesis.io/base"))
+
+phenotypes = hypo_ds.graph(
+    rdflib.URIRef("http://hypo.project-genesis.io/phenotypes"))
+states = hypo_ds.graph(
+    rdflib.URIRef("http://hypo.project-genesis.io/states"))
+hmeta = hypo_ds.graph(
+    rdflib.URIRef("http://hypo.project-genesis.io/hypothesis-metadata"))
+
+# Bind namespaces
+for g in hypo_ds.graphs():
+    g.bind("obo", OBO)
+    g.bind("owl", OWL)
+    g.bind("rdf", RDF)
+    g.bind("rdfs", RDFS)
+    g.bind("hypo", HYPO)
+    g.bind("oboInOwl", OBOINOWL)
 
 """
 Add A subClassOf B
 
-hypo_onto_graph.add((HYPO.A, RDFS.subClassOf, HYPO.B))
+ontology.add((HYPO.A, RDFS.subClassOf, HYPO.B))
 
 Add A <exists>rel.B
 for t in role_between_classes(OBO.A, HYPO.B, HYPO.rel):
-    hypo_onto_graph.add((t))
+    ontology.add((t))
 
 """
 
@@ -120,29 +134,50 @@ for folder in os.listdir(hypotheses_dir):
         continue
 
 CHEM_COMP_ACC = term_from_label(
-    "chemical compound accumulation", hypo_onto_graph)
-CHEM_ACC_OF = term_from_label("accumulationOfChemical", hypo_onto_graph)
-RESISTANCE_TO_CHEM = term_from_label("resistanceToChemical", hypo_onto_graph)
+    "chemical compound accumulation", ontology)
+CHEM_ACC_OF = term_from_label("accumulationOfChemical", ontology)
+RESISTANCE_TO_CHEM = term_from_label("resistanceToChemical", ontology)
 # For now, we are using the relation that is defined from the
 # `resistance to chemicals` phenotype in APO, of which metal
 # resistance is a subclass.
-METAL_RESISTANCE = term_from_label("resistanceToChemical", hypo_onto_graph)
-STATE_HAS_OBSERVABLE = term_from_label("stateHasObservable", hypo_onto_graph)
+METAL_RESISTANCE = term_from_label("resistanceToChemical", ontology)
+STATE_HAS_OBSERVABLE = term_from_label("stateHasObservable", ontology)
 DEFAULT_REFERENCE_STATE = HYPO[create_id(prefix="S-REF")]
-ORGANISM_STATE = term_from_label("organismState", hypo_onto_graph)
-hypo_base_graph.add((DEFAULT_REFERENCE_STATE, RDFS.subClassOf, ORGANISM_STATE))
+ORGANISM_STATE = term_from_label("organismState", ontology)
+states.add((DEFAULT_REFERENCE_STATE, RDFS.subClassOf, ORGANISM_STATE))
 
 TEST_LOGIC_PROGRAMS = [
     "Cell(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'zinc dichloride').",
     "Cell(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
 ]
-ATOM_FINDER = re.compile(r"([A-z0-9]+\(.+?\))(?:,|.)")
+ATOM_FINDER = re.compile(r"([A-z0-9]+\(.+?\))(?:,|.|$)")
 ATOM_PARSER = re.compile(r"^(\w+)\((.+)\)$")
+
+
+def replace_blank_nodes_with_queried_ones(triples, query_result):
+    """Replace blank nodes in the triples with the queried ones.
+    This function is necessary to avoid duplication of blank nodes
+    when using the `find_or_create_node` function."""
+    new_trips = []
+    for t in triples:
+        new_t = []
+        for v in t:
+            if isinstance(v, rdflib.BNode):
+                vq = rdflib.term.Variable(v)
+                # Check if the blank node is in the query result
+                if vq not in query_result.bindings[0]:
+                    raise ValueError(
+                        f"Blank node {v} not found in query result.")
+                # Replace the blank node with the queried one
+                new_t.append(query_result.bindings[0].get(vq))
+            else:
+                new_t.append(v)
+        new_trips.append(tuple(new_t))
+    return new_trips
 
 
 def find_or_create_node(
     dataset: rdflib.Dataset,
-    graph: rdflib.Graph,
     triples,
     id_prefix: Optional[str] = None,
     namespace: Optional[rdflib.Namespace] = None,
@@ -156,6 +191,9 @@ def find_or_create_node(
 
     The `triples` should be a set of triples with a NoneType value in
     the position to be replaced.
+
+    Returns the node URI and the triples with the node URI
+    replacing the NoneType value.
     """
 
     query_template = """SELECT {} WHERE {{
@@ -168,7 +206,8 @@ def find_or_create_node(
         tuple(map(lambda v: "?queried_node" if v is None else v, t)) for t in triples
     ]
     query = query_template.format(
-        "?queried_node ?g",
+        "?queried_node ?g {}".format(" ".join(
+            set([f"?{v}" for t in query_triples for v in t if isinstance(v, rdflib.BNode)]))),
         "\n\t".join(
             map(
                 lambda t: " ".join(
@@ -194,12 +233,14 @@ def find_or_create_node(
         node_triples = [
             tuple(map(lambda v: node_uri if v is None else v, t)) for t in triples
         ]
-        for t in node_triples:
-            graph.add(t)
-        return node_uri
     else:
         assert len(qres) == 1
-        return next(iter(qres)).get("queried_node")
+        node_uri = next(iter(qres)).get("queried_node")
+        node_triples = replace_blank_nodes_with_queried_ones([
+            tuple(map(lambda v: node_uri if v is None else v, t)) for t in triples
+        ], qres)
+
+    return node_uri, node_triples
 
 
 def logic_program_to_state(logic_program, h_graph, reference_state=DEFAULT_REFERENCE_STATE):
@@ -218,7 +259,8 @@ def logic_program_to_state(logic_program, h_graph, reference_state=DEFAULT_REFER
         sorted(atoms, key=keyfunc), keyfunc)}
     # print(atoms)
     phenotype_uri_list = [
-        write_exhibits_phenotype_to_graph(args, atoms, h_graph)
+        write_exhibits_phenotype_to_graph(
+            args, atoms, h_graph, reference_state=reference_state)
         for _, args in atoms.get("exhibits_phenotype", [])
     ]
 
@@ -229,9 +271,12 @@ def logic_program_to_state(logic_program, h_graph, reference_state=DEFAULT_REFER
         for uri_pair in phenotype_uri_list
         for t in role_between_classes(None, uri_pair[1], STATE_HAS_OBSERVABLE)
     ] + [(None, RDFS.subClassOf, ORGANISM_STATE)]
-    state = find_or_create_node(
-        hypo_ds, h_graph, state_triples, id_prefix="S", namespace=HYPO
+    state, state_triples = find_or_create_node(
+        hypo_ds, state_triples, id_prefix="S", namespace=HYPO
     )
+    for t in state_triples:
+        states.add(t)
+
     # TODO: Add Label or other property to make querying easier
     return state
 
@@ -240,18 +285,15 @@ def write_exhibits_phenotype_to_graph(
     args,
     atoms,
     h_graph,
-    hypo_onto_graph=hypo_onto_graph,
+    ontology=ontology,
     reference_state=DEFAULT_REFERENCE_STATE,
     phenotype_namespace=HYPO,
 ):
     # Get qualifier and phenotype from arguments
     qualifier, phtype_label = args[1].split(" ", maxsplit=1)
-    phtype = term_from_label(phtype_label, hypo_onto_graph)
+    phtype = term_from_label(phtype_label, ontology)
     qualifying_relation = term_from_label(
-        qualifier + "ComparedTo", hypo_onto_graph)
-
-    # print(atoms)
-    # print(args)
+        qualifier + "ComparedTo", ontology)
 
     match phtype_label:
         case "resistance to chemicals":
@@ -300,9 +342,11 @@ def write_exhibits_phenotype_to_graph(
         + [(None, RDFS.subClassOf, phtype)]
         + additional_ref_triples
     )
-    ref_phtype = find_or_create_node(
-        hypo_ds, h_graph, ref_query_trips, id_prefix="P-REF", namespace=phenotype_namespace
+    ref_phtype, ref_query_trips = find_or_create_node(
+        hypo_ds, ref_query_trips, id_prefix="P-REF", namespace=phenotype_namespace
     )
+    for t in ref_query_trips:
+        phenotypes.add(t)
 
     # Fetch the compared phenotype from the graph if it exists,
     # create it if it doesn't exist.
@@ -312,10 +356,50 @@ def write_exhibits_phenotype_to_graph(
         + [(None, RDFS.subClassOf, phtype)]
         + additional_comp_triples
     )
-    comp_phtype = find_or_create_node(
-        hypo_ds, h_graph, comp_query_trips, id_prefix="P", namespace=phenotype_namespace
+    comp_phtype, comp_query_trips = find_or_create_node(
+        hypo_ds, comp_query_trips, id_prefix="P", namespace=phenotype_namespace
     )
+    for t in comp_query_trips:
+        phenotypes.add(t)
+
     return ref_phtype, comp_phtype
+
+
+def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_state=DEFAULT_REFERENCE_STATE):
+    states = dataset.graph("http://hypo.project-genesis.io/states")
+    phenotypes = dataset.graph("http://hypo.project-genesis.io/phenotypes")
+
+    qualifying_relation = term_from_label(
+        qualifier + "ComparedTo", ontology)
+
+    # Fetch the reference phenotype from the graph if it exists,
+    # create it if it doesn't exist. (Link to reference state defined
+    # above in variable `REFERENCE_STATE`)
+    # TODO: Add Label or other property to make querying easier
+    ref_query_trips = (
+        role_between_classes(reference_state, None, STATE_HAS_OBSERVABLE)
+        + [(None, RDFS.subClassOf, CHEM_COMP_ACC)]
+        + additional_ref_triples
+    )
+    ref_phtype, ref_query_trips = find_or_create_node(
+        hypo_ds, ref_query_trips, id_prefix="P-REF", namespace=phenotype_namespace
+    )
+    for t in ref_query_trips:
+        phenotypes.add(t)
+
+    # Fetch the compared phenotype from the graph if it exists,
+    # create it if it doesn't exist.
+    # TODO: Add Label or other property to make querying easier
+    comp_query_trips = (
+        role_between_classes(None, ref_phtype, qualifying_relation)
+        + [(None, RDFS.subClassOf, phtype)]
+        + additional_comp_triples
+    )
+    comp_phtype, comp_query_trips = find_or_create_node(
+        hypo_ds, comp_query_trips, id_prefix="P", namespace=phenotype_namespace
+    )
+    for t in comp_query_trips:
+        phenotypes.add(t)
 
 
 def hypothesis_to_triples(h, h_graph):
@@ -363,3 +447,11 @@ def add_hypothesis_as_new_graph_in_hypo_ds(hypo_ds, h):
         hypo_ds.remove_graph(h_graphid)
 
     return hypo_ds
+
+
+if __name__ == "__main__":
+    with open("experiments/test-patterns.txt", "r") as fi:
+        test_patterns = [l.rstrip().split(':', 1) for l in fi]
+
+    test_hypotheses = [{'logic_program': p[1], 'observable': p[0], 'qualifier': 'higher',
+                        'number': i, 'reason': '<blank>'} for (i, p) in enumerate(test_patterns)]
