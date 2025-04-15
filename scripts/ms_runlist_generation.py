@@ -11,7 +11,8 @@ import random
 from pathlib import Path
 import config
 
-def generate_runlist(wells_df, samples_in_sequence=3, tune_interval=4, randomize=True):
+def generate_runlist(wells_df, folder_seed, samples_in_sequence=3, tune_interval=4, blank_between = 4,randomize=True):
+    
     """
     Generate a runlist with Wash, Blank, Random Samples, QC samples, and Tune injections.
 
@@ -23,14 +24,15 @@ def generate_runlist(wells_df, samples_in_sequence=3, tune_interval=4, randomize
         randomize (bool): Whether to randomize the sample order or maintain the original order.
     """
     
-    def structured_randomization(wells_df, samples_in_sequence):
-        """Ensures each sequence contains at least one of each experimental group."""
+    def structured_randomization(wells_df, folder_seed):
+        
         if not randomize:
             return wells_df.reset_index(drop=True)
         
-        grouped = [group_df.sample(frac=1, random_state=42).reset_index(drop=True)
+        grouped = [group_df.sample(frac=1, random_state=int(folder_seed)).reset_index(drop=True)
                    for _, group_df in wells_df.groupby("Summary")]
         samples = []
+        
         while any(len(g) > 0 for g in grouped):
             batch = [g.iloc[0] for g in grouped if not g.empty]
             samples.extend(batch)
@@ -42,12 +44,12 @@ def generate_runlist(wells_df, samples_in_sequence=3, tune_interval=4, randomize
         return pd.DataFrame(samples)
     
     # Apply structured randomization or maintain original order
-    randomized_samples = structured_randomization(wells_df[['well','Summary']], samples_in_sequence)
+    randomized_samples = structured_randomization(wells_df[['well','Summary']], folder_seed)
     
     # Initialize the runlist
     runlist = []
     
-    # Add a tune injection at the start
+    # Add a tune injection at the start as a workaround for AutonoMS, then proceed to temper the cartridge
     runlist.append({"Description": "Tune", "Well": "MAT1", "Notes": 'Placeholder to work around AutonoMS', "Sample_Type": 'TUNE'})
     runlist.append({"Description": "Blank", "Well": "MAT1", "Notes": 'Blank', "Sample_Type": 'BLANK'})
     runlist.append({"Description": "Blank", "Well": "MAT1", "Notes": 'Blank', "Sample_Type": 'BLANK'})
@@ -56,10 +58,11 @@ def generate_runlist(wells_df, samples_in_sequence=3, tune_interval=4, randomize
     
     #sequence = ["QC","QC"] + ["Random Sample"] * samples_in_sequence + ["QC","QC","Blank","Blank","Blank","Blank","Blank"]
     
-    mid = samples_in_sequence // 2  # integer division
+    #mid = samples_in_sequence // 2  # integer division
     
     # Build a sequence that puts one QC mid-sample-block and one QC at the end
-    sequence = ["QC", "QC"] + ["Random Sample"] * mid + ['QC'] + ["Random Sample"] * (samples_in_sequence - mid) + ['QC'] + ["Blank", "Blank", "Blank", "Blank", "Blank"]
+    #sequence = ["QC", "QC"] + ["Random Sample"] * mid + ['QC'] + ["Random Sample"] * (samples_in_sequence - mid) + ['QC'] + ["Blank", "Blank", "Blank", "Blank", "Blank"]
+    sequence = ["QC", "QC"] + ["Random Sample"]*samples_in_sequence + ["QC"] + ["Blank"] * blank_between
     
     # Start with two QCs at the beginning
     #sequence += ["QC", "QC"]
@@ -117,9 +120,10 @@ def generate_mass_spec_metadata(output_folder):
     # So, likely randomize the injection order?
     samples_in_sequence = config.SAMPLES_IN_SEQUENCE
     tune_interval = config.TUNE_INTERVAL
+    blank_between = config.BLANK_BETWEEN_SAMPLE_BLOCKS
     
     # Generate the runlist
-    runlist = generate_runlist(layout, samples_in_sequence, tune_interval, randomize = config.RUNLIST_RANDOMIZATION)
+    runlist = generate_runlist(layout, output_folder[-4:] ,samples_in_sequence, tune_interval, blank_between, randomize = config.RUNLIST_RANDOMIZATION)
     
     # Reformat runlist into AutonoMS formatting
     runlist['Sequence'] = config.MS_POLARITY

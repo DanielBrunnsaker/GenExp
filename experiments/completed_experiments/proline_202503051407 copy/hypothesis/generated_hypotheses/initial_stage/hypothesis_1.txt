@@ -1,0 +1,42 @@
+### Motivation
+The statement suggests an association between higher intracellular proline levels and decreased resistance to aluminium (3+) in Saccharomyces cerevisiae. Proline is known to play a role in stress responses, including osmotic and oxidative stress. This experiment aims to determine if increasing intracellular proline levels affects the yeast's resistance to aluminium sulfate, a source of aluminium ions.
+
+### Hypothesis
+Increasing intracellular proline levels in Saccharomyces cerevisiae will lead to decreased resistance to aluminium sulfate, as measured by growth inhibition in the presence of 2.4 mM aluminium sulfate.
+
+### Experimental Plan
+
+1. **Strain and Media Preparation:**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Proline Supplementation:**
+   - Supplement the media with proline at two concentrations: 0 mM (control), 10 mM, and 20 mM. These concentrations are chosen based on their physiological relevance and potential to modulate intracellular proline levels.
+
+3. **Aluminium Sulfate Treatment:**
+   - Treat the cells with 0 mM (control) and 2.4 mM aluminium sulfate, as specified in the statement.
+
+4. **Negative Control:**
+   - Include a negative control with 10 mM alanine supplementation, as it is not expected to affect metal resistance and serves as a control for amino acid supplementation.
+
+5. **Experimental Conditions:**
+   - Incubate all cultures at 30°C with shaking.
+   - Measure OD600 every 20 minutes to monitor growth.
+   - Terminate the experiment at 20 hours and perform mass spectrometry-based metabolomics to measure intracellular proline levels.
+
+6. **Experimental Setup:**
+   - Total conditions: 3 proline levels x 2 aluminium sulfate levels + 2 alanine controls = 8 conditions.
+   - Conditions include:
+     - Proline 0 mM + Aluminium 0 mM
+     - Proline 0 mM + Aluminium 2.4 mM
+     - Proline 10 mM + Aluminium 0 mM
+     - Proline 10 mM + Aluminium 2.4 mM
+     - Proline 20 mM + Aluminium 0 mM
+     - Proline 20 mM + Aluminium 2.4 mM
+     - Alanine 10 mM + Aluminium 0 mM
+     - Alanine 10 mM + Aluminium 2.4 mM
+
+### Expected Outcomes
+- If higher intracellular proline levels are associated with decreased metal resistance, we expect to see reduced growth (lower OD600) in conditions with 10 mM and 20 mM proline when exposed to 2.4 mM aluminium sulfate compared to the control (0 mM proline with 2.4 mM aluminium sulfate).
+- The alanine control should not show significant differences in growth between aluminium sulfate treatments, confirming that the effect is specific to proline.
+- Mass spectrometry should confirm increased intracellular proline levels in the supplemented conditions.

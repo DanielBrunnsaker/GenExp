@@ -43,7 +43,8 @@ VARIATIONS = 5 # How many variations to generate from the pattern selection step
 
 # Mass spectrometry settings
 PERFORM_MASS_SPEC = True
-SAMPLES_IN_SEQUENCE = 10 # How many samples to include in sample blocks
+SAMPLES_IN_SEQUENCE = 6 # How many samples to include in sample blocks
+BLANK_BETWEEN_SAMPLE_BLOCKS = 4
 TUNE_INTERVAL = 0 # How many sample-blocks (blank, qc, sample, qc, blank) to have inbetween reference tuning injections
 RF_SETTINGS_FILE = '../data/rf_params/AutonoMS_template.xlsx'
 RUNLIST_RANDOMIZATION = True # If one wants to randomize the runlit. Recommended!

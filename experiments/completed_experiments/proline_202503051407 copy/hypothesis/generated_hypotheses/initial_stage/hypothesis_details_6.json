@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_modulates_target(B,through inhibition,D),participates_in_metabolism(D,metabolism of,citrate)",
+    "observable": "proline",
+    "qualifier": "higher",
+    "coefficient": 0.15270047649515794,
+    "initial_prompt": "12. Cells with higher levels of intracellular proline in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_modulates_target(B,'through inhibition',D),participates_in_metabolism(D,'metabolism of',citrate)"
+}

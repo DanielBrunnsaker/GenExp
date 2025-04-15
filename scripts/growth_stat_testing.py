@@ -65,6 +65,10 @@ def growth_testing(EXPERIMENT_DIR):
     layout = pd.read_excel(EXPERIMENT_DIR / 'protocol/hamilton/pipetting_layout.xlsx')
     layout.rename(columns={'well': 'Well'}, inplace=True)
     design_table = create_design_table(layout)
+    
+    # Save design table 
+    design_table.to_csv(EXPERIMENT_DIR / 'protocol/plate_layout/design_table.tsv', sep = '\t')
+    
     data = design_table.merge(growth_data.drop('Summary', axis=1), left_on='Well', right_index=True)
     data = data[data['Summary'] != 'Media control']
     

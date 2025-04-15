@@ -1,0 +1,47 @@
+### Motivation
+
+The statement suggests an association between higher intracellular proline levels and increased resistance to (S)-lactic acid in Saccharomyces cerevisiae. Proline is known to play roles in stress responses, including osmotic and oxidative stress, which may contribute to chemical resistance. This experiment aims to explore the relationship between intracellular proline levels and resistance to (S)-lactic acid.
+
+### Hypothesis
+
+Increasing intracellular proline levels in Saccharomyces cerevisiae enhances resistance to (S)-lactic acid, potentially by stabilizing cellular structures or acting as an osmoprotectant, thereby mitigating the stress induced by (S)-lactic acid.
+
+### Experimental Plan
+
+1. **Strain and Media Setup:**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Grow cells in minimal media without amino acids, except where specified.
+
+2. **Proline Supplementation Levels:**
+   - Control: No proline supplementation.
+   - Low Proline: 0.5 mM proline.
+   - High Proline: 2 mM proline.
+
+3. **(S)-Lactic Acid Treatment Levels:**
+   - Control: No (S)-lactic acid.
+   - Treated: 50 mM (S)-lactic acid.
+
+4. **Negative Control:**
+   - Use alanine at 2 mM as a negative control for proline supplementation.
+
+5. **Experimental Conditions:**
+   - Combine each proline supplementation level with each (S)-lactic acid treatment level. This results in a total of 6 experimental conditions, plus the treated and untreated negative control.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes to monitor growth and assess viability.
+   - Terminate the experiment at 20 hours for metabolomics analysis.
+
+6. **Metabolomics Analysis:**
+   - Use mass spectrometry to measure intracellular proline levels and other relevant metabolites at the end of the experiment.
+
+### Expected Outcomes
+
+- **Proline Supplementation Effects:**
+  - Higher intracellular proline levels are expected in the proline-supplemented conditions compared to the control.
+  - If proline confers resistance, cells in high proline conditions should exhibit better growth and viability in the presence of (S)-lactic acid compared to those without proline supplementation.
+
+- **Negative Control:**
+  - Alanine supplementation should not confer increased resistance to (S)-lactic acid, serving as a baseline comparison for proline's specific effects.
+
+- **Verification of Hypothesis:**
+  - If increased proline levels correlate with improved growth and viability under (S)-lactic acid stress, it supports the hypothesis that proline contributes to chemical resistance.
+  - If no difference is observed, it may indicate that proline does not play a significant role in resistance to (S)-lactic acid under the tested conditions.

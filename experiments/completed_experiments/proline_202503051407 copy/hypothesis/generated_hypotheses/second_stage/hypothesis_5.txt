@@ -1,0 +1,45 @@
+### Motivation
+
+The statement suggests an association between higher intracellular proline levels in Saccharomyces cerevisiae and increased resistance to (S)-lactic acid. Proline is known to act as an osmoprotectant and a stress protectant in various organisms, including yeast. By examining this association, we can understand whether proline supplementation can enhance resistance to (S)-lactic acid, which could be useful for improving yeast performance in industrial fermentation processes where lactic acid is a common byproduct.
+
+### Hypothesis
+
+Increasing intracellular proline levels in Saccharomyces cerevisiae will enhance resistance to (S)-lactic acid due to proline's role in stress protection and stabilization of cellular structures, potentially reducing the detrimental effects of lactic acid on cellular viability.
+
+### Experimental Plan
+
+1. **Strain and Media**: Use a reference/wild-type prototrophic strain of S. cerevisiae. Grow the cells in minimal media without amino acids unless specified otherwise.
+
+2. **Supplementation Levels**:
+   - **Proline**: 0 mM (Control), 5 mM, 10 mM.
+   - **Negative Control**: Alanine at 10 mM.
+
+3. **Treatment**:
+   - **(S)-Lactic Acid**: 0 mM (Control), 50 mM.
+
+4. **Experimental Set-Up**:
+   - Prepare 96-well plates with the following combinations:
+     - Proline 0 mM + (S)-Lactic Acid 0 mM
+     - Proline 0 mM + (S)-Lactic Acid 50 mM
+     - Proline 5 mM + (S)-Lactic Acid 0 mM
+     - Proline 5 mM + (S)-Lactic Acid 50 mM
+     - Proline 10 mM + (S)-Lactic Acid 0 mM
+     - Proline 10 mM + (S)-Lactic Acid 50 mM
+     - Alanine 10 mM + (S)-Lactic Acid 0 mM (Negative Control)
+     - Alanine 10 mM + (S)-Lactic Acid 50 mM (Negative Control)
+
+5. **Incubation**: Incubate at 30°C with shaking. Measure OD600 every 20 minutes to monitor growth.
+
+6. **Metabolomics**: At the end of 20 hours, use mass spectrometry-based metabolomics to measure intracellular proline levels to confirm successful modulation.
+
+### Expected Outcomes
+
+- **Control Conditions**: Cells with 0 mM proline and no lactic acid should exhibit normal growth, serving as a baseline.
+  
+- **Proline Supplementation**: 
+  - If increased proline enhances resistance, cells supplemented with 5 mM and 10 mM proline should show better growth/viability in the presence of 50 mM lactic acid compared to non-supplemented cells.
+  - Proline-supplemented cells without lactic acid should grow similarly to control, indicating no negative impact of proline itself.
+
+- **Negative Control**: Alanine supplementation should not confer increased resistance, validating its role as a control for amino acid supplementation effects.
+
+- **Verification**: Intracellular proline measurements should confirm higher proline levels in supplemented conditions, supporting the hypothesis that proline accumulation contributes to lactic acid resistance.

@@ -1,0 +1,97 @@
+	Well	Summary	Treatment	Supplement
+0	A1	Caffeine treatment without arginine supplementation.	Yes	None
+1	B1	High arginine supplementation without caffeine treatment.	None	PosHigh
+2	C1	Low arginine supplementation without caffeine treatment.	None	PosLow
+3	D1	Negative control with alanine supplementation with caffeine.	Yes	NegHigh
+4	E1	High arginine supplementation with caffeine treatment.	Yes	PosHigh
+5	F1	Low arginine supplementation with caffeine treatment.	Yes	PosLow
+6	G1	Media control	None	None
+7	H1	Baseline condition with no supplementation or treatment.	None	None
+8	A2	Media control	None	None
+9	B2	High arginine supplementation with caffeine treatment.	Yes	PosHigh
+10	C2	Negative control with alanine supplementation without caffeine.	None	NegHigh
+11	D2	Low arginine supplementation with caffeine treatment.	Yes	PosLow
+12	E2	Media control	None	None
+13	F2	High arginine supplementation without caffeine treatment.	None	PosHigh
+14	G2	Baseline condition with no supplementation or treatment.	None	None
+15	H2	Low arginine supplementation without caffeine treatment.	None	PosLow
+16	A3	Low arginine supplementation without caffeine treatment.	None	PosLow
+17	B3	Caffeine treatment without arginine supplementation.	Yes	None
+18	C3	Baseline condition with no supplementation or treatment.	None	None
+19	D3	Media control	None	None
+20	E3	High arginine supplementation without caffeine treatment.	None	PosHigh
+21	F3	Negative control with alanine supplementation with caffeine.	Yes	NegHigh
+22	G3	Low arginine supplementation with caffeine treatment.	Yes	PosLow
+23	H3	High arginine supplementation with caffeine treatment.	Yes	PosHigh
+24	A4	High arginine supplementation without caffeine treatment.	None	PosHigh
+25	B4	Negative control with alanine supplementation without caffeine.	None	NegHigh
+26	C4	Media control	None	None
+27	D4	Baseline condition with no supplementation or treatment.	None	None
+28	E4	Caffeine treatment without arginine supplementation.	Yes	None
+29	F4	Media control	None	None
+30	G4	Negative control with alanine supplementation with caffeine.	Yes	NegHigh
+31	H4	Low arginine supplementation without caffeine treatment.	None	PosLow
+32	A5	Negative control with alanine supplementation without caffeine.	None	NegHigh
+33	B5	Media control	None	None
+34	C5	Caffeine treatment without arginine supplementation.	Yes	None
+35	D5	Baseline condition with no supplementation or treatment.	None	None
+36	E5	Negative control with alanine supplementation with caffeine.	Yes	NegHigh
+37	F5	Low arginine supplementation without caffeine treatment.	None	PosLow
+38	G5	High arginine supplementation without caffeine treatment.	None	PosHigh
+39	H5	Low arginine supplementation with caffeine treatment.	Yes	PosLow
+40	A6	High arginine supplementation with caffeine treatment.	Yes	PosHigh
+41	B6	Negative control with alanine supplementation with caffeine.	Yes	NegHigh
+42	C6	Low arginine supplementation with caffeine treatment.	Yes	PosLow
+43	D6	Negative control with alanine supplementation without caffeine.	None	NegHigh
+44	E6	Baseline condition with no supplementation or treatment.	None	None
+45	F6	Caffeine treatment without arginine supplementation.	Yes	None
+46	G6	Low arginine supplementation without caffeine treatment.	None	PosLow
+47	H6	Media control	None	None
+48	A7	Negative control with alanine supplementation without caffeine.	None	NegHigh
+49	B7	Media control	None	None
+50	C7	High arginine supplementation without caffeine treatment.	None	PosHigh
+51	D7	Low arginine supplementation without caffeine treatment.	None	PosLow
+52	E7	Low arginine supplementation with caffeine treatment.	Yes	PosLow
+53	F7	Baseline condition with no supplementation or treatment.	None	None
+54	G7	High arginine supplementation with caffeine treatment.	Yes	PosHigh
+55	H7	Negative control with alanine supplementation with caffeine.	Yes	NegHigh
+56	A8	Baseline condition with no supplementation or treatment.	None	None
+57	B8	High arginine supplementation without caffeine treatment.	None	PosHigh
+58	C8	Media control	None	None
+59	D8	High arginine supplementation with caffeine treatment.	Yes	PosHigh
+60	E8	Caffeine treatment without arginine supplementation.	Yes	None
+61	F8	Low arginine supplementation with caffeine treatment.	Yes	PosLow
+62	G8	Negative control with alanine supplementation with caffeine.	Yes	NegHigh
+63	H8	Negative control with alanine supplementation without caffeine.	None	NegHigh
+64	A9	Negative control with alanine supplementation without caffeine.	None	NegHigh
+65	B9	Low arginine supplementation without caffeine treatment.	None	PosLow
+66	C9	Low arginine supplementation with caffeine treatment.	Yes	PosLow
+67	D9	High arginine supplementation without caffeine treatment.	None	PosHigh
+68	E9	High arginine supplementation with caffeine treatment.	Yes	PosHigh
+69	F9	Media control	None	None
+70	G9	Negative control with alanine supplementation with caffeine.	Yes	NegHigh
+71	H9	Caffeine treatment without arginine supplementation.	Yes	None
+72	A10	Media control	None	None
+73	B10	Low arginine supplementation with caffeine treatment.	Yes	PosLow
+74	C10	High arginine supplementation without caffeine treatment.	None	PosHigh
+75	D10	Caffeine treatment without arginine supplementation.	Yes	None
+76	E10	Negative control with alanine supplementation without caffeine.	None	NegHigh
+77	F10	High arginine supplementation with caffeine treatment.	Yes	PosHigh
+78	G10	Media control	None	None
+79	H10	Low arginine supplementation without caffeine treatment.	None	PosLow
+80	A11	Negative control with alanine supplementation with caffeine.	Yes	NegHigh
+81	B11	Caffeine treatment without arginine supplementation.	Yes	None
+82	C11	High arginine supplementation with caffeine treatment.	Yes	PosHigh
+83	D11	Media control	None	None
+84	E11	Low arginine supplementation without caffeine treatment.	None	PosLow
+85	F11	Baseline condition with no supplementation or treatment.	None	None
+86	G11	Negative control with alanine supplementation without caffeine.	None	NegHigh
+87	H11	Media control	None	None
+88	A12	Low arginine supplementation with caffeine treatment.	Yes	PosLow
+89	B12	Baseline condition with no supplementation or treatment.	None	None
+90	C12	Negative control with alanine supplementation with caffeine.	Yes	NegHigh
+91	D12	High arginine supplementation with caffeine treatment.	Yes	PosHigh
+92	E12	Media control	None	None
+93	F12	Negative control with alanine supplementation without caffeine.	None	NegHigh
+94	G12	Caffeine treatment without arginine supplementation.	Yes	None
+95	H12	High arginine supplementation without caffeine treatment.	None	PosHigh
