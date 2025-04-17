@@ -1,0 +1,16 @@
+Well,y_true,decision_score,predicted_class,classification
+0,0,-0.5008025644189497,0,Yes_None_vs_PosLow_svm
+5,0,2.0359305048506537,1,Yes_None_vs_PosLow_svm
+6,0,-1.215311810164561,0,Yes_None_vs_PosLow_svm
+9,1,-0.9918012707671746,0,Yes_None_vs_PosLow_svm
+14,1,0.9414772274323524,1,Yes_None_vs_PosLow_svm
+15,1,-1.6218366220075964,0,Yes_None_vs_PosLow_svm
+17,0,0.9195284152980046,1,Yes_None_vs_PosLow_svm
+19,1,-0.7409132132633179,0,Yes_None_vs_PosLow_svm
+34,1,-1.8162771861086835,0,Yes_None_vs_PosLow_svm
+35,0,0.8330556222929415,1,Yes_None_vs_PosLow_svm
+37,0,-0.37453822922830166,0,Yes_None_vs_PosLow_svm
+38,0,1.5730131775305247,1,Yes_None_vs_PosLow_svm
+45,1,-1.190079848310084,0,Yes_None_vs_PosLow_svm
+48,0,1.2620479605791468,1,Yes_None_vs_PosLow_svm
+50,0,0.651554905823347,1,Yes_None_vs_PosLow_svm

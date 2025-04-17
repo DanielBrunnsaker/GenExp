@@ -1,0 +1,14 @@
+Well,y_true,decision_score,predicted_class,classification
+3,1,1.4462132421050682,1,None_None_vs_PosHigh_svm
+4,0,-0.9761347446083819,0,None_None_vs_PosHigh_svm
+8,1,0.3340223756013553,1,None_None_vs_PosHigh_svm
+16,0,-0.8355066177247349,0,None_None_vs_PosHigh_svm
+18,0,-0.20790467662180284,0,None_None_vs_PosHigh_svm
+21,0,-0.4276964699719229,0,None_None_vs_PosHigh_svm
+22,0,-0.8574802779081006,0,None_None_vs_PosHigh_svm
+23,1,0.46984564555126807,1,None_None_vs_PosHigh_svm
+24,1,1.3074323363031395,1,None_None_vs_PosHigh_svm
+30,0,-1.1061445904460163,0,None_None_vs_PosHigh_svm
+31,0,-1.1382468254027898,0,None_None_vs_PosHigh_svm
+32,0,-1.0486031650094059,0,None_None_vs_PosHigh_svm
+41,0,-0.986681582045245,0,None_None_vs_PosHigh_svm
