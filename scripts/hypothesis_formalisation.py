@@ -365,7 +365,7 @@ def write_exhibits_phenotype_to_graph(
     return ref_phtype, comp_phtype
 
 
-def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_state=DEFAULT_REFERENCE_STATE):
+def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_state=DEFAULT_REFERENCE_STATE, phenotype_namespace=HYPO):
     states = dataset.graph("http://hypo.project-genesis.io/states")
     phenotypes = dataset.graph("http://hypo.project-genesis.io/phenotypes")
 
@@ -379,7 +379,6 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
     ref_query_trips = (
         role_between_classes(reference_state, None, STATE_HAS_OBSERVABLE)
         + [(None, RDFS.subClassOf, CHEM_COMP_ACC)]
-        + additional_ref_triples
     )
     ref_phtype, ref_query_trips = find_or_create_node(
         hypo_ds, ref_query_trips, id_prefix="P-REF", namespace=phenotype_namespace
@@ -393,13 +392,28 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
     comp_query_trips = (
         role_between_classes(None, ref_phtype, qualifying_relation)
         + [(None, RDFS.subClassOf, phtype)]
-        + additional_comp_triples
     )
     comp_phtype, comp_query_trips = find_or_create_node(
         hypo_ds, comp_query_trips, id_prefix="P", namespace=phenotype_namespace
     )
     for t in comp_query_trips:
         phenotypes.add(t)
+
+    # Fetch the complete state from the graph if it exists,
+    # create it if it doesn't exist.
+    state_triples = [
+        t
+        for uri_pair in phenotype_uri_list
+        for t in role_between_classes(None, uri_pair[1], STATE_HAS_OBSERVABLE)
+    ] + [(None, RDFS.subClassOf, ORGANISM_STATE)]
+    state, state_triples = find_or_create_node(
+        hypo_ds, state_triples, id_prefix="S", namespace=HYPO
+    )
+    for t in state_triples:
+        states.add(t)
+
+    # TODO: Add Label or other property to make querying easier
+    return state
 
 
 def hypothesis_to_triples(h, h_graph):
@@ -411,7 +425,8 @@ def hypothesis_to_triples(h, h_graph):
     # Match the amino acid
     amino_acid = term_from_label(h["observable"], chebi)  # Case-sensitive?
     # print(amino_acid)
-    # state_2 =
+    state_2 = amino_acid_and_qualifier_to_state(
+        hypo_ds, amino_acid, h["qualifier"], reference_state=DEFAULT_REFERENCE_STATE, phenotype_namespace=HYPO)
 
     # Generate `observable` concepts for the reference
     # triples.append((HYPO.P1, RDF.type, CHEM_COMP_ACC))
