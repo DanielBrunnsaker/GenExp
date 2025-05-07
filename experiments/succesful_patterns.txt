@@ -4,3 +4,5 @@ glutamate:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),c
 proline:Cell(A):-exhibits_phenotype(A,increased resistance to chemicals,B,C),compound_name(B,(S)-lactic acid)
 arginine:Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,lithium(1+)),condition(C,Treatment: 0.1M lithium chloride)
 glutamate:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,formic acid)
+glutamine:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,acetic acid)
+lysine:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,acetic acid)

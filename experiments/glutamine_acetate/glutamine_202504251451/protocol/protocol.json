@@ -1,0 +1,93 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,acetic acid)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "control",
+            "summary": "Wild-type yeast grown in minimal media without any supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Yeast grown with low glutamine supplementation to modulate intracellular levels."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Yeast grown with high glutamine supplementation to modulate intracellular levels."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "acetic acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 20.0,
+            "type": "treatment control",
+            "summary": "Yeast treated with acetic acid to test resistance without glutamine supplementation."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "acetic acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Yeast with low glutamine supplementation treated with acetic acid to test resistance."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": "glutamine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "acetic acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Yeast with high glutamine supplementation treated with acetic acid to test resistance."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": "leucine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Yeast grown with leucine supplementation to ensure effects are specific to glutamine."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": "leucine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "acetic acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Yeast with leucine supplementation treated with acetic acid to ensure effects are specific to glutamine."
+        }
+    ]
+}

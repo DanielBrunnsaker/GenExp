@@ -20,7 +20,7 @@ with open(BASE_DIR / '../experiments/succesful_patterns.txt', "r") as file:
 
 disallowed_clauses += successful_clauses
 
-def pattern_selection(target, alpha, N, output_folder):
+def pattern_selection(target, alpha, N, output_folder, override, override_negative):
 
     # Load supporting data
     id_dict, orf_dict = load_supporting_data(BASE_DIR)
@@ -51,7 +51,10 @@ def pattern_selection(target, alpha, N, output_folder):
         clause = prepare_clause_text(current_clause, BASE_DIR)
         
         # Find negative control examples
-        neg_examples = list(all_hypotheses.loc[hypothesis][all_hypotheses.loc[hypothesis] == 0].index)
+        if override_negative:
+            neg_examples = [override_negative]
+        else:
+            neg_examples = list(all_hypotheses.loc[hypothesis][all_hypotheses.loc[hypothesis] == 0].index)
         
         if neg_examples:
             add_negative_examples(
@@ -66,10 +69,16 @@ def pattern_selection(target, alpha, N, output_folder):
         if any(f'{target}:'+clause.replace("'", "") in s for s in disallowed_clauses):
             continue
 
+
+        if override:
+            #prompt_part = override
+            ind_statement = override
+        else:
+            prompt_part = f"{counter}. Cells with {directionality} levels of intracellular {target} in standard conditions associate with:"
+            ind_statement = prompt_part + clause
         # Generate hypothesis text
         hypothesis_counter += 1
-        prompt_part = f"{counter}. Cells with {directionality} levels of intracellular {target} in standard conditions associate with:"
-        ind_statement = prompt_part + clause
+        
         
         completion = prompt_gpt_for_hypothesis(
             BASE_DIR / '../context/hypgen_per_pattern_temp.txt',
@@ -103,10 +112,12 @@ if __name__ == "__main__":
     
     parser = argparse.ArgumentParser(description="Pattern Selection")
     parser.add_argument("--target", required=True, type=str, help="Target molecule (e.g., alanine)")
-    parser.add_argument("--alpha", required=True, type=float, help="Weight for pattern ranking")
+    parser.add_argument("--alpha", required=False, type=float, default=0.0, help="Weight for pattern ranking")
     parser.add_argument("--N", required=True, type=int, help="Number of hypotheses to select")
+    parser.add_argument("--override", required=False, type=str,default=None, help="Override clause.")
+    parser.add_argument("--override_negative", required=False, type=str,default=None, help="Override negative control.")
 
     args = parser.parse_args()
 
     # Call function with parsed arguments
-    pattern_selection(args.target, args.alpha, args.N)
+    pattern_selection(args.target, args.alpha, args.N, args.override, args.override_negative)

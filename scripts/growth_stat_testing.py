@@ -11,51 +11,248 @@ pd.options.mode.chained_assignment = None  # default='warn'
 import statsmodels.formula.api as smf
 import statsmodels.api as sm
 import numpy as np
-from scipy.stats import shapiro
-from statsmodels.stats.diagnostic import het_breuschpagan
-
-def create_design_table(df):
-    design_df = df.copy()
-    
-    # Process Supplement Column
-    unique_supplement_values = sorted(df['Supplement (uL)'].unique())
-    supplement_mapping = {0: 'None', unique_supplement_values[1]: 'PosLow', unique_supplement_values[2]: 'PosHigh'}
-    design_df['Supplement'] = df['Supplement (uL)'].map(supplement_mapping)
-    
-    # Process Negative Control Column
-    max_negative = df['Negative Control (uL)'].max()
-    design_df.loc[df['Negative Control (uL)'] == max_negative, 'Supplement'] = 'NegHigh'
-    
-    # Process Treatment Column
-    treatment_mapping = {0: 'None', df['Treatment (uL)'].max(): 'Yes'}
-    design_df['Treatment'] = df['Treatment (uL)'].map(treatment_mapping)
-    
-    # Keep only relevant columns
-    design_df = design_df[['Well', 'Summary', 'Treatment', 'Supplement']]
-    
-    return design_df
+from tqdm import tqdm
+import json
+from sklearn.utils import resample
+from patsy import dmatrices
+from pathlib import Path
 
 
-def set_datatypes(data, testing_column):
+def create_dose_table(df):
+    """
+    Create a dose table with clearer column names:
+      - Well, Summary
+      - TreatmentName (categorical)
+      - TreatmentDose_uL (float)
+      - SupplementName (categorical)
+      - SupplementDose_mM (float)
+      - NegativeControlVol_uL (float)
+      - NegControlFlag (0/1)
+    """
+    d = df.copy()
+    # 1) Rename raw columns to clear names
+    d = d.rename(columns={
+        'media_supplementation':            'SupplementName',
+        'media_supplementation_doses':      'SupplementDose_mM',
+        'treatment':                        'TreatmentName',
+        'treatment_parameters':             'TreatmentDose_uL',
+        'Negative Control (uL)':            'NegativeControlVol_uL'
+    })
+
+    # 2) Parse numeric doses
+    def parse_numeric(x):
+        try:
+            # extract number
+            s = str(x)
+            m = pd.Series([s]).str.extract(r'(\d+(?:\.\d+)?)', expand=False)[0]
+            return float(m) if pd.notna(m) else 0.0
+        except Exception:
+            return 0.0
+
+    d['SupplementDose_mM']   = d['SupplementDose_mM'].apply(parse_numeric)
+    d['TreatmentDose_uL']    = d['TreatmentDose_uL'].apply(parse_numeric)
+    d['NegativeControlVol_uL']= d['NegativeControlVol_uL'].fillna(0).astype(float)
+
+    # 3) Flag negative control by supplement name (e.g., 'NegHigh')
+    d['NegControlFlag'] = (d['NegativeControlVol_uL'] > 0).astype(int)
+    d['Doses'] = d['SupplementDose_mM']
+    # 4) Zero out supplement dose when neg control
+    d.loc[d['NegControlFlag'] == 1, 'SupplementDose_mM'] = 0.0
+
+    # 5) Clean TreatmentName and cast categorical
+    d['TreatmentName'] = d['TreatmentName'].where(d['TreatmentDose_uL'] > 0, 'None').fillna('None')
+    cats = ['None'] + [t for t in d['TreatmentName'].unique() if t != 'None']
+    d['TreatmentName'] = pd.Categorical(d['TreatmentName'], categories=cats, ordered=True)
+
+    # 6) Cast SupplementName categorical including 'None'
+    d['SupplementName'] = d['SupplementName'].fillna('None').astype(str)
+    supp_cats = ['None'] + [s for s in d['SupplementName'].unique() if s != 'None']
+    d['SupplementName'] = pd.Categorical(d['SupplementName'], categories=supp_cats)
+
+    # 7) Return cleaned table
+    return d[['Well','Summary',
+              'TreatmentName','TreatmentDose_uL',
+              'SupplementName','SupplementDose_mM',
+              'NegativeControlVol_uL','NegControlFlag','Doses']]
+
+
+def bootstrap_summary(df, formula, B=1000):
+    """
+    Given df and a patsy formula, do:
+      1. Fit OLS to extract params
+      2. Bootstrap B resamples of that fit
+      3. Compute bootstrap SE, 95% CI, empirical p-values
+      4. Attach exp(beta) & % change, with NaN for the intercept
+    """
     
-    rls_data = data[[testing_column, 'Treatment', 'Supplement']]
+    np.random.seed(0)
     
-    # Ensure variables are categorical?
-    rls_data['Treatment'] = pd.Categorical(
-        rls_data['Treatment'],
-        categories=['None', 'Yes'],     
-        ordered=True
-    )
-    rls_data['Supplement'] = pd.Categorical(
-        rls_data['Supplement'],
-        categories=['None', 'PosLow', 'PosHigh', 'NegHigh'], 
-        ordered=True
-    )
+    # 1) Fit once to get param names
+    orig_mod    = smf.ols(formula, data=df).fit()
+    params      = orig_mod.params
     
-    return rls_data
+    # 2) Bootstrap
+    boot_mat = np.zeros((B, len(params)))
+    for i in tqdm(range(B), desc="Bootstrapping"):
+        samp    = resample(df)
+        mod_b   = smf.ols(formula, data=samp).fit()
+        boot_mat[i,:] = mod_b.params.values
+    
+    boot_df = pd.DataFrame(boot_mat, columns=params.index)
+    
+    # 3) Summaries
+    boot_se   = boot_df.std(ddof=1)
+    ci_low    = boot_df.quantile(0.025)
+    ci_high   = boot_df.quantile(0.975)
+    
+    # 4) Empirical p-values
+    p_emp = {
+        name: ((boot_df[name].apply(np.sign) != np.sign(params[name])).sum() + 1) / (B + 1)
+        for name in params.index
+    }
+    
+    # 5) Build table
+    summary = pd.DataFrame({
+        'estimate':    params,
+        'boot_se':     boot_se,
+        'ci_2.5%':     ci_low,
+        'ci_97.5%':    ci_high,
+        'p_empirical': pd.Series(p_emp)
+    })
+    # 6) exp(beta) and %change
+    expb      = np.exp(params)
+    pct       = (expb - 1)*100
+    summary['exp_beta'] = expb
+    summary['%change']  = pct
+    # 7) clean intercept
+    summary.loc['Intercept', ['exp_beta','%change']] = [np.nan, np.nan]
+    
+    # 8) reorder
+    summary = summary[[
+        'estimate','boot_se','ci_2.5%','ci_97.5%',
+        'exp_beta','%change','p_empirical'
+    ]]
+    return summary, boot_df
+
+def set_datatypes(dose_df, testing_column, eps=1e-6):
+    """
+    Prepare dose_df for modeling, producing:
+      - log_resp
+      - Treatment (categorical None/Yes)
+      - dose_mM (float)
+      - neg_control (int flag)
+      - SupplementLevel (categorical: None, Low, High, Negative)
+    
+    Automatically assigns 'Low' and 'High' based on the sorted unique positive doses.
+    """
+    df = dose_df.copy()
+
+    # 1) Log‐transform response
+    df['log_resp'] = np.log(df[testing_column].astype(float) + eps)
+
+    # 2) Treatment as ordered Categorical
+    df['Treatment'] = df['TreatmentName'].fillna('None').astype(str)
+    treats = ['None'] + [t for t in df['Treatment'].unique() if t != 'None']
+    df['Treatment'] = pd.Categorical(df['Treatment'], categories=treats, ordered=True)
+
+    # 3) Numeric dose and flag
+    df['Supplementation (per mM)']     = df['SupplementDose_mM'].astype(float)
+    df['Negative control'] = df['NegControlFlag'].astype(int)
+
+    # 4) Determine Low vs High thresholds
+    # get unique positive doses (exclude zeros and negatives)
+    pos_doses = sorted(df.loc[df['Supplementation (per mM)'] > 0, 'Supplementation (per mM)'].unique())
+    if len(pos_doses) >= 2:
+        low_val, high_val = pos_doses[0], pos_doses[-1]
+    else:
+        low_val, high_val = None, None
+
+    # 5) Build 4‐level SupplementLevel
+    def label_sup(row):
+        if row['Negative control'] == 1:
+            return 'Negative'
+        dm = row['Supplementation (per mM)']
+        if dm == 0:
+            return 'None'
+        if low_val is not None and np.isclose(dm, low_val):
+            return 'Low'
+        if high_val is not None and np.isclose(dm, high_val):
+            return 'High'
+        # fallback for unexpected
+        return 'High' if dm > low_val else 'Low'
+
+    df['SupplementLevel'] = df.apply(label_sup, axis=1)
+    levels = ['None', 'Low', 'High', 'Negative']
+    df['SupplementLevel'] = pd.Categorical(df['SupplementLevel'],
+                                           categories=levels,
+                                           ordered=False)
+
+    # 6) Return exactly the columns for modeling + this new factor
+    return df[['log_resp', 'Treatment', 'Supplementation (per mM)', 'Negative control', 'SupplementLevel']]
+
+def plot_ready_df(summary_df, boot_df, dose, treat_name):
+    """
+    Same as before, but injects the two scaled rows immediately after
+    the per-mM slope row and its interaction parent, preserving order.
+    """
+    df = summary_df.copy()
+    rows = []
+
+    def make_scaled(name, term):
+        beta = df.loc[term, 'estimate']
+        se   = df.loc[term, 'boot_se']
+        lo   = df.loc[term, 'ci_2.5%']
+        hi   = df.loc[term, 'ci_97.5%']
+        p    = df.loc[term, 'p_empirical']
+
+        est_s = beta * dose
+        se_s  = se * dose
+        lo_s  = lo * dose
+        hi_s  = hi * dose
+
+        expb  = np.exp(est_s)
+        pct   = (expb - 1) * 100
+
+        return pd.Series({
+            'estimate':    est_s,
+            'boot_se':     se_s,
+            'ci_2.5%':     lo_s,
+            'ci_97.5%':    hi_s,
+            'exp_beta':    expb,
+            '%change':     pct,
+            'p_empirical': p
+        }, name=name)
+
+    # Define the two parent terms
+    slope_term   = 'Q("Supplementation (per mM)")'
+    inter_term   = f'C(Treatment)[T.{treat_name}]:Q("Supplementation (per mM)")'
+
+    for idx in df.index:
+        # 1) Always add the original row
+        rows.append(df.loc[idx].copy().rename(idx))
+
+        # 2) Right after the slope term, inject "Supplement at dose"
+        if idx == slope_term:
+            rows.append(make_scaled(f"Supplement at {dose} mM", slope_term))
+
+        # 3) Right after the interaction term, inject "Treatment×(Supplement at dose)"
+        if idx == inter_term:
+            rows.append(make_scaled(
+                f"{treat_name}×(Supplement at {dose} mM)",
+                inter_term
+            ))
+
+    # Reassemble into a DataFrame
+    result = pd.DataFrame(rows)
+    return result
 
 def growth_testing(EXPERIMENT_DIR):
     
+    with open(EXPERIMENT_DIR / 'protocol/protocol.json', 'r') as f:
+        data = json.load(f)
+    
+    # Convert experiments list into a DataFrame
+    experiments_df = pd.json_normalize(data['experiments'])
 
     # Load observables
     growth_data = pd.read_csv(EXPERIMENT_DIR / 'results/growth/processed/growth_parameters.tsv',
@@ -64,155 +261,53 @@ def growth_testing(EXPERIMENT_DIR):
     # Create design table from dispensing layout.
     layout = pd.read_excel(EXPERIMENT_DIR / 'protocol/hamilton/pipetting_layout.xlsx')
     layout.rename(columns={'well': 'Well'}, inplace=True)
-    design_table = create_design_table(layout)
+    layout = layout.merge(experiments_df, left_on = 'Summary', right_on='summary', how='left')
     
-    # Save design table 
-    design_table.to_csv(EXPERIMENT_DIR / 'protocol/plate_layout/design_table.tsv', sep = '\t')
+    dose_table = create_dose_table(layout)
     
-    data = design_table.merge(growth_data.drop('Summary', axis=1), left_on='Well', right_index=True)
+    data = dose_table.merge(growth_data.drop('Summary', axis=1), left_on='Well', right_index=True)
     data = data[data['Summary'] != 'Media control']
     
-    # Loop over each metric
-    for testing_column in ['AUC', 'mu', 'MaxOD']:
-        categorized_data = set_datatypes(data, testing_column)
-        
-        if testing_column == 'AUC':
-            # For AUC, use a Gamma GLM with log link. Did some empirical testing here, and this one seemed the best.
-            model = smf.glm(
-                formula=f'{testing_column} ~ C(Treatment) * C(Supplement)',
-                data=categorized_data,
-                family=sm.families.Gamma(link=sm.families.links.Log())
-            ).fit()
-            model_type = "Gamma GLM (log link)"
-        
-        elif testing_column == 'mu':
-            # For mu, use the Inverse Gaussian GLM with a log link. Did some empirical testing here, and this one seemed the best.
-            model = smf.glm(
-                formula='mu ~ C(Treatment) * C(Supplement)',
-                data=categorized_data,
-                family=sm.families.InverseGaussian(link=sm.families.links.Log())
-            ).fit()
-            model_type = "Inverse Gaussian GLM (log link)"
-        
-        elif testing_column == 'MaxOD':
-            # For MaxOD, apply a log transformation and use OLS. Did some empirical testing here, and this one seemed the best.
-            log_column = f'log_{testing_column}'
-            categorized_data[log_column] = np.log(categorized_data[testing_column])
-            model = smf.ols(
-                formula=f'{log_column} ~ C(Treatment) * C(Supplement)',
-                data=categorized_data
-            ).fit()
-            model_type = "OLS on log-transformed data"
-        
-        # Print final model summary for the current metric.
-        print(f'\n########### Final Testing for {testing_column} using {model_type} ###########\n')
-        print(model.summary())
-        
-        # Choose residuals for diagnostic tests.
-        if testing_column in ['AUC', 'mu']:
-            resid = model.resid_response  # For GLMs, using the response residuals.
-            bp_resid = model.resid_pearson
-        else:
-            resid = model.resid  # For OLS.
-            bp_resid = resid
-        
-        # Normality test (Shapiro-Wilk)
-        shapiro_stat, shapiro_p = shapiro(resid)
-        print("\nNormality Test (Shapiro-Wilk):")
-        print(f"Statistic: {shapiro_stat:.4f}, p-value: {shapiro_p:.4f}")
-        
-        # Heteroscedasticity test (Breusch-Pagan)
-        bp_stat, bp_pvalue, fvalue, f_pvalue = het_breuschpagan(bp_resid, model.model.exog)
-        print("\nHeteroscedasticity Test (Breusch-Pagan):")
-        print(f"LM Statistic: {bp_stat:.4f}, LM p-value: {bp_pvalue:.4f}")
-        print(f"F-Statistic: {fvalue:.4f}, F p-value: {f_pvalue:.4f}")
-        
-        # Save model coefficients and the fitted model.
-        results_df = pd.DataFrame({
-            "Coefficient": model.params,
-            "Std Error": model.bse,
-            "t-value": model.tvalues,
-            "p-value": model.pvalues
-        })
-        results_df.to_csv(EXPERIMENT_DIR / f'results/growth/tests/{testing_column}.tsv', sep='\t')
-        model.save(EXPERIMENT_DIR / f'results/growth/tests/models/{testing_column}.pickle')
+    # 1) Define formulas
+    f_lin = 'log_resp ~ C(Treatment) * (Q("Supplementation (per mM)") + Q("Negative control"))'
+    #f_cat = 'log_resp ~ C(Treatment)*C(SupplementLevel)'
 
+    for testing_column in ['AUC']:
+        
+        dat = set_datatypes(data, testing_column, eps=1e-2)
+        
+        #mod_lin = smf.ols(f_lin, data=dat).fit()
+        #mod_cat = smf.ols(f_cat, data=dat).fit()
 
-'''
-import pandas as pd
-pd.options.mode.chained_assignment = None  # default='warn'
-
-import statsmodels.formula.api as smf
-import statsmodels.api as sm
-from scipy.stats import shapiro, levene
-from statsmodels.stats.multicomp import pairwise_tukeyhsd
-import numpy as np
-
-def two_way_anova_testing(EXPERIMENT_DIR):
-    """
-    This function performs a two-way ANOVA using OLS,
-    tests assumptions (normality of residuals and homogeneity of variances),
-    and conducts a Tukey HSD post hoc test for pairwise comparisons.
-    """
-    # Load observables
-    growth_data = pd.read_csv(EXPERIMENT_DIR / 'results/growth/processed/growth_parameters.tsv', sep='\t', index_col=0)
+        # select which formula to use based on the fit
+        #chosen_formula = f_lin if 2*mod_lin.aic <= mod_cat.aic else f_cat
+        
+        #print("Selected:", chosen_formula)
+        
+        negative_dose = data['Doses'][data['NegControlFlag'] == 1].max()
+        treat_name = data['TreatmentName'][data['TreatmentName'] != 'None'].unique()[0] # janky
+        
+        # bootstrap
+        summary, boot_df = bootstrap_summary(dat, f_lin, B=5000)
+        
+        summary.to_csv(EXPERIMENT_DIR / f'results/growth/tests/{testing_column}_summary.csv')
+        boot_df.to_csv(EXPERIMENT_DIR / f'results/growth/tests/{testing_column}_boot.csv')
     
-    # Create design table from the pipetting layout
-    layout = pd.read_excel(EXPERIMENT_DIR / 'protocol/hamilton/pipetting_layout.xlsx')
-    layout.rename(columns={'well':'Well'}, inplace=True)
-    design_table = create_design_table(layout)
-    
-    # Merge design table with growth data
-    data = design_table.merge(growth_data.drop('Summary', axis=1), left_on='Well', right_index=True)
-    data = data[data['Summary'] != 'Media control']
-    
-    for testing_column in ['AUC', 'mu', 'MaxOD']:
-        categorized_data = set_datatypes(data, testing_column)
+        print(f"\n===== Results for {testing_column} =====")
+        print(summary.to_string())
         
-        #categorized_data[testing_column] = np.log(categorized_data[testing_column])
+        df_forest = plot_ready_df(summary, boot_df, negative_dose, treat_name)
+        df_forest.to_csv(EXPERIMENT_DIR / f'results/growth/tests/{testing_column}_forest.csv')
         
-        # Fit an OLS model for two-way ANOVA
-        model_ols = smf.ols(formula=f'{testing_column} ~ C(Treatment) * C(Supplement)', data=categorized_data).fit()
-        #model_ols = smf.ols(formula=f'{testing_column} ~ C(Control_Type) + C(Treatment) * C(Supplement) + C(Treatment):C(Control_Type)', data=categorized_data).fit()
-        #formula=f'{testing_column} ~ C(Control_Type) + C(Treatment) * C(Supplement)', data=rls_data
-        anova_results = sm.stats.anova_lm(model_ols, typ=2)  # Type II ANOVA
+        print(f"\n===== Dose corrected results for {testing_column} =====")
+        print(df_forest.to_string())
         
-        print(f'\n ########### Two-Way ANOVA for {testing_column} ########### \n')
-        print(anova_results)
-        
-        # Assumption testing: Normality of residuals using Shapiro-Wilk test
-        shapiro_stat, shapiro_p = shapiro(model_ols.resid)
-        print("Shapiro-Wilk test for normality of residuals:")
-        print(f"Statistic = {shapiro_stat:.4f}, p-value = {shapiro_p:.4f}")
-        
-        # Assumption testing: Homogeneity of variances using Levene's test
-        # Group by the combination of Treatment and Supplement
-        groups = [model_ols.resid[group.index] 
-                  for name, group in categorized_data.groupby(["Treatment", "Supplement"])]
-        levene_stat, levene_p = levene(*groups)
-        print("Levene's test for homogeneity of variances:")
-        print(f"Statistic = {levene_stat:.4f}, p-value = {levene_p:.4f}")
-        
-        # Post hoc test: Tukey HSD for all pairwise comparisons
-        # Create a combined group variable
-        categorized_data["Group"] = categorized_data["Treatment"].astype(str) + "_" + categorized_data["Supplement"].astype(str)
-        tukey_results = pairwise_tukeyhsd(
-            endog=categorized_data[testing_column],
-            groups=categorized_data["Group"],
-            alpha=0.05
-        )
-        print("\nTukey HSD post hoc test results:")
-        print(tukey_results.summary())
-        
-        # Save ANOVA results, assumption test outputs, and Tukey HSD summary
-        anova_results.to_csv(EXPERIMENT_DIR / f'results/growth/tests/anova_{testing_column}.tsv', sep='\t')
-        with open(EXPERIMENT_DIR / f'results/growth/tests/anova_assumptions_{testing_column}.txt', 'w') as f:
-            f.write("Shapiro-Wilk test for normality of residuals:\n")
-            f.write(f"Statistic = {shapiro_stat:.4f}, p-value = {shapiro_p:.4f}\n\n")
-            f.write("Levene's test for homogeneity of variances:\n")
-            f.write(f"Statistic = {levene_stat:.4f}, p-value = {levene_p:.4f}\n")
-        with open(EXPERIMENT_DIR / f'results/growth/tests/tukey_{testing_column}.txt', 'w') as f:
-            f.write(str(tukey_results.summary()))
+        #if chosen_formula != 'log_resp ~ C(Treatment)*C(SupplementLevel)':
+        #dose_corrected_summary = corrected_summary(summary, dat)
+        #else:
+        #    dose_corrected_summary = unify_index_names(summary, dat)
 
-'''
+        #print(f"\n===== Corrected for dose =====")
+        #print(dose_corrected_summary.to_string())
 
+        #dose_corrected_summary.to_csv(EXPERIMENT_DIR / f'results/growth/tests/{testing_column}_summary_namingcorr.csv')

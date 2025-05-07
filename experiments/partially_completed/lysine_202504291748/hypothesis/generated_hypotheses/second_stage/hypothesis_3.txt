@@ -1,0 +1,47 @@
+### Motivation
+
+The statement suggests an association between higher levels of intracellular lysine and decreased resistance to hyperosmotic stress in Saccharomyces cerevisiae when grown in media containing 30% sucrose. Understanding this association could provide insights into how lysine metabolism affects stress responses in yeast.
+
+### Hypothesis
+
+Higher intracellular lysine levels negatively impact the hyperosmotic stress resistance of Saccharomyces cerevisiae when exposed to high sucrose concentrations. This could be due to lysine's role in metabolic pathways that influence osmotic balance or stress response mechanisms.
+
+### Experimental Plan
+
+1. **Baseline Conditions:**
+   - Use minimal media without amino acids as the base condition.
+
+2. **Supplementation Levels:**
+   - **Control:** No lysine supplementation.
+   - **Low Lysine:** 1 mM lysine supplementation.
+   - **High Lysine:** 10 mM lysine supplementation (supraphysiological concentration).
+
+3. **Stress Condition:**
+   - All conditions will be exposed to media containing 30% (w/v) sucrose at the start of the experiment (t=0h).
+
+4. **Negative Control:**
+   - Include a negative control with 10 mM serine supplementation, as serine is not directly involved in osmotic stress pathways and serves as a relevant control for amino acid supplementation effects.
+
+5. **Experimental Setup:**
+   - Prepare 96-well plates with each well containing one of the following conditions:
+     - Control with no lysine.
+     - Low lysine with sucrose.
+     - High lysine with sucrose.
+     - Serine control with sucrose.
+   - Each condition should be replicated in multiple wells to ensure statistical validity.
+
+6. **Measurements:**
+   - Monitor OD600 every 20 minutes to assess growth and viability.
+   - At the 20-hour mark, use mass spectrometry-based metabolomics to measure intracellular lysine levels and other relevant metabolites.
+
+### Expected Outcomes
+
+- **Control (No Lysine):** Expect normal growth and standard resistance to hyperosmotic stress.
+  
+- **Low Lysine Supplementation:** May show a slight reduction in hyperosmotic stress resistance due to increased lysine levels, but not as pronounced as high lysine supplementation.
+
+- **High Lysine Supplementation:** Anticipate a significant decrease in hyperosmotic stress resistance, supporting the hypothesis that higher lysine levels impair stress response mechanisms.
+
+- **Serine Control:** Expect normal growth and stress resistance, indicating that the effects observed with lysine are specific to its metabolic role.
+
+By comparing growth curves and metabolomics data across these conditions, we can determine if increased lysine levels correlate with decreased hyperosmotic stress resistance, thereby supporting or refuting the initial statement.

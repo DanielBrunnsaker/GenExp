@@ -1,0 +1,57 @@
+### Motivation
+
+The statement suggests an association between lower intracellular glutamine levels and decreased resistance to acetic acid in Saccharomyces cerevisiae. Glutamine is a critical amino acid involved in various cellular processes, including nitrogen metabolism and stress response. Understanding this association could provide insights into the role of glutamine in stress resistance mechanisms.
+
+### Hypothesis
+
+Cells with reduced intracellular glutamine levels exhibit decreased resistance to acetic acid due to impaired nitrogen metabolism, which compromises the cellular stress response pathways.
+
+### Experimental Plan
+
+**Objective:** To determine if varying intracellular glutamine levels affect acetic acid resistance in S. cerevisiae.
+
+**Media and Conditions:**
+- **Base Medium:** Minimal media without amino acids.
+- **Temperature:** 30°C
+- **Duration:** 20 hours
+- **Shaking:** Standard conditions
+
+**Supplementation and Treatment Levels:**
+1. **Glutamine Supplementation:**
+   - Control: 0 mM Glutamine
+   - Low: 1 mM Glutamine
+   - High: 10 mM Glutamine (supraphysiological concentration)
+
+2. **Acetic Acid Treatment:**
+   - Control: 0 mM Acetic Acid
+   - Treatment: 50 mM Acetic Acid (a concentration known to stress yeast cells)
+
+**Negative Control:**
+- **Amino Acid Supplementation:** Leucine at 10 mM (equimolar to the highest glutamine concentration) to serve as a negative control for amino acid supplementation effects.
+
+**Experimental Conditions:**
+- Total of 8 conditions (3 glutamine levels x 2 acetic acid levels + negative control):
+  1. 0 mM Glutamine + 0 mM Acetic Acid
+  2. 1 mM Glutamine + 0 mM Acetic Acid
+  3. 10 mM Glutamine + 0 mM Acetic Acid
+  4. 0 mM Glutamine + 50 mM Acetic Acid
+  5. 1 mM Glutamine + 50 mM Acetic Acid
+  6. 10 mM Glutamine + 50 mM Acetic Acid
+  7. Negative Control: 10 mM Leucine + 0 mM Acetic Acid
+  8. Negative Control: 10 mM Leucine + 50 mM Acetic Acid
+
+**Measurements:**
+- **Growth Curves:** OD600 every 20 minutes to assess growth and viability.
+- **Metabolomics:** Mass spectrometry at experiment termination to measure intracellular glutamine levels.
+
+### Expected Outcomes
+
+- **Control Conditions (0 mM Acetic Acid):** Increasing glutamine should not significantly affect growth, but intracellular glutamine levels should increase with supplementation.
+  
+- **Acetic Acid Treatment (50 mM):** 
+  - **Low Glutamine (0 mM):** Expect decreased growth and viability, supporting the hypothesis that low glutamine levels impair stress resistance.
+  - **Moderate (1 mM) and High (10 mM) Glutamine:** Improved growth and viability compared to low glutamine, suggesting enhanced stress resistance with higher glutamine levels.
+
+- **Negative Control:** Leucine supplementation should not affect acetic acid resistance, confirming that observed effects are specific to glutamine.
+
+This experimental setup will help determine if intracellular glutamine levels are indeed associated with acetic acid resistance in yeast, providing insights into the underlying mechanisms.

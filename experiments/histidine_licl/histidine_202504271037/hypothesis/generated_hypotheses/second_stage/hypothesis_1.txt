@@ -1,0 +1,40 @@
+**Motivation:**
+The statement suggests an association between lower intracellular histidine levels and decreased resistance to zinc dichloride in Saccharomyces cerevisiae. Histidine is an amino acid that can play a role in metal ion binding and homeostasis, which might influence cellular resistance to metal-induced stress.
+
+**Hypothesis:**
+Lower intracellular histidine levels in Saccharomyces cerevisiae reduce the cells' ability to resist zinc dichloride toxicity. This could be due to histidine's role in buffering intracellular metal ions, thus protecting against metal-induced stress.
+
+**Experimental Plan:**
+
+1. **Control and Baseline Setup:**
+   - Use a minimal media base without amino acids.
+   - Include a negative control with serine supplementation at 5 mM, as serine does not directly influence metal ion homeostasis.
+
+2. **Histidine Modulation:**
+   - Supplement the media with histidine at three concentrations:
+     - Low: 0.1 mM (to simulate lower intracellular histidine levels)
+     - Normal: 1 mM (physiological concentration)
+     - High: 10 mM (supraphysiological concentration)
+
+3. **Zinc Dichloride Treatment:**
+   - Treat all conditions with 0.5 mM zinc dichloride, a concentration known to induce stress but not immediately lethal to S. cerevisiae.
+
+4. **Experimental Conditions:**
+   - Combine each histidine supplementation level with zinc dichloride treatment.
+   - Include untreated (no zinc dichloride) and treated (with zinc dichloride) negative controls with serine.
+
+5. **Measurements:**
+   - Measure OD600 every 20 minutes to assess growth and viability.
+   - At experiment termination (20 hours), perform mass spectrometry-based metabolomics to measure intracellular histidine levels.
+
+6. **Verification of Assumptions:**
+   - Ensure that histidine supplementation effectively modulates intracellular histidine levels by comparing mass spectrometry results across different supplementation levels.
+
+**Expected Outcomes:**
+
+- **Lower Histidine Levels (0.1 mM):** Expect decreased growth and viability in the presence of zinc dichloride, indicating reduced resistance.
+- **Normal Histidine Levels (1 mM):** Anticipate standard resistance levels, serving as a baseline for comparison.
+- **Higher Histidine Levels (10 mM):** Predict enhanced resistance to zinc dichloride, potentially showing improved growth and viability due to excess histidine buffering metal ions.
+- **Negative Control (Serine):** Should show standard growth and resistance patterns, confirming that serine does not impact zinc dichloride resistance.
+
+This experimental design will help determine if there is a causal relationship between intracellular histidine levels and zinc dichloride resistance, supporting or refuting the initial association.

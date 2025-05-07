@@ -1,0 +1,44 @@
+**Motivation:**
+The statement suggests an association between lower intracellular glutamine levels and decreased resistance to acetic acid in Saccharomyces cerevisiae. Understanding this relationship could help elucidate the role of glutamine in stress resistance mechanisms, particularly in the context of chemical stressors like acetic acid.
+
+**Hypothesis:**
+Cells with reduced intracellular glutamine levels will exhibit decreased resistance to acetic acid, potentially due to glutamine's role in nitrogen metabolism and stress response pathways. This may be observed as a reduction in growth rate or viability in the presence of acetic acid when glutamine levels are low.
+
+**Experimental Plan:**
+
+1. **Media Preparation:**
+   - Use minimal media without amino acids as the base medium for all conditions.
+
+2. **Glutamine Supplementation Levels:**
+   - Control: No glutamine supplementation.
+   - Low Glutamine: 0.5 mM glutamine.
+   - High Glutamine: 5 mM glutamine (supraphysiological concentration).
+
+3. **Acetic Acid Treatment Levels:**
+   - Control: No acetic acid.
+   - Acetic Acid: 30 mM acetic acid.
+
+4. **Negative Control:**
+   - Use threonine as the negative control, supplemented at 5 mM (equimolar to the highest glutamine concentration).
+
+5. **Experimental Conditions:**
+   - 6 conditions (3 glutamine levels x 2 acetic acid levels) + 2 negative control conditions (with and without acetic acid).
+   - Each condition will be run in a separate well of the 96-well plate.
+
+6. **Procedure:**
+   - Inoculate each well with a standardized concentration of the reference/wild-type prototrophic S. cerevisiae strain.
+   - Add the specified concentrations of glutamine or threonine (for controls) and acetic acid at t=0h.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes to monitor growth.
+   - At 20 hours, harvest cells for mass spectrometry-based metabolomics to measure intracellular glutamine levels.
+
+**Expected Outcomes:**
+
+- **Control Conditions (No Acetic Acid):**
+  - Cells with higher glutamine supplementation are expected to have higher intracellular glutamine levels, showing normal growth patterns.
+
+- **Acetic Acid Treatment:**
+  - If the hypothesis is correct, cells with no or low glutamine supplementation will exhibit decreased growth or viability in the presence of acetic acid compared to those with high glutamine supplementation.
+  - The negative control with threonine should not show significant changes in response to acetic acid, confirming that the observed effects are specific to glutamine levels.
+
+This experimental design will help determine whether intracellular glutamine levels modulate resistance to acetic acid, supporting or refuting the association suggested in the statement.

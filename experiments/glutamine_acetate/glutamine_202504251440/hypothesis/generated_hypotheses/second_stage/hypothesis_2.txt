@@ -1,0 +1,45 @@
+**Motivation:**
+The statement suggests an association between lower levels of intracellular glutamine and decreased resistance to acetic acid in Saccharomyces cerevisiae. Acetic acid is a common stressor in yeast, affecting cell viability and growth. Understanding this relationship could provide insights into metabolic adaptations and stress responses in yeast.
+
+**Hypothesis:**
+Lower intracellular glutamine levels reduce the resistance of Saccharomyces cerevisiae to acetic acid by impairing the synthesis of key stress response proteins or metabolites that are glutamine-dependent.
+
+**Experimental Plan:**
+
+1. **Baseline Conditions:**
+   - Use minimal media without amino acids.
+   - Maintain standard shaking and inoculation conditions.
+
+2. **Supplementation Levels:**
+   - **Glutamine Supplementation:**
+     - Control (0 mM glutamine)
+     - Physiological level (1 mM glutamine)
+     - Supraphysiological level (10 mM glutamine)
+
+3. **Acetic Acid Treatment Levels:**
+   - Control (0% acetic acid)
+   - Treatment (0.5% acetic acid)
+
+4. **Negative Control:**
+   - Leucine supplementation at 10 mM in the absence of acetic acid.
+
+5. **Experimental Combinations:**
+   - Each glutamine level with both acetic acid levels.
+   - Include negative control with and without acetic acid.
+
+6. **Measurement:**
+   - Measure OD600 every 20 minutes for growth curves.
+   - At experiment termination (20 hours), use mass spectrometry-based metabolomics to measure intracellular glutamine levels.
+   - Assess viability and growth in response to acetic acid.
+
+7. **Verification of Assumptions:**
+   - Ensure that glutamine supplementation effectively modulates intracellular glutamine levels.
+   - Confirm that acetic acid concentration used is relevant for inducing stress without complete inhibition of growth.
+
+**Expected Outcomes:**
+- **Control Glutamine (0 mM):** Expect reduced growth and viability under acetic acid stress, supporting the association.
+- **Physiological Glutamine (1 mM):** Improved resistance to acetic acid compared to control, indicating a dose-dependent relationship.
+- **Supraphysiological Glutamine (10 mM):** Further enhanced resistance, demonstrating that glutamine supplementation can mitigate acetic acid stress.
+- **Negative Control (Leucine):** No significant change in resistance to acetic acid, confirming that the observed effects are specific to glutamine.
+  
+The experiment will determine if intracellular glutamine levels directly correlate with resistance to acetic acid, supporting or refuting the association suggested in the statement.

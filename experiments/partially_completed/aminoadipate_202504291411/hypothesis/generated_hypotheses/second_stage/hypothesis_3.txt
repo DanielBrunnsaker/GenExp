@@ -1,0 +1,39 @@
+### Motivation
+The statement suggests an association between higher intracellular levels of aminoadipate and increased resistance to formic acid in Saccharomyces cerevisiae. Understanding this association can provide insights into the metabolic pathways that confer chemical resistance and potentially identify targets for enhancing yeast tolerance to stressors.
+
+### Hypothesis
+Increased intracellular levels of aminoadipate may enhance the resistance of Saccharomyces cerevisiae to formic acid. This could be due to aminoadipate's role in metabolic pathways that detoxify or mitigate the effects of formic acid, potentially through modulation of redox balance or cellular repair mechanisms.
+
+### Experimental Plan
+1. **Strain and Media Preparation:**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Prepare minimal media without amino acids.
+
+2. **Supplementation Levels:**
+   - Control: No aminoadipate supplementation.
+   - Low aminoadipate: 1 mM aminoadipate.
+   - High aminoadipate: 10 mM aminoadipate.
+
+3. **Treatment Conditions:**
+   - Control: No formic acid.
+   - Treatment: 10 mM formic acid.
+
+4. **Negative Control:**
+   - Supplement with 10 mM proline to serve as a negative control, as proline is not directly involved in pathways affecting formic acid resistance.
+
+5. **Experimental Setup:**
+   - 96-well plate format.
+   - Each well represents a unique combination of aminoadipate level and formic acid treatment, including negative controls.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes to monitor growth.
+   - Terminate experiment at 20 hours and perform mass spectrometry-based metabolomics to measure intracellular aminoadipate levels.
+
+6. **Verification of Assumptions:**
+   - Include wells with only aminoadipate supplementation (without formic acid) to observe its independent effect on growth.
+   - Include wells with only formic acid treatment (without aminoadipate) to assess the baseline resistance of the strain.
+
+### Expected Outcomes
+- **Increased Resistance:** If higher intracellular aminoadipate levels confer increased resistance, wells with 10 mM aminoadipate and 10 mM formic acid should show better growth compared to those with lower or no aminoadipate supplementation.
+- **Independent Effects:** Aminoadipate alone may affect growth, which will be evident from wells with aminoadipate supplementation without formic acid.
+- **Negative Control:** Proline supplementation should not confer increased resistance to formic acid, confirming its role as a negative control.
+- **Verification of Hypothesis:** Mass spectrometry should confirm increased intracellular aminoadipate levels in supplemented conditions, correlating with increased resistance to formic acid.

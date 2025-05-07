@@ -1,0 +1,93 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,acetic acid)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "control",
+            "summary": "Baseline growth and intracellular metabolite levels without any supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Glutamine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Potentially reduced growth due to limited nitrogen source, but no acetic acid stress."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Glutamine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Enhanced growth due to ample nitrogen supply, without acetic acid stress."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "Acetic Acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 20.0,
+            "type": "treatment control",
+            "summary": "Decreased growth and viability, serving as a baseline for acetic acid stress."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Glutamine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "Acetic Acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Further decreased growth and viability compared to control with acetic acid, supporting the hypothesis that low glutamine levels reduce resistance to acetic acid."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Glutamine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Acetic Acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Potentially improved resistance to acetic acid compared to control, indicating a protective role of glutamine."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Leucine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "No significant change in growth, confirming specificity of glutamine's effect."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Leucine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Acetic Acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "No significant change in resistance to acetic acid, confirming specificity of glutamine's effect."
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+**Motivation:**
+The statement suggests an association between lower intracellular glutamine levels and decreased resistance to acetic acid in Saccharomyces cerevisiae. Understanding this relationship could provide insights into how intracellular glutamine levels influence cellular stress responses, particularly in the presence of acetic acid, a common stressor in fermentation processes.
+
+**Hypothesis:**
+Cells with reduced intracellular glutamine levels will exhibit decreased resistance to acetic acid due to glutamine's role in stress response pathways. This may be mediated by glutamine's involvement in nitrogen metabolism and its potential role in buffering against acetic acid-induced stress.
+
+**Experimental Plan:**
+
+1. **Experimental Setup:**
+   - Use a wild-type prototrophic Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids to ensure baseline conditions.
+
+2. **Glutamine Supplementation Levels:**
+   - Control: No glutamine supplementation.
+   - Low Glutamine: 0.5 mM glutamine.
+   - High Glutamine: 5 mM glutamine (supraphysiological level).
+
+3. **Acetic Acid Treatment Levels:**
+   - Control: No acetic acid.
+   - Treatment: 50 mM acetic acid.
+
+4. **Negative Control:**
+   - Use leucine at 5 mM as a negative control to ensure that changes are specific to glutamine and not due to general amino acid supplementation.
+
+5. **Experimental Conditions:**
+   - Inoculate all conditions with equal cell density.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes to monitor growth.
+   - Terminate experiments at 20 hours for metabolomic analysis.
+
+6. **Total Conditions:**
+   - 3 glutamine levels x 2 acetic acid levels = 6 conditions.
+   - 2 additional conditions for leucine negative control (with and without acetic acid).
+
+**Expected Outcomes:**
+
+- **Control (No Glutamine, No Acetic Acid):** Baseline growth and intracellular metabolite levels.
+- **Low Glutamine, No Acetic Acid:** Potentially reduced growth due to limited nitrogen source, but no acetic acid stress.
+- **High Glutamine, No Acetic Acid:** Enhanced growth due to ample nitrogen supply.
+- **Control (No Glutamine, With Acetic Acid):** Decreased growth and viability, serving as a baseline for acetic acid stress.
+- **Low Glutamine, With Acetic Acid:** Further decreased growth and viability compared to control with acetic acid, supporting the hypothesis that low glutamine levels reduce resistance to acetic acid.
+- **High Glutamine, With Acetic Acid:** Potentially improved resistance to acetic acid compared to control, indicating a protective role of glutamine.
+- **Leucine Negative Control (With and Without Acetic Acid):** No significant change in resistance to acetic acid, confirming specificity of glutamine's effect.
+
+This experiment will help determine if intracellular glutamine levels modulate resistance to acetic acid, potentially linking nitrogen metabolism to stress response mechanisms.

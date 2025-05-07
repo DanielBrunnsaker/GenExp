@@ -1,763 +1,527 @@
 
 
 import os
+import argparse
 import numpy as np
 import pandas as pd
-from sklearn.linear_model import ElasticNetCV, LogisticRegressionCV
+from sklearn.linear_model import ElasticNetCV
 from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import KFold, StratifiedKFold
-from sklearn.metrics import r2_score, f1_score, roc_auc_score
+from sklearn.model_selection import KFold
+from sklearn.metrics import r2_score, f1_score
 from scipy.stats import mannwhitneyu
 from statsmodels.stats.multitest import multipletests
-
-
 from warnings import simplefilter
 from sklearn.exceptions import ConvergenceWarning
+from rpy2 import robjects
+from rpy2.robjects import StrVector, IntVector
+from rpy2.robjects.packages import importr
+from rpy2.robjects.conversion import localconverter
+from rpy2.robjects import pandas2ri, default_converter
+
+# Suppress warnings
 simplefilter("ignore", category=ConvergenceWarning)
 
+# Activate pandas<->R conversion
+pandas2ri.activate()
 
-def average_coefficients(coef_list, feature_names):
-    """Average coefficient vectors (one per fold) and return a DataFrame of means and standard deviations."""
-    
-    coefs = np.array(coef_list)
-    mean_coef = np.mean(coefs, axis=0)
-    std_coef = np.std(coefs, axis=0)
-    
-    return pd.DataFrame({
-        "Feature": feature_names,
-        "Mean_Coefficient": mean_coef,
-        "Std_Coefficient": std_coef
-    }).set_index("Feature")
+# Load R packages
+mixOmics = importr('mixOmics')
+base     = importr('base')
 
-def pairwise_comparison_df(merged_df, group_col, metabolite_columns, alpha=0.05, correction_method='fdr_bh'):
-    """
-    Perform pairwise Mann–Whitney U tests for each metabolite between every pair of groups in group_col,
-    and apply multiple testing correction.
 
-    Parameters:
-        merged_df (pd.DataFrame): DataFrame containing the data.
-        group_col (str): Column name in merged_df indicating group membership.
-        metabolite_columns (list of str): List of columns in merged_df representing metabolite measurements.
-        alpha (float): Significance level.
-        correction_method (str): Method for multiple testing correction (e.g., 'fdr_bh' or 'bonferroni').
+def load_data(exp_path: str, ms_filename: str, include_growth: bool = True):
+    """
+    Load and merge metabolomics, design, (optional) growth data; median-impute missing values.
+    Returns merged DataFrame and list of feature columns.
+    """
+    met_file = os.path.join(exp_path, 'results', 'metabolomics', 'processed', ms_filename)
+    design_file = os.path.join(exp_path, 'protocol', 'plate_layout', 'design_table.tsv')
+    met_df = pd.read_csv(met_file, sep='\t', index_col=0)
+    met_df['Well'] = met_df.index.str.split('-').str[2].str.split('.').str[0]
+    design_df = pd.read_csv(design_file, sep='\t')
+    df = met_df.merge(design_df, on='Well', how='left')
+    if include_growth:
+        growth_file = os.path.join(exp_path, 'results', 'growth', 'processed', 'growth_parameters.tsv')
+        growth_df = pd.read_csv(growth_file, sep='\t', index_col=0).reset_index().rename(columns={'index':'Well'})
+        df = df.merge(growth_df, on='Well', how='inner')
+    feats = [c for c in met_df.columns if c not in ['Experimental group','Well']]
+    df[feats] = df[feats].fillna(df[feats].median())
+    return df, feats
 
-    Returns:
-        pd.DataFrame: DataFrame containing the pairwise test results with raw and corrected p-values.
+def nested_cv_regression(X, y, inner_splits = 10, n_splits = 3):
     """
-    tests = []
-    groups = merged_df[group_col].unique()
-
-    # Loop over all unique pairs of groups
-    for i in range(len(groups)):
-        for j in range(i + 1, len(groups)):
-            group1, group2 = groups[i], groups[j]
-            data1 = merged_df[merged_df[group_col] == group1]
-            data2 = merged_df[merged_df[group_col] == group2]
-            for feat in metabolite_columns:
-                # Perform Mann–Whitney U test with two-sided alternative
-                stat, p = mannwhitneyu(data1[feat], data2[feat], alternative='two-sided', nan_policy='omit')
-                tests.append({
-                    "Group 1": group1,
-                    "Group 2": group2,
-                    "Metabolite": feat,
-                    "U_stat": stat,
-                    "raw_p_value": p
-                })
-    
-    # Extract raw p-values for correction
-    raw_p_values = [test["raw_p_value"] for test in tests]
-    
-    # Apply multiple testing correction
-    reject, corrected_p, _, _ = multipletests(raw_p_values, alpha=alpha, method=correction_method)
-    
-    # Attach corrected p-values and significance flags to results
-    for i, test in enumerate(tests):
-        test["corrected_p_value"] = corrected_p[i]
-        test["Significant"] = reject[i]
-    
-    return pd.DataFrame(tests)
-
-def merge_data(experiment_path, ms_filename):
+    Nested CV regression with ElasticNetCV. Returns mean R2 and coefficient summary DataFrame.
     """
-    Load metabolomics, design, and growth data; merge on "Well"; impute missing values.
-    Used for regression and overall classification analyses.
-    """
+    from sklearn.linear_model import RidgeCV, LassoCV
+    outer = KFold(n_splits=n_splits, shuffle=True, random_state=0)
+    r2_list, coef_list = [], []
+    true_vals, pred_vals = [], []
     
-    met_file = os.path.join(experiment_path, "results", "metabolomics", "processed", ms_filename)
-    design_file = os.path.join(experiment_path, "protocol", "plate_layout", "design_table.tsv")
-    growth_file = os.path.join(experiment_path, "results", "growth", "processed", "growth_parameters.tsv")
-    
-    met_df = pd.read_csv(met_file, sep="\t", index_col=0)
-    
-    # Extract Well from index 
-    met_df["Well"] = met_df.index.str.split("-").str[2].str.split(".").str[0]
-    design_df = pd.read_csv(design_file, sep="\t")
-    growth_df = pd.read_csv(growth_file, sep="\t", index_col=0).reset_index().rename(columns={'index': 'Well'})
-    
-    merged_df = pd.merge(met_df, design_df, on="Well", how="left")
-    merged_df = pd.merge(merged_df, growth_df, on="Well", how="inner")
-    metabolite_columns = [col for col in met_df.columns if col not in ["Experimental group", "Well"]]
-    merged_df[metabolite_columns] = merged_df[metabolite_columns].apply(lambda col: col.fillna(col.median()))
-    
-    return merged_df, metabolite_columns
-
-def load_metabolomics_data_with_design(experiment_path, ms_filename):
-    """
-    Load metabolomics data from ms_output.tsv and design data from design_table.tsv;
-    merge on "Experimental group" and "Summary"; impute missing values.
-    Used for pairwise classification on Supplement groups.
-    """
-    met_file = os.path.join(experiment_path, "results", "metabolomics", "processed", ms_filename)
-    design_file = os.path.join(experiment_path, "protocol", "plate_layout", "design_table.tsv")
-    met_df = pd.read_csv(met_file, sep="\t", index_col=0)
-    design_df = pd.read_csv(design_file, sep="\t")
-    
-    merged_df = pd.merge(met_df, design_df, left_on="Experimental group", right_on="Summary", how="left")
-    metabolite_columns = [col for col in met_df.columns if col != "Experimental group"]
-    merged_df = merged_df.drop_duplicates(subset=metabolite_columns)
-    #merged_df[metabolite_columns] = merged_df[metabolite_columns].apply(lambda col: col.fillna(col.median()))
-    
-    return merged_df, metabolite_columns
-
-def nested_cv_regression(X, y, outer_cv_folds=3):
-    """
-    Nested CV for regression using ElasticNetCV.
-    Outer loop splits data; inner tuning is handled by ElasticNetCV.
-    Returns outer R² scores, coefficient vectors, and predictions for each fold.
-    """
-    outer_cv = KFold(n_splits=outer_cv_folds, shuffle=True, random_state=0)
-    r2_scores, coef_list, predictions = [], [], []
-    for fold, (train_idx, test_idx) in enumerate(outer_cv.split(X)):
-        X_train_raw, X_test_raw = X[train_idx], X[test_idx]
-        y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
-        scaler = StandardScaler()
-        X_train = scaler.fit_transform(X_train_raw)
-        X_test = scaler.transform(X_test_raw)
+    for tr, te in outer.split(X):
         
-        model = ElasticNetCV(cv=5, random_state=0, l1_ratio = [.1, .5, .7, .9, .95, .99, 1], max_iter = 5000)
-        model.fit(X_train, y_train)
+        X_tr, X_te = X.iloc[tr,:], X.iloc[te,:]
+        y_tr, y_te = y.iloc[tr], y.iloc[te]
         
-        y_pred = model.predict(X_test)
-        r2_scores.append(r2_score(y_test, y_pred))
+        scaler = StandardScaler().fit(X_tr)
+        Xtr_s, Xte_s = scaler.transform(X_tr), scaler.transform(X_te)
+        
+        model = ElasticNetCV(cv=inner_splits, random_state=0, l1_ratio=[.1, .3, .5, .7, 1])
+        model.fit(Xtr_s, y_tr)
+        
+        y_pred = model.predict(Xte_s)
+        
+        r2_list.append(r2_score(y_te, model.predict(Xte_s)))
         coef_list.append(model.coef_)
-        fold_df = pd.DataFrame({
-            'fold': fold,
-            'y_true': y_test.values,
-            'y_pred': y_pred
-        }, index=y_test.index)
-        predictions.append(fold_df)
-    all_predictions = pd.concat(predictions)
-    return r2_scores, coef_list, all_predictions
-
-def nested_cv_classification(X, y, outer_cv_folds=3):
-    """
-    Nested CV for binary classification using LogisticRegressionCV.
-    Outer loop splits data; inner tuning is handled by LogisticRegressionCV.
-    Returns outer F1 scores, coefficient vectors, and predictions (with probabilities) for each fold.
-    """
-    outer_cv = StratifiedKFold(n_splits=outer_cv_folds, shuffle=True, random_state=0)
-    f1_scores, coef_list, predictions = [], [], []
-    for fold, (train_idx, test_idx) in enumerate(outer_cv.split(X, y)):
-        X_train_raw, X_test_raw = X[train_idx], X[test_idx]
-        y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
-        scaler = StandardScaler()
-        X_train = scaler.fit_transform(X_train_raw)
-        X_test = scaler.transform(X_test_raw)
+        true_vals.extend(y_te)
+        pred_vals.extend(y_pred)
         
-        #model = LogisticRegressionCV(cv=3, penalty='l2', solver='liblinear', random_state=123)
-        model = LogisticRegressionCV(cv=3, penalty='elasticnet', solver='saga', random_state=0, l1_ratios = [.1, .5, .7, .9, .95, .99, 1], max_iter = 5000)
-        model.fit(X_train, y_train)
-        
-        preds = model.predict(X_test)
-        probas = model.predict_proba(X_test)[:, 1]  # probability for positive class
-        f1_scores.append(f1_score(y_test, preds))
-        coef_list.append(model.coef_.flatten())
-        fold_df = pd.DataFrame({
-            'fold': fold,
-            'y_true': y_test.values,
-            'predicted_class': preds,
-            'predicted_proba': probas
-        }, index=y_test.index)
-        predictions.append(fold_df)
-    all_predictions = pd.concat(predictions)
-    return f1_scores, coef_list, all_predictions
-
-def nested_cv_pairwise_classification(X, y, feature_names, outer_cv_folds=3):
-    """
-    Nested CV for pairwise binary classification using LogisticRegressionCV.
-    Returns outer F1 scores, coefficient vectors, and predictions for each fold.
-    """
-    outer_cv = StratifiedKFold(n_splits=outer_cv_folds, shuffle=True, random_state=0)
-    f1_scores, coef_list, predictions = [], [], []
-    for fold, (train_idx, test_idx) in enumerate(outer_cv.split(X, y)):
-        X_train_raw, X_test_raw = X[train_idx], X[test_idx]
-        y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
-        scaler = StandardScaler()
-        X_train = scaler.fit_transform(X_train_raw)
-        X_test = scaler.transform(X_test_raw)
-        
-        #model = LogisticRegressionCV(cv=3, penalty='l2', solver='liblinear', random_state=123)
-        model = LogisticRegressionCV(cv=3, penalty='elasticnet', solver='saga', random_state=0, l1_ratios = [.1, .5, .7, .9, .95, .99, 1], max_iter = 5000)
-        model.fit(X_train, y_train)
-        
-        preds = model.predict(X_test)
-        probas = model.predict_proba(X_test)[:, 1]
-        f1_scores.append(f1_score(y_test, preds, average='macro'))
-        coef_list.append(model.coef_.flatten())
-        fold_df = pd.DataFrame({
-            'fold': fold,
-            'y_true': y_test.values,
-            'predicted_class': preds,
-            'predicted_proba': probas
-        }, index=y_test.index)
-        predictions.append(fold_df)
-    all_predictions = pd.concat(predictions)
-    return f1_scores, coef_list, all_predictions
+    mean_r2 = float(np.mean(r2_list))
+    coef_arr = np.vstack(coef_list)
+    coef_df = pd.DataFrame(coef_arr, columns=X.columns)
+    summary = coef_df.agg(['mean','std']).T.rename(columns={'mean':'Mean_Coefficient','std':'Std_Coefficient'})
+    predictions_df = pd.DataFrame({'True': true_vals, 'Predicted': pred_vals})
+    return mean_r2, r2_list, summary, predictions_df
 
 
-def main_method(exp_path):
+def univariate_stats(df, feats, contrasts):
+    """
+    Pairwise Mann–Whitney U tests with FDR correction,
+    plus group medians and a 'Direction' of effect.
+    """
+    results = []
+    for spec1, spec2 in contrasts:
+        # filter each subgroup:
+        g1 = df.copy()
+        for col, val in spec1.items():
+            g1 = g1[g1[col].isna() if val is None else g1[col] == val]
+        g2 = df.copy()
+        for col, val in spec2.items():
+            g2 = g2[g2[col].isna() if val is None else g2[col] == val]
+
+        if g1.empty or g2.empty:
+            raise ValueError(f"No rows for contrast {spec1} vs {spec2}")
+
+        label1 = ", ".join(f"{k}={v}" for k, v in spec1.items())
+        label2 = ", ".join(f"{k}={v}" for k, v in spec2.items())
+
+        for f in feats:
+            # compute U and p
+            u_stat, p_raw = mannwhitneyu(
+                g1[f], g2[f], alternative="two-sided", nan_policy="omit"
+            )
+            # compute medians and direction
+            m1 = g1[f].median()
+            m2 = g2[f].median()
+
+            results.append({
+                "Group1":      label1,
+                "Group2":      label2,
+                "Feature":     f,
+                "U_stat":      u_stat,
+                "p_raw":       p_raw,
+                "Median1":     m1,
+                "Median2":     m2,
+            })
+
+    out = pd.DataFrame(results)
+    # FDR‐correct across all tests
+    rej, p_corr, _, _ = multipletests(out["p_raw"], alpha=0.05, method="fdr_bh")
+    out["p_corrected"] = p_corr
+    out["Significant"] = rej
+    return out
+
+
+
+def train_plsda(X_tr ,y_tr ,n_components = 5):
+    """
+    Train a classic mixOmics PLS-DA model on (X_tr, y_tr).
+    Returns:
+      - plsda_mod   : the underlying R plsda object
+      - scores_tr_df: DataFrame (n_tr × n_components) of X variates
+      - loadings_df : DataFrame (n_features × n_components) of loadings
+    """
+    # 1) Convert training data to R objects
+    with localconverter(default_converter + pandas2ri.converter):
+        rX = pandas2ri.py2rpy(X_tr)
+    rY = base.factor(StrVector(y_tr.astype(str).tolist()))
     
+    # 2) Fit PLS-DA
+    #plsda_mod = mixOmics.plsda(X=rX, Y=rY, ncomp=n_components, scale = True)
+    plsda_mod = mixOmics.plsda(X=rX, Y=rY, ncomp=n_components, scale = True)
+    
+    # 3) Extract variate scores (X‑scores) and loadings from the R model
+    scores_df = pd.DataFrame(plsda_mod.rx2('variates').rx2('X'))
+    loadings_df = pd.DataFrame(plsda_mod.rx2('loadings').rx2('X'))
+    
+    comps = [f'PLS{i+1}' for i in range(n_components)]
+    #scores_tr_df = pd.DataFrame(scores_tr, columns=comps)
+    scores_df.columns = comps
+    scores_df.index=X_tr.index
+    
+    loadings_df.columns = comps
+    loadings_df.index=X_tr.columns
+    
+    return plsda_mod, scores_df, loadings_df
+
+def predict_plsda(plsda_mod, X_new, n_components):
+    """
+    Given a trained mixOmics plsda model, predict new samples in X_new.
+    
+    Returns:
+      - scores_df: pandas DataFrame of the X‑variates (n_new × n_components)
+      - class_pred: numpy array of predicted class labels (length n_new)
+    """
+    # 1) Convert new data to R
+    with localconverter(default_converter + pandas2ri.converter):
+        rX_new = pandas2ri.py2rpy(X_new)
+        
+    # 2) Call the S3 generic predict() from mixOmics
+    pr = robjects.r['predict'](plsda_mod, rX_new, method='max.dist')
+    
+    # pr = robjects.r['predict'](plsda_mod, rX_new, method='max.dist')
+    class_vec = pr.rx2('class').rx2('max.dist')    # flat StrVector of length n_samples * ncomp
+    
+    # Convert to a Python list (or ndarray) and reshape:
+    flat = list(class_vec)                         # length = n_samples * ncomp
+    n_samples = X_new.shape[0]
+    ncomp     = n_components       # e.g. 5
+    arr       = np.array(flat).reshape((n_samples, ncomp), order='F')
+    
+    # Wrap in a DataFrame so you can inspect all columns if you like:
+    cols     = [f'PLS{i+1}' for i in range(ncomp)]
+    class_mat = pd.DataFrame(arr, index=X_new.index, columns=cols)
+    
+    # Now extract the “final” predictions (last column):
+    final_preds = class_mat.iloc[:, -1]
+    
+    return final_preds
+
+def main(exp_path, ms_filename):
+        
+    from sklearn.metrics import classification_report
+    from collections import defaultdict
+
+    contrasts = [({'Treatment': 'None', 'Supplement': 'None'},
+      {'Treatment': 'None', 'Supplement': 'PosLow'}),
+     ({'Treatment': 'None', 'Supplement': 'None'},
+      {'Treatment': 'None', 'Supplement': 'PosHigh'}),
+     ({'Treatment': 'None', 'Supplement': 'None'},
+      {'Treatment': 'None', 'Supplement': 'NegHigh'}),
+     ({'Treatment': 'Yes', 'Supplement': 'None'},
+      {'Treatment': 'Yes', 'Supplement': 'PosLow'}),
+     ({'Treatment': 'Yes', 'Supplement': 'None'},
+      {'Treatment': 'Yes', 'Supplement': 'PosHigh'}),
+     ({'Treatment': 'Yes', 'Supplement': 'None'},
+      {'Treatment': 'Yes', 'Supplement': 'NegHigh'}),
+     ({'Treatment': 'None', 'Supplement': 'None'}, 
+      {'Treatment': 'Yes', 'Supplement': 'None'})]
+
+
+    ms_filename = 'ms_output_imputed.tsv'
+
     # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756' # FA
     # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503131539' # Caffeine
     # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202501281618' # Spermine
     # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/proline_202503051407' # Lactic acid
     # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503141655' # LiCl
     
-    #exp_path = exp_folder  # Ensure exp_folder is defined in your environment
-    ms_filename = 'ms_output_knnimputed.tsv'
+    # decide on components, move this to config?
+    n_components = 5
     
-    # --- Regression Analysis on treated samples ---
-    merged_df, mets = merge_data(exp_path, ms_filename)
-    treated_df = merged_df[merged_df["Treatment"].str.lower() == "yes".lower()]
-    X_reg = treated_df[mets].values
-    y_reg = treated_df["AUC"]
     
-    r2_scores, reg_coef_list, reg_predictions = nested_cv_regression(X_reg, y_reg, outer_cv_folds=5)
-    print("Regression Nested CV (R²): {:.2f} ± {:.2f}".format(np.mean(r2_scores), np.std(r2_scores)))
+    exp_paths = [
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202501281618',
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756',
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503131539',
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503141655',
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/proline_202503051407',
+    ]
+    for exp_path in exp_paths:
+        
+        
+        
+
     
-    avg_reg_coef = average_coefficients(reg_coef_list, mets)
-    reg_coef_out = os.path.join(exp_path, "results", "metabolomics", "coefficients", "elasticnet_averaged_coefficients.csv")
-    avg_reg_coef.to_csv(reg_coef_out)
-    reg_pred_out = os.path.join(exp_path, "results", "metabolomics", "predictions", "elasticnet_regression_predictions.csv")
-    reg_predictions.to_csv(reg_pred_out)
-    #print(f"Saved regression coefficients to '{reg_coef_out}' and predictions to '{reg_pred_out}'.")
+        # Load data
+        df, feats = load_data(exp_path, ms_filename, include_growth=True)
+        os.makedirs(os.path.join(exp_path,'results','metabolomics','coefficients'), exist_ok=True)
+        os.makedirs(os.path.join(exp_path,'results','metabolomics','predictions'), exist_ok=True)
+        results = {}
+        
+        # Regression on treated
+        mask = df['Treatment'].str.lower()=='yes'
+        Xr = df.loc[mask, feats]
+        yr = df.loc[mask, 'AUC']
+        mean_r2, r2_list, coef_sum, pred_df = nested_cv_regression(Xr, yr, 10, 3)
+        print(f'Resistance R²: {mean_r2:.2f}')
+        
+        coef_sum.to_csv(os.path.join(exp_path,'results','metabolomics','coefficients','enet_coef_summary.csv'))
+        pred_df.to_csv(os.path.join(exp_path,'results','metabolomics','predictions','enet_coef_preds.csv'))
+        results['r2'] = mean_r2
+        
+        # Multiclass PLS-DA
+        Xp, yp = df[feats], df['Experimental group']
+        _, scores_df, loadings_df = train_plsda(Xp, yp, n_components=n_components)
+        
+        # Performance evaluation for PLS-DA
+        from sklearn.model_selection import RepeatedStratifiedKFold
+        rkf = RepeatedStratifiedKFold(n_splits=2, n_repeats=50, random_state=42)
+        
+        f1_scores = defaultdict(list)
     
-    # --- Classification Analysis (Treated vs. Untreated) ---
-    merged_df["Treatment_binary"] = merged_df["Treatment"].str.lower().map({"yes": 1, "none": 0})
-    X_clf = merged_df[mets].values
-    y_clf = merged_df["Treatment_binary"]
+        all_f1s = []
+        for tr, te in rkf.split(Xp, yp):
+            X_tr, X_te = Xp.iloc[tr], Xp.iloc[te]
+            y_tr, y_te = yp.iloc[tr], yp.iloc[te]
+            
+            
+            # Train on training data:
+            plsda_model, _, _ = train_plsda(X_tr, y_tr, n_components = n_components)
+            predictions = predict_plsda(plsda_model, X_te, n_components = n_components)
+            #predictions = classify_scores(scores_df, y_te)
     
-    f1_scores_clf, clf_coef_list, clf_predictions = nested_cv_classification(X_clf, y_clf, outer_cv_folds=5)
-    print("Logistic Regression Nested CV (F1): {:.2f} ± {:.2f}".format(np.mean(f1_scores_clf), np.std(f1_scores_clf)))
+            # Combine with true labels:
+            preds_df = pd.DataFrame({
+                'TrueClass':      y_te.values,
+                'PredictedClass': predictions
+            }, index=X_te.index)
     
-    avg_clf_coef = average_coefficients(clf_coef_list, mets)
-    clf_coef_out = os.path.join(exp_path, "results", "metabolomics", "coefficients", "logreg_averaged_coefficients.csv")
-    avg_clf_coef.to_csv(clf_coef_out)
-    clf_pred_out = os.path.join(exp_path, "results", "metabolomics", "predictions", "logreg_classification_predictions.csv")
-    clf_predictions.to_csv(clf_pred_out)
-    #print(f"Saved classification coefficients to '{clf_coef_out}' and predictions to '{clf_pred_out}'.")
+            report = classification_report(
+                preds_df['TrueClass'],
+                preds_df['PredictedClass'],
+                output_dict=True,    # so we can turn it into a DataFrame
+                zero_division=0      # avoid NaNs if a class never gets predicted
+            )
+            
+            # accumulate per-class F1
+            for cls, metrics in report.items():
+                # skip the summary rows
+                if cls in ('accuracy','macro avg','weighted avg'):
+                    continue
+                f1_scores[cls].append(metrics['f1-score'])
+            
     
-    # --- Pairwise Binary Classification on Supplement Groups ---
-    merged_pair, mets_pair = load_metabolomics_data_with_design(exp_path, ms_filename)
-    nontreated_merged_pair = merged_pair[merged_pair['Treatment'] == 'None']
+            # Compute macro F1:
+            #f1 = f1_score(preds_df['TrueClass'], preds_df['PredictedClass'], average='macro')
+            f1 = report['macro avg']['f1-score']
+            #print(f"Macro F₁ = {f1:.2f}")
     
-    # Pairwise: "None" vs "PosLow"
-    subset_low = nontreated_merged_pair[nontreated_merged_pair["Supplement"].isin(["None", "PosLow"])]
-    X_low = subset_low[mets_pair].values
-    y_low = subset_low["Supplement"]
-    f1_low, coef_low, pair_pred_low = nested_cv_pairwise_classification(X_low, y_low, mets_pair, outer_cv_folds=3)
-    print("Pairwise Logistic Regression (None vs PosLow) F1: {:.2f} ± {:.2f}".format(np.mean(f1_low), np.std(f1_low)))
+            all_f1s.append(f1)
+        
+        
+        # Build a summary DataFrame
+        summary = pd.DataFrame([
+            {
+                'class': cls,
+                'mean_f1': np.mean(scores),
+                'std_f1':  np.std(scores, ddof=1)
+            }
+            for cls, scores in f1_scores.items()
+        ]).set_index('class')
+        
+        
+        avg_f1_macro = np.mean(all_f1s)
+        print(f"Average Macro F₁ = {avg_f1_macro:.2f}")
+        
+        # Save outputs
+        loadings_df.to_csv(os.path.join(exp_path,'results','metabolomics','coefficients','plsda_loadings.csv'))
+        scores_df.to_csv(os.path.join(exp_path,'results','metabolomics','predictions','plsda_scores.tsv'), sep='\t')    
+        
     
-    avg_coef_low = average_coefficients(coef_low, mets_pair)
-    pair_low_pred_out = os.path.join(exp_path, "results", "metabolomics", "predictions", "logreg_none_vs_poslow_predictions.csv")
-    pair_pred_low.to_csv(pair_low_pred_out)
+        uni = univariate_stats(df, feats=feats, contrasts=contrasts)
+        
+        #uni = univariate_stats(df, 'Experimental group', feats)
+        uni.to_csv(os.path.join(exp_path,'results','metabolomics','coefficients','supp_stats.csv'), index=False, sep = '\t')
+        
+        df.to_csv(os.path.join(exp_path,'results','metabolomics','processed','data_with_annotation.tsv'), index=False, sep = '\t')
+        
+        # Save to CSV
+        out_csv = os.path.join(exp_path,
+            'results','metabolomics','predictions','plsda_classwise_f1_summary.csv'
+        )
+        summary.to_csv(out_csv)
     
-    # Pairwise: "None" vs "PosHigh"
-    subset_high = nontreated_merged_pair[nontreated_merged_pair["Supplement"].isin(["None", "PosHigh"])]
-    X_high = subset_high[mets_pair].values
-    y_high = subset_high["Supplement"]
-    
-    f1_high, coef_high, pair_pred_high = nested_cv_pairwise_classification(X_high, y_high, mets_pair, outer_cv_folds=3)
-    print("Pairwise Logistic Regression (None vs PosHigh) F1: {:.2f} ± {:.2f}".format(np.mean(f1_high), np.std(f1_high)))
-    
-    avg_coef_high = average_coefficients(coef_high, mets_pair)
-    pair_high_pred_out = os.path.join(exp_path, "results", "metabolomics", "predictions", "logreg_none_vs_poshigh_predictions.csv")
-    pair_pred_high.to_csv(pair_high_pred_out)
-    
-    # Pairwise: "None" vs "NegHigh"
-    subset_neghigh = nontreated_merged_pair[nontreated_merged_pair["Supplement"].isin(["None", "NegHigh"])]
-    X_neghigh = subset_neghigh[mets_pair].values
-    y_neghigh = subset_neghigh["Supplement"]
-    
-    f1_neghigh, coef_neghigh, pair_pred_neghigh = nested_cv_pairwise_classification(X_neghigh, y_neghigh, mets_pair, outer_cv_folds=3)
-    print("Pairwise Logistic Regression (None vs Negigh) F1: {:.2f} ± {:.2f}".format(np.mean(f1_neghigh), np.std(f1_neghigh)))
-    
-    avg_coef_neghigh = average_coefficients(coef_neghigh, mets_pair)
-    pair_neghigh_pred_out = os.path.join(exp_path, "results", "metabolomics", "predictions", "logreg_none_vs_neghigh_predictions.csv")
-    pair_pred_neghigh['predicted_proba'] = 1 - pair_pred_neghigh['predicted_proba'] # Note that due to alphabetical reasons, NegHigh is the zero class.
-    pair_pred_neghigh.to_csv(pair_neghigh_pred_out)
-    
-    # --- Pairwise Statistical Comparisons ---
-    comp_df = pairwise_comparison_df(merged_pair, group_col="Supplement", metabolite_columns=mets_pair)
-    comp_out = os.path.join(exp_path, "results", "metabolomics", "coefficients", "pairwise_comparisons.csv")
-    comp_df.to_csv(comp_out, index=False)
-    #print(f"Saved pairwise comparisons to '{comp_out}'.")
-    
-    # Save the annotated dataframe   
-    merged_df.to_csv(os.path.join(exp_path,'results/metabolomics/processed/data_with_annotation.tsv'), sep = '\t')
-    
+        # Save a heatmap?
+   
+
+if __name__=='__main__':
+    parser = argparse.ArgumentParser(description='Metabolomics PLS-DA Analysis')
+    parser.add_argument('--exp_path', required=True)
+    parser.add_argument('--ms_filename', default='ms_output.tsv')
+    args = parser.parse_args()
+    main(args.exp_path, args.ms_filename)
 
 
-    '''
-    # Create the parity plot for reg trhingy
-    
-    import matplotlib.pyplot as plt
-    
-    plt.figure(figsize=(4, 4))
-    plt.scatter(reg_predictions['y_true'], reg_predictions['y_pred'], color='blue', label='Data points')
-    
-    # Determine limits for the parity line
-    min_val = min(reg_predictions['y_true'].min(), reg_predictions['y_pred'].min())
-    max_val = max(reg_predictions['y_true'].max(), reg_predictions['y_pred'].max())
-    plt.plot([min_val, max_val], [min_val, max_val], 'r--', label='Parity line')
-    
-    # Set labels and title
-    plt.xlabel('True')
-    plt.ylabel('Predicted')
-    plt.title('Parity Plot')
-    #plt.legend()
-    plt.grid(True)
+
+
+
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+
+def plot_heatmap_sns(
+    df,
+    data_cols,
+    group_cols=('Supplement', 'Treatment'),
+    scale=None,             # one of {'zscore', 'minmax', None}
+    scale_axis='rows',      # 'rows' to scale features, 'columns' to scale samples
+    cmap='viridis',
+    figsize=(10, 8),
+    row_cluster=False,
+    col_cluster=False,
+    group_order=None,       # dict e.g. {'Treatment': ['A','B'], 'Supplement': ['X','Y','Z']}
+    sort_by=None            # list of metadata columns defining sample order
+):
+    """
+    Seaborn clustermap with colored sample-bars, explicit scaling axis, custom ordering,
+    legends for groups, narrow colorbar aligned with heatmap, and full feature labels.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        One row per sample, with metadata and feature columns.
+    data_cols : list[str]
+        Names of numeric feature columns to plot.
+    group_cols : tuple(str,str)
+        Two metadata columns for color bars and legends.
+    scale : {'zscore','minmax',None}
+        'zscore' or 'minmax' to standardize; None for raw values.
+    scale_axis : {'rows','columns'}
+        Axis along which to scale: 'rows' to scale each feature across samples,
+        'columns' to scale each sample across features.
+    cmap : str
+        A matplotlib colormap name.
+    figsize : tuple
+        Figure size.
+    row_cluster, col_cluster : bool
+        Whether to cluster rows/columns.
+    group_order : dict or None
+        If provided, maps each group_col to desired category order.
+    sort_by : list or None
+        List of metadata columns defining the sorting priority of samples.
+    """
+    # 1) Copy and apply custom ordering/categories
+    df_plot = df.copy()
+    if group_order:
+        for col, order in group_order.items():
+            if col in df_plot:
+                df_plot[col] = pd.Categorical(df_plot[col], categories=order, ordered=True)
+    # 2) Sort samples
+    if sort_by is None:
+        sort_by = list(group_cols)
+    df_plot = df_plot.sort_values(sort_by)
+    # 3) Build data matrix: features as rows, samples as columns
+    mat = df_plot[data_cols].T
+    # 4) Build lut and col_colors for sample annotations
+    lut = {}
+    for col in group_cols:
+        cats = df_plot[col].cat.categories if hasattr(df_plot[col], 'cat') else sorted(df_plot[col].unique())
+        palette = sns.color_palette(None, n_colors=len(cats))
+        lut[col] = dict(zip(cats, palette))
+    color_rows = [
+        [lut[col][df_plot.iloc[i][col]] for col in group_cols]
+        for i in range(len(df_plot))
+    ]
+    col_colors = pd.DataFrame(color_rows, index=df_plot.index, columns=group_cols)
+    # 5) Determine scaling args
+    z_score = None
+    standard_scale = None
+    if scale == 'zscore':
+        z_score = 0 if scale_axis == 'rows' else 1
+    elif scale == 'minmax':
+        standard_scale = 0 if scale_axis == 'rows' else 1
+    # 6) Plot clustermap with narrow, aligned colorbar
+    g = sns.clustermap(
+        mat,
+        cmap=cmap,
+        row_cluster=row_cluster,
+        col_cluster=col_cluster,
+        col_colors=col_colors,
+        figsize=figsize,
+        z_score=z_score,
+        standard_scale=standard_scale,
+        cbar_pos=(0.92, 0.2, 0.015, 0.6),  # x, y, width, height
+        cbar_kws={'label': f"{scale} ({scale_axis})" if scale else 'Value'}
+    )
+    # 7) Add legends for group colors
+    for idx, col in enumerate(group_cols):
+        handles = [mpatches.Patch(color=color, label=cat)
+                   for cat, color in lut[col].items()]
+        g.ax_heatmap.legend(
+            handles=handles,
+            title=col,
+            bbox_to_anchor=(1.02 + idx*0.15, 1),
+            loc='upper left',
+            frameon=False
+        )
+    # 8) Tidy labels and show all features
+    g.ax_heatmap.set_xlabel("Samples")
+    g.ax_heatmap.set_ylabel("Features")
+    plt.setp(g.ax_heatmap.get_xticklabels(), rotation=90)
+    plt.setp(g.ax_heatmap.get_yticklabels(), rotation=0, fontsize=6)
     plt.tight_layout()
     plt.show()
-    
-    # Compute absolute values and select top 10 features by absolute mean coefficient
-    df_temporary = avg_reg_coef
-    df_temporary['Abs_Mean'] = df_temporary['Mean_Coefficient'].abs()
-    top_df = df_temporary.sort_values(by='Abs_Mean', ascending=False).head(10)
-    
-    # Create barplot with error bars
-    plt.figure(figsize=(6, 5))
-    plt.bar(top_df.index, top_df['Mean_Coefficient'], yerr=top_df['Std_Coefficient'], capsize=5)
-    plt.xticks(rotation=45, ha='right')
-    plt.ylabel("Coefficient")
-    plt.title("Top 10 Metabolites for prediction of formic acid resistance")
-    plt.tight_layout()
-    plt.show()
-    
-    
-    
-    
-    '''
 
-if __name__ == "__main__":
-    
-    import argparse
-    parser = argparse.ArgumentParser(description="Multivariate and univariate analysis for metabolomics")
-    parser.add_argument("--output_folder", required=True, type=str, help="Experiment folder")
-
-    args = parser.parse_args()
-    main_method(args.output_folder)
-    
-    main_method()
-
-
-
-import os
-import argparse
-import numpy as np
-import pandas as pd
-from sklearn.linear_model import ElasticNetCV, LogisticRegressionCV
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import KFold, LeaveOneOut
-from sklearn.metrics import r2_score, roc_auc_score, matthews_corrcoef
-from scipy.stats import mannwhitneyu
-from statsmodels.stats.multitest import multipletests
-from warnings import simplefilter
-from sklearn.exceptions import ConvergenceWarning
-
-# Suppress convergence warnings
-simplefilter("ignore", category=ConvergenceWarning)
-
-
-def average_coefficients(coef_list, feature_names):
-    """Average coefficient vectors and return a DataFrame of means and std deviations."""
-    coefs = np.vstack(coef_list)
-    df = pd.DataFrame(coefs, columns=feature_names)
-    summary = df.agg(['mean', 'std']).T.rename(columns={'mean': 'Mean_Coefficient', 'std': 'Std_Coefficient'})
-    return summary
-
-
-def pairwise_comparison_df(df, group_col, features, alpha=0.05, method='fdr_bh'):
-    """Perform pairwise Mann–Whitney U tests with FDR correction for given groups in df."""
-    records = []
-    groups = sorted(df[group_col].unique())
-    for g1 in groups:
-        for g2 in groups:
-            if g1 >= g2:
-                continue
-            for feat in features:
-                d1 = df[df[group_col] == g1][feat]
-                d2 = df[df[group_col] == g2][feat]
-                stat, p = mannwhitneyu(d1, d2, alternative='two-sided', nan_policy='omit')
-                records.append((g1, g2, feat, stat, p))
-    res = pd.DataFrame(records, columns=['Group1','Group2','Feature','U_stat','p_raw'])
-    reject, p_corr, _, _ = multipletests(res['p_raw'], alpha=alpha, method=method)
-    res['p_corrected'] = p_corr
-    res['significant'] = reject
-    return res
-
-
-def merge_data(exp_path, ms_filename, include_growth=False):
-    """Load metabolomics (and optionally growth) data, merge with design, impute features."""
-    met_path = os.path.join(exp_path, 'results', 'metabolomics', 'processed', ms_filename)
-    design_path = os.path.join(exp_path, 'protocol', 'plate_layout', 'design_table.tsv')
-
-    met_df = pd.read_csv(met_path, sep='\t', index_col=0)
-    met_df['Well'] = met_df.index.str.split('-').str[2].str.split('.').str[0]
-    design_df = pd.read_csv(design_path, sep='\t')
-    df = met_df.merge(design_df, on='Well', how='left')
-
-    if include_growth:
-        growth_path = os.path.join(exp_path, 'results', 'growth', 'processed', 'growth_parameters.tsv')
-        growth_df = pd.read_csv(growth_path, sep='\t', index_col=0).reset_index().rename(columns={'index':'Well'})
-        df = df.merge(growth_df, on='Well', how='inner')
-
-    features = [c for c in met_df.columns if c not in ['Experimental group','Well']]
-    df[features] = df[features].fillna(df[features].median())
-    return df, features
-
-
-def nested_cv_regression(X, y, n_splits=5):
-    """Nested CV regression with ElasticNetCV. Returns R2 scores, coefs, and preds."""
-    outer = KFold(n_splits=n_splits, shuffle=True, random_state=0)
-    scores, coefs, preds = [], [], []
-    for fold, (tr, te) in enumerate(outer.split(X)):
-        X_tr, X_te = X[tr], X[te]
-        y_tr, y_te = y.iloc[tr], y.iloc[te]
-        scaler = StandardScaler().fit(X_tr)
-        X_tr_s, X_te_s = scaler.transform(X_tr), scaler.transform(X_te)
-        model = ElasticNetCV(cv=5, random_state=0,
-                             l1_ratio=[.1, .5, .7, .9, 1], max_iter=5000)
-        model.fit(X_tr_s, y_tr)
-        y_pred = model.predict(X_te_s)
-        scores.append(r2_score(y_te, y_pred))
-        coefs.append(model.coef_)
-        preds.append(pd.DataFrame({'Well': y_te.index, 'y_true': y_te.values, 'y_pred': y_pred}))
-    print(f"Treatment resistance R²: {np.mean(scores):.2f} ± {np.std(scores):.2f}")
-    return scores, coefs, pd.concat(preds, ignore_index=True)
-
-
-def leave_one_out_classification_metrics(X, y, threshold=0.5):
-    """LOO CV classification: returns ROC-AUC, MCC, coefs, and preds."""
-    loo = LeaveOneOut()
-    y_true_all, probas_all, coefs = [], [], []
-    preds = []
-    for idx_train, idx_test in loo.split(X):
-        X_tr, X_te = X[idx_train], X[idx_test]
-        y_tr, y_te = y.iloc[idx_train], y.iloc[idx_test]
-        scaler = StandardScaler().fit(X_tr)
-        X_tr_s, X_te_s = scaler.transform(X_tr), scaler.transform(X_te)
-        model = LogisticRegressionCV(cv=3, penalty='elasticnet', solver='saga', random_state=0,
-                                     l1_ratios=[.1, .5, .7, .9, 1], max_iter=5000)
-        model.fit(X_tr_s, y_tr)
-        probas = model.predict_proba(X_te_s)[0,1]
-        y_true_all.append(y_te.values[0])
-        probas_all.append(probas)
-        coefs.append(model.coef_.flatten())
-        preds.append(pd.DataFrame({'Well': y_te.index, 'y_true': y_te.values, 'predicted_proba': probas}))
-
-    # Compute metrics
-    auc = roc_auc_score(y_true_all, probas_all)
-    y_pred_all = [1 if p >= threshold else 0 for p in probas_all]
-    mcc = matthews_corrcoef(y_true_all, y_pred_all)
-    print(f"Classification ROC-AUC (LOO): {auc:.2f}")
-    print(f"Classification MCC (threshold={threshold}) (LOO): {mcc:.2f}")
-    return auc, mcc, coefs, pd.concat(preds, ignore_index=True)
-
-
-def main(exp_path, ms_filename='ms_output_knnimputed.tsv'):
-    
-    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756' # FA
-    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503131539' # Caffeine
-    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202501281618' # Spermine
-    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/proline_202503051407' # Lactic acid
-    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503141655' # LiCl
-    exp_path = exp_folder
-    
-    df, features = merge_data(exp_path, ms_filename, include_growth=True)
-    score_dict = {}
-    pred_list = []
-
-    # Regression
-    treat_df = df[df['Treatment'].str.lower() == 'yes']
-    r2_scores, reg_coefs, reg_preds = nested_cv_regression(treat_df[features].values, treat_df['AUC'])
-    reg_preds.to_csv(os.path.join(exp_path, 'results', 'metabolomics', 'predictions', 'elasticnet_regression_preds.csv'), index=False)
-
-    # Classification treated vs untreated (LOO)
-    df['Treatment_binary'] = df['Treatment'].str.lower().map({'yes':1,'none':0})
-    key = 'treatment_vs_none'
-    print(key)
-    auc, mcc, clf_coefs, clf_preds = leave_one_out_classification_metrics(df[features].values, df['Treatment_binary'])
-    score_dict[f"{key}_auc"] = auc
-    score_dict[f"{key}_mcc"] = mcc
-    pred = clf_preds.copy()
-    pred['classification'] = key
-    pred_list.append(pred)
-
-    # Pairwise supplement classifications
-    pairs = [
-        ('None', 'None', 'PosLow'),
-        ('None', 'None', 'PosHigh'),
-        ('None', 'None', 'NegHigh'),
-        ('Yes', 'None', 'PosLow'),
-        ('Yes', 'None', 'PosHigh'),
-        ('Yes', 'None', 'NegHigh'),
-    ]
-    
-    pairs = [
-        ('Yes', 'None', 'PosLow'),
-    ]
-    for treatment, g1, g2 in pairs:
-        subset = df[(df['Treatment'] == treatment) & df['Supplement'].isin([g1, g2])]
-        y = subset['Supplement'].map({g1:0, g2:1})
-        key = f"{treatment}_{g1}_vs_{g2}"
-        print(f"Pairwise classification: {key}")
-        auc, mcc, coefs, preds = leave_one_out_classification_metrics(subset[features].values, y)
-        score_dict[f"{key}_auc"] = auc
-        score_dict[f"{key}_mcc"] = mcc
-        pred = preds.copy()
-        pred['classification'] = key
-        pred_list.append(pred)
-
-    # Save scores (one row with metrics)
-    scores_df = pd.DataFrame([score_dict])
-    scores_df.index.name = 'LOO'
-    scores_df.to_csv(os.path.join(exp_path, 'results', 'metabolomics', 'predictions', 'classification_scores.tsv'), sep='\t')
-
-    # Save predictions (for ROC/MCC analysis)
-    all_preds = pd.concat(pred_list, ignore_index=True)
-    all_preds.to_csv(os.path.join(exp_path, 'results', 'metabolomics', 'predictions', 'all_classification_predictions.tsv'), sep='\t', index=False)
-
-    # Univariate stats
-    comp_df = pairwise_comparison_df(df, 'Supplement', features)
-    comp_df.to_csv(os.path.join(exp_path, 'results', 'metabolomics', 'coefficients', 'pairwise_comparisons.csv'), index=False)
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Metabolomics analysis')
-    parser.add_argument('--exp_path', required=True, help='Experiment folder')
-    args = parser.parse_args()
-    main(args.exp_path)
-
-
-
-
-
-
-
-
-
-
-import os
-import argparse
-import numpy as np
-import pandas as pd
-from sklearn.linear_model import ElasticNetCV
-from sklearn.svm import SVC
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import KFold, LeaveOneOut
-from sklearn.metrics import r2_score, roc_auc_score, matthews_corrcoef
-from scipy.stats import mannwhitneyu
-from statsmodels.stats.multitest import multipletests
-from warnings import simplefilter
-from sklearn.exceptions import ConvergenceWarning
-
-# Suppress convergence warnings
-simplefilter("ignore", category=ConvergenceWarning)
-
-
-def average_coefficients(coef_list, feature_names):
-    """Average coefficient vectors and return a DataFrame of means and std deviations."""
-    coefs = np.vstack(coef_list)
-    df = pd.DataFrame(coefs, columns=feature_names)
-    summary = df.agg(['mean', 'std']).T.rename(columns={'mean': 'Mean_Coefficient', 'std': 'Std_Coefficient'})
-    return summary
-
-
-def pairwise_comparison_df(df, group_col, features, alpha=0.05, method='fdr_bh'):
-    """Perform pairwise Mann–Whitney U tests with FDR correction for given groups in df."""
-    records = []
-    groups = sorted(df[group_col].unique())
-    for g1 in groups:
-        for g2 in groups:
-            if g1 >= g2:
-                continue
-            for feat in features:
-                d1 = df[df[group_col] == g1][feat]
-                d2 = df[df[group_col] == g2][feat]
-                stat, p = mannwhitneyu(d1, d2, alternative='two-sided', nan_policy='omit')
-                records.append((g1, g2, feat, stat, p))
-    res = pd.DataFrame(records, columns=['Group1','Group2','Feature','U_stat','p_raw'])
-    reject, p_corr, _, _ = multipletests(res['p_raw'], alpha=alpha, method=method)
-    res['p_corrected'] = p_corr
-    res['significant'] = reject
-    return res
-
-
-def merge_data(exp_path, ms_filename, include_growth=False):
-    """Load metabolomics (and optionally growth) data, merge with design, impute features."""
-    met_path = os.path.join(exp_path, 'results', 'metabolomics', 'processed', ms_filename)
-    design_path = os.path.join(exp_path, 'protocol', 'plate_layout', 'design_table.tsv')
-
-    met_df = pd.read_csv(met_path, sep='\t', index_col=0)
-    met_df['Well'] = met_df.index.str.split('-').str[2].str.split('.').str[0]
-    design_df = pd.read_csv(design_path, sep='\t')
-    df = met_df.merge(design_df, on='Well', how='left')
-
-    if include_growth:
-        growth_path = os.path.join(exp_path, 'results', 'growth', 'processed', 'growth_parameters.tsv')
-        growth_df = pd.read_csv(growth_path, sep='\t', index_col=0).reset_index().rename(columns={'index':'Well'})
-        df = df.merge(growth_df, on='Well', how='inner')
-
-    features = [c for c in met_df.columns if c not in ['Experimental group','Well']]
-    df[features] = df[features].fillna(df[features].median())
-    return df, features
-
-
-def nested_cv_regression(X, y, n_splits=5):
-    """Nested CV regression with ElasticNetCV. Returns R2 scores, coefs, and preds."""
-    outer = KFold(n_splits=n_splits, shuffle=True, random_state=0)
-    scores, coefs, preds = [], [], []
-    for fold, (tr, te) in enumerate(outer.split(X)):
-        X_tr, X_te = X[tr], X[te]
-        y_tr, y_te = y.iloc[tr], y.iloc[te]
-        scaler = StandardScaler().fit(X_tr)
-        X_tr_s, X_te_s = scaler.transform(X_tr), scaler.transform(X_te)
-        
-        # model
-        model = ElasticNetCV(cv=5, random_state=0,
-                             l1_ratio=[.1, .5, .7, .9, 1], max_iter=5000)
-        model.fit(X_tr_s, y_tr)
-        
-        # interpretation
-        y_pred = model.predict(X_te_s)
-        scores.append(r2_score(y_te, y_pred))
-        coefs.append(model.coef_)
-        preds.append(pd.DataFrame({'Well': y_te.index, 'y_true': y_te.values, 'y_pred': y_pred}))
-        
-    print(f"Treatment resistance R²: {np.mean(scores):.2f} ± {np.std(scores):.2f}")
-    return scores, coefs, pd.concat(preds, ignore_index=True)
-
-
-def leave_one_out_svm(X, y):
-    """LOO CV classification with linear SVM; returns ROC-AUC, MCC, coefs, and preds."""
-    loo = LeaveOneOut()
-    y_true_all, decision_scores, y_pred_all, coefs = [], [], [], []
-    preds = []
-    for train_idx, test_idx in loo.split(X):
-        X_tr, X_te = X[train_idx], X[test_idx]
-        y_tr, y_te = y.iloc[train_idx], y.iloc[test_idx]
-        scaler = StandardScaler().fit(X_tr)
-        X_tr_s, X_te_s = scaler.transform(X_tr), scaler.transform(X_te)
-        
-        # model
-        model = SVC(kernel='linear', C=1.0, class_weight='balanced')
-        model.fit(X_tr_s, y_tr)
-        
-        # interpretation
-        score = model.decision_function(X_te_s)[0]
-        pred_label = int(score >= 0)
-        y_true_all.append(y_te.values[0])
-        decision_scores.append(score)
-        y_pred_all.append(pred_label)
-        coefs.append(model.coef_.flatten())
-        preds.append(pd.DataFrame({'Well': y_te.index,
-                                   'y_true': y_te.values,
-                                   'decision_score': score,
-                                   'predicted_class': pred_label}))
-    # Compute metrics
-    auc = roc_auc_score(y_true_all, decision_scores)
-    #mcc = matthews_corrcoef(y_true_all, y_pred_all)
-    print(f"Linear SVM ROC-AUC (LOO): {auc:.2f}")
-    #print(f"Linear SVM MCC (LOO): {mcc:.2f}")
-    return auc, coefs, pd.concat(preds, ignore_index=True)
-
-
-def main(exp_path, ms_filename='ms_output_knnimputed.tsv'):
-    
-    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756' # FA
-    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503131539' # Caffeine
-    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202501281618' # Spermine
-    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/proline_202503051407' # Lactic acid
-    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503141655' # LiCl
-    
-    exp_path = exp_folder
-    
-    df, features = merge_data(exp_path, ms_filename, include_growth=True)
-    score_dict = {}
-    pred_list = []
-
-    # Regression (ElasticNet)
-    treat_df = df[df['Treatment'].str.lower() == 'yes']
-    _, _, reg_preds = nested_cv_regression(treat_df[features].values, treat_df['AUC'])
-    reg_preds.to_csv(os.path.join(exp_path, 'results', 'metabolomics', 'predictions', 'elasticnet_regression_preds.csv'), index=False)
-
-    # Linear SVM Classification treated vs untreated (LOO)
-    df['Treatment_binary'] = df['Treatment'].str.lower().map({'yes':1,'none':0})
-    key = 'treatment_vs_none_svm'
-    auc, svm_coefs, preds = leave_one_out_svm(df[features].values, df['Treatment_binary'])
-    score_dict[f"{key}"] = auc
-    avg_coefs = average_coefficients(svm_coefs, features)
-    avg_coefs.to_csv(os.path.join(exp_path, 'results', 'metabolomics', 'coefficients', f'svm_{key}_avg_coefs.csv'))
-    preds['classification'] = key
-    pred_list.append(preds)
-    preds.to_csv(os.path.join(exp_path, 'results', 'metabolomics', 'predictions', f'svm_{key}_preds.csv'), index=False)
-
-    # Pairwise supplement classifications with SVM
-    pairs = [
-        ('None', 'None', 'PosLow'),
-        ('None', 'None', 'PosHigh'),
-        ('None', 'None', 'NegHigh'),
-        ('Yes',  'None', 'PosLow'),
-        ('Yes',  'None', 'PosHigh'),
-        ('Yes',  'None', 'NegHigh'),
-    ]
-    for treatment, g1, g2 in pairs:
-        subset = df[(df['Treatment'] == treatment) & df['Supplement'].isin([g1, g2])]
-        y = subset['Supplement'].map({g1:0, g2:1})
-        key = f"{treatment}_{g1}_vs_{g2}_svm"
-        print(f"Pairwise SVM: {key}")
-        auc, coefs, preds = leave_one_out_svm(subset[features].values, y)
-        score_dict[f"{key}"] = auc
-        #score_dict[f"{key}_mcc"] = mcc
-        avg_coefs = average_coefficients(coefs, features)
-        avg_coefs.to_csv(os.path.join(exp_path, 'results', 'metabolomics', 'coefficients', f'svm_{key}_avg_coefs.csv'))
-        preds['classification'] = key
-        pred_list.append(preds)
-        preds.to_csv(os.path.join(exp_path, 'results', 'metabolomics', 'predictions', f'svm_{key}_preds.csv'), index=False)
-
-    # Save combined scores
-    scores_df = pd.DataFrame([score_dict]).transpose()
-    scores_df.columns = ['AUC']
-    scores_df.to_csv(os.path.join(exp_path, 'results', 'metabolomics', 'predictions', 'classification_scores.tsv'), sep='\t')
-
-    # Save combined predictions
-    all_preds = pd.concat(pred_list, ignore_index=True)
-    all_preds.to_csv(os.path.join(exp_path, 'results', 'metabolomics', 'predictions', 'all_classification_predictions.tsv'), sep='\t', index=False)
-
-    # Univariate stats
-    comp_df = pairwise_comparison_df(df, 'Supplement', features)
-    comp_df.to_csv(os.path.join(exp_path, 'results', 'metabolomics', 'coefficients', 'pairwise_comparisons_svm.csv'), index=False)
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Metabolomics analysis with SVM')
-    parser.add_argument('--exp_path', required=True, help='Experiment folder')
-    args = parser.parse_args()
-    main(args.exp_path)
-
-
-
-
-
-
-
-
+plot_heatmap_sns(
+    df,
+    df.columns[:-10],
+    group_cols=('Supplement','Treatment'),
+    scale='zscore',            # or 'minmax', or None
+    scale_axis='rows',         # 'rows' or 'columns'
+    cmap='coolwarm',
+    figsize=(12,6),
+    row_cluster=True,
+    col_cluster=False,
+    group_order={
+        'Treatment': ['None','Yes'],
+        'Supplement': ['None','PosLow','PosHigh','NegHigh']
+    },
+    sort_by=['Treatment','Supplement']
+)
+
+
+
+# 1) Example loadings DataFrame
+#    index: metabolite names
+#    columns: ['Comp1','Comp2',...]
+#loadings_df = pd.read_csv("plsda_loadings.csv", index_col=0)
+
+# 2a) Top-N approach: 
+N = 20
+# for each metabolite, find its largest abs-loading over all components:
+max_abs = loadings_df.abs().max(axis=1)
+top_feats = max_abs.nlargest(N).index.tolist()
+
+# 2b) Threshold approach:
+threshold = 0.5
+mask = (loadings_df.abs() > threshold).any(axis=1)
+top_feats = loadings_df.index[mask].tolist()
+
+# 3) Subset your data
+#    assume 'df' has metadata + all metabolites as columns
+#    and your group_cols are ('Supplement','Treatment')
+filtered_df = df[['Supplement','Treatment'] + top_feats]
+
+# 4) Plot
+plot_heatmap_sns(
+    filtered_df,
+    data_cols=top_feats,
+    group_cols=('Supplement','Treatment'),
+    scale='zscore',
+    scale_axis='rows',
+    cmap='coolwarm',
+    figsize=(12,6),
+    row_cluster=False,
+    col_cluster=False,
+    group_order={
+        'Treatment': ['None','Yes'],
+        'Supplement': ['None','PosLow','PosHigh','NegHigh']
+    },
+    sort_by=['Treatment','Supplement']
+)

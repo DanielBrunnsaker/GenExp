@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased acid pH resistance,B,C),compound_name(B,boric acid)",
+    "observable": "glutamate",
+    "qualifier": "lower",
+    "coefficient": -0.3264920933331668,
+    "initial_prompt": "Cells with higher levels of intracellular aminoadipate in standard conditions associate with: Cell(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'formic acid'),condition(C,'Treatment: 10mM formic acid')"
+}

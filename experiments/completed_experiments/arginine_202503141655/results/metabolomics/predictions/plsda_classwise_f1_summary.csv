@@ -1,0 +1,9 @@
+class,mean_f1,std_f1
+Baseline growth without any supplementation or treatment.,0.06399999999999999,0.178072987217757
+Growth with alanine supplementation and lithium chloride treatment as a negative control.,0.4221269841269841,0.256627077501951
+Growth with alanine supplementation as a negative control.,0.7184999999999999,0.165715299889639
+Growth with lithium chloride treatment without arginine supplementation.,0.0975,0.19665232784571363
+Growth with physiological level of arginine and lithium chloride treatment.,0.16585714285714284,0.31177231545300665
+Growth with physiological level of arginine supplementation.,0.580264069264069,0.20116265407692704
+Growth with supraphysiological level of arginine and lithium chloride treatment.,0.6204862914862914,0.17225928579653815
+Growth with supraphysiological level of arginine supplementation.,0.7409999999999998,0.3234166299037768

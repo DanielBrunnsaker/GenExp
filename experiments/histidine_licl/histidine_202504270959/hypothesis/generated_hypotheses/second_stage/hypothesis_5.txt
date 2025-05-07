@@ -1,0 +1,51 @@
+### Motivation
+The statement suggests an association between lower levels of intracellular histidine and decreased resistance to zinc dichloride in Saccharomyces cerevisiae. Histidine is an essential amino acid that plays a role in various cellular processes, including metal ion chelation and buffering capacity. It is plausible that histidine levels could influence cellular resistance to metal ions like zinc.
+
+### Hypothesis
+Cells with lower intracellular histidine levels exhibit decreased resistance to zinc dichloride due to impaired metal ion chelation, which leads to increased sensitivity to zinc toxicity.
+
+### Experimental Plan
+
+1. **Objective**: To test whether varying intracellular histidine levels affect resistance to zinc dichloride in S. cerevisiae.
+
+2. **Strain**: Use a wild-type prototrophic S. cerevisiae strain.
+
+3. **Media and Conditions**:
+   - Base media: Minimal media without amino acids.
+   - Temperature: 30°C
+   - Shaking: 200 rpm
+
+4. **Supplementation Levels**:
+   - Control: No histidine supplementation.
+   - Low histidine: 0.1 mM histidine.
+   - High histidine: 10 mM histidine (supraphysiological concentration).
+
+5. **Zinc Dichloride Treatment**:
+   - Control: No zinc dichloride.
+   - Treatment: 1 mM zinc dichloride.
+
+6. **Negative Control**:
+   - Use valine at 10 mM as a negative control to ensure that the observed effects are specific to histidine modulation and not due to general amino acid supplementation.
+
+7. **Experimental Conditions**:
+   - Combine each histidine supplementation level with the zinc dichloride treatment.
+   - Total combinations: 3 (histidine levels) x 2 (zinc dichloride levels) + 2 (valine controls) = 8 conditions.
+
+8. **Measurements**:
+   - OD600 measurements every 20 minutes to monitor growth.
+   - At experiment termination (20 hours), perform mass spectrometry-based metabolomics to measure intracellular histidine and zinc levels.
+
+9. **Verification**:
+   - Ensure histidine uptake by measuring intracellular histidine levels in the absence of zinc dichloride.
+
+### Expected Outcomes
+
+- **Control (No histidine, no zinc dichloride)**: Normal growth, baseline intracellular histidine levels.
+- **Low histidine, no zinc dichloride**: Reduced intracellular histidine levels, normal growth.
+- **High histidine, no zinc dichloride**: Elevated intracellular histidine levels, normal growth.
+- **Control (No histidine, with zinc dichloride)**: Decreased growth, indicating sensitivity to zinc.
+- **Low histidine, with zinc dichloride**: Further reduced growth compared to control, supporting the hypothesis that lower histidine levels decrease resistance to zinc.
+- **High histidine, with zinc dichloride**: Possible improved growth compared to control, suggesting that higher histidine levels may enhance resistance to zinc.
+- **Valine controls**: Should show no significant change in growth or resistance to zinc dichloride, confirming that the effects are specific to histidine modulation.
+
+The experiment will provide insights into the role of histidine in modulating resistance to zinc dichloride, supporting or refuting the association stated.

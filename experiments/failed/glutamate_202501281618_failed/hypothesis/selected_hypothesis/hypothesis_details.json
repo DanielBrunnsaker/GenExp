@@ -1,8 +1,0 @@
-{
-    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,spermine)",
-    "observable": "glutamate",
-    "qualifier": "higher",
-    "coefficient": 0.6593935352696771,
-    "initial_prompt": "1. Cells with higher levels of intracellular glutamate in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,spermine)",
-    "motivation": "not applicable"
-}

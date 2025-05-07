@@ -1,0 +1,9 @@
+class,mean_f1,std_f1
+Baseline condition with no supplementation or treatment.,0.6618399933399934,0.18446983009821266
+Formic acid treatment without glutamate supplementation.,0.29574242424242425,0.25384402030068237
+High glutamate supplementation with formic acid treatment.,0.8995238095238096,0.11549236732319364
+High glutamate supplementation without formic acid treatment.,0.6700476190476192,0.26636827512846784
+Low glutamate supplementation with formic acid treatment.,0.45465945165945165,0.2353778533798186
+Low glutamate supplementation without formic acid treatment.,0.09304761904761903,0.18446182918470266
+Negative control with arginine supplementation and formic acid treatment.,0.881452380952381,0.16185569772656322
+Negative control with arginine supplementation without formic acid treatment.,0.8327475024975024,0.10037750369629739

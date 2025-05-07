@@ -1,0 +1,39 @@
+### Motivation
+The statement suggests an association between higher intracellular lysine levels and decreased resistance to acetic acid in Saccharomyces cerevisiae. This experiment aims to explore whether increasing lysine levels affects the yeast's resistance to acetic acid, a common stressor in industrial fermentation processes.
+
+### Hypothesis
+Elevated intracellular lysine levels reduce the resistance of Saccharomyces cerevisiae to acetic acid, potentially by influencing cellular stress response pathways or membrane stability.
+
+### Experimental Plan
+
+1. **Baseline Conditions:**
+   - Use a minimal medium without amino acids as the control condition. 
+
+2. **Lysine Supplementation:**
+   - **Control:** No lysine supplementation.
+   - **Low Lysine:** 0.5 mM lysine, a physiological concentration.
+   - **High Lysine:** 5 mM lysine, a supraphysiological concentration to ensure a broad range of intracellular lysine levels.
+
+3. **Acetic Acid Treatment:**
+   - **Control:** No acetic acid.
+   - **Acetic Acid Treatment:** 20 mM acetic acid, a concentration known to induce stress in yeast cells.
+
+4. **Negative Control:**
+   - Use threonine at 5 mM as a negative control to ensure that any observed effects are specific to lysine supplementation. Threonine is chosen because it should not directly impact acetic acid resistance.
+
+5. **Experimental Setup:**
+   - Each lysine supplementation level is combined with both acetic acid treatment levels (control and 20 mM).
+   - Include the threonine negative control at both acetic acid treatment levels.
+   - Total conditions: (3 lysine levels x 2 acetic acid levels) + (1 threonine control x 2 acetic acid levels) = 8 conditions.
+
+6. **Measurement:**
+   - Monitor OD600 every 20 minutes to assess growth and viability.
+   - At 20 hours, measure intracellular lysine levels via mass spectrometry-based metabolomics to verify lysine uptake and accumulation.
+
+### Expected Outcomes
+- **No Lysine Supplementation:** Cells should exhibit standard resistance to acetic acid, providing a baseline for comparison.
+- **Low Lysine Supplementation:** If lysine affects resistance, a slight decrease in resistance to acetic acid might be observed compared to the control.
+- **High Lysine Supplementation:** A more pronounced decrease in resistance to acetic acid is expected if lysine significantly impacts cellular stress response mechanisms.
+- **Threonine Control:** This should not affect acetic acid resistance, confirming that any observed effects are due to lysine.
+
+By comparing growth curves and intracellular lysine levels across conditions, we can assess the association between lysine levels and acetic acid resistance, supporting or refuting the initial statement.

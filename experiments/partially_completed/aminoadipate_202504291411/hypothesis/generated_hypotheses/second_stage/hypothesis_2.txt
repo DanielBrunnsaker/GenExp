@@ -1,0 +1,47 @@
+### Motivation
+
+The statement suggests an association between higher intracellular levels of aminoadipate and increased resistance to formic acid in Saccharomyces cerevisiae. This experiment aims to explore whether modulating aminoadipate levels can influence the yeast's resistance to formic acid.
+
+### Hypothesis
+
+Increasing intracellular aminoadipate levels in Saccharomyces cerevisiae will enhance the cells' resistance to formic acid by potentially altering metabolic pathways or stress response mechanisms.
+
+### Experimental Plan
+
+1. **Strain and Media Preparation:**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Supplementation Levels:**
+   - **Control (No Supplementation):** Minimal media.
+   - **Low Aminoadipate Supplementation:** Add 5 mM of aminoadipate to minimal media.
+   - **High Aminoadipate Supplementation:** Add 20 mM of aminoadipate to minimal media (supraphysiological concentration).
+
+3. **Formic Acid Treatment:**
+   - Treat each supplementation level with 10 mM formic acid at the start of the experiment (t=0h).
+
+4. **Negative Control:**
+   - Include a minimal media condition supplemented with 20 mM proline (equimolar to the highest aminoadipate concentration) without formic acid treatment to serve as a negative control.
+
+5. **Experimental Conditions:**
+   - Total of 7 conditions:
+     - Minimal media (control) with 10 mM formic acid.
+     - Low aminoadipate (5 mM) with 10 mM formic acid.
+     - High aminoadipate (20 mM) with 10 mM formic acid.
+     - Minimal media (control) without formic acid.
+     - Low aminoadipate (5 mM) without formic acid.
+     - High aminoadipate (20 mM) without formic acid.
+     - Proline (20 mM) without formic acid (negative control).
+
+6. **Measurements:**
+   - Monitor OD600 every 20 minutes to assess growth curves and viability.
+   - At the end of 20 hours, perform mass spectrometry-based metabolomics to measure intracellular aminoadipate levels.
+
+### Expected Outcomes
+
+- **Control (No Supplementation):** Expected to show normal sensitivity to formic acid, as no modulation of aminoadipate levels occurs.
+- **Low Aminoadipate Supplementation:** May show moderate resistance to formic acid if the hypothesis is correct, indicating a dose-response relationship.
+- **High Aminoadipate Supplementation:** Expected to exhibit the highest resistance to formic acid if increased aminoadipate levels confer protection.
+- **Negative Control (Proline):** Should not show increased resistance to formic acid, confirming the specificity of aminoadipate's role.
+
+By comparing growth rates and viability across these conditions, we can determine if there is an association between aminoadipate levels and resistance to formic acid, supporting or refuting the initial statement.

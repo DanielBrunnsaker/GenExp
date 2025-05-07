@@ -1,8 +1,0 @@
-Well,y_true,decision_score,predicted_class,classification
-7,0,-1.4260150088580732,0,Yes_None_vs_PosLow_svm
-15,0,-0.09623933667029194,0,Yes_None_vs_PosLow_svm
-17,1,-0.2013814075737156,0,Yes_None_vs_PosLow_svm
-26,0,0.5891661917925304,1,Yes_None_vs_PosLow_svm
-27,1,-0.4591823210426746,0,Yes_None_vs_PosLow_svm
-30,0,-0.8331500341769041,0,Yes_None_vs_PosLow_svm
-39,0,-0.12712546379534306,0,Yes_None_vs_PosLow_svm

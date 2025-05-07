@@ -1,0 +1,39 @@
+### Motivation
+The statement suggests an association between higher intracellular levels of aminoadipate and increased resistance to formic acid in Saccharomyces cerevisiae. Aminoadipate is a key intermediate in the lysine biosynthesis pathway. Understanding this association can provide insights into the metabolic pathways that contribute to chemical resistance, which is important for industrial applications where S. cerevisiae is exposed to various stressors.
+
+### Hypothesis
+Increased intracellular levels of aminoadipate enhance the resistance of Saccharomyces cerevisiae to formic acid, potentially through the modulation of metabolic pathways involved in stress response or detoxification processes.
+
+### Experimental Plan
+1. **Strain and Media Preparation:**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Aminoadipate Supplementation:**
+   - **Control (Level 1):** No aminoadipate supplementation.
+   - **Moderate Supplementation (Level 2):** Add 1 mM aminoadipate.
+   - **High Supplementation (Level 3):** Add 10 mM aminoadipate (supraphysiological concentration).
+
+3. **Formic Acid Treatment:**
+   - **Control:** No formic acid treatment.
+   - **Treatment:** Add 10 mM formic acid to test the resistance.
+
+4. **Negative Control:**
+   - Use proline at 10 mM as a negative control, as it is not directly involved in the lysine biosynthesis pathway or known to affect formic acid resistance.
+
+5. **Experimental Setup:**
+   - Each well in the 96-well plate will contain a different combination of aminoadipate supplementation and formic acid treatment.
+   - Total conditions: \(3 \text{ (aminoadipate levels)} \times 2 \text{ (formic acid levels)} + 2 \text{ (negative controls)} = 8\) conditions.
+   - Incubate at 30°C with shaking.
+
+6. **Measurements:**
+   - Measure OD600 every 20 minutes to assess growth and viability.
+   - At the end of the 20-hour incubation, use mass spectrometry-based metabolomics to measure intracellular aminoadipate concentrations.
+
+### Expected Outcomes
+- **Increased Resistance:** If increased aminoadipate levels are associated with resistance, we expect higher growth rates and viability in wells with higher aminoadipate supplementation under formic acid treatment compared to controls.
+- **Independent Effects:** Aminoadipate supplementation may independently affect growth, so it is crucial to compare treated and untreated conditions.
+- **Negative Control:** Proline-supplemented wells should not show increased resistance, confirming the specificity of aminoadipate's role.
+- **Metabolomics Verification:** Mass spectrometry should confirm higher intracellular aminoadipate levels in the supplemented conditions, validating the modulation of aminoadipate levels.
+
+This experimental design will help determine if there is a correlation between aminoadipate levels and formic acid resistance, and whether this association can be modulated through supplementation.

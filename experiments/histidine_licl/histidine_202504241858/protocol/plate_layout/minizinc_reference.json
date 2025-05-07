@@ -1,0 +1,44 @@
+{
+    "num_rows": 8,
+    "num_cols": 12,
+    "horizontal_cell_lines": 1,
+    "vertical_cell_lines": 1,
+    "allow_empty_wells": true,
+    "concentrations_on_different_rows": true,
+    "concentrations_on_different_columns": true,
+    "replicates_on_different_plates": false,
+    "replicates_on_same_plate": true,
+    "size_empty_edge": 0,
+    "compounds": 1,
+    "compound_concentrations": [
+        8
+    ],
+    "compound_names": [
+        "comb"
+    ],
+    "compound_replicates": [
+        10
+    ],
+    "compound_concentration_names": [
+        [
+            "None: 0 mM & Zinc dichloride: 0 mM",
+            "Proline: 5 mM & Zinc dichloride: 0 mM",
+            "Histidine: 0.5 mM & Zinc dichloride: 0 mM",
+            "Histidine: 5 mM & Zinc dichloride: 0 mM",
+            "None: 0 mM & Zinc dichloride: 0.5 mM",
+            "Histidine: 0.5 mM & Zinc dichloride: 0.5 mM",
+            "Histidine: 5 mM & Zinc dichloride: 0.5 mM",
+            "Proline: 5 mM & Zinc dichloride: 0.5 mM"
+        ]
+    ],
+    "compound_concentration_indicators": [],
+    "combinations": 0,
+    "combination_names": [],
+    "combination_concentration_names": [],
+    "combination_concentrations": 0,
+    "num_controls": 0,
+    "control_replicates": [],
+    "control_concentrations": [],
+    "control_names": [],
+    "control_concentration_names": []
+}
