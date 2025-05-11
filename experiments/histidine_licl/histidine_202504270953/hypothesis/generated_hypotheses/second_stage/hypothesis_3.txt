@@ -1,0 +1,42 @@
+**Motivation:**
+The statement suggests an association between lower intracellular histidine levels and decreased resistance to zinc dichloride in Saccharomyces cerevisiae. Histidine is an essential amino acid known to play a role in metal ion binding and homeostasis. This experiment aims to test if modulating intracellular histidine levels affects the yeast's resistance to zinc dichloride.
+
+**Hypothesis:**
+Reducing intracellular histidine levels in S. cerevisiae will decrease the yeast's resistance to zinc dichloride due to histidine's role in metal ion chelation and cellular stress responses.
+
+**Experimental Plan:**
+
+1. **Media Preparation:**
+   - Use minimal media without amino acids as the baseline condition.
+
+2. **Histidine Supplementation Levels:**
+   - Control: No histidine supplementation.
+   - Low Histidine: 0.1 mM histidine.
+   - High Histidine (Supraphysiological): 2.0 mM histidine.
+
+3. **Zinc Dichloride Treatment Levels:**
+   - Control: No zinc dichloride.
+   - Zinc Dichloride: 0.5 mM zinc dichloride.
+
+4. **Negative Control:**
+   - Use serine as a negative control at 2.0 mM, equimolar to the highest histidine concentration.
+
+5. **Experimental Conditions:**
+   - Divide the 96-well plate to accommodate all combinations of histidine supplementation and zinc dichloride treatment, including negative controls.
+   - Each condition will be prepared in triplicate to ensure statistical reliability.
+
+6. **Growth and Viability Measurement:**
+   - Measure OD600 every 20 minutes to monitor growth.
+   - Terminate the experiment at 20 hours and perform mass spectrometry-based metabolomics to measure intracellular histidine levels.
+
+7. **Justification:**
+   - Histidine is supplemented to modulate its intracellular levels and observe the effect on zinc dichloride resistance.
+   - Zinc dichloride is used at a concentration known to induce stress in yeast cells, allowing for observation of resistance changes.
+   - Serine is chosen as a negative control due to its non-involvement in metal ion binding.
+
+**Expected Outcomes:**
+- **Control (No zinc dichloride):** Cells with higher histidine supplementation should grow normally, indicating that histidine alone does not negatively impact growth.
+- **Zinc Dichloride Treatment:**
+  - Cells with no or low histidine supplementation are expected to show decreased growth and viability, supporting the hypothesis that lower histidine levels reduce resistance to zinc dichloride.
+  - Cells with high histidine supplementation may exhibit better growth and viability, suggesting that increased histidine levels confer protection against zinc-induced stress.
+- **Negative Control (Serine):** Should show no significant difference in growth or resistance to zinc dichloride across all conditions, confirming that the observed effects are specific to histidine modulation.

@@ -126,7 +126,7 @@ def add_logic_program_to_list(list_of_programs, output_folder, target):
 
 
 #@flow
-def experiment_pipeline(target, alpha, N):
+def experiment_pipeline(target, alpha, N, override, override_negative):
     """Main Prefect workflow for running the experiment pipeline."""
 
     print_header()
@@ -138,7 +138,7 @@ def experiment_pipeline(target, alpha, N):
 
     # Run a pattern selection process on the logic programs produced by aleph for given target
     print(f"Running pattern selection for {target}, alpha={alpha}, N={N}...")
-    pattern_selection(target, alpha, N, output_folder)
+    pattern_selection(target, alpha, N, output_folder, override, override_negative)
     print("✅ Pattern selection complete! \n")
 
     # Run hypothesis generation using GPT4o (or other) alongside the provided logic programs
@@ -207,10 +207,30 @@ if __name__ == "__main__":
 
     parser.add_argument('--target', required=True,
                         help="Target metabolite")
-    parser.add_argument('--alpha', required=True, type=float,
+    parser.add_argument('--alpha', required=False, type=float, default=0.0,
                         help="Parameter that weighs the coefficients of the hypotheses based on its occurence for other targets")
     parser.add_argument('--N', required=True, type=int,
                         help="Number of logic programs to run through the selection process")
+    parser.add_argument('--override', required=False, type=str, default = None,
+                        help="Override clause")
+    parser.add_argument('--override_negative', required=False, type=str, default = None,
+                        help="Override negative control")
     args = parser.parse_args()
 
-    experiment_pipeline(args.target, args.alpha, args.N)
+    experiment_pipeline(args.target, args.alpha, args.N, args.override, args.override_negative)
+    
+    '''
+    # If a custom program is used, should look something like this:
+        "Cells with higher levels of intracellular aminoadipate in standard conditions associate with: Cell(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),
+        compound_name(B,'formic acid'),condition(C,'Treatment: 10mM formic acid')"
+        
+        the negative override is simply the chemical to use. e.g. "proline"
+        
+        so: python genexp.py --target glutamate --alpha 0.0 --N 1 --override_negative proline --override "Cells with higher levels of intracellular aminoadipate in standard conditions associate with: Cell(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'formic acid'),condition(C,'Treatment: 10mM formic acid')"
+    '''
+    
+    
+    
+    
+    
+    

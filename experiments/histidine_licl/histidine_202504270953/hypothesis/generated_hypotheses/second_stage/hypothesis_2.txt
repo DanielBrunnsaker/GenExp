@@ -1,0 +1,46 @@
+### Motivation
+
+Histidine is an amino acid that plays a crucial role in various cellular processes, including protein synthesis and enzyme function. In S. cerevisiae, histidine can also act as a metal ion chelator, potentially influencing the cell's response to metal stressors such as zinc dichloride. By modulating intracellular histidine levels, we can investigate whether lower histidine levels correlate with decreased resistance to zinc dichloride, providing insight into the potential protective role of histidine against metal-induced stress.
+
+### Hypothesis
+
+Cells with lower intracellular histidine levels exhibit decreased resistance to zinc dichloride due to reduced chelation and detoxification capacity, leading to higher intracellular zinc accumulation and increased cellular stress.
+
+### Experimental Plan
+
+1. **Strain and Media:**
+   - Use a reference/wild-type prototrophic strain of S. cerevisiae.
+   - Baseline media: Minimal media without amino acids.
+
+2. **Histidine Supplementation Levels:**
+   - Control: No histidine supplementation.
+   - Low Histidine: 0.1 mM histidine.
+   - Supraphysiological Histidine: 1 mM histidine.
+
+3. **Zinc Dichloride Treatment Levels:**
+   - Control: No zinc dichloride.
+   - Zinc Dichloride Treatment: 0.5 mM zinc dichloride.
+
+4. **Negative Control:**
+   - Use 0.1 mM threonine as the negative control, as it is not directly involved in metal ion chelation and should not affect zinc resistance.
+
+5. **Experimental Conditions:**
+   - Combine each histidine supplementation level with each zinc dichloride treatment level, resulting in 6 main experimental conditions.
+   - Include treated and untreated negative control conditions with threonine, resulting in a total of 8 conditions.
+
+6. **Experimental Setup:**
+   - Inoculate cultures in 96-well plates with the defined media and supplementations at t=0h.
+   - Incubate with shaking at 30°C.
+   - Measure OD600 every 20 minutes to monitor growth.
+   - Terminate the experiment at 20 hours.
+   - Use mass spectrometry-based metabolomics to measure intracellular histidine and zinc concentrations.
+
+### Expected Outcomes
+
+- **Control (No Zinc Dichloride):** Cells with higher histidine supplementation should exhibit normal growth, confirming histidine's role in cellular functions.
+- **Zinc Dichloride Treatment:**
+  - Cells with low histidine levels (0.1 mM) are expected to show decreased growth compared to the control and supraphysiological histidine conditions due to reduced resistance to zinc.
+  - Supraphysiological histidine supplementation (1 mM) may enhance zinc resistance by chelating excess zinc and reducing its intracellular accumulation.
+- **Negative Control (Threonine):** Threonine supplementation should not significantly impact zinc resistance, serving as a baseline for comparison.
+
+This experimental setup will help determine if intracellular histidine levels influence S. cerevisiae's resistance to zinc dichloride, supporting or refuting the association between histidine levels and chemical resistance.

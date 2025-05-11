@@ -1,0 +1,93 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,zinc dichloride)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "control",
+            "summary": "Baseline control with minimal media, no supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media",
+            "media_supplementation": "Proline",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Negative control with 5 mM proline supplementation, no zinc dichloride treatment."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media",
+            "media_supplementation": "Histidine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Low histidine supplementation control with 0.5 mM histidine, no zinc dichloride treatment."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal media",
+            "media_supplementation": "Histidine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "High histidine supplementation control with 5 mM histidine, no zinc dichloride treatment."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal media",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "Zinc dichloride",
+            "treatment_parameters": "0.5 mM",
+            "sampling_time": 20.0,
+            "type": "treatment control",
+            "summary": "Zinc dichloride treatment control with 0.5 mM zinc dichloride, no histidine supplementation."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal media",
+            "media_supplementation": "Histidine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "Zinc dichloride",
+            "treatment_parameters": "0.5 mM",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Experiment with low histidine supplementation (0.5 mM) and zinc dichloride treatment (0.5 mM)."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "Minimal media",
+            "media_supplementation": "Histidine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Zinc dichloride",
+            "treatment_parameters": "0.5 mM",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Experiment with high histidine supplementation (5 mM) and zinc dichloride treatment (0.5 mM)."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "Minimal media",
+            "media_supplementation": "Proline",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Zinc dichloride",
+            "treatment_parameters": "0.5 mM",
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Negative control with 5 mM proline supplementation and zinc dichloride treatment (0.5 mM)."
+        }
+    ]
+}

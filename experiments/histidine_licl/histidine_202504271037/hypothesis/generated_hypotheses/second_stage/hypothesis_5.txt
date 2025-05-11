@@ -1,0 +1,48 @@
+### Motivation
+The statement suggests an association between lower intracellular levels of histidine and decreased resistance to zinc dichloride in Saccharomyces cerevisiae. Histidine is known to be involved in metal ion binding and buffering, which might influence the cell's ability to handle metal stress. Understanding this relationship can provide insights into the cellular mechanisms underlying metal resistance.
+
+### Hypothesis
+Lower intracellular levels of histidine lead to decreased resistance to zinc dichloride due to impaired metal ion buffering and detoxification processes in Saccharomyces cerevisiae.
+
+### Experimental Plan
+
+1. **Strain and Media Preparation:**
+   - Use a wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Prepare minimal media without amino acids as the base condition.
+
+2. **Histidine Supplementation Levels:**
+   - Control: No histidine supplementation.
+   - Low Histidine: 10 µM histidine.
+   - High Histidine: 200 µM histidine (supraphysiological concentration).
+
+3. **Zinc Dichloride Treatment Levels:**
+   - Control: No zinc dichloride.
+   - Treatment: 1 mM zinc dichloride.
+
+4. **Negative Control:**
+   - Use valine as the negative control amino acid at 200 µM (equimolar to the highest histidine concentration).
+
+5. **Experimental Setup:**
+   - Prepare 96-well plates with the following combinations:
+     - Minimal media with no supplementation.
+     - Minimal media with low histidine and no zinc dichloride.
+     - Minimal media with high histidine and no zinc dichloride.
+     - Minimal media with valine and no zinc dichloride.
+     - Minimal media with no supplementation and zinc dichloride.
+     - Minimal media with low histidine and zinc dichloride.
+     - Minimal media with high histidine and zinc dichloride.
+     - Minimal media with valine and zinc dichloride.
+
+6. **Measurement and Analysis:**
+   - Measure OD600 every 20 minutes to monitor growth.
+   - Terminate the experiment at 20 hours.
+   - Use mass spectrometry-based metabolomics to measure intracellular histidine levels at the end of the experiment.
+   - Analyze growth curves to assess resistance to zinc dichloride.
+
+### Expected Outcomes
+- **Control Conditions:** Cells without histidine supplementation and with zinc dichloride are expected to show decreased growth, indicating decreased resistance.
+- **Low Histidine Supplementation:** Cells may exhibit slightly improved growth compared to the control with zinc dichloride, suggesting some buffering capacity.
+- **High Histidine Supplementation:** Cells are expected to show the highest resistance to zinc dichloride, with improved growth, supporting the hypothesis that higher histidine levels enhance metal resistance.
+- **Valine Negative Control:** Should not exhibit significant changes in resistance to zinc dichloride, confirming the specificity of histidine's role.
+
+This experiment will help determine if intracellular histidine levels modulate zinc dichloride resistance, supporting or refuting the proposed association.

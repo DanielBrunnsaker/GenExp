@@ -17,6 +17,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib.lines import Line2D
 
+from sklearn.isotonic import IsotonicRegression
+from scipy.interpolate import PchipInterpolator, UnivariateSpline
+import statsmodels.api as sm
 
 def extract_growth_rates(layout, data):
     
@@ -28,8 +31,8 @@ def extract_growth_rates(layout, data):
             mu = 0
         else:
             try:
-                temp_curve = data.iloc[:,:-1].loc[well]
-                temp_curve.index = np.array(data.loc[well].index[:-1])/3600
+                temp_curve = data.iloc[:,15:-1].loc[well]
+                temp_curve.index = np.array(data.loc[well].index[15:-1])/3600
                 results = process_curve(temp_curve)
                 mu = results.growth_phases[0][2]
                 start = results.growth_phases[0][0]
@@ -44,6 +47,7 @@ def extract_growth_rates(layout, data):
         
     mu_df = pd.DataFrame.from_dict(mu_dict, orient = 'index', columns = ['mu', 'start', 'end'])
     return mu_df
+
 
 def extract_finalOD(layout, data):
     
@@ -153,120 +157,75 @@ def process_measurement_data(directory_path):
     
     return data_df
 
-'''
-def filter_outlier_growth_curves(layout, df, group_col = "Summary", method = "iqr", threshold = 1.5):
+
+def filter_outlier_growth_curves(layout, df, group_col="Summary", method = 'mad', threshold=3, eps=1e-6):
+    """
+    Filters out wells whose log-AUC or final OD is beyond threshold×MAD
+    within each group (e.g. experimental replicate). Uses only the MAD rule.
     
-    
-    df.index = df.index.map(lambda x: unify_well_format(str(x)))
-    df = df.merge(layout[['well','Summary']], left_index = True, right_on = 'well').set_index('well')
-    # Identify numeric (time-series) columns
-    numeric_cols = df.select_dtypes(include=["float", "int"]).columns
-
-    # Compute summary metric per curve (e.g., AUC, total OD)
-    df['growth_summary'] = df[numeric_cols].sum(axis=1)  # AUC-like metric
-
-    def detect_outliers(group):
-        if len(group) < 3:  # Not enough data to detect outliers
-            group['outlier'] = False
-            return group
-
-        if method == "zscore":
-            group['outlier'] = np.abs(zscore(group['growth_summary'])) > threshold
-        elif method == "iqr":
-            Q1, Q3 = group['growth_summary'].quantile([0.25, 0.75])
-            IQR = Q3 - Q1
-            lower_bound, upper_bound = Q1 - threshold * IQR, Q3 + threshold * IQR
-            group['outlier'] = (group['growth_summary'] < lower_bound) | (group['growth_summary'] > upper_bound)
-        elif method == "mad":
-            median_val = group['growth_summary'].median()
-            mad = np.median(np.abs(group['growth_summary'] - median_val))
-            modified_z = 0.6745 * (group['growth_summary'] - median_val) / (mad + 1e-9)
-            group['outlier'] = np.abs(modified_z) > threshold
-        return group
-
-    # Apply outlier detection within each experimental group
-    df = df.groupby(group_col, group_keys=False).apply(detect_outliers)
-
-    # Keep only non-outliers
-    df_filtered = df[df['outlier'] == False].drop(columns=['growth_summary', 'outlier'])
-
-    return df_filtered
-'''
-def filter_outlier_growth_curves(layout, df, group_col="Summary", method="iqr", threshold=1.5):
-    # Standardize well names in df index and layout.
+    Parameters
+    ----------
+    layout : pd.DataFrame
+        Must contain columns 'well' and the grouping column (e.g. 'Summary').
+    df : pd.DataFrame
+        Time-course data, indexed by well, with numeric columns = time points.
+    group_col : str
+        Column in layout that defines grouping for outlier detection.
+    threshold : float
+        Multiplier of MAD for outlier detection (default 3.5).
+    eps : float
+        Small constant to avoid log(0).
+    """
+    # 1) Copy & unify well names
     df = df.copy()
     df.index = df.index.map(lambda x: unify_well_format(str(x)))
     layout = layout.copy()
     layout['well'] = layout['well'].astype(str).apply(unify_well_format)
     
-    # Merge layout information (e.g. Summary) into the data.
-    df = df.merge(layout[['well', 'Summary']], left_index=True, right_on='well').set_index('well')
+    # 2) Merge layout info
+    df = df.merge(layout[['well', group_col]],
+                  left_index=True, right_on='well').set_index('well')
     
-    # Identify numeric (time-series) columns.
-    numeric_cols = df.select_dtypes(include=["float", "int"]).columns
+    # 3) Identify time-series columns
+    numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    if not numeric_cols:
+        raise ValueError("No numeric columns found for time series!")
     
-    # Compute summary metric per curve (e.g., AUC) and final value metric.
-    df['growth_summary'] = df[numeric_cols].sum(axis=1)  
-    # Assuming the last numeric column represents the final time point:
-    final_metric = numeric_cols[-1]
-    df['final_value'] = df[final_metric]
+    # 4) Compute AUC (sum approximation) and final OD
+    df['AUC']         = df[numeric_cols].sum(axis=1)
+    df['log_auc']     = np.log(df['AUC'] + eps)
+    final_col         = numeric_cols[-1]
+    df['final_value'] = df[final_col]
     
-    def detect_outliers(group):
-        # Not enough data to reliably detect outliers.
+    def detect_mad_outliers(group):
+        # Too few curves → no flags
         if len(group) < 3:
             group['outlier'] = False
             return group
         
-        if method == "zscore":
-            outlier_sum = np.abs(zscore(group['growth_summary'])) > threshold
-            outlier_final = np.abs(zscore(group['final_value'])) > threshold
-            group['outlier'] = outlier_sum | outlier_final
-
-        elif method == "iqr":
-            # Outlier detection on the summary metric.
-            Q1_sum, Q3_sum = group['growth_summary'].quantile([0.25, 0.75])
-            IQR_sum = Q3_sum - Q1_sum
-            lower_bound_sum, upper_bound_sum = Q1_sum - threshold * IQR_sum, Q3_sum + threshold * IQR_sum
-            outlier_sum = (group['growth_summary'] < lower_bound_sum) | (group['growth_summary'] > upper_bound_sum)
-            
-            # Outlier detection on the final value.
-            Q1_final, Q3_final = group['final_value'].quantile([0.25, 0.75])
-            IQR_final = Q3_final - Q1_final
-            lower_bound_final, upper_bound_final = Q1_final - threshold * IQR_final, Q3_final + threshold * IQR_final
-            outlier_final = (group['final_value'] < lower_bound_final) | (group['final_value'] > upper_bound_final)
-            
-            group['outlier'] = outlier_sum | outlier_final
-
-        elif method == "mad":
-            # Using the Median Absolute Deviation for the summary metric.
-            median_sum = group['growth_summary'].median()
-            mad_sum = np.median(np.abs(group['growth_summary'] - median_sum))
-            modified_z_sum = 0.6745 * (group['growth_summary'] - median_sum) / (mad_sum + 1e-9)
-            outlier_sum = np.abs(modified_z_sum) > threshold
-            
-            # Using the Median Absolute Deviation for the final value.
-            median_final = group['final_value'].median()
-            mad_final = np.median(np.abs(group['final_value'] - median_final))
-            modified_z_final = 0.6745 * (group['final_value'] - median_final) / (mad_final + 1e-9)
-            outlier_final = np.abs(modified_z_final) > threshold
-            
-            group['outlier'] = outlier_sum | outlier_final
-
+        # MAD on log-AUC
+        med_auc = np.median(group['log_auc'])
+        mad_auc = np.median(np.abs(group['log_auc'] - med_auc))
+        out_auc = np.abs(group['log_auc'] - med_auc) > (threshold * mad_auc + eps)
+        
+        # MAD on final OD
+        med_f = np.median(group['final_value'])
+        mad_f = np.median(np.abs(group['final_value'] - med_f))
+        out_f   = np.abs(group['final_value'] - med_f) > (threshold * mad_f + eps)
+    
+        
+        group['outlier'] = out_auc | out_f
         return group
-
-    # Apply outlier detection within each experimental group.
-    df = df.groupby(group_col, group_keys=False).apply(detect_outliers)
     
-    # Keep only non-outlier curves and drop the temporary columns.
-    df_filtered = df[df['outlier'] == False].drop(columns=['growth_summary', 'final_value', 'outlier'])
+    # 5) Apply per-group
+    df = df.groupby(group_col, group_keys=False).apply(detect_mad_outliers)
     
-    return df_filtered
+    # 6) Filter out and drop helper columns
+    kept = df.loc[~df['outlier']]
+    return kept.drop(columns=['AUC', 'log_auc', 'final_value', 'outlier'])
 
 
-def subtract_and_impute_blanks(layout, data, n_blanks = 3,fillin_value = 0.01, blank_bool = True):
-
-    #blank_wells = layout['well'][layout['Summary'] == 'Media control']
-    #blank_wells = blank_wells.apply(lambda x: f"{x[0]}{int(x[1:]):02d}")
+def subtract_and_impute_blanks(layout, data, n_blanks = 3, fillin_value = 0.01, blank_bool = True):
     
     blanked_data = data.copy()
     blank_wells = blanked_data[blanked_data['Summary'] == 'Media control'].index
@@ -278,16 +237,7 @@ def subtract_and_impute_blanks(layout, data, n_blanks = 3,fillin_value = 0.01, b
     subtracted[subtracted < 0] = fillin_value
     blanked_data.iloc[:,:-1] = subtracted
         
-    #blanked_data.iloc[:,:-1] = subtract_closest_blanks(blanked_data.iloc[:,:-1], blank_wells, n_blanks, blank_bool)
-    #blanked_data.iloc[:,:-1] = blanked_data.iloc[:,:-1][blanked_data.iloc[:,:-1] < 0] = fillin_value
-    
-    #blanked_data = blanked_data.copy()
-    #blanked_data.index = blanked_data.index.map(lambda x: unify_well_format(str(x)))
-    
-    # If df_meta has well in a column named well_col (e.g. "well"):
-    #layout = layout.copy()
-    #layout['well'] = layout['well'].astype(str).apply(unify_well_format)
-    #blanked_data = blanked_data.merge(layout[['well','Summary']], left_index = True, right_on = 'well').set_index('well')
+
     
     return blanked_data
 
@@ -331,7 +281,6 @@ def subtract_closest_blanks(df, blank_wells, n, blank_subtraction):
     return result
 
 
-
 def smooth_growth_curves(
     df: pd.DataFrame, 
     window: int = 3, 
@@ -363,32 +312,39 @@ def smooth_growth_curves(
     """
     numeric_cols = df.select_dtypes(include=["float", "int"]).columns
     df_smoothed = df.copy()
+    
+    def smooth_row_values(
+        row,
+        method="loess",
+        window=5,
+        loess_frac=0.1,
+        spline_s=None,
+        enforce_monotonic=False
+    ):
+        """
+        row             : pd.Series of values to smooth
+        method          : "mean", "loess", "pchip", or "spline"
+        window          : window length for moving average (only if method=="mean")
+        loess_frac      : fraction of data used for LOESS (only if method=="loess")
+        """
+        x = np.arange(len(row))
+        y = row.values
+    
+        loess_sm = sm.nonparametric.lowess(
+                y, x,
+                frac=loess_frac,
+                it=1,               # one robustness pass
+                return_sorted=False
+            )
+        result = loess_sm
 
-    def smooth_row_values(row):
-        values = row.values
-        n = len(values)
-
-        # Edge handling - extend the series before smoothing
-        if method == "mirror":
-            extended = np.concatenate((values[:window][::-1], values, values[-window:][::-1]))
-        elif method == "repeat":
-            extended = np.concatenate(([values[0]] * (window // 2), values, [values[-1]] * (window // 2)))
-        else:
-            extended = values  # No edge handling
-
-        smoothed = pd.Series(extended).rolling(window=window, center=center, min_periods=1).mean().values
-        
-        # Ensure smoothed row matches original length
-        start_idx = (len(smoothed) - n) // 2
-        smoothed = smoothed[start_idx:start_idx + n]
-
-        return pd.Series(smoothed, index=row.index)  # Ensure Pandas aligns correctly
+    
+        return pd.Series(result, index=row.index)
 
     # Apply smoothing
     df_smoothed[numeric_cols] = df_smoothed[numeric_cols].apply(smooth_row_values, axis=1)
 
     return df_smoothed
-
 
 def compute_auc(df):
     # Exclude the last column (experiment descriptor)
@@ -410,6 +366,9 @@ def compute_auc(df):
     return auc_df
 
 
+
+
+# Plotting scripts
 
 def plot_group_averages_in_hours(df: pd.DataFrame, group_col: str = "Summary"):
 
@@ -456,10 +415,6 @@ def plot_group_averages_in_hours(df: pd.DataFrame, group_col: str = "Summary"):
 
     plt.tight_layout()
     #plt.show()
-
-
-
-
 
 
 def get_summary_color_map(df, palette_name="tab10"):

@@ -1,0 +1,50 @@
+### Motivation
+The statement suggests an association between low intracellular histidine levels and decreased resistance to zinc dichloride in Saccharomyces cerevisiae. To explore this association, we will design an experiment to modulate intracellular histidine levels and assess the impact on resistance to zinc dichloride.
+
+### Hypothesis
+Cells with reduced intracellular histidine levels will exhibit decreased resistance to zinc dichloride due to histidine's potential role in metal ion chelation or in maintaining cellular homeostasis under stress conditions.
+
+### Experimental Plan
+
+1. **Base Media**: Use minimal media without amino acids to ensure controlled supplementation.
+
+2. **Histidine Supplementation Levels**:
+   - **Control**: No histidine supplementation.
+   - **Low Histidine**: 0.1 mM histidine.
+   - **High Histidine**: 5 mM histidine (supraphysiological level).
+
+3. **Zinc Dichloride Treatment**:
+   - **Control**: No zinc dichloride.
+   - **Zinc Dichloride**: 2 mM zinc dichloride.
+
+4. **Negative Control**: Include a minimal media condition with 5 mM arginine (equimolar to the highest histidine level) to ensure the observed effects are specific to histidine modulation.
+
+5. **Experimental Setup**: 
+   - Each well will be inoculated with the reference/wild-type prototrophic S. cerevisiae strain.
+   - Conduct the experiment at 30°C with shaking to ensure proper aeration and mixing.
+   - Measure OD600 every 20 minutes to assess growth dynamics.
+   - At the end of the 20-hour period, perform mass spectrometry-based metabolomics to measure intracellular histidine levels and assess zinc dichloride resistance.
+
+6. **Condition Combinations**:
+   - (1) Control histidine, no zinc dichloride.
+   - (2) Low histidine, no zinc dichloride.
+   - (3) High histidine, no zinc dichloride.
+   - (4) Control histidine, zinc dichloride.
+   - (5) Low histidine, zinc dichloride.
+   - (6) High histidine, zinc dichloride.
+   - (7) Arginine control, no zinc dichloride.
+   - (8) Arginine control, zinc dichloride.
+
+### Expected Outcomes
+
+- **Growth and Viability**: 
+  - In the presence of zinc dichloride, cells with low histidine levels are expected to show decreased growth and viability compared to those with high histidine levels, supporting the hypothesis.
+  - The arginine control should not show significant changes in resistance, confirming the specificity of histidine's role.
+
+- **Intracellular Histidine Levels**:
+  - Mass spectrometry should confirm lower intracellular histidine levels in the low histidine supplementation condition compared to the high histidine condition.
+
+- **Resistance to Zinc Dichloride**:
+  - Cells with high histidine levels are expected to maintain better growth and viability in the presence of zinc dichloride compared to those with low histidine levels, indicating a protective role of histidine.
+
+By systematically varying histidine levels and assessing the response to zinc dichloride, this experiment aims to elucidate the association between histidine and chemical resistance in S. cerevisiae.

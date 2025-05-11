@@ -1,0 +1,51 @@
+### Motivation
+
+The statement suggests an association between lower levels of intracellular histidine and decreased resistance to zinc dichloride in Saccharomyces cerevisiae. Histidine is an amino acid that plays a role in various metabolic pathways, including protein synthesis and metal ion binding. Understanding whether histidine levels influence resistance to zinc dichloride could provide insights into the cellular mechanisms that confer chemical resistance.
+
+### Hypothesis
+
+Lower intracellular levels of histidine reduce the ability of Saccharomyces cerevisiae to resist zinc dichloride by impairing metal ion detoxification processes or by affecting protein synthesis pathways that are critical for stress response.
+
+### Experimental Plan
+
+**Baseline Conditions:**
+- Use minimal media without amino acids as the base medium.
+
+**Supplementation Levels:**
+- Control: No histidine supplementation.
+- Low Histidine: 0.1 mM histidine.
+- High Histidine: 2 mM histidine (supraphysiological concentration).
+
+**Zinc Dichloride Treatment Levels:**
+- Control: No zinc dichloride.
+- Zinc Dichloride: 1 mM zinc dichloride.
+
+**Negative Control:**
+- 2 mM proline supplementation in minimal media without zinc dichloride, as proline is not directly involved in metal ion detoxification.
+
+**Experimental Combinations:**
+1. No histidine, no zinc dichloride (baseline control).
+2. No histidine, 1 mM zinc dichloride.
+3. 0.1 mM histidine, no zinc dichloride.
+4. 0.1 mM histidine, 1 mM zinc dichloride.
+5. 2 mM histidine, no zinc dichloride.
+6. 2 mM histidine, 1 mM zinc dichloride.
+7. 2 mM proline, no zinc dichloride (negative control).
+8. 2 mM proline, 1 mM zinc dichloride (treated negative control).
+
+**Procedure:**
+1. Prepare 96-well plates with the above combinations, ensuring appropriate replicates for statistical analysis.
+2. Inoculate each well with a standardized concentration of Saccharomyces cerevisiae cells.
+3. Incubate at 30°C with shaking.
+4. Measure OD600 every 20 minutes to monitor growth.
+5. After 20 hours, terminate the experiment and use mass spectrometry-based metabolomics to measure intracellular histidine levels and any changes in zinc accumulation.
+
+### Expected Outcomes
+
+- **Control (No Histidine, No Zinc Dichloride):** Normal growth, serves as a baseline for comparison.
+- **No Histidine, 1 mM Zinc Dichloride:** Expect decreased growth, indicating decreased resistance due to lack of histidine.
+- **0.1 mM Histidine, 1 mM Zinc Dichloride:** Partial restoration of resistance, suggesting a dose-dependent effect of histidine on zinc resistance.
+- **2 mM Histidine, 1 mM Zinc Dichloride:** Potential full restoration or enhancement of resistance, supporting the hypothesis that histidine levels affect zinc resistance.
+- **Proline Controls:** No significant change in resistance, confirming that the observed effects are specific to histidine.
+
+This experimental setup allows us to evaluate the association between histidine levels and zinc dichloride resistance, while controlling for other variables and ensuring that the effect is specific to histidine.

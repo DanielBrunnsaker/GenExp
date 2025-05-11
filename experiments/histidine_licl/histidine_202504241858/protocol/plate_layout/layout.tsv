@@ -1,0 +1,97 @@
+	plateID	well	CONCuM	Summary
+0	plate_1	A01	Histidine: 5 mM & Zinc dichloride: 0 mM	High histidine supplementation control with 5 mM histidine, no zinc dichloride treatment.
+1	plate_1	A02	Media control	
+2	plate_1	A03	Proline: 5 mM & Zinc dichloride: 0 mM	Negative control with 5 mM proline supplementation, no zinc dichloride treatment.
+3	plate_1	A04	Histidine: 0.5 mM & Zinc dichloride: 0 mM	Low histidine supplementation control with 0.5 mM histidine, no zinc dichloride treatment.
+4	plate_1	A05	Histidine: 5 mM & Zinc dichloride: 0.5 mM	Experiment with high histidine supplementation (5 mM) and zinc dichloride treatment (0.5 mM).
+5	plate_1	A06	Histidine: 0.5 mM & Zinc dichloride: 0.5 mM	Experiment with low histidine supplementation (0.5 mM) and zinc dichloride treatment (0.5 mM).
+6	plate_1	A07	Histidine: 5 mM & Zinc dichloride: 0.5 mM	Experiment with high histidine supplementation (5 mM) and zinc dichloride treatment (0.5 mM).
+7	plate_1	A08	None: 0 mM & Zinc dichloride: 0 mM	Baseline control with minimal media, no supplementation or treatment.
+8	plate_1	A09	Histidine: 5 mM & Zinc dichloride: 0.5 mM	Experiment with high histidine supplementation (5 mM) and zinc dichloride treatment (0.5 mM).
+9	plate_1	A10	Media control	
+10	plate_1	A11	Proline: 5 mM & Zinc dichloride: 0.5 mM	Negative control with 5 mM proline supplementation and zinc dichloride treatment (0.5 mM).
+11	plate_1	A12	None: 0 mM & Zinc dichloride: 0.5 mM	Zinc dichloride treatment control with 0.5 mM zinc dichloride, no histidine supplementation.
+12	plate_1	B01	Histidine: 0.5 mM & Zinc dichloride: 0 mM	Low histidine supplementation control with 0.5 mM histidine, no zinc dichloride treatment.
+13	plate_1	B02	Histidine: 0.5 mM & Zinc dichloride: 0.5 mM	Experiment with low histidine supplementation (0.5 mM) and zinc dichloride treatment (0.5 mM).
+14	plate_1	B03	Histidine: 5 mM & Zinc dichloride: 0 mM	High histidine supplementation control with 5 mM histidine, no zinc dichloride treatment.
+15	plate_1	B04	Histidine: 5 mM & Zinc dichloride: 0.5 mM	Experiment with high histidine supplementation (5 mM) and zinc dichloride treatment (0.5 mM).
+16	plate_1	B05	Media control	
+17	plate_1	B06	Proline: 5 mM & Zinc dichloride: 0.5 mM	Negative control with 5 mM proline supplementation and zinc dichloride treatment (0.5 mM).
+18	plate_1	B07	Media control	
+19	plate_1	B08	Histidine: 0.5 mM & Zinc dichloride: 0 mM	Low histidine supplementation control with 0.5 mM histidine, no zinc dichloride treatment.
+20	plate_1	B09	Proline: 5 mM & Zinc dichloride: 0 mM	Negative control with 5 mM proline supplementation, no zinc dichloride treatment.
+21	plate_1	B10	None: 0 mM & Zinc dichloride: 0.5 mM	Zinc dichloride treatment control with 0.5 mM zinc dichloride, no histidine supplementation.
+22	plate_1	B11	Histidine: 5 mM & Zinc dichloride: 0 mM	High histidine supplementation control with 5 mM histidine, no zinc dichloride treatment.
+23	plate_1	B12	None: 0 mM & Zinc dichloride: 0 mM	Baseline control with minimal media, no supplementation or treatment.
+24	plate_1	C01	Proline: 5 mM & Zinc dichloride: 0 mM	Negative control with 5 mM proline supplementation, no zinc dichloride treatment.
+25	plate_1	C02	Histidine: 5 mM & Zinc dichloride: 0.5 mM	Experiment with high histidine supplementation (5 mM) and zinc dichloride treatment (0.5 mM).
+26	plate_1	C03	None: 0 mM & Zinc dichloride: 0 mM	Baseline control with minimal media, no supplementation or treatment.
+27	plate_1	C04	Media control	
+28	plate_1	C05	Histidine: 5 mM & Zinc dichloride: 0 mM	High histidine supplementation control with 5 mM histidine, no zinc dichloride treatment.
+29	plate_1	C06	None: 0 mM & Zinc dichloride: 0.5 mM	Zinc dichloride treatment control with 0.5 mM zinc dichloride, no histidine supplementation.
+30	plate_1	C07	Histidine: 0.5 mM & Zinc dichloride: 0 mM	Low histidine supplementation control with 0.5 mM histidine, no zinc dichloride treatment.
+31	plate_1	C08	Media control	
+32	plate_1	C09	None: 0 mM & Zinc dichloride: 0.5 mM	Zinc dichloride treatment control with 0.5 mM zinc dichloride, no histidine supplementation.
+33	plate_1	C10	Histidine: 0.5 mM & Zinc dichloride: 0 mM	Low histidine supplementation control with 0.5 mM histidine, no zinc dichloride treatment.
+34	plate_1	C11	Histidine: 0.5 mM & Zinc dichloride: 0.5 mM	Experiment with low histidine supplementation (0.5 mM) and zinc dichloride treatment (0.5 mM).
+35	plate_1	C12	Proline: 5 mM & Zinc dichloride: 0.5 mM	Negative control with 5 mM proline supplementation and zinc dichloride treatment (0.5 mM).
+36	plate_1	D01	Proline: 5 mM & Zinc dichloride: 0.5 mM	Negative control with 5 mM proline supplementation and zinc dichloride treatment (0.5 mM).
+37	plate_1	D02	None: 0 mM & Zinc dichloride: 0.5 mM	Zinc dichloride treatment control with 0.5 mM zinc dichloride, no histidine supplementation.
+38	plate_1	D03	Media control	
+39	plate_1	D04	None: 0 mM & Zinc dichloride: 0 mM	Baseline control with minimal media, no supplementation or treatment.
+40	plate_1	D05	None: 0 mM & Zinc dichloride: 0 mM	Baseline control with minimal media, no supplementation or treatment.
+41	plate_1	D06	Histidine: 5 mM & Zinc dichloride: 0.5 mM	Experiment with high histidine supplementation (5 mM) and zinc dichloride treatment (0.5 mM).
+42	plate_1	D07	Proline: 5 mM & Zinc dichloride: 0 mM	Negative control with 5 mM proline supplementation, no zinc dichloride treatment.
+43	plate_1	D08	Histidine: 0.5 mM & Zinc dichloride: 0.5 mM	Experiment with low histidine supplementation (0.5 mM) and zinc dichloride treatment (0.5 mM).
+44	plate_1	D09	Histidine: 0.5 mM & Zinc dichloride: 0 mM	Low histidine supplementation control with 0.5 mM histidine, no zinc dichloride treatment.
+45	plate_1	D10	Histidine: 5 mM & Zinc dichloride: 0 mM	High histidine supplementation control with 5 mM histidine, no zinc dichloride treatment.
+46	plate_1	D11	Media control	
+47	plate_1	D12	Histidine: 0.5 mM & Zinc dichloride: 0.5 mM	Experiment with low histidine supplementation (0.5 mM) and zinc dichloride treatment (0.5 mM).
+48	plate_1	E01	Histidine: 0.5 mM & Zinc dichloride: 0.5 mM	Experiment with low histidine supplementation (0.5 mM) and zinc dichloride treatment (0.5 mM).
+49	plate_1	E02	Media control	
+50	plate_1	E03	Histidine: 0.5 mM & Zinc dichloride: 0 mM	Low histidine supplementation control with 0.5 mM histidine, no zinc dichloride treatment.
+51	plate_1	E04	Histidine: 5 mM & Zinc dichloride: 0 mM	High histidine supplementation control with 5 mM histidine, no zinc dichloride treatment.
+52	plate_1	E05	Proline: 5 mM & Zinc dichloride: 0.5 mM	Negative control with 5 mM proline supplementation and zinc dichloride treatment (0.5 mM).
+53	plate_1	E06	None: 0 mM & Zinc dichloride: 0 mM	Baseline control with minimal media, no supplementation or treatment.
+54	plate_1	E07	None: 0 mM & Zinc dichloride: 0.5 mM	Zinc dichloride treatment control with 0.5 mM zinc dichloride, no histidine supplementation.
+55	plate_1	E08	Histidine: 5 mM & Zinc dichloride: 0 mM	High histidine supplementation control with 5 mM histidine, no zinc dichloride treatment.
+56	plate_1	E09	Histidine: 0.5 mM & Zinc dichloride: 0.5 mM	Experiment with low histidine supplementation (0.5 mM) and zinc dichloride treatment (0.5 mM).
+57	plate_1	E10	Histidine: 5 mM & Zinc dichloride: 0.5 mM	Experiment with high histidine supplementation (5 mM) and zinc dichloride treatment (0.5 mM).
+58	plate_1	E11	Proline: 5 mM & Zinc dichloride: 0 mM	Negative control with 5 mM proline supplementation, no zinc dichloride treatment.
+59	plate_1	E12	Media control	
+60	plate_1	F01	None: 0 mM & Zinc dichloride: 0.5 mM	Zinc dichloride treatment control with 0.5 mM zinc dichloride, no histidine supplementation.
+61	plate_1	F02	Histidine: 0.5 mM & Zinc dichloride: 0 mM	Low histidine supplementation control with 0.5 mM histidine, no zinc dichloride treatment.
+62	plate_1	F03	Proline: 5 mM & Zinc dichloride: 0.5 mM	Negative control with 5 mM proline supplementation and zinc dichloride treatment (0.5 mM).
+63	plate_1	F04	Media control	
+64	plate_1	F05	Proline: 5 mM & Zinc dichloride: 0 mM	Negative control with 5 mM proline supplementation, no zinc dichloride treatment.
+65	plate_1	F06	Histidine: 5 mM & Zinc dichloride: 0 mM	High histidine supplementation control with 5 mM histidine, no zinc dichloride treatment.
+66	plate_1	F07	None: 0 mM & Zinc dichloride: 0 mM	Baseline control with minimal media, no supplementation or treatment.
+67	plate_1	F08	None: 0 mM & Zinc dichloride: 0.5 mM	Zinc dichloride treatment control with 0.5 mM zinc dichloride, no histidine supplementation.
+68	plate_1	F09	Media control	
+69	plate_1	F10	Histidine: 0.5 mM & Zinc dichloride: 0.5 mM	Experiment with low histidine supplementation (0.5 mM) and zinc dichloride treatment (0.5 mM).
+70	plate_1	F11	None: 0 mM & Zinc dichloride: 0 mM	Baseline control with minimal media, no supplementation or treatment.
+71	plate_1	F12	Histidine: 5 mM & Zinc dichloride: 0.5 mM	Experiment with high histidine supplementation (5 mM) and zinc dichloride treatment (0.5 mM).
+72	plate_1	G01	Media control	
+73	plate_1	G02	None: 0 mM & Zinc dichloride: 0 mM	Baseline control with minimal media, no supplementation or treatment.
+74	plate_1	G03	None: 0 mM & Zinc dichloride: 0.5 mM	Zinc dichloride treatment control with 0.5 mM zinc dichloride, no histidine supplementation.
+75	plate_1	G04	Proline: 5 mM & Zinc dichloride: 0.5 mM	Negative control with 5 mM proline supplementation and zinc dichloride treatment (0.5 mM).
+76	plate_1	G05	Histidine: 0.5 mM & Zinc dichloride: 0 mM	Low histidine supplementation control with 0.5 mM histidine, no zinc dichloride treatment.
+77	plate_1	G06	Proline: 5 mM & Zinc dichloride: 0 mM	Negative control with 5 mM proline supplementation, no zinc dichloride treatment.
+78	plate_1	G07	Histidine: 0.5 mM & Zinc dichloride: 0.5 mM	Experiment with low histidine supplementation (0.5 mM) and zinc dichloride treatment (0.5 mM).
+79	plate_1	G08	Proline: 5 mM & Zinc dichloride: 0.5 mM	Negative control with 5 mM proline supplementation and zinc dichloride treatment (0.5 mM).
+80	plate_1	G09	Proline: 5 mM & Zinc dichloride: 0.5 mM	Negative control with 5 mM proline supplementation and zinc dichloride treatment (0.5 mM).
+81	plate_1	G10	Media control	
+82	plate_1	G11	Histidine: 5 mM & Zinc dichloride: 0.5 mM	Experiment with high histidine supplementation (5 mM) and zinc dichloride treatment (0.5 mM).
+83	plate_1	G12	Histidine: 5 mM & Zinc dichloride: 0 mM	High histidine supplementation control with 5 mM histidine, no zinc dichloride treatment.
+84	plate_1	H01	None: 0 mM & Zinc dichloride: 0 mM	Baseline control with minimal media, no supplementation or treatment.
+85	plate_1	H02	Proline: 5 mM & Zinc dichloride: 0 mM	Negative control with 5 mM proline supplementation, no zinc dichloride treatment.
+86	plate_1	H03	Histidine: 0.5 mM & Zinc dichloride: 0.5 mM	Experiment with low histidine supplementation (0.5 mM) and zinc dichloride treatment (0.5 mM).
+87	plate_1	H04	Proline: 5 mM & Zinc dichloride: 0 mM	Negative control with 5 mM proline supplementation, no zinc dichloride treatment.
+88	plate_1	H05	None: 0 mM & Zinc dichloride: 0.5 mM	Zinc dichloride treatment control with 0.5 mM zinc dichloride, no histidine supplementation.
+89	plate_1	H06	Media control	
+90	plate_1	H07	Proline: 5 mM & Zinc dichloride: 0.5 mM	Negative control with 5 mM proline supplementation and zinc dichloride treatment (0.5 mM).
+91	plate_1	H08	Histidine: 5 mM & Zinc dichloride: 0.5 mM	Experiment with high histidine supplementation (5 mM) and zinc dichloride treatment (0.5 mM).
+92	plate_1	H09	Histidine: 5 mM & Zinc dichloride: 0 mM	High histidine supplementation control with 5 mM histidine, no zinc dichloride treatment.
+93	plate_1	H10	Proline: 5 mM & Zinc dichloride: 0 mM	Negative control with 5 mM proline supplementation, no zinc dichloride treatment.
+94	plate_1	H11	Media control	
+95	plate_1	H12	Histidine: 0.5 mM & Zinc dichloride: 0 mM	Low histidine supplementation control with 0.5 mM histidine, no zinc dichloride treatment.

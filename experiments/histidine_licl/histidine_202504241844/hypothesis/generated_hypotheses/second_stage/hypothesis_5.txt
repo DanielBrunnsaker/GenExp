@@ -1,0 +1,45 @@
+### Motivation
+
+The statement suggests an association between lower intracellular levels of histidine and decreased resistance to zinc dichloride in Saccharomyces cerevisiae. Histidine is an essential amino acid involved in various cellular processes, including metal ion homeostasis. Zinc is a crucial trace element, but excessive levels can be toxic. Understanding the relationship between histidine levels and zinc resistance could provide insights into metabolic and stress response pathways in yeast.
+
+### Hypothesis
+
+Lower intracellular histidine levels reduce the ability of S. cerevisiae cells to resist zinc dichloride toxicity, possibly due to impaired metal ion buffering or transport processes that involve histidine residues.
+
+### Experimental Plan
+
+1. **Strain and Media Preparation:**
+   - Use a wild-type prototrophic strain of S. cerevisiae.
+   - Prepare minimal media without amino acids as the base condition.
+
+2. **Histidine Supplementation:**
+   - Level 1: No histidine supplementation (control).
+   - Level 2: 50 µM histidine (physiological concentration).
+   - Level 3: 500 µM histidine (supraphysiological concentration).
+
+3. **Zinc Dichloride Treatment:**
+   - Level 1: No zinc dichloride (control).
+   - Level 2: 2 mM zinc dichloride (to induce stress).
+
+4. **Negative Control:**
+   - Include a negative control with 50 µM of an amino acid not involved in zinc resistance, such as lysine, to account for any non-specific amino acid effects.
+
+5. **Experimental Setup:**
+   - Set up 96-well plates with combinations of histidine supplementation and zinc dichloride treatment:
+     - 3 histidine levels x 2 zinc dichloride levels = 6 conditions.
+     - Include treated and untreated lysine controls (2 conditions).
+   - Total of 8 conditions.
+
+6. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth.
+   - At the end of the experiment (20 hours), use mass spectrometry-based metabolomics to measure intracellular histidine levels and assess zinc accumulation.
+
+7. **Assumptions Verification:**
+   - Confirm that histidine supplementation effectively modulates intracellular histidine levels using mass spectrometry.
+
+### Expected Outcomes
+
+- If lower histidine levels are indeed associated with decreased resistance to zinc dichloride, we expect to see reduced growth in wells with no histidine supplementation when exposed to zinc dichloride.
+- Wells supplemented with higher histidine concentrations should show improved growth under zinc stress compared to the control, indicating increased resistance.
+- The lysine negative control should not exhibit significant changes in zinc resistance, confirming the specificity of the histidine effect.
+- Mass spectrometry should reveal a correlation between intracellular histidine levels and zinc accumulation, supporting the hypothesis that histidine modulates zinc resistance mechanisms.

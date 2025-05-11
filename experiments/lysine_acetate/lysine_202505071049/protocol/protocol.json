@@ -1,0 +1,93 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,acetic acid)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal medium without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "control",
+            "summary": "Baseline condition with no supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal medium without amino acids",
+            "media_supplementation": "Lysine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Low lysine supplementation without acetic acid treatment."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal medium without amino acids",
+            "media_supplementation": "Lysine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "High lysine supplementation without acetic acid treatment."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal medium without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "Acetic acid",
+            "treatment_parameters": "20 mM",
+            "sampling_time": 20.0,
+            "type": "treatment control",
+            "summary": "Acetic acid treatment without lysine supplementation."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal medium without amino acids",
+            "media_supplementation": "Lysine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "Acetic acid",
+            "treatment_parameters": "20 mM",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Low lysine supplementation with acetic acid treatment."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal medium without amino acids",
+            "media_supplementation": "Lysine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Acetic acid",
+            "treatment_parameters": "20 mM",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "High lysine supplementation with acetic acid treatment."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "Minimal medium without amino acids",
+            "media_supplementation": "Threonine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Threonine supplementation without acetic acid treatment."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "Minimal medium without amino acids",
+            "media_supplementation": "Threonine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Acetic acid",
+            "treatment_parameters": "20 mM",
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Threonine supplementation with acetic acid treatment."
+        }
+    ]
+}

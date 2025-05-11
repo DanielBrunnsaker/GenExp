@@ -1,0 +1,9 @@
+class,mean_f1,std_f1
+Baseline growth with no supplementation or treatment.,0.8253034514505103,0.13376943615715778
+Growth with alanine supplementation and spermine treatment.,0.33819191919191915,0.26080848518988026
+"Growth with alanine supplementation, no spermine treatment.",0.5838199578199577,0.1659786926914079
+Growth with high glutamate supplementation and spermine treatment.,0.5906861471861472,0.180984887030279
+"Growth with high glutamate supplementation, no spermine treatment.",0.33264158064158067,0.22098945726839184
+Growth with low glutamate supplementation and spermine treatment.,0.14359523809523808,0.24137891867692074
+"Growth with low glutamate supplementation, no spermine treatment.",0.3434059274059274,0.23681762869416348
+"Growth with spermine treatment, no supplementation.",0.7466339771339772,0.15205928429687895

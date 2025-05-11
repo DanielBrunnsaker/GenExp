@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,acetic acid)",
+    "observable": "glutamine",
+    "qualifier": "lower",
+    "coefficient": -0.4851223965215104,
+    "initial_prompt": "2. Cells with lower levels of intracellular glutamine in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'acetic acid')"
+}

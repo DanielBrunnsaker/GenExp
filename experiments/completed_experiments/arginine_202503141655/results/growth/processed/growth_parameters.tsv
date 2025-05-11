@@ -1,89 +1,87 @@
 	mu	AUC	MaxOD	Summary
-A1	0.10865626860878916	11945.532000000001	0.30898	Growth with lithium chloride treatment without arginine supplementation.
-A3	0.25336643290935673	60742.36000000001	2.1008533333333332	Growth with physiological level of arginine supplementation.
-A4	0.24207028363639643	52855.024000000005	2.0724933333333335	Growth with supraphysiological level of arginine supplementation.
-A6	0.143302106102082	8259.308	0.23427333333333333	Growth with supraphysiological level of arginine and lithium chloride treatment.
-A7	0.22967377643715783	49421.168	1.9952400000000001	Growth with alanine supplementation as a negative control.
-A8	0.24651484211357472	60982.272	2.234593333333333	Baseline growth without any supplementation or treatment.
-A9	0.22692341903212407	43629.252	1.9095266666666666	Growth with alanine supplementation as a negative control.
-A10	0.0	399.3679999999998	0.0	Media control
-A12	0.08848959695212842	7524.912	0.23074666666666666	Growth with physiological level of arginine and lithium chloride treatment.
-B1	0.23777810952369088	48516.632	1.971653333333333	Growth with supraphysiological level of arginine supplementation.
-B2	0.07930729152840156	6903.272	0.18455333333333332	Growth with supraphysiological level of arginine and lithium chloride treatment.
-B3	0.10199223664176427	8143.08	0.24385333333333334	Growth with lithium chloride treatment without arginine supplementation.
-B4	0.2394355267428033	51822.219999999994	2.02962	Growth with alanine supplementation as a negative control.
-B5	0.0	63.40799999999997	0.0	Media control
-B6	0.10046434116613139	4679.844000000001	0.14402666666666666	Growth with alanine supplementation and lithium chloride treatment as a negative control.
-B7	0.0	106.86800000000004	0.0	Media control
-B8	0.2390205014790821	52454.212	2.116726666666666	Growth with supraphysiological level of arginine supplementation.
-B9	0.2240655239436905	57841.452000000005	2.0923599999999998	Growth with physiological level of arginine supplementation.
-B10	0.0804264345389726	6874.6320000000005	0.18614666666666668	Growth with physiological level of arginine and lithium chloride treatment.
-B11	0.12881831116993067	10946.972000000002	0.33168000000000003	Growth with lithium chloride treatment without arginine supplementation.
-C1	0.21354317352876723	55796.152	1.9965	Growth with physiological level of arginine supplementation.
-C2	0.22397508526802287	52248.092	2.0439866666666666	Growth with alanine supplementation as a negative control.
-C3	0.23351859274544648	50554.772000000004	1.9997533333333337	Baseline growth without any supplementation or treatment.
-C4	0.0	297.8440000000001	0.0	Media control
-C5	0.10323574073213475	8797.604000000001	0.2689599999999999	Growth with lithium chloride treatment without arginine supplementation.
-C6	0.08328144012006718	9684.484	0.26466000000000006	Growth with physiological level of arginine and lithium chloride treatment.
-C7	0.2519766879072665	44453.168	1.8944733333333332	Growth with supraphysiological level of arginine supplementation.
-C8	0.0	313.15999999999997	0.0	Media control
-C9	0.09328651262480124	6651.7959999999985	0.1955933333333333	Growth with physiological level of arginine and lithium chloride treatment.
-C10	0.23822096457344918	42538.39199999999	1.8437133333333333	Growth with supraphysiological level of arginine supplementation.
-C11	0.1264780334030468	6179.191999999999	0.1977266666666667	Growth with supraphysiological level of arginine and lithium chloride treatment.
-C12	0.1363565096250225	6615.592000000001	0.21392	Growth with alanine supplementation and lithium chloride treatment as a negative control.
-D1	0.1283238321819163	6070.728000000001	0.18662666666666664	Growth with alanine supplementation and lithium chloride treatment as a negative control.
-D2	0.09596388890429638	7247.028	0.21342666666666668	Growth with physiological level of arginine and lithium chloride treatment.
-D3	0.0	455.924	0.0	Media control
-D4	0.24038710924047446	52684.492000000006	1.9700533333333332	Baseline growth without any supplementation or treatment.
-D5	0.22772648841717466	48079.97200000001	1.8816199999999998	Baseline growth without any supplementation or treatment.
-D6	0.2089365882145954	57065.59599999999	2.066933333333333	Growth with alanine supplementation as a negative control.
-D7	0.251122206921873	55822.664000000004	2.02698	Growth with physiological level of arginine supplementation.
-D8	0.0856568983832499	8260.556	0.23159333333333335	Growth with supraphysiological level of arginine and lithium chloride treatment.
-D9	0.240101481765598	40303.79600000001	1.7793599999999998	Growth with supraphysiological level of arginine supplementation.
-D10	0.15193325587006407	6790.252000000001	0.21182	Growth with lithium chloride treatment without arginine supplementation.
-D11	0.0	402.28000000000003	0.0	Media control
-D12	0.21575361954561081	5030.332	0.14954	Growth with supraphysiological level of arginine and lithium chloride treatment.
-E1	0.08696992292296699	8888.448	0.25632666666666665	Growth with supraphysiological level of arginine and lithium chloride treatment.
-E2	0.0	4.248000000000018	0.0	Media control
-E4	0.09571030883875206	9384.792000000001	0.27658	Growth with lithium chloride treatment without arginine supplementation.
-E5	0.12939392639051714	6905.232	0.22388	Growth with alanine supplementation and lithium chloride treatment as a negative control.
-E6	0.24044497473726484	67879.01599999999	2.3966266666666667	Baseline growth without any supplementation or treatment.
-E7	0.0915374597709718	11235.996000000001	0.3260266666666667	Growth with physiological level of arginine and lithium chloride treatment.
-E8	0.09404361943840717	5552.016	0.16062666666666667	Growth with lithium chloride treatment without arginine supplementation.
-E9	0.08541969971973247	6648.531999999999	0.20058666666666666	Growth with supraphysiological level of arginine and lithium chloride treatment.
-E10	0.22365952614301807	39292.652	1.7781200000000001	Growth with alanine supplementation as a negative control.
-E11	0.22397156695374554	53194.976	2.0063333333333335	Growth with physiological level of arginine supplementation.
-E12	0.0	1150.1560000000004	0.0	Media control
-F1	0.08846298270964628	8627.568000000001	0.23902666666666664	Growth with physiological level of arginine and lithium chloride treatment.
-F2	0.24275160849464356	47804.348000000005	1.9902266666666666	Growth with supraphysiological level of arginine supplementation.
-F4	0.0	45.42800000000006	0.0	Media control
-F6	0.10676809851372088	10181.980000000001	0.31176	Growth with lithium chloride treatment without arginine supplementation.
-F7	0.24268398698208005	50162.619999999995	1.9994866666666666	Baseline growth without any supplementation or treatment.
-F8	0.09463437940620213	5195.476	0.1559066666666667	Growth with physiological level of arginine and lithium chloride treatment.
-F9	0.0	7.732000000000056	0.0	Media control
-F10	0.10301855787190152	7185.836000000001	0.21273333333333333	Growth with supraphysiological level of arginine and lithium chloride treatment.
-F11	0.23471782703668545	53493.236000000004	2.0399	Baseline growth without any supplementation or treatment.
-F12	0.22328107867173397	39953.376000000004	1.7778	Growth with alanine supplementation as a negative control.
-G1	0.0	857.6280000000002	0.0	Media control
-G2	0.23701204607742118	64165.784	2.22674	Baseline growth without any supplementation or treatment.
-G3	0.08933084024264225	11945.503999999999	0.32544	Growth with physiological level of arginine and lithium chloride treatment.
-G4	0.10421867561014878	8241.004	0.26497333333333334	Growth with alanine supplementation and lithium chloride treatment as a negative control.
-G5	0.2481983726709049	43875.74399999999	1.9766066666666668	Growth with supraphysiological level of arginine supplementation.
-G6	0.22595070440789092	61887.336	2.367593333333333	Growth with physiological level of arginine supplementation.
-G7	0.09949719399506131	6662.44	0.20602	Growth with supraphysiological level of arginine and lithium chloride treatment.
-G8	0.12389185720037126	6620.776	0.21933333333333335	Growth with alanine supplementation and lithium chloride treatment as a negative control.
-G9	0.11865014528642286	5639.759999999998	0.18645333333333336	Growth with alanine supplementation and lithium chloride treatment as a negative control.
-G10	0.0	166.39199999999997	0.0	Media control
-G11	0.22514903941412046	47731.67600000001	1.990433333333333	Growth with alanine supplementation as a negative control.
-G12	0.17607096999868255	7168.596	0.23976666666666666	Growth with lithium chloride treatment without arginine supplementation.
-H1	0.23606752233335052	54814.484000000004	2.1360733333333335	Baseline growth without any supplementation or treatment.
-H3	0.09480968590801717	4484.124000000001	0.12915999999999997	Growth with supraphysiological level of arginine and lithium chloride treatment.
-H4	0.2249781588474195	57107.704	2.113773333333333	Growth with physiological level of arginine supplementation.
-H5	0.11063888939595971	7525.384	0.21127333333333334	Growth with physiological level of arginine and lithium chloride treatment.
-H6	0.0	388.084	0.0	Media control
-H7	0.11745368797388343	7591.584	0.25456666666666666	Growth with alanine supplementation and lithium chloride treatment as a negative control.
-H8	0.21746805844015063	53072.443999999996	2.0655666666666668	Growth with alanine supplementation as a negative control.
-H9	0.11157263266001716	12149.168	0.3628466666666667	Growth with lithium chloride treatment without arginine supplementation.
-H10	0.25498542355655657	60892.36800000001	2.1782266666666668	Growth with physiological level of arginine supplementation.
-H11	0.0	436.028	0.0	Media control
-H12	0.22740942296157174	36853.056	1.7462666666666664	Growth with supraphysiological level of arginine supplementation.
+A1	0.9346071552994883	11827.069070514248	0.308080617572048	Growth with lithium chloride treatment without arginine supplementation.
+A3	0.2568532662541188	60610.48747540759	2.1129121973427236	Growth with physiological level of arginine supplementation.
+A4	0.2402965675484061	53209.60814050048	2.082208247961785	Growth with supraphysiological level of arginine supplementation.
+A6	0.1193356903110418	8528.948565983741	0.23695739454747705	Growth with supraphysiological level of arginine and lithium chloride treatment.
+A7	0.22248490375369134	49584.46018600615	2.0115914489494244	Growth with alanine supplementation as a negative control.
+A8	0.23978008154568378	60834.157201654365	2.2292637094172107	Baseline growth without any supplementation or treatment.
+A9	0.21896532792450363	43797.34736180218	1.916581579249535	Growth with alanine supplementation as a negative control.
+A10	0.0	709.5455389116564	0.0	Media control
+A12	0.7113061640676304	7192.586232163118	0.2281034790164418	Growth with physiological level of arginine and lithium chloride treatment.
+B1	0.2385606859409268	48421.82697130168	1.9855046029644907	Growth with supraphysiological level of arginine supplementation.
+B2	0.07556067330955409	6790.793095753661	0.18640837795324347	Growth with supraphysiological level of arginine and lithium chloride treatment.
+B3	0.10793016862102493	7989.366312910148	0.24518611803136903	Growth with lithium chloride treatment without arginine supplementation.
+B4	0.2379146525956069	51723.47386575474	2.0563609384468373	Growth with alanine supplementation as a negative control.
+B5	0.0	567.3779540250788	0.0	Media control
+B6	0.07927694988676143	4906.178721521031	0.14454826019230055	Growth with alanine supplementation and lithium chloride treatment as a negative control.
+B7	0.0	662.1628505141529	0.0	Media control
+B8	0.30034445122001197	52372.131565612624	2.1360895268900544	Growth with supraphysiological level of arginine supplementation.
+B9	0.23456515354635424	57735.50949010278	2.1018461973044547	Growth with physiological level of arginine supplementation.
+B10	0.08299840992445746	6978.998202065837	0.1903420272998681	Growth with physiological level of arginine and lithium chloride treatment.
+B11	0.09443652606988104	11017.497576377049	0.33634725452238595	Growth with lithium chloride treatment without arginine supplementation.
+C1	0.4403810224768175	56137.40982489846	2.014444192790863	Growth with physiological level of arginine supplementation.
+C2	0.22435857613801355	52365.63847046982	2.0653447344694538	Growth with alanine supplementation as a negative control.
+C3	0.2317881374387178	50493.71273907844	2.006925269090481	Baseline growth without any supplementation or treatment.
+C4	0.0	527.0010525543364	0.0	Media control
+C5	0.09562066694400675	9023.372002445338	0.27045817118245075	Growth with lithium chloride treatment without arginine supplementation.
+C6	0.07676928935307115	9919.834428352638	0.2658325629316177	Growth with physiological level of arginine and lithium chloride treatment.
+C7	0.2434610523797085	44700.008534026885	1.8850730178014274	Growth with supraphysiological level of arginine supplementation.
+C8	0.0	556.8268716708714	0.0	Media control
+C9	0.09526338928447353	6514.615335965591	0.1931332723140922	Growth with physiological level of arginine and lithium chloride treatment.
+C10	0.23760324015061948	42612.86300207132	1.8475450640969284	Growth with supraphysiological level of arginine supplementation.
+C11	0.21987734166762254	5808.4892401936295	0.19285982664630857	Growth with supraphysiological level of arginine and lithium chloride treatment.
+C12	0.19286523175356682	6262.463204526324	0.2090798293195857	Growth with alanine supplementation and lithium chloride treatment as a negative control.
+D1	0.09663639354157794	5916.263952082669	0.18976144783905916	Growth with alanine supplementation and lithium chloride treatment as a negative control.
+D2	0.09067833457192168	7448.061190681092	0.21735973342797776	Growth with physiological level of arginine and lithium chloride treatment.
+D3	0.0	390.9197681016657	0.0	Media control
+D4	0.23761269652897626	52489.51466665789	1.9781705661503024	Baseline growth without any supplementation or treatment.
+D5	0.2294938749362252	47955.29632107565	1.8994016706373587	Baseline growth without any supplementation or treatment.
+D6	0.20561126837022373	57183.585669726606	2.0655772858386987	Growth with alanine supplementation as a negative control.
+D7	0.24494256795552274	55845.35067881213	2.035243446446028	Growth with physiological level of arginine supplementation.
+D8	0.07735522865476215	8542.743133493415	0.23690638856369367	Growth with supraphysiological level of arginine and lithium chloride treatment.
+D9	0.23346485410989976	40365.44092004251	1.790371169920995	Growth with supraphysiological level of arginine supplementation.
+D10	0.16443380802531385	6594.82053859112	0.21257842665570287	Growth with lithium chloride treatment without arginine supplementation.
+D11	0.0	755.4831044856609	0.0	Media control
+D12	0.10270616650689281	4721.563447735825	0.14746817211579175	Growth with supraphysiological level of arginine and lithium chloride treatment.
+E1	0.09044462576148041	8735.146800762172	0.25829054606729734	Growth with supraphysiological level of arginine and lithium chloride treatment.
+E2	0.0	687.4799999999994	0.0	Media control
+E4	0.10492627959453484	9206.327749080148	0.27761470742848604	Growth with lithium chloride treatment without arginine supplementation.
+E5	0.13643129219715017	6684.443640343922	0.22162685680591376	Growth with alanine supplementation and lithium chloride treatment as a negative control.
+E6	0.23407890393396666	67942.07137608371	2.419776787569879	Baseline growth without any supplementation or treatment.
+E7	0.08463127886525894	11376.671506605031	0.3324011538313535	Growth with physiological level of arginine and lithium chloride treatment.
+E8	0.15645703664037902	5506.325731319575	0.1617451134178082	Growth with lithium chloride treatment without arginine supplementation.
+E9	0.1686171325657531	7106.742757095316	0.20970564545311682	Growth with supraphysiological level of arginine and lithium chloride treatment.
+E10	0.22036033688315387	39354.230827213774	1.8017450324951751	Growth with alanine supplementation as a negative control.
+E11	0.21664723319755805	53436.94980913999	2.0268712988026945	Growth with physiological level of arginine supplementation.
+E12	0.0	1107.6655343508398	0.0	Media control
+F1	0.1392113134321806	8481.978704032235	0.24047819854606833	Growth with physiological level of arginine and lithium chloride treatment.
+F2	0.23849682164279962	47824.635638778636	1.9964333333333084	Growth with supraphysiological level of arginine supplementation.
+F4	0.0	571.6440668333943	0.0	Media control
+F6	0.09944621287128678	10292.979251699386	0.3116254418043132	Growth with lithium chloride treatment without arginine supplementation.
+F7	0.237633960389066	50470.49552713292	2.027516611009513	Baseline growth without any supplementation or treatment.
+F8	0.3303721239303922	5239.774422523576	0.15495264556483168	Growth with physiological level of arginine and lithium chloride treatment.
+F9	0.0	698.8799999999999	0.0	Media control
+F10	0.1182628525277215	7706.8022407970775	0.22167801769989215	Growth with supraphysiological level of arginine and lithium chloride treatment.
+F11	0.23077479228440592	53307.18496135765	2.068585791856716	Baseline growth without any supplementation or treatment.
+F12	0.22100880876465467	39797.43995196562	1.7922879625249448	Growth with alanine supplementation as a negative control.
+G1	0.0	889.2123743600081	0.0	Media control
+G2	0.2283107867732985	64395.78860261027	2.2508333333333352	Baseline growth without any supplementation or treatment.
+G4	0.09666299488128231	8538.450428879381	0.26772788473727016	Growth with alanine supplementation and lithium chloride treatment as a negative control.
+G5	0.23987890194829647	43952.86405858814	1.9572333333333407	Growth with supraphysiological level of arginine supplementation.
+G7	0.09901129317592908	6646.766349689688	0.2061957464818618	Growth with supraphysiological level of arginine and lithium chloride treatment.
+G8	0.1243608312787409	6851.173417239024	0.21964574405958498	Growth with alanine supplementation and lithium chloride treatment as a negative control.
+G9	0.1054097549465234	5680.1722464101695	0.18761234149097006	Growth with alanine supplementation and lithium chloride treatment as a negative control.
+G10	0.0	357.6003057503465	0.0	Media control
+G11	0.22118262367390298	47256.83078648391	1.9917358814560833	Growth with alanine supplementation as a negative control.
+G12	0.23460728597480673	6753.097778009892	0.2331069128186218	Growth with lithium chloride treatment without arginine supplementation.
+H1	0.22928983704994163	54884.50073874055	2.1164317263578285	Baseline growth without any supplementation or treatment.
+H3	0.09539165828504735	4309.40319808526	0.12653006441705938	Growth with supraphysiological level of arginine and lithium chloride treatment.
+H4	0.23403926658172305	56885.163625788286	2.145404603846918	Growth with physiological level of arginine supplementation.
+H5	0.1068274506627296	7337.979926950629	0.20968440264671143	Growth with physiological level of arginine and lithium chloride treatment.
+H6	0.0	606.6254115088894	0.0	Media control
+H7	0.1073890262251833	7710.337047072063	0.2592563868631881	Growth with alanine supplementation and lithium chloride treatment as a negative control.
+H8	0.21691146378387005	53125.87620870522	2.082861169208911	Growth with alanine supplementation as a negative control.
+H9	0.11015163707632791	12438.825942230444	0.3683889536129388	Growth with lithium chloride treatment without arginine supplementation.
+H10	0.2471252483993516	61217.47911847207	2.223025379715174	Growth with physiological level of arginine supplementation.
+H11	0.0	653.3401938492319	0.0	Media control
+H12	0.22636578528206613	36434.11875030153	1.7593489070580195	Growth with supraphysiological level of arginine supplementation.

@@ -1,0 +1,8 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,zinc dichloride)",
+    "observable": "histidine",
+    "qualifier": "lower",
+    "coefficient": -0.5432560152480914,
+    "initial_prompt": "5. Cells with lower levels of intracellular histidine in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'zinc dichloride')",
+    "motivation": "not applicable"
+}

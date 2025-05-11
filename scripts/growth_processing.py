@@ -60,13 +60,13 @@ plt.close()    # close the figure window
 
 '''
 
+import config
+from utils.processing_utils import *
+import argparse
+from pathlib import Path
+import matplotlib.pyplot as plt
 from growth_stat_testing import growth_testing  # , two_way_anova_testing
 import pandas as pd
-import matplotlib.pyplot as plt
-from pathlib import Path
-import argparse
-from utils.processing_utils import *
-import config
 
 
 EXPERIMENT_DIR = Path(
@@ -76,6 +76,10 @@ EXPERIMENT_DIR = Path(
 # def save_plots(EXPERIMENT_DIR, growth_curves_filtered_smoothed,unfiltered_growth_curves_smoothed, violinplot_df, mu_per_well):
 
 
+# EXPERIMENT_DIR = Path('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/good caffeine/arginine_202503131539')
+
+# @task
+# def save_plots(EXPERIMENT_DIR, growth_curves_filtered_smoothed,unfiltered_growth_curves_smoothed, violinplot_df, mu_per_well):
 def save_plots(EXPERIMENT_DIR, growth_curves_filtered_smoothed, raw_growth_curves, violinplot_df, mu_per_well, layout):
 
     raw_growth_curves.index = raw_growth_curves.index.map(
@@ -266,3 +270,14 @@ if __name__ == "__main__":
 
     # Example:
     # python growth_processing.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_202501281618" --testing yes
+
+    # EXPERIMENT_DIR = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_202504291411'
+    '''
+     df = raw_growth_curves.copy()
+     df.index = df.index.map(lambda x: unify_well_format(str(x)))
+     layout_rev = layout.copy()
+     layout_rev['well'] = layout_rev['well'].astype(str).apply(unify_well_format)
+     
+     # Merge layout information (e.g. Summary) into the data.
+     df = df.merge(layout_rev[['well', 'Summary']], left_index=True, right_on='well').set_index('well')
+    '''

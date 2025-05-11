@@ -1,0 +1,42 @@
+**Motivation:**
+The statement suggests an association between higher intracellular lysine levels and decreased resistance to acetic acid in Saccharomyces cerevisiae. Understanding this relationship could provide insights into how lysine metabolism influences stress responses in yeast, particularly in environments with acetic acid, a common stressor in fermentation processes.
+
+**Hypothesis:**
+Increased intracellular lysine levels in Saccharomyces cerevisiae lead to decreased resistance to acetic acid, possibly due to lysine's role in cellular metabolism and stress response pathways. This hypothesis will be tested by modulating lysine levels and observing changes in acetic acid resistance.
+
+**Experimental Plan:**
+1. **Strain and Media:**
+   - Use a reference/wild-type prototrophic Saccharomyces cerevisiae strain.
+   - Baseline media: Minimal media without amino acids.
+
+2. **Supplementation Levels:**
+   - Lysine supplementation: 
+     - Control (0 mM lysine)
+     - Physiological level (1 mM lysine)
+     - Supraphysiological level (10 mM lysine)
+
+3. **Acetic Acid Treatment Levels:**
+   - Control (0% acetic acid)
+   - Treatment (0.5% acetic acid)
+
+4. **Negative Control:**
+   - Use leucine at 10 mM as a negative control to ensure the specificity of lysine's effect. Leucine is chosen because it is not directly involved in the same metabolic pathways as lysine.
+
+5. **Experimental Conditions:**
+   - Inoculate yeast in 96-well plates with the specified media and supplementations at t=0h.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes to monitor growth curves.
+   - After 20 hours, terminate the experiment and perform mass spectrometry-based metabolomics to measure intracellular lysine concentrations.
+
+6. **Variable Combinations:**
+   - Lysine levels: 0 mM, 1 mM, 10 mM
+   - Acetic acid levels: 0%, 0.5%
+   - Negative control: 10 mM leucine with 0% and 0.5% acetic acid
+
+   Total conditions: 3 lysine levels x 2 acetic acid levels + 2 leucine control conditions = 8 conditions
+
+**Expected Outcomes:**
+- Increased intracellular lysine levels (1 mM and 10 mM) are expected to correlate with decreased resistance to acetic acid, indicated by reduced growth in the presence of 0.5% acetic acid compared to the control.
+- The negative control with leucine should not show the same decrease in resistance, supporting the specificity of lysine's effect.
+- Mass spectrometry will confirm that intracellular lysine levels correspond to the supplementation levels, validating the modulation approach.
+- If the hypothesis is correct, the results will show a dose-dependent decrease in acetic acid resistance with increasing lysine levels, while the leucine control will exhibit normal resistance levels, indicating that the effect is specific to lysine.

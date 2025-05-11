@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased hyperosmotic stress resistance,B,C),compound_name(B,sucrose),condition(C,Media containing 30% (w/v) sucrose)",
+    "observable": "lysine",
+    "qualifier": "higher",
+    "coefficient": 1.0,
+    "initial_prompt": "0. Cells with higher levels of intracellular lysine in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'decreased hyperosmotic stress resistance',B,C),compound_name(B,sucrose),condition(C,'Media containing 30% (w/v) sucrose')"
+}

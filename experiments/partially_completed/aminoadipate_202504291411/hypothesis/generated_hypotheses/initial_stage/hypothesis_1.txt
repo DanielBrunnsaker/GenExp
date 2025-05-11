@@ -1,0 +1,38 @@
+**Motivation:**
+The statement suggests an association between higher intracellular levels of aminoadipate and increased resistance to formic acid in Saccharomyces cerevisiae. Understanding this association could provide insights into metabolic pathways that confer resistance to toxic compounds, which is valuable for industrial applications where yeast is exposed to harsh chemical environments.
+
+**Hypothesis:**
+Increasing the intracellular levels of aminoadipate in Saccharomyces cerevisiae enhances its resistance to 10 mM formic acid. This could be due to aminoadipate's role in metabolic pathways that mitigate formic acid's toxic effects.
+
+**Experimental Plan:**
+
+1. **Strain and Media:**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Baseline media: Minimal media without amino acids.
+
+2. **Supplementation Levels:**
+   - Control: No aminoadipate supplementation.
+   - Low aminoadipate: 1 mM aminoadipate.
+   - High aminoadipate: 5 mM aminoadipate (supraphysiological concentration).
+
+3. **Treatment Levels:**
+   - Control: No formic acid.
+   - Treatment: 10 mM formic acid.
+
+4. **Negative Control:**
+   - Proline supplementation at 5 mM in the absence of formic acid to serve as a negative control, ensuring it is equimolar to the highest aminoadipate concentration.
+
+5. **Experimental Conditions:**
+   - Total conditions: (3 aminoadipate levels x 2 formic acid levels) + 2 negative controls = 8 conditions.
+   - Each condition will be tested in a 96-well plate format with appropriate replicates.
+   - All supplementations and treatments are added at the start of the experiment (t=0h).
+
+6. **Measurements:**
+   - Measure OD600 every 20 minutes to assess growth and viability.
+   - At the end of 20 hours, perform mass spectrometry-based metabolomics to measure intracellular aminoadipate levels.
+
+**Expected Outcomes:**
+- If higher intracellular aminoadipate levels are associated with increased resistance to formic acid, we expect the yeast in the high aminoadipate condition to exhibit better growth and viability under 10 mM formic acid treatment compared to the control and low aminoadipate conditions.
+- In the absence of formic acid, aminoadipate supplementation might independently affect growth, which should be accounted for by comparing with the untreated control.
+- The proline negative control should not show increased resistance to formic acid, confirming the specific association with aminoadipate.
+- Mass spectrometry should verify increased intracellular aminoadipate levels corresponding to the supplementation levels.

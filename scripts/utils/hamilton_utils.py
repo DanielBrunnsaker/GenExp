@@ -15,6 +15,8 @@ def percentage_to_volume(final_concentration_percent, total_volume, ureg):
     """
     return (final_concentration_percent / 100) * total_volume.to('microliter').magnitude  # Return as float
 
+
+
 def convert_to_molar(concentration, molecular_weight):
     """
     Converts a concentration to molar units (mol/L) using the molecular weight.
@@ -169,11 +171,44 @@ def compute_volume_for_compound(compound_name,final_conc, final_conc_type,final_
 def extract_highest_doses(json_data, ureg, Q_):
     
     # Function to convert dose to numeric value
+    #def parse_dose(dose):
+    #    if dose is None:
+    #        return 0 * ureg.mM  # Default to 0 mM
+    #    
+    #    if '%' in dose:
+    #        dose = dose.split('%',' ')[0]
+    #    
+    #    value, unit = dose.split()
+    #    return float(value) * ureg(unit)
+
+    #def parse_dose(dose):
+    #    if dose is None:
+    #        return 0 * ureg('mM')  # or whatever your default is
+   # 
+   #     # look for percent with w/v
+   #     m = re.match(r'([\d\.]+)\s*%\s*\(w/v\)', dose, flags=re.IGNORECASE)
+   #     if m:
+   #         value = float(m.group(1))
+   #         # grams per 100 milliliters
+   #         return value * ureg('g') / (ureg('L'))
+   # 
+   #     # fallback for other units
+   #     value, unit = dose.split(None, 1)
+   #     return float(value) * ureg(unit)
+
     def parse_dose(dose):
         if dose is None:
             return 0 * ureg.mM  # Default to 0 mM
-        value, unit = dose.split()
-        return float(value) * ureg(unit)
+    
+        if '%' in dose:
+            # percent (w/v) → grams per 100 mL
+            value = float(dose.split('%')[0])
+            return value * ureg.g / (100 * ureg.mL)
+    
+        # split into exactly two parts: value and the rest as unit
+        value_str, unit_str = dose.split(None, 1)
+        return float(value_str) * ureg(unit_str)
+
 
     # Extracting highest doses
     highest_doses = {
@@ -199,6 +234,7 @@ def extract_highest_doses(json_data, ureg, Q_):
             dose_value = parse_dose(exp['media_supplementation_doses'])
             
             try:
+                dose_value = convert_to_molar(dose_value, Q_(float(pcp.get_compounds(exp['media_supplementation'], 'name')[0].exact_mass), 'g/mol'))
                 dose_value = convert_to_molar(dose_value, Q_(float(pcp.get_compounds(exp['media_supplementation'], 'name')[0].exact_mass), 'g/mol'))
             except:
                 molweight = float(input(f"  -Please provide molecular weight of {exp['media_supplementation']} in g/mol."))

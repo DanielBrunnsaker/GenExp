@@ -1,0 +1,316 @@
+Group1	Group2	Feature	U_stat	p_raw	Median1	Median2	p_corrected	Significant
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]	27.0	0.7545787545787546	7552.325397182042	7211.998830603821	0.9248727925770728	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	2'-Deoxyguanosine-5'-Monophosphate [[M+H]]	20.0	0.662004662004662	8526.325621032835	8809.614192146459	0.8949848434826976	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	2'-Deoxyuridine [[M+Na]]	26.0	0.8462836882024691	702.0	541.8795238433154	0.964491339049643	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	5'-Deoxy-5'-Methylthioadenosine [[M+H]]	24.0	1.0	78.80194805194805	28.463853112834897	1.0	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	ATP [[M+H]]	25.0	0.9497169497169498	1430.2300842224208	1227.208853331863	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Acetyl coenzyme A (Acetyl-CoA) [[M+H]]	12.0	0.14185814185814188	524.2758169385206	851.2271362711929	0.34110927240698236	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Ademetionine [[M+H]]	31.0	0.4135864135864136	2743.519284169518	2064.2604889098484	0.7197774601089519	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Adenine [[M+H]]	34.0	0.22843822843822847	6082.501576706785	4718.41992143954	0.4797202797202798	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Adenosine phosphate [[M+H]]	20.0	0.662004662004662	35727.530939116594	36635.21550156058	0.8949848434826976	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Adenosine-3'-5'-Diphosphate [[M+H]]	28.0	0.662004662004662	6138.624472796887	5900.356200595836	0.8949848434826976	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Aminoadipate [[M+Na]]	27.0	0.7545787545787546	2714.7833602606192	2298.6885278923805	0.9248727925770728	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Argininosuccinic acid [[M+H]]	21.0	0.7545787545787546	4728.962101489217	4513.264785464591	0.9248727925770728	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Biotin [[M+H]]	25.0	0.9497169497169498	981.6400313851152	867.5091098568828	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Choline [[M+H]]	23.0	0.9497169497169498	1680.1059242247559	1646.9338219276647	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Cytidine [[M+H]]	26.0	0.8518148518148518	7538.076627212925	7606.555971885748	0.964491339049643	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	D-(+)-Melibiose [[M+Na]]/D-(+)-Turanose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]/Palatinose [[M+Na]]	9.0	0.05927405927405928	706.4885392721833	2055.0133961002725	0.19654030180345972	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Flavin adenine dinucleotide [[M+H]]	25.0	0.9497169497169498	53.52355085777283	102.5512527946714	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Glucosamine 6-Phosphate [[M+H]]	20.0	0.662004662004662	100.55140022270498	83.08617442528421	0.8949848434826976	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Glucosamine [[M+H]]	34.0	0.22843822843822847	1497.3991028919063	1043.4284559596629	0.4797202797202798	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Glutamic Acid [[M-H2O+H]]	21.0	0.7545787545787546	2732.273416442049	2833.4310058997617	0.9248727925770728	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Glutathione [[M+H]]	25.0	0.9497169497169498	23982.910714285717	21717.940661838184	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Guanosine-5'-Diphosphate [[M+H]]	23.0	0.9497169497169498	579.0722337412026	422.5765738794324	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Histidine [[M+H]]	29.0	0.5727605727605728	1168.2557597366977	1005.8597876743528	0.8510357566961341	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Imidazoleacetic acid [[M+H]]	33.0	0.2823842823842824	154.4070925526883	102.20005041620183	0.5594405594405596	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	L-Arginine [[M+H]]	21.0	0.7545787545787546	36371.07354343446	39968.884081767275	0.9248727925770728	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	L-Citrulline [[M+H]]	14.0	0.22843822843822847	1415.2159779504873	1732.658062219039	0.4797202797202798	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	L-Glutamine [[M+H]]	32.0	0.344988344988345	373.9572682009666	205.9622195280585	0.6468531468531469	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	L-Histidinol [[M+H]]	36.0	0.14185814185814188	212.84849772147987	49.75397562020427	0.34110927240698236	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	L-Lysine [[M+H]]	15.0	0.2823842823842824	29.342879635475423	85.48651285605706	0.5594405594405596	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	L-Valine [[M+H]]	27.5	0.6982198193799275	1439.0062946911735	1274.5640652951702	0.897711196345621	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Levocarnitine [[M+H]]	9.0	0.05927405927405928	28.246753246753244	160.43673240584008	0.19654030180345972	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Linoleic acid [[M+Na]]	16.5	0.36562920223104434	229.15703952707145	293.95651426156275	0.6587412587412587	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]	21.0	0.7545787545787546	829.9446751821957	735.3344877536485	0.9248727925770728	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	N2-Acetyl-L-ornithine [[M+H]]	20.0	0.662004662004662	695.4760880539034	853.7482794180173	0.8949848434826976	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Nicotinamide [[M+H]]	31.0	0.4135864135864136	1839.675835654596	1131.175082176713	0.7197774601089519	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	O-acetyl-L-serine [[M+H]]	32.0	0.344988344988345	111.84295727636848	24.014126429131075	0.6468531468531469	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Pidolic Acid [[M+H]]	32.0	0.344988344988345	4529.670843605476	3267.8770224969894	0.6468531468531469	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Proline [[M+NH4]]	18.0	0.4908424908424909	25.11363523501162	60.31687558551254	0.7692307692307694	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Quinolinic Acid [[M-H2O+H]]	26.0	0.8518148518148518	33.500033963734424	31.737255636484043	0.964491339049643	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Spermidine [[M+H]]	20.0	0.662004662004662	296.6034088651007	422.99215042016255	0.8949848434826976	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Sucrose [[M+Na]]	9.0	0.05927405927405928	696.9740209129884	1995.4734896431082	0.19654030180345972	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Thymine [[M+H]]	29.0	0.5727605727605728	157.14883783570718	126.68994251932071	0.8510357566961341	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	Trehalose [[M+Na]]	9.0	0.05927405927405928	701.7312800925858	2047.7955388668292	0.19654030180345972	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	d-Desthiobiotin [[M+H]]	13.0	0.17476969581445967	1233.6198347107438	1509.2288826474912	0.39893082740257096	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosLow	gamma-Glutamylcysteine [[M+H]]	22.0	0.8518148518148518	729.0045060080106	611.9070650344249	0.964491339049643	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]	34.0	0.04506604506604507	7552.325397182042	5836.332916145181	0.17103378549161682	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	2'-Deoxyguanosine-5'-Monophosphate [[M+H]]	29.0	0.2222222222222222	8526.325621032835	7013.1226533166455	0.47619047619047616	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	2'-Deoxyuridine [[M+Na]]	21.0	0.941572761178548	702.0	890.5383651302047	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	5'-Deoxy-5'-Methylthioadenosine [[M+H]]	22.0	0.8329448329448329	78.80194805194805	78.75179189322787	0.964228079612695	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	ATP [[M+H]]	30.0	0.17094017094017094	1430.2300842224208	682.9461827284105	0.3930376193149916	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Acetyl coenzyme A (Acetyl-CoA) [[M+H]]	31.0	0.12742812742812742	524.2758169385206	188.3720930232558	0.32111888111888115	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Ademetionine [[M+H]]	25.0	0.5236985236985237	2743.519284169518	1393.9906698231446	0.8037296037296038	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Adenine [[M+H]]	31.0	0.12742812742812742	6082.501576706785	4105.229547701433	0.32111888111888115	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Adenosine phosphate [[M+H]]	24.0	0.6216006216006216	35727.530939116594	34896.23717146433	0.8717383937648254	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Adenosine-3'-5'-Diphosphate [[M+H]]	34.0	0.04506604506604507	6138.624472796887	4784.023255813953	0.17103378549161682	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Aminoadipate [[M+Na]]	35.0	0.029526029526029528	2714.7833602606192	1424.3917396745933	0.13479274348839568	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Argininosuccinic acid [[M+H]]	33.0	0.06526806526806528	4728.962101489217	2148.831664580726	0.2119529954581501	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Biotin [[M+H]]	35.0	0.029526029526029528	981.6400313851152	332.81547619047615	0.13479274348839568	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Choline [[M+H]]	40.0	0.001554001554001554	1680.1059242247559	750.9767441860465	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Cytidine [[M+H]]	40.0	0.001554001554001554	7538.076627212925	2713.428077113198	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	D-(+)-Melibiose [[M+Na]]/D-(+)-Turanose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]/Palatinose [[M+Na]]	0.0	0.001554001554001554	706.4885392721833	3453.0	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Flavin adenine dinucleotide [[M+H]]	26.0	0.43512043512043513	53.52355085777283	14.81469352446861	0.7266567629261929	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Glucosamine 6-Phosphate [[M+H]]	29.0	0.2222222222222222	100.55140022270498	7.017486406327237	0.47619047619047616	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Glucosamine [[M+H]]	32.0	0.09324009324009325	1497.3991028919063	833.275969962453	0.26636426636426636	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Glutamic Acid [[M-H2O+H]]	11.0	0.2222222222222222	2732.273416442049	3775.6518590725527	0.47619047619047616	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Glutathione [[M+H]]	20.0	1.0	23982.910714285717	26689.31914893617	1.0	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Guanosine-5'-Diphosphate [[M+H]]	9.0	0.12742812742812742	579.0722337412026	701.563431276981	0.32111888111888115	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Histidine [[M+H]]	37.0	0.010878010878010878	1168.2557597366977	115.39866534849232	0.06478815302344713	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Imidazoleacetic acid [[M+H]]	29.0	0.2222222222222222	154.4070925526883	67.83570192782996	0.47619047619047616	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	L-Arginine [[M+H]]	40.0	0.001554001554001554	36371.07354343446	10784.291614518148	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	L-Citrulline [[M+H]]	9.0	0.12742812742812742	1415.2159779504873	1878.7822277847308	0.32111888111888115	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	L-Glutamine [[M+H]]	26.0	0.43512043512043513	373.9572682009666	255.5581395348837	0.7266567629261929	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	L-Histidinol [[M+H]]	6.0	0.04506604506604507	212.84849772147987	962.9550790904595	0.17103378549161682	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	L-Lysine [[M+H]]	9.0	0.12742812742812742	29.342879635475423	43.66435986159169	0.32111888111888115	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	L-Valine [[M+H]]	28.5	0.24091932621081924	1439.0062946911735	1097.8467622343055	0.49278953088576666	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Levocarnitine [[M+H]]	24.0	0.6216006216006216	28.246753246753244	10.046511627906977	0.8717383937648254	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Linoleic acid [[M+Na]]	14.0	0.43512043512043513	229.15703952707145	368.2053571428571	0.7266567629261929	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]	1.0	0.003108003108003108	829.9446751821957	3110.305919426594	0.02646002646002646	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	N2-Acetyl-L-ornithine [[M+H]]	38.0	0.006216006216006216	695.4760880539034	124.48122653316646	0.03996003996003996	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Nicotinamide [[M+H]]	25.0	0.5236985236985237	1839.675835654596	1107.8835816738615	0.8037296037296038	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	O-acetyl-L-serine [[M+H]]	13.0	0.3543123543123543	111.84295727636848	267.3065476190476	0.6526806526806527	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Pidolic Acid [[M+H]]	5.0	0.029526029526029528	4529.670843605476	8658.473214285714	0.13479274348839568	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Proline [[M+NH4]]	15.0	0.5236985236985237	25.11363523501162	34.30771131982205	0.8037296037296038	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Quinolinic Acid [[M-H2O+H]]	24.0	0.6216006216006216	33.500033963734424	27.860119047619044	0.8717383937648254	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Spermidine [[M+H]]	13.0	0.3543123543123543	296.6034088651007	583.2737780253447	0.6526806526806527	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Sucrose [[M+Na]]	0.0	0.001554001554001554	696.9740209129884	3291.4336443392285	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Thymine [[M+H]]	29.0	0.2222222222222222	157.14883783570718	67.83570192782996	0.47619047619047616	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	Trehalose [[M+Na]]	0.0	0.001554001554001554	701.7312800925858	3373.6593789165854	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	d-Desthiobiotin [[M+H]]	22.0	0.8259648022720806	1233.6198347107438	1016.9367959949938	0.964228079612695	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=PosHigh	gamma-Glutamylcysteine [[M+H]]	17.0	0.7241647241647241	729.0045060080106	962.6662024787636	0.9207692307692308	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]	62.0	0.011106540518305223	7552.325397182042	4117.818732551758	0.06478815302344713	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	2'-Deoxyguanosine-5'-Monophosphate [[M+H]]	51.0	0.16717400246812014	8526.325621032835	6389.361275661211	0.3872044910107194	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	2'-Deoxyuridine [[M+Na]]	34.0	0.8851640153055096	702.0	743.9622302158274	0.9817840310606885	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	5'-Deoxy-5'-Methylthioadenosine [[M+H]]	18.0	0.09271904566022213	78.80194805194805	175.2295719844358	0.26636426636426636	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	ATP [[M+H]]	57.0	0.046400658165364046	1430.2300842224208	550.5946707660773	0.17195538025987853	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Acetyl coenzyme A (Acetyl-CoA) [[M+H]]	57.0	0.046400658165364046	524.2758169385206	199.15532734274717	0.17195538025987853	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Ademetionine [[M+H]]	49.0	0.2358700123406006	2743.519284169518	1639.3615975269304	0.4856147312894718	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Adenine [[M+H]]	35.5	1.0	6082.501576706785	6193.0	1.0	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Adenosine phosphate [[M+H]]	45.0	0.4234471410941999	35727.530939116594	30006.587548638134	0.7266567629261929	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Adenosine-3'-5'-Diphosphate [[M+H]]	61.0	0.015220074043603454	6138.624472796887	3685.0121178378313	0.07732779554411433	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Aminoadipate [[M+Na]]	55.0	0.07445495680789799	2714.7833602606192	2159.537022802972	0.22125765466497985	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Argininosuccinic acid [[M+H]]	44.0	0.4807075277663513	4728.962101489217	4048.795698924731	0.7571143562320033	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Biotin [[M+H]]	40.0	0.7429864253393665	981.6400313851152	685.4615384615383	0.9248727925770728	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Choline [[M+H]]	58.0	0.03595228301110654	1680.1059242247559	1108.9462365591398	0.14335403985441217	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Cytidine [[M+H]]	36.0	1.0	7538.076627212925	8169.58273381295	1.0	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	D-(+)-Melibiose [[M+Na]]/D-(+)-Turanose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]/Palatinose [[M+Na]]	66.0	0.0024681201151789383	706.4885392721833	127.97665369649806	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Flavin adenine dinucleotide [[M+H]]	35.0	0.9625668449197862	53.52355085777283	60.903225806451616	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Glucosamine 6-Phosphate [[M+H]]	58.0	0.03595228301110654	100.55140022270498	11.36472511283834	0.14335403985441217	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Glucosamine [[M+H]]	4.0	0.0009872480460715754	1497.3991028919063	3004.4980544747086	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Glutamic Acid [[M-H2O+H]]	54.0	0.09271904566022213	2732.273416442049	1059.4694244604316	0.26636426636426636	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Glutathione [[M+H]]	21.0	0.16717400246812014	23982.910714285717	27192.94601374393	0.3872044910107194	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Guanosine-5'-Diphosphate [[M+H]]	56.0	0.059234882764294526	579.0722337412026	282.810536108461	0.19654030180345972	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Histidine [[M+H]]	72.0	8.227067050596462e-05	1168.2557597366977	91.9178433889602	0.008638420403126283	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Imidazoleacetic acid [[M+H]]	37.0	0.9625668449197862	154.4070925526883	169.0	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	L-Arginine [[M+H]]	0.0	8.227067050596462e-05	36371.07354343446	270543.9512195122	0.008638420403126283	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	L-Citrulline [[M+H]]	10.0	0.011106540518305223	1415.2159779504873	2332.6153846153843	0.06478815302344713	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	L-Glutamine [[M+H]]	66.0	0.0024681201151789383	373.9572682009666	35.51449275362319	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	L-Histidinol [[M+H]]	52.0	0.13879062114356233	212.84849772147987	62.314685314685306	0.3389073306993964	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	L-Lysine [[M+H]]	37.0	0.9625668449197862	29.342879635475423	35.51449275362319	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	L-Valine [[M+H]]	23.5	0.24792309006121738	1439.0062946911735	1813.6996402877696	0.5038436991566676	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Levocarnitine [[M+H]]	37.0	0.9625668449197862	28.246753246753244	36.795698924731184	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Linoleic acid [[M+Na]]	45.0	0.4234471410941999	229.15703952707145	98.96774193548389	0.7266567629261929	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]	20.0	0.13879062114356233	829.9446751821957	1351.8923904688702	0.3389073306993964	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	N2-Acetyl-L-ornithine [[M+H]]	0.0	8.227067050596462e-05	695.4760880539034	6922.489208633094	0.008638420403126283	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Nicotinamide [[M+H]]	21.0	0.16717400246812014	1839.675835654596	2137.956989247312	0.3872044910107194	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	O-acetyl-L-serine [[M+H]]	51.0	0.16717400246812014	111.84295727636848	15.319640564826702	0.3872044910107194	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Pidolic Acid [[M+H]]	60.0	0.02064993829699712	4529.670843605476	2147.4531450577665	0.10163641505553271	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Proline [[M+NH4]]	41.0	0.6729740847387906	25.11363523501162	54.97047496790758	0.8963659291528145	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Quinolinic Acid [[M-H2O+H]]	33.0	0.8148087206910737	33.500033963734424	40.138489208633096	0.964228079612695	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Spermidine [[M+H]]	36.0	1.0	296.6034088651007	475.1328574080667	1.0	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Sucrose [[M+Na]]	67.0	0.0015631427396133276	696.9740209129884	127.97665369649806	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Thymine [[M+H]]	36.0	1.0	157.14883783570718	169.0	1.0	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	Trehalose [[M+Na]]	66.0	0.0024681201151789383	701.7312800925858	127.97665369649806	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	d-Desthiobiotin [[M+H]]	16.0	0.06044423260240563	1233.6198347107438	1541.8143736417346	0.19833263822664346	False
+Treatment=None, Supplement=None	Treatment=None, Supplement=NegHigh	gamma-Glutamylcysteine [[M+H]]	42.0	0.6058412176059235	729.0045060080106	411.65287769784175	0.8717383937648254	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]	13.0	0.09386169386169387	3398.871688311688	5375.744740009819	0.26636426636426636	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	2'-Deoxyguanosine-5'-Monophosphate [[M+H]]	25.0	0.778865578865579	4244.876033057851	5243.01771388274	0.925821348462858	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	2'-Deoxyuridine [[M+Na]]	33.0	0.6125874125874127	950.0187012987012	839.1540504054421	0.8717383937648254	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	5'-Deoxy-5'-Methylthioadenosine [[M+H]]	25.0	0.778865578865579	17.55532214131847	49.490420796567264	0.925821348462858	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	ATP [[M+H]]	27.0	0.9550893550893552	1240.2798372513562	1178.0861284899165	0.9941264136056808	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Acetyl coenzyme A (Acetyl-CoA) [[M+H]]	24.0	0.6943278943278944	403.97517601606427	1219.4806922196797	0.8963659291528145	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Ademetionine [[M+H]]	29.0	0.9550893550893552	589.0	654.6474390072992	0.9941264136056808	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Adenine [[M+H]]	40.0	0.1892773892773893	6343.7139726742935	5916.811662670712	0.4198758987491382	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Adenosine phosphate [[M+H]]	24.0	0.6943278943278944	22524.14857142857	24423.11117290192	0.8963659291528145	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Adenosine-3'-5'-Diphosphate [[M+H]]	14.0	0.1205905205905206	3092.280991735537	4794.095285830734	0.3165501165501166	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Aminoadipate [[M+Na]]	21.0	0.46340326340326343	544.2149863808726	797.5787517079724	0.7335277787539095	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Argininosuccinic acid [[M+H]]	25.0	0.778865578865579	3254.7272727272725	3555.8486342784927	0.925821348462858	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Biotin [[M+H]]	23.0	0.6125874125874127	340.6266740523725	483.6575233277856	0.8717383937648254	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Choline [[M+H]]	25.0	0.778865578865579	114.0	123.24370379490252	0.925821348462858	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Cytidine [[M+H]]	29.0	0.9550893550893552	6211.858485944343	4526.984704860584	0.9941264136056808	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	D-(+)-Melibiose [[M+Na]]/D-(+)-Turanose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]/Palatinose [[M+Na]]	53.0	0.0021756021756021756	2073.0612635875577	597.9354812687434	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Flavin adenine dinucleotide [[M+H]]	21.0	0.46340326340326343	17.978441558441556	20.54795247724975	0.7335277787539095	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Glucosamine 6-Phosphate [[M+H]]	20.0	0.39689199689199695	26.275700719011677	34.104847067113994	0.6984412235808886	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Glucosamine [[M+H]]	25.0	0.778865578865579	1237.234816184139	1504.5197368421052	0.925821348462858	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Glutamic Acid [[M-H2O+H]]	38.0	0.280963480963481	3653.2983990079256	2147.9141603572543	0.5594405594405596	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Glutathione [[M+H]]	31.0	0.778865578865579	23459.28868070372	22466.343636878657	0.925821348462858	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Guanosine-5'-Diphosphate [[M+H]]	38.0	0.280963480963481	40.59606690777577	7.266847175501879	0.5594405594405596	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Histidine [[M+H]]	24.0	0.6943278943278944	87.90365781996711	267.6101713709009	0.8963659291528145	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Imidazoleacetic acid [[M+H]]	35.0	0.46340326340326343	217.6337662337662	138.966007543268	0.7335277787539095	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	L-Arginine [[M+H]]	27.0	0.9550893550893552	11481.471074380164	19238.380747440373	0.9941264136056808	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	L-Citrulline [[M+H]]	14.0	0.1205905205905206	337.0621851133147	782.3379405157026	0.3165501165501166	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	L-Glutamine [[M+H]]	16.0	0.1892773892773893	11.875	274.6195652173913	0.4198758987491382	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	L-Histidinol [[M+H]]	24.0	0.6943278943278944	19.31085435545032	76.30238641032949	0.8963659291528145	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	L-Lysine [[M+H]]	27.0	0.9550893550893552	72.03412777153916	166.9321844662959	0.9941264136056808	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	L-Valine [[M+H]]	23.0	0.6125874125874127	2522.6592207792205	3160.9413615560634	0.8717383937648254	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Levocarnitine [[M+H]]	32.0	0.6943278943278944	22.397830018083184	24.097500847881907	0.8963659291528145	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Linoleic acid [[M+Na]]	42.0	0.1205905205905206	502.55131103074143	315.8070806056239	0.3165501165501166	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]	30.0	0.8665112665112666	1851.471770560372	1662.6049471205931	0.964491339049643	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	N2-Acetyl-L-ornithine [[M+H]]	26.0	0.8665112665112666	792.892561983471	421.3689256882773	0.964491339049643	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Nicotinamide [[M+H]]	16.0	0.1892773892773893	2370.3121773472685	2940.8991446630407	0.4198758987491382	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	O-acetyl-L-serine [[M+H]]	26.0	0.8665112665112666	144.1860307414105	230.85490194774093	0.964491339049643	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Pidolic Acid [[M+H]]	20.0	0.39689199689199695	3989.13318388875	5965.530694424773	0.6984412235808886	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Proline [[M+NH4]]	34.0	0.5358197358197359	263.0082644628099	153.28856447895515	0.8037296037296038	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Quinolinic Acid [[M-H2O+H]]	13.0	0.09386169386169387	19.0	129.47877045970702	0.26636426636426636	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Spermidine [[M+H]]	31.0	0.778865578865579	364.5520621971911	295.4862303421562	0.925821348462858	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Sucrose [[M+Na]]	53.0	0.0021756021756021756	2054.748001541732	493.55408591990613	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Thymine [[M+H]]	34.0	0.5358197358197359	94.6233766233766	116.78718535469108	0.8037296037296038	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	Trehalose [[M+Na]]	54.0	0.0012432012432012432	2073.0612635875577	570.2424580129294	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	d-Desthiobiotin [[M+H]]	27.0	0.9550893550893552	1292.9163004353495	1875.8702655290922	0.9941264136056808	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosLow	gamma-Glutamylcysteine [[M+H]]	32.0	0.6943278943278944	874.0	824.2330628913635	0.8963659291528145	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]	1.0	0.002331002331002331	3398.871688311688	11074.35987701768	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	2'-Deoxyguanosine-5'-Monophosphate [[M+H]]	25.0	0.6282051282051282	4244.876033057851	3996.9652662037042	0.8717383937648254	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	2'-Deoxyuridine [[M+Na]]	35.0	0.05128205128205128	950.0187012987012	525.5298701298701	0.1794871794871795	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	5'-Deoxy-5'-Methylthioadenosine [[M+H]]	6.0	0.03496503496503496	17.55532214131847	165.64796310530357	0.14303877940241574	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	ATP [[M+H]]	8.0	0.07342657342657342	1240.2798372513562	2138.6919512195122	0.2202797202797203	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Acetyl coenzyme A (Acetyl-CoA) [[M+H]]	28.0	0.36596736596736595	403.97517601606427	252.54142857142858	0.6587412587412587	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Ademetionine [[M+H]]	3.0	0.008158508158508158	589.0	2347.7620023059185	0.0513986013986014	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Adenine [[M+H]]	32.5	0.11558189995138274	6343.7139726742935	4938.759581881533	0.3165501165501166	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Adenosine phosphate [[M+H]]	25.0	0.6282051282051282	22524.14857142857	20349.729166375517	0.8717383937648254	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Adenosine-3'-5'-Diphosphate [[M+H]]	1.0	0.002331002331002331	3092.280991735537	9350.025371773288	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Aminoadipate [[M+Na]]	5.0	0.022144522144522144	544.2149863808726	2356.1332594235037	0.10568976478067386	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Argininosuccinic acid [[M+H]]	27.0	0.4452214452214452	3254.7272727272725	2111.46364897546	0.7266567629261929	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Biotin [[M+H]]	13.0	0.2948717948717949	340.6266740523725	1171.7933203563412	0.5698442661632845	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Choline [[M+H]]	7.0	0.05128205128205128	114.0	1389.6663948512908	0.1794871794871795	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Cytidine [[M+H]]	6.0	0.03496503496503496	6211.858485944343	12766.00909090909	0.14303877940241574	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	D-(+)-Melibiose [[M+Na]]/D-(+)-Turanose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]/Palatinose [[M+Na]]	40.0	0.004662004662004662	2073.0612635875577	655.9836070155824	0.031245350394286563	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Flavin adenine dinucleotide [[M+H]]	21.0	1.0	17.978441558441556	65.68999121554847	1.0	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Glucosamine 6-Phosphate [[M+H]]	17.0	0.6282051282051282	26.275700719011677	64.91132459243127	0.8717383937648254	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Glucosamine [[M+H]]	7.0	0.05128205128205128	1237.234816184139	2320.9813811728395	0.1794871794871795	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Glutamic Acid [[M-H2O+H]]	14.0	0.36596736596736595	3653.2983990079256	4698.806818181818	0.6587412587412587	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Glutathione [[M+H]]	35.0	0.05128205128205128	23459.28868070372	16284.854523443504	0.1794871794871795	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Guanosine-5'-Diphosphate [[M+H]]	8.0	0.07342657342657342	40.59606690777577	362.23479938271606	0.2202797202797203	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Histidine [[M+H]]	22.0	0.9452214452214451	87.90365781996711	426.5133962885692	0.9941264136056808	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Imidazoleacetic acid [[M+H]]	24.0	0.7307692307692307	217.6337662337662	186.58141217937765	0.9207692307692308	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	L-Arginine [[M+H]]	36.0	0.03496503496503496	11481.471074380164	7298.811428571428	0.14303877940241574	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	L-Citrulline [[M+H]]	0.0	0.0011655011655011655	337.0621851133147	2174.8214285714284	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	L-Glutamine [[M+H]]	15.0	0.4452214452214452	11.875	164.55502760114598	0.7266567629261929	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	L-Histidinol [[M+H]]	6.0	0.03496503496503496	19.31085435545032	144.06357142857144	0.14303877940241574	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	L-Lysine [[M+H]]	21.0	1.0	72.03412777153916	116.61106481481482	1.0	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	L-Valine [[M+H]]	36.0	0.03496503496503496	2522.6592207792205	1444.801393728223	0.14303877940241574	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Levocarnitine [[M+H]]	34.0	0.07342657342657342	22.397830018083184	3.1004395392416226	0.2202797202797203	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Linoleic acid [[M+Na]]	27.0	0.4452214452214452	502.55131103074143	340.1358885017421	0.7266567629261929	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]	4.0	0.013986013986013986	1851.471770560372	4602.243181818181	0.07222285910810501	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	N2-Acetyl-L-ornithine [[M+H]]	32.0	0.13752913752913754	792.892561983471	81.24896660052909	0.3389073306993964	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Nicotinamide [[M+H]]	29.0	0.2948717948717949	2370.3121773472685	1870.4220779220782	0.5698442661632845	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	O-acetyl-L-serine [[M+H]]	8.0	0.07342657342657342	144.1860307414105	801.8299999999999	0.2202797202797203	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Pidolic Acid [[M+H]]	6.0	0.03496503496503496	3989.13318388875	8089.1263783103905	0.14303877940241574	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Proline [[M+NH4]]	27.0	0.4452214452214452	263.0082644628099	139.5770731707317	0.7266567629261929	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Quinolinic Acid [[M-H2O+H]]	25.0	0.6282051282051282	19.0	15.889274691358025	0.8717383937648254	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Spermidine [[M+H]]	24.0	0.7307692307692307	364.5520621971911	272.010860876249	0.9207692307692308	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Sucrose [[M+Na]]	40.0	0.004662004662004662	2054.748001541732	655.9836070155824	0.031245350394286563	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Thymine [[M+H]]	17.0	0.6282051282051282	94.6233766233766	167.3079631053036	0.8717383937648254	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	Trehalose [[M+Na]]	40.0	0.004662004662004662	2073.0612635875577	655.9836070155824	0.031245350394286563	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	d-Desthiobiotin [[M+H]]	19.0	0.8356643356643356	1292.9163004353495	1590.7509903831678	0.964228079612695	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=PosHigh	gamma-Glutamylcysteine [[M+H]]	33.0	0.0999453813185742	874.0	451.6295157571099	0.28018034596981967	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]	4.0	0.013986013986013986	3398.871688311688	8565.065623387292	0.07222285910810501	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	2'-Deoxyguanosine-5'-Monophosphate [[M+H]]	13.0	0.2948717948717949	4244.876033057851	5291.906117971897	0.5698442661632845	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	2'-Deoxyuridine [[M+Na]]	36.0	0.03496503496503496	950.0187012987012	438.29965398002616	0.14303877940241574	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	5'-Deoxy-5'-Methylthioadenosine [[M+H]]	1.0	0.002331002331002331	17.55532214131847	173.0524698157863	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	ATP [[M+H]]	14.0	0.36596736596736595	1240.2798372513562	1795.0482364467443	0.6587412587412587	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Acetyl coenzyme A (Acetyl-CoA) [[M+H]]	12.0	0.23426573426573427	403.97517601606427	838.9405980128146	0.4854849098270151	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Ademetionine [[M+H]]	0.0	0.0011655011655011655	589.0	4795.935837684363	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Adenine [[M+H]]	23.0	0.8356643356643356	6343.7139726742935	5836.9595156872965	0.964228079612695	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Adenosine phosphate [[M+H]]	21.0	1.0	22524.14857142857	24020.701669913196	1.0	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Adenosine-3'-5'-Diphosphate [[M+H]]	4.0	0.013986013986013986	3092.280991735537	7438.2169579918345	0.07222285910810501	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Aminoadipate [[M+Na]]	1.0	0.002331002331002331	544.2149863808726	4214.225498099804	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Argininosuccinic acid [[M+H]]	19.0	0.8356643356643356	3254.7272727272725	3849.515671203893	0.964228079612695	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Biotin [[M+H]]	11.0	0.18065268065268064	340.6266740523725	1085.8708888370838	0.4093927655078734	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Choline [[M+H]]	2.0	0.004662004662004662	114.0	1790.863855252844	0.031245350394286563	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Cytidine [[M+H]]	7.0	0.05128205128205128	6211.858485944343	10123.332341616233	0.1794871794871795	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	D-(+)-Melibiose [[M+Na]]/D-(+)-Turanose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]/Palatinose [[M+Na]]	41.0	0.002331002331002331	2073.0612635875577	271.9871294165077	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Flavin adenine dinucleotide [[M+H]]	8.0	0.07342657342657342	17.978441558441556	70.43548382032702	0.2202797202797203	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Glucosamine 6-Phosphate [[M+H]]	16.0	0.5337995337995338	26.275700719011677	20.218589934910973	0.8037296037296038	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Glucosamine [[M+H]]	8.0	0.07342657342657342	1237.234816184139	2343.332784094592	0.2202797202797203	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Glutamic Acid [[M-H2O+H]]	38.0	0.013986013986013986	3653.2983990079256	1124.3159975036406	0.07222285910810501	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Glutathione [[M+H]]	33.0	0.10139860139860139	23459.28868070372	14925.375019773976	0.28018034596981967	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Guanosine-5'-Diphosphate [[M+H]]	12.0	0.23426573426573427	40.59606690777577	230.55902568377977	0.4854849098270151	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Histidine [[M+H]]	17.0	0.6282051282051282	87.90365781996711	473.3638171259442	0.8717383937648254	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Imidazoleacetic acid [[M+H]]	29.0	0.2948717948717949	217.6337662337662	153.9349601809779	0.5698442661632845	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	L-Arginine [[M+H]]	1.0	0.002331002331002331	11481.471074380164	352205.9702292213	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	L-Citrulline [[M+H]]	1.0	0.002331002331002331	337.0621851133147	2054.8116247828784	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	L-Glutamine [[M+H]]	25.0	0.6282051282051282	11.875	17.074254644737078	0.8717383937648254	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	L-Histidinol [[M+H]]	6.0	0.03496503496503496	19.31085435545032	164.93578166621154	0.14303877940241574	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	L-Lysine [[M+H]]	22.0	0.9452214452214451	72.03412777153916	133.67442453973962	0.9941264136056808	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	L-Valine [[M+H]]	33.0	0.10139860139860139	2522.6592207792205	1720.1472685679514	0.28018034596981967	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Levocarnitine [[M+H]]	15.0	0.4452214452214452	22.397830018083184	140.7400192900505	0.7266567629261929	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Linoleic acid [[M+Na]]	27.0	0.4452214452214452	502.55131103074143	291.5452356626082	0.7266567629261929	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]	37.0	0.022144522144522144	1851.471770560372	626.1889024440835	0.10568976478067386	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	N2-Acetyl-L-ornithine [[M+H]]	1.0	0.002331002331002331	792.892561983471	8042.204558634328	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Nicotinamide [[M+H]]	23.0	0.8356643356643356	2370.3121773472685	2227.5160496189446	0.964228079612695	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	O-acetyl-L-serine [[M+H]]	40.0	0.004662004662004662	144.1860307414105	3.2869584129205514	0.031245350394286563	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Pidolic Acid [[M+H]]	41.0	0.002331002331002331	3989.13318388875	1578.4305133121252	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Proline [[M+NH4]]	32.0	0.13752913752913754	263.0082644628099	41.52350224256892	0.3389073306993964	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Quinolinic Acid [[M-H2O+H]]	27.0	0.4452214452214452	19.0	20.882858295323196	0.7266567629261929	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Spermidine [[M+H]]	19.0	0.8356643356643356	364.5520621971911	383.84336101912726	0.964228079612695	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Sucrose [[M+Na]]	41.0	0.002331002331002331	2054.748001541732	271.9871294165077	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Thymine [[M+H]]	24.0	0.7307692307692307	94.6233766233766	153.9349601809779	0.9207692307692308	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	Trehalose [[M+Na]]	41.0	0.002331002331002331	2073.0612635875577	271.9871294165077	0.02159605100781571	True
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	d-Desthiobiotin [[M+H]]	18.0	0.7307692307692307	1292.9163004353495	2152.309231982822	0.9207692307692308	False
+Treatment=Yes, Supplement=None	Treatment=Yes, Supplement=NegHigh	gamma-Glutamylcysteine [[M+H]]	42.0	0.0011655011655011655	874.0	144.06327836585876	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]	50.0	0.009324009324009324	7552.325397182042	3398.871688311688	0.057589469354175235	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	2'-Deoxyguanosine-5'-Monophosphate [[M+H]]	51.0	0.005905205905205905	8526.325621032835	4244.876033057851	0.03875291375291375	True
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	2'-Deoxyuridine [[M+Na]]	22.0	0.5240789974851849	702.0	950.0187012987012	0.8037296037296038	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	5'-Deoxy-5'-Methylthioadenosine [[M+H]]	37.0	0.33566433566433573	78.80194805194805	17.55532214131847	0.6408137317228227	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	ATP [[M+H]]	31.0	0.778865578865579	1430.2300842224208	1240.2798372513562	0.925821348462858	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Acetyl coenzyme A (Acetyl-CoA) [[M+H]]	26.0	0.8665112665112666	524.2758169385206	403.97517601606427	0.964491339049643	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Ademetionine [[M+H]]	52.0	0.0037296037296037296	2743.519284169518	589.0	0.027972027972027972	True
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Adenine [[M+H]]	19.5	0.3541094107998596	6082.501576706785	6343.7139726742935	0.6526806526806527	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Adenosine phosphate [[M+H]]	46.0	0.04009324009324009	35727.530939116594	22524.14857142857	0.15786713286713286	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Adenosine-3'-5'-Diphosphate [[M+H]]	49.0	0.013986013986013986	6138.624472796887	3092.280991735537	0.07222285910810501	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Aminoadipate [[M+Na]]	52.0	0.0037296037296037296	2714.7833602606192	544.2149863808726	0.027972027972027972	True
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Argininosuccinic acid [[M+H]]	34.0	0.5358197358197359	4728.962101489217	3254.7272727272725	0.8037296037296038	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Biotin [[M+H]]	34.0	0.5358197358197359	981.6400313851152	340.6266740523725	0.8037296037296038	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Choline [[M+H]]	52.0	0.0037296037296037296	1680.1059242247559	114.0	0.027972027972027972	True
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Cytidine [[M+H]]	36.0	0.39689199689199695	7538.076627212925	6211.858485944343	0.6984412235808886	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	D-(+)-Melibiose [[M+Na]]/D-(+)-Turanose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]/Palatinose [[M+Na]]	1.0	0.0006216006216006216	706.4885392721833	2073.0612635875577	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Flavin adenine dinucleotide [[M+H]]	35.0	0.46340326340326343	53.52355085777283	17.978441558441556	0.7335277787539095	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Glucosamine 6-Phosphate [[M+H]]	41.0	0.151981351981352	100.55140022270498	26.275700719011677	0.36268277177368086	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Glucosamine [[M+H]]	27.0	0.9550893550893552	1497.3991028919063	1237.234816184139	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Glutamic Acid [[M-H2O+H]]	21.0	0.46340326340326343	2732.273416442049	3653.2983990079256	0.7335277787539095	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Glutathione [[M+H]]	26.0	0.8665112665112666	23982.910714285717	23459.28868070372	0.964491339049643	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Guanosine-5'-Diphosphate [[M+H]]	49.0	0.013986013986013986	579.0722337412026	40.59606690777577	0.07222285910810501	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Histidine [[M+H]]	52.0	0.0037296037296037296	1168.2557597366977	87.90365781996711	0.027972027972027972	True
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Imidazoleacetic acid [[M+H]]	19.0	0.33566433566433573	154.4070925526883	217.6337662337662	0.6408137317228227	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	L-Arginine [[M+H]]	32.0	0.6943278943278944	36371.07354343446	11481.471074380164	0.8963659291528145	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	L-Citrulline [[M+H]]	53.0	0.0021756021756021756	1415.2159779504873	337.0621851133147	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	L-Glutamine [[M+H]]	52.0	0.0037296037296037296	373.9572682009666	11.875	0.027972027972027972	True
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	L-Histidinol [[M+H]]	48.0	0.020512820512820513	212.84849772147987	19.31085435545032	0.10163641505553271	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	L-Lysine [[M+H]]	12.0	0.0721056721056721	29.342879635475423	72.03412777153916	0.2202797202797203	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	L-Valine [[M+H]]	3.0	0.0021756021756021756	1439.0062946911735	2522.6592207792205	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Levocarnitine [[M+H]]	23.0	0.6125874125874127	28.246753246753244	22.397830018083184	0.8717383937648254	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Linoleic acid [[M+Na]]	14.0	0.1205905205905206	229.15703952707145	502.55131103074143	0.3165501165501166	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]	7.0	0.013986013986013986	829.9446751821957	1851.471770560372	0.07222285910810501	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	N2-Acetyl-L-ornithine [[M+H]]	29.0	0.9550893550893552	695.4760880539034	792.892561983471	0.9941264136056808	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Nicotinamide [[M+H]]	12.0	0.0721056721056721	1839.675835654596	2370.3121773472685	0.2202797202797203	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	O-acetyl-L-serine [[M+H]]	20.0	0.39689199689199695	111.84295727636848	144.1860307414105	0.6984412235808886	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Pidolic Acid [[M+H]]	28.0	1.0	4529.670843605476	3989.13318388875	1.0	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Proline [[M+NH4]]	14.0	0.1205905205905206	25.11363523501162	263.0082644628099	0.3165501165501166	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Quinolinic Acid [[M-H2O+H]]	32.0	0.6943278943278944	33.500033963734424	19.0	0.8963659291528145	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Spermidine [[M+H]]	30.0	0.8665112665112666	296.6034088651007	364.5520621971911	0.964491339049643	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Sucrose [[M+Na]]	1.0	0.0006216006216006216	696.9740209129884	2054.748001541732	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Thymine [[M+H]]	24.0	0.6943278943278944	157.14883783570718	94.6233766233766	0.8963659291528145	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	Trehalose [[M+Na]]	1.0	0.0006216006216006216	701.7312800925858	2073.0612635875577	0.02159605100781571	True
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	d-Desthiobiotin [[M+H]]	24.0	0.6851773174958848	1233.6198347107438	1292.9163004353495	0.8963659291528145	False
+Treatment=None, Supplement=None	Treatment=Yes, Supplement=None	gamma-Glutamylcysteine [[M+H]]	21.0	0.46340326340326343	729.0045060080106	874.0	0.7335277787539095	False

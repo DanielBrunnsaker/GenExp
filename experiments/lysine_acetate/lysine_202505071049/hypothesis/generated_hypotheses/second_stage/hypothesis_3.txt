@@ -1,0 +1,50 @@
+### Motivation
+
+The statement suggests an association between higher intracellular lysine levels and decreased resistance to acetic acid in Saccharomyces cerevisiae. Understanding this relationship could provide insights into how lysine impacts cellular stress responses, particularly to acidic environments, which are common in industrial fermentation processes.
+
+### Hypothesis
+
+Increased intracellular lysine levels in Saccharomyces cerevisiae lead to decreased resistance to acetic acid, potentially due to lysine's role in metabolic pathways that influence cellular stress responses. This could involve lysine's effect on the regulation of pH homeostasis or its interaction with pathways that modulate stress responses.
+
+### Experimental Plan
+
+1. **Strain and Media Preparation:**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Supplementation Levels:**
+   - **Lysine Supplementation:**
+     - Control: No lysine supplementation.
+     - Low Lysine: 1 mM lysine.
+     - High Lysine: 10 mM lysine (supraphysiological concentration).
+
+3. **Acetic Acid Treatment Levels:**
+   - Control: No acetic acid.
+   - Acetic Acid Treatment: 50 mM acetic acid.
+
+4. **Negative Control:**
+   - Threonine at 10 mM as an equimolar negative control for lysine supplementation.
+
+5. **Experimental Conditions:**
+   - Combine each lysine supplementation level with each acetic acid treatment level.
+   - Include threonine control with and without acetic acid treatment.
+   - Total conditions: 3 lysine levels x 2 acetic acid levels + 2 threonine controls = 8 conditions.
+
+6. **Experimental Procedure:**
+   - Inoculate all wells with the same initial cell density.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes to monitor growth.
+   - After 20 hours, terminate the experiment and measure intracellular lysine concentrations using mass spectrometry-based metabolomics.
+
+### Expected Outcomes
+
+- **Control Conditions:** Normal growth in minimal media without lysine or acetic acid.
+- **Lysine Supplementation Effects:**
+  - Increased intracellular lysine levels with supplementation.
+  - Potentially altered growth rates, independent of acetic acid treatment, due to lysine's metabolic effects.
+- **Acetic Acid Treatment Effects:**
+  - Reduced growth in conditions with acetic acid, particularly in high lysine conditions if the hypothesis is correct.
+- **Negative Control (Threonine):**
+  - No significant change in resistance to acetic acid compared to the control without lysine supplementation, confirming lysine's specific role.
+  
+By comparing growth curves and intracellular lysine levels across conditions, the experiment will determine if higher lysine levels correlate with decreased acetic acid resistance, supporting or refuting the statement.

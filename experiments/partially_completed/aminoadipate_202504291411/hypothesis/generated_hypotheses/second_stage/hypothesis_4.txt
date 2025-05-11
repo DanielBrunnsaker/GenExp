@@ -1,0 +1,55 @@
+### Motivation
+
+The statement suggests an association between higher intracellular levels of aminoadipate and increased resistance to formic acid in Saccharomyces cerevisiae. Understanding this relationship could provide insights into metabolic adaptations or protective mechanisms that confer chemical resistance, which could have applications in industrial fermentation processes where formic acid is a common stressor.
+
+### Hypothesis
+
+Cells with elevated intracellular aminoadipate levels exhibit increased resistance to formic acid due to aminoadipate's role in buffering cellular stress or modulating pathways that enhance cell survival under acidic conditions.
+
+### Experimental Plan
+
+#### Experimental Conditions
+
+- **Base Media**: Minimal media without amino acids.
+- **Supplementations**:
+  1. Control (no aminoadipate supplementation)
+  2. Physiological concentration of aminoadipate: 1 mM
+  3. Supraphysiological concentration of aminoadipate: 10 mM
+
+- **Treatment**:
+  1. Control (no formic acid)
+  2. 10 mM formic acid
+
+- **Negative Control**: 
+  - Proline supplementation at 10 mM to match the highest aminoadipate concentration.
+  - Both with and without 10 mM formic acid treatment.
+
+#### Experimental Steps
+
+1. **Setup**: Prepare 96-well plates with the following conditions:
+   - 3 aminoadipate concentration levels (0, 1, 10 mM)
+   - 2 formic acid treatment levels (0, 10 mM)
+   - Include negative controls with proline (10 mM) in place of aminoadipate, both with and without formic acid.
+   
+2. **Inoculation**: Inoculate each well with a standardized concentration of the reference S. cerevisiae strain.
+
+3. **Incubation**: Incubate at 30°C with shaking to ensure aeration.
+
+4. **Monitoring**: Measure OD600 every 20 minutes to track growth curves and assess cell viability.
+
+5. **Metabolomics Sampling**: At the end of the 20-hour incubation, collect samples for mass spectrometry-based metabolomics to measure intracellular aminoadipate levels.
+
+#### Total Conditions
+
+- 3 (aminoadipate levels) x 2 (formic acid treatment) = 6 conditions
+- 2 (negative control with proline) x 2 (formic acid treatment) = 2 conditions
+- Total: 8 conditions
+
+### Expected Outcomes
+
+- **Increased Resistance**: If higher aminoadipate levels confer resistance, wells with 10 mM aminoadipate and 10 mM formic acid should exhibit higher growth rates and viability compared to the control.
+- **Dose-Response Relationship**: A dose-dependent increase in resistance is expected, with the highest aminoadipate concentration showing the most significant resistance.
+- **Negative Control**: The proline control should not show increased resistance, confirming the specific role of aminoadipate.
+- **Independent Effects**: Any effect of aminoadipate on growth or resistance in the absence of formic acid will also be observed, allowing for the evaluation of its independent impact.
+
+This experiment aims to clarify the role of aminoadipate in chemical resistance and verify if its intracellular accumulation is a protective mechanism against formic acid stress.

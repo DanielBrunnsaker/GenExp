@@ -1,0 +1,42 @@
+**Motivation:**
+The statement suggests an association between higher intracellular lysine levels and decreased resistance to acetic acid in Saccharomyces cerevisiae. Understanding this relationship could provide insights into metabolic pathways and stress responses in yeast. Evaluating this association can help clarify whether lysine accumulation impacts acetic acid tolerance, which is relevant for industrial fermentation processes where acetic acid is a common stressor.
+
+**Hypothesis:**
+Higher intracellular lysine levels may lead to decreased resistance to acetic acid in Saccharomyces cerevisiae by affecting metabolic pathways involved in stress response, possibly due to lysine's role in protein synthesis and metabolic regulation.
+
+**Experimental Plan:**
+
+1. **Media and Conditions:**
+   - Use minimal media without amino acids as the baseline.
+   - Incubate all cultures at 30°C with shaking at 200 rpm.
+
+2. **Lysine Supplementation:**
+   - Prepare three levels of lysine supplementation:
+     - Control: No lysine supplementation.
+     - Physiological: 0.1 mM lysine.
+     - Supraphysiological: 10 mM lysine.
+
+3. **Acetic Acid Treatment:**
+   - Apply acetic acid at two levels:
+     - Control: No acetic acid.
+     - Treatment: 0.5% (v/v) acetic acid.
+
+4. **Negative Control:**
+   - Include a negative control using threonine at 10 mM (equimolar to the highest lysine concentration) without acetic acid treatment.
+
+5. **Experimental Combinations:**
+   - Lysine levels (3) x Acetic acid levels (2) + Negative control (1 threonine condition) = 7 conditions.
+
+6. **Measurements:**
+   - Monitor OD600 every 20 minutes to assess growth and viability.
+   - At experiment termination (20 hours), perform mass spectrometry-based metabolomics to measure intracellular lysine levels.
+
+7. **Verification of Assumptions:**
+   - Ensure that lysine supplementation effectively raises intracellular lysine levels through metabolomics.
+   - Confirm that acetic acid treatment impacts cell viability and growth as expected.
+
+**Expected Outcomes:**
+- If higher lysine levels are associated with decreased resistance to acetic acid, cultures with supraphysiological lysine supplementation should show reduced growth or viability compared to controls when exposed to acetic acid.
+- The physiological lysine level may show intermediate effects if there is a dose-response relationship.
+- The negative control (threonine) should not exhibit decreased resistance to acetic acid, confirming that the effect is specific to lysine.
+- Independent effects of lysine and acetic acid should be observable, allowing for interpretation of their interaction in the context of the hypothesis.

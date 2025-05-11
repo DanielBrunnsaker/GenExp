@@ -1,0 +1,51 @@
+### Motivation
+The statement suggests that lower intracellular levels of histidine in yeast cells are associated with decreased resistance to zinc dichloride. Histidine is a known metal ion chelator, and its intracellular concentration could influence the cell's ability to handle toxic metal ions like zinc dichloride. Understanding this association can provide insights into the role of histidine in metal ion resistance mechanisms.
+
+### Hypothesis
+Cells with reduced intracellular histidine levels will exhibit decreased resistance to zinc dichloride due to impaired metal ion chelation, leading to increased susceptibility to zinc toxicity.
+
+### Experimental Plan
+
+#### Experimental Setup
+- **Strain**: Use a reference/wild-type prototrophic Saccharomyces cerevisiae strain.
+- **Media**: Minimal media without amino acids.
+- **Temperature**: 30°C with shaking.
+- **Duration**: 20 hours.
+
+#### Supplementation Levels
+1. **Control**: No histidine supplementation.
+2. **Low Histidine**: 0.1 mM histidine.
+3. **High Histidine**: 2 mM histidine (supraphysiological concentration).
+
+#### Treatment Levels
+1. **Control**: No zinc dichloride.
+2. **Zinc Dichloride**: 1 mM zinc dichloride.
+
+#### Negative Control
+- **Amino Acid**: Include 2 mM serine as a negative control, as it is not directly involved in metal ion chelation and should not affect zinc resistance.
+
+#### Combination of Conditions
+- 3 Histidine levels x 2 Zinc Dichloride levels = 6 conditions.
+- Plus 2 conditions for the serine negative control (with and without zinc dichloride).
+
+#### Total Conditions
+- 8 total experimental conditions.
+
+#### Protocol
+1. Inoculate yeast cells into each well containing minimal media.
+2. Add histidine or serine to the designated wells at specified concentrations.
+3. Add zinc dichloride to the designated wells at 1 mM concentration.
+4. Incubate at 30°C with shaking.
+5. Measure OD600 every 20 minutes to monitor growth.
+6. At experiment termination (20 hours), perform mass spectrometry-based metabolomics to measure intracellular histidine levels.
+
+### Expected Outcomes
+- **Control (No Histidine, No Zinc)**: Normal growth, baseline resistance.
+- **Low Histidine, No Zinc**: Reduced growth due to limited histidine availability, but no zinc toxicity.
+- **High Histidine, No Zinc**: Normal or enhanced growth due to ample histidine.
+- **Control (No Histidine, With Zinc)**: Decreased growth due to zinc toxicity.
+- **Low Histidine, With Zinc**: Further reduced growth compared to control due to lower histidine levels and increased zinc toxicity.
+- **High Histidine, With Zinc**: Potentially normal growth if excess histidine chelates zinc effectively.
+- **Serine Controls**: No significant impact on zinc resistance, serving as a baseline for comparison.
+
+This experimental design will help determine if intracellular histidine levels modulate zinc dichloride resistance, supporting or refuting the association stated.

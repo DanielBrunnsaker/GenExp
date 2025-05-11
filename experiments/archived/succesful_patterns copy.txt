@@ -1,2 +1,0 @@
-Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,chitosan)
-Cell(A):-exhibits_phenotype(A,increased resistance to chemicals,B,C),compound_name(B,(S)-lactic acid)

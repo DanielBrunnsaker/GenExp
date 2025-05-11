@@ -1,0 +1,49 @@
+### Motivation
+
+The statement suggests a potential association between lower intracellular levels of histidine and decreased resistance to zinc dichloride in Saccharomyces cerevisiae. Histidine is known to play a role in metal ion binding and detoxification processes. Thus, it is plausible that histidine levels could influence the yeast cells' resistance to zinc dichloride, a compound known to cause stress in cells.
+
+### Hypothesis
+
+Cells with reduced intracellular histidine levels will exhibit decreased resistance to zinc dichloride, potentially due to histidine's role in metal ion detoxification and homeostasis. This experiment aims to test whether modulating histidine levels affects the cells' ability to resist zinc dichloride stress.
+
+### Experimental Plan
+
+1. **Strain and Baseline Conditions**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Grow cells in minimal media without amino acids, except for the experimental conditions specified.
+
+2. **Histidine Supplementation Levels**
+   - **Control (0 mM)**: No histidine supplementation.
+   - **Low (0.1 mM)**: Sub-physiological concentration to potentially lower intracellular histidine.
+   - **High (1 mM)**: Supraphysiological concentration to potentially increase intracellular histidine.
+
+3. **Zinc Dichloride Treatment Levels**
+   - **Control (0 mM)**: No zinc dichloride.
+   - **Treatment (0.5 mM)**: Concentration known to induce stress in yeast cells.
+
+4. **Negative Control**
+   - Supplement minimal media with 1 mM valine, as valine is not directly involved in metal ion detoxification and serves as a neutral amino acid control.
+
+5. **Experimental Setup**
+   - Prepare 96-well plates with the following conditions:
+     - Histidine Control + Zinc Control
+     - Histidine Control + Zinc Treatment
+     - Histidine Low + Zinc Control
+     - Histidine Low + Zinc Treatment
+     - Histidine High + Zinc Control
+     - Histidine High + Zinc Treatment
+     - Valine Control + Zinc Control
+     - Valine Control + Zinc Treatment
+
+6. **Measurement and Analysis**
+   - Measure OD600 every 20 minutes to monitor growth and viability over the 20-hour period.
+   - At experiment termination, use mass spectrometry-based metabolomics to measure intracellular histidine levels.
+
+### Expected Outcomes
+
+- **Histidine Control + Zinc Treatment**: Expected to show decreased growth and viability due to zinc dichloride stress.
+- **Histidine Low + Zinc Treatment**: Expected to exhibit further decreased growth and viability compared to Histidine Control + Zinc Treatment, supporting the hypothesis that lower histidine levels reduce resistance to zinc dichloride.
+- **Histidine High + Zinc Treatment**: May show improved growth and viability compared to Histidine Control + Zinc Treatment, suggesting that increased histidine levels enhance resistance to zinc dichloride.
+- **Valine Control + Zinc Treatment**: Should exhibit decreased growth similar to Histidine Control + Zinc Treatment, serving as a baseline for zinc stress without histidine modulation.
+
+This experimental design will help elucidate the role of histidine in zinc dichloride resistance and clarify the association suggested in the statement.

@@ -1,0 +1,41 @@
+### Motivation
+The statement suggests that Saccharomyces cerevisiae cells with higher intracellular lysine levels are associated with decreased resistance to hyperosmotic stress when exposed to media containing 30% (w/v) sucrose. Lysine is an essential amino acid that plays a role in protein synthesis and various metabolic pathways. Hyperosmotic stress, such as that induced by high sucrose concentrations, can affect cell viability and metabolic activity. By designing an experiment to modulate intracellular lysine levels, we can investigate this association and understand the potential mechanism behind lysine's influence on hyperosmotic stress resistance.
+
+### Hypothesis
+Cells with elevated intracellular lysine levels exhibit decreased resistance to hyperosmotic stress due to lysine's involvement in pathways that affect osmotic balance and stress response. Specifically, lysine may interfere with stress-related pathways or osmoprotectant synthesis, leading to reduced resilience in high-sucrose environments.
+
+### Experimental Plan
+
+1. **Strain and Media Preparation:**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Prepare minimal media without amino acids as the base medium.
+
+2. **Lysine Supplementation:**
+   - Test three levels of lysine supplementation to modulate intracellular lysine levels:
+     - Control: 0 mM lysine (no supplementation).
+     - Low: 1 mM lysine.
+     - High: 10 mM lysine (supraphysiological concentration).
+
+3. **Experimental Conditions:**
+   - Prepare media containing 30% (w/v) sucrose to induce hyperosmotic stress.
+   - Include a negative control with 10 mM asparagine (equimolar to the highest lysine concentration) to ensure specificity of lysine effects.
+
+4. **Experimental Setup:**
+   - Divide the 96-well plate into sections for each lysine level and the negative control, ensuring replicates for each condition.
+   - Inoculate each well with a standardized initial concentration of yeast cells.
+   - Incubate at 30°C with shaking.
+
+5. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth and assess viability under hyperosmotic stress.
+   - At the end of 20 hours, use mass spectrometry-based metabolomics to measure intracellular lysine levels and confirm modulation.
+   - Analyze growth curves to determine the impact of lysine levels on resistance to hyperosmotic stress.
+
+6. **Controls and Verification:**
+   - Include untreated wells with minimal media and no sucrose to verify baseline growth.
+   - Ensure that sucrose-only controls are included to assess the independent effect of hyperosmotic stress.
+
+### Expected Outcomes
+- If the hypothesis is correct, cells with higher intracellular lysine levels (10 mM supplementation) will show reduced growth or viability in 30% (w/v) sucrose media compared to the control and low lysine conditions, indicating decreased hyperosmotic stress resistance.
+- The negative control with asparagine should not exhibit a significant change in stress resistance, confirming the specificity of lysine's effect.
+- Mass spectrometry should confirm increased intracellular lysine levels in supplemented conditions, validating the modulation strategy.
+- The results will provide insight into lysine's role in osmotic stress response pathways and its potential interference with cellular mechanisms that confer stress resistance.

@@ -1,0 +1,93 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased hyperosmotic stress resistance,B,C),compound_name(B,sucrose),condition(C,Media containing 30% (w/v) sucrose)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "control",
+            "summary": "Baseline growth without any supplementation or hyperosmotic stress."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Lysine",
+            "media_supplementation_doses": "2 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Growth with physiological lysine supplementation without hyperosmotic stress."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Lysine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Growth with supraphysiological lysine supplementation without hyperosmotic stress."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Valine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Growth with valine supplementation without hyperosmotic stress."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "30% sucrose",
+            "treatment_parameters": "30% (w/v)",
+            "sampling_time": 20.0,
+            "type": "treatment control",
+            "summary": "Growth under hyperosmotic stress without any supplementation."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Lysine",
+            "media_supplementation_doses": "2 mM",
+            "treatment": "30% sucrose",
+            "treatment_parameters": "30% (w/v)",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Growth with physiological lysine supplementation under hyperosmotic stress."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Lysine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "30% sucrose",
+            "treatment_parameters": "30% (w/v)",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Growth with supraphysiological lysine supplementation under hyperosmotic stress."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Valine",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "30% sucrose",
+            "treatment_parameters": "30% (w/v)",
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Growth with valine supplementation under hyperosmotic stress."
+        }
+    ]
+}

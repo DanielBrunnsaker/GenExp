@@ -60,10 +60,10 @@ PLATE_TYPE = 'P96'
 # Growth analysis settings
 BLANK_SUBTRACTION = True
 # How many of the closest blanks to use for blank-normalization in OD processing
-N_CLOSEST_BLANKS = 5
+N_CLOSEST_BLANKS = 3
 # If negative value after blank subtraction, what value to set to instead
-BLANK_FILLIN_VALUE = 0
+BLANK_FILLIN_VALUE = 0.01
 
 OUTLIER_METHOD = 'mad'
 ROLLING_MEAN_WINDOWSIZE = 3  # Windowsize for smoothing
-THRESHOLD = 3  # MAD-threshold to use for curve fitering. #3 for MAD, 1.5 for IQR?
+THRESHOLD = 3.5  # MAD-threshold to use for curve fitering. #3 for MAD, 1.5 for IQR?

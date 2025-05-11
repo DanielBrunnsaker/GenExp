@@ -1,0 +1,52 @@
+**Motivation:**
+The statement suggests an association between higher intracellular lysine levels and decreased resistance to acetic acid in Saccharomyces cerevisiae. Understanding this relationship can provide insights into yeast stress responses and metabolic regulation. By modulating lysine levels and observing the effect on acetic acid resistance, we can explore potential metabolic or regulatory pathways involved.
+
+**Hypothesis:**
+Elevated intracellular lysine concentrations in Saccharomyces cerevisiae lead to a decrease in resistance to acetic acid, potentially due to lysine's influence on metabolic pathways or stress response mechanisms that affect acetic acid detoxification or tolerance.
+
+**Experimental Plan:**
+
+1. **Strain and Media:**
+   - Use a wild-type prototrophic Saccharomyces cerevisiae strain.
+   - Prepare minimal media without amino acids for baseline conditions.
+
+2. **Lysine Supplementation:**
+   - Control: No lysine supplementation.
+   - Low Lysine: 5 mM lysine.
+   - High Lysine: 20 mM lysine (supraphysiological concentration).
+
+3. **Acetic Acid Treatment:**
+   - Control: No acetic acid.
+   - Treatment: 20 mM acetic acid.
+
+4. **Negative Control:**
+   - Leucine: 20 mM leucine as a negative control for lysine supplementation effects.
+
+5. **Experimental Conditions:**
+   - Total of 8 conditions:
+     - No lysine, no acetic acid (baseline).
+     - Low lysine, no acetic acid.
+     - High lysine, no acetic acid.
+     - No lysine, with acetic acid.
+     - Low lysine, with acetic acid.
+     - High lysine, with acetic acid.
+     - Leucine, no acetic acid.
+     - Leucine, with acetic acid.
+
+6. **Procedure:**
+   - Inoculate cells in the respective media at t=0h.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes to monitor growth.
+   - Terminate the experiment at 20 hours.
+   - Perform mass spectrometry-based metabolomics to measure intracellular lysine levels.
+
+**Expected Outcomes:**
+- **Growth Analysis:**
+  - If higher lysine levels decrease resistance to acetic acid, cultures with high lysine supplementation and acetic acid treatment should show reduced growth compared to controls.
+  - Cultures with leucine supplementation should not exhibit decreased resistance to acetic acid, serving as a control for lysine-specific effects.
+
+- **Metabolomics:**
+  - Confirm that lysine supplementation effectively increases intracellular lysine levels.
+  - Evaluate any correlation between lysine levels and acetic acid resistance.
+
+This experiment will help determine if there is a direct association between lysine concentration and acetic acid resistance, and whether lysine's impact is specific or part of a broader metabolic response.

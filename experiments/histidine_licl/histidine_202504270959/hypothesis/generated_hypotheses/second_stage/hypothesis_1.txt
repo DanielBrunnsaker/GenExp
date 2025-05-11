@@ -1,0 +1,52 @@
+### Motivation
+
+The statement suggests an association between lower intracellular histidine levels and decreased resistance to zinc dichloride in Saccharomyces cerevisiae. Histidine is an essential amino acid that can play roles in metal ion binding and buffering capacity within cells. Understanding this association could provide insights into the cellular mechanisms of metal ion resistance and amino acid metabolism.
+
+### Hypothesis
+
+Lower intracellular levels of histidine reduce the buffering capacity and metal ion chelation in Saccharomyces cerevisiae, leading to decreased resistance to zinc dichloride. By modulating intracellular histidine levels, we can test if changes in resistance to zinc dichloride are observed, supporting or refuting the association.
+
+### Experimental Plan
+
+1. **Strain and Media:**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Grow cells in minimal media without amino acids, except for specified supplementation.
+
+2. **Supplementation Levels:**
+   - **Histidine Supplementation:**
+     - Control: 0 mM (no supplementation)
+     - Low: 0.5 mM
+     - High: 5 mM (supraphysiological concentration)
+   - **Negative Control:**
+     - Valine at 5 mM (equimolar to highest histidine supplementation)
+
+3. **Zinc Dichloride Treatment:**
+   - Control: 0 mM (no zinc dichloride)
+   - Treatment: 1 mM zinc dichloride
+
+4. **Experimental Conditions:**
+   - Set up 96-well plates with all combinations of histidine supplementation and zinc dichloride treatment.
+   - Include untreated and treated valine negative controls.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes to assess growth curves.
+
+5. **Metabolomics Analysis:**
+   - At the end of the 20-hour period, perform mass spectrometry-based metabolomics to measure intracellular histidine levels.
+
+6. **Verification:**
+   - Verify that histidine supplementation effectively modulates intracellular histidine levels using metabolomics data.
+
+### Expected Outcomes
+
+- **Histidine Supplementation:**
+  - Increased intracellular histidine levels with higher supplementation (confirmed by metabolomics).
+  - If the hypothesis is correct, cells with no or low histidine supplementation will show decreased growth or viability in the presence of zinc dichloride compared to those with high histidine supplementation.
+  
+- **Zinc Dichloride Treatment:**
+  - Cells with lower histidine levels (0 and 0.5 mM supplementation) are expected to show decreased resistance (lower growth rates and viability) to zinc dichloride.
+  - High histidine supplementation (5 mM) should mitigate the effects of zinc dichloride, showing similar growth to untreated controls.
+
+- **Negative Control (Valine):**
+  - Valine supplementation should not significantly affect resistance to zinc dichloride, serving as a baseline to confirm that observed effects are specific to histidine modulation.
+
+This experimental setup will help determine if there is a causal relationship between histidine levels and zinc dichloride resistance, supporting or refuting the initial association.

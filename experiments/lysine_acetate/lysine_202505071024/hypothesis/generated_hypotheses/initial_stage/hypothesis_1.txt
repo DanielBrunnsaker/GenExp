@@ -1,0 +1,52 @@
+### Motivation
+
+The statement suggests an association between higher levels of intracellular lysine and decreased resistance to acetic acid in Saccharomyces cerevisiae. Acetic acid is a common stressor in yeast fermentation processes, and understanding how lysine levels influence acetic acid resistance could provide insights into metabolic adaptations and stress responses.
+
+### Hypothesis
+
+Increased intracellular lysine levels may interfere with cellular stress response pathways, leading to decreased resistance to acetic acid. This could be due to lysine's impact on metabolic processes or regulatory pathways that modulate stress resistance.
+
+### Experimental Plan
+
+1. **Baseline Conditions:**
+   - Use minimal media without amino acids as the baseline condition.
+
+2. **Lysine Supplementation:**
+   - **Control:** No lysine supplementation.
+   - **Moderate Lysine:** Supplement with 1 mM lysine.
+   - **High Lysine:** Supplement with 10 mM lysine (supraphysiological level).
+
+3. **Acetic Acid Treatment:**
+   - **Control:** No acetic acid.
+   - **Treatment:** 50 mM acetic acid, a concentration known to induce stress in yeast.
+
+4. **Negative Control:**
+   - Use threonine as a negative control for amino acid supplementation, provided at 10 mM (equimolar to the highest lysine concentration).
+
+5. **Experimental Conditions:**
+   - Combine lysine supplementation levels with acetic acid treatment:
+     1. No lysine, no acetic acid (baseline control).
+     2. No lysine, 50 mM acetic acid.
+     3. 1 mM lysine, no acetic acid.
+     4. 1 mM lysine, 50 mM acetic acid.
+     5. 10 mM lysine, no acetic acid.
+     6. 10 mM lysine, 50 mM acetic acid.
+     7. 10 mM threonine, no acetic acid (negative control).
+     8. 10 mM threonine, 50 mM acetic acid (negative control).
+
+6. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth.
+   - At the end of the experiment (20 hours), perform mass spectrometry-based metabolomics to measure intracellular lysine levels and verify lysine uptake.
+   - Assess viability through growth curves.
+
+7. **Justification:**
+   - Lysine supplementation is used to modulate intracellular lysine levels, which is relevant given its role in metabolism and potential impact on stress pathways.
+   - Acetic acid is chosen as a chemical stressor due to its known effects on yeast and its relevance to the statement.
+
+### Expected Outcomes
+
+- **Increased Lysine Levels:** Expect to see modulated growth and viability in the presence of acetic acid when lysine is supplemented. If lysine increases sensitivity to acetic acid, cells with higher lysine levels may show reduced growth or viability compared to controls.
+- **Negative Control:** Threonine supplementation should not affect acetic acid resistance, serving as a control to ensure observed effects are specific to lysine.
+- **Verification:** Mass spectrometry should confirm increased intracellular lysine levels with supplementation, validating the experimental setup.
+
+This experiment aims to test the association between lysine levels and acetic acid resistance, providing insights into the metabolic and regulatory interactions involved.

@@ -1,0 +1,97 @@
+	plateID	well	CONCuM	Summary
+0	plate_1	A01	None: 0 mM & acetic acid: 20 mM	Control condition with no lysine supplementation and 20 mM acetic acid treatment.
+1	plate_1	A02	Media control	
+2	plate_1	A03	lysine: 0.1 mM & acetic acid: 0 mM	Physiological lysine supplementation without acetic acid treatment.
+3	plate_1	A04	lysine: 10 mM & acetic acid: 0 mM	Supraphysiological lysine supplementation without acetic acid treatment.
+4	plate_1	A05	leucine: 10 mM & acetic acid: 0 mM	Negative control with 10 mM leucine supplementation and no acetic acid treatment.
+5	plate_1	A06	lysine: 10 mM & acetic acid: 20 mM	Supraphysiological lysine supplementation with 20 mM acetic acid treatment.
+6	plate_1	A07	leucine: 10 mM & acetic acid: 0 mM	Negative control with 10 mM leucine supplementation and no acetic acid treatment.
+7	plate_1	A08	None: 0 mM & acetic acid: 0 mM	Control condition with no lysine supplementation and no acetic acid treatment.
+8	plate_1	A09	leucine: 10 mM & acetic acid: 0 mM	Negative control with 10 mM leucine supplementation and no acetic acid treatment.
+9	plate_1	A10	Media control	
+10	plate_1	A11	leucine: 10 mM & acetic acid: 20 mM	Negative control with 10 mM leucine supplementation and 20 mM acetic acid treatment.
+11	plate_1	A12	lysine: 0.1 mM & acetic acid: 20 mM	Physiological lysine supplementation with 20 mM acetic acid treatment.
+12	plate_1	B01	lysine: 10 mM & acetic acid: 0 mM	Supraphysiological lysine supplementation without acetic acid treatment.
+13	plate_1	B02	lysine: 10 mM & acetic acid: 20 mM	Supraphysiological lysine supplementation with 20 mM acetic acid treatment.
+14	plate_1	B03	None: 0 mM & acetic acid: 20 mM	Control condition with no lysine supplementation and 20 mM acetic acid treatment.
+15	plate_1	B04	leucine: 10 mM & acetic acid: 0 mM	Negative control with 10 mM leucine supplementation and no acetic acid treatment.
+16	plate_1	B05	Media control	
+17	plate_1	B06	leucine: 10 mM & acetic acid: 20 mM	Negative control with 10 mM leucine supplementation and 20 mM acetic acid treatment.
+18	plate_1	B07	Media control	
+19	plate_1	B08	lysine: 10 mM & acetic acid: 0 mM	Supraphysiological lysine supplementation without acetic acid treatment.
+20	plate_1	B09	lysine: 0.1 mM & acetic acid: 0 mM	Physiological lysine supplementation without acetic acid treatment.
+21	plate_1	B10	lysine: 0.1 mM & acetic acid: 20 mM	Physiological lysine supplementation with 20 mM acetic acid treatment.
+22	plate_1	B11	None: 0 mM & acetic acid: 20 mM	Control condition with no lysine supplementation and 20 mM acetic acid treatment.
+23	plate_1	B12	None: 0 mM & acetic acid: 0 mM	Control condition with no lysine supplementation and no acetic acid treatment.
+24	plate_1	C01	lysine: 0.1 mM & acetic acid: 0 mM	Physiological lysine supplementation without acetic acid treatment.
+25	plate_1	C02	leucine: 10 mM & acetic acid: 0 mM	Negative control with 10 mM leucine supplementation and no acetic acid treatment.
+26	plate_1	C03	None: 0 mM & acetic acid: 0 mM	Control condition with no lysine supplementation and no acetic acid treatment.
+27	plate_1	C04	Media control	
+28	plate_1	C05	None: 0 mM & acetic acid: 20 mM	Control condition with no lysine supplementation and 20 mM acetic acid treatment.
+29	plate_1	C06	lysine: 0.1 mM & acetic acid: 20 mM	Physiological lysine supplementation with 20 mM acetic acid treatment.
+30	plate_1	C07	lysine: 10 mM & acetic acid: 0 mM	Supraphysiological lysine supplementation without acetic acid treatment.
+31	plate_1	C08	Media control	
+32	plate_1	C09	lysine: 0.1 mM & acetic acid: 20 mM	Physiological lysine supplementation with 20 mM acetic acid treatment.
+33	plate_1	C10	lysine: 10 mM & acetic acid: 0 mM	Supraphysiological lysine supplementation without acetic acid treatment.
+34	plate_1	C11	lysine: 10 mM & acetic acid: 20 mM	Supraphysiological lysine supplementation with 20 mM acetic acid treatment.
+35	plate_1	C12	leucine: 10 mM & acetic acid: 20 mM	Negative control with 10 mM leucine supplementation and 20 mM acetic acid treatment.
+36	plate_1	D01	leucine: 10 mM & acetic acid: 20 mM	Negative control with 10 mM leucine supplementation and 20 mM acetic acid treatment.
+37	plate_1	D02	lysine: 0.1 mM & acetic acid: 20 mM	Physiological lysine supplementation with 20 mM acetic acid treatment.
+38	plate_1	D03	Media control	
+39	plate_1	D04	None: 0 mM & acetic acid: 0 mM	Control condition with no lysine supplementation and no acetic acid treatment.
+40	plate_1	D05	None: 0 mM & acetic acid: 0 mM	Control condition with no lysine supplementation and no acetic acid treatment.
+41	plate_1	D06	leucine: 10 mM & acetic acid: 0 mM	Negative control with 10 mM leucine supplementation and no acetic acid treatment.
+42	plate_1	D07	lysine: 0.1 mM & acetic acid: 0 mM	Physiological lysine supplementation without acetic acid treatment.
+43	plate_1	D08	lysine: 10 mM & acetic acid: 20 mM	Supraphysiological lysine supplementation with 20 mM acetic acid treatment.
+44	plate_1	D09	lysine: 10 mM & acetic acid: 0 mM	Supraphysiological lysine supplementation without acetic acid treatment.
+45	plate_1	D10	None: 0 mM & acetic acid: 20 mM	Control condition with no lysine supplementation and 20 mM acetic acid treatment.
+46	plate_1	D11	Media control	
+47	plate_1	D12	lysine: 10 mM & acetic acid: 20 mM	Supraphysiological lysine supplementation with 20 mM acetic acid treatment.
+48	plate_1	E01	lysine: 10 mM & acetic acid: 20 mM	Supraphysiological lysine supplementation with 20 mM acetic acid treatment.
+49	plate_1	E02	Media control	
+50	plate_1	E03	lysine: 10 mM & acetic acid: 0 mM	Supraphysiological lysine supplementation without acetic acid treatment.
+51	plate_1	E04	None: 0 mM & acetic acid: 20 mM	Control condition with no lysine supplementation and 20 mM acetic acid treatment.
+52	plate_1	E05	leucine: 10 mM & acetic acid: 20 mM	Negative control with 10 mM leucine supplementation and 20 mM acetic acid treatment.
+53	plate_1	E06	None: 0 mM & acetic acid: 0 mM	Control condition with no lysine supplementation and no acetic acid treatment.
+54	plate_1	E07	lysine: 0.1 mM & acetic acid: 20 mM	Physiological lysine supplementation with 20 mM acetic acid treatment.
+55	plate_1	E08	None: 0 mM & acetic acid: 20 mM	Control condition with no lysine supplementation and 20 mM acetic acid treatment.
+56	plate_1	E09	lysine: 10 mM & acetic acid: 20 mM	Supraphysiological lysine supplementation with 20 mM acetic acid treatment.
+57	plate_1	E10	leucine: 10 mM & acetic acid: 0 mM	Negative control with 10 mM leucine supplementation and no acetic acid treatment.
+58	plate_1	E11	lysine: 0.1 mM & acetic acid: 0 mM	Physiological lysine supplementation without acetic acid treatment.
+59	plate_1	E12	Media control	
+60	plate_1	F01	lysine: 0.1 mM & acetic acid: 20 mM	Physiological lysine supplementation with 20 mM acetic acid treatment.
+61	plate_1	F02	lysine: 10 mM & acetic acid: 0 mM	Supraphysiological lysine supplementation without acetic acid treatment.
+62	plate_1	F03	leucine: 10 mM & acetic acid: 20 mM	Negative control with 10 mM leucine supplementation and 20 mM acetic acid treatment.
+63	plate_1	F04	Media control	
+64	plate_1	F05	lysine: 0.1 mM & acetic acid: 0 mM	Physiological lysine supplementation without acetic acid treatment.
+65	plate_1	F06	None: 0 mM & acetic acid: 20 mM	Control condition with no lysine supplementation and 20 mM acetic acid treatment.
+66	plate_1	F07	None: 0 mM & acetic acid: 0 mM	Control condition with no lysine supplementation and no acetic acid treatment.
+67	plate_1	F08	lysine: 0.1 mM & acetic acid: 20 mM	Physiological lysine supplementation with 20 mM acetic acid treatment.
+68	plate_1	F09	Media control	
+69	plate_1	F10	lysine: 10 mM & acetic acid: 20 mM	Supraphysiological lysine supplementation with 20 mM acetic acid treatment.
+70	plate_1	F11	None: 0 mM & acetic acid: 0 mM	Control condition with no lysine supplementation and no acetic acid treatment.
+71	plate_1	F12	leucine: 10 mM & acetic acid: 0 mM	Negative control with 10 mM leucine supplementation and no acetic acid treatment.
+72	plate_1	G01	Media control	
+73	plate_1	G02	None: 0 mM & acetic acid: 0 mM	Control condition with no lysine supplementation and no acetic acid treatment.
+74	plate_1	G03	lysine: 0.1 mM & acetic acid: 20 mM	Physiological lysine supplementation with 20 mM acetic acid treatment.
+75	plate_1	G04	leucine: 10 mM & acetic acid: 20 mM	Negative control with 10 mM leucine supplementation and 20 mM acetic acid treatment.
+76	plate_1	G05	lysine: 10 mM & acetic acid: 0 mM	Supraphysiological lysine supplementation without acetic acid treatment.
+77	plate_1	G06	lysine: 0.1 mM & acetic acid: 0 mM	Physiological lysine supplementation without acetic acid treatment.
+78	plate_1	G07	lysine: 10 mM & acetic acid: 20 mM	Supraphysiological lysine supplementation with 20 mM acetic acid treatment.
+79	plate_1	G08	leucine: 10 mM & acetic acid: 20 mM	Negative control with 10 mM leucine supplementation and 20 mM acetic acid treatment.
+80	plate_1	G09	leucine: 10 mM & acetic acid: 20 mM	Negative control with 10 mM leucine supplementation and 20 mM acetic acid treatment.
+81	plate_1	G10	Media control	
+82	plate_1	G11	leucine: 10 mM & acetic acid: 0 mM	Negative control with 10 mM leucine supplementation and no acetic acid treatment.
+83	plate_1	G12	None: 0 mM & acetic acid: 20 mM	Control condition with no lysine supplementation and 20 mM acetic acid treatment.
+84	plate_1	H01	None: 0 mM & acetic acid: 0 mM	Control condition with no lysine supplementation and no acetic acid treatment.
+85	plate_1	H02	lysine: 0.1 mM & acetic acid: 0 mM	Physiological lysine supplementation without acetic acid treatment.
+86	plate_1	H03	lysine: 10 mM & acetic acid: 20 mM	Supraphysiological lysine supplementation with 20 mM acetic acid treatment.
+87	plate_1	H04	lysine: 0.1 mM & acetic acid: 0 mM	Physiological lysine supplementation without acetic acid treatment.
+88	plate_1	H05	lysine: 0.1 mM & acetic acid: 20 mM	Physiological lysine supplementation with 20 mM acetic acid treatment.
+89	plate_1	H06	Media control	
+90	plate_1	H07	leucine: 10 mM & acetic acid: 20 mM	Negative control with 10 mM leucine supplementation and 20 mM acetic acid treatment.
+91	plate_1	H08	leucine: 10 mM & acetic acid: 0 mM	Negative control with 10 mM leucine supplementation and no acetic acid treatment.
+92	plate_1	H09	None: 0 mM & acetic acid: 20 mM	Control condition with no lysine supplementation and 20 mM acetic acid treatment.
+93	plate_1	H10	lysine: 0.1 mM & acetic acid: 0 mM	Physiological lysine supplementation without acetic acid treatment.
+94	plate_1	H11	Media control	
+95	plate_1	H12	lysine: 10 mM & acetic acid: 0 mM	Supraphysiological lysine supplementation without acetic acid treatment.

@@ -1,0 +1,48 @@
+**Motivation:**
+The statement suggests an association between higher intracellular lysine levels and decreased resistance to acetic acid in Saccharomyces cerevisiae. Understanding this relationship could provide insights into how amino acid metabolism affects stress resistance in yeast, which is relevant for industrial applications where yeast is exposed to various stressors.
+
+**Hypothesis:**
+Increased intracellular lysine levels reduce the resistance of Saccharomyces cerevisiae to acetic acid, potentially by altering metabolic pathways or stress response mechanisms that are influenced by lysine availability.
+
+**Experimental Plan:**
+
+1. **Strain and Media:**
+   - Use a reference/wild-type prototrophic Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids.
+
+2. **Lysine Supplementation Levels:**
+   - Control: No lysine supplementation.
+   - Low Lysine: Supplement with 0.5 mM lysine.
+   - High Lysine: Supplement with 5 mM lysine (supraphysiological concentration).
+
+3. **Acetic Acid Treatment Levels:**
+   - Control: No acetic acid treatment.
+   - Treated: 20 mM acetic acid added at t=0h.
+
+4. **Negative Control:**
+   - Use threonine as a negative control amino acid at 5 mM, equimolar to the highest lysine concentration, in both treated and untreated conditions.
+
+5. **Experimental Setup:**
+   - Each lysine supplementation level will be tested with and without acetic acid treatment, resulting in 6 conditions (3 lysine levels x 2 acetic acid levels).
+   - Include 2 additional conditions for threonine control (with and without acetic acid), totaling 8 conditions.
+
+6. **Measurements:**
+   - Monitor OD600 every 20 minutes to assess growth.
+   - At the end of 20 hours, perform mass spectrometry-based metabolomics to measure intracellular lysine levels and verify modulation.
+   - Assess cell viability through growth curves.
+
+7. **Assumptions Testing:**
+   - Verify that lysine supplementation effectively increases intracellular lysine levels via metabolomics.
+   - Ensure no significant growth or viability effect from threonine supplementation alone.
+
+**Expected Outcomes:**
+
+- **If Hypothesis is Supported:**
+  - Higher intracellular lysine levels (5 mM supplementation) will correlate with decreased growth or viability in the presence of acetic acid compared to control and low lysine conditions.
+  - No significant change in resistance to acetic acid in threonine controls, confirming the lysine-specific effect.
+
+- **If Hypothesis is Not Supported:**
+  - No difference in growth or viability across lysine supplementation levels when exposed to acetic acid.
+  - Similar resistance patterns in lysine and threonine control conditions.
+
+This experimental design will help determine if there is a link between lysine levels and acetic acid resistance, while controlling for potential confounders such as non-specific amino acid effects.

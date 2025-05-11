@@ -1,0 +1,97 @@
+	plateID	well	CONCuM	Summary
+0	plate_1	A01	None: 0 mM & acetic acid: 50 mM	Yeast treated with acetic acid to test resistance without glutamine supplementation.
+1	plate_1	A02	Media control	
+2	plate_1	A03	glutamine: 0.5 mM & acetic acid: 0 mM	Yeast grown with low glutamine supplementation to modulate intracellular levels.
+3	plate_1	A04	glutamine: 10 mM & acetic acid: 0 mM	Yeast grown with high glutamine supplementation to modulate intracellular levels.
+4	plate_1	A05	leucine: 10 mM & acetic acid: 0 mM	Yeast grown with leucine supplementation to ensure effects are specific to glutamine.
+5	plate_1	A06	glutamine: 10 mM & acetic acid: 50 mM	Yeast with high glutamine supplementation treated with acetic acid to test resistance.
+6	plate_1	A07	leucine: 10 mM & acetic acid: 0 mM	Yeast grown with leucine supplementation to ensure effects are specific to glutamine.
+7	plate_1	A08	None: 0 mM & acetic acid: 0 mM	Wild-type yeast grown in minimal media without any supplementation or treatment.
+8	plate_1	A09	leucine: 10 mM & acetic acid: 0 mM	Yeast grown with leucine supplementation to ensure effects are specific to glutamine.
+9	plate_1	A10	Media control	
+10	plate_1	A11	leucine: 10 mM & acetic acid: 50 mM	Yeast with leucine supplementation treated with acetic acid to ensure effects are specific to glutamine.
+11	plate_1	A12	glutamine: 0.5 mM & acetic acid: 50 mM	Yeast with low glutamine supplementation treated with acetic acid to test resistance.
+12	plate_1	B01	glutamine: 10 mM & acetic acid: 0 mM	Yeast grown with high glutamine supplementation to modulate intracellular levels.
+13	plate_1	B02	glutamine: 10 mM & acetic acid: 50 mM	Yeast with high glutamine supplementation treated with acetic acid to test resistance.
+14	plate_1	B03	None: 0 mM & acetic acid: 50 mM	Yeast treated with acetic acid to test resistance without glutamine supplementation.
+15	plate_1	B04	leucine: 10 mM & acetic acid: 0 mM	Yeast grown with leucine supplementation to ensure effects are specific to glutamine.
+16	plate_1	B05	Media control	
+17	plate_1	B06	leucine: 10 mM & acetic acid: 50 mM	Yeast with leucine supplementation treated with acetic acid to ensure effects are specific to glutamine.
+18	plate_1	B07	Media control	
+19	plate_1	B08	glutamine: 10 mM & acetic acid: 0 mM	Yeast grown with high glutamine supplementation to modulate intracellular levels.
+20	plate_1	B09	glutamine: 0.5 mM & acetic acid: 0 mM	Yeast grown with low glutamine supplementation to modulate intracellular levels.
+21	plate_1	B10	glutamine: 0.5 mM & acetic acid: 50 mM	Yeast with low glutamine supplementation treated with acetic acid to test resistance.
+22	plate_1	B11	None: 0 mM & acetic acid: 50 mM	Yeast treated with acetic acid to test resistance without glutamine supplementation.
+23	plate_1	B12	None: 0 mM & acetic acid: 0 mM	Wild-type yeast grown in minimal media without any supplementation or treatment.
+24	plate_1	C01	glutamine: 0.5 mM & acetic acid: 0 mM	Yeast grown with low glutamine supplementation to modulate intracellular levels.
+25	plate_1	C02	leucine: 10 mM & acetic acid: 0 mM	Yeast grown with leucine supplementation to ensure effects are specific to glutamine.
+26	plate_1	C03	None: 0 mM & acetic acid: 0 mM	Wild-type yeast grown in minimal media without any supplementation or treatment.
+27	plate_1	C04	Media control	
+28	plate_1	C05	None: 0 mM & acetic acid: 50 mM	Yeast treated with acetic acid to test resistance without glutamine supplementation.
+29	plate_1	C06	glutamine: 0.5 mM & acetic acid: 50 mM	Yeast with low glutamine supplementation treated with acetic acid to test resistance.
+30	plate_1	C07	glutamine: 10 mM & acetic acid: 0 mM	Yeast grown with high glutamine supplementation to modulate intracellular levels.
+31	plate_1	C08	Media control	
+32	plate_1	C09	glutamine: 0.5 mM & acetic acid: 50 mM	Yeast with low glutamine supplementation treated with acetic acid to test resistance.
+33	plate_1	C10	glutamine: 10 mM & acetic acid: 0 mM	Yeast grown with high glutamine supplementation to modulate intracellular levels.
+34	plate_1	C11	glutamine: 10 mM & acetic acid: 50 mM	Yeast with high glutamine supplementation treated with acetic acid to test resistance.
+35	plate_1	C12	leucine: 10 mM & acetic acid: 50 mM	Yeast with leucine supplementation treated with acetic acid to ensure effects are specific to glutamine.
+36	plate_1	D01	leucine: 10 mM & acetic acid: 50 mM	Yeast with leucine supplementation treated with acetic acid to ensure effects are specific to glutamine.
+37	plate_1	D02	glutamine: 0.5 mM & acetic acid: 50 mM	Yeast with low glutamine supplementation treated with acetic acid to test resistance.
+38	plate_1	D03	Media control	
+39	plate_1	D04	None: 0 mM & acetic acid: 0 mM	Wild-type yeast grown in minimal media without any supplementation or treatment.
+40	plate_1	D05	None: 0 mM & acetic acid: 0 mM	Wild-type yeast grown in minimal media without any supplementation or treatment.
+41	plate_1	D06	leucine: 10 mM & acetic acid: 0 mM	Yeast grown with leucine supplementation to ensure effects are specific to glutamine.
+42	plate_1	D07	glutamine: 0.5 mM & acetic acid: 0 mM	Yeast grown with low glutamine supplementation to modulate intracellular levels.
+43	plate_1	D08	glutamine: 10 mM & acetic acid: 50 mM	Yeast with high glutamine supplementation treated with acetic acid to test resistance.
+44	plate_1	D09	glutamine: 10 mM & acetic acid: 0 mM	Yeast grown with high glutamine supplementation to modulate intracellular levels.
+45	plate_1	D10	None: 0 mM & acetic acid: 50 mM	Yeast treated with acetic acid to test resistance without glutamine supplementation.
+46	plate_1	D11	Media control	
+47	plate_1	D12	glutamine: 10 mM & acetic acid: 50 mM	Yeast with high glutamine supplementation treated with acetic acid to test resistance.
+48	plate_1	E01	glutamine: 10 mM & acetic acid: 50 mM	Yeast with high glutamine supplementation treated with acetic acid to test resistance.
+49	plate_1	E02	Media control	
+50	plate_1	E03	glutamine: 10 mM & acetic acid: 0 mM	Yeast grown with high glutamine supplementation to modulate intracellular levels.
+51	plate_1	E04	None: 0 mM & acetic acid: 50 mM	Yeast treated with acetic acid to test resistance without glutamine supplementation.
+52	plate_1	E05	leucine: 10 mM & acetic acid: 50 mM	Yeast with leucine supplementation treated with acetic acid to ensure effects are specific to glutamine.
+53	plate_1	E06	None: 0 mM & acetic acid: 0 mM	Wild-type yeast grown in minimal media without any supplementation or treatment.
+54	plate_1	E07	glutamine: 0.5 mM & acetic acid: 50 mM	Yeast with low glutamine supplementation treated with acetic acid to test resistance.
+55	plate_1	E08	None: 0 mM & acetic acid: 50 mM	Yeast treated with acetic acid to test resistance without glutamine supplementation.
+56	plate_1	E09	glutamine: 10 mM & acetic acid: 50 mM	Yeast with high glutamine supplementation treated with acetic acid to test resistance.
+57	plate_1	E10	leucine: 10 mM & acetic acid: 0 mM	Yeast grown with leucine supplementation to ensure effects are specific to glutamine.
+58	plate_1	E11	glutamine: 0.5 mM & acetic acid: 0 mM	Yeast grown with low glutamine supplementation to modulate intracellular levels.
+59	plate_1	E12	Media control	
+60	plate_1	F01	glutamine: 0.5 mM & acetic acid: 50 mM	Yeast with low glutamine supplementation treated with acetic acid to test resistance.
+61	plate_1	F02	glutamine: 10 mM & acetic acid: 0 mM	Yeast grown with high glutamine supplementation to modulate intracellular levels.
+62	plate_1	F03	leucine: 10 mM & acetic acid: 50 mM	Yeast with leucine supplementation treated with acetic acid to ensure effects are specific to glutamine.
+63	plate_1	F04	Media control	
+64	plate_1	F05	glutamine: 0.5 mM & acetic acid: 0 mM	Yeast grown with low glutamine supplementation to modulate intracellular levels.
+65	plate_1	F06	None: 0 mM & acetic acid: 50 mM	Yeast treated with acetic acid to test resistance without glutamine supplementation.
+66	plate_1	F07	None: 0 mM & acetic acid: 0 mM	Wild-type yeast grown in minimal media without any supplementation or treatment.
+67	plate_1	F08	glutamine: 0.5 mM & acetic acid: 50 mM	Yeast with low glutamine supplementation treated with acetic acid to test resistance.
+68	plate_1	F09	Media control	
+69	plate_1	F10	glutamine: 10 mM & acetic acid: 50 mM	Yeast with high glutamine supplementation treated with acetic acid to test resistance.
+70	plate_1	F11	None: 0 mM & acetic acid: 0 mM	Wild-type yeast grown in minimal media without any supplementation or treatment.
+71	plate_1	F12	leucine: 10 mM & acetic acid: 0 mM	Yeast grown with leucine supplementation to ensure effects are specific to glutamine.
+72	plate_1	G01	Media control	
+73	plate_1	G02	None: 0 mM & acetic acid: 0 mM	Wild-type yeast grown in minimal media without any supplementation or treatment.
+74	plate_1	G03	glutamine: 0.5 mM & acetic acid: 50 mM	Yeast with low glutamine supplementation treated with acetic acid to test resistance.
+75	plate_1	G04	leucine: 10 mM & acetic acid: 50 mM	Yeast with leucine supplementation treated with acetic acid to ensure effects are specific to glutamine.
+76	plate_1	G05	glutamine: 10 mM & acetic acid: 0 mM	Yeast grown with high glutamine supplementation to modulate intracellular levels.
+77	plate_1	G06	glutamine: 0.5 mM & acetic acid: 0 mM	Yeast grown with low glutamine supplementation to modulate intracellular levels.
+78	plate_1	G07	glutamine: 10 mM & acetic acid: 50 mM	Yeast with high glutamine supplementation treated with acetic acid to test resistance.
+79	plate_1	G08	leucine: 10 mM & acetic acid: 50 mM	Yeast with leucine supplementation treated with acetic acid to ensure effects are specific to glutamine.
+80	plate_1	G09	leucine: 10 mM & acetic acid: 50 mM	Yeast with leucine supplementation treated with acetic acid to ensure effects are specific to glutamine.
+81	plate_1	G10	Media control	
+82	plate_1	G11	leucine: 10 mM & acetic acid: 0 mM	Yeast grown with leucine supplementation to ensure effects are specific to glutamine.
+83	plate_1	G12	None: 0 mM & acetic acid: 50 mM	Yeast treated with acetic acid to test resistance without glutamine supplementation.
+84	plate_1	H01	None: 0 mM & acetic acid: 0 mM	Wild-type yeast grown in minimal media without any supplementation or treatment.
+85	plate_1	H02	glutamine: 0.5 mM & acetic acid: 0 mM	Yeast grown with low glutamine supplementation to modulate intracellular levels.
+86	plate_1	H03	glutamine: 10 mM & acetic acid: 50 mM	Yeast with high glutamine supplementation treated with acetic acid to test resistance.
+87	plate_1	H04	glutamine: 0.5 mM & acetic acid: 0 mM	Yeast grown with low glutamine supplementation to modulate intracellular levels.
+88	plate_1	H05	glutamine: 0.5 mM & acetic acid: 50 mM	Yeast with low glutamine supplementation treated with acetic acid to test resistance.
+89	plate_1	H06	Media control	
+90	plate_1	H07	leucine: 10 mM & acetic acid: 50 mM	Yeast with leucine supplementation treated with acetic acid to ensure effects are specific to glutamine.
+91	plate_1	H08	leucine: 10 mM & acetic acid: 0 mM	Yeast grown with leucine supplementation to ensure effects are specific to glutamine.
+92	plate_1	H09	None: 0 mM & acetic acid: 50 mM	Yeast treated with acetic acid to test resistance without glutamine supplementation.
+93	plate_1	H10	glutamine: 0.5 mM & acetic acid: 0 mM	Yeast grown with low glutamine supplementation to modulate intracellular levels.
+94	plate_1	H11	Media control	
+95	plate_1	H12	glutamine: 10 mM & acetic acid: 0 mM	Yeast grown with high glutamine supplementation to modulate intracellular levels.
