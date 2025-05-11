@@ -1,0 +1,41 @@
+### Motivation
+The statement suggests an association between higher intracellular proline levels and increased resistance to (S)-lactic acid in Saccharomyces cerevisiae. Proline is known to play a role in stress response, potentially acting as an osmoprotectant or stabilizing proteins under stress conditions. This experiment aims to explore whether increased intracellular proline enhances resistance to (S)-lactic acid by modulating proline levels and measuring growth and viability under lactic acid stress.
+
+### Hypothesis
+Increasing intracellular proline levels in Saccharomyces cerevisiae will enhance resistance to (S)-lactic acid, as evidenced by improved growth and viability in media supplemented with this compound. Proline may confer protective effects through osmoprotection or by stabilizing cellular structures against acid-induced stress.
+
+### Experimental Plan
+1. **Strain and Media Setup:**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Proline Supplementation:**
+   - Proline at 0 mM (Control), 5 mM, and 10 mM concentrations. These concentrations are chosen based on literature for physiological relevance.
+
+3. **(S)-Lactic Acid Treatment:**
+   - Apply (S)-lactic acid at 0 mM (Control) and 20 mM, a concentration known to induce stress in yeast but not immediately lethal.
+
+4. **Negative Control:**
+   - Use alanine at 10 mM as a negative control to ensure that effects are specific to proline and not due to general amino acid supplementation.
+
+5. **Experimental Conditions:**
+   - Each combination of proline supplementation and lactic acid treatment will be tested, resulting in 6 conditions (3 proline levels x 2 lactic acid levels).
+   - Include two additional conditions for the alanine negative control: alanine with no lactic acid and alanine with 20 mM lactic acid.
+
+6. **Measurement Protocol:**
+   - Measure OD600 every 20 minutes to monitor growth.
+   - At the end of 20 hours, perform mass spectrometry-based metabolomics to measure intracellular proline levels.
+   - Assess viability through growth curve analysis.
+
+### Expected Outcomes
+- **Proline Supplementation:**
+  - An increase in intracellular proline levels is expected in conditions supplemented with proline.
+  - Enhanced growth and viability under lactic acid stress are anticipated with higher proline levels if the hypothesis is correct.
+
+- **(S)-Lactic Acid Treatment:**
+  - A decrease in growth and viability is expected in the presence of (S)-lactic acid, with the extent of reduction depending on proline supplementation.
+
+- **Negative Control (Alanine):**
+  - Alanine supplementation should not confer increased resistance to (S)-lactic acid, confirming that the protective effect is specific to proline.
+
+This experimental design will test the association between intracellular proline levels and resistance to (S)-lactic acid, providing insights into the potential protective mechanism of proline under chemical stress conditions.

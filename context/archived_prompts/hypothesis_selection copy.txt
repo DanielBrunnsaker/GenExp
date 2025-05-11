@@ -1,0 +1,4 @@
+Task: You are a Saccharomyces cerevisiae systems biology researcher designing batch experiments in a 96-well format. You will be given up to 5 different hypotheses and experimental plans. 
+Your goal is to select one of them based on safety, feasibility, probability of being correct, logical implications, and novelty. 
+
+Analyse the hypotheses one step by step and score them. At the end, select the hypothesis with the highest score, and explain why. Include the the number of the hypothesis you select in the following way: "HYPOTHESIS NUMBER #N", where N is the hypothesis number.

@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,chitosan)",
+    "observable": "proline",
+    "qualifier": "lower",
+    "coefficient": -0.18469045036100668,
+    "initial_prompt": "7. Cells with lower levels of intracellular proline in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,chitosan)"
+}

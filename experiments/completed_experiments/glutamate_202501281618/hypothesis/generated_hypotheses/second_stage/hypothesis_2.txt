@@ -1,0 +1,46 @@
+### Motivation
+
+The statement suggests an association between higher intracellular levels of glutamate and decreased resistance to the chemical spermine in Saccharomyces cerevisiae. To investigate this association, we will design an experiment to modulate intracellular glutamate levels and assess the yeast's resistance to spermine. Understanding this relationship could provide insights into how intracellular glutamate levels influence cellular stress responses.
+
+### Hypothesis
+
+Cells with elevated intracellular glutamate levels exhibit decreased resistance to spermine due to glutamate's role in cellular metabolism and stress response pathways. Specifically, increased glutamate may alter the cell's redox balance or osmotic stress response, thereby affecting its ability to withstand spermine-induced stress.
+
+### Experimental Plan
+
+1. **Experimental Setup:**
+   - Use a reference/wild-type prototrophic Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids, ensuring all conditions are consistent except for the variable being tested (glutamate).
+
+2. **Modulation of Intracellular Glutamate Levels:**
+   - Supplement minimal media with L-glutamate at two concentrations: 
+     - Low concentration: 0 mM (control).
+     - High concentration: 5 mM (to elevate intracellular glutamate levels).
+   - Include a negative control supplementation with alanine at 5 mM, as alanine is not directly involved in the pathways associated with spermine resistance and should not independently affect the phenotype.
+
+3. **Spermine Treatment:**
+   - Prepare a spermine treatment condition at a physiologically relevant concentration of 1 mM, which is known to induce stress in yeast cells.
+
+4. **Experimental Conditions:**
+   - Incubate all cultures at 30°C with shaking to ensure consistent aeration and growth.
+   - Initiate spermine treatment at the start of the experiment (t=0h).
+
+5. **Measurements:**
+   - Monitor OD600 every 20 minutes to assess growth and viability.
+   - At the termination of the experiment (20 hours), perform mass spectrometry-based metabolomics to measure intracellular glutamate concentrations and verify modulation.
+   - Assess cell viability and growth in the presence of spermine by analyzing growth curves.
+
+6. **Control Experiments:**
+   - Conduct parallel experiments without spermine to determine the effect of glutamate supplementation on growth and metabolism independently of spermine stress.
+
+### Expected Outcomes
+
+- **If the Hypothesis is Supported:**
+  - Cells supplemented with 5 mM glutamate will show decreased growth and viability in the presence of spermine compared to control and alanine-supplemented cells, indicating decreased resistance.
+  - Mass spectrometry should confirm elevated intracellular glutamate levels in the high glutamate condition.
+
+- **If the Hypothesis is Not Supported:**
+  - No significant difference in growth and viability between glutamate-supplemented and control cells in the presence of spermine.
+  - This would suggest that elevated glutamate does not affect spermine resistance, or other factors may mediate the observed phenotype.
+
+By carefully controlling the experimental conditions and focusing on intracellular glutamate modulation, this experiment aims to clarify the relationship between glutamate levels and spermine resistance in yeast.

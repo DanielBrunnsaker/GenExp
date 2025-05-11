@@ -1,0 +1,8 @@
+	AUC
+treatment_vs_none_svm	0.9533333333333333
+None_None_vs_PosLow_svm	0.4583333333333333
+None_None_vs_PosHigh_svm	1.0
+None_None_vs_NegHigh_svm	1.0
+Yes_None_vs_PosLow_svm	0.36666666666666664
+Yes_None_vs_PosHigh_svm	1.0
+Yes_None_vs_NegHigh_svm	1.0

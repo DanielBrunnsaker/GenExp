@@ -1,0 +1,49 @@
+### Motivation
+
+The statement suggests an association between higher intracellular levels of glutamate and decreased resistance to formic acid in Saccharomyces cerevisiae. Understanding this relationship can provide insights into how intracellular metabolite levels influence chemical resistance in yeast. Glutamate is a central metabolite in amino acid metabolism and cellular stress responses, and its levels could influence the cell's ability to cope with chemical stressors such as formic acid.
+
+### Hypothesis
+
+Cells with increased intracellular glutamate levels will exhibit decreased resistance to formic acid, potentially due to glutamate's role in cellular metabolism and stress response pathways that may alter the cell's ability to detoxify or withstand formic acid exposure.
+
+### Experimental Plan
+
+1. **Objective:** To determine if increased intracellular glutamate levels correlate with decreased resistance to formic acid in S. cerevisiae.
+
+2. **Strain:** Use a reference/wild-type prototrophic strain of S. cerevisiae.
+
+3. **Media and Conditions:**
+   - Use minimal media without amino acids as the baseline condition.
+   - Incubate all cultures at 30°C with shaking.
+
+4. **Supplementation Levels:**
+   - **Glutamate Supplementation:**
+     - Control: No glutamate supplementation.
+     - Low: 1 mM glutamate.
+     - High: 10 mM glutamate.
+   - **Formic Acid Treatment:**
+     - Control: No formic acid.
+     - Treatment: 10 mM formic acid.
+
+5. **Negative Control:**
+   - Include a negative control with 10 mM arginine, which is not directly involved in the pathways of glutamate or formic acid resistance, to ensure specificity of the observed effects.
+
+6. **Experimental Conditions:**
+   - Total of 6 experimental conditions (3 glutamate levels × 2 formic acid levels) plus 2 negative controls (treated and untreated with formic acid).
+   - Each condition will be conducted in triplicate wells.
+
+7. **Measurement:**
+   - Monitor OD600 every 20 minutes to assess growth and viability.
+   - At 20 hours, perform mass spectrometry-based metabolomics to measure intracellular glutamate levels and confirm modulation.
+
+8. **Assumptions Verification:**
+   - Verify that glutamate supplementation effectively increases intracellular glutamate levels.
+   - Confirm that formic acid treatment impairs growth in a dose-dependent manner.
+
+### Expected Outcomes
+
+- **Increased Intracellular Glutamate:** If increased glutamate levels are associated with decreased resistance, we expect to see reduced growth (lower OD600) in the high glutamate condition with formic acid treatment compared to the control.
+- **Independent Effects:** Glutamate supplementation alone might not affect growth significantly in the absence of formic acid, indicating that any observed decrease in resistance is specific to the presence of formic acid.
+- **Negative Control:** Arginine should not affect resistance to formic acid, serving as a control to ensure that the observed effects are specific to glutamate.
+
+This experimental setup will help determine if there is a correlation between intracellular glutamate levels and resistance to formic acid, and if so, provide a basis for further investigation into the underlying mechanisms.

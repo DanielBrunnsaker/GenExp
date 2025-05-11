@@ -1,0 +1,93 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,increased resistance to chemicals,B,C),compound_name(B,(S)-lactic acid)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "control",
+            "summary": "Baseline growth without any supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": "proline",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Growth with 10 mM proline supplementation, no lactic acid."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": "proline",
+            "media_supplementation_doses": "20 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Growth with 20 mM proline supplementation, no lactic acid."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "(S)-lactic acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 20.0,
+            "type": "treatment control",
+            "summary": "Growth with 50 mM (S)-lactic acid, no proline supplementation."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": "proline",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "(S)-lactic acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": "proline",
+            "media_supplementation_doses": "20 mM",
+            "treatment": "(S)-lactic acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "20 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Growth with 20 mM alanine supplementation, no lactic acid."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "minimal media without amino acids",
+            "media_supplementation": "alanine",
+            "media_supplementation_doses": "20 mM",
+            "treatment": "(S)-lactic acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid."
+        }
+    ]
+}

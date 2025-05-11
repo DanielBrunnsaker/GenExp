@@ -1,0 +1,93 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,lithium(1+)),condition(C,Treatment: 0.1M lithium chloride)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "control",
+            "summary": "Baseline growth without any supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Arginine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Growth with physiological level of arginine supplementation."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Arginine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Growth with supraphysiological level of arginine supplementation."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "Lithium Chloride",
+            "treatment_parameters": "0.1 M",
+            "sampling_time": 20.0,
+            "type": "treatment control",
+            "summary": "Growth with lithium chloride treatment without arginine supplementation."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Arginine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "Lithium Chloride",
+            "treatment_parameters": "0.1 M",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Growth with physiological level of arginine and lithium chloride treatment."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Arginine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Lithium Chloride",
+            "treatment_parameters": "0.1 M",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Growth with supraphysiological level of arginine and lithium chloride treatment."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Growth with alanine supplementation as a negative control."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Alanine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Lithium Chloride",
+            "treatment_parameters": "0.1 M",
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Growth with alanine supplementation and lithium chloride treatment as a negative control."
+        }
+    ]
+}

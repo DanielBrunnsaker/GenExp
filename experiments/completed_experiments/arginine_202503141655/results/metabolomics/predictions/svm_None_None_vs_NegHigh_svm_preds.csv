@@ -1,0 +1,9 @@
+Well,y_true,decision_score,predicted_class,classification
+14,1,0.7542150807548946,1,None_None_vs_NegHigh_svm
+16,1,0.08907454532508091,1,None_None_vs_NegHigh_svm
+17,0,-0.7696505234119468,0,None_None_vs_NegHigh_svm
+20,1,0.9065295979232627,1,None_None_vs_NegHigh_svm
+28,0,-0.19825937833580456,0,None_None_vs_NegHigh_svm
+34,1,0.03456062790697312,1,None_None_vs_NegHigh_svm
+37,0,-0.8446974182980822,0,None_None_vs_NegHigh_svm
+38,0,-0.8037623367104285,0,None_None_vs_NegHigh_svm

@@ -1,0 +1,40 @@
+### Motivation
+The statement suggests an association between higher intracellular glutamate levels and decreased resistance to formic acid in Saccharomyces cerevisiae. To explore this, we need to design an experiment that modulates intracellular glutamate levels and observes the impact on resistance to formic acid. Understanding this relationship could provide insights into metabolic pathways and stress responses in yeast.
+
+### Hypothesis
+Higher intracellular glutamate levels reduce the resistance of Saccharomyces cerevisiae to formic acid by potentially altering the metabolic or stress response pathways that are involved in detoxifying or coping with formic acid stress.
+
+### Experimental Plan
+1. **Baseline Conditions**: Use minimal media without amino acids to ensure that the cells rely on endogenous synthesis for glutamate production.
+
+2. **Glutamate Supplementation**:
+   - **Control (Level 1)**: No glutamate supplementation.
+   - **Level 2**: 5 mM glutamate supplementation to moderately increase intracellular levels.
+   - **Level 3**: 20 mM glutamate supplementation to achieve supraphysiological levels.
+
+3. **Formic Acid Treatment**:
+   - **Control (Level 1)**: No formic acid treatment.
+   - **Level 2**: 15 mM formic acid, a concentration known to stress yeast cells but not lethal.
+
+4. **Negative Control**:
+   - Use valine at 20 mM as a negative control to ensure that any observed effects are specific to glutamate and not due to general amino acid supplementation.
+
+5. **Experimental Setup**:
+   - Prepare 96-well plates with each well containing one of the following combinations:
+     - Glutamate Levels: Control, 5 mM, and 20 mM.
+     - Formic Acid Levels: Control and 15 mM.
+     - Include wells with valine as a negative control with and without formic acid.
+   - Each condition should be replicated to ensure statistical validity.
+
+6. **Measurements**:
+   - Measure OD600 every 20 minutes to monitor growth and determine resistance to formic acid.
+   - At the end of the 20-hour experiment, use mass spectrometry-based metabolomics to verify intracellular glutamate levels.
+
+7. **Assumptions Verification**:
+   - Verify that the chosen concentrations of glutamate effectively increase intracellular glutamate levels.
+   - Confirm that formic acid at 15 mM is at a sub-lethal, stress-inducing concentration.
+
+### Expected Outcomes
+- If higher intracellular glutamate levels indeed decrease resistance to formic acid, we would expect cells with 5 mM and 20 mM glutamate supplementation to show reduced growth rates in the presence of formic acid compared to the control.
+- The valine negative control should show no significant difference in resistance to formic acid, confirming the specificity of the effect to glutamate.
+- The mass spectrometry results should confirm increased intracellular glutamate levels in the supplemented conditions, validating the experimental setup.

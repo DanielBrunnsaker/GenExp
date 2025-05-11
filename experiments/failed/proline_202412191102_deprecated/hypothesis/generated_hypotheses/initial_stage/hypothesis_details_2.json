@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,increased resistance to chemicals,B,C),compound_name(B,2,4-diacetylphloroglucinol)",
+    "observable": "proline",
+    "qualifier": "lower",
+    "coefficient": -0.2248352730518092,
+    "initial_prompt": "15. Cells with lower levels of intracellular proline in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'2,4-diacetylphloroglucinol')"
+}

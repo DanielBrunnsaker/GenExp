@@ -1,0 +1,97 @@
+	Well	Summary	Treatment	Supplement
+0	A1	Growth with 50 mM (S)-lactic acid, no proline supplementation.	Yes	None
+1	B1	Growth with 20 mM proline supplementation, no lactic acid.	None	PosHigh
+2	C1	Growth with 10 mM proline supplementation, no lactic acid.	None	PosLow
+3	D1	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.	Yes	NegHigh
+4	E1	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosHigh
+5	F1	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosLow
+6	G1	Media control	None	None
+7	H1	Baseline growth without any supplementation or treatment.	None	None
+8	A2	Media control	None	None
+9	B2	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosHigh
+10	C2	Growth with 20 mM alanine supplementation, no lactic acid.	None	NegHigh
+11	D2	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosLow
+12	E2	Media control	None	None
+13	F2	Growth with 20 mM proline supplementation, no lactic acid.	None	PosHigh
+14	G2	Baseline growth without any supplementation or treatment.	None	None
+15	H2	Growth with 10 mM proline supplementation, no lactic acid.	None	PosLow
+16	A3	Growth with 10 mM proline supplementation, no lactic acid.	None	PosLow
+17	B3	Growth with 50 mM (S)-lactic acid, no proline supplementation.	Yes	None
+18	C3	Baseline growth without any supplementation or treatment.	None	None
+19	D3	Media control	None	None
+20	E3	Growth with 20 mM proline supplementation, no lactic acid.	None	PosHigh
+21	F3	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.	Yes	NegHigh
+22	G3	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosLow
+23	H3	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosHigh
+24	A4	Growth with 20 mM proline supplementation, no lactic acid.	None	PosHigh
+25	B4	Growth with 20 mM alanine supplementation, no lactic acid.	None	NegHigh
+26	C4	Media control	None	None
+27	D4	Baseline growth without any supplementation or treatment.	None	None
+28	E4	Growth with 50 mM (S)-lactic acid, no proline supplementation.	Yes	None
+29	F4	Media control	None	None
+30	G4	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.	Yes	NegHigh
+31	H4	Growth with 10 mM proline supplementation, no lactic acid.	None	PosLow
+32	A5	Growth with 20 mM alanine supplementation, no lactic acid.	None	NegHigh
+33	B5	Media control	None	None
+34	C5	Growth with 50 mM (S)-lactic acid, no proline supplementation.	Yes	None
+35	D5	Baseline growth without any supplementation or treatment.	None	None
+36	E5	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.	Yes	NegHigh
+37	F5	Growth with 10 mM proline supplementation, no lactic acid.	None	PosLow
+38	G5	Growth with 20 mM proline supplementation, no lactic acid.	None	PosHigh
+39	H5	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosLow
+40	A6	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosHigh
+41	B6	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.	Yes	NegHigh
+42	C6	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosLow
+43	D6	Growth with 20 mM alanine supplementation, no lactic acid.	None	NegHigh
+44	E6	Baseline growth without any supplementation or treatment.	None	None
+45	F6	Growth with 50 mM (S)-lactic acid, no proline supplementation.	Yes	None
+46	G6	Growth with 10 mM proline supplementation, no lactic acid.	None	PosLow
+47	H6	Media control	None	None
+48	A7	Growth with 20 mM alanine supplementation, no lactic acid.	None	NegHigh
+49	B7	Media control	None	None
+50	C7	Growth with 20 mM proline supplementation, no lactic acid.	None	PosHigh
+51	D7	Growth with 10 mM proline supplementation, no lactic acid.	None	PosLow
+52	E7	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosLow
+53	F7	Baseline growth without any supplementation or treatment.	None	None
+54	G7	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosHigh
+55	H7	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.	Yes	NegHigh
+56	A8	Baseline growth without any supplementation or treatment.	None	None
+57	B8	Growth with 20 mM proline supplementation, no lactic acid.	None	PosHigh
+58	C8	Media control	None	None
+59	D8	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosHigh
+60	E8	Growth with 50 mM (S)-lactic acid, no proline supplementation.	Yes	None
+61	F8	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosLow
+62	G8	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.	Yes	NegHigh
+63	H8	Growth with 20 mM alanine supplementation, no lactic acid.	None	NegHigh
+64	A9	Growth with 20 mM alanine supplementation, no lactic acid.	None	NegHigh
+65	B9	Growth with 10 mM proline supplementation, no lactic acid.	None	PosLow
+66	C9	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosLow
+67	D9	Growth with 20 mM proline supplementation, no lactic acid.	None	PosHigh
+68	E9	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosHigh
+69	F9	Media control	None	None
+70	G9	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.	Yes	NegHigh
+71	H9	Growth with 50 mM (S)-lactic acid, no proline supplementation.	Yes	None
+72	A10	Media control	None	None
+73	B10	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosLow
+74	C10	Growth with 20 mM proline supplementation, no lactic acid.	None	PosHigh
+75	D10	Growth with 50 mM (S)-lactic acid, no proline supplementation.	Yes	None
+76	E10	Growth with 20 mM alanine supplementation, no lactic acid.	None	NegHigh
+77	F10	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosHigh
+78	G10	Media control	None	None
+79	H10	Growth with 10 mM proline supplementation, no lactic acid.	None	PosLow
+80	A11	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.	Yes	NegHigh
+81	B11	Growth with 50 mM (S)-lactic acid, no proline supplementation.	Yes	None
+82	C11	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosHigh
+83	D11	Media control	None	None
+84	E11	Growth with 10 mM proline supplementation, no lactic acid.	None	PosLow
+85	F11	Baseline growth without any supplementation or treatment.	None	None
+86	G11	Growth with 20 mM alanine supplementation, no lactic acid.	None	NegHigh
+87	H11	Media control	None	None
+88	A12	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosLow
+89	B12	Baseline growth without any supplementation or treatment.	None	None
+90	C12	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.	Yes	NegHigh
+91	D12	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.	Yes	PosHigh
+92	E12	Media control	None	None
+93	F12	Growth with 20 mM alanine supplementation, no lactic acid.	None	NegHigh
+94	G12	Growth with 50 mM (S)-lactic acid, no proline supplementation.	Yes	None
+95	H12	Growth with 20 mM proline supplementation, no lactic acid.	None	PosHigh

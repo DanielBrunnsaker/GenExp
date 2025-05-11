@@ -1,0 +1,83 @@
+	mu	AUC	MaxOD	Summary
+A1	0.12777830617031968	10014.527999999998	0.36685999999999996	Formic acid treatment without glutamate supplementation.
+A2	0.0	442.82400000000007	0.0	Media control
+A3	0.2653937652353852	44033.56800000001	1.88858	Low glutamate supplementation without formic acid treatment.
+A4	0.25217013335069344	49683.028	2.0497466666666666	High glutamate supplementation without formic acid treatment.
+A5	0.23056313428681077	38540.94799999999	1.8094133333333335	Negative control with arginine supplementation without formic acid treatment.
+A6	0.24928111390197763	27198.516	1.5292800000000002	High glutamate supplementation with formic acid treatment.
+A7	0.2460143533531652	27342.964000000004	1.492346666666667	Negative control with arginine supplementation without formic acid treatment.
+A8	0.24225894062770117	49228.5	1.95626	Baseline condition with no supplementation or treatment.
+A9	0.2484608300071916	31361.34	1.6020266666666665	Negative control with arginine supplementation without formic acid treatment.
+A10	0.0	467.8000000000001	0.0	Media control
+A12	0.16267724164216268	6920.148	0.25656	Low glutamate supplementation with formic acid treatment.
+B1	0.25884634468804835	60256.288	2.1986933333333334	High glutamate supplementation without formic acid treatment.
+B2	0.2334006970124843	33099.308000000005	1.64476	High glutamate supplementation with formic acid treatment.
+B3	0.210576928348276	5391.148	0.28746	Formic acid treatment without glutamate supplementation.
+B4	0.2521135968577291	34639.708	1.7076133333333334	Negative control with arginine supplementation without formic acid treatment.
+B5	0.0	603.436	0.0	Media control
+B6	0.2557655367590493	43785.388000000006	1.77098	Negative control with arginine supplementation and formic acid treatment.
+B7	0.0	24.50399999999999	0.0	Media control
+B8	0.25428798791550655	54465.22000000001	2.11446	High glutamate supplementation without formic acid treatment.
+B10	0.15341460823656133	13439.740000000002	0.5863933333333333	Low glutamate supplementation with formic acid treatment.
+B11	0.1490277573600402	9283.728	0.3832266666666666	Formic acid treatment without glutamate supplementation.
+B12	0.24102383565542607	29924.748	1.4388266666666667	Baseline condition with no supplementation or treatment.
+C1	0.26209125365836095	50110.520000000004	1.9421533333333334	Low glutamate supplementation without formic acid treatment.
+C2	0.24805983217438482	41442.06800000001	1.9237933333333332	Negative control with arginine supplementation without formic acid treatment.
+C4	0.0	54.452000000000005	0.0	Media control
+C5	0.12673219917703069	18361.468	0.68538	Formic acid treatment without glutamate supplementation.
+C7	0.15649013934308695	56192.86799999999	2.4341733333333337	High glutamate supplementation without formic acid treatment.
+C10	0.2245098406023509	53547.087999999996	2.229393333333333	High glutamate supplementation without formic acid treatment.
+C11	0.20205697979471243	33004.668	1.67626	High glutamate supplementation with formic acid treatment.
+C12	0.2641219101777346	42078.46799999999	1.721326666666667	Negative control with arginine supplementation and formic acid treatment.
+D1	0.24243272339630828	52146.62	1.9295466666666667	Negative control with arginine supplementation and formic acid treatment.
+D2	0.19790095529801402	8007.4	0.4385866666666667	Low glutamate supplementation with formic acid treatment.
+D3	0.0	78.86799999999992	0.0	Media control
+D4	0.244617372466718	43232.028000000006	1.8555266666666668	Baseline condition with no supplementation or treatment.
+D5	0.21907268354218745	51541.636	2.046913333333333	Baseline condition with no supplementation or treatment.
+D6	0.20962762283732467	35992.6	1.7692266666666667	Negative control with arginine supplementation without formic acid treatment.
+D8	0.18904650466867626	44227.14000000001	1.9541933333333332	High glutamate supplementation with formic acid treatment.
+D9	0.22281820988220388	64591.448	2.4953266666666667	High glutamate supplementation without formic acid treatment.
+D10	0.09095850709547858	20373.768000000004	0.62656	Formic acid treatment without glutamate supplementation.
+D12	0.23326839406446886	20516.376	1.2217666666666667	High glutamate supplementation with formic acid treatment.
+E1	0.23332533060463187	30073.16	1.5943866666666668	High glutamate supplementation with formic acid treatment.
+E2	0.0	3.14399999999998	0.0	Media control
+E3	0.2779577787235053	39142.924	1.8520933333333331	High glutamate supplementation without formic acid treatment.
+E4	0.09364891138252056	11022.772	0.3591933333333333	Formic acid treatment without glutamate supplementation.
+E5	0.2104549285254892	58027.38	2.0737400000000004	Negative control with arginine supplementation and formic acid treatment.
+E6	0.2097393640499079	48129.64	1.9513266666666667	Baseline condition with no supplementation or treatment.
+E7	0.18004287681687356	17067.2	0.5395933333333333	Low glutamate supplementation with formic acid treatment.
+E8	0.08339693572246504	18276.600000000002	0.5780133333333334	Formic acid treatment without glutamate supplementation.
+E9	0.17867673161051154	45178.656	1.9166	High glutamate supplementation with formic acid treatment.
+E10	0.18577333315976488	39431.89599999999	1.7818333333333332	Negative control with arginine supplementation without formic acid treatment.
+E11	0.18869714489915948	49792.056000000004	1.9417	Low glutamate supplementation without formic acid treatment.
+E12	0.0	1070.7039999999997	0.0	Media control
+F1	0.1708358627627137	10122.64	0.47052	Low glutamate supplementation with formic acid treatment.
+F2	0.25805953066086895	59262.691999999995	2.375366666666667	High glutamate supplementation without formic acid treatment.
+F3	0.2547408483631787	53706.912	2.0170333333333335	Negative control with arginine supplementation and formic acid treatment.
+F6	0.1307156863547605	16551.2	0.53516	Formic acid treatment without glutamate supplementation.
+F8	0.10749970788305802	18720.08	0.6602133333333334	Low glutamate supplementation with formic acid treatment.
+F10	0.1567091121094503	49353.236000000004	2.0237	High glutamate supplementation with formic acid treatment.
+F11	0.20339700757574364	51872.956	2.1359333333333335	Baseline condition with no supplementation or treatment.
+F12	0.2316890705051588	21467.336	1.2134666666666665	Negative control with arginine supplementation without formic acid treatment.
+G1	0.0	708.5799999999998	0.0	Media control
+G2	0.23544964618608902	62469.352000000006	2.3040999999999996	Baseline condition with no supplementation or treatment.
+G3	0.1467570471080404	11802.232000000002	0.4992666666666666	Low glutamate supplementation with formic acid treatment.
+G4	0.2192145355644951	36021.576	1.7553	Negative control with arginine supplementation and formic acid treatment.
+G5	0.1982700157795961	36190.5	1.7561333333333333	High glutamate supplementation without formic acid treatment.
+G7	0.16104381430008916	27540.004	1.2799133333333332	High glutamate supplementation with formic acid treatment.
+G8	0.1879972629881533	53789.748	2.099833333333333	Negative control with arginine supplementation and formic acid treatment.
+G9	0.1853075488174928	49124.29600000001	1.9883333333333333	Negative control with arginine supplementation and formic acid treatment.
+G11	0.15784490637532794	36390.136	1.6339333333333332	Negative control with arginine supplementation without formic acid treatment.
+G12	0.6517730881197443	9742.756000000001	0.19466666666666665	Formic acid treatment without glutamate supplementation.
+H1	0.23035431152267927	33140.532	1.7565	Baseline condition with no supplementation or treatment.
+H2	0.2857287370760631	43672.41999999999	2.0148333333333333	Low glutamate supplementation without formic acid treatment.
+H3	0.237467693106707	27432.931999999997	1.5482666666666667	High glutamate supplementation with formic acid treatment.
+H4	0.2406810436221556	43618.551999999996	1.8913666666666666	Low glutamate supplementation without formic acid treatment.
+H5	0.17948848800563788	8461.492	0.4182333333333334	Low glutamate supplementation with formic acid treatment.
+H6	0.0	240.81999999999988	0.0	Media control
+H7	0.24686953188054667	37443.376	1.7001600000000001	Negative control with arginine supplementation and formic acid treatment.
+H8	0.2463597507717942	24044.568	1.4139666666666668	Negative control with arginine supplementation without formic acid treatment.
+H9	0.6650433311831482	11025.019999999997	0.22724666666666662	Formic acid treatment without glutamate supplementation.
+H10	0.21811305807770479	40657.496	1.859633333333333	Low glutamate supplementation without formic acid treatment.
+H11	0.0	3.2400000000000095	0.0	Media control
+H12	0.24079817725868133	35604.195999999996	1.7842333333333336	High glutamate supplementation without formic acid treatment.

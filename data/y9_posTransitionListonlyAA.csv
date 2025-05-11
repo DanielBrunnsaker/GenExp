@@ -1,0 +1,81 @@
+,Molecule List Name,Precursor Name,Precursor Formula,Precursor Adduct,Precursor Charge,Product m/z,Product Charge,CCS
+2237,AminoAcids,Asparagine,C4H8N2O3,[M+H]+,1.0,133.0608,1.0,131.5
+2238,AminoAcids,Asparagine,C4H8N2O3,[M+Na]+,1.0,155.0428,1.0,131.9
+2242,AminoAcids,Asparagine,C4H8N2O3,[M+NH4]+,1.0,150.0874,1.0,130.2
+2243,AminoAcids,Asparagine,C4H8N2O3,[M-H2O+H]+,1.0,115.0502,1.0,127.4
+2072,AminoAcids,Glutamic Acid,C5H9NO4,[M+H]+,1.0,148.0605,1.0,131.9
+2073,AminoAcids,Glutamic Acid,C5H9NO4,[M+Na]+,1.0,170.0425,1.0,136.4
+2074,AminoAcids,Glutamic Acid,C5H9NO4,[M+NH4]+,1.0,165.0871,1.0,134.1
+2075,AminoAcids,Glutamic Acid,C5H9NO4,[M-H2O+H]+,1.0,130.0499,1.0,127.4
+2337,AminoAcids,Glycine,C2H5NO2,[M+H]+,1.0,76.0393,1.0,127.7
+2338,AminoAcids,Glycine,C2H5NO2,[M+Na]+,1.0,98.0213,1.0,127.7
+2339,AminoAcids,Glycine,C2H5NO2,[M+NH4]+,1.0,93.0659,1.0,128.0
+2340,AminoAcids,Glycine,C2H5NO2,[M-H2O+H]+,1.0,58.0287,1.0,130.8
+2097,AminoAcids,Histidine,C6H9N3O2,[M+H]+,1.0,156.0768,1.0,132.2
+2098,AminoAcids,Histidine,C6H9N3O2,[M+Na]+,1.0,178.0588,1.0,135.0
+2102,AminoAcids,Histidine,C6H9N3O2,[M+NH4]+,1.0,173.1034,1.0,133.1
+2103,AminoAcids,Histidine,C6H9N3O2,[M-H2O+H]+,1.0,138.0662,1.0,131.7
+2088,AminoAcids,Isoleucine,C6H13NO2,[M+H]+,1.0,132.1019,1.0,134.3
+2091,AminoAcids,Isoleucine,C6H13NO2,[M+Na]+,1.0,154.0839,1.0,138.0
+2092,AminoAcids,Isoleucine,C6H13NO2,[M+NH4]+,1.0,149.1285,1.0,136.1
+2093,AminoAcids,Isoleucine,C6H13NO2,[M-H2O+H]+,1.0,114.0913,1.0,126.6
+2344,AminoAcids,L-Alanine,C3H7NO2,[M+H]+,1.0,90.055,1.0,124.8
+2345,AminoAcids,L-Alanine,C3H7NO2,[M+Na]+,1.0,112.037,1.0,128.6
+2346,AminoAcids,L-Alanine,C3H7NO2,[M+NH4]+,1.0,107.0816,1.0,126.9
+2347,AminoAcids,L-Alanine,C3H7NO2,[M-H2O+H]+,1.0,72.0444,1.0,120.4
+2116,AminoAcids,L-Arginine,C6H14N4O2,[M+H]+,1.0,175.119,1.0,136.5
+2117,AminoAcids,L-Arginine,C6H14N4O2,[M+Na]+,1.0,197.101,1.0,148.5
+2121,AminoAcids,L-Arginine,C6H14N4O2,[M+NH4]+,1.0,192.1456,1.0,146.0
+2122,AminoAcids,L-Arginine,C6H14N4O2,[M-H2O+H]+,1.0,157.1084,1.0,132.2
+2248,AminoAcids,L-Aspartic Acid,C4H7NO4,[M+H]+,1.0,134.0448,1.0,131.7
+2249,AminoAcids,L-Aspartic Acid,C4H7NO4,[M-H2O+H]+,1.0,116.0342,1.0,127.6
+2250,AminoAcids,L-Aspartic Acid,C4H7NO4,[M+NH4]+,1.0,151.0714,1.0,135.5
+2251,AminoAcids,L-Aspartic Acid,C4H7NO4,[M+Na]+,1.0,156.0268,1.0,136.6
+2228,AminoAcids,L-Cysteine,C3H7NO2S,[M+Na]+,1.0,144.009,1.0,151.3
+2230,AminoAcids,L-Cysteine,C3H7NO2S,[M+H]+,1.0,122.027,1.0,133.7
+2232,AminoAcids,L-Cysteine,C3H7NO2S,[M+NH4]+,1.0,139.0536,1.0,145.8
+2233,AminoAcids,L-Cysteine,C3H7NO2S,[M-H2O+H]+,1.0,104.0164,1.0,130.5
+2126,AminoAcids,L-Glutamine,C5H10N2O3,[M+H]+,1.0,147.0764,1.0,130.9
+2127,AminoAcids,L-Glutamine,C5H10N2O3,[M+Na]+,1.0,169.0584,1.0,133.7
+2131,AminoAcids,L-Glutamine,C5H10N2O3,[M+NH4]+,1.0,164.103,1.0,134.0
+2132,AminoAcids,L-Glutamine,C5H10N2O3,[M-H2O+H]+,1.0,129.0658,1.0,131.1
+2136,AminoAcids,L-Leucine,C6H13NO2,[M+H]+,1.0,132.1019,1.0,135.0
+2139,AminoAcids,L-Leucine,C6H13NO2,[M+Na]+,1.0,154.0839,1.0,139.7
+2140,AminoAcids,L-Leucine,C6H13NO2,[M+NH4]+,1.0,149.1285,1.0,138.2
+2141,AminoAcids,L-Leucine,C6H13NO2,[M-H2O+H]+,1.0,114.0913,1.0,127.9
+2200,AminoAcids,L-Lysine,C6H14N2O2,[M+H]+,1.0,147.1128,1.0,131.3
+2201,AminoAcids,L-Lysine,C6H14N2O2,[M+Na]+,1.0,169.0948,1.0,134.9
+2205,AminoAcids,L-Lysine,C6H14N2O2,[M+NH4]+,1.0,164.1394,1.0,133.4
+2206,AminoAcids,L-Lysine,C6H14N2O2,[M-H2O+H]+,1.0,129.1022,1.0,131.5
+2255,AminoAcids,L-Phenylalanine,C9H11NO2,[M+Na]+,1.0,188.0683,1.0,138.9
+2257,AminoAcids,L-Phenylalanine,C9H11NO2,[M+H]+,1.0,166.0863,1.0,140.0
+2259,AminoAcids,L-Phenylalanine,C9H11NO2,[M+NH4]+,1.0,183.1129,1.0,137.8
+2260,AminoAcids,L-Phenylalanine,C9H11NO2,[M-H2O+H]+,1.0,148.0757,1.0,135.9
+3612,AminoAcids,L-Threonine,C4H9NO3,[M+H]+,1.0,120.0655,1.0,127.2
+3615,AminoAcids,L-Threonine,C4H9NO3,[M+Na]+,1.0,142.0475,1.0,131.3
+3616,AminoAcids,L-Threonine,C4H9NO3,[M+NH4]+,1.0,137.0921,1.0,129.7
+3617,AminoAcids,L-Threonine,C4H9NO3,[M-H2O+H]+,1.0,102.0549,1.0,124.3
+3632,AminoAcids,L-Tryptophan,C11H12N2O2,[M+H]+,1.0,205.0972,1.0,152.0
+3633,AminoAcids,L-Tryptophan,C11H12N2O2,[M+Na]+,1.0,227.0792,1.0,147.7
+3637,AminoAcids,L-Tryptophan,C11H12N2O2,[M+NH4]+,1.0,222.1238,1.0,147.3
+3638,AminoAcids,L-Tryptophan,C11H12N2O2,[M-H2O+H]+,1.0,187.0866,1.0,141.3
+3488,AminoAcids,L-Tyrosine,C9H11NO3,[M+H]+,1.0,182.0812,1.0,146.2
+3489,AminoAcids,L-Tyrosine,C9H11NO3,[M+Na]+,1.0,204.0632,1.0,144.0
+3493,AminoAcids,L-Tyrosine,C9H11NO3,[M+NH4]+,1.0,199.1078,1.0,142.2
+3494,AminoAcids,L-Tyrosine,C9H11NO3,[M-H2O+H]+,1.0,164.0706,1.0,137.6
+3498,AminoAcids,L-Valine,C5H11NO2,[M+H]+,1.0,118.0863,1.0,127.5
+3499,AminoAcids,L-Valine,C5H11NO2,[M+Na]+,1.0,140.0683,1.0,144.1
+3503,AminoAcids,L-Valine,C5H11NO2,[M+NH4]+,1.0,135.1129,1.0,140.0
+3504,AminoAcids,L-Valine,C5H11NO2,[M-H2O+H]+,1.0,100.0757,1.0,119.1
+2274,AminoAcids,Methionine,C5H11NO2S,[M+H]+,1.0,150.0583,1.0,133.6
+2277,AminoAcids,Methionine,C5H11NO2S,[M+Na]+,1.0,172.0403,1.0,138.7
+2278,AminoAcids,Methionine,C5H11NO2S,[M+NH4]+,1.0,167.0849,1.0,136.9
+2279,AminoAcids,Methionine,C5H11NO2S,[M-H2O+H]+,1.0,132.0477,1.0,131.8
+2079,AminoAcids,Proline,C5H9NO2,[M+H]+,1.0,116.0706,1.0,125.6
+2082,AminoAcids,Proline,C5H9NO2,[M-H2O+H]+,1.0,98.06,1.0,120.3
+2083,AminoAcids,Proline,C5H9NO2,[M+NH4]+,1.0,133.0972,1.0,129.5
+2084,AminoAcids,Proline,C5H9NO2,[M+Na]+,1.0,138.0526,1.0,130.8
+3605,AminoAcids,Serine,C3H7NO3,[M+H]+,1.0,106.0499,1.0,140.1
+3606,AminoAcids,Serine,C3H7NO3,[M+Na]+,1.0,128.0319,1.0,138.0
+3607,AminoAcids,Serine,C3H7NO3,[M+NH4]+,1.0,123.0765,1.0,136.6
+3608,AminoAcids,Serine,C3H7NO3,[M-H2O+H]+,1.0,88.0393,1.0,145.3

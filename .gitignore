@@ -1,5 +1,9 @@
 key.txt
 .DS_Store
+.Rproj.user
+experiments/archived/
+scripts/archived/
+scripts/plotting_scripts/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

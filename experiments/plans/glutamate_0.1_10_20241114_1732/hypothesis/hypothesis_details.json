@@ -1,7 +1,0 @@
-{
-    "logic_program": "Cell(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'zinc dichloride').",
-    "observable": "glutamate",
-    "qualifier": "higher",
-    "number": 4,
-    "reason": "Zinc dichloride is relatively safe to handle and can be used in a 96 well format. The phenotype can be assessed through growth assays."
-}

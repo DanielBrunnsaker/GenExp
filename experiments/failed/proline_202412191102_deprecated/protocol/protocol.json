@@ -1,0 +1,71 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,increased resistance to chemicals,B,C),compound_name(B,(S)-lactic acid)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 14.0,
+            "type": "control",
+            "summary": "Control group with no supplementation or treatment."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Proline",
+            "media_supplementation_doses": "2 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 14.0,
+            "type": "supplementation control",
+            "summary": "Low proline supplementation without lactic acid treatment."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Proline",
+            "media_supplementation_doses": "10 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 14.0,
+            "type": "supplementation control",
+            "summary": "High proline supplementation without lactic acid treatment."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "(S)-lactic acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 14.0,
+            "type": "treatment control",
+            "summary": "Lactic acid treatment without proline supplementation."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Proline",
+            "media_supplementation_doses": "2 mM",
+            "treatment": "(S)-lactic acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 14.0,
+            "type": "experiment",
+            "summary": "Low proline supplementation with lactic acid treatment."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Proline",
+            "media_supplementation_doses": "10 mM",
+            "treatment": "(S)-lactic acid",
+            "treatment_parameters": "50 mM",
+            "sampling_time": 14.0,
+            "type": "experiment",
+            "summary": "High proline supplementation with lactic acid treatment."
+        }
+    ]
+}

@@ -1,0 +1,160 @@
+Sample,Sample type,Experimental group,Total Ion Current Area
+Inj00001-Positive-MAT1_demultiplexed,Blank,Blank,292516.59375
+Inj00002-Positive-MAT1_demultiplexed,Blank,Blank,1098722.625
+Inj00003-Positive-MAT1_demultiplexed,Blank,Blank,1042731.1875
+Inj00004-Positive-MAT1_demultiplexed,Blank,Blank,1106604.25
+Inj00005-Positive-MAT1_demultiplexed,Blank,Blank,1068981.625
+Inj00006-Positive-MAT1_demultiplexed,Blank,Blank,1081334.625
+Inj00007-Positive-MAT1_demultiplexed,Blank,Blank,1094416.0
+Inj00008-Positive-MAT2_demultiplexed,QC,QC,1094982.5
+Inj00009-Positive-B9_demultiplexed,Biological Sample,"Growth with low glutamate supplementation, no spermine treatment.",1645479.125
+Inj00010-Positive-D4_demultiplexed,Biological Sample,Baseline growth with no supplementation or treatment.,1993408.375
+Inj00011-Positive-F10_demultiplexed,Biological Sample,Growth with low glutamate supplementation and spermine treatment.,2572809.75
+Inj00012-Positive-A5_demultiplexed,Biological Sample,Growth with high glutamate supplementation and spermine treatment.,2209893.75
+Inj00013-Positive-B12_demultiplexed,Biological Sample,Baseline growth with no supplementation or treatment.,2420412.75
+Inj00014-Positive-D8_demultiplexed,Biological Sample,Growth with low glutamate supplementation and spermine treatment.,2459489.75
+Inj00015-Positive-MAT2_demultiplexed,QC,QC,2399091.5
+Inj00016-Positive-MAT1_demultiplexed,Blank,Blank,1820678.25
+Inj00017-Positive-MAT1_demultiplexed,Blank,Blank,1407793.125
+Inj00018-Positive-MAT1_demultiplexed,Blank,Blank,1328368.75
+Inj00019-Positive-MAT2_demultiplexed,QC,QC,1312384.25
+Inj00020-Positive-E6_demultiplexed,Biological Sample,Baseline growth with no supplementation or treatment.,1720033.625
+Inj00021-Positive-C3_demultiplexed,Biological Sample,Baseline growth with no supplementation or treatment.,2587166.0
+Inj00022-Positive-H8_demultiplexed,Biological Sample,Growth with high glutamate supplementation and spermine treatment.,2520691.75
+Inj00023-Positive-G8_demultiplexed,Biological Sample,Growth with alanine supplementation and spermine treatment.,2800232.25
+Inj00024-Positive-G12_demultiplexed,Biological Sample,"Growth with alanine supplementation, no spermine treatment.",2315834.75
+Inj00025-Positive-C12_demultiplexed,Biological Sample,Growth with alanine supplementation and spermine treatment.,2724200.25
+Inj00026-Positive-MAT2_demultiplexed,QC,QC,2650478.0
+Inj00027-Positive-MAT1_demultiplexed,Blank,Blank,1892259.125
+Inj00028-Positive-MAT1_demultiplexed,Blank,Blank,1432447.625
+Inj00029-Positive-MAT1_demultiplexed,Blank,Blank,1347571.875
+Inj00030-Positive-MAT2_demultiplexed,QC,QC,1306369.125
+Inj00031-Positive-C10_demultiplexed,Biological Sample,"Growth with high glutamate supplementation, no spermine treatment.",1778063.375
+Inj00032-Positive-H1_demultiplexed,Biological Sample,Baseline growth with no supplementation or treatment.,2539514.0
+Inj00033-Positive-A9_demultiplexed,Biological Sample,Growth with high glutamate supplementation and spermine treatment.,2650107.25
+Inj00034-Positive-B11_demultiplexed,Biological Sample,"Growth with alanine supplementation, no spermine treatment.",2538758.75
+Inj00035-Positive-F3_demultiplexed,Biological Sample,Growth with alanine supplementation and spermine treatment.,2560723.25
+Inj00036-Positive-D10_demultiplexed,Biological Sample,"Growth with alanine supplementation, no spermine treatment.",2770830.0
+Inj00037-Positive-MAT2_demultiplexed,QC,QC,2652840.25
+Inj00038-Positive-MAT1_demultiplexed,Blank,Blank,2018152.0
+Inj00039-Positive-MAT1_demultiplexed,Blank,Blank,1560607.625
+Inj00040-Positive-MAT1_demultiplexed,Blank,Blank,1434911.625
+Inj00041-Positive-MAT2_demultiplexed,QC,QC,1395769.875
+Inj00042-Positive-D2_demultiplexed,Biological Sample,"Growth with spermine treatment, no supplementation.",1780814.75
+Inj00043-Positive-E4_demultiplexed,Biological Sample,"Growth with alanine supplementation, no spermine treatment.",2851093.0
+Inj00044-Positive-H3_demultiplexed,Biological Sample,Growth with low glutamate supplementation and spermine treatment.,2742870.25
+Inj00045-Positive-A11_demultiplexed,Biological Sample,Growth with alanine supplementation and spermine treatment.,2901193.5
+Inj00046-Positive-G3_demultiplexed,Biological Sample,"Growth with spermine treatment, no supplementation.",2949996.25
+Inj00047-Positive-E5_demultiplexed,Biological Sample,Growth with alanine supplementation and spermine treatment.,2791132.0
+Inj00048-Positive-MAT2_demultiplexed,QC,QC,2978558.5
+Inj00049-Positive-MAT1_demultiplexed,Blank,Blank,2162164.5
+Inj00050-Positive-MAT1_demultiplexed,Blank,Blank,1777730.375
+Inj00051-Positive-MAT1_demultiplexed,Blank,Blank,1664883.5
+Inj00052-Positive-MAT2_demultiplexed,QC,QC,1597855.0
+Inj00053-Positive-B1_demultiplexed,Biological Sample,"Growth with high glutamate supplementation, no spermine treatment.",1861591.375
+Inj00054-Positive-G11_demultiplexed,Biological Sample,Growth with high glutamate supplementation and spermine treatment.,2796938.25
+Inj00055-Positive-B3_demultiplexed,Biological Sample,"Growth with alanine supplementation, no spermine treatment.",2895338.0
+Inj00056-Positive-F7_demultiplexed,Biological Sample,Baseline growth with no supplementation or treatment.,2937241.75
+Inj00057-Positive-G6_demultiplexed,Biological Sample,"Growth with low glutamate supplementation, no spermine treatment.",2939718.0
+Inj00058-Positive-H2_demultiplexed,Biological Sample,"Growth with low glutamate supplementation, no spermine treatment.",2794751.0
+Inj00059-Positive-MAT2_demultiplexed,QC,QC,3004537.5
+Inj00060-Positive-MAT1_demultiplexed,Blank,Blank,2260534.75
+Inj00061-Positive-MAT1_demultiplexed,Blank,Blank,1820066.0
+Inj00062-Positive-MAT1_demultiplexed,Blank,Blank,1667228.5
+Inj00063-Positive-MAT2_demultiplexed,QC,QC,1602237.75
+Inj00064-Positive-F6_demultiplexed,Biological Sample,"Growth with alanine supplementation, no spermine treatment.",1933013.875
+Inj00065-Positive-F8_demultiplexed,Biological Sample,"Growth with spermine treatment, no supplementation.",2908608.0
+Inj00066-Positive-D1_demultiplexed,Biological Sample,Growth with alanine supplementation and spermine treatment.,3127496.75
+Inj00067-Positive-B2_demultiplexed,Biological Sample,Growth with low glutamate supplementation and spermine treatment.,3209537.0
+Inj00068-Positive-C11_demultiplexed,Biological Sample,Growth with low glutamate supplementation and spermine treatment.,3032190.0
+Inj00069-Positive-F1_demultiplexed,Biological Sample,"Growth with spermine treatment, no supplementation.",3004233.0
+Inj00070-Positive-MAT2_demultiplexed,QC,QC,3218074.5
+Inj00071-Positive-MAT1_demultiplexed,Blank,Blank,2341042.0
+Inj00072-Positive-MAT1_demultiplexed,Blank,Blank,1999016.125
+Inj00073-Positive-MAT1_demultiplexed,Blank,Blank,1794946.875
+Inj00074-Positive-MAT2_demultiplexed,QC,QC,1723761.625
+Inj00075-Positive-C2_demultiplexed,Biological Sample,Growth with high glutamate supplementation and spermine treatment.,1956897.75
+Inj00076-Positive-B6_demultiplexed,Biological Sample,Growth with alanine supplementation and spermine treatment.,2927485.5
+Inj00077-Positive-D5_demultiplexed,Biological Sample,Baseline growth with no supplementation or treatment.,3191854.75
+Inj00078-Positive-H10_demultiplexed,Biological Sample,"Growth with low glutamate supplementation, no spermine treatment.",3060589.5
+Inj00079-Positive-D9_demultiplexed,Biological Sample,"Growth with high glutamate supplementation, no spermine treatment.",3156259.0
+Inj00080-Positive-H5_demultiplexed,Biological Sample,"Growth with spermine treatment, no supplementation.",3244487.25
+Inj00081-Positive-MAT2_demultiplexed,QC,QC,3240646.5
+Inj00082-Positive-MAT1_demultiplexed,Blank,Blank,2296728.5
+Inj00083-Positive-MAT1_demultiplexed,Blank,Blank,1963240.875
+Inj00084-Positive-MAT1_demultiplexed,Blank,Blank,1818691.25
+Inj00085-Positive-MAT2_demultiplexed,QC,QC,1739240.375
+Inj00086-Positive-G4_demultiplexed,Biological Sample,Growth with alanine supplementation and spermine treatment.,2043148.5
+Inj00087-Positive-F2_demultiplexed,Biological Sample,"Growth with high glutamate supplementation, no spermine treatment.",3871195.5
+Inj00088-Positive-B10_demultiplexed,Biological Sample,"Growth with spermine treatment, no supplementation.",2968129.25
+Inj00089-Positive-H4_demultiplexed,Biological Sample,"Growth with low glutamate supplementation, no spermine treatment.",3252320.75
+Inj00090-Positive-D12_demultiplexed,Biological Sample,Growth with low glutamate supplementation and spermine treatment.,3250982.75
+Inj00091-Positive-E3_demultiplexed,Biological Sample,"Growth with high glutamate supplementation, no spermine treatment.",3179132.25
+Inj00092-Positive-MAT2_demultiplexed,QC,QC,3087983.5
+Inj00093-Positive-MAT1_demultiplexed,Blank,Blank,2360688.75
+Inj00094-Positive-MAT1_demultiplexed,Blank,Blank,2019240.625
+Inj00095-Positive-MAT1_demultiplexed,Blank,Blank,1884215.375
+Inj00096-Positive-MAT2_demultiplexed,QC,QC,1801319.625
+Inj00097-Positive-G2_demultiplexed,Biological Sample,Baseline growth with no supplementation or treatment.,2014779.5
+Inj00098-Positive-H9_demultiplexed,Biological Sample,"Growth with alanine supplementation, no spermine treatment.",3098285.5
+Inj00099-Positive-E9_demultiplexed,Biological Sample,Growth with low glutamate supplementation and spermine treatment.,3337349.0
+Inj00100-Positive-C9_demultiplexed,Biological Sample,"Growth with spermine treatment, no supplementation.",3174425.5
+Inj00101-Positive-C5_demultiplexed,Biological Sample,"Growth with alanine supplementation, no spermine treatment.",3233527.25
+Inj00102-Positive-E1_demultiplexed,Biological Sample,Growth with low glutamate supplementation and spermine treatment.,3068610.5
+Inj00103-Positive-MAT2_demultiplexed,QC,QC,3236691.0
+Inj00104-Positive-MAT1_demultiplexed,Blank,Blank,2438810.75
+Inj00105-Positive-MAT1_demultiplexed,Blank,Blank,2122128.75
+Inj00106-Positive-MAT1_demultiplexed,Blank,Blank,2010747.0
+Inj00107-Positive-MAT2_demultiplexed,QC,QC,1925243.625
+Inj00108-Positive-H12_demultiplexed,Biological Sample,"Growth with high glutamate supplementation, no spermine treatment.",2065795.5
+Inj00109-Positive-A7_demultiplexed,Biological Sample,Growth with high glutamate supplementation and spermine treatment.,3250127.0
+Inj00110-Positive-G5_demultiplexed,Biological Sample,"Growth with high glutamate supplementation, no spermine treatment.",2985150.5
+Inj00111-Positive-A4_demultiplexed,Biological Sample,"Growth with high glutamate supplementation, no spermine treatment.",3133717.0
+Inj00112-Positive-G9_demultiplexed,Biological Sample,Growth with alanine supplementation and spermine treatment.,3202030.75
+Inj00113-Positive-A12_demultiplexed,Biological Sample,"Growth with spermine treatment, no supplementation.",3539559.75
+Inj00114-Positive-MAT2_demultiplexed,QC,QC,3277265.75
+Inj00115-Positive-MAT1_demultiplexed,Blank,Blank,2331588.25
+Inj00116-Positive-MAT1_demultiplexed,Blank,Blank,2073653.75
+Inj00117-Positive-MAT1_demultiplexed,Blank,Blank,1972554.625
+Inj00118-Positive-MAT2_demultiplexed,QC,QC,1909015.375
+Inj00119-Positive-D7_demultiplexed,Biological Sample,"Growth with low glutamate supplementation, no spermine treatment.",2072293.5
+Inj00120-Positive-F5_demultiplexed,Biological Sample,"Growth with low glutamate supplementation, no spermine treatment.",3070302.25
+Inj00121-Positive-B8_demultiplexed,Biological Sample,"Growth with high glutamate supplementation, no spermine treatment.",3164798.5
+Inj00122-Positive-E7_demultiplexed,Biological Sample,"Growth with spermine treatment, no supplementation.",3010408.75
+Inj00123-Positive-H7_demultiplexed,Biological Sample,Growth with alanine supplementation and spermine treatment.,3456889.5
+Inj00124-Positive-E10_demultiplexed,Biological Sample,Growth with high glutamate supplementation and spermine treatment.,3221373.5
+Inj00125-Positive-MAT2_demultiplexed,QC,QC,3162109.5
+Inj00126-Positive-MAT1_demultiplexed,Blank,Blank,2414715.25
+Inj00127-Positive-MAT1_demultiplexed,Blank,Blank,2143923.5
+Inj00128-Positive-MAT1_demultiplexed,Blank,Blank,2105494.25
+Inj00129-Positive-MAT2_demultiplexed,QC,QC,1938624.5
+Inj00130-Positive-F11_demultiplexed,Biological Sample,Baseline growth with no supplementation or treatment.,2110208.0
+Inj00131-Positive-G7_demultiplexed,Biological Sample,Growth with low glutamate supplementation and spermine treatment.,3386846.5
+Inj00132-Positive-C1_demultiplexed,Biological Sample,"Growth with low glutamate supplementation, no spermine treatment.",3147158.0
+Inj00133-Positive-D6_demultiplexed,Biological Sample,Growth with high glutamate supplementation and spermine treatment.,3296558.0
+Inj00134-Positive-C6_demultiplexed,Biological Sample,"Growth with spermine treatment, no supplementation.",3465966.5
+Inj00135-Positive-A8_demultiplexed,Biological Sample,Baseline growth with no supplementation or treatment.,3321226.75
+Inj00136-Positive-MAT2_demultiplexed,QC,QC,3806846.5
+Inj00137-Positive-MAT1_demultiplexed,Blank,Blank,2439895.0
+Inj00138-Positive-MAT1_demultiplexed,Blank,Blank,2173656.75
+Inj00139-Positive-MAT1_demultiplexed,Blank,Blank,2045463.5
+Inj00140-Positive-MAT2_demultiplexed,QC,QC,1964416.5
+Inj00141-Positive-C7_demultiplexed,Biological Sample,"Growth with high glutamate supplementation, no spermine treatment.",2147948.25
+Inj00142-Positive-B4_demultiplexed,Biological Sample,Growth with high glutamate supplementation and spermine treatment.,2953840.25
+Inj00143-Positive-A3_demultiplexed,Biological Sample,"Growth with low glutamate supplementation, no spermine treatment.",3344600.5
+Inj00144-Positive-E8_demultiplexed,Biological Sample,"Growth with alanine supplementation, no spermine treatment.",3143917.25
+Inj00145-Positive-A6_demultiplexed,Biological Sample,Growth with low glutamate supplementation and spermine treatment.,3346550.25
+Inj00146-Positive-E11_demultiplexed,Biological Sample,"Growth with low glutamate supplementation, no spermine treatment.",3134770.75
+Inj00147-Positive-MAT2_demultiplexed,QC,QC,3313786.5
+Inj00148-Positive-MAT1_demultiplexed,Blank,Blank,2523660.0
+Inj00149-Positive-MAT1_demultiplexed,Blank,Blank,2286723.5
+Inj00150-Positive-MAT1_demultiplexed,Blank,Blank,2156467.5
+Inj00151-Positive-MAT2_demultiplexed,QC,QC,2010478.5
+Inj00152-Positive-F12_demultiplexed,Biological Sample,Growth with high glutamate supplementation and spermine treatment.,2228273.75
+Inj00153-Positive-A1_demultiplexed,Biological Sample,"Growth with alanine supplementation, no spermine treatment.",3230289.5
+Inj00154-Positive-MAT2_demultiplexed,QC,QC,3638771.25
+Inj00155-Positive-MAT1_demultiplexed,Blank,Blank,2545329.0
+Inj00156-Positive-MAT1_demultiplexed,Blank,Blank,2197066.25
+Inj00157-Positive-MAT1_demultiplexed,Blank,Blank,2073558.625
+Inj00158-Positive-MAT1_demultiplexed,Blank,Blank,1998734.0
+Inj00159-Positive-MAT1_demultiplexed,Blank,Blank,3723769.0

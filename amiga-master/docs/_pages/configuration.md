@@ -1,1 +1,0 @@
-../_posts/2021-04-18-configuration.md

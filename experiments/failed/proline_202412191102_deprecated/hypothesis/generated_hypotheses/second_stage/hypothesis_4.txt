@@ -1,0 +1,43 @@
+**Motivation**
+
+The statement suggests an association between higher intracellular proline levels and increased resistance to (S)-lactic acid in Saccharomyces cerevisiae. Proline is an amino acid that can act as an osmoprotectant and antioxidant, potentially affecting stress responses. Understanding this association could provide insights into yeast stress resistance mechanisms and inform industrial applications where lactic acid tolerance is beneficial.
+
+**Hypothesis**
+
+Cells with elevated intracellular proline levels exhibit increased resistance to (S)-lactic acid due to proline's role in stabilizing proteins and membranes under stress conditions. This hypothesis is based on the potential of proline to mitigate oxidative stress and maintain cellular homeostasis, thereby enhancing resistance to chemical stressors like (S)-lactic acid.
+
+**Experimental Plan**
+
+1. **Strain and Media Preparation:**
+   - Use a wild-type Saccharomyces cerevisiae strain.
+   - Prepare minimal media without amino acids as the baseline condition.
+
+2. **Proline Supplementation:**
+   - Design three conditions for proline supplementation:
+     - Control: 0 mM proline (no supplementation).
+     - Low Proline: 1 mM proline.
+     - High Proline: 5 mM proline.
+   - Justification: Proline is known to be taken up by yeast cells and affect intracellular levels, potentially influencing stress resistance. The selected concentrations are physiologically relevant and cover a range likely to affect intracellular proline levels.
+
+3. **(S)-Lactic Acid Treatment:**
+   - Add (S)-lactic acid to all wells at a concentration of 100 mM at t=0h. This concentration is chosen based on known stress-inducing levels for yeast.
+
+4. **Experimental Setup:**
+   - Inoculate cultures at an initial OD600 of 0.05 in a 96-well plate.
+   - Each well will contain minimal media with the specified proline and (S)-lactic acid concentrations.
+   - Incubate at 30°C with shaking.
+
+5. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth.
+   - At 14 hours, terminate the experiment and perform mass spectrometry-based metabolomics to measure intracellular proline levels.
+
+6. **Control Experiments:**
+   - Include wells with no (S)-lactic acid to assess the independent effect of proline on growth.
+   - Include wells with only (S)-lactic acid (no proline) to assess baseline resistance.
+
+**Expected Outcomes**
+
+- If the hypothesis is correct, wells with higher proline supplementation (1 mM and 5 mM) should show increased growth rates and final OD600 compared to the control when exposed to (S)-lactic acid, indicating increased resistance.
+- Mass spectrometry should confirm elevated intracellular proline levels in supplemented conditions.
+- Proline's independent effect on growth (without (S)-lactic acid) should be minimal, ensuring that observed resistance is specific to lactic acid stress.
+- Control experiments will help verify that any observed resistance is due to proline's modulation rather than other confounding factors.

@@ -1,0 +1,8 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,increased resistance to chemicals,B,C),compound_name(B,caffeine)",
+    "observable": "arginine",
+    "qualifier": "lower",
+    "coefficient": -0.3129883841356904,
+    "initial_prompt": "3. Cells with lower levels of intracellular arginine in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,caffeine)",
+    "motivation": "not applicable"
+}
