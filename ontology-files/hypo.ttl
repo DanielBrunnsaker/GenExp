@@ -1,4 +1,4 @@
-@prefix : <http://purl.obolibrary.org/obo/apo.owl#> .
+@prefix : <http://hypo.project-genesis.io#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix apo: <http://purl.obolibrary.org/obo/apo#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
@@ -9,7 +9,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
-@base <http://purl.obolibrary.org/obo/apo.owl#> .
+@base <http://hypo.project-genesis.io#> .
 
 <http://hypo.project-genesis.io#> rdf:type owl:Ontology ;
                                    owl:versionIRI <http://hypo.project-genesis.io#0.0.1> ;
@@ -172,108 +172,108 @@ owl:deprecated rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://purl.obolibrary.org/obo/resistanceToChemical
-obo:resistanceToChemical rdf:type owl:ObjectProperty ;
-                         rdfs:domain obo:APO_0000087 ;
-                         rdfs:range obo:CHEBI_24431 ;
-                         rdfs:label "resistanceToChemical" .
-
-
-###  http://purl.obolibrary.org/obo/apo.owl#absentComparedTo
+###  http://hypo.project-genesis.io#absentComparedTo
 :absentComparedTo rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :decreasedComparedTo ;
                   rdfs:label "absentComparedTo" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#accumulationOfChemical
+###  http://hypo.project-genesis.io#accumulationOfChemical
 :accumulationOfChemical rdf:type owl:ObjectProperty ;
                         rdfs:domain obo:APO_0000095 ;
                         rdfs:range obo:CHEBI_24431 ;
                         rdfs:label "accumulationOfChemical" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#arrestedComparedTo
+###  http://hypo.project-genesis.io#arrestedComparedTo
 :arrestedComparedTo rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :differsFrom ;
                     rdfs:label "arrestedComparedTo" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#decreasedComparedTo
+###  http://hypo.project-genesis.io#decreasedComparedTo
 :decreasedComparedTo rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :differsFrom ;
                      obo:IAO_0000115 "The observed feature is decreased in the source phenotype compared to that in the target phenotype (faster, stronger, higher, larger, etc.)." ;
                      rdfs:label "decreasedComparedTo" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#decreasedDurationComparedTo
+###  http://hypo.project-genesis.io#decreasedDurationComparedTo
 :decreasedDurationComparedTo rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf :differsFrom ;
                              rdfs:label "decreasedDurationComparedTo" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#decreasedRateComparedTo
+###  http://hypo.project-genesis.io#decreasedRateComparedTo
 :decreasedRateComparedTo rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf :differsFrom ;
                          rdfs:label "decreasedRateComparedTo" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#delayedComparedTo
+###  http://hypo.project-genesis.io#delayedComparedTo
 :delayedComparedTo rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :differsFrom ;
                    rdfs:label "delayedComparedTo" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#differsFrom
+###  http://hypo.project-genesis.io#differsFrom
 :differsFrom rdf:type owl:ObjectProperty ;
              rdfs:label "differsFrom" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#implies
+###  http://hypo.project-genesis.io#implies
 :implies rdf:type owl:ObjectProperty ;
          rdfs:domain :organismState ;
          rdfs:range :organismState ;
          rdfs:label "implies" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#increasedComparedTo
+###  http://hypo.project-genesis.io#increasedComparedTo
 :increasedComparedTo rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :differsFrom ;
                      obo:IAO_0000115 "The observed feature is increased in the source phenotype compared to that in the target phenotype (faster, stronger, higher, larger, etc.)." ;
                      rdfs:label "increasedComparedTo" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#increasedDurationComparedTo
+###  http://hypo.project-genesis.io#increasedDurationComparedTo
 :increasedDurationComparedTo rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf :differsFrom ;
                              rdfs:label "increasedDurationComparedTo" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#increasedRateComparedTo
+###  http://hypo.project-genesis.io#increasedRateComparedTo
 :increasedRateComparedTo rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf :differsFrom ;
                          rdfs:label "increasedRateComparedTo" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#notDiffersFrom
+###  http://hypo.project-genesis.io#notDiffersFrom
 :notDiffersFrom rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdfs:label "notDiffersFrom" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#prematureComparedTo
+###  http://hypo.project-genesis.io#prematureComparedTo
 :prematureComparedTo rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :differsFrom ;
                      rdfs:label "prematureComparedTo" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#stateHasMutation
+###  http://hypo.project-genesis.io#resistanceToChemical
+:resistanceToChemical rdf:type owl:ObjectProperty ;
+                      rdfs:domain obo:APO_0000087 ;
+                      rdfs:range obo:CHEBI_24431 ;
+                      rdfs:label "resistanceToChemical" .
+
+
+###  http://hypo.project-genesis.io#stateHasMutation
 :stateHasMutation rdf:type owl:ObjectProperty ;
                   rdfs:domain :organismState ;
                   rdfs:range obo:APO_0000006 ;
                   rdfs:label "stateHasMutation" .
 
 
-###  http://purl.obolibrary.org/obo/apo.owl#stateHasObservable
+###  http://hypo.project-genesis.io#stateHasObservable
 :stateHasObservable rdf:type owl:ObjectProperty ;
                     rdfs:domain :organismState ;
                     rdfs:range obo:APO_0000017 ;
@@ -283,6 +283,15 @@ obo:resistanceToChemical rdf:type owl:ObjectProperty ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://hypo.project-genesis.io#hypothesis
+:hypothesis rdf:type owl:Class .
+
+
+###  http://hypo.project-genesis.io#organismState
+:organismState rdf:type owl:Class ;
+               rdfs:label "organismState" .
+
 
 ###  http://purl.obolibrary.org/obo/APO_0000001
 obo:APO_0000001 rdf:type owl:Class ;
@@ -9154,41 +9163,6 @@ apo:curators rdf:type owl:Class ;
              obo:IAO_0100001 obo:APO_0000245 ,
                              obo:APO_0000273 ;
              owl:deprecated "true"^^xsd:boolean .
-
-
-###  http://purl.obolibrary.org/obo/apo.owl#organismState
-:organismState rdf:type owl:Class ;
-               rdfs:label "organismState" .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://purl.obolibrary.org/obo/apo.owl#PHENO-HYP00001-1
-:PHENO-HYP00001-1 rdf:type owl:NamedIndividual ,
-                           obo:APO_0000201 ;
-                  rdfs:comment "reference acid pH resistance" .
-
-
-###  http://purl.obolibrary.org/obo/apo.owl#PHENO-HYP00001-2
-:PHENO-HYP00001-2 rdf:type owl:NamedIndividual ,
-                           obo:APO_0000201 ;
-                  :increasedComparedTo :PHENO-HYP00001-1 ;
-                  rdfs:comment "increased acid pH resistance" .
-
-
-###  http://purl.obolibrary.org/obo/apo.owl#PHENO-HYP00001-3
-:PHENO-HYP00001-3 rdf:type owl:NamedIndividual ,
-                           obo:APO_0000095 ;
-                  rdfs:comment "reference alanine levels" .
-
-
-###  http://purl.obolibrary.org/obo/apo.owl#PHENO-HYP00001-4
-:PHENO-HYP00001-4 rdf:type owl:NamedIndividual ,
-                           obo:APO_0000095 ;
-                  :increasedComparedTo :PHENO-HYP00001-3 ;
-                  rdfs:comment "increased alanine levels" .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
