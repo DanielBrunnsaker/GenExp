@@ -1,0 +1,22 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX : <http://hypo.project-genesis.io#>
+
+SELECT ?hypothesis ?title ?creator ?created ?state1 ?state2
+WHERE {
+    GRAPH ?hypothesis {
+        ?state1 rdfs:subClassOf ?r1 .
+        ?r1 rdf:type owl:Restriction ;
+            owl:onProperty :implies ;
+            owl:someValuesFrom ?state2 .  
+    }
+
+    GRAPH <http://hypo.project-genesis.io/hypothesis-metadata> {
+        ?hypothesis a :hypothesis .
+        OPTIONAL { ?hypothesis dct:title ?title . }
+        OPTIONAL { ?hypothesis dct:creator ?creator . }
+        OPTIONAL { ?hypothesis dct:created ?created . }
+    }
+}
