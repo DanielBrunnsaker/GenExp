@@ -262,7 +262,7 @@ def logic_program_to_state(logic_program, h_graph, reference_state=DEFAULT_REFER
     atoms = {k: list(g) for k, g in groupby(
         sorted(atoms, key=keyfunc), keyfunc)}
     # print(atoms)
-    phenotype_uri_tuple, phen_trips_list = zip(*[
+    phenotype_uri_tuple, phen_quads_list = zip(*[
         write_exhibits_phenotype_to_graph(
             args, atoms, h_graph, reference_state=reference_state)
         for _, args in atoms.get("exhibits_phenotype", [])
@@ -281,7 +281,7 @@ def logic_program_to_state(logic_program, h_graph, reference_state=DEFAULT_REFER
     for t in state_triples:
         states.add(t)
 
-    quads = [t + (phenotypes.identifier,) for l in phen_trips_list for t in l] + \
+    quads = [q for l in phen_quads_list for q in l] + \
         [t + (states.identifier,) for t in state_triples]
 
     # TODO: Add Label or other property to make querying easier
@@ -345,10 +345,6 @@ def write_exhibits_phenotype_to_graph(
     # above in variable `REFERENCE_STATE`)
     # TODO: Add Label or other property to make querying easier
     ref_query_trips = (
-        # This is an exception to recording STATE_HAS_OBSERVABLE in the `states` graph
-        # because it is necessary to ground the phenotype in the reference state.
-        # Comparitive phenotypes are grounded instead with a qualifying relation
-        # to the reference state.
         role_between_classes(reference_state, None, STATE_HAS_OBSERVABLE)
         + [(None, RDFS.subClassOf, phtype)]
         + additional_ref_triples
@@ -356,7 +352,11 @@ def write_exhibits_phenotype_to_graph(
     ref_phtype, ref_trips = find_or_create_node(
         hypo_ds, ref_query_trips, id_prefix="P-REF", namespace=phenotype_namespace
     )
-    for t in ref_trips:
+    # Now we are adding the reference state to the states graph
+    for t in ref_trips[:4]:
+        states.add(t)
+
+    for t in ref_trips[4:]:
         phenotypes.add(t)
 
     # Fetch the compared phenotype from the graph if it exists,
@@ -373,7 +373,10 @@ def write_exhibits_phenotype_to_graph(
     for t in comp_trips:
         phenotypes.add(t)
 
-    return (ref_phtype, comp_phtype), ref_trips + comp_trips
+    return (ref_phtype, comp_phtype), [
+        t + (states.identifier,) for t in ref_trips[:4]] + [
+        t + (phenotypes.identifier,) for t in ref_trips[4:] + comp_trips
+    ]
 
 
 def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_state=DEFAULT_REFERENCE_STATE, phenotype_namespace=HYPO):
@@ -391,10 +394,6 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
     # above in variable `REFERENCE_STATE`)
     # TODO: Add Label or other property to make querying easier
     ref_query_trips = (
-        # This is an exception to recording STATE_HAS_OBSERVABLE in the `states` graph
-        # because it is necessary to ground the phenotype in the reference state.
-        # Comparitive phenotypes are grounded instead with a qualifying relation
-        # to the reference state.
         role_between_classes(reference_state, None, STATE_HAS_OBSERVABLE)
         + [(None, RDFS.subClassOf, CHEM_COMP_ACC)]
         + role_between_classes(None, amino_acid, CHEM_ACC_OF)
@@ -402,7 +401,10 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
     ref_phtype, ref_trips = find_or_create_node(
         hypo_ds, ref_query_trips, id_prefix="P-REF", namespace=phenotype_namespace
     )
-    for t in ref_trips:
+    # Now we are adding the reference state to the states graph
+    for t in ref_trips[:4]:
+        states.add(t)
+    for t in ref_trips[4:]:
         phenotypes.add(t)
 
     # Fetch the compared phenotype from the graph if it exists,
@@ -431,8 +433,10 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
     for t in state_triples:
         states.add(t)
 
-    quads = [t + (phenotypes.identifier,) for t in ref_trips + comp_trips] + \
-        [t + (states.identifier,) for t in state_triples]
+    quads = [
+        t + (states.identifier,) for t in ref_trips[:4] + state_triples] + [
+        t + (phenotypes.identifier,) for t in ref_trips[4:] + comp_trips
+    ]
 
     # TODO: Add Label or other property to make querying easier
     return state, quads
