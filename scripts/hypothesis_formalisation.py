@@ -1,4 +1,5 @@
 from copy import copy, deepcopy
+import datetime
 from itertools import groupby
 import os
 import json
@@ -19,6 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OBO = rdflib.Namespace("http://purl.obolibrary.org/obo/")
 HYPO = rdflib.Namespace("http://hypo.project-genesis.io#")
 OBOINOWL = rdflib.Namespace("http://www.geneontology.org/formats/oboInOwl#")
+DCT = rdflib.Namespace("http://purl.org/dc/terms/")
 
 # term = rdflib.URIRef("http://purl.obolibrary.org/obo/")
 
@@ -50,15 +52,17 @@ def term_from_label(label, g):
     )
     if term is None:
         term = g.value(predicate=RDFS.label,
-                       object=rdflib.Literal(label, lang="en"))
+                       object=rdflib.Literal(label, lang="en"), any=False)
     if term is None:
-        term = g.value(predicate=RDFS.label, object=rdflib.Literal(label))
+        term = g.value(predicate=RDFS.label,
+                       object=rdflib.Literal(label), any=False)
     if term is None:
         term = g.value(predicate=OBOINOWL.hasExactSynonym,
-                       object=rdflib.Literal(label))
+                       object=rdflib.Literal(label), any=False)
     if term is None:
         term = g.value(
-            predicate=OBOINOWL.hasRelatedSynonym, object=rdflib.Literal(label)
+            predicate=OBOINOWL.hasRelatedSynonym, object=rdflib.Literal(
+                label), any=False
         )
     return term
 
@@ -258,27 +262,30 @@ def logic_program_to_state(logic_program, h_graph, reference_state=DEFAULT_REFER
     atoms = {k: list(g) for k, g in groupby(
         sorted(atoms, key=keyfunc), keyfunc)}
     # print(atoms)
-    phenotype_uri_list = [
+    phenotype_uri_tuple, phen_trips_list = zip(*[
         write_exhibits_phenotype_to_graph(
             args, atoms, h_graph, reference_state=reference_state)
         for _, args in atoms.get("exhibits_phenotype", [])
-    ]
+    ])
 
     # Fetch the complete state from the graph if it exists,
     # create it if it doesn't exist.
-    state_triples = [
+    state_query_triples = [
         t
-        for uri_pair in phenotype_uri_list
+        for uri_pair in phenotype_uri_tuple
         for t in role_between_classes(None, uri_pair[1], STATE_HAS_OBSERVABLE)
     ] + [(None, RDFS.subClassOf, ORGANISM_STATE)]
     state, state_triples = find_or_create_node(
-        hypo_ds, state_triples, id_prefix="S", namespace=HYPO
+        hypo_ds, state_query_triples, id_prefix="S", namespace=HYPO
     )
     for t in state_triples:
         states.add(t)
 
+    quads = [t + (phenotypes.identifier,) for l in phen_trips_list for t in l] + \
+        [t + (states.identifier,) for t in state_triples]
+
     # TODO: Add Label or other property to make querying easier
-    return state
+    return state, quads
 
 
 def write_exhibits_phenotype_to_graph(
@@ -356,9 +363,9 @@ def write_exhibits_phenotype_to_graph(
     # create it if it doesn't exist.
     # TODO: Add Label or other property to make querying easier
     comp_query_trips = (
-        role_between_classes(None, ref_phtype, qualifying_relation)
-        + [(None, RDFS.subClassOf, phtype)]
+        [(None, RDFS.subClassOf, phtype)]
         + additional_comp_triples
+        + role_between_classes(None, ref_phtype, qualifying_relation)
     )
     comp_phtype, comp_trips = find_or_create_node(
         hypo_ds, comp_query_trips, id_prefix="P", namespace=phenotype_namespace
@@ -366,12 +373,15 @@ def write_exhibits_phenotype_to_graph(
     for t in comp_trips:
         phenotypes.add(t)
 
-    return ref_phtype, comp_phtype
+    return (ref_phtype, comp_phtype), ref_trips + comp_trips
 
 
 def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_state=DEFAULT_REFERENCE_STATE, phenotype_namespace=HYPO):
     states = dataset.graph("http://hypo.project-genesis.io/states")
     phenotypes = dataset.graph("http://hypo.project-genesis.io/phenotypes")
+
+    qualifier = {"lower": "decreased",
+                 "higher": "increased"}.get(qualifier, qualifier)
 
     qualifying_relation = term_from_label(
         qualifier + "ComparedTo", ontology)
@@ -387,6 +397,7 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
         # to the reference state.
         role_between_classes(reference_state, None, STATE_HAS_OBSERVABLE)
         + [(None, RDFS.subClassOf, CHEM_COMP_ACC)]
+        + role_between_classes(None, amino_acid, CHEM_ACC_OF)
     )
     ref_phtype, ref_trips = find_or_create_node(
         hypo_ds, ref_query_trips, id_prefix="P-REF", namespace=phenotype_namespace
@@ -398,8 +409,9 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
     # create it if it doesn't exist.
     # TODO: Add Label or other property to make querying easier
     comp_query_trips = (
-        role_between_classes(None, ref_phtype, qualifying_relation)
-        + [(None, RDFS.subClassOf, CHEM_COMP_ACC)]
+        [(None, RDFS.subClassOf, CHEM_COMP_ACC)]
+        + role_between_classes(None, amino_acid, CHEM_ACC_OF)
+        + role_between_classes(None, ref_phtype, qualifying_relation)
     )
     comp_phtype, comp_trips = find_or_create_node(
         hypo_ds, comp_query_trips, id_prefix="P", namespace=phenotype_namespace
@@ -419,21 +431,23 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
     for t in state_triples:
         states.add(t)
 
+    quads = [t + (phenotypes.identifier,) for t in ref_trips + comp_trips] + \
+        [t + (states.identifier,) for t in state_triples]
+
     # TODO: Add Label or other property to make querying easier
-    return state
+    return state, quads
 
 
-def hypothesis_to_triples(h, h_graph):
-    triples = []
-
+def hypothesis_to_quads(hypo_ds, h, h_graph):
     # Match the amino acid
     amino_acid = term_from_label(h["observable"], chebi)  # Case-sensitive?
     # print(amino_acid)
-    state_1 = amino_acid_and_qualifier_to_state(
+    state_1, state_1_quads = amino_acid_and_qualifier_to_state(
         hypo_ds, amino_acid, h["qualifier"], reference_state=DEFAULT_REFERENCE_STATE, phenotype_namespace=HYPO)
 
     # Represent the logic program
-    state_2 = logic_program_to_state(h["logic_program"], h_graph)
+    state_2, state_2_quads = logic_program_to_state(
+        h["logic_program"], h_graph)
 
     # Generate `observable` concepts for the reference
     # triples.append((HYPO.P1, RDF.type, CHEM_COMP_ACC))
@@ -442,13 +456,28 @@ def hypothesis_to_triples(h, h_graph):
     # Split the formula
 
     # State implies State
-    triples.extend(role_between_classes(state_1, state_2, HYPO.implies))
+    quads = state_1_quads + state_2_quads
+    quads.extend([t + (h_graph.identifier,)
+                 for t in role_between_classes(state_1, state_2, HYPO.implies)])
 
-    return triples
+    return quads
 
 
-def add_hypothesis_as_new_graph_in_hypo_ds(hypo_ds, h):
-    """Add a hypothesis as a new graph in the hypothesis dataset."""
+def add_hypothesis_as_new_graph_in_hypo_ds(hypo_ds, h, **kwargs):
+    """Add a hypothesis as a new graph in the hypothesis dataset. 
+    The graph is created with a unique ID and the hypothesis is added to the metadata graph.
+
+    Args:
+        hypo_ds (rdflib.Dataset): The hypothesis dataset.
+        h (dict): The hypothesis to add.
+        **kwargs: Additional arguments for the hypothesis.
+
+
+    Returns:
+        list: A list of quads added to the dataset.
+    """
+    quads = []
+
     hid = create_id(prefix="H")
     h_graphid = rdflib.URIRef(f"http://hypo.project-genesis.io/{hid}")
     h_graph = hypo_ds.graph(h_graphid)
@@ -458,9 +487,10 @@ def add_hypothesis_as_new_graph_in_hypo_ds(hypo_ds, h):
     h_graph.bind("rdf", RDF)
     h_graph.bind("rdfs", RDFS)
 
-    triples = hypothesis_to_triples(h, h_graph)
-    for t in triples:
-        h_graph.add(t)
+    quads = hypothesis_to_quads(hypo_ds, h, h_graph)
+    for q in quads:
+        if q[3] == h_graph.identifier:
+            h_graph.add(q[:3])
 
     # Hack for now to remove empty hypothesis graphs
     # This is not good for future, we want to include
@@ -470,9 +500,69 @@ def add_hypothesis_as_new_graph_in_hypo_ds(hypo_ds, h):
         hypo_ds.remove_graph(h_graphid)
 
     # Add the hypothesis to the metadata graph
-    hmeta.add((h_graphid, RDF.type, HYPO.hypothesis))
+    meta_trips = []
+    meta_trips.append((h_graphid, RDF.type, HYPO.hypothesis))
 
-    return hypo_ds
+    # If creation date is provided, add it to the metadata graph
+    if "creation_date" in kwargs:
+        meta_trips.append(
+            (h_graphid, DCT.created, Literal(kwargs["creation_date"])))
+    # Else, add the current date
+    else:
+        meta_trips.append((h_graphid, DCT.created, Literal(
+            rdflib.Literal(datetime.datetime.now().isoformat()))))
+
+    # If a creator is provided, add it to the metadata graph
+    if "creator" in kwargs:
+        meta_trips.append((h_graphid, DCT.creator, Literal(kwargs["creator"])))
+    # Else, add 'Genesis' as the creator
+    else:
+        meta_trips.append((h_graphid, DCT.creator, Literal("Genesis")))
+
+    for t in meta_trips:
+        hmeta.add(t)
+        quads.append(t + (hmeta.identifier,))
+
+    return quads
+
+
+def load_hypotheses(hypo_ds, root_dir="experiments"):
+    """Searches through the `root_dir` for hypothesis folders and loads them into the dataset."""
+    for folder in os.listdir(root_dir):
+        try:
+            load_hypothesis_from_top_folder(hypo_ds, root_dir, folder)
+        except FileNotFoundError:
+            print(f"Could not load hypothesis from {folder}")
+            # Check next level down in the directory tree
+            load_hypotheses(hypo_ds, os.path.join(root_dir, folder))
+            continue
+        except NotADirectoryError:
+            print(f"{folder} is not a directory, ending search.")
+            continue
+
+
+def load_hypothesis_from_top_folder(hypo_ds, root_dir, folder):
+    with open(
+        os.path.join(root_dir, folder,
+                     "hypothesis/selected_hypothesis/hypothesis_details.json"),
+        "r",
+        encoding="utf-8",
+    ) as fi:
+        h = json.load(fi)
+
+        # Title?
+
+        # Extract creation date from folder name and load into datetime object
+        # (Example folder names: "arginine_202503131539" or "arginine_202503131539 copy")
+        DATE_EXTRACTOR = re.compile(r"_(\d{8}\d{4})")
+        creation_date_str = DATE_EXTRACTOR.search(folder).group(1)
+        creation_date = datetime.datetime.strptime(
+            creation_date_str, "%Y%m%d%H%M")
+
+        print(
+            f"Loading hypothesis from {os.path.join(root_dir, folder)} (created on {creation_date.strftime('%Y-%m-%d %H:%M:%S')})")
+        return add_hypothesis_as_new_graph_in_hypo_ds(
+            hypo_ds, h, creation_date=creation_date, creator="Genesis")
 
 
 if __name__ == "__main__":
@@ -481,3 +571,5 @@ if __name__ == "__main__":
 
     test_hypotheses = [{'logic_program': p[1], 'observable': p[0], 'qualifier': 'higher',
                         'number': i, 'reason': '<blank>'} for (i, p) in enumerate(test_patterns)]
+
+    load_hypotheses(hypo_ds, os.path.join(BASE_DIR, "experiments"))
