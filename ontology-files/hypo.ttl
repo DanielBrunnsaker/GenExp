@@ -284,10 +284,6 @@ owl:deprecated rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  http://hypo.project-genesis.io#hypothesis
-:hypothesis rdf:type owl:Class .
-
-
 ###  http://hypo.project-genesis.io#organismState
 :organismState rdf:type owl:Class ;
                rdfs:label "organismState" .

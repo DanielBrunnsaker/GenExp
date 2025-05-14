@@ -505,7 +505,6 @@ def add_hypothesis_as_new_graph_in_hypo_ds(hypo_ds, h, **kwargs):
 
     # Add the hypothesis to the metadata graph
     meta_trips = []
-    meta_trips.append((h_graphid, RDF.type, HYPO.hypothesis))
 
     # If creation date is provided, add it to the metadata graph
     if "creation_date" in kwargs:
