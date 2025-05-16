@@ -1,8 +1,0 @@
-{
-    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,acetic acid)",
-    "observable": "lysine",
-    "qualifier": "higher",
-    "coefficient": 0.6261820035872372,
-    "initial_prompt": "4. Cells with higher levels of intracellular lysine in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'acetic acid')",
-    "motivation": "not applicable"
-}
