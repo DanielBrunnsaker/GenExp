@@ -29,11 +29,13 @@ def extract_growth_rates(layout, data):
         
         if well in list(layout['well'][layout['Summary'] == 'Media control']):
             mu = 0
+            start = 0
+            end = 0
         else:
             try:
-                temp_curve = data.iloc[:,15:-1].loc[well]
-                temp_curve.index = np.array(data.loc[well].index[15:-1])/3600
-                results = process_curve(temp_curve)
+                temp_curve = data.iloc[:,18:-1].loc[well]
+                temp_curve.index = np.array(data.loc[well].index[18:-1])/3600
+                results = process_curve(temp_curve, n0 = 0.1)
                 mu = results.growth_phases[0][2]
                 start = results.growth_phases[0][0]
                 end = results.growth_phases[0][1]
@@ -191,11 +193,15 @@ def filter_outlier_growth_curves(layout, df, group_col="Summary", method = 'mad'
     if not numeric_cols:
         raise ValueError("No numeric columns found for time series!")
     
+    # temporary, mild, smoothing
+    df[numeric_cols] = df[numeric_cols].rolling(axis=1, window=3, center=True, min_periods=1).median()
+    
     # 4) Compute AUC (sum approximation) and final OD
     df['AUC']         = df[numeric_cols].sum(axis=1)
     df['log_auc']     = np.log(df['AUC'] + eps)
     final_col         = numeric_cols[-1]
     df['final_value'] = df[final_col]
+    df['TV'] = df[numeric_cols].diff(axis=1).abs().sum(axis=1)
     
     def detect_mad_outliers(group):
         # Too few curves → no flags
@@ -212,9 +218,15 @@ def filter_outlier_growth_curves(layout, df, group_col="Summary", method = 'mad'
         med_f = np.median(group['final_value'])
         mad_f = np.median(np.abs(group['final_value'] - med_f))
         out_f   = np.abs(group['final_value'] - med_f) > (threshold * mad_f + eps)
+        
+        # MAD on total variation (spikiness)
+        med_tv = np.median(group['TV'])
+        mad_tv = np.median(np.abs(group['TV'] - med_tv))
+        out_tv = np.abs(group['TV'] - med_tv) > (threshold * mad_tv + eps)
     
         
-        group['outlier'] = out_auc | out_f
+        #group['outlier'] = out_auc | out_f
+        group['outlier'] = out_auc | out_f | out_tv
         return group
     
     # 5) Apply per-group
@@ -222,7 +234,7 @@ def filter_outlier_growth_curves(layout, df, group_col="Summary", method = 'mad'
     
     # 6) Filter out and drop helper columns
     kept = df.loc[~df['outlier']]
-    return kept.drop(columns=['AUC', 'log_auc', 'final_value', 'outlier'])
+    return kept.drop(columns=['AUC', 'log_auc', 'final_value', 'outlier', 'TV'])
 
 
 def subtract_and_impute_blanks(layout, data, n_blanks = 3, fillin_value = 0.01, blank_bool = True):
@@ -317,7 +329,7 @@ def smooth_growth_curves(
         row,
         method="loess",
         window=5,
-        loess_frac=0.1,
+        loess_frac=0.2,
         spline_s=None,
         enforce_monotonic=False
     ):
@@ -370,7 +382,7 @@ def compute_auc(df):
 
 # Plotting scripts
 
-def plot_group_averages_in_hours(df: pd.DataFrame, group_col: str = "Summary"):
+def plot_group_averages_in_hours(df, group_col = "Summary"):
 
     numeric_cols = df.select_dtypes(include=["float", "int"]).columns
     numeric_cols = numeric_cols.drop(group_col, errors="ignore")  # in case group_col is numeric dtype

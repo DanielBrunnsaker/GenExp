@@ -1,0 +1,9 @@
+class,mean_f1,std_f1
+Baseline condition with no supplementation or treatment.,0.6552380952380952,0.2146413089656801
+High glutamine supplementation with acetic acid treatment.,0.7866666666666667,0.22540412051215847
+High glutamine supplementation without acetic acid treatment.,0.31166666666666665,0.37623480910057666
+Leucine supplementation with acetic acid treatment.,0.7802281052281052,0.12534240542490016
+Leucine supplementation without acetic acid treatment.,0.7245238095238096,0.19910604004100224
+Low glutamine supplementation with acetic acid treatment.,0.6554834054834054,0.16553632592672302
+Low glutamine supplementation without acetic acid treatment.,0.722979797979798,0.11678059561244232
+No glutamine supplementation with acetic acid treatment.,0.16214285714285714,0.24926422338800347

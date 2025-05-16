@@ -1,0 +1,78 @@
+	mu	AUC	MaxOD	Summary
+A1	0.18910433229894724	20536.427271156932	1.10435218052744	1 mM lysine supplementation with 20 mM acetic acid treatment.
+A2	0.0	596.3073277462827	0.0	Media control
+A3	0.20724391931310363	16180.11443449308	0.9537571641791183	No lysine supplementation, treated with 20 mM acetic acid.
+A4	0.23602099467515417	36671.362622348825	1.8479589604767719	1 mM lysine supplementation, no acetic acid treatment.
+A5	0.19600629796112387	18585.68760034711	1.0082925817908135	10 mM leucine supplementation, no acetic acid treatment.
+A7	0.20352353402228457	13735.974923536127	0.7834523074700843	10 mM leucine supplementation, no acetic acid treatment.
+A8	0.22312148122479014	36577.19535222531	1.828533705369238	No lysine or acetic acid supplementation, baseline growth measurement.
+A9	0.19698453245262312	16915.275443817558	0.9433160307636972	10 mM leucine supplementation, no acetic acid treatment.
+A10	0.0	796.1431787821166	0.0	Media control
+A11	0.19793718187217121	3798.922721744414	0.20650081209874735	10 mM leucine supplementation with 20 mM acetic acid treatment.
+B1	0.2574272855910778	49903.172811913246	2.015985272747863	1 mM lysine supplementation, no acetic acid treatment.
+B2	0.22737563760390656	45079.26373838093	1.8776298376613538	10 mM lysine supplementation with 20 mM acetic acid treatment.
+B3	0.2153558500190445	32846.2079113085	1.6230383001421607	1 mM lysine supplementation with 20 mM acetic acid treatment.
+B4	0.20098124515435825	17078.52940434079	0.9584853508341284	10 mM leucine supplementation, no acetic acid treatment.
+B5	0.0	546.1800037690264	0.0	Media control
+B6	0.2193381926229454	1489.7681242868284	0.0798201701663315	10 mM leucine supplementation with 20 mM acetic acid treatment.
+B7	0.0	676.7705669844472	0.0	Media control
+B9	0.1826324408290415	22491.030089804517	1.1749578325752164	No lysine supplementation, treated with 20 mM acetic acid.
+B10	0.25350884693307185	18483.62445600709	1.2181709635747526	10 mM lysine supplementation, no acetic acid treatment.
+B11	0.18248650331744226	22477.84223010758	1.1750918731738342	1 mM lysine supplementation with 20 mM acetic acid treatment.
+B12	0.2546032931607331	18950.334649265893	0.8473813910166844	No lysine or acetic acid supplementation, baseline growth measurement.
+C1	0.18961343207425704	23310.734591733813	1.2424286037760695	No lysine supplementation, treated with 20 mM acetic acid.
+C2	0.19754905127238093	20116.84755358212	1.1067333336264826	10 mM leucine supplementation, no acetic acid treatment.
+C4	0.0	563.3405490355698	0.0	Media control
+C5	0.20168298090528788	17842.819321427698	1.0205769221959218	1 mM lysine supplementation with 20 mM acetic acid treatment.
+C6	0.20450670974319973	27888.317978360927	1.5364061357089063	10 mM lysine supplementation, no acetic acid treatment.
+C7	0.2286849168827921	49934.917824828684	2.0688195968386354	1 mM lysine supplementation, no acetic acid treatment.
+C9	0.1966322835454075	22844.269128911375	1.2368648567422382	10 mM lysine supplementation, no acetic acid treatment.
+C10	0.20064522140105004	36458.218660179984	1.7762673426652917	1 mM lysine supplementation, no acetic acid treatment.
+C11	0.16711837289687337	30585.342329942498	1.4752512917968774	10 mM lysine supplementation with 20 mM acetic acid treatment.
+C12	0.20434130700386074	2730.18333300521	0.1407925622882859	10 mM leucine supplementation with 20 mM acetic acid treatment.
+D1	0.17804739503208214	1613.5387417923923	0.07534910960982424	10 mM leucine supplementation with 20 mM acetic acid treatment.
+D2	0.2426834748140114	20381.235976823966	1.3318215814254717	10 mM lysine supplementation, no acetic acid treatment.
+D3	0.0	463.27962776335636	0.0	Media control
+D6	0.14871741319776283	27812.779004472497	1.2349123248011622	10 mM leucine supplementation, no acetic acid treatment.
+D8	0.19377174157038574	42665.698548090724	1.8726633412370213	10 mM lysine supplementation with 20 mM acetic acid treatment.
+D9	0.17586065957976016	44802.0977612614	1.8949008571301391	1 mM lysine supplementation, no acetic acid treatment.
+D10	0.15435009486275886	40032.308273435236	1.714060694810516	1 mM lysine supplementation with 20 mM acetic acid treatment.
+D12	0.2516292839295941	26015.702191900928	1.4962442008987742	10 mM lysine supplementation with 20 mM acetic acid treatment.
+E1	0.2444704862847575	35849.982111711455	1.768758713057471	10 mM lysine supplementation with 20 mM acetic acid treatment.
+E4	0.19039080267267217	38062.49419009911	1.8021638390033416	1 mM lysine supplementation with 20 mM acetic acid treatment.
+E5	0.3343099254301441	11211.831926046476	0.4172048611530822	10 mM leucine supplementation with 20 mM acetic acid treatment.
+E6	0.21078903199789928	35847.41787060362	1.3098527123258865	No lysine or acetic acid supplementation, baseline growth measurement.
+E8	0.11893198690909713	31955.168082673983	1.1962306104912606	1 mM lysine supplementation with 20 mM acetic acid treatment.
+E9	0.18403811205437184	46696.6866710712	2.0206914090691175	10 mM lysine supplementation with 20 mM acetic acid treatment.
+E10	0.1298226373459191	30496.444524808587	1.2133144216951637	10 mM leucine supplementation, no acetic acid treatment.
+E11	0.16523727913323347	30856.228637264016	1.4800842444510114	No lysine supplementation, treated with 20 mM acetic acid.
+E12	0.0	720.0	0.0	Media control
+F1	0.23473683877667467	20996.107337377198	1.3372601195878258	10 mM lysine supplementation, no acetic acid treatment.
+F2	0.2525287207679015	51935.76861134464	2.1791120699279682	1 mM lysine supplementation, no acetic acid treatment.
+F3	0.5786889937140818	3995.2968218694236	0.1173107067901164	10 mM leucine supplementation with 20 mM acetic acid treatment.
+F5	0.19029090443544297	28673.67214655987	1.4574512118412914	No lysine supplementation, treated with 20 mM acetic acid.
+F6	0.1577361869669889	36807.72309597334	1.6322361060872086	1 mM lysine supplementation with 20 mM acetic acid treatment.
+F7	0.44091357633469047	25554.370985566355	1.1206333333333334	No lysine or acetic acid supplementation, baseline growth measurement.
+F8	0.16773619565026282	23964.605102008714	1.134210304057475	10 mM lysine supplementation, no acetic acid treatment.
+F10	0.17794664501255686	48378.32290641365	1.918000000000004	10 mM lysine supplementation with 20 mM acetic acid treatment.
+F11	0.16147005697979264	41010.89486454081	1.7822666666666749	No lysine or acetic acid supplementation, baseline growth measurement.
+F12	0.1991892837684419	14401.62352685339	0.7989856201531145	10 mM leucine supplementation, no acetic acid treatment.
+G2	0.23661160522831012	37755.97306505885	1.8415575991195396	No lysine or acetic acid supplementation, baseline growth measurement.
+G3	0.24732059637316767	18876.54971892881	1.2592187125597831	10 mM lysine supplementation, no acetic acid treatment.
+G4	0.09806174804837987	15906.442809954311	0.5186267841972378	10 mM leucine supplementation with 20 mM acetic acid treatment.
+G5	0.20013359401758435	56096.92546402527	2.3655666666666666	1 mM lysine supplementation, no acetic acid treatment.
+G6	0.14028608205621765	29239.06094281845	1.2545371612442708	No lysine supplementation, treated with 20 mM acetic acid.
+G7	0.18249847470172106	45902.90079711482	2.0257666666666667	10 mM lysine supplementation with 20 mM acetic acid treatment.
+G11	0.12265777222829456	24810.81503667896	0.9704187499092406	10 mM leucine supplementation, no acetic acid treatment.
+G12	0.20964434776275165	15802.915957412268	0.9300630209119745	1 mM lysine supplementation with 20 mM acetic acid treatment.
+H1	0.22087529355687543	28231.539160976252	1.5720753655026174	No lysine or acetic acid supplementation, baseline growth measurement.
+H2	0.1996686727499219	19621.23829849826	1.1045653310484354	No lysine supplementation, treated with 20 mM acetic acid.
+H3	0.25526215537606256	29870.99498775095	1.6328	10 mM lysine supplementation with 20 mM acetic acid treatment.
+H4	0.22456895513401315	23174.31457844225	1.3531461066350472	No lysine supplementation, treated with 20 mM acetic acid.
+H5	0.25943733518483775	14790.688861383576	1.0451300251320783	10 mM lysine supplementation, no acetic acid treatment.
+H6	0.0	351.66180910376886	0.0	Media control
+H7	0.1912322400249321	3261.847213418955	0.16487422814504765	10 mM leucine supplementation with 20 mM acetic acid treatment.
+H8	0.19374496080828973	12509.113508005701	0.668324245148114	10 mM leucine supplementation, no acetic acid treatment.
+H10	0.20822037178899983	16556.639354284795	0.9812070337754498	No lysine supplementation, treated with 20 mM acetic acid.
+H11	0.0	630.5839573045134	0.0	Media control
+H12	0.23859178418520272	32151.031049868398	1.6983899630846118	1 mM lysine supplementation, no acetic acid treatment.

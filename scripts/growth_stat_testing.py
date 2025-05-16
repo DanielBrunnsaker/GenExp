@@ -18,6 +18,27 @@ from patsy import dmatrices
 from pathlib import Path
 
 
+def create_design_table(df):
+    design_df = df.copy()
+    
+    # Process Supplement Column
+    unique_supplement_values = sorted(df['Supplement (uL)'].unique())
+    supplement_mapping = {0: 'None', unique_supplement_values[1]: 'PosLow', unique_supplement_values[2]: 'PosHigh'}
+    design_df['Supplement'] = df['Supplement (uL)'].map(supplement_mapping)
+    
+    # Process Negative Control Column
+    max_negative = df['Negative Control (uL)'].max()
+    design_df.loc[df['Negative Control (uL)'] == max_negative, 'Supplement'] = 'NegHigh'
+    
+    # Process Treatment Column
+    treatment_mapping = {0: 'None', df['Treatment (uL)'].max(): 'Yes'}
+    design_df['Treatment'] = df['Treatment (uL)'].map(treatment_mapping)
+    
+    # Keep only relevant columns
+    design_df = design_df[['Well', 'Summary', 'Treatment', 'Supplement']]
+    
+    return design_df
+
 def create_dose_table(df):
     """
     Create a dose table with clearer column names:
@@ -262,6 +283,9 @@ def growth_testing(EXPERIMENT_DIR):
     layout = pd.read_excel(EXPERIMENT_DIR / 'protocol/hamilton/pipetting_layout.xlsx')
     layout.rename(columns={'well': 'Well'}, inplace=True)
     layout = layout.merge(experiments_df, left_on = 'Summary', right_on='summary', how='left')
+    
+    design_table = create_design_table(layout)
+    design_table.to_csv(EXPERIMENT_DIR / 'protocol/plate_layout/design_table.tsv', sep = '\t')
     
     dose_table = create_dose_table(layout)
     

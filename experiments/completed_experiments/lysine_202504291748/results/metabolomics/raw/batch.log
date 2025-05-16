@@ -1,0 +1,861 @@
+05/14/25 16:35:11 <RapidFire>: BatchThread: Created New Data Directory: M:\Projects\Default\Data\Rapidfire/2025/May/14/006
+05/14/25 16:35:11 <RapidFire>: BatchThread: ColumnChanger Version 6.1.1.22114
+05/14/25 16:35:11 <RapidFire>: BatchThread: LogServer Version 6.1.1.22114
+05/14/25 16:35:11 <RapidFire>: BatchThread: PlateHandler Version 6.1.1.22114
+05/14/25 16:35:11 <RapidFire>: BatchThread: Pump1 Version 6.1.1.22114
+05/14/25 16:35:11 <RapidFire>: BatchThread: Pump2 Version 6.1.1.22114
+05/14/25 16:35:11 <RapidFire>: BatchThread: Pump3 Version 6.1.1.22114
+05/14/25 16:35:11 <RapidFire>: BatchThread: Pump4 Version 6.1.1.22114
+05/14/25 16:35:11 <RapidFire>: BatchThread: RFMassHunterC Version 6.1.1.22114
+05/14/25 16:35:11 <RapidFire>: BatchThread: RapidFire Version 6.1.1.22114
+05/14/25 16:35:11 <RapidFire>: BatchThread: SampleInterface Version 6.1.1.22114
+05/14/25 16:35:11 <RapidFire>: BatchThread: Sipper Version 6.1.1.22114
+05/14/25 16:35:11 <RapidFire>: BatchThread: WashValve Version 6.1.1.22114
+05/14/25 16:35:11 <RapidFire>: BatchThread: Column Changer Present
+05/14/25 16:35:11 <RFMassHunterC>:Connect Rem server trying IP 192.168.254.2
+05/14/25 16:35:11 <RFMassHunterC>:connection established to remote server
+05/14/25 16:35:11 <RapidFire>: RFMassHunterS:Task: Connection established between RapidFire Instrument and MassHunter Computer
+05/14/25 16:35:11 <RapidFire>: RFMassHunterS:Task: ConnectRemServerOp success
+05/14/25 16:35:11 <RFMassHunterC>:Connect Mass Spec trying IP 192.168.254.2
+05/14/25 16:35:11 <RFMassHunterC>:connection established to mass spec
+05/14/25 16:35:11 <RapidFire>: RFMassHunterS:Task: Run ConnectMassSpec
+05/14/25 16:35:11 <RapidFire>: RFMassHunterS:Task: engine state 0 = STARTED
+05/14/25 16:35:11 <RapidFire>: RFMassHunterS:Task: engine state 1 = STARTED
+05/14/25 16:35:11 <RapidFire>: RFMassHunterS:Task: engine state 2 = STARTED
+05/14/25 16:35:11 <RapidFire>: RFMassHunterS:Task: Calling m_worklistAutomation.Connect()...
+05/14/25 16:35:13 <RapidFire>: RFMassHunterS:Task: MSQTOF_1 detected
+05/14/25 16:35:13 <RapidFire>: RFMassHunterS:Task: ConnectMassSpecOp success
+05/14/25 16:35:14 <WashValve>: set_position
+05/14/25 16:35:14 <RapidFire>: BatchThread: setting wash valve
+05/14/25 16:35:14 <WashValve>: set_position
+05/14/25 16:35:14 <RapidFire>: BatchThread: finished column changer homing
+05/14/25 16:35:14 <Pump1>:turn on Pump1
+05/14/25 16:35:14 <Pump2>:turn on Pump2
+05/14/25 16:35:14 <Pump3>:turn on Pump3
+05/14/25 16:35:14 <Pump4>: turn_on :  pump on
+05/14/25 16:35:14 <RapidFire>: BatchThread: turn pumps on, set flow rate
+05/14/25 16:35:14 <Pump1>:turn_on : setting on/off = 1
+05/14/25 16:35:14 <Pump2>:turn_on : setting on/off = 1
+05/14/25 16:35:14 <Pump3>:turn_on : setting on/off = 1
+05/14/25 16:35:14 <Pump1>:set_cmd_flow_rate : setting flow rate = 1.5
+05/14/25 16:35:14 <Pump2>:set_cmd_flow_rate : setting flow rate = 1.25
+05/14/25 16:35:14 <Pump3>:set_cmd_flow_rate : setting flow rate = 1.25
+05/14/25 16:35:14 <Pump3>:AgilentPump1200Task :turn on
+05/14/25 16:35:14 <Pump2>:AgilentPump1200Task :turn on
+05/14/25 16:35:14 <Pump1>:AgilentPump1200Task :turn on
+05/14/25 16:35:16 <RapidFire>: BatchThread: all pumps are on
+05/14/25 16:35:32 <RapidFire>: BatchThread: Batch Data Directories :  ../DATA/2025/May/14/006 M:\Projects\Default\Data\Rapidfire/2025/May/14/006
+05/14/25 16:35:32 <RapidFire>: BatchThread: Batch Mode SEQUENCES
+05/14/25 16:35:32 <RapidFire>: BatchThread: RapidFire / MAssHunter TOF Synchronization enabled
+05/14/25 16:35:33 <RapidFire>: BatchThread: process_plates() :  Waiting for user to hit run
+05/14/25 16:35:33 <RapidFire>: BatchThread: Set Status to PAUSED
+05/14/25 16:35:34 <RapidFire>: BatchThread: Set Status to RUNNING
+05/14/25 16:35:34 <RapidFire>: BatchThread: Starting Sipping with Plate name = Positive
+05/14/25 16:35:34 <RapidFire>: BatchThread: Begin sequence 1 on plate Positive
+05/14/25 16:35:34 <RapidFire>: BatchThread:   ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 3)  ( 1000, 3)  ( 6, 11)  ( 1, 9)  ( 7, 2)  ( 3, 10)  ( 4, 4)  ( 3, 6)  ( 1000, 3)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 
+05/14/25 16:35:34 <RapidFire>: BatchThread:   ( 8, 9)  ( 2, 8)  ( 8, 1)  ( 1000, 3)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 3)  ( 1000, 3)  ( 3, 2)  ( 2, 6)  ( 1, 3)  ( 2, 11)  ( 3, 7)  ( 7, 3)  ( 1000, 3)  ( 1000, 2)  ( 1000, 2)  
+05/14/25 16:35:34 <RapidFire>: BatchThread:   ( 8, 3)  ( 8, 4)  ( 6, 5)  ( 1, 6)  ( 3, 5)  ( 1, 8)  ( 1000, 3)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 3)  ( 1000, 3)  ( 5, 11)  ( 5, 7)  ( 5, 6)  ( 3, 11)  ( 6, 12)  ( 2, 12)  ( 1000
+05/14/25 16:35:34 <RapidFire>: BatchThread:   ( 1000, 3)  ( 1000, 3)  ( 7, 8)  ( 4, 8)  ( 1, 7)  ( 8, 5)  ( 6, 3)  ( 8, 10)  ( 1000, 3)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 3)  ( 1000, 3)  ( 8, 12)  ( 3, 1)  ( 2, 2)  ( 8, 2)  ( 
+05/14/25 16:35:34 <RapidFire>: BatchThread:   ( 1000, 2)  ( 1000, 2)  ( 1000, 3)  ( 1000, 3)  ( 5, 5)  ( 1, 1)  ( 1, 4)  ( 7, 6)  ( 6, 10)  ( 4, 10)  ( 1000, 3)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 3)  ( 1000, 3)  ( 7, 4)  ( 3, 
+05/14/25 16:35:34 <RapidFire>: BatchThread:   ( 1000, 3)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 3)  ( 1000, 3)  ( 5, 10)  ( 4, 5)  ( 4, 6)  ( 1, 12)  ( 4, 2)  ( 3, 3)  ( 1000, 3)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 
+05/14/25 16:35:34 <RapidFire>: BatchThread:   ( 6, 6)  ( 6, 7)  ( 2, 9)  ( 1000, 3)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 3)  ( 1000, 3)  ( 5, 4)  ( 5, 1)  ( 8, 7)  ( 4, 7)  ( 4, 9)  ( 6, 2)  ( 1000, 3)  ( 1000, 2)  ( 1000, 2)  (
+05/14/25 16:35:34 <RapidFire>: BatchThread:   ( 2, 3)  ( 4, 1)  ( 1, 5)  ( 5, 3)  ( 5, 9)  ( 6, 1)  ( 1000, 3)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)  ( 1000, 3)  ( 1000, 3)  ( 2, 1)  ( 7, 7)  ( 1000, 3)  ( 1000, 2)  ( 1000, 2)  ( 1000, 2)
+05/14/25 16:35:34 <Pump1>:set_composition : B = 100%, C = 0%, D = 0%
+05/14/25 16:35:34 <Pump2>:set_composition : B = 100%, C = 0%, D = 0%
+05/14/25 16:35:34 <Pump3>:set_composition : B = 100%, C = 0%, D = 0%
+05/14/25 16:35:34 <Pump1>:turn on Pump1
+05/14/25 16:35:34 <Pump2>:turn on Pump2
+05/14/25 16:35:34 <Pump4>: turn_on :  pump on
+05/14/25 16:35:34 <Pump3>:turn on Pump3
+05/14/25 16:35:34 <RapidFire>: BatchThread: turn pumps on, set flow rate
+05/14/25 16:35:34 <Pump1>:turn_on : setting on/off = 1
+05/14/25 16:35:34 <Pump2>:turn_on : setting on/off = 1
+05/14/25 16:35:34 <Pump3>:turn_on : setting on/off = 1
+05/14/25 16:35:34 <Pump1>:set_cmd_flow_rate : setting flow rate = 1.25
+05/14/25 16:35:34 <Pump2>:set_cmd_flow_rate : setting flow rate = 0.01
+05/14/25 16:35:34 <Pump3>:set_cmd_flow_rate : setting flow rate = 1.25
+05/14/25 16:35:34 <RapidFire>: BatchThread: all pumps are on
+05/14/25 16:35:34 <RapidFire>: RFMassHunterS:Task: Run AddSampleToWorkList
+05/14/25 16:35:34 <RapidFire>: RFMassHunterS:Task: Data path : D:\Projects\Default\Data\RapidFire\2025\May\14\006
+05/14/25 16:35:34 <RapidFire>: RFMassHunterS:Task: AddSampleToWorkList
+05/14/25 16:35:34 <RapidFire>: RFMassHunterS:Task: NewWorkList : Worklist Loaded...
+05/14/25 16:35:34 <Pump2>:AgilentPump1200Task :turn on
+05/14/25 16:35:34 <Pump3>:AgilentPump1200Task :turn on
+05/14/25 16:35:35 <Pump1>:AgilentPump1200Task :turn on
+05/14/25 16:35:36 <RapidFire>: BatchThread: pump mixing initiated
+05/14/25 16:35:36 <RapidFire>: BatchThread: pump mixing complete
+05/14/25 16:35:36 <RapidFire>: BatchThread: START start_ms_data_acquisition
+05/14/25 16:35:36 <RapidFire>: BatchThread: wait_mass_spec: 3 (max wait 600 sec)
+05/14/25 16:35:36 <RapidFire>: RFMassHunterS:Task: Run RunWorkList
+05/14/25 16:35:38 <RapidFire>: RFMassHunterS:Task: run worklist Operation started...
+05/14/25 16:35:42 <RapidFire>: RFMassHunterS:Task: OnWorklistRunStarted
+05/14/25 16:35:42 <RapidFire>: RFMassHunterS:Task: OnWorklistJobStarted
+05/14/25 16:35:44 <RapidFire>: RFMassHunterS:Task: NotifyChangedMS loc = REG[ACTUAL].OBJ[1].NDR[RUNSTATE] value = 8
+05/14/25 16:35:46 <RapidFire>: RFMassHunterS:Task: NotifyChangedMS loc = REG[ACTUAL].OBJ[1].NDR[RUNSTATE] value = 7
+05/14/25 16:35:51 <RapidFire>: RFMassHunterS:Task: NotifyChangedMS loc = REG[ACTUAL].OBJ[1].NDR[RUNSTATE] value = 10
+05/14/25 16:35:52 <RapidFire>: BatchThread: END start_ms_data_acquisition
+05/14/25 16:35:52 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:35:53 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:35:54 <Sipper>: SipperTask SIP SENSOR 0 , 1.174
+05/14/25 16:35:54 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.363
+05/14/25 16:36:01 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:36:08 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:36:09 <Sipper>: SipperTask SIP SENSOR 0 , 1.171
+05/14/25 16:36:10 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.382
+05/14/25 16:36:16 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:36:24 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:36:25 <Sipper>: SipperTask SIP SENSOR 0 , 1.174
+05/14/25 16:36:25 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.375
+05/14/25 16:36:31 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:36:39 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:36:40 <Sipper>: SipperTask SIP SENSOR 0 , 1.175
+05/14/25 16:36:40 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.399
+05/14/25 16:36:47 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:36:54 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:36:55 <Sipper>: SipperTask SIP SENSOR 0 , 1.169
+05/14/25 16:36:56 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.441
+05/14/25 16:37:02 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:37:10 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:37:11 <Sipper>: SipperTask SIP SENSOR 0 , 1.157
+05/14/25 16:37:11 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.430
+05/14/25 16:37:17 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:37:25 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:37:26 <Sipper>: SipperTask SIP SENSOR 0 , 1.159
+05/14/25 16:37:27 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.456
+05/14/25 16:37:33 <RapidFire>: BatchThread: process_well()  ( 6, 11)
+05/14/25 16:37:41 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:37:41 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 16:37:42 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.596
+05/14/25 16:37:48 <RapidFire>: BatchThread: process_well()  ( 1, 9)
+05/14/25 16:37:56 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:37:57 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 16:37:57 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 16:38:03 <RapidFire>: BatchThread: process_well()  ( 7, 2)
+05/14/25 16:38:11 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:38:12 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 16:38:12 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 16:38:18 <RapidFire>: BatchThread: process_well()  ( 3, 10)
+05/14/25 16:38:26 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:38:27 <Sipper>: SipperTask SIP SENSOR 0 , 0.802
+05/14/25 16:38:28 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.602
+05/14/25 16:38:33 <RapidFire>: BatchThread: process_well()  ( 4, 4)
+05/14/25 16:38:41 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:38:42 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 16:38:43 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.602
+05/14/25 16:38:49 <RapidFire>: BatchThread: process_well()  ( 3, 6)
+05/14/25 16:38:57 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:38:57 <Sipper>: SipperTask SIP SENSOR 0 , 0.813
+05/14/25 16:38:58 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 16:39:04 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:39:12 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:39:13 <Sipper>: SipperTask SIP SENSOR 0 , 1.141
+05/14/25 16:39:13 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.450
+05/14/25 16:39:20 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:39:27 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:39:28 <Sipper>: SipperTask SIP SENSOR 0 , 1.171
+05/14/25 16:39:29 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.397
+05/14/25 16:39:35 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:39:43 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:39:44 <Sipper>: SipperTask SIP SENSOR 0 , 1.168
+05/14/25 16:39:44 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.407
+05/14/25 16:39:50 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:39:58 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:39:59 <Sipper>: SipperTask SIP SENSOR 0 , 1.172
+05/14/25 16:40:00 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.434
+05/14/25 16:40:06 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:40:13 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:40:15 <Sipper>: SipperTask SIP SENSOR 0 , 1.169
+05/14/25 16:40:15 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.411
+05/14/25 16:40:21 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:40:29 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:40:30 <Sipper>: SipperTask SIP SENSOR 0 , 1.155
+05/14/25 16:40:30 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.450
+05/14/25 16:40:37 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:40:44 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:40:45 <Sipper>: SipperTask SIP SENSOR 0 , 1.156
+05/14/25 16:40:46 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.446
+05/14/25 16:40:52 <RapidFire>: BatchThread: process_well()  ( 6, 8)
+05/14/25 16:41:00 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:41:00 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 16:41:01 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.592
+05/14/25 16:41:07 <RapidFire>: BatchThread: process_well()  ( 2, 10)
+05/14/25 16:41:15 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:41:16 <Sipper>: SipperTask SIP SENSOR 0 , 0.808
+05/14/25 16:41:16 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 16:41:22 <RapidFire>: BatchThread: process_well()  ( 7, 12)
+05/14/25 16:41:30 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:41:31 <Sipper>: SipperTask SIP SENSOR 0 , 0.807
+05/14/25 16:41:32 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.561
+05/14/25 16:41:37 <RapidFire>: BatchThread: process_well()  ( 8, 9)
+05/14/25 16:41:45 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:41:46 <Sipper>: SipperTask SIP SENSOR 0 , 0.813
+05/14/25 16:41:47 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.594
+05/14/25 16:41:53 <RapidFire>: BatchThread: process_well()  ( 2, 8)
+05/14/25 16:42:01 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:42:01 <Sipper>: SipperTask SIP SENSOR 0 , 0.813
+05/14/25 16:42:02 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.602
+05/14/25 16:42:08 <RapidFire>: BatchThread: process_well()  ( 8, 1)
+05/14/25 16:42:16 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:42:17 <Sipper>: SipperTask SIP SENSOR 0 , 0.810
+05/14/25 16:42:17 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.600
+05/14/25 16:42:23 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:42:31 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:42:32 <Sipper>: SipperTask SIP SENSOR 0 , 1.162
+05/14/25 16:42:33 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.467
+05/14/25 16:42:39 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:42:47 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:42:48 <Sipper>: SipperTask SIP SENSOR 0 , 1.171
+05/14/25 16:42:48 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.404
+05/14/25 16:42:54 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:43:02 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:43:03 <Sipper>: SipperTask SIP SENSOR 0 , 1.173
+05/14/25 16:43:04 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.423
+05/14/25 16:43:10 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:43:17 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:43:19 <Sipper>: SipperTask SIP SENSOR 0 , 1.159
+05/14/25 16:43:19 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.404
+05/14/25 16:43:25 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:43:33 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:43:34 <Sipper>: SipperTask SIP SENSOR 0 , 1.170
+05/14/25 16:43:34 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.380
+05/14/25 16:43:41 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:43:48 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:43:49 <Sipper>: SipperTask SIP SENSOR 0 , 1.155
+05/14/25 16:43:50 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.440
+05/14/25 16:43:56 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:44:03 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:44:05 <Sipper>: SipperTask SIP SENSOR 0 , 1.143
+05/14/25 16:44:05 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.466
+05/14/25 16:44:11 <RapidFire>: BatchThread: process_well()  ( 3, 2)
+05/14/25 16:44:19 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:44:20 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 16:44:20 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.597
+05/14/25 16:44:26 <RapidFire>: BatchThread: process_well()  ( 2, 6)
+05/14/25 16:44:34 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:44:35 <Sipper>: SipperTask SIP SENSOR 0 , 0.813
+05/14/25 16:44:36 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.602
+05/14/25 16:44:41 <RapidFire>: BatchThread: process_well()  ( 1, 3)
+05/14/25 16:44:49 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:44:50 <Sipper>: SipperTask SIP SENSOR 0 , 0.815
+05/14/25 16:44:51 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.600
+05/14/25 16:44:57 <RapidFire>: BatchThread: process_well()  ( 2, 11)
+05/14/25 16:45:05 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:45:05 <Sipper>: SipperTask SIP SENSOR 0 , 0.809
+05/14/25 16:45:06 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 16:45:12 <RapidFire>: BatchThread: process_well()  ( 3, 7)
+05/14/25 16:45:20 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:45:21 <Sipper>: SipperTask SIP SENSOR 0 , 0.808
+05/14/25 16:45:21 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.569
+05/14/25 16:45:27 <RapidFire>: BatchThread: process_well()  ( 7, 3)
+05/14/25 16:45:35 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:45:36 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 16:45:36 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.600
+05/14/25 16:45:42 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:45:50 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:45:51 <Sipper>: SipperTask SIP SENSOR 0 , 1.142
+05/14/25 16:45:52 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.452
+05/14/25 16:45:58 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:46:06 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:46:07 <Sipper>: SipperTask SIP SENSOR 0 , 1.170
+05/14/25 16:46:07 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.372
+05/14/25 16:46:13 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:46:21 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:46:22 <Sipper>: SipperTask SIP SENSOR 0 , 1.156
+05/14/25 16:46:23 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.376
+05/14/25 16:46:29 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:46:36 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:46:37 <Sipper>: SipperTask SIP SENSOR 0 , 1.169
+05/14/25 16:46:38 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.351
+05/14/25 16:46:44 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:46:52 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:46:53 <Sipper>: SipperTask SIP SENSOR 0 , 1.172
+05/14/25 16:46:53 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.325
+05/14/25 16:46:59 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:47:07 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:47:08 <Sipper>: SipperTask SIP SENSOR 0 , 1.153
+05/14/25 16:47:08 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.368
+05/14/25 16:47:15 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:47:22 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:47:23 <Sipper>: SipperTask SIP SENSOR 0 , 1.158
+05/14/25 16:47:24 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.354
+05/14/25 16:47:30 <RapidFire>: BatchThread: process_well()  ( 8, 3)
+05/14/25 16:47:38 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:47:38 <Sipper>: SipperTask SIP SENSOR 0 , 0.817
+05/14/25 16:47:39 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.481
+05/14/25 16:47:45 <RapidFire>: BatchThread: process_well()  ( 8, 4)
+05/14/25 16:47:53 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:47:54 <Sipper>: SipperTask SIP SENSOR 0 , 0.810
+05/14/25 16:47:54 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.487
+05/14/25 16:48:00 <RapidFire>: BatchThread: process_well()  ( 6, 5)
+05/14/25 16:48:08 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:48:09 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 16:48:09 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.561
+05/14/25 16:48:15 <RapidFire>: BatchThread: process_well()  ( 1, 6)
+05/14/25 16:48:23 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:48:24 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 16:48:24 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.528
+05/14/25 16:48:30 <RapidFire>: BatchThread: process_well()  ( 3, 5)
+05/14/25 16:48:38 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:48:39 <Sipper>: SipperTask SIP SENSOR 0 , 0.814
+05/14/25 16:48:40 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.559
+05/14/25 16:48:45 <RapidFire>: BatchThread: process_well()  ( 1, 8)
+05/14/25 16:48:53 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:48:54 <Sipper>: SipperTask SIP SENSOR 0 , 0.807
+05/14/25 16:48:55 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.507
+05/14/25 16:49:00 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:49:09 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:49:10 <Sipper>: SipperTask SIP SENSOR 0 , 1.157
+05/14/25 16:49:10 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.410
+05/14/25 16:49:16 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:49:24 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:49:25 <Sipper>: SipperTask SIP SENSOR 0 , 1.172
+05/14/25 16:49:25 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.320
+05/14/25 16:49:32 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:49:39 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:49:40 <Sipper>: SipperTask SIP SENSOR 0 , 1.167
+05/14/25 16:49:41 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.412
+05/14/25 16:49:47 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:49:55 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:49:56 <Sipper>: SipperTask SIP SENSOR 0 , 1.173
+05/14/25 16:49:56 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.375
+05/14/25 16:50:02 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:50:10 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:50:11 <Sipper>: SipperTask SIP SENSOR 0 , 1.171
+05/14/25 16:50:12 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.360
+05/14/25 16:50:18 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:50:25 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:50:26 <Sipper>: SipperTask SIP SENSOR 0 , 1.158
+05/14/25 16:50:27 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.397
+05/14/25 16:50:33 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:50:41 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:50:42 <Sipper>: SipperTask SIP SENSOR 0 , 1.154
+05/14/25 16:50:42 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.367
+05/14/25 16:50:48 <RapidFire>: BatchThread: process_well()  ( 5, 11)
+05/14/25 16:50:56 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:50:57 <Sipper>: SipperTask SIP SENSOR 0 , 0.810
+05/14/25 16:50:57 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.526
+05/14/25 16:51:03 <RapidFire>: BatchThread: process_well()  ( 5, 7)
+05/14/25 16:51:11 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:51:12 <Sipper>: SipperTask SIP SENSOR 0 , 0.807
+05/14/25 16:51:12 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.546
+05/14/25 16:51:18 <RapidFire>: BatchThread: process_well()  ( 5, 6)
+05/14/25 16:51:26 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:51:27 <Sipper>: SipperTask SIP SENSOR 0 , 0.810
+05/14/25 16:51:28 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.587
+05/14/25 16:51:33 <RapidFire>: BatchThread: process_well()  ( 3, 11)
+05/14/25 16:51:41 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:51:42 <Sipper>: SipperTask SIP SENSOR 0 , 0.817
+05/14/25 16:51:43 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 16:51:48 <RapidFire>: BatchThread: process_well()  ( 6, 12)
+05/14/25 16:51:57 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:51:57 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 16:51:58 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 16:52:04 <RapidFire>: BatchThread: process_well()  ( 2, 12)
+05/14/25 16:52:12 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:52:13 <Sipper>: SipperTask SIP SENSOR 0 , 0.801
+05/14/25 16:52:13 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 16:52:19 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:52:27 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:52:28 <Sipper>: SipperTask SIP SENSOR 0 , 1.138
+05/14/25 16:52:29 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.458
+05/14/25 16:52:35 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:52:43 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:52:44 <Sipper>: SipperTask SIP SENSOR 0 , 1.172
+05/14/25 16:52:44 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.438
+05/14/25 16:52:50 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:52:58 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:52:59 <Sipper>: SipperTask SIP SENSOR 0 , 1.173
+05/14/25 16:53:00 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.428
+05/14/25 16:53:06 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:53:13 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:53:14 <Sipper>: SipperTask SIP SENSOR 0 , 1.171
+05/14/25 16:53:15 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.444
+05/14/25 16:53:21 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:53:29 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:53:30 <Sipper>: SipperTask SIP SENSOR 0 , 1.170
+05/14/25 16:53:30 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.397
+05/14/25 16:53:37 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:53:44 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:53:45 <Sipper>: SipperTask SIP SENSOR 0 , 1.153
+05/14/25 16:53:46 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.484
+05/14/25 16:53:52 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:54:00 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:54:01 <Sipper>: SipperTask SIP SENSOR 0 , 1.152
+05/14/25 16:54:01 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.341
+05/14/25 16:54:07 <RapidFire>: BatchThread: process_well()  ( 7, 8)
+05/14/25 16:54:15 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:54:16 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 16:54:16 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.570
+05/14/25 16:54:22 <RapidFire>: BatchThread: process_well()  ( 4, 8)
+05/14/25 16:54:30 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:54:31 <Sipper>: SipperTask SIP SENSOR 0 , 0.813
+05/14/25 16:54:31 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.566
+05/14/25 16:54:37 <RapidFire>: BatchThread: process_well()  ( 1, 7)
+05/14/25 16:54:45 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:54:46 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 16:54:47 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.564
+05/14/25 16:54:52 <RapidFire>: BatchThread: process_well()  ( 8, 5)
+05/14/25 16:55:00 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:55:01 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 16:55:02 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.572
+05/14/25 16:55:08 <RapidFire>: BatchThread: process_well()  ( 6, 3)
+05/14/25 16:55:16 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:55:17 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 16:55:17 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.579
+05/14/25 16:55:23 <RapidFire>: BatchThread: process_well()  ( 8, 10)
+05/14/25 16:55:31 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:55:32 <Sipper>: SipperTask SIP SENSOR 0 , 0.810
+05/14/25 16:55:32 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.535
+05/14/25 16:55:38 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:55:46 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:55:47 <Sipper>: SipperTask SIP SENSOR 0 , 1.142
+05/14/25 16:55:48 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.374
+05/14/25 16:55:54 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:56:01 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:56:03 <Sipper>: SipperTask SIP SENSOR 0 , 1.174
+05/14/25 16:56:03 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.426
+05/14/25 16:56:09 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:56:17 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:56:18 <Sipper>: SipperTask SIP SENSOR 0 , 1.161
+05/14/25 16:56:18 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.471
+05/14/25 16:56:25 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:56:32 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:56:33 <Sipper>: SipperTask SIP SENSOR 0 , 1.175
+05/14/25 16:56:34 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.419
+05/14/25 16:56:40 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:56:48 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:56:49 <Sipper>: SipperTask SIP SENSOR 0 , 1.167
+05/14/25 16:56:49 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.469
+05/14/25 16:56:56 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:57:03 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:57:04 <Sipper>: SipperTask SIP SENSOR 0 , 1.159
+05/14/25 16:57:05 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.459
+05/14/25 16:57:11 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:57:18 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:57:20 <Sipper>: SipperTask SIP SENSOR 0 , 1.155
+05/14/25 16:57:20 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.483
+05/14/25 16:57:26 <RapidFire>: BatchThread: process_well()  ( 8, 12)
+05/14/25 16:57:34 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:57:35 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 16:57:35 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.600
+05/14/25 16:57:41 <RapidFire>: BatchThread: process_well()  ( 3, 1)
+05/14/25 16:57:49 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:57:50 <Sipper>: SipperTask SIP SENSOR 0 , 0.826
+05/14/25 16:57:50 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.555
+05/14/25 16:57:56 <RapidFire>: BatchThread: process_well()  ( 2, 2)
+05/14/25 16:58:04 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:58:05 <Sipper>: SipperTask SIP SENSOR 0 , 0.813
+05/14/25 16:58:06 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.558
+05/14/25 16:58:12 <RapidFire>: BatchThread: process_well()  ( 8, 2)
+05/14/25 16:58:19 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:58:20 <Sipper>: SipperTask SIP SENSOR 0 , 0.808
+05/14/25 16:58:21 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.530
+05/14/25 16:58:27 <RapidFire>: BatchThread: process_well()  ( 2, 4)
+05/14/25 16:58:35 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:58:35 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 16:58:36 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.537
+05/14/25 16:58:42 <RapidFire>: BatchThread: process_well()  ( 7, 11)
+05/14/25 16:58:50 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:58:51 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 16:58:51 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.558
+05/14/25 16:58:57 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 16:59:05 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:59:06 <Sipper>: SipperTask SIP SENSOR 0 , 1.145
+05/14/25 16:59:07 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.416
+05/14/25 16:59:13 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:59:20 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:59:22 <Sipper>: SipperTask SIP SENSOR 0 , 1.161
+05/14/25 16:59:22 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.407
+05/14/25 16:59:28 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:59:36 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:59:37 <Sipper>: SipperTask SIP SENSOR 0 , 1.161
+05/14/25 16:59:37 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.376
+05/14/25 16:59:44 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 16:59:51 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 16:59:52 <Sipper>: SipperTask SIP SENSOR 0 , 1.173
+05/14/25 16:59:53 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.407
+05/14/25 16:59:59 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:00:06 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:00:08 <Sipper>: SipperTask SIP SENSOR 0 , 1.173
+05/14/25 17:00:08 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.400
+05/14/25 17:00:14 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:00:22 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:00:23 <Sipper>: SipperTask SIP SENSOR 0 , 1.151
+05/14/25 17:00:23 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.420
+05/14/25 17:00:30 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:00:37 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:00:38 <Sipper>: SipperTask SIP SENSOR 0 , 1.154
+05/14/25 17:00:39 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.412
+05/14/25 17:00:45 <RapidFire>: BatchThread: process_well()  ( 5, 5)
+05/14/25 17:00:53 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:00:53 <Sipper>: SipperTask SIP SENSOR 0 , 0.807
+05/14/25 17:00:54 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 17:01:00 <RapidFire>: BatchThread: process_well()  ( 1, 1)
+05/14/25 17:01:08 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:01:09 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 17:01:09 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.539
+05/14/25 17:01:15 <RapidFire>: BatchThread: process_well()  ( 1, 4)
+05/14/25 17:01:23 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:01:24 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 17:01:24 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.560
+05/14/25 17:01:30 <RapidFire>: BatchThread: process_well()  ( 7, 6)
+05/14/25 17:01:38 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:01:39 <Sipper>: SipperTask SIP SENSOR 0 , 0.814
+05/14/25 17:01:40 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.472
+05/14/25 17:01:45 <RapidFire>: BatchThread: process_well()  ( 6, 10)
+05/14/25 17:01:53 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:01:54 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 17:01:55 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.509
+05/14/25 17:02:00 <RapidFire>: BatchThread: process_well()  ( 4, 10)
+05/14/25 17:02:08 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:02:09 <Sipper>: SipperTask SIP SENSOR 0 , 0.810
+05/14/25 17:02:10 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.602
+05/14/25 17:02:16 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:02:24 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:02:25 <Sipper>: SipperTask SIP SENSOR 0 , 1.154
+05/14/25 17:02:25 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.434
+05/14/25 17:02:31 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:02:39 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:02:40 <Sipper>: SipperTask SIP SENSOR 0 , 1.174
+05/14/25 17:02:41 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.373
+05/14/25 17:02:47 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:02:54 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:02:56 <Sipper>: SipperTask SIP SENSOR 0 , 1.170
+05/14/25 17:02:56 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.390
+05/14/25 17:03:02 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:03:10 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:03:11 <Sipper>: SipperTask SIP SENSOR 0 , 1.169
+05/14/25 17:03:11 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.378
+05/14/25 17:03:17 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:03:25 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:03:26 <Sipper>: SipperTask SIP SENSOR 0 , 1.167
+05/14/25 17:03:27 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.393
+05/14/25 17:03:33 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:03:40 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:03:42 <Sipper>: SipperTask SIP SENSOR 0 , 1.154
+05/14/25 17:03:42 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.357
+05/14/25 17:03:48 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:03:56 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:03:57 <Sipper>: SipperTask SIP SENSOR 0 , 1.156
+05/14/25 17:03:57 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.487
+05/14/25 17:04:04 <RapidFire>: BatchThread: process_well()  ( 7, 4)
+05/14/25 17:04:11 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:04:12 <Sipper>: SipperTask SIP SENSOR 0 , 0.809
+05/14/25 17:04:13 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.513
+05/14/25 17:04:18 <RapidFire>: BatchThread: process_well()  ( 3, 12)
+05/14/25 17:04:26 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:04:27 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 17:04:28 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.574
+05/14/25 17:04:33 <RapidFire>: BatchThread: process_well()  ( 1, 11)
+05/14/25 17:04:42 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:04:42 <Sipper>: SipperTask SIP SENSOR 0 , 0.809
+05/14/25 17:04:43 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.533
+05/14/25 17:04:48 <RapidFire>: BatchThread: process_well()  ( 4, 12)
+05/14/25 17:04:57 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:04:58 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 17:04:58 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.549
+05/14/25 17:05:04 <RapidFire>: BatchThread: process_well()  ( 7, 5)
+05/14/25 17:05:12 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:05:13 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 17:05:13 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.551
+05/14/25 17:05:19 <RapidFire>: BatchThread: process_well()  ( 5, 8)
+05/14/25 17:05:27 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:05:28 <Sipper>: SipperTask SIP SENSOR 0 , 0.810
+05/14/25 17:05:28 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.463
+05/14/25 17:05:34 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:05:42 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:05:43 <Sipper>: SipperTask SIP SENSOR 0 , 1.151
+05/14/25 17:05:44 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.472
+05/14/25 17:05:50 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:05:58 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:05:59 <Sipper>: SipperTask SIP SENSOR 0 , 1.172
+05/14/25 17:05:59 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.480
+05/14/25 17:06:06 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:06:13 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:06:14 <Sipper>: SipperTask SIP SENSOR 0 , 1.169
+05/14/25 17:06:15 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.383
+05/14/25 17:06:21 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:06:28 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:06:30 <Sipper>: SipperTask SIP SENSOR 0 , 1.174
+05/14/25 17:06:30 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.321
+05/14/25 17:06:36 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:06:44 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:06:45 <Sipper>: SipperTask SIP SENSOR 0 , 1.169
+05/14/25 17:06:45 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.354
+05/14/25 17:06:52 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:06:59 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:07:00 <Sipper>: SipperTask SIP SENSOR 0 , 1.154
+05/14/25 17:07:01 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.416
+05/14/25 17:07:07 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:07:14 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:07:16 <Sipper>: SipperTask SIP SENSOR 0 , 1.142
+05/14/25 17:07:16 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.393
+05/14/25 17:07:22 <RapidFire>: BatchThread: process_well()  ( 5, 10)
+05/14/25 17:07:30 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:07:31 <Sipper>: SipperTask SIP SENSOR 0 , 0.809
+05/14/25 17:07:31 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.580
+05/14/25 17:07:37 <RapidFire>: BatchThread: process_well()  ( 4, 5)
+05/14/25 17:07:45 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:07:46 <Sipper>: SipperTask SIP SENSOR 0 , 0.809
+05/14/25 17:07:46 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.524
+05/14/25 17:07:52 <RapidFire>: BatchThread: process_well()  ( 4, 6)
+05/14/25 17:08:00 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:08:01 <Sipper>: SipperTask SIP SENSOR 0 , 0.809
+05/14/25 17:08:02 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.544
+05/14/25 17:08:07 <RapidFire>: BatchThread: process_well()  ( 1, 12)
+05/14/25 17:08:15 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:08:16 <Sipper>: SipperTask SIP SENSOR 0 , 0.809
+05/14/25 17:08:17 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.511
+05/14/25 17:08:22 <RapidFire>: BatchThread: process_well()  ( 4, 2)
+05/14/25 17:08:30 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:08:31 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 17:08:32 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.540
+05/14/25 17:08:38 <RapidFire>: BatchThread: process_well()  ( 3, 3)
+05/14/25 17:08:46 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:08:46 <Sipper>: SipperTask SIP SENSOR 0 , 0.809
+05/14/25 17:08:47 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.600
+05/14/25 17:08:53 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:09:01 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:09:02 <Sipper>: SipperTask SIP SENSOR 0 , 1.158
+05/14/25 17:09:02 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.489
+05/14/25 17:09:09 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:09:16 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:09:17 <Sipper>: SipperTask SIP SENSOR 0 , 1.169
+05/14/25 17:09:18 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.455
+05/14/25 17:09:24 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:09:32 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:09:33 <Sipper>: SipperTask SIP SENSOR 0 , 1.169
+05/14/25 17:09:33 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.438
+05/14/25 17:09:40 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:09:47 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:09:48 <Sipper>: SipperTask SIP SENSOR 0 , 1.161
+05/14/25 17:09:49 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.468
+05/14/25 17:09:55 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:10:03 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:10:04 <Sipper>: SipperTask SIP SENSOR 0 , 1.171
+05/14/25 17:10:04 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.495
+05/14/25 17:10:11 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:10:18 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:10:19 <Sipper>: SipperTask SIP SENSOR 0 , 1.155
+05/14/25 17:10:20 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.485
+05/14/25 17:10:26 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:10:33 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:10:35 <Sipper>: SipperTask SIP SENSOR 0 , 1.157
+05/14/25 17:10:35 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.381
+05/14/25 17:10:41 <RapidFire>: BatchThread: process_well()  ( 7, 9)
+05/14/25 17:10:49 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:10:50 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 17:10:50 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.580
+05/14/25 17:10:56 <RapidFire>: BatchThread: process_well()  ( 8, 8)
+05/14/25 17:11:04 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:11:05 <Sipper>: SipperTask SIP SENSOR 0 , 0.813
+05/14/25 17:11:05 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.593
+05/14/25 17:11:11 <RapidFire>: BatchThread: process_well()  ( 3, 9)
+05/14/25 17:11:19 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:11:20 <Sipper>: SipperTask SIP SENSOR 0 , 0.809
+05/14/25 17:11:21 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.576
+05/14/25 17:11:26 <RapidFire>: BatchThread: process_well()  ( 6, 6)
+05/14/25 17:11:34 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:11:35 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 17:11:36 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.552
+05/14/25 17:11:42 <RapidFire>: BatchThread: process_well()  ( 6, 7)
+05/14/25 17:11:50 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:11:50 <Sipper>: SipperTask SIP SENSOR 0 , 0.813
+05/14/25 17:11:51 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.490
+05/14/25 17:11:57 <RapidFire>: BatchThread: process_well()  ( 2, 9)
+05/14/25 17:12:05 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:12:06 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 17:12:06 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.494
+05/14/25 17:12:12 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:12:20 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:12:21 <Sipper>: SipperTask SIP SENSOR 0 , 1.140
+05/14/25 17:12:21 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.402
+05/14/25 17:12:28 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:12:35 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:12:36 <Sipper>: SipperTask SIP SENSOR 0 , 1.161
+05/14/25 17:12:37 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.474
+05/14/25 17:12:43 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:12:51 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:12:52 <Sipper>: SipperTask SIP SENSOR 0 , 1.170
+05/14/25 17:12:52 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.463
+05/14/25 17:12:59 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:13:06 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:13:07 <Sipper>: SipperTask SIP SENSOR 0 , 1.172
+05/14/25 17:13:08 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.443
+05/14/25 17:13:14 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:13:22 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:13:23 <Sipper>: SipperTask SIP SENSOR 0 , 1.172
+05/14/25 17:13:23 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.455
+05/14/25 17:13:29 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:13:37 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:13:38 <Sipper>: SipperTask SIP SENSOR 0 , 1.159
+05/14/25 17:13:39 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.498
+05/14/25 17:13:45 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:13:52 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:13:54 <Sipper>: SipperTask SIP SENSOR 0 , 1.153
+05/14/25 17:13:54 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.387
+05/14/25 17:14:00 <RapidFire>: BatchThread: process_well()  ( 5, 4)
+05/14/25 17:14:08 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:14:09 <Sipper>: SipperTask SIP SENSOR 0 , 0.813
+05/14/25 17:14:09 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.556
+05/14/25 17:14:15 <RapidFire>: BatchThread: process_well()  ( 5, 1)
+05/14/25 17:14:23 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:14:24 <Sipper>: SipperTask SIP SENSOR 0 , 0.813
+05/14/25 17:14:24 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.560
+05/14/25 17:14:30 <RapidFire>: BatchThread: process_well()  ( 8, 7)
+05/14/25 17:14:38 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:14:39 <Sipper>: SipperTask SIP SENSOR 0 , 0.810
+05/14/25 17:14:40 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 17:14:45 <RapidFire>: BatchThread: process_well()  ( 4, 7)
+05/14/25 17:14:53 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:14:54 <Sipper>: SipperTask SIP SENSOR 0 , 0.810
+05/14/25 17:14:55 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.571
+05/14/25 17:15:00 <RapidFire>: BatchThread: process_well()  ( 4, 9)
+05/14/25 17:15:09 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:15:09 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 17:15:10 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 17:15:16 <RapidFire>: BatchThread: process_well()  ( 6, 2)
+05/14/25 17:15:24 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:15:25 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 17:15:25 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.602
+05/14/25 17:15:31 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:15:39 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:15:40 <Sipper>: SipperTask SIP SENSOR 0 , 1.151
+05/14/25 17:15:41 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.500
+05/14/25 17:15:47 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:15:54 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:15:56 <Sipper>: SipperTask SIP SENSOR 0 , 1.170
+05/14/25 17:15:56 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.458
+05/14/25 17:16:02 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:16:10 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:16:11 <Sipper>: SipperTask SIP SENSOR 0 , 1.171
+05/14/25 17:16:12 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.466
+05/14/25 17:16:18 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:16:25 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:16:27 <Sipper>: SipperTask SIP SENSOR 0 , 1.171
+05/14/25 17:16:27 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.460
+05/14/25 17:16:33 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:16:41 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:16:42 <Sipper>: SipperTask SIP SENSOR 0 , 1.170
+05/14/25 17:16:42 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.492
+05/14/25 17:16:49 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:16:56 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:16:57 <Sipper>: SipperTask SIP SENSOR 0 , 1.154
+05/14/25 17:16:58 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.459
+05/14/25 17:17:04 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:17:12 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:17:13 <Sipper>: SipperTask SIP SENSOR 0 , 1.146
+05/14/25 17:17:13 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.465
+05/14/25 17:17:19 <RapidFire>: BatchThread: process_well()  ( 2, 3)
+05/14/25 17:17:27 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:17:28 <Sipper>: SipperTask SIP SENSOR 0 , 0.810
+05/14/25 17:17:29 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 17:17:34 <RapidFire>: BatchThread: process_well()  ( 4, 1)
+05/14/25 17:17:42 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:17:43 <Sipper>: SipperTask SIP SENSOR 0 , 0.810
+05/14/25 17:17:44 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.559
+05/14/25 17:17:50 <RapidFire>: BatchThread: process_well()  ( 1, 5)
+05/14/25 17:17:58 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:17:58 <Sipper>: SipperTask SIP SENSOR 0 , 0.813
+05/14/25 17:17:59 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.564
+05/14/25 17:18:05 <RapidFire>: BatchThread: process_well()  ( 5, 3)
+05/14/25 17:18:13 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:18:14 <Sipper>: SipperTask SIP SENSOR 0 , 0.816
+05/14/25 17:18:14 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.559
+05/14/25 17:18:20 <RapidFire>: BatchThread: process_well()  ( 5, 9)
+05/14/25 17:18:28 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:18:29 <Sipper>: SipperTask SIP SENSOR 0 , 0.809
+05/14/25 17:18:29 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.568
+05/14/25 17:18:35 <RapidFire>: BatchThread: process_well()  ( 6, 1)
+05/14/25 17:18:43 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:18:44 <Sipper>: SipperTask SIP SENSOR 0 , 0.817
+05/14/25 17:18:45 <Sipper>: SipperTask NEVER SAW SIP SENSOR OUTPUT, t = 0.601
+05/14/25 17:18:50 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:18:58 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:19:00 <Sipper>: SipperTask SIP SENSOR 0 , 1.151
+05/14/25 17:19:00 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.483
+05/14/25 17:19:06 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:19:14 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:19:15 <Sipper>: SipperTask SIP SENSOR 0 , 1.168
+05/14/25 17:19:15 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.387
+05/14/25 17:19:22 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:19:29 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:19:30 <Sipper>: SipperTask SIP SENSOR 0 , 1.173
+05/14/25 17:19:31 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.464
+05/14/25 17:19:37 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:19:45 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:19:46 <Sipper>: SipperTask SIP SENSOR 0 , 1.174
+05/14/25 17:19:46 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.419
+05/14/25 17:19:53 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:20:00 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:20:01 <Sipper>: SipperTask SIP SENSOR 0 , 1.172
+05/14/25 17:20:02 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.422
+05/14/25 17:20:08 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:20:15 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:20:16 <Sipper>: SipperTask SIP SENSOR 0 , 1.156
+05/14/25 17:20:17 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.384
+05/14/25 17:20:23 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:20:31 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:20:32 <Sipper>: SipperTask SIP SENSOR 0 , 1.141
+05/14/25 17:20:32 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.431
+05/14/25 17:20:38 <RapidFire>: BatchThread: process_well()  ( 2, 1)
+05/14/25 17:20:46 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:20:47 <Sipper>: SipperTask SIP SENSOR 0 , 0.812
+05/14/25 17:20:47 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.545
+05/14/25 17:20:53 <RapidFire>: BatchThread: process_well()  ( 7, 7)
+05/14/25 17:21:01 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:21:02 <Sipper>: SipperTask SIP SENSOR 0 , 0.811
+05/14/25 17:21:03 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.494
+05/14/25 17:21:08 <RapidFire>: BatchThread: process_well()  ( 1000, 3)
+05/14/25 17:21:16 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:21:18 <Sipper>: SipperTask SIP SENSOR 0 , 1.154
+05/14/25 17:21:18 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.422
+05/14/25 17:21:24 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:21:32 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:21:33 <Sipper>: SipperTask SIP SENSOR 0 , 1.173
+05/14/25 17:21:33 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.401
+05/14/25 17:21:40 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:21:47 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:21:48 <Sipper>: SipperTask SIP SENSOR 0 , 1.172
+05/14/25 17:21:49 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.413
+05/14/25 17:21:55 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:22:03 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:22:04 <Sipper>: SipperTask SIP SENSOR 0 , 1.170
+05/14/25 17:22:04 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.395
+05/14/25 17:22:10 <RapidFire>: BatchThread: process_well()  ( 1000, 2)
+05/14/25 17:22:18 <Sipper>: SipperTask CHECKING SIP SENSOR
+05/14/25 17:22:19 <Sipper>: SipperTask SIP SENSOR 0 , 1.174
+05/14/25 17:22:19 <Sipper>: SipperTask SIP SENSOR SEES SAMPLE, t = 0.408
+05/14/25 17:22:33 <RapidFire>: BatchThread: START stop_ms_data_acquisition
+05/14/25 17:22:53 <RapidFire>: BatchThread: wait_mass_spec: 2 (max wait 120 sec)
+05/14/25 17:22:53 <RapidFire>: RFMassHunterS:Task: Run StopWorkList
+05/14/25 17:22:53 <RapidFire>: RFMassHunterS:Task: StopWorkListOp stopping worklist
+05/14/25 17:22:53 <RapidFire>: RFMassHunterS:Task: NotifyChangedMS loc = REG[ACTUAL].OBJ[1].NDR[RUNSTATE] value = 2
+05/14/25 17:23:00 <RapidFire>: RFMassHunterS:Task: OnWorklistJobCompleted
+05/14/25 17:23:00 <RapidFire>: RFMassHunterS:Task: OnWorklistRunCompleted
+05/14/25 17:23:00 <RapidFire>: RFMassHunterS:Task: Worklist execution result : Aborted
+05/14/25 17:23:00 <RapidFire>: RFMassHunterS:Task: AcquisitionStatus changed to IDL (2)
+05/14/25 17:23:01 <RapidFire>: BatchThread: END stop_ms_data_acquisition
+05/14/25 17:23:01 <RapidFire>: BatchThread: process_batch() :  finished
+05/14/25 17:23:01 <Pump1>:turn off Pump1
+05/14/25 17:23:01 <Pump2>:turn off Pump2
+05/14/25 17:23:01 <Pump3>:turn off Pump3
+05/14/25 17:23:01 <Pump4>: turn_on :  pump off
+05/14/25 17:23:01 <Pump1>:turn_on : setting on/off = 0
+05/14/25 17:23:01 <RapidFire>: BatchThread: stop_everything()  BEGIN
+05/14/25 17:23:01 <Pump2>:turn_on : setting on/off = 0
+05/14/25 17:23:01 <Pump3>:turn_on : setting on/off = 0
+05/14/25 17:23:01 <RapidFire>: BatchThread: Turn Pumps Off
+05/14/25 17:23:01 <RapidFire>: BatchThread: wash valve to normal position
+05/14/25 17:23:01 <WashValve>: set_position
+05/14/25 17:23:01 <RapidFire>: BatchThread: Stop Sipper Motion
+05/14/25 17:23:01 <RFMassHunterC>:got disconnect
+05/14/25 17:23:01 <RapidFire>: BatchThread: put all valves in inject position
+05/14/25 17:23:01 <Pump3>:AgilentPump1200Task :turn off
+05/14/25 17:23:01 <Pump1>:AgilentPump1200Task :turn off
+05/14/25 17:23:01 <RapidFire>: RFMassHunterS:Task: Run Disconnect
+05/14/25 17:23:01 <RapidFire>: RFMassHunterS:Task: executing disconnect
+05/14/25 17:23:01 <Pump2>:AgilentPump1200Task :turn off
+05/14/25 17:23:06 <RapidFire>: BatchThread: stop_everthing() END
+1 05/14/25 17:23:06 Log file: M:\Projects\Default\Data\Rapidfire/2025/May/14/006/batch.log closed 05/14/25 17:23:06
+

@@ -1,64 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Feb 17 11:38:29 2025
 
-@author: danbru
-"""
-
-'''
-# Read in the data and metadata
-layout = pd.read_excel(EXPERIMENT_DIR / 'protocol/hamilton/pipetting_layout.xlsx')
-raw_growth_curves = process_measurement_data(EXPERIMENT_DIR / 'results/growth/raw')
-
-# Process growth curves by subtracting blanks and setting post-subraction negative values to zero
-growth_curves = subtract_and_impute_blanks(layout, raw_growth_curves, 3, 0.0)
-
-# Filter for outliers curves using MAD (default)
-growth_curves_filtered = filter_outlier_growth_curves(growth_curves, group_col="Summary", method="mad", threshold=3.0)
-
-# Smooth curves using a rolling median
-growth_curves_filtered_smoothed = smooth_growth_curves(growth_curves_filtered, window=5, method="mirror")
-unfiltered_growth_curves_smoothed = smooth_growth_curves(growth_curves.drop('growth_summary', axis = 1), window=5, method="mirror")
-
-# Save the processed curves and unprocessed curves?
-growth_curves.to_csv(EXPERIMENT_DIR / 'results/growth/processed/growth_curves.tsv', sep = '\t')
-growth_curves_filtered.to_csv(EXPERIMENT_DIR / 'results/growth/processed/curated_growth_curves.tsv', sep = '\t')
-unfiltered_growth_curves_smoothed.to_csv(EXPERIMENT_DIR / 'results/growth/processed/smoothed_growth_curves.tsv', sep = '\t')
-growth_curves_filtered_smoothed.to_csv(EXPERIMENT_DIR / 'results/growth/processed/curated_smoothed_growth_curves.tsv', sep = '\t')
-
-# Extract properties from the growth curves. Only AUC and growth rate for now?
-auc_per_well = compute_auc(growth_curves_filtered_smoothed.iloc[:,:-1])
-mu_per_well = extract_growth_rates(layout, growth_curves_filtered_smoothed)
-finalOD_per_well = extract_finalOD(layout, growth_curves_filtered_smoothed)
-
-
-# Save file with properties
-violinplot_df = pd.merge(mu_per_well['mu'], auc_per_well, 
-                         left_index = True, right_index = True).merge(finalOD_per_well, 
-                                                  left_index = True, right_index = True).merge(growth_curves_filtered_smoothed['Summary'], 
-                                                                      left_index = True, right_index = True)
-violinplot_df.to_csv(EXPERIMENT_DIR / 'results/growth/processed/growth_parameters.tsv', sep = '\t')
-
-
-# Plotting scripts
-# Average per experimental group
-plot_group_averages_in_hours(growth_curves_filtered_smoothed, group_col = "Summary")
-plt.savefig(EXPERIMENT_DIR / 'results/plots/averaged_growth_curves.png')   # save the figure to file
-plt.close()    # close the figure window
-
-# Plot a grid of them? along with the windows extracted for the growth rate calculation
-plot_growth_curves(unfiltered_growth_curves_smoothed, annotations_df=mu_per_well)
-plt.savefig(EXPERIMENT_DIR / 'results/plots/growth_curves.png')   # save the figure to file
-plt.close()    # close the figure window
-
-# Prep boxplot/violinplots?
-plot_violinplots(violinplot_df.drop('finalOD', axis = 1))
-plt.savefig(EXPERIMENT_DIR / 'results/plots/growth_metrics.png')   # save the figure to file
-plt.close()    # close the figure window
-#
-
-'''
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -72,7 +12,9 @@ from growth_stat_testing import growth_testing#, two_way_anova_testing
 
 
 
-#EXPERIMENT_DIR = Path('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/good caffeine/arginine_202503131539')
+#EXPERIMENT_DIR = Path('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/histidine_202504270959')
+#EXPERIMENT_DIR = Path('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/lysine_202505071046')
+
 
 #@task
 #def save_plots(EXPERIMENT_DIR, growth_curves_filtered_smoothed,unfiltered_growth_curves_smoothed, violinplot_df, mu_per_well):
@@ -188,7 +130,7 @@ def run_growth_processing(EXPERIMENT_DIR, testing_bool):
     # Read in the growth curves from the raw polarstar output
     layout, raw_growth_curves = read_growth_data(EXPERIMENT_DIR)
     
-    # Filter low-quality growth curves using MAD
+    # Filter low-quality growth curves using MAD df = raw_growth_curves
     filtered_growth_curves = filter_curves(layout, raw_growth_curves, 'summary', outlier_method, threshold)
     
     #growth_curves = blank_processing(layout,raw_growth_curves, n, fillin_value, config.BLANK_SUBTRACTION)

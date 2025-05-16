@@ -28,7 +28,6 @@ pandas2ri.activate()
 mixOmics = importr('mixOmics')
 base     = importr('base')
 
-
 def load_data(exp_path: str, ms_filename: str, include_growth: bool = True):
     """
     Load and merge metabolomics, design, (optional) growth data; median-impute missing values.
@@ -196,6 +195,72 @@ def predict_plsda(plsda_mod, X_new, n_components):
     
     return final_preds
 
+
+def nested_cv_regression_repeated(
+    X, y,
+    inner_splits=10,
+    outer_splits=3,
+    outer_repeats=5,
+    random_state=42
+):
+    
+    # Set up repeated outer CV
+    outer_cv = RepeatedKFold(
+        n_splits=outer_splits,
+        n_repeats=outer_repeats,
+        random_state=random_state
+    )
+
+    r2_list = []
+    coef_list = []
+    true_vals, pred_vals = [], []
+
+    # Outer loop over repeated splits
+    for train_idx, test_idx in outer_cv.split(X):
+        X_tr, X_te = X.iloc[train_idx, :], X.iloc[test_idx, :]
+        y_tr, y_te = y.iloc[train_idx], y.iloc[test_idx]
+
+        # Standardize
+        scaler = StandardScaler().fit(X_tr)
+        Xtr_s = scaler.transform(X_tr)
+        Xte_s = scaler.transform(X_te)
+
+        # Inner model selection
+        model = ElasticNetCV(
+            cv=inner_splits,
+            random_state=random_state,
+            l1_ratio=[.1, .5, .7, .9]
+        )
+        model.fit(Xtr_s, y_tr)
+
+        # Predictions
+        y_pred = model.predict(Xte_s)
+        r2_fold = r2_score(y_te, y_pred)
+
+        # Collect results
+        r2_list.append(r2_fold)
+        coef_list.append(model.coef_)
+        true_vals.extend(y_te)
+        pred_vals.extend(y_pred)
+
+    # Performance summary: median R2
+    median_r2 = float(np.mean(r2_list))
+
+    # Coefficient summary: median and IQR across folds
+    coef_arr = np.vstack(coef_list)
+    coef_df = pd.DataFrame(coef_arr, columns=X.columns)
+    median_series = coef_df.mean()
+    iqr_series = coef_df.std()
+    coef_summary = pd.DataFrame({
+        'Mean_Coefficient': median_series,
+        'IQR_Coefficient': iqr_series
+    })
+
+    # Predictions DataFrame
+    predictions_df = pd.DataFrame({'True': true_vals, 'Predicted': pred_vals})
+
+    return median_r2, r2_list, coef_summary, predictions_df
+
 def main(exp_path, ms_filename):
         
     from sklearn.metrics import classification_report
@@ -219,6 +284,10 @@ def main(exp_path, ms_filename):
 
     ms_filename = 'ms_output_imputed.tsv'
 
+
+    # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/glutamine_202504251440' # glutamine_acetate
+    # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/lysine_202504291748' # lysine sucrose
+    # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/aminoadipate_202504291411' #aminoadpiate
     # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756' # FA
     # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503131539' # Caffeine
     # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202501281618' # Spermine
@@ -228,19 +297,17 @@ def main(exp_path, ms_filename):
     # decide on components, move this to config?
     n_components = 5
     
-    
     exp_paths = [
         '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202501281618',
         '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756',
         '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503131539',
         '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503141655',
         '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/proline_202503051407',
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/glutamine_202504251440', # glutamine_acetate
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/lysine_202504291748', # lysine sucrose
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/aminoadipate_202504291411' # aminoadipate
     ]
     for exp_path in exp_paths:
-        
-        
-        
-
     
         # Load data
         df, feats = load_data(exp_path, ms_filename, include_growth=True)
@@ -248,15 +315,29 @@ def main(exp_path, ms_filename):
         os.makedirs(os.path.join(exp_path,'results','metabolomics','predictions'), exist_ok=True)
         results = {}
         
+        
+        
         # Regression on treated
         mask = df['Treatment'].str.lower()=='yes'
         Xr = df.loc[mask, feats]
         yr = df.loc[mask, 'AUC']
-        mean_r2, r2_list, coef_sum, pred_df = nested_cv_regression(Xr, yr, 10, 3)
-        print(f'Resistance R²: {mean_r2:.2f}')
+        #mean_r2, r2_list, coef_sum, pred_df = nested_cv_regression(Xr, yr, 5, 3)
+        #print(f'Resistance R²: {mean_r2:.2f}')
+        #print(coef_sum.nlargest(5, 'Mean_Coefficient', keep='first'))
         
+        mean_r2, r2_list, coef_sum, predictions_df = nested_cv_regression_repeated(
+            Xr, yr,
+            inner_splits=5,
+            outer_splits=2,
+            outer_repeats=10,
+            random_state=0
+        )
+        
+        print(f'Resistance R²: {mean_r2:.2f}')
+        print(coef_sum.nlargest(5, 'Mean_Coefficient', keep='first'))
+       
         coef_sum.to_csv(os.path.join(exp_path,'results','metabolomics','coefficients','enet_coef_summary.csv'))
-        pred_df.to_csv(os.path.join(exp_path,'results','metabolomics','predictions','enet_coef_preds.csv'))
+        #pred_df.to_csv(os.path.join(exp_path,'results','metabolomics','predictions','enet_coef_preds.csv'))
         results['r2'] = mean_r2
         
         # Multiclass PLS-DA
@@ -265,7 +346,7 @@ def main(exp_path, ms_filename):
         
         # Performance evaluation for PLS-DA
         from sklearn.model_selection import RepeatedStratifiedKFold
-        rkf = RepeatedStratifiedKFold(n_splits=2, n_repeats=50, random_state=42)
+        rkf = RepeatedStratifiedKFold(n_splits=2, n_repeats=10, random_state=42)
         
         f1_scores = defaultdict(list)
     
@@ -302,7 +383,6 @@ def main(exp_path, ms_filename):
             
     
             # Compute macro F1:
-            #f1 = f1_score(preds_df['TrueClass'], preds_df['PredictedClass'], average='macro')
             f1 = report['macro avg']['f1-score']
             #print(f"Macro F₁ = {f1:.2f}")
     
@@ -342,6 +422,8 @@ def main(exp_path, ms_filename):
         summary.to_csv(out_csv)
     
         # Save a heatmap?
+        
+        
    
 
 if __name__=='__main__':
@@ -350,178 +432,3 @@ if __name__=='__main__':
     parser.add_argument('--ms_filename', default='ms_output.tsv')
     args = parser.parse_args()
     main(args.exp_path, args.ms_filename)
-
-
-
-
-
-
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-
-def plot_heatmap_sns(
-    df,
-    data_cols,
-    group_cols=('Supplement', 'Treatment'),
-    scale=None,             # one of {'zscore', 'minmax', None}
-    scale_axis='rows',      # 'rows' to scale features, 'columns' to scale samples
-    cmap='viridis',
-    figsize=(10, 8),
-    row_cluster=False,
-    col_cluster=False,
-    group_order=None,       # dict e.g. {'Treatment': ['A','B'], 'Supplement': ['X','Y','Z']}
-    sort_by=None            # list of metadata columns defining sample order
-):
-    """
-    Seaborn clustermap with colored sample-bars, explicit scaling axis, custom ordering,
-    legends for groups, narrow colorbar aligned with heatmap, and full feature labels.
-
-    Parameters
-    ----------
-    df : pd.DataFrame
-        One row per sample, with metadata and feature columns.
-    data_cols : list[str]
-        Names of numeric feature columns to plot.
-    group_cols : tuple(str,str)
-        Two metadata columns for color bars and legends.
-    scale : {'zscore','minmax',None}
-        'zscore' or 'minmax' to standardize; None for raw values.
-    scale_axis : {'rows','columns'}
-        Axis along which to scale: 'rows' to scale each feature across samples,
-        'columns' to scale each sample across features.
-    cmap : str
-        A matplotlib colormap name.
-    figsize : tuple
-        Figure size.
-    row_cluster, col_cluster : bool
-        Whether to cluster rows/columns.
-    group_order : dict or None
-        If provided, maps each group_col to desired category order.
-    sort_by : list or None
-        List of metadata columns defining the sorting priority of samples.
-    """
-    # 1) Copy and apply custom ordering/categories
-    df_plot = df.copy()
-    if group_order:
-        for col, order in group_order.items():
-            if col in df_plot:
-                df_plot[col] = pd.Categorical(df_plot[col], categories=order, ordered=True)
-    # 2) Sort samples
-    if sort_by is None:
-        sort_by = list(group_cols)
-    df_plot = df_plot.sort_values(sort_by)
-    # 3) Build data matrix: features as rows, samples as columns
-    mat = df_plot[data_cols].T
-    # 4) Build lut and col_colors for sample annotations
-    lut = {}
-    for col in group_cols:
-        cats = df_plot[col].cat.categories if hasattr(df_plot[col], 'cat') else sorted(df_plot[col].unique())
-        palette = sns.color_palette(None, n_colors=len(cats))
-        lut[col] = dict(zip(cats, palette))
-    color_rows = [
-        [lut[col][df_plot.iloc[i][col]] for col in group_cols]
-        for i in range(len(df_plot))
-    ]
-    col_colors = pd.DataFrame(color_rows, index=df_plot.index, columns=group_cols)
-    # 5) Determine scaling args
-    z_score = None
-    standard_scale = None
-    if scale == 'zscore':
-        z_score = 0 if scale_axis == 'rows' else 1
-    elif scale == 'minmax':
-        standard_scale = 0 if scale_axis == 'rows' else 1
-    # 6) Plot clustermap with narrow, aligned colorbar
-    g = sns.clustermap(
-        mat,
-        cmap=cmap,
-        row_cluster=row_cluster,
-        col_cluster=col_cluster,
-        col_colors=col_colors,
-        figsize=figsize,
-        z_score=z_score,
-        standard_scale=standard_scale,
-        cbar_pos=(0.92, 0.2, 0.015, 0.6),  # x, y, width, height
-        cbar_kws={'label': f"{scale} ({scale_axis})" if scale else 'Value'}
-    )
-    # 7) Add legends for group colors
-    for idx, col in enumerate(group_cols):
-        handles = [mpatches.Patch(color=color, label=cat)
-                   for cat, color in lut[col].items()]
-        g.ax_heatmap.legend(
-            handles=handles,
-            title=col,
-            bbox_to_anchor=(1.02 + idx*0.15, 1),
-            loc='upper left',
-            frameon=False
-        )
-    # 8) Tidy labels and show all features
-    g.ax_heatmap.set_xlabel("Samples")
-    g.ax_heatmap.set_ylabel("Features")
-    plt.setp(g.ax_heatmap.get_xticklabels(), rotation=90)
-    plt.setp(g.ax_heatmap.get_yticklabels(), rotation=0, fontsize=6)
-    plt.tight_layout()
-    plt.show()
-
-plot_heatmap_sns(
-    df,
-    df.columns[:-10],
-    group_cols=('Supplement','Treatment'),
-    scale='zscore',            # or 'minmax', or None
-    scale_axis='rows',         # 'rows' or 'columns'
-    cmap='coolwarm',
-    figsize=(12,6),
-    row_cluster=True,
-    col_cluster=False,
-    group_order={
-        'Treatment': ['None','Yes'],
-        'Supplement': ['None','PosLow','PosHigh','NegHigh']
-    },
-    sort_by=['Treatment','Supplement']
-)
-
-
-
-# 1) Example loadings DataFrame
-#    index: metabolite names
-#    columns: ['Comp1','Comp2',...]
-#loadings_df = pd.read_csv("plsda_loadings.csv", index_col=0)
-
-# 2a) Top-N approach: 
-N = 20
-# for each metabolite, find its largest abs-loading over all components:
-max_abs = loadings_df.abs().max(axis=1)
-top_feats = max_abs.nlargest(N).index.tolist()
-
-# 2b) Threshold approach:
-threshold = 0.5
-mask = (loadings_df.abs() > threshold).any(axis=1)
-top_feats = loadings_df.index[mask].tolist()
-
-# 3) Subset your data
-#    assume 'df' has metadata + all metabolites as columns
-#    and your group_cols are ('Supplement','Treatment')
-filtered_df = df[['Supplement','Treatment'] + top_feats]
-
-# 4) Plot
-plot_heatmap_sns(
-    filtered_df,
-    data_cols=top_feats,
-    group_cols=('Supplement','Treatment'),
-    scale='zscore',
-    scale_axis='rows',
-    cmap='coolwarm',
-    figsize=(12,6),
-    row_cluster=False,
-    col_cluster=False,
-    group_order={
-        'Treatment': ['None','Yes'],
-        'Supplement': ['None','PosLow','PosHigh','NegHigh']
-    },
-    sort_by=['Treatment','Supplement']
-)

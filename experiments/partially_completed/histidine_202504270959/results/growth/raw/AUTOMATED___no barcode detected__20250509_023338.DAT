@@ -1,0 +1,298 @@
+Testname: OD600X96NUNC
+Date: 09/05/2025  Time: 02:32:40
+ID1: Loop23_Plate3_20250509T023235  ID2:   ID3: 
+No. of Channels / Multichromatics: 1
+No. of Cycles: 1
+Configuration: Absorbance
+Used wavelengths and gain values:
+  1: 600nm           493
+  2: -               
+  3: -               
+  4: -               
+  5: -               
+  6: -               
+  7: -               
+  8: -               
+
+
+Basic Parameters
+================
+Mode: Plate mode
+Pause before cycle: 0
+Pause duration [s]: 0
+Microplate: NUNC 96
+Positioning delay [s]: 0.1
+Well scanning: none
+Comment: 
+
+
+Kinetic Windows
+===============
+Number of kinetic windows: 1
+
+Kinetic window:                 1      2      3      4
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ Number of cycles:              1      -      -      -      
+ Measurement start time [s]:    0      -      -      -      
+ Number of flashes:             30     -      -      -      
+ Cycle time [s]:                -1     -      -      -      
+
+
+Layout
+======
+Plate format: 96
+Reading direction: 1
+(horizontal bidirectional reading, start top left)
+
+      1     2     3     4     5     6     7     8     9     10    11    12   
+   |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|
+ A |  X1    X2    X3    X4    X5    X6    X7    X8    X9    X10   X11   X12  |
+ B |  X13   X14   X15   X16   X17   X18   X19   X20   X21   X22   X23   X24  |
+ C |  X25   X26   X27   X28   X29   X30   X31   X32   X33   X34   X35   X36  |
+ D |  X37   X38   X39   X40   X41   X42   X43   X44   X45   X46   X47   X48  |
+ E |  X49   X50   X51   X52   X53   X54   X55   X56   X57   X58   X59   X60  |
+ F |  X61   X62   X63   X64   X65   X66   X67   X68   X69   X70   X71   X72  |
+ G |  X73   X74   X75   X76   X77   X78   X79   X80   X81   X82   X83   X84  |
+ H |  X85   X86   X87   X88   X89   X90   X91   X92   X93   X94   X95   X96  |
+   |_________________________________________________________________________|
+
+
+Concentrations/Injections/Shaking
+=================================
+
+Well     Concentration  Dilution  Injection Volume [µl]
+Content                 Factor    1       2       3       4
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ X1      -              1         0       0       0       0
+ X10     -              1         0       0       0       0
+ X11     -              1         0       0       0       0
+ X12     -              1         0       0       0       0
+ X13     -              1         0       0       0       0
+ X14     -              1         0       0       0       0
+ X15     -              1         0       0       0       0
+ X16     -              1         0       0       0       0
+ X17     -              1         0       0       0       0
+ X18     -              1         0       0       0       0
+ X19     -              1         0       0       0       0
+ X2      -              1         0       0       0       0
+ X20     -              1         0       0       0       0
+ X21     -              1         0       0       0       0
+ X22     -              1         0       0       0       0
+ X23     -              1         0       0       0       0
+ X24     -              1         0       0       0       0
+ X25     -              1         0       0       0       0
+ X26     -              1         0       0       0       0
+ X27     -              1         0       0       0       0
+ X28     -              1         0       0       0       0
+ X29     -              1         0       0       0       0
+ X3      -              1         0       0       0       0
+ X30     -              1         0       0       0       0
+ X31     -              1         0       0       0       0
+ X32     -              1         0       0       0       0
+ X33     -              1         0       0       0       0
+ X34     -              1         0       0       0       0
+ X35     -              1         0       0       0       0
+ X36     -              1         0       0       0       0
+ X37     -              1         0       0       0       0
+ X38     -              1         0       0       0       0
+ X39     -              1         0       0       0       0
+ X4      -              1         0       0       0       0
+ X40     -              1         0       0       0       0
+ X41     -              1         0       0       0       0
+ X42     -              1         0       0       0       0
+ X43     -              1         0       0       0       0
+ X44     -              1         0       0       0       0
+ X45     -              1         0       0       0       0
+ X46     -              1         0       0       0       0
+ X47     -              1         0       0       0       0
+ X48     -              1         0       0       0       0
+ X49     -              1         0       0       0       0
+ X5      -              1         0       0       0       0
+ X50     -              1         0       0       0       0
+ X51     -              1         0       0       0       0
+ X52     -              1         0       0       0       0
+ X53     -              1         0       0       0       0
+ X54     -              1         0       0       0       0
+ X55     -              1         0       0       0       0
+ X56     -              1         0       0       0       0
+ X57     -              1         0       0       0       0
+ X58     -              1         0       0       0       0
+ X59     -              1         0       0       0       0
+ X6      -              1         0       0       0       0
+ X60     -              1         0       0       0       0
+ X61     -              1         0       0       0       0
+ X62     -              1         0       0       0       0
+ X63     -              1         0       0       0       0
+ X64     -              1         0       0       0       0
+ X65     -              1         0       0       0       0
+ X66     -              1         0       0       0       0
+ X67     -              1         0       0       0       0
+ X68     -              1         0       0       0       0
+ X69     -              1         0       0       0       0
+ X7      -              1         0       0       0       0
+ X70     -              1         0       0       0       0
+ X71     -              1         0       0       0       0
+ X72     -              1         0       0       0       0
+ X73     -              1         0       0       0       0
+ X74     -              1         0       0       0       0
+ X75     -              1         0       0       0       0
+ X76     -              1         0       0       0       0
+ X77     -              1         0       0       0       0
+ X78     -              1         0       0       0       0
+ X79     -              1         0       0       0       0
+ X8      -              1         0       0       0       0
+ X80     -              1         0       0       0       0
+ X81     -              1         0       0       0       0
+ X82     -              1         0       0       0       0
+ X83     -              1         0       0       0       0
+ X84     -              1         0       0       0       0
+ X85     -              1         0       0       0       0
+ X86     -              1         0       0       0       0
+ X87     -              1         0       0       0       0
+ X88     -              1         0       0       0       0
+ X89     -              1         0       0       0       0
+ X9      -              1         0       0       0       0
+ X90     -              1         0       0       0       0
+ X91     -              1         0       0       0       0
+ X92     -              1         0       0       0       0
+ X93     -              1         0       0       0       0
+ X94     -              1         0       0       0       0
+ X95     -              1         0       0       0       0
+ X96     -              1         0       0       0       0
+Used pump:                        -       -       -       -       
+Pump speed [µl/s]:                -       -       -       -       
+Smart dispensing used:            -       -       -       -       
+Pump syringe volume [ml]:         -       -       -       -       
+Injection cycle:                  -       -       -       -       
+Injection start time [s]:         -       -       -       -       
+Shaking time (after inj.) [s]:    -       -       -       -       
+
+Shaking mode: double orbital
+Shaking frequency [rpm]: 500
+Additional shaking: none
+Time for additional shaking [s]: 0
+Equidistant kinetic cycles: on
+
+Concentration unit: 
+
+
+Used Versions/Reader, User Name
+===============================
+Omega software version (control part): 1.20
+Firmware version: 1.41
+Reader serial number: 415-0159
+User: USER
+Target temperature: 30°C
+Required value used for gain adjustment [%]: 80
+
+
+Absorbance Intensity Limits
+===========================
+0% transmission (main channel [1]):        257128
+100% transmission (main channel [1]):      4116476
+0% transmission (reference channel):       220
+100% transmission (reference channel):     206019
+
+
+Measurement Data
+================
+
+Chromatic: 1
+Cycle: 1
+A01:       0.5099
+A02:       0.1502
+A03:       0.3332
+A04:       0.2068
+A05:       0.2217
+A06:       0.5633
+A07:       0.1784
+A08:       0.3005
+A09:       0.1869
+A10:       0.1719
+A11:       0.3507
+A12:       0.2690
+B01:       0.2338
+B02:       1.5159
+B03:       0.4294
+B04:       0.2230
+B05:       0.1733
+B06:       0.2660
+B07:       0.1789
+B08:       0.2308
+B09:       0.3353
+B10:       0.4543
+B11:       0.3088
+B12:       0.3758
+C01:       0.4020
+C02:       0.1871
+C03:       0.3007
+C04:       0.1569
+C05:       0.3033
+C06:       0.3034
+C07:       0.2128
+C08:       0.3160
+C09:       0.2157
+C10:       0.2278
+C11:       0.3241
+C12:       0.3820
+D01:       0.4906
+D02:       0.2548
+D03:       0.1494
+D04:       0.3965
+D05:       0.3677
+D06:       0.1855
+D07:       0.3290
+D08:       0.2676
+D09:       0.2303
+D10:       0.3273
+D11:       0.1627
+D12:       0.2648
+E01:       0.3217
+E02:       0.1350
+E03:       0.2033
+E04:       0.3544
+E05:       0.3271
+E06:       0.4242
+E07:       0.2572
+E08:       0.3811
+E09:       0.3051
+E10:       0.1851
+E11:       0.3794
+E12:       0.2239
+F01:       1.1589
+F02:       0.1893
+F03:       0.2761
+F04:       0.1265
+F05:       0.4001
+F06:       0.4673
+F07:       0.3301
+F08:       0.3016
+F09:       0.1528
+F10:       0.2419
+F11:       0.3205
+F12:       0.1858
+G01:       0.1639
+G02:       0.3358
+G03:       0.2740
+G04:       0.2663
+G05:       0.2056
+G06:       0.4868
+G07:       0.3761
+G08:       0.4845
+G09:       0.3048
+G10:       0.1449
+G11:       0.2431
+G12:       0.6720
+H01:       0.4379
+H02:       0.4519
+H03:       0.7584
+H04:       0.3660
+H05:       0.3262
+H06:       0.3595
+H07:       0.2276
+H08:       1.0821
+H09:       0.3051
+H10:       0.4214
+H11:       0.1459
+H12:       0.2564
+

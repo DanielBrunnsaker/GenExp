@@ -1,0 +1,90 @@
+	mu	AUC	MaxOD	Summary
+A1	0.09495045685839815	11520.631692538547	0.3050700350455733	Growth with formic acid treatment without aminoadipate supplementation.
+A2	0.0	584.1049969718654	0.0	Media control
+A3	0.14949568779480363	43615.989413147756	1.722745905283208	Growth with low aminoadipate supplementation without formic acid treatment.
+A4	0.14704313461257817	11933.365257434754	0.42604929648851797	Growth with high aminoadipate supplementation without formic acid treatment.
+A5	0.23441283476764427	62892.88118608099	2.2193602179320973	Growth with proline supplementation without formic acid treatment.
+A6	0.6516172460113494	1814.4791136670917	0.043088105333737345	Growth with high aminoadipate supplementation and formic acid treatment.
+A7	0.2448968172700971	61836.478405138085	2.170894210334423	Growth with proline supplementation without formic acid treatment.
+A8	0.23628702751385883	55587.07633925359	2.0117248435362725	Baseline growth without any supplementation or treatment.
+A9	0.24355194738759783	53308.48337846084	2.0184389172405206	Growth with proline supplementation without formic acid treatment.
+A10	0.0	853.4350945800759	0.0	Media control
+A11	0.12679673820112328	4035.0234465132835	0.1453530367957526	Growth with proline supplementation and formic acid treatment.
+A12	0.0857789501069844	4964.380444335508	0.14606490668158248	Growth with low aminoadipate supplementation and formic acid treatment.
+B1	0.12560232054891318	15922.464712476376	0.5791902559049549	Growth with high aminoadipate supplementation without formic acid treatment.
+B2	0.017878440418708997	1689.6869077590757	0.03115961325007525	Growth with high aminoadipate supplementation and formic acid treatment.
+B3	0.15546192414241974	15865.756374282508	0.7218996477400307	Growth with formic acid treatment without aminoadipate supplementation.
+B4	0.24278382102254661	57693.65492864492	2.0336498540773102	Growth with proline supplementation without formic acid treatment.
+B5	0.0	695.6999999999992	0.0	Media control
+B6	0.1360088869703909	16449.79128869376	0.6732142710488921	Growth with proline supplementation and formic acid treatment.
+B7	0.0	526.6572395080002	0.0	Media control
+B8	0.128441125059934	13698.771455321103	0.5237564904083203	Growth with high aminoadipate supplementation without formic acid treatment.
+B9	0.14709605373922396	44676.35608189158	1.7248930902276993	Growth with low aminoadipate supplementation without formic acid treatment.
+B10	0.10913426476072033	6269.181877232035	0.2136896724418315	Growth with low aminoadipate supplementation and formic acid treatment.
+B11	0.1557071708281881	11019.964277954772	0.4882097980269781	Growth with formic acid treatment without aminoadipate supplementation.
+B12	0.23774295344742075	56339.708520636064	2.0592642492830864	Baseline growth without any supplementation or treatment.
+C1	0.14380273388214043	48933.670874575895	1.8190578175624326	Growth with low aminoadipate supplementation without formic acid treatment.
+C2	0.2383822571041049	63742.29977431843	2.1040932591076897	Growth with proline supplementation without formic acid treatment.
+C4	0.0	901.4990141427656	0.0	Media control
+C5	0.14449064075609805	4074.0321557323987	0.16872250454815158	Growth with formic acid treatment without aminoadipate supplementation.
+C6	0.09107076262127675	8575.796650671531	0.27620498492026213	Growth with low aminoadipate supplementation and formic acid treatment.
+C8	0.0	719.9999999999997	0.0	Media control
+C9	0.1048038811194169	6184.747377835071	0.1909020936919714	Growth with low aminoadipate supplementation and formic acid treatment.
+C10	0.12058914998791971	14169.312673244649	0.48284219135537954	Growth with high aminoadipate supplementation without formic acid treatment.
+C11	0.05526441848850256	3775.30338271194	0.09011671893088079	Growth with high aminoadipate supplementation and formic acid treatment.
+C12	0.1785193229768154	19192.49028490842	0.9757748828948778	Growth with proline supplementation and formic acid treatment.
+D1	0.1334978431184081	17640.745876503453	0.7054125112209875	Growth with proline supplementation and formic acid treatment.
+D2	0.12841540004214605	4278.051213015286	0.11594262245437767	Growth with low aminoadipate supplementation and formic acid treatment.
+D3	0.0	719.9999999999994	0.0	Media control
+D4	0.23599624091106858	61262.7513824395	2.1912901094780897	Baseline growth without any supplementation or treatment.
+D5	0.2341896565097795	61019.786403656035	2.1131875353588465	Baseline growth without any supplementation or treatment.
+D6	0.24321778063078073	57467.45534365506	2.121645402986159	Growth with proline supplementation without formic acid treatment.
+D7	0.1362729480517505	39381.45147791381	1.601515212792668	Growth with low aminoadipate supplementation without formic acid treatment.
+D8	0.19760998278946693	1519.0881022187948	0.035549675375665224	Growth with high aminoadipate supplementation and formic acid treatment.
+D10	0.15147426505713057	10673.768591034137	0.45691693130445316	Growth with formic acid treatment without aminoadipate supplementation.
+D11	0.0	318.28848220576486	0.0	Media control
+D12	0.16916066702031643	2152.678996433094	0.05201409193088065	Growth with high aminoadipate supplementation and formic acid treatment.
+E1	0.04107941011590621	4712.767823268747	0.0946320464049804	Growth with high aminoadipate supplementation and formic acid treatment.
+E2	0.0	702.797606367773	0.0	Media control
+E3	0.11331621369099663	15125.145973446075	0.5231573394774778	Growth with high aminoadipate supplementation without formic acid treatment.
+E4	0.1933317966240497	2833.4690718394877	0.08930715845583176	Growth with formic acid treatment without aminoadipate supplementation.
+E6	0.23311554290107542	60269.61578854811	2.138186393471364	Baseline growth without any supplementation or treatment.
+E7	0.06730685126755744	9402.748136474633	0.2578532491294242	Growth with low aminoadipate supplementation and formic acid treatment.
+E8	0.13301748777870948	15479.669294283856	0.6168809778400095	Growth with formic acid treatment without aminoadipate supplementation.
+E9	0.18144442244456607	4546.258369274289	0.09373549218457178	Growth with high aminoadipate supplementation and formic acid treatment.
+E10	0.23497556651155438	54264.47254311851	2.0467865470785123	Growth with proline supplementation without formic acid treatment.
+E11	0.1652347516956649	43710.733536724896	1.793425649849858	Growth with low aminoadipate supplementation without formic acid treatment.
+E12	0.0	283.2523396687492	0.0	Media control
+F1	0.07957820835568952	7268.203079155665	0.2077993328825762	Growth with low aminoadipate supplementation and formic acid treatment.
+F2	0.10743678493408006	15439.514692774823	0.5221584035154704	Growth with high aminoadipate supplementation without formic acid treatment.
+F3	0.6646673808761787	1291.79111713729	0.028816283798429147	Growth with proline supplementation and formic acid treatment.
+F4	0.0	719.9999999999997	0.0	Media control
+F5	0.13794531941013558	36717.98057974015	1.5018261976366425	Growth with low aminoadipate supplementation without formic acid treatment.
+F6	0.14295005390764054	5537.087230268104	0.18428747255512018	Growth with formic acid treatment without aminoadipate supplementation.
+F7	0.23527369796375003	56475.652935597864	2.128356685235374	Baseline growth without any supplementation or treatment.
+F8	0.08362253080589718	4007.5231939872956	0.11791880926668404	Growth with low aminoadipate supplementation and formic acid treatment.
+F9	0.0	301.61777375218077	0.0	Media control
+F10	0.2668430398626103	2586.0320131096873	0.056245052168084675	Growth with high aminoadipate supplementation and formic acid treatment.
+G1	0.0	1326.9986477822445	0.0	Media control
+G2	0.23293469074620993	62836.84809224049	2.217877022746647	Baseline growth without any supplementation or treatment.
+G3	0.06806878619808644	3419.216753323366	0.10103174370020211	Growth with low aminoadipate supplementation and formic acid treatment.
+G4	0.1486910946803859	10289.402106316262	0.4423361268828081	Growth with proline supplementation and formic acid treatment.
+G6	0.1397954816521926	42451.597540929375	1.74467550158425	Growth with low aminoadipate supplementation without formic acid treatment.
+G7	0.10219985100845325	3924.7059683206435	0.08323600434234758	Growth with high aminoadipate supplementation and formic acid treatment.
+G8	0.14589749719403405	3749.5698400795704	0.15309461071238223	Growth with proline supplementation and formic acid treatment.
+G9	0.15826036792609685	11977.847947267806	0.5277357485228473	Growth with proline supplementation and formic acid treatment.
+G10	0.0	685.1199999999993	0.0	Media control
+G11	0.2289612817887335	48924.39256451071	2.00590468370504	Growth with proline supplementation without formic acid treatment.
+G12	0.19097740923715534	5118.28876456744	0.10334325331568896	Growth with formic acid treatment without aminoadipate supplementation.
+H1	0.23607817787901783	53089.63530735177	2.0833065230850747	Baseline growth without any supplementation or treatment.
+H2	0.15556384711715257	45517.41408724683	1.7735834976491074	Growth with low aminoadipate supplementation without formic acid treatment.
+H3	0.2797044668308825	3183.774475479522	0.06420446567711681	Growth with high aminoadipate supplementation and formic acid treatment.
+H4	0.1430115299998931	36966.20856801177	1.549804316587081	Growth with low aminoadipate supplementation without formic acid treatment.
+H5	0.10011785917197857	5806.092912428758	0.19316222276093015	Growth with low aminoadipate supplementation and formic acid treatment.
+H6	0.0	543.742170316026	0.0	Media control
+H7	0.15871888079845148	13745.146299223083	0.6363867552558943	Growth with proline supplementation and formic acid treatment.
+H8	0.24107391667301115	51320.82761823268	2.019545986862675	Growth with proline supplementation without formic acid treatment.
+H9	0.1495262046289246	11878.168572140692	0.5001146985993327	Growth with formic acid treatment without aminoadipate supplementation.
+H10	0.15111820271485848	36225.96220896998	1.5456224524046795	Growth with low aminoadipate supplementation without formic acid treatment.
+H11	0.0	325.0398052237152	0.0	Media control
+H12	0.12523238400280373	13783.719009130846	0.49204595203040224	Growth with high aminoadipate supplementation without formic acid treatment.

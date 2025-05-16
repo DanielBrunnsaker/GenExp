@@ -124,8 +124,8 @@ def perform_pqn_normalization(
         
         print(f"{len(bad_feats)} features have >50% zeros or NaNs in QC:")
         for feat in bad_feats:
-            print("  –", feat)
-        
+            print("  –", feat)        
+    
         # 2) Check minimum number of QCs after filtering
         if qc_data.shape[0] >= min_qc_fraction*len(sample_labels):
             # Compute per-feature CV in the cleaned QC block
@@ -158,7 +158,10 @@ def perform_pqn_normalization(
 
     #    Per-sample scaling factor is the median of those quotients
     scaling_factors = np.nanmedian(quotients, axis=1)
-    scaling_factors = np.where(np.isnan(scaling_factors), 1.0, scaling_factors)
+    scaling_factors = np.where(np.isnan(scaling_factors), 1.0, scaling_factors) # in case of missing values, should not happen though
+
+    # 
+    scaling_factors.to_csv('')
 
     #    Normalize data
     norm_data = data_arr / scaling_factors[:, np.newaxis]
@@ -170,6 +173,81 @@ def perform_pqn_normalization(
 
     return norm_data_filtered, valid_mask
 
+def perform_pqn_normalization(
+    data,
+    sample_labels,
+    use_qc_reference: bool = True,
+    qc_cv_threshold: float = 0.6,
+    min_qc_fraction: float = 0.3
+):
+    """
+    Perform PQN normalization with DataFrame outputs, using QC samples as reference if available.
+
+    Returns a normalized DataFrame of biological samples and a boolean mask.
+    """
+    import numpy as np
+    import pandas as pd
+
+    # Ensure inputs are pandas objects
+    df = data.copy()
+    labels = pd.Series(sample_labels, index=df.index)
+
+    # Masks
+    qc_mask = labels.eq("QC")
+    bio_mask = ~labels.isin(["QC", "Blank"])
+
+    # Reference computation
+    if use_qc_reference and qc_mask.any():
+        qc_df = df.loc[qc_mask]
+        total_int = qc_df.sum(axis=1)
+        med = total_int.median()
+        mad = (total_int - med).abs().median() or 1e-9
+        good_qc = qc_df.loc[((total_int - med).abs() / mad) < 3]
+
+        # Identify bad features
+        frac_bad = ((good_qc == 0) | good_qc.isna()).mean()
+        bad_feats = frac_bad[frac_bad > 0.5].index.tolist()
+        print(f"{len(bad_feats)} features have >50% zeros or NaNs in QC:")
+        for feat in bad_feats:
+            print("  –", feat)
+
+        # Filter features
+        keep = frac_bad.le(0.5)
+        df = df.loc[:, keep]
+        good_qc = good_qc.loc[:, keep]
+
+        # QC quality check
+        if len(good_qc) >= min_qc_fraction * len(df):
+            cv = good_qc.std() / (good_qc.mean() + 1e-9)
+            median_cv = cv.median()
+            print(f"QC median CV: {median_cv:.3f}")
+            if median_cv < qc_cv_threshold:
+                print("QC quality-check passed. Using QC reference.")
+                ref = good_qc.median()
+            else:
+                print("QC CV too high. Using biological reference.")
+                ref = df.loc[bio_mask].median()
+        else:
+            print("Too few QCs. Using biological reference.")
+            ref = df.loc[bio_mask].median()
+    else:
+        print("Using biological reference.")
+        df = df.loc[bio_mask]
+        ref = df.median()
+
+    # Protect ref
+    ref = ref.replace({0: np.nan}).fillna(1.0)
+
+    # PQN normalization
+    quotients = df.div(ref, axis=1)
+    scaling = quotients.median(axis=1).replace({0: np.nan}).fillna(1.0)
+    norm_df = df.div(scaling, axis=0)
+
+    # Final biological subset and mask
+    final_df = norm_df.loc[bio_mask]
+    valid_mask = bio_mask
+
+    return final_df, valid_mask
 
 
 def apply_blank_threshold(df, sample_labels, N=3, sn_ratio = 1, remove_by_feature=False):
@@ -307,7 +385,7 @@ def get_wells_below_threshold(filepath, threshold=0.600):
                 # 1. The well's row is not 1000.
                 # 2. The timing value exists and is below the threshold.
                 row_num, col_num = current_well
-                if row_num != 1000 and t_value is not None and t_value < threshold:
+                if row_num != 1000 and t_value is not None and t_value <= threshold:
                     well_letter = row_map.get(row_num, f'Row{row_num}')
                     well_name = f"{well_letter}{col_num}"
                     wells_below.append(well_name)
@@ -326,7 +404,7 @@ def do_rf_imputation(df):
     numeric_cols = imputed.select_dtypes(include=[np.number]).columns
     
     imputer = IterativeImputer(
-        estimator=RandomForestRegressor(n_estimators=100, random_state=0),
+        estimator=RandomForestRegressor(n_estimators=100, random_state=42),
         max_iter=10,
         initial_strategy="mean",
         imputation_order="ascending",
@@ -402,6 +480,16 @@ def global_preprocess(merged_df, params):
 
     # Drop columns that are entirely NaN
     merged_df = merged_df.dropna(axis=1, how='all')
+    
+    # 1) Subset to QC rows
+    qc_df = merged_df[merged_df['Experimental group'] == 'QC']
+    frac_bad = qc_df[qc_df.replace(0, np.nan).select_dtypes(include=[np.number]).columns].isna().mean()
+    cols_to_drop = frac_bad[frac_bad > 0.4].index.tolist()
+    
+    print(f'Following columns dropped due to low presence in QCs: \n {cols_to_drop}')
+    
+    merged_df = merged_df.drop(columns=cols_to_drop)
+
 
     # Extract numeric features and sample labels
     drop_cols = ["Experimental group", "ReplicateName",'Total Ion Current Area']
@@ -441,7 +529,7 @@ def global_preprocess(merged_df, params):
                                                   sample_labels)
     
     # 4.5) # Merge the metabolites which we cant reliably separate?
-    reduced_features = merge_columns_by_value_agreement(reduced_features, match_thresh = 0.5)
+    reduced_features = merge_columns_by_value_agreement(reduced_features, match_thresh = 2/3)
 
     # 4.75) Remove samples with more than % missing
     initial_rows = reduced_features.shape[0]
@@ -489,6 +577,9 @@ def assign_exp_group(row):
 
 def main_method(exp_folder):
     
+    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/glutamine_202504251440' # glutamine_acetate
+    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/lysine_202504291748' # lysine sucrose
+    # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/aminoadipate_202504291411' # aminoadipate
     # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756' # FA
     # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503131539' # Caffeine
     # exp_folder = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202501281618' # Spermine
@@ -500,6 +591,9 @@ def main_method(exp_folder):
         '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503131539',
         '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503141655',
         '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/proline_202503051407',
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/glutamine_202504251440', # glutamine_acetate
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/lysine_202504291748', # lysine sucrose
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/aminoadipate_202504291411' # aminoadipate
     ]
     for exp_folder in exp_paths:
     
@@ -510,9 +604,9 @@ def main_method(exp_folder):
             'min_qc': 5, # Just to make sure we have enough QCs to actually do PQN
             'n_blanks': 6, # N closest blanks in the runorder, used to do the blank-filtering
             'use_qc_reference': True, # For PQN. If true, uses the QC spectras as ther reference (if qc passes quality checks), else it uses median spectra
-            'pca_num_pcs': 5, # How many PCA dimensions to use for outlier removal
+            'pca_num_pcs': 3, # How many PCA dimensions to use for outlier removal
             'pca_threshold': 0.95, # T2 threshold for outlier removal
-            'res_threshold': 0.99, # threshold for unexplained residual removal
+            'res_threshold': 0.95, # threshold for unexplained residual removal
             'missing_threshold': 1/3, # inverse of the one above, dummy
             'qc_cv_threshold': 0.7, # maximum acceptable median CV among QCs for PQN
             'min_qc_fraction': 0.2, # minimum number of QC samples required for PQN
@@ -583,7 +677,8 @@ def main_method(exp_folder):
         #imputed_df = do_knn_imputation(final_processed_df)
         imputed_df = do_rf_imputation(final_processed_df)
         imputed_df.set_index('ReplicateName').to_csv(EXPERIMENT_DIR / 'results/metabolomics/processed/ms_output_imputed.tsv', sep='\t')
-    
+        
+        print(imputed_df.shape)
 
 if __name__ == '__main__':
     

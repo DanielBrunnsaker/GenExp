@@ -1,0 +1,70 @@
+	mu	AUC	MaxOD	Summary
+A2	0.0	604.9151543839383	0.0	Media control
+A3	0.24029378557930284	47248.227354425515	1.997482349935265	Growth with low histidine supplementation, no zinc dichloride.
+A4	0.05510462765882533	5697.458600887665	0.118156636808802	Growth with high histidine supplementation, no zinc dichloride.
+A5	0.1182671284225528	7093.837898298314	0.17288699029252702	Growth with high histidine supplementation and zinc dichloride treatment.
+A7	0.1303478295050236	2714.337736174902	0.07837390065644649	Growth with high histidine supplementation and zinc dichloride treatment.
+A8	0.23777289649183542	41411.718481698656	1.9250994966875368	Baseline growth without any supplementation or treatment.
+A9	0.15659223289422192	3299.818535465151	0.08540183345616967	Growth with high histidine supplementation and zinc dichloride treatment.
+A10	0.0	609.1623189381526	0.0	Media control
+A12	0.23204294998885464	32517.60441016283	1.6014906329138263	Growth with zinc dichloride treatment, no histidine supplementation.
+B1	0.22596855732063637	7909.211437855095	0.1853588003258208	Growth with high histidine supplementation, no zinc dichloride.
+B3	0.24847436642438292	60610.90175250492	2.3468750910200145	Growth with valine supplementation, no zinc dichloride.
+B4	0.18471296951741903	7142.84509443528	0.20753355258982734	Growth with high histidine supplementation and zinc dichloride treatment.
+B5	0.0	725.2103648848208	0.0	Media control
+B6	0.2674431445226627	36709.201063031185	1.7919813809185539	Growth with valine supplementation and zinc dichloride treatment.
+B7	0.0	668.3799999999999	0.0	Media control
+B8	0.10263673431568315	5411.7122111348035	0.15137780915982685	Growth with high histidine supplementation, no zinc dichloride.
+B11	0.2412508172265092	40611.52067474937	1.839303379812819	Growth with valine supplementation, no zinc dichloride.
+B12	0.22917265453748067	48571.461236135394	1.9925919677426969	Baseline growth without any supplementation or treatment.
+C1	0.2481672966663933	55416.5984941863	2.2825999999998894	Growth with low histidine supplementation, no zinc dichloride.
+C2	1.1341467895387358	3773.7976043587605	0.09985198150404945	Growth with high histidine supplementation and zinc dichloride treatment.
+C3	0.23441840822918794	40040.57484895086	1.859341428118649	Baseline growth without any supplementation or treatment.
+C4	0.0	660.0150982807578	0.0	Media control
+C5	0.26355312457748886	44670.1461631601	2.004569472720798	Growth with valine supplementation, no zinc dichloride.
+C6	0.250160918885754	42127.3733749242	1.9462849954673207	Growth with zinc dichloride treatment, no histidine supplementation.
+C7	0.18049183617533957	5547.993934716645	0.15797599601333476	Growth with high histidine supplementation, no zinc dichloride.
+C9	0.23053823295747317	23473.68977987251	1.342924867749057	Growth with zinc dichloride treatment, no histidine supplementation.
+C11	0.24052294219837714	44256.17362252733	1.8826666666666376	Growth with low histidine supplementation and zinc dichloride treatment.
+C12	0.2335411633224688	51181.54621379395	2.1226248194749706	Growth with valine supplementation and zinc dichloride treatment.
+D3	0.0	571.6191156696543	0.0	Media control
+D4	0.24489451409123084	59275.09223506246	2.3387666666666664	Baseline growth without any supplementation or treatment.
+D6	0.372827919996565	4556.09948159746	0.1416229782213722	Growth with high histidine supplementation and zinc dichloride treatment.
+D7	0.22835937298174594	46295.062709476966	1.9555172700177188	Growth with low histidine supplementation, no zinc dichloride.
+D8	0.2303335177211214	34213.61043423239	1.6808333333333334	Growth with low histidine supplementation and zinc dichloride treatment.
+D9	0.06572992316898878	6054.389131914132	0.1472393179201819	Growth with high histidine supplementation, no zinc dichloride.
+D10	0.24794349027988558	45558.24287415946	1.9689666666666659	Growth with valine supplementation, no zinc dichloride.
+D11	0.0	506.9703756073168	0.0	Media control
+D12	0.23449768066802593	33943.10209463367	1.71712614111315	Growth with low histidine supplementation and zinc dichloride treatment.
+E1	0.22420800737231267	20136.56727765954	0.7587144544681067	Growth with low histidine supplementation and zinc dichloride treatment.
+E2	0.0	406.97598224615984	0.0	Media control
+E3	0.19326389712704434	7432.159781371733	0.19440866032748277	Growth with high histidine supplementation, no zinc dichloride.
+E6	0.2262025713831205	58771.32832891458	2.2538919629418794	Baseline growth without any supplementation or treatment.
+E7	0.22830303280084077	33030.797665738006	1.6247	Growth with zinc dichloride treatment, no histidine supplementation.
+E8	0.25351967690615673	56097.5182728618	2.3277965785148917	Growth with valine supplementation, no zinc dichloride.
+E9	0.2900153118636771	48396.50021355238	2.106599252994226	Growth with low histidine supplementation and zinc dichloride treatment.
+E10	0.15995913833016734	3749.5368812201937	0.10018808282970466	Growth with high histidine supplementation and zinc dichloride treatment.
+E11	0.25201795448725495	56447.40489429045	2.2479999999999962	Growth with low histidine supplementation, no zinc dichloride.
+F3	0.23953608589522693	39073.24213718365	1.8432081966876719	Growth with valine supplementation and zinc dichloride treatment.
+F4	0.0	708.5999999999999	0.0	Media control
+F5	0.21976741500304942	54198.978568461156	2.1074027954162085	Growth with low histidine supplementation, no zinc dichloride.
+F8	0.22723556794706912	40993.00427529893	1.8711505235916728	Growth with zinc dichloride treatment, no histidine supplementation.
+F9	0.0	640.4770258526152	0.0	Media control
+F10	0.2446169520107692	33987.21111140865	1.6990409358448297	Growth with low histidine supplementation and zinc dichloride treatment.
+F12	0.1713812782096518	3339.891343443499	0.09323730613609439	Growth with high histidine supplementation and zinc dichloride treatment.
+G1	0.0	1485.0183270829052	0.0	Media control
+G2	0.22387818395149037	47342.537638753995	2.0223722291679422	Baseline growth without any supplementation or treatment.
+G3	0.23396821187394334	38641.5398833386	1.8193084640467645	Growth with zinc dichloride treatment, no histidine supplementation.
+G4	0.22938497472206254	36213.47896934425	1.76180695950899	Growth with valine supplementation and zinc dichloride treatment.
+G5	0.12756696118041913	6647.849284350188	0.15627916566746014	Growth with high histidine supplementation, no zinc dichloride.
+G7	0.2352770258010751	54521.62011672989	2.0696000000026054	Growth with low histidine supplementation and zinc dichloride treatment.
+G8	0.2509731135743309	28564.751603635785	0.8686666666666666	Growth with valine supplementation and zinc dichloride treatment.
+G9	0.32145035696141144	23380.699963866926	0.9753666666666666	Growth with valine supplementation and zinc dichloride treatment.
+G10	0.0	676.8	0.0	Media control
+H1	0.2320566459126317	61755.41034504808	2.499929431194615	Baseline growth without any supplementation or treatment.
+H2	0.23985664282930508	64131.444960684115	2.459166048656752	Growth with low histidine supplementation, no zinc dichloride.
+H5	0.21717785910996434	45255.20972319586	1.900516128510592	Growth with zinc dichloride treatment, no histidine supplementation.
+H7	0.24464406750018727	30201.384874029896	1.5860333333333334	Growth with valine supplementation and zinc dichloride treatment.
+H9	0.24815350916009224	45151.02363438879	2.0282666666666658	Growth with valine supplementation, no zinc dichloride.
+H10	0.24524772562925015	58969.052258523145	2.2378169413764524	Growth with low histidine supplementation, no zinc dichloride.
+H11	0.0	573.9830330342327	0.0	Media control

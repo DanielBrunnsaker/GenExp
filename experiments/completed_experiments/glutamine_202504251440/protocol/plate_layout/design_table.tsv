@@ -1,0 +1,97 @@
+	Well	Summary	Treatment	Supplement
+0	A1	No glutamine supplementation with acetic acid treatment.	Yes	None
+1	A10	Media control	None	None
+2	A11	Leucine supplementation with acetic acid treatment.	Yes	NegHigh
+3	A12	Low glutamine supplementation with acetic acid treatment.	Yes	PosLow
+4	A2	Media control	None	None
+5	A3	Low glutamine supplementation without acetic acid treatment.	None	PosLow
+6	A4	High glutamine supplementation without acetic acid treatment.	None	PosHigh
+7	A5	Leucine supplementation without acetic acid treatment.	None	NegHigh
+8	A6	High glutamine supplementation with acetic acid treatment.	Yes	PosHigh
+9	A7	Leucine supplementation without acetic acid treatment.	None	NegHigh
+10	A8	Baseline condition with no supplementation or treatment.	None	None
+11	A9	Leucine supplementation without acetic acid treatment.	None	NegHigh
+12	B1	High glutamine supplementation without acetic acid treatment.	None	PosHigh
+13	B10	Low glutamine supplementation with acetic acid treatment.	Yes	PosLow
+14	B11	No glutamine supplementation with acetic acid treatment.	Yes	None
+15	B12	Baseline condition with no supplementation or treatment.	None	None
+16	B2	High glutamine supplementation with acetic acid treatment.	Yes	PosHigh
+17	B3	No glutamine supplementation with acetic acid treatment.	Yes	None
+18	B4	Leucine supplementation without acetic acid treatment.	None	NegHigh
+19	B5	Media control	None	None
+20	B6	Leucine supplementation with acetic acid treatment.	Yes	NegHigh
+21	B7	Media control	None	None
+22	B8	High glutamine supplementation without acetic acid treatment.	None	PosHigh
+23	B9	Low glutamine supplementation without acetic acid treatment.	None	PosLow
+24	C1	Low glutamine supplementation without acetic acid treatment.	None	PosLow
+25	C10	High glutamine supplementation without acetic acid treatment.	None	PosHigh
+26	C11	High glutamine supplementation with acetic acid treatment.	Yes	PosHigh
+27	C12	Leucine supplementation with acetic acid treatment.	Yes	NegHigh
+28	C2	Leucine supplementation without acetic acid treatment.	None	NegHigh
+29	C3	Baseline condition with no supplementation or treatment.	None	None
+30	C4	Media control	None	None
+31	C5	No glutamine supplementation with acetic acid treatment.	Yes	None
+32	C6	Low glutamine supplementation with acetic acid treatment.	Yes	PosLow
+33	C7	High glutamine supplementation without acetic acid treatment.	None	PosHigh
+34	C8	Media control	None	None
+35	C9	Low glutamine supplementation with acetic acid treatment.	Yes	PosLow
+36	D1	Leucine supplementation with acetic acid treatment.	Yes	NegHigh
+37	D10	No glutamine supplementation with acetic acid treatment.	Yes	None
+38	D11	Media control	None	None
+39	D12	High glutamine supplementation with acetic acid treatment.	Yes	PosHigh
+40	D2	Low glutamine supplementation with acetic acid treatment.	Yes	PosLow
+41	D3	Media control	None	None
+42	D4	Baseline condition with no supplementation or treatment.	None	None
+43	D5	Baseline condition with no supplementation or treatment.	None	None
+44	D6	Leucine supplementation without acetic acid treatment.	None	NegHigh
+45	D7	Low glutamine supplementation without acetic acid treatment.	None	PosLow
+46	D8	High glutamine supplementation with acetic acid treatment.	Yes	PosHigh
+47	D9	High glutamine supplementation without acetic acid treatment.	None	PosHigh
+48	E1	High glutamine supplementation with acetic acid treatment.	Yes	PosHigh
+49	E10	Leucine supplementation without acetic acid treatment.	None	NegHigh
+50	E11	Low glutamine supplementation without acetic acid treatment.	None	PosLow
+51	E12	Media control	None	None
+52	E2	Media control	None	None
+53	E3	High glutamine supplementation without acetic acid treatment.	None	PosHigh
+54	E4	No glutamine supplementation with acetic acid treatment.	Yes	None
+55	E5	Leucine supplementation with acetic acid treatment.	Yes	NegHigh
+56	E6	Baseline condition with no supplementation or treatment.	None	None
+57	E7	Low glutamine supplementation with acetic acid treatment.	Yes	PosLow
+58	E8	No glutamine supplementation with acetic acid treatment.	Yes	None
+59	E9	High glutamine supplementation with acetic acid treatment.	Yes	PosHigh
+60	F1	Low glutamine supplementation with acetic acid treatment.	Yes	PosLow
+61	F10	High glutamine supplementation with acetic acid treatment.	Yes	PosHigh
+62	F11	Baseline condition with no supplementation or treatment.	None	None
+63	F12	Leucine supplementation without acetic acid treatment.	None	NegHigh
+64	F2	High glutamine supplementation without acetic acid treatment.	None	PosHigh
+65	F3	Leucine supplementation with acetic acid treatment.	Yes	NegHigh
+66	F4	Media control	None	None
+67	F5	Low glutamine supplementation without acetic acid treatment.	None	PosLow
+68	F6	No glutamine supplementation with acetic acid treatment.	Yes	None
+69	F7	Baseline condition with no supplementation or treatment.	None	None
+70	F8	Low glutamine supplementation with acetic acid treatment.	Yes	PosLow
+71	F9	Media control	None	None
+72	G1	Media control	None	None
+73	G10	Media control	None	None
+74	G11	Leucine supplementation without acetic acid treatment.	None	NegHigh
+75	G12	No glutamine supplementation with acetic acid treatment.	Yes	None
+76	G2	Baseline condition with no supplementation or treatment.	None	None
+77	G3	Low glutamine supplementation with acetic acid treatment.	Yes	PosLow
+78	G4	Leucine supplementation with acetic acid treatment.	Yes	NegHigh
+79	G5	High glutamine supplementation without acetic acid treatment.	None	PosHigh
+80	G6	Low glutamine supplementation without acetic acid treatment.	None	PosLow
+81	G7	High glutamine supplementation with acetic acid treatment.	Yes	PosHigh
+82	G8	Leucine supplementation with acetic acid treatment.	Yes	NegHigh
+83	G9	Leucine supplementation with acetic acid treatment.	Yes	NegHigh
+84	H1	Baseline condition with no supplementation or treatment.	None	None
+85	H10	Low glutamine supplementation without acetic acid treatment.	None	PosLow
+86	H11	Media control	None	None
+87	H12	High glutamine supplementation without acetic acid treatment.	None	PosHigh
+88	H2	Low glutamine supplementation without acetic acid treatment.	None	PosLow
+89	H3	High glutamine supplementation with acetic acid treatment.	Yes	PosHigh
+90	H4	Low glutamine supplementation without acetic acid treatment.	None	PosLow
+91	H5	Low glutamine supplementation with acetic acid treatment.	Yes	PosLow
+92	H6	Media control	None	None
+93	H7	Leucine supplementation with acetic acid treatment.	Yes	NegHigh
+94	H8	Leucine supplementation without acetic acid treatment.	None	NegHigh
+95	H9	No glutamine supplementation with acetic acid treatment.	Yes	None

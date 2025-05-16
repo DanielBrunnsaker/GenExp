@@ -1,0 +1,9 @@
+class,mean_f1,std_f1
+Baseline growth without any supplementation or treatment.,0.5374603174603174,0.20163261977534222
+Growth with formic acid treatment without aminoadipate supplementation.,0.6310714285714287,0.2502170856020806
+Growth with high aminoadipate supplementation and formic acid treatment.,0.2107936507936508,0.2584076283578912
+Growth with high aminoadipate supplementation without formic acid treatment.,0.5666666666666667,0.3838859479749572
+Growth with low aminoadipate supplementation and formic acid treatment.,0.738109668109668,0.13055291389455842
+Growth with low aminoadipate supplementation without formic acid treatment.,0.8466666666666665,0.2476556749467562
+Growth with proline supplementation and formic acid treatment.,0.73494227994228,0.1796611783160338
+Growth with proline supplementation without formic acid treatment.,0.21357142857142858,0.2570466495973458

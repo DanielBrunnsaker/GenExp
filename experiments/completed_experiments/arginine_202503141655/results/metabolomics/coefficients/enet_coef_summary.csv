@@ -1,48 +1,47 @@
-,Mean_Coefficient,Std_Coefficient
-2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]],-144.07948989369828,249.552996824492
-2'-Deoxyguanosine-5'-Monophosphate [[M+H]],0.0,0.0
-2'-Deoxyuridine [[M+Na]],0.0,0.0
-5'-Deoxy-5'-Methylthioadenosine [[M+H]],-0.017737464080273563,0.030722188984461773
-ATP [[M+H]],0.0,0.0
-Acetyl coenzyme A (Acetyl-CoA) [[M+H]],-19.017575773686097,32.93940747681532
-Ademetionine [[M+H]],0.0,0.0
-Adenine [[M+H]],0.0,0.0
-Adenosine phosphate [[M+H]],-106.03440137204588,183.65697052653454
-Adenosine-3'-5'-Diphosphate [[M+H]],0.0,0.0
-Alpha-D-Glucose [[M+Na]]/D-Glucose [[M+Na]],0.0,0.0
-Aminoadipate [[M+Na]],0.0,0.0
-Argininosuccinic acid [[M+H]],-34.88728188241938,59.95862370304694
-Biotin [[M+H]],0.0,0.0
-Choline [[M+H]],0.0,0.0
-Cytidine [[M+H]],0.0,0.0
-D-(+)-Melibiose [[M+Na]]/D-(+)-Turanose [[M+Na]]/Isomaltose [[M+Na]]/Palatinose [[M+Na]],0.0,0.0
-D-Fructose [[M+Na]]/D-Galactose [[M+Na]]/Galactose [[M+Na]],0.0,0.0
-D-Mannose [[M+Na]],0.0,0.0
-Flavin adenine dinucleotide [[M+H]],0.0,0.0
-Glucosamine 6-Phosphate [[M+H]],0.0,0.0
-Glucosamine [[M+H]],0.0,0.0
-Glutamic Acid [[M-H2O+H]],0.0,0.0
-Glutathione [[M+H]],0.0,0.0
-Histidine [[M+H]],0.0,0.0
-Imidazoleacetic acid [[M+H]],0.0,0.0
-Inositol [[M+Na]],69.47192938819467,120.32891140019059
-L-Arginine [[M+H]],-27.62681065754531,47.85103970995382
-L-Citrulline [[M+H]],0.0,0.0
-L-Glutamine [[M+H]],405.8456837127655,702.9453442230385
-L-Threonine [[M+NH4]],0.0,0.0
-L-Tryptophan [[M-H2O+H]],-157.53205688020398,272.8535263373436
-L-Valine [[M+H]],0.0,0.0
-Linoleic acid [[M+Na]],-157.22564000425118,272.3227967398969
-Maltose [[M+Na]],0.0,0.0
-N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]],0.0,0.0
-N1-Acetylspermine [[M+Na]],-225.59115369821689,390.7353399433913
-N2-Acetyl-L-ornithine [[M+H]],0.0,0.0
-Nicotinamide [[M+H]],0.0,0.0
-Pidolic Acid [[M+H]],0.0,0.0
-Spermidine [[M+H]],0.0,0.0
-Sucrose [[M+Na]],0.0,0.0
-Thymine [[M+H]],0.0,0.0
-Trehalose [[M+Na]],0.0,0.0
-Xanthurenic acid [[M+H]],0.0,0.0
-d-Desthiobiotin [[M+H]],0.0,0.0
-gamma-Glutamylcysteine [[M+H]],0.0,0.0
+,Mean_Coefficient,IQR_Coefficient
+2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]],-53.97417847553347,69.22441070733147
+2'-Deoxyguanosine-5'-Monophosphate [[M+H]],-12.484564240622516,24.291041489464885
+2'-Deoxyuridine [[M+Na]],-5.82733227947796,39.65520584392447
+5'-Deoxy-5'-Methylthioadenosine [[M+H]],-1.920683668362802,52.00715006871797
+ATP [[M+H]],-12.596222928866549,31.568467013615106
+Acetyl coenzyme A (Acetyl-CoA) [[M+H]],-109.97874846690745,149.93593798385186
+Ademetionine [[M+H]],-35.539788576131265,57.865875153314526
+Adenine [[M+H]],-10.70596091903359,58.57173796854583
+Adenosine phosphate [[M+H]],-40.15631178499171,52.402512024988035
+Adenosine-3'-5'-Diphosphate [[M+H]],-49.6612806808931,63.9251524114135
+Alpha-D-Glucose [[M+Na]],21.663686297418757,56.68207775050025
+Aminoadipate [[M+Na]],-25.299798313535007,68.28283558176591
+Argininosuccinic acid [[M+H]],-44.85312080365601,61.7908444270628
+Biotin [[M+H]],-10.170137708868385,39.74391533911478
+Choline [[M+H]],1.4602097839828267,29.010841393964352
+Cytidine [[M+H]],1.5242858126223973,33.68911862217985
+D-(+)-Melibiose [[M+Na]]/Isomaltose [[M+Na]],24.16840647279423,66.6809050562879
+D-(+)-Turanose [[M+Na]],17.077457738366995,43.17807984205211
+D-Fructose [[M+Na]]/D-Galactose [[M+Na]]/Galactose [[M+Na]],64.81669833774465,95.87298751834928
+D-Glucose [[M+Na]],20.992414369298526,54.646430563376676
+D-Mannose [[M+Na]],50.59868334847785,92.68150908980115
+Glucosamine [[M+H]],-40.65107587298223,79.61333442791641
+Glutamic Acid [[M-H2O+H]],-13.626129343110804,31.614020983451628
+Glutathione [[M+H]],-70.71307625164535,100.02751089738496
+Histidine [[M+H]],-3.0300591826019763,34.79197986526253
+Imidazoleacetic acid [[M+H]],-21.841106289334157,45.96130768788179
+Inositol [[M+Na]],6.697877142254593,34.91363262116445
+L-Arginine [[M+H]],-18.550367469002644,31.303014168033688
+L-Citrulline [[M+H]],-22.735123880862634,40.25317161123937
+L-Glutamine [[M+H]],80.68639944166958,122.47325697645223
+L-Threonine [[M+NH4]],-26.39078956836071,60.9848864421122
+L-Tryptophan [[M-H2O+H]],-54.0232117527887,103.24622862101597
+L-Valine [[M+H]],37.371831172589296,66.5421169381358
+Maltose [[M+Na]],26.13181617099832,47.04040054646008
+N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]],39.1055327111775,63.4506053478144
+N1-Acetylspermine [[M+Na]],-73.50604965053094,106.19559797954923
+N2-Acetyl-L-ornithine [[M+H]],-23.03907433301429,40.864482547067
+Nicotinamide [[M+H]],-45.41644713583655,79.48524396028732
+Palatinose [[M+Na]],21.935271677745092,38.573917433863485
+Pidolic Acid [[M+H]],-17.952518648671454,29.61727379557164
+Sucrose [[M+Na]],23.795473405415077,43.80289076521875
+Thymine [[M+H]],-61.40415928012688,87.20534979891336
+Trehalose [[M+Na]],29.44044866407537,48.168620247904855
+Xanthurenic acid [[M+H]],6.647274357278549,55.139239739984866
+d-Desthiobiotin [[M+H]],34.04335650040169,93.48543438008554
+gamma-Glutamylcysteine [[M+H]],12.738245772065008,41.10534731684844

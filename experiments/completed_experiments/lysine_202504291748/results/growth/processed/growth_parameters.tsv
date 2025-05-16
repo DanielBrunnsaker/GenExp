@@ -1,0 +1,81 @@
+	mu	AUC	MaxOD	Summary
+A1	0.24249843569757817	42158.19949879069	1.9846259711395844	Growth with valine supplementation without hyperosmotic stress.
+A3	0.24506405349432384	45500.16688661969	2.04353029034969	Growth with physiological lysine supplementation without hyperosmotic stress.
+A4	0.259122923341453	16425.288852857873	1.0720098944779037	Growth with supraphysiological lysine supplementation without hyperosmotic stress.
+A6	0.22913301895493401	12044.364293713686	0.7529545293595898	Growth with physiological lysine supplementation under hyperosmotic stress.
+A7	0.2308591940111296	7108.771894910719	0.4609658731152282	Growth with supraphysiological lysine supplementation under hyperosmotic stress.
+A8	0.2445942856115917	45477.88891737472	2.0028024652771266	Baseline growth without any supplementation or hyperosmotic stress.
+A9	0.24665969700887402	8213.485364073154	0.5759654527111056	Growth with supraphysiological lysine supplementation under hyperosmotic stress.
+A10	0.0	1305.3123618884022	0.0	Media control
+A11	0.29353137165137655	7580.534761302192	0.4209012799022934	Growth with valine supplementation under hyperosmotic stress.
+A12	0.24878582221332887	5783.420559250208	0.3905304239131289	Growth under hyperosmotic stress without any supplementation.
+B1	0.35685282065678176	27849.581677982704	1.3159929636468375	Growth with supraphysiological lysine supplementation without hyperosmotic stress.
+B2	0.215213153836753	12147.314503993926	0.7425019327197486	Growth with physiological lysine supplementation under hyperosmotic stress.
+B3	0.2569945798222288	47791.40085686864	2.067784713995822	Growth with valine supplementation without hyperosmotic stress.
+B4	0.3087584781242249	7370.50103901229	0.6035054673735059	Growth with supraphysiological lysine supplementation under hyperosmotic stress.
+B5	0.0	595.7142253887499	0.0	Media control
+B8	0.2486112319599269	20340.786922463703	1.2916031596014057	Growth with supraphysiological lysine supplementation without hyperosmotic stress.
+B9	0.2454634438054694	46624.16486704786	2.0114023888614243	Growth with physiological lysine supplementation without hyperosmotic stress.
+B10	0.22918909802715362	8116.245252830373	0.5045861242812665	Growth under hyperosmotic stress without any supplementation.
+B11	0.24528582161749954	36713.98966699105	1.8252758639751414	Growth with valine supplementation without hyperosmotic stress.
+B12	0.23650491465037904	36112.25015114543	1.8037849476887053	Baseline growth without any supplementation or hyperosmotic stress.
+C1	0.2974555179488142	58239.92766135502	2.1507568011862634	Growth with physiological lysine supplementation without hyperosmotic stress.
+C3	0.24397824134619883	48207.894160484735	2.008481532498313	Baseline growth without any supplementation or hyperosmotic stress.
+C4	0.0	469.95680872960975	0.0	Media control
+C5	0.2597051121046079	52964.01972644696	2.100518700966472	Growth with valine supplementation without hyperosmotic stress.
+C6	0.225624276372278	7742.830015624769	0.4928904471475275	Growth under hyperosmotic stress without any supplementation.
+C7	0.2342205344996621	22546.742670693817	1.3986777437673363	Growth with supraphysiological lysine supplementation without hyperosmotic stress.
+C8	0.0	720.0000000000001	0.0	Media control
+C10	0.2532545451596611	32744.087834496433	1.7514322050603213	Growth with supraphysiological lysine supplementation without hyperosmotic stress.
+C11	0.2792291222864191	9682.1092301992	0.568050501458496	Growth with physiological lysine supplementation under hyperosmotic stress.
+C12	0.34461955716311155	9877.991864980002	0.5860894791279241	Growth with valine supplementation under hyperosmotic stress.
+D3	0.0	708.3200000000003	0.0	Media control
+D5	0.24174169420222041	43338.790601227935	2.0265056324226505	Baseline growth without any supplementation or hyperosmotic stress.
+D7	0.25258094038123025	47859.22709576919	2.0421343243216636	Growth with physiological lysine supplementation without hyperosmotic stress.
+D8	0.21309130949776153	5561.302515729346	0.32359893424903313	Growth with physiological lysine supplementation under hyperosmotic stress.
+D10	0.2376651342209963	50473.393360006135	2.1815244760941677	Growth with valine supplementation without hyperosmotic stress.
+D11	0.0	719.9999999999992	0.0	Media control
+E1	0.24401393265109877	9031.691174112522	0.6073247710074806	Growth with physiological lysine supplementation under hyperosmotic stress.
+E2	0.0	1077.4992239552257	0.0	Media control
+E3	0.2652486704875019	19281.17201958083	1.3339583108717488	Growth with supraphysiological lysine supplementation without hyperosmotic stress.
+E6	0.23793888397133023	44627.59596970686	1.9277379245132953	Baseline growth without any supplementation or hyperosmotic stress.
+E7	0.19852597442220363	7955.000780583457	0.46052995641836436	Growth under hyperosmotic stress without any supplementation.
+E8	0.24683021439379096	63684.269937027	2.342206230369886	Growth with valine supplementation without hyperosmotic stress.
+E9	0.2569633163648238	10021.88533774879	0.6963118758504638	Growth with physiological lysine supplementation under hyperosmotic stress.
+E10	0.2400230950816306	8232.284022978358	0.5498931719992383	Growth with supraphysiological lysine supplementation under hyperosmotic stress.
+E11	0.2250270554213045	57318.9979885744	2.2215596511125604	Growth with physiological lysine supplementation without hyperosmotic stress.
+E12	0.0	719.9999999999997	0.0	Media control
+F1	0.2711024347863545	6572.1906967089735	0.4743907503549257	Growth under hyperosmotic stress without any supplementation.
+F2	0.2516287309317471	31856.832177830478	1.8173382595867944	Growth with supraphysiological lysine supplementation without hyperosmotic stress.
+F3	0.2121051178001505	11870.243315112157	0.711743129038683	Growth with valine supplementation under hyperosmotic stress.
+F4	0.0	719.9999999999994	0.0	Media control
+F5	0.24574022181594973	74150.61469727158	2.4278287288384863	Growth with physiological lysine supplementation without hyperosmotic stress.
+F6	0.2504402504997092	60674.00966980833	2.426658190812893	Growth with valine supplementation without hyperosmotic stress.
+F7	0.2306166884884735	54618.08938569279	2.160255196778995	Baseline growth without any supplementation or hyperosmotic stress.
+F8	0.21190349377955864	8073.403794869015	0.48628337350652273	Growth under hyperosmotic stress without any supplementation.
+F9	0.0	938.9138670056496	0.0	Media control
+F10	0.22747891491214747	8151.67654898277	0.5143030777806635	Growth with physiological lysine supplementation under hyperosmotic stress.
+F11	0.19435957779471205	46295.97142743725	2.019762313811088	Baseline growth without any supplementation or hyperosmotic stress.
+F12	0.20761776201715143	8402.710808738399	0.5107791341286976	Growth with supraphysiological lysine supplementation under hyperosmotic stress.
+G1	0.0	630.597930247452	0.0	Media control
+G3	0.22993379823721607	6325.929725723621	0.4145915437359648	Growth under hyperosmotic stress without any supplementation.
+G4	0.2473744600838332	11329.29015659795	0.7816492324437357	Growth with valine supplementation under hyperosmotic stress.
+G5	0.23972775119403544	26671.62541174993	1.5522895108125405	Growth with supraphysiological lysine supplementation without hyperosmotic stress.
+G6	0.2603461325669468	55496.003034147696	2.231102783321343	Growth with physiological lysine supplementation without hyperosmotic stress.
+G7	0.21682680123541026	8290.431668815083	0.509807005031811	Growth with physiological lysine supplementation under hyperosmotic stress.
+G8	0.22964578483282755	7710.722195966193	0.4917696638886917	Growth with valine supplementation under hyperosmotic stress.
+G9	0.39341020300639806	8614.478725013045	0.6288500000000001	Growth with valine supplementation under hyperosmotic stress.
+G11	0.5147466458107595	8573.773744944745	0.6196562886073552	Growth with supraphysiological lysine supplementation under hyperosmotic stress.
+G12	0.2425760289092605	53751.53504410002	2.204801028464817	Growth with valine supplementation without hyperosmotic stress.
+H1	0.24042568902363776	47698.896228533486	2.00711330999444	Baseline growth without any supplementation or hyperosmotic stress.
+H2	0.23827212983147028	63102.72059641703	2.2688341031546173	Growth with physiological lysine supplementation without hyperosmotic stress.
+H3	0.23509958991011218	7654.00899668636	0.49606591710405934	Growth with physiological lysine supplementation under hyperosmotic stress.
+H4	0.2526622437159924	49463.307252149556	2.075163942946579	Growth with physiological lysine supplementation without hyperosmotic stress.
+H5	0.23437801879998316	6519.7126537255535	0.4215605016456613	Growth under hyperosmotic stress without any supplementation.
+H6	0.0	674.1899999999961	0.0	Media control
+H7	0.2532975644136629	7644.289454412337	0.5327472979370946	Growth with valine supplementation under hyperosmotic stress.
+H8	0.31401795527485316	7924.449199811913	0.631065282429081	Growth with supraphysiological lysine supplementation under hyperosmotic stress.
+H9	0.2501558067095091	44771.811891576195	2.024143787720785	Growth with valine supplementation without hyperosmotic stress.
+H10	0.2520463186748741	48589.341623705426	2.023989257267944	Growth with physiological lysine supplementation without hyperosmotic stress.
+H11	0.0	679.3600000000001	0.0	Media control
+H12	0.21006243342851055	22580.088953953265	1.284716111419915	Growth with supraphysiological lysine supplementation without hyperosmotic stress.
