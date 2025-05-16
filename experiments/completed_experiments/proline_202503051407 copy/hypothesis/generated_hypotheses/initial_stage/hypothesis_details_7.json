@@ -1,7 +1,0 @@
-{
-    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,calcium dichloride)",
-    "observable": "proline",
-    "qualifier": "higher",
-    "coefficient": 0.44707710201224415,
-    "initial_prompt": "13. Cells with higher levels of intracellular proline in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'decreased resistance to chemicals',B,C),compound_name(B,'calcium dichloride')"
-}

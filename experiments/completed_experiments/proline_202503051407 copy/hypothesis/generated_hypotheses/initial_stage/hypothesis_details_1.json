@@ -1,7 +1,0 @@
-{
-    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased metal resistance,B,C),compound_name(B,aluminium(3+)),condition(C,Treatment: 2.4mM aluminium sulfate)",
-    "observable": "proline",
-    "qualifier": "higher",
-    "coefficient": 0.01661320733548274,
-    "initial_prompt": "0. Cells with higher levels of intracellular proline in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'aluminium(3+)'),condition(C,'Treatment: 2.4mM aluminium sulfate')"
-}

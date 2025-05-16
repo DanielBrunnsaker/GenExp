@@ -1,7 +1,0 @@
-{
-    "logic_program": "Cell(A):-exhibits_phenotype(A,increased resistance to chemicals,B,C),compound_name(B,yttrium chloride)",
-    "observable": "proline",
-    "qualifier": "higher",
-    "coefficient": 0.1716515825238924,
-    "initial_prompt": "11. Cells with higher levels of intracellular proline in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,'yttrium chloride')"
-}
