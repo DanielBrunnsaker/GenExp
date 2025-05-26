@@ -1,9 +1,9 @@
 class,mean_f1,std_f1
-Baseline growth without any supplementation or hyperosmotic stress.,0.4419841269841269,0.23392191860517295
-Growth under hyperosmotic stress without any supplementation.,0.025,0.11180339887498947
-Growth with physiological lysine supplementation under hyperosmotic stress.,0.5716666666666667,0.2695123185378671
-Growth with physiological lysine supplementation without hyperosmotic stress.,0.44077949827949825,0.168778477377231
-Growth with supraphysiological lysine supplementation under hyperosmotic stress.,0.8373809523809526,0.1463403671012294
-Growth with supraphysiological lysine supplementation without hyperosmotic stress.,0.5063095238095239,0.3361910042453271
-Growth with valine supplementation under hyperosmotic stress.,0.6805952380952381,0.19527671694528387
-Growth with valine supplementation without hyperosmotic stress.,0.42997113997113995,0.29677094689166167
+Baseline growth without any supplementation or hyperosmotic stress.,0.5572222222222223,0.27177726812145875
+Growth under hyperosmotic stress without any supplementation.,0.10222222222222221,0.2366647779321321
+Growth with physiological lysine supplementation under hyperosmotic stress.,0.667936507936508,0.2599822958819984
+Growth with physiological lysine supplementation without hyperosmotic stress.,0.5148821548821548,0.1927146650464483
+Growth with supraphysiological lysine supplementation under hyperosmotic stress.,0.9466666666666667,0.11264836959500918
+Growth with supraphysiological lysine supplementation without hyperosmotic stress.,0.8544444444444445,0.14502829247913152
+Growth with valine supplementation under hyperosmotic stress.,0.7655555555555558,0.25043767562849206
+Growth with valine supplementation without hyperosmotic stress.,0.22222222222222224,0.3849001794597506

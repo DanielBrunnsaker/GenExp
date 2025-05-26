@@ -1,0 +1,8 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,formic acid)",
+    "observable": "proline",
+    "qualifier": "higher",
+    "coefficient": 0.004852317330391179,
+    "initial_prompt": "not applicable",
+    "motivation": "not applicable"
+}

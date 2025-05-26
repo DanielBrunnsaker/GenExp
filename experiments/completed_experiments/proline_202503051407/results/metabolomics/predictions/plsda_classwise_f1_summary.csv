@@ -1,9 +1,9 @@
 class,mean_f1,std_f1
-Baseline growth without any supplementation or treatment.,0.3761904761904762,0.22659441572943956
-Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.,0.07996031746031747,0.1462755572026549
-"Growth with 10 mM proline supplementation, no lactic acid.",0.2611926961926962,0.15103259658963583
-Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.,0.39519841269841266,0.17164395852914766
-"Growth with 20 mM alanine supplementation, no lactic acid.",0.4244119769119769,0.16985511544940116
-Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.,0.3168253968253968,0.19256660631157996
-"Growth with 20 mM proline supplementation, no lactic acid.",0.2995848595848596,0.24896028598359368
-"Growth with 50 mM (S)-lactic acid, no proline supplementation.",0.22607142857142856,0.260754451535738
+Baseline growth without any supplementation or treatment.,0.5055555555555555,0.29866668377120914
+Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.,0.09888888888888887,0.24361318081052843
+"Growth with 10 mM proline supplementation, no lactic acid.",0.07444444444444445,0.19762640037494894
+Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.,0.5356084656084655,0.17342410941594993
+"Growth with 20 mM alanine supplementation, no lactic acid.",0.4266666666666667,0.25751539030747406
+Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.,0.3478306878306878,0.29843125323224245
+"Growth with 20 mM proline supplementation, no lactic acid.",0.3687301587301588,0.2568863384307626
+"Growth with 50 mM (S)-lactic acid, no proline supplementation.",0.4355555555555555,0.3017107459169925

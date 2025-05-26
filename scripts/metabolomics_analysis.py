@@ -6,14 +6,14 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import ElasticNetCV
 from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import KFold
-from sklearn.metrics import r2_score, f1_score
+from sklearn.model_selection import KFold, RepeatedKFold, RepeatedStratifiedKFold
+from sklearn.metrics import r2_score
 from scipy.stats import mannwhitneyu
 from statsmodels.stats.multitest import multipletests
 from warnings import simplefilter
 from sklearn.exceptions import ConvergenceWarning
 from rpy2 import robjects
-from rpy2.robjects import StrVector, IntVector
+from rpy2.robjects import StrVector
 from rpy2.robjects.packages import importr
 from rpy2.robjects.conversion import localconverter
 from rpy2.robjects import pandas2ri, default_converter
@@ -196,13 +196,8 @@ def predict_plsda(plsda_mod, X_new, n_components):
     return final_preds
 
 
-def nested_cv_regression_repeated(
-    X, y,
-    inner_splits=10,
-    outer_splits=3,
-    outer_repeats=5,
-    random_state=42
-):
+def nested_cv_regression_repeated(X, y, inner_splits=10, outer_splits=3,
+                                  outer_repeats=5, random_state=42):
     
     # Set up repeated outer CV
     outer_cv = RepeatedKFold(
@@ -229,7 +224,7 @@ def nested_cv_regression_repeated(
         model = ElasticNetCV(
             cv=inner_splits,
             random_state=random_state,
-            l1_ratio=[.1, .5, .7, .9]
+            l1_ratio = np.linspace(0.05, 1.0, 20, endpoint = False),
         )
         model.fit(Xtr_s, y_tr)
 
@@ -244,22 +239,23 @@ def nested_cv_regression_repeated(
         pred_vals.extend(y_pred)
 
     # Performance summary: median R2
-    median_r2 = float(np.mean(r2_list))
+    mean_r2 = float(np.mean(r2_list))
 
     # Coefficient summary: median and IQR across folds
     coef_arr = np.vstack(coef_list)
     coef_df = pd.DataFrame(coef_arr, columns=X.columns)
-    median_series = coef_df.mean()
-    iqr_series = coef_df.std()
+    mean_series = coef_df.mean()
+    sd_series = coef_df.std()
     coef_summary = pd.DataFrame({
-        'Mean_Coefficient': median_series,
-        'IQR_Coefficient': iqr_series
+        'Mean_Coefficient': mean_series,
+        'SD_Coefficient': sd_series
     })
 
     # Predictions DataFrame
     predictions_df = pd.DataFrame({'True': true_vals, 'Predicted': pred_vals})
 
-    return median_r2, r2_list, coef_summary, predictions_df
+    return mean_r2, r2_list, coef_summary, predictions_df
+
 
 def main(exp_path, ms_filename):
         
@@ -303,9 +299,9 @@ def main(exp_path, ms_filename):
         '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503131539',
         '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503141655',
         '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/proline_202503051407',
-        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/glutamine_202504251440', # glutamine_acetate
-        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/lysine_202504291748', # lysine sucrose
-        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/aminoadipate_202504291411' # aminoadipate
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamine_202504251440', # glutamine_acetate
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/lysine_202504291748', # lysine sucrose
+        '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/aminoadipate_202504291411' # aminoadipate
     ]
     for exp_path in exp_paths:
     
@@ -315,29 +311,23 @@ def main(exp_path, ms_filename):
         os.makedirs(os.path.join(exp_path,'results','metabolomics','predictions'), exist_ok=True)
         results = {}
         
-        
-        
         # Regression on treated
         mask = df['Treatment'].str.lower()=='yes'
         Xr = df.loc[mask, feats]
         yr = df.loc[mask, 'AUC']
-        #mean_r2, r2_list, coef_sum, pred_df = nested_cv_regression(Xr, yr, 5, 3)
-        #print(f'Resistance R²: {mean_r2:.2f}')
-        #print(coef_sum.nlargest(5, 'Mean_Coefficient', keep='first'))
-        
+       
         mean_r2, r2_list, coef_sum, predictions_df = nested_cv_regression_repeated(
             Xr, yr,
             inner_splits=5,
-            outer_splits=2,
+            outer_splits=3,
             outer_repeats=10,
             random_state=0
         )
         
         print(f'Resistance R²: {mean_r2:.2f}')
-        print(coef_sum.nlargest(5, 'Mean_Coefficient', keep='first'))
-       
+        #print(coef_sum.nlargest(5, 'Mean_Coefficient'))
+        
         coef_sum.to_csv(os.path.join(exp_path,'results','metabolomics','coefficients','enet_coef_summary.csv'))
-        #pred_df.to_csv(os.path.join(exp_path,'results','metabolomics','predictions','enet_coef_preds.csv'))
         results['r2'] = mean_r2
         
         # Multiclass PLS-DA
@@ -345,8 +335,7 @@ def main(exp_path, ms_filename):
         _, scores_df, loadings_df = train_plsda(Xp, yp, n_components=n_components)
         
         # Performance evaluation for PLS-DA
-        from sklearn.model_selection import RepeatedStratifiedKFold
-        rkf = RepeatedStratifiedKFold(n_splits=2, n_repeats=10, random_state=42)
+        rkf = RepeatedStratifiedKFold(n_splits=3, n_repeats=10, random_state=0)
         
         f1_scores = defaultdict(list)
     
@@ -355,11 +344,8 @@ def main(exp_path, ms_filename):
             X_tr, X_te = Xp.iloc[tr], Xp.iloc[te]
             y_tr, y_te = yp.iloc[tr], yp.iloc[te]
             
-            
-            # Train on training data:
             plsda_model, _, _ = train_plsda(X_tr, y_tr, n_components = n_components)
             predictions = predict_plsda(plsda_model, X_te, n_components = n_components)
-            #predictions = classify_scores(scores_df, y_te)
     
             # Combine with true labels:
             preds_df = pd.DataFrame({
@@ -370,8 +356,8 @@ def main(exp_path, ms_filename):
             report = classification_report(
                 preds_df['TrueClass'],
                 preds_df['PredictedClass'],
-                output_dict=True,    # so we can turn it into a DataFrame
-                zero_division=0      # avoid NaNs if a class never gets predicted
+                output_dict=True, 
+                zero_division=0  
             )
             
             # accumulate per-class F1
@@ -387,7 +373,6 @@ def main(exp_path, ms_filename):
             #print(f"Macro F₁ = {f1:.2f}")
     
             all_f1s.append(f1)
-        
         
         # Build a summary DataFrame
         summary = pd.DataFrame([
@@ -407,10 +392,8 @@ def main(exp_path, ms_filename):
         loadings_df.to_csv(os.path.join(exp_path,'results','metabolomics','coefficients','plsda_loadings.csv'))
         scores_df.to_csv(os.path.join(exp_path,'results','metabolomics','predictions','plsda_scores.tsv'), sep='\t')    
         
-    
         uni = univariate_stats(df, feats=feats, contrasts=contrasts)
         
-        #uni = univariate_stats(df, 'Experimental group', feats)
         uni.to_csv(os.path.join(exp_path,'results','metabolomics','coefficients','supp_stats.csv'), index=False, sep = '\t')
         
         df.to_csv(os.path.join(exp_path,'results','metabolomics','processed','data_with_annotation.tsv'), index=False, sep = '\t')

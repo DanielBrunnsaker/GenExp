@@ -174,12 +174,4 @@ if __name__ == "__main__":
 
 
     # EXPERIMENT_DIR = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_202504291411'
-    '''
-     df = raw_growth_curves.copy()
-     df.index = df.index.map(lambda x: unify_well_format(str(x)))
-     layout_rev = layout.copy()
-     layout_rev['well'] = layout_rev['well'].astype(str).apply(unify_well_format)
-     
-     # Merge layout information (e.g. Summary) into the data.
-     df = df.merge(layout_rev[['well', 'Summary']], left_index=True, right_on='well').set_index('well')
-    '''
+   
