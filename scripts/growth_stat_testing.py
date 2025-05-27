@@ -9,16 +9,28 @@ import pandas as pd
 pd.options.mode.chained_assignment = None  # default='warn'
 
 import statsmodels.formula.api as smf
-import statsmodels.api as sm
 import numpy as np
 from tqdm import tqdm
 import json
 from sklearn.utils import resample
-from patsy import dmatrices
-from pathlib import Path
 
 
 def create_design_table(df):
+    """
+    Create a design-table from the dispensing layouts.
+
+    Parameters
+    ----------
+    df : dataframe
+        dispensing layout.
+
+    Returns
+    -------
+    design_df : dataframe
+        a simple design matrix.
+
+    """
+    
     design_df = df.copy()
     
     # Process Supplement Column
@@ -41,17 +53,25 @@ def create_design_table(df):
 
 def create_dose_table(df):
     """
-    Create a dose table with clearer column names:
-      - Well, Summary
-      - TreatmentName (categorical)
-      - TreatmentDose_uL (float)
-      - SupplementName (categorical)
-      - SupplementDose_mM (float)
-      - NegativeControlVol_uL (float)
-      - NegControlFlag (0/1)
+    Takes in the dispensing layout and creates a table for use with testing.
+    Includes the dose for the supplements, and flags for treatments and
+    negative controls.
+
+    Parameters
+    ----------
+    df : dataframe
+        Dispensing layout generated for the hamilton protocols.
+
+    Returns
+    -------
+    d: dataframe
+        dataframe consisting of all relevant flags for testing.
+
     """
+    
     d = df.copy()
-    # 1) Rename raw columns to clear names
+    
+    # 1) Rename raw columns to better names for this
     d = d.rename(columns={
         'media_supplementation':            'SupplementName',
         'media_supplementation_doses':      'SupplementDose_mM',
@@ -63,7 +83,6 @@ def create_dose_table(df):
     # 2) Parse numeric doses
     def parse_numeric(x):
         try:
-            # extract number
             s = str(x)
             m = pd.Series([s]).str.extract(r'(\d+(?:\.\d+)?)', expand=False)[0]
             return float(m) if pd.notna(m) else 0.0
@@ -74,9 +93,10 @@ def create_dose_table(df):
     d['TreatmentDose_uL']    = d['TreatmentDose_uL'].apply(parse_numeric)
     d['NegativeControlVol_uL']= d['NegativeControlVol_uL'].fillna(0).astype(float)
 
-    # 3) Flag negative control by supplement name (e.g., 'NegHigh')
+    # 3) Flag negative control by extracting the dispensed volumes
     d['NegControlFlag'] = (d['NegativeControlVol_uL'] > 0).astype(int)
     d['Doses'] = d['SupplementDose_mM']
+    
     # 4) Zero out supplement dose when neg control
     d.loc[d['NegControlFlag'] == 1, 'SupplementDose_mM'] = 0.0
 
@@ -99,16 +119,30 @@ def create_dose_table(df):
 
 def bootstrap_summary(df, formula, B=1000):
     """
-    Given df and a patsy formula, do:
-      1. Fit OLS to extract params
-      2. Bootstrap B resamples of that fit
-      3. Compute bootstrap SE, 95% CI, empirical p-values
-      4. Attach exp(beta) & % change, with NaN for the intercept
+    Given a dataframe and a glm-formula, fit an OLS model, bootstrap it
+    and compute relevant metrics.
+
+    Parameters
+    ----------
+    df : dataframe
+        dataframe with relevant experimental variables.
+    formula : string
+        the glm-formula.
+    B : integer, optional
+        the numbero of resamples. The default is 1000.
+
+    Returns
+    -------
+    summary : df
+        summary statistics.
+    boot_df : df
+        bootstrap estimates.
+
     """
     
     np.random.seed(0)
     
-    # 1) Fit once to get param names
+    # 1) Fit once to get param names, because we are lazy
     orig_mod    = smf.ols(formula, data=df).fit()
     params      = orig_mod.params
     
@@ -121,7 +155,7 @@ def bootstrap_summary(df, formula, B=1000):
     
     boot_df = pd.DataFrame(boot_mat, columns=params.index)
     
-    # 3) Summaries
+    # 3) Summary stats
     boot_se   = boot_df.std(ddof=1)
     ci_low    = boot_df.quantile(0.025)
     ci_high   = boot_df.quantile(0.975)
@@ -132,7 +166,7 @@ def bootstrap_summary(df, formula, B=1000):
         for name in params.index
     }
     
-    # 5) Build table
+    # 5) Build summary table
     summary = pd.DataFrame({
         'estimate':    params,
         'boot_se':     boot_se,
@@ -140,11 +174,13 @@ def bootstrap_summary(df, formula, B=1000):
         'ci_97.5%':    ci_high,
         'p_empirical': pd.Series(p_emp)
     })
+    
     # 6) exp(beta) and %change
     expb      = np.exp(params)
     pct       = (expb - 1)*100
     summary['exp_beta'] = expb
     summary['%change']  = pct
+    
     # 7) clean intercept
     summary.loc['Intercept', ['exp_beta','%change']] = [np.nan, np.nan]
     
@@ -153,69 +189,74 @@ def bootstrap_summary(df, formula, B=1000):
         'estimate','boot_se','ci_2.5%','ci_97.5%',
         'exp_beta','%change','p_empirical'
     ]]
+    
     return summary, boot_df
 
 def set_datatypes(dose_df, testing_column, eps=1e-6):
     """
-    Prepare dose_df for modeling, producing:
-      - log_resp
-      - Treatment (categorical None/Yes)
-      - dose_mM (float)
-      - neg_control (int flag)
-      - SupplementLevel (categorical: None, Low, High, Negative)
-    
-    Automatically assigns 'Low' and 'High' based on the sorted unique positive doses.
+    Cleans up the dose-table and response variables. Also does some needed
+    processing, such as log-transforming. Integrate this part into the 
+    dose-table one to make it cleaner if there is time.
+
+    Parameters
+    ----------
+    dose_df : dataframe
+        dataframe created in previous steps, with relevant experimental
+        variables and doses.
+    testing_column : string
+        the response variable we want to test. Usually AUC, Mu, OD...
+    eps : float, optional
+        Just a static offset to make sure we dont
+        log zero. The default is 1e-6.
+
+    Returns
+    -------
+    dataframe
+        A corrected dataframe that is directly useable with our GLM setup.
+
     """
+    
     df = dose_df.copy()
 
-    # 1) Log‐transform response
+    # Log‐transform response
     df['log_resp'] = np.log(df[testing_column].astype(float) + eps)
 
-    # 2) Treatment as ordered Categorical
+    # Treatment as ordered Categorical
     df['Treatment'] = df['TreatmentName'].fillna('None').astype(str)
     treats = ['None'] + [t for t in df['Treatment'].unique() if t != 'None']
     df['Treatment'] = pd.Categorical(df['Treatment'], categories=treats, ordered=True)
 
-    # 3) Numeric dose and flag
+    # Numeric dose and flag
     df['Supplementation (per mM)']     = df['SupplementDose_mM'].astype(float)
     df['Negative control'] = df['NegControlFlag'].astype(int)
 
-    # 4) Determine Low vs High thresholds
-    # get unique positive doses (exclude zeros and negatives)
-    pos_doses = sorted(df.loc[df['Supplementation (per mM)'] > 0, 'Supplementation (per mM)'].unique())
-    if len(pos_doses) >= 2:
-        low_val, high_val = pos_doses[0], pos_doses[-1]
-    else:
-        low_val, high_val = None, None
-
-    # 5) Build 4‐level SupplementLevel
-    def label_sup(row):
-        if row['Negative control'] == 1:
-            return 'Negative'
-        dm = row['Supplementation (per mM)']
-        if dm == 0:
-            return 'None'
-        if low_val is not None and np.isclose(dm, low_val):
-            return 'Low'
-        if high_val is not None and np.isclose(dm, high_val):
-            return 'High'
-        # fallback for unexpected
-        return 'High' if dm > low_val else 'Low'
-
-    df['SupplementLevel'] = df.apply(label_sup, axis=1)
-    levels = ['None', 'Low', 'High', 'Negative']
-    df['SupplementLevel'] = pd.Categorical(df['SupplementLevel'],
-                                           categories=levels,
-                                           ordered=False)
-
     # 6) Return exactly the columns for modeling + this new factor
-    return df[['log_resp', 'Treatment', 'Supplementation (per mM)', 'Negative control', 'SupplementLevel']]
+    return df[['log_resp', 'Treatment', 'Supplementation (per mM)', 'Negative control']]
+
 
 def plot_ready_df(summary_df, boot_df, dose, treat_name):
     """
-    Same as before, but injects the two scaled rows immediately after
-    the per-mM slope row and its interaction parent, preserving order.
+    Codeblock to just reformat the bootstrap summaries to allow for equimolar
+    comparison to the negative controls. Thought it safer to estimate directly
+    from the model instead of multiplying by the dose.
+
+    Parameters
+    ----------
+    summary_df : dataframe
+        bootstrap summary.
+    boot_df : dataframe
+        estimated bootstrap metrics.
+    dose : float
+        the dose used to correct for equimolar comparison.
+    treat_name : string
+
+    Returns
+    -------
+    dataframe
+        a corrected dataframe that we can directly plot as a forest plot.
+
     """
+    
     df = summary_df.copy()
     rows = []
 
@@ -244,26 +285,22 @@ def plot_ready_df(summary_df, boot_df, dose, treat_name):
             'p_empirical': p
         }, name=name)
 
-    # Define the two parent terms
     slope_term   = 'Q("Supplementation (per mM)")'
     inter_term   = f'C(Treatment)[T.{treat_name}]:Q("Supplementation (per mM)")'
 
     for idx in df.index:
-        # 1) Always add the original row
+        # Always add the original row
         rows.append(df.loc[idx].copy().rename(idx))
 
-        # 2) Right after the slope term, inject "Supplement at dose"
         if idx == slope_term:
             rows.append(make_scaled(f"Supplement at {dose} mM", slope_term))
 
-        # 3) Right after the interaction term, inject "Treatment×(Supplement at dose)"
         if idx == inter_term:
             rows.append(make_scaled(
                 f"{treat_name}×(Supplement at {dose} mM)",
                 inter_term
             ))
 
-    # Reassemble into a DataFrame
     result = pd.DataFrame(rows)
     return result
 
@@ -284,6 +321,7 @@ def growth_testing(EXPERIMENT_DIR):
     layout.rename(columns={'well': 'Well'}, inplace=True)
     layout = layout.merge(experiments_df, left_on = 'Summary', right_on='summary', how='left')
     
+    # Need this for later
     design_table = create_design_table(layout)
     design_table.to_csv(EXPERIMENT_DIR / 'protocol/plate_layout/design_table.tsv', sep = '\t')
     
@@ -292,22 +330,13 @@ def growth_testing(EXPERIMENT_DIR):
     data = dose_table.merge(growth_data.drop('Summary', axis=1), left_on='Well', right_index=True)
     data = data[data['Summary'] != 'Media control']
     
-    # 1) Define formulas
+    # Define formulas
     f_lin = 'log_resp ~ C(Treatment) * (Q("Supplementation (per mM)") + Q("Negative control"))'
-    #f_cat = 'log_resp ~ C(Treatment)*C(SupplementLevel)'
 
     for testing_column in ['AUC']:
         
         dat = set_datatypes(data, testing_column, eps=1e-2)
-        
-        #mod_lin = smf.ols(f_lin, data=dat).fit()
-        #mod_cat = smf.ols(f_cat, data=dat).fit()
 
-        # select which formula to use based on the fit
-        #chosen_formula = f_lin if 2*mod_lin.aic <= mod_cat.aic else f_cat
-        
-        #print("Selected:", chosen_formula)
-        
         negative_dose = data['Doses'][data['NegControlFlag'] == 1].max()
         treat_name = data['TreatmentName'][data['TreatmentName'] != 'None'].unique()[0] # janky
         
@@ -317,8 +346,8 @@ def growth_testing(EXPERIMENT_DIR):
         summary.to_csv(EXPERIMENT_DIR / f'results/growth/tests/{testing_column}_summary.csv')
         boot_df.to_csv(EXPERIMENT_DIR / f'results/growth/tests/{testing_column}_boot.csv')
     
-        print(f"\n===== Results for {testing_column} =====")
-        print(summary.to_string())
+        #print(f"\n===== Results for {testing_column} =====")
+        #print(summary.to_string())
         
         df_forest = plot_ready_df(summary, boot_df, negative_dose, treat_name)
         df_forest.to_csv(EXPERIMENT_DIR / f'results/growth/tests/{testing_column}_forest.csv')
@@ -326,12 +355,4 @@ def growth_testing(EXPERIMENT_DIR):
         print(f"\n===== Dose corrected results for {testing_column} =====")
         print(df_forest.to_string())
         
-        #if chosen_formula != 'log_resp ~ C(Treatment)*C(SupplementLevel)':
-        #dose_corrected_summary = corrected_summary(summary, dat)
-        #else:
-        #    dose_corrected_summary = unify_index_names(summary, dat)
-
-        #print(f"\n===== Corrected for dose =====")
-        #print(dose_corrected_summary.to_string())
-
-        #dose_corrected_summary.to_csv(EXPERIMENT_DIR / f'results/growth/tests/{testing_column}_summary_namingcorr.csv')
+       

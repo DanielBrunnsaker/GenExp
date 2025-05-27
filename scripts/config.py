@@ -56,12 +56,25 @@ PLATE_TYPE = 'P96'
 
 # Growth analysis settings
 BLANK_SUBTRACTION = True
-N_CLOSEST_BLANKS = 3 # How many of the closest blanks to use for blank-normalization in OD processing
+N_CLOSEST_BLANKS = 5 # How many of the closest blanks to use for blank-normalization in OD processing
 BLANK_FILLIN_VALUE = 0.01 # If negative value after blank subtraction, what value to set to instead
 
 OUTLIER_METHOD = 'mad'
 ROLLING_MEAN_WINDOWSIZE = 3 # Windowsize for smoothing
-THRESHOLD = 3.5 # MAD-threshold to use for curve fitering. #3 for MAD, 1.5 for IQR?
+THRESHOLD = 3 # MAD-threshold to use for curve fitering. #3 for MAD, 1.5 for IQR?
+LOESS_FRAC = 0.2
 
-
+# Metabolomics analysis settings
+PLS_DA_COMPONENTS = 5
+PARAMS = {
+    'min_qc': 5, # Just to make sure we have enough QCs to actually do PQN
+    'n_blanks': 6, # N closest blanks in the runorder, used to do the blank-filtering
+    'pca_num_pcs': 0.95, # How many PCA dimensions to use for outlier removal
+    'pca_threshold': 0.95, # T2 threshold for outlier removal
+    'res_threshold': 0.99, # threshold for unexplained residual removal
+    'missing_threshold': 1/3, # inverse of the one above, dummy
+    'sip_threshold': 0.600, # Threshold for outlier removal based on rapidfire sensor values
+    'sn_ratio': 1,
+    'missing_per_sample': 0.5 # missingness threshold per sample. i.e. if one sample has more than X% missing peaks, it is likely not a reliable one
+}
 

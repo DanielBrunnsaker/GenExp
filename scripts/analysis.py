@@ -98,7 +98,7 @@ def blank_processing(layout, raw_growth_curves, n, fillin_value, blank_bool):
     return growth_curves
 
 #@flow
-def run_growth_processing(EXPERIMENT_DIR, met_bool):
+def run_processing(EXPERIMENT_DIR, met_bool):
     
     # Load config parameters
     EXPERIMENT_DIR = Path(EXPERIMENT_DIR)
@@ -151,14 +151,13 @@ if __name__ == "__main__":
                         help="do you want to do metabolomics analysis")
     args = parser.parse_args()
     
-    run_growth_processing(args.output_folder, args.metabolomics_analysis)
+    run_processing(args.output_folder, args.metabolomics_analysis)
 
 
     # Example:
-    # python growth_processing.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202501281618" --testing yes
-    # python growth_processing.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/aminoadipate_202504291411" --testing yes
-    # python growth_processing.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756" --metabolomics_analysis TRUE
-    # python growth_processing.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_202501281618" --testing yes
+    # python analysis.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202501281618" --metabolomics_analysis TRUE
+    # python analysis.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/aminoadipate_202504291411" --metabolomics_analysis TRUE
+    # python analysis.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756" --metabolomics_analysis TRUE
 
 
     # EXPERIMENT_DIR = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_202504291411'

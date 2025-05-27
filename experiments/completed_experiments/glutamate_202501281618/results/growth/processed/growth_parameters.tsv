@@ -1,81 +1,76 @@
 	mu	AUC	MaxOD	Summary
-A1	0.2285383789019483	9308.00929802448	0.5268811750344515	Growth with alanine supplementation, no spermine treatment.
-A3	0.2809770716965702	11336.607991238023	0.7186836203723412	Growth with low glutamate supplementation, no spermine treatment.
-A4	0.3015341844330391	8805.187145774227	0.6193563979429229	Growth with high glutamate supplementation, no spermine treatment.
-A5	0.28411946671453786	3042.63593341537	0.20776904028857424	Growth with high glutamate supplementation and spermine treatment.
-A7	0.23112311573968422	5242.918702682107	0.31091725991542735	Growth with high glutamate supplementation and spermine treatment.
-A9	0.2208427097761771	5748.327754456123	0.32797528025832634	Growth with high glutamate supplementation and spermine treatment.
-A10	0.0	862.8247702448666	0.0	Media control
-A11	0.2544821345274074	8431.017579965306	0.5465602636534823	Growth with alanine supplementation and spermine treatment.
-A12	0.2877003931885674	6316.113835606333	0.37458146394703584	Growth with spermine treatment, no supplementation.
-B1	0.2755013285140961	10373.734438204938	0.77155293624555	Growth with high glutamate supplementation, no spermine treatment.
-B3	0.2579042970953048	5577.813209129697	0.38004570855075714	Growth with alanine supplementation, no spermine treatment.
-B4	0.2317744913390281	3286.88550347822	0.15505379032485778	Growth with high glutamate supplementation and spermine treatment.
-B5	0.0	476.8252353017624	0.0	Media control
-B6	0.27838189820445836	8011.319847324052	0.571980168075777	Growth with alanine supplementation and spermine treatment.
-B7	0.0	752.6023566482039	0.0	Media control
-B8	0.26953568215217316	10836.009809662366	0.7883412461130666	Growth with high glutamate supplementation, no spermine treatment.
-B9	0.3044775260191644	11010.944654996974	0.9028738034842074	Growth with low glutamate supplementation, no spermine treatment.
-B10	0.2896164418452704	5003.259845271014	0.32246674448911883	Growth with spermine treatment, no supplementation.
-B11	0.25638591105377095	6737.905355340368	0.3979504169570075	Growth with alanine supplementation, no spermine treatment.
-B12	0.2383347024231443	8778.932265422343	0.529657784429468	Baseline growth with no supplementation or treatment.
-C1	0.2666489303288962	19844.857913909393	1.3734340800869973	Growth with low glutamate supplementation, no spermine treatment.
-C2	0.26454181811690125	4698.497543118029	0.26964029669063294	Growth with high glutamate supplementation and spermine treatment.
-C3	0.23778796819398956	11047.512126388707	0.665986971890797	Baseline growth with no supplementation or treatment.
-C4	0.0	534.8894085167871	0.0	Media control
-C6	0.2758093707133482	5236.536007363879	0.37206400087958447	Growth with spermine treatment, no supplementation.
-C7	0.2672961252152479	11781.669040690113	0.8570290610485788	Growth with high glutamate supplementation, no spermine treatment.
+A1	0.22360495111286324	9474.618468671868	0.5294712789090846	Growth with alanine supplementation, no spermine treatment.
+A3	0.28025937524343497	11491.224424676886	0.719062259551683	Growth with low glutamate supplementation, no spermine treatment.
+A4	0.30416078706363264	10097.211953529339	0.6404035971447428	Growth with high glutamate supplementation, no spermine treatment.
+A5	0.3064175579678956	3592.833484576283	0.22025046920479566	Growth with high glutamate supplementation and spermine treatment.
+A7	0.22040033132574532	5658.760382384268	0.31731434504961453	Growth with high glutamate supplementation and spermine treatment.
+A10	0.0	1653.2760274322773	0.0	Media control
+A11	0.24800818499545838	8647.026915094008	0.5486017153094468	Growth with alanine supplementation and spermine treatment.
+A12	0.27930066155939043	6046.495962718551	0.36946374160459616	Growth with spermine treatment, no supplementation.
+B1	0.27357553855716626	10468.102331746482	0.7723907992460831	Growth with high glutamate supplementation, no spermine treatment.
+B3	0.2573511469781643	5605.789409506861	0.3807858221783728	Growth with alanine supplementation, no spermine treatment.
+B4	0.25494809757270037	3402.1672614782296	0.15489522726059343	Growth with high glutamate supplementation and spermine treatment.
+B6	0.26700769112656203	8607.212544461114	0.5861183818974949	Growth with alanine supplementation and spermine treatment.
+B7	0.0	1264.7656443748285	0.0	Media control
+B8	0.26569989636540847	11127.075778182472	0.7969987835316763	Growth with high glutamate supplementation, no spermine treatment.
+B9	0.2977434896475909	11395.626787303867	0.9163991500015247	Growth with low glutamate supplementation, no spermine treatment.
+B10	0.28553235824338535	5225.921623473853	0.3243125122367847	Growth with spermine treatment, no supplementation.
+B11	0.25581185064867734	6957.814284081944	0.3997450860041961	Growth with alanine supplementation, no spermine treatment.
+B12	0.2340889279784692	8509.785023955075	0.5246321378596067	Baseline growth with no supplementation or treatment.
+C1	0.26461555644294954	19491.674861014817	1.3634134944116576	Growth with low glutamate supplementation, no spermine treatment.
+C2	0.2553804207098579	4802.579868179532	0.27093527736045686	Growth with high glutamate supplementation and spermine treatment.
+C3	0.2436522973527945	11200.636261745365	0.6750068871217707	Baseline growth with no supplementation or treatment.
+C4	0.0	603.1203007622388	0.0	Media control
+C6	0.26046473899646705	6287.022629246575	0.39284670804902344	Growth with spermine treatment, no supplementation.
+C7	0.2639819048514475	11942.266773280326	0.857465448117696	Growth with high glutamate supplementation, no spermine treatment.
 C8	0.0	719.9999999999997	0.0	Media control
-C10	0.2592984213721505	12974.104916763594	0.9103293467802194	Growth with high glutamate supplementation, no spermine treatment.
-C11	0.21011241390774965	4496.853061093826	0.22016856004036778	Growth with low glutamate supplementation and spermine treatment.
-C12	0.2636949467826924	6531.854059374973	0.4097000283567938	Growth with alanine supplementation and spermine treatment.
-D1	0.22407633324315626	4898.043548856832	0.2813184234704769	Growth with alanine supplementation and spermine treatment.
-D2	0.2232381697557034	5707.998529587762	0.3403816628815456	Growth with spermine treatment, no supplementation.
+C10	0.25571449741367197	13185.1585488887	0.9122592096317889	Growth with high glutamate supplementation, no spermine treatment.
+C11	0.20522986590083178	4749.1325857837965	0.22409501901734918	Growth with low glutamate supplementation and spermine treatment.
+C12	0.27273997258519633	6788.936580667082	0.41350547923847647	Growth with alanine supplementation and spermine treatment.
+D1	0.23706674872429898	4406.586448007022	0.27134082929810877	Growth with alanine supplementation and spermine treatment.
+D2	0.2335045287814954	5291.97295147988	0.3330747793726868	Growth with spermine treatment, no supplementation.
 D3	0.0	719.9999999999997	0.0	Media control
-D4	0.230356659799586	14409.330059217937	0.8947133168853066	Baseline growth with no supplementation or treatment.
-D5	0.25686689454477735	10739.951168819054	0.7483925935451083	Baseline growth with no supplementation or treatment.
-D6	0.2563237247612595	3790.429350945188	0.2498460367998919	Growth with high glutamate supplementation and spermine treatment.
-D7	0.27295319003739826	18337.642831010642	1.3628434465235117	Growth with low glutamate supplementation, no spermine treatment.
-D8	0.25336442880827803	4745.314659396667	0.31559845964789146	Growth with low glutamate supplementation and spermine treatment.
-D9	0.2954096481078646	9543.694193132675	0.7101440760366242	Growth with high glutamate supplementation, no spermine treatment.
-D10	0.23327827577811286	8120.339664238003	0.5083610359874491	Growth with alanine supplementation, no spermine treatment.
-D11	0.0	929.4757483516263	0.0	Media control
-D12	0.23469263676461402	4716.784258225611	0.2876329855298362	Growth with low glutamate supplementation and spermine treatment.
-E1	0.24180343087971856	5071.972032840177	0.275885438205278	Growth with low glutamate supplementation and spermine treatment.
-E3	0.28367068920365124	9804.136926943449	0.7390587314258794	Growth with high glutamate supplementation, no spermine treatment.
-E4	0.24590714697019594	7338.583391198771	0.47863220059573586	Growth with alanine supplementation, no spermine treatment.
-E5	0.38412328374947785	3587.514637094263	0.29368477758539346	Growth with alanine supplementation and spermine treatment.
-E8	0.25387229345398316	7059.5218871508205	0.4800461276478481	Growth with alanine supplementation, no spermine treatment.
-E9	0.23625667799426248	5080.334867995618	0.3218069785185857	Growth with low glutamate supplementation and spermine treatment.
-E10	0.21111064235732993	3685.7925168177003	0.2102998627174475	Growth with high glutamate supplementation and spermine treatment.
-E11	0.2658901925795231	11388.000528686405	0.8128237187979257	Growth with low glutamate supplementation, no spermine treatment.
+D4	0.23420435359135341	14002.12243975401	0.8855536877370886	Baseline growth with no supplementation or treatment.
+D5	0.256345524022261	10861.816428234108	0.7506838908366491	Baseline growth with no supplementation or treatment.
+D6	0.2243712929696289	4584.85091481379	0.27037526803848727	Growth with high glutamate supplementation and spermine treatment.
+D7	0.26805186717346813	18785.01107678814	1.375448443578742	Growth with low glutamate supplementation, no spermine treatment.
+D8	0.26398646693500044	4528.917132419502	0.31158955915282505	Growth with low glutamate supplementation and spermine treatment.
+D9	0.31079931497539137	8926.300026855955	0.6939662455910632	Growth with high glutamate supplementation, no spermine treatment.
+D10	0.24337835432904742	7619.066172970472	0.49870967046532905	Growth with alanine supplementation, no spermine treatment.
+D11	0.0	386.8166577056558	0.0	Media control
+D12	0.230136636495393	4833.292055643915	0.2898483377205707	Growth with low glutamate supplementation and spermine treatment.
+E1	0.626372622892695	4538.192241978458	0.26491939108717055	Growth with low glutamate supplementation and spermine treatment.
+E3	0.2858526728698925	9683.834860058143	0.737681745895381	Growth with high glutamate supplementation, no spermine treatment.
+E4	0.24603056976649657	7170.563547968734	0.4764581663174432	Growth with alanine supplementation, no spermine treatment.
+E5	0.38608420609528626	3170.081543186088	0.28036532423842847	Growth with alanine supplementation and spermine treatment.
+E8	0.26093876210600947	6753.592514757997	0.4695200392769042	Growth with alanine supplementation, no spermine treatment.
+E9	0.2319397251321375	5194.533171849676	0.3243756003020396	Growth with low glutamate supplementation and spermine treatment.
+E11	0.2720720921670356	11050.424740423263	0.8061207945861477	Growth with low glutamate supplementation, no spermine treatment.
 E12	0.0	719.9999999999997	0.0	Media control
-F1	0.2320660926554837	8687.442835978123	0.5515995392682641	Growth with spermine treatment, no supplementation.
-F3	0.2873559760460799	7003.954432363541	0.5359598445066773	Growth with alanine supplementation and spermine treatment.
-F4	0.0	257.7473230422072	0.0	Media control
-F5	0.26186705413983685	13151.21809830217	0.9269022126102624	Growth with low glutamate supplementation, no spermine treatment.
-F6	0.3015968120559332	4851.293748680911	0.37923070790912083	Growth with alanine supplementation, no spermine treatment.
-F7	0.22977962330632928	10554.589277214916	0.6614070562240928	Baseline growth with no supplementation or treatment.
-F8	0.27687375916460033	7651.414192176479	0.5589518699371483	Growth with spermine treatment, no supplementation.
-F9	0.0	719.9999999999997	0.0	Media control
-F11	0.25198635320763213	6944.886180225772	0.46137816732328146	Baseline growth with no supplementation or treatment.
-F12	0.22475211593934985	5226.810886492331	0.3049009288535658	Growth with high glutamate supplementation and spermine treatment.
-G1	0.0	619.0406572104039	0.0	Media control
-G2	0.24862882571047928	10792.96145776715	0.7364926017580242	Baseline growth with no supplementation or treatment.
-G3	0.26437370039506153	8966.868756432099	0.6356746516453555	Growth with spermine treatment, no supplementation.
-G4	0.25857170663980245	8004.7665833472465	0.5476020568990921	Growth with alanine supplementation and spermine treatment.
-G6	0.3637112602592451	6870.86472474255	0.2943289660736863	Growth with low glutamate supplementation, no spermine treatment.
-G7	0.23403233293801778	4604.390372562619	0.2855635554001489	Growth with low glutamate supplementation and spermine treatment.
-G8	0.3707177026219529	2368.0500000000006	0.20274999999999999	Growth with alanine supplementation and spermine treatment.
-G9	0.2873800014184218	4206.453215736375	0.3097740073180798	Growth with alanine supplementation and spermine treatment.
-G10	0.0	442.1625825052603	0.0	Media control
-G11	0.24296982061784328	4316.803495937051	0.2765383449701907	Growth with high glutamate supplementation and spermine treatment.
-H1	0.2861629755794506	5819.412199358994	0.4137985184484078	Baseline growth with no supplementation or treatment.
-H5	0.2619907613449773	6978.377790135864	0.4934620201069799	Growth with spermine treatment, no supplementation.
-H6	0.0	752.7558693784081	0.0	Media control
-H7	0.29409098964699804	6270.149635747637	0.49114227178923403	Growth with alanine supplementation and spermine treatment.
-H8	0.23790041045095256	3025.4128253871145	0.17375751884485485	Growth with high glutamate supplementation and spermine treatment.
-H9	0.2969406116049218	3551.1907880116282	0.26821155795755414	Growth with alanine supplementation, no spermine treatment.
-H10	0.2505788764792547	12906.913144334176	0.8752338989290579	Growth with low glutamate supplementation, no spermine treatment.
-H11	0.0	407.60223464179296	0.0	Media control
-H12	0.33537340152563694	10572.523429793027	0.7078540099664641	Growth with high glutamate supplementation, no spermine treatment.
+F1	0.23828989341084184	8367.535694763012	0.5400503352916146	Growth with spermine treatment, no supplementation.
+F3	0.295677829643308	6701.898188536927	0.5216129857445787	Growth with alanine supplementation and spermine treatment.
+F4	0.0	327.860512568754	0.0	Media control
+F5	0.2628361310831805	13029.48680092995	0.9236378210234047	Growth with low glutamate supplementation, no spermine treatment.
+F6	0.3023189600985885	4853.76300006982	0.3786654122076667	Growth with alanine supplementation, no spermine treatment.
+F7	0.2304395635019782	10526.527618938298	0.6621080637579847	Baseline growth with no supplementation or treatment.
+F8	0.2761766082851233	7710.836079314839	0.5613630419017329	Growth with spermine treatment, no supplementation.
+F9	0.0	700.8959999999994	0.0	Media control
+F11	0.25459173462552115	6832.828082076494	0.4588822352296853	Baseline growth with no supplementation or treatment.
+F12	0.2239409206962186	5141.959291168122	0.30222196667577195	Growth with high glutamate supplementation and spermine treatment.
+G1	0.0	799.8350755445209	0.0	Media control
+G2	0.25393634602149273	10539.0031627459	0.7244287387695154	Baseline growth with no supplementation or treatment.
+G3	0.2686525275550126	8719.107300218257	0.621710572995445	Growth with spermine treatment, no supplementation.
+G4	0.25620450100327097	8101.542908829505	0.5506310880674163	Growth with alanine supplementation and spermine treatment.
+G6	0.346795585119683	7005.8720239353315	0.2985729859036991	Growth with low glutamate supplementation, no spermine treatment.
+G7	0.23107159725777232	4708.360038572438	0.28874522108733114	Growth with low glutamate supplementation and spermine treatment.
+G8	0.36903633380345263	2387.202000000001	0.20334999999999998	Growth with alanine supplementation and spermine treatment.
+G9	0.29112725428369457	4116.68338202354	0.3072805359437282	Growth with alanine supplementation and spermine treatment.
+G10	0.0	735.6642845410515	0.0	Media control
+G11	0.24328978519540398	4300.863805255948	0.2759723393904486	Growth with high glutamate supplementation and spermine treatment.
+H5	0.25425596541093	7321.384345915296	0.49922547028206266	Growth with spermine treatment, no supplementation.
+H6	0.0	975.7636375696571	0.0	Media control
+H7	0.2942754742324451	6261.48600745491	0.49258010932271645	Growth with alanine supplementation and spermine treatment.
+H9	0.2889186121004631	3653.1217045608514	0.27090544730579497	Growth with alanine supplementation, no spermine treatment.
+H10	0.24798318799682925	13090.067429729534	0.8778830094294189	Growth with low glutamate supplementation, no spermine treatment.
+H11	0.0	647.5969291446115	0.0	Media control
+H12	0.32015716367214975	10552.11747111839	0.7065260249707406	Growth with high glutamate supplementation, no spermine treatment.
