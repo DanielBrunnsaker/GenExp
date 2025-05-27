@@ -36,12 +36,12 @@ python genexp.py --target <string> --N <integer> --alpha <float>
 
 This will create a folder in `/experiments` with all of the details regarding the experiments (e.g. hypothesis, protocol, liquid handling scripts, ...). Note that you will be prompted for stock concentrations (if compounds are not present in the library) during the run. 
 
-When the scripts have been run on the Hamilton, EVE and via AutonoMS [2] and data has been aquired and saved in `data/growth/raw` and `data/metabolomics/raw`, run the following command to process and analyse all of the data. For details regarding data acquisition, see `protocol/hamilton/scripts`, `protocol/overlord/scripts` and `protocol/mass_spectrometry`.
+When the scripts have been run on the Hamilton, EVE and via AutonoMS [2] and data has been aquired and saved in `data/growth/raw` and `data/metabolomics/raw`, run the following command to process and analyse all of the data. For details regarding data acquisition, see `protocol/hamilton/scripts`, `protocol/overlord/scripts` and `protocol/mass_spectrometry`. `output_folder` denotes the folder created by the prior step. 
 
 ```
 python analysis.py --output_folder <string> --metabolomics_analysis <bool>
 ```
-This will automatically run outlier curation, processing, normalization and statistical testing on the growth data and metabolomics data. 
+This will automatically run outlier curation, processing, normalization and statistical testing on the growth data and metabolomics data. It will also generate a result report.
 
 ## TODO:
 - Database integration scripts (alec)
