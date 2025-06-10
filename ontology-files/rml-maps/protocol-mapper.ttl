@@ -1,0 +1,56 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix : <http://hypo.project-genesis.io/> .
+@base <http://hypo.project-genesis.io/> .
+
+## Example Experiment
+# {
+#     "experiment": 1,
+#     "baseline_media": "Minimal media without amino acids",
+#     "media_supplementation": null,
+#     "media_supplementation_doses": null,
+#     "treatment": null,
+#     "treatment_parameters": null,
+#     "sampling_time": 20.0,
+#     "type": "control",
+#     "summary": "Baseline condition with no supplementation or treatment."
+# }
+
+[]
+    a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "experiments/completed_experiments/arginine_202503131539/protocol/protocol.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.experiments[*]" 
+    ] ;
+    rr:subjectMap [
+        # This doesn't work as the UUID function is not defined. I don't
+        # think that runtime generation of UUIDs is the way to go.
+        # rr:template "http://hypo.project-genesis.io/E-{uuid}" ;
+        # fnml:functionValue [
+        #     rr:predicateObjectMap [
+        #         rr:predicate fno:executes ;
+        #         rr:objectMap [ rr:constant grel:UUID ; ] ;
+        #     ]
+        # ]
+        # Example UUID instead
+        rr:constant "http://hypo.project-genesis.io/E-123e4567-e89b-12d3-a456-426614174000" ;
+        rr:graph <http://hypo.project-genesis.io/experiments> ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant obo:OBI_0000316 ; ] ;
+    ] ;
+    
+    rr:predicateObjectMap [
+        rr:predicate :baselineMedia ;
+        rr:objectMap [ rml:reference "baseline_media" ; ] ;
+    ] .
