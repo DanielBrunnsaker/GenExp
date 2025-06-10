@@ -1,0 +1,77 @@
+<http://hypo.project-genesis.io/phenotypes> {
+    _:b0    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+            <http://www.w3.org/2002/07/owl#onProperty>  <http://hypo.project-genesis.io#stateHasObservable> ;
+            <http://www.w3.org/2002/07/owl#someValuesFrom>  <http://hypo.project-genesis.io#P-REF-0196d09a-7a54-7553-855c-5010d648b5de> .
+    <http://hypo.project-genesis.io#S-REF-0196d09a-5e95-75df-8a45-cf00e8b52673>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  _:b0 .
+    <http://hypo.project-genesis.io#P-REF-0196d09a-7a54-7553-855c-5010d648b5de>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://purl.obolibrary.org/obo/APO_0000095> .
+    _:b1    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+            <http://www.w3.org/2002/07/owl#onProperty>  <http://hypo.project-genesis.io#accumulationOfChemical> ;
+            <http://www.w3.org/2002/07/owl#someValuesFrom>  <http://purl.obolibrary.org/obo/CHEBI_29016> .
+    <http://hypo.project-genesis.io#P-REF-0196d09a-7a54-7553-855c-5010d648b5de>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  _:b1 .
+    _:b2    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+            <http://www.w3.org/2002/07/owl#onProperty>  <http://hypo.project-genesis.io#P-0196d09a-7a5c-7812-8a20-5adee7d71f54> ;
+            <http://www.w3.org/2002/07/owl#someValuesFrom>  <http://hypo.project-genesis.io#P-REF-0196d09a-7a54-7553-855c-5010d648b5de> .
+    <http://hypo.project-genesis.io#P-0196d09a-7a5c-7812-8a20-5adee7d71f54>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  _:b2 ;
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://purl.obolibrary.org/obo/APO_0000095> .
+    _:b3    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+            <http://www.w3.org/2002/07/owl#onProperty>  <http://hypo.project-genesis.io#accumulationOfChemical> ;
+            <http://www.w3.org/2002/07/owl#someValuesFrom>  <http://purl.obolibrary.org/obo/CHEBI_29016> .
+    <http://hypo.project-genesis.io#P-0196d09a-7a5c-7812-8a20-5adee7d71f54>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  _:b3 .
+}
+
+<http://hypo.project-genesis.io/states> {
+    _:b4    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+            <http://www.w3.org/2002/07/owl#onProperty>  <http://hypo.project-genesis.io#stateHasObservable> ;
+            <http://www.w3.org/2002/07/owl#someValuesFrom>  <http://hypo.project-genesis.io#P-0196d09a-7a5c-7812-8a20-5adee7d71f54> .
+    <http://hypo.project-genesis.io#S-0196d09a-7a61-7712-9433-5d82568e4f84>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  _:b4 ;
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://hypo.project-genesis.io#organismState> .
+}
+
+<http://hypo.project-genesis.io/phenotypes> {
+    _:b5    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+            <http://www.w3.org/2002/07/owl#onProperty>  <http://hypo.project-genesis.io#stateHasObservable> ;
+            <http://www.w3.org/2002/07/owl#someValuesFrom>  <http://hypo.project-genesis.io#P-REF-0196d09a-847f-72ba-bda4-aa022c26e2a0> .
+    <http://hypo.project-genesis.io#S-REF-0196d09a-5e95-75df-8a45-cf00e8b52673>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  _:b5 .
+    <http://hypo.project-genesis.io#P-REF-0196d09a-847f-72ba-bda4-aa022c26e2a0>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://purl.obolibrary.org/obo/APO_0000087> .
+    _:b6    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+            <http://www.w3.org/2002/07/owl#onProperty>  <http://hypo.project-genesis.io#resistanceToChemical> ;
+            <http://www.w3.org/2002/07/owl#someValuesFrom>  <http://purl.obolibrary.org/obo/CHEBI_27732> .
+    <http://hypo.project-genesis.io#P-REF-0196d09a-847f-72ba-bda4-aa022c26e2a0>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  _:b6 .
+    _:b7    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+            <http://www.w3.org/2002/07/owl#onProperty>  <http://hypo.project-genesis.io#increasedComparedTo> ;
+            <http://www.w3.org/2002/07/owl#someValuesFrom>  <http://hypo.project-genesis.io#P-REF-0196d09a-847f-72ba-bda4-aa022c26e2a0> .
+    <http://hypo.project-genesis.io#P-0196d09a-8486-74b4-8b13-c656a69829d4>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  _:b7 ;
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://purl.obolibrary.org/obo/APO_0000087> .
+    _:b8    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+            <http://www.w3.org/2002/07/owl#onProperty>  <http://hypo.project-genesis.io#resistanceToChemical> ;
+            <http://www.w3.org/2002/07/owl#someValuesFrom>  <http://purl.obolibrary.org/obo/CHEBI_27732> .
+    <http://hypo.project-genesis.io#P-0196d09a-8486-74b4-8b13-c656a69829d4>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  _:b8 .
+}
+
+<http://hypo.project-genesis.io/states> {
+    _:b9    a       <http://www.w3.org/2002/07/owl#Restriction> ;
+            <http://www.w3.org/2002/07/owl#onProperty>  <http://hypo.project-genesis.io#stateHasObservable> ;
+            <http://www.w3.org/2002/07/owl#someValuesFrom>  <http://hypo.project-genesis.io#P-0196d09a-8486-74b4-8b13-c656a69829d4> .
+    <http://hypo.project-genesis.io#S-0196d09a-848d-74ef-b9dd-9c7324b1c2a1>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  _:b9 ;
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  <http://hypo.project-genesis.io#organismState> .
+}
+
+<http://hypo.project-genesis.io/H-0196d09a-b24f-70ab-8deb-754d950410be> {
+    _:b10   a       <http://www.w3.org/2002/07/owl#Restriction> ;
+            <http://www.w3.org/2002/07/owl#onProperty>  <http://hypo.project-genesis.io#implies> ;
+            <http://www.w3.org/2002/07/owl#someValuesFrom>  <http://hypo.project-genesis.io#S-0196d09a-848d-74ef-b9dd-9c7324b1c2a1> .
+    <http://hypo.project-genesis.io#S-0196d09a-7a61-7712-9433-5d82568e4f84>
+            <http://www.w3.org/2000/01/rdf-schema#subClassOf>  _:b10 .
+}

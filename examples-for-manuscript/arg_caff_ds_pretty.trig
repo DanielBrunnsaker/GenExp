@@ -1,0 +1,84 @@
+@prefix hypo:  <http://hypo.project-genesis.io#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hypo.project-genesis.io/hypothesis-metadata> {
+    <http://hypo.project-genesis.io/H-0196d121-3310-771d-ab08-bb5f9f4973d4>
+            terms:created  "2025-03-13T15:39:00"^^xsd:dateTime ;
+            terms:creator  "Genesis" .
+}
+
+<http://hypo.project-genesis.io/H-0196d121-3310-771d-ab08-bb5f9f4973d4> {
+    hypo:S-0196d121-3400-715f-95a9-0430c564ffdb
+            rdfs:subClassOf  [ a                   owl:Restriction ;
+                               owl:onProperty      hypo:implies ;
+                               owl:someValuesFrom  hypo:S-0196d121-3500-7ad8-bf51-ec89040bdb84
+                             ] .
+}
+
+<http://hypo.project-genesis.io/states> {
+    hypo:S-REF-0196d120-c332-7b22-b220-572b040a96a8
+            rdfs:subClassOf  [ a                   owl:Restriction ;
+                               owl:onProperty      hypo:stateHasObservable ;
+                               owl:someValuesFrom  hypo:P-REF-0196d121-33e2-76a8-b698-330c8911c9ae
+                             ] ;
+            rdfs:subClassOf  [ a                   owl:Restriction ;
+                               owl:onProperty      hypo:stateHasObservable ;
+                               owl:someValuesFrom  hypo:P-REF-0196d121-34ed-799c-b5ea-296d85f551ce
+                             ] .
+    
+    hypo:S-0196d121-3500-7ad8-bf51-ec89040bdb84
+            rdfs:subClassOf  hypo:organismState ;
+            rdfs:subClassOf  [ a                   owl:Restriction ;
+                               owl:onProperty      hypo:stateHasObservable ;
+                               owl:someValuesFrom  hypo:P-0196d121-34f7-7dc8-a499-7a7664f3e710
+                             ] .
+    
+    hypo:S-0196d121-3400-715f-95a9-0430c564ffdb
+            rdfs:subClassOf  hypo:organismState ;
+            rdfs:subClassOf  [ a                   owl:Restriction ;
+                               owl:onProperty      hypo:stateHasObservable ;
+                               owl:someValuesFrom  hypo:P-0196d121-33f6-7e22-b286-acc2a7a6227e
+                             ] .
+}
+
+<http://hypo.project-genesis.io/phenotypes> {
+    hypo:P-REF-0196d121-33e2-76a8-b698-330c8911c9ae
+            rdfs:subClassOf  obo:APO_0000095 ;                                    # 'chemical compound accumulation'
+            rdfs:subClassOf  [ a                   owl:Restriction ;
+                               owl:onProperty      hypo:accumulationOfChemical ;
+                               owl:someValuesFrom  obo:CHEBI_29016                # 'arginine'
+                             ] .
+    
+    hypo:P-REF-0196d121-34ed-799c-b5ea-296d85f551ce
+            rdfs:subClassOf  obo:APO_0000087 ;                                    # 'resistance to chemicals'
+            rdfs:subClassOf  [ a                   owl:Restriction ;
+                               owl:onProperty      hypo:resistanceToChemical ;
+                               owl:someValuesFrom  obo:CHEBI_27732                # 'caffeine'
+                             ] .
+    
+    hypo:P-0196d121-33f6-7e22-b286-acc2a7a6227e
+            rdfs:subClassOf  obo:APO_0000095 ;                                    # 'chemical compound accumulation'
+            rdfs:subClassOf  [ a                   owl:Restriction ;
+                               owl:onProperty      hypo:accumulationOfChemical ;
+                               owl:someValuesFrom  obo:CHEBI_29016                # 'arginine'
+                             ] ;
+            rdfs:subClassOf  [ a                   owl:Restriction ;
+                               owl:onProperty      hypo:decreasedComparedTo ;
+                               owl:someValuesFrom  hypo:P-REF-0196d121-33e2-76a8-b698-330c8911c9ae
+                             ] .
+    
+    hypo:P-0196d121-34f7-7dc8-a499-7a7664f3e710
+            rdfs:subClassOf  obo:APO_0000087 ;                                    # 'resistance to chemicals'
+            rdfs:subClassOf  [ a                   owl:Restriction ;
+                               owl:onProperty      hypo:resistanceToChemical ;
+                               owl:someValuesFrom  obo:CHEBI_27732                # 'caffeine'
+                             ] ;
+            rdfs:subClassOf  [ a                   owl:Restriction ;
+                               owl:onProperty      hypo:increasedComparedTo ;
+                               owl:someValuesFrom  hypo:P-REF-0196d121-34ed-799c-b5ea-296d85f551ce
+                             ] .
+}
