@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>…</head>
+<body>
+  {% for sec in sections %}
+    <h2>{{ sec.title }}</h2>
+    <p>{{ sec.text }}</p>
+    
+    {% for fig in sec.figures %}
+      <figure>
+        <img src="{{ fig.path }}" style="max-width: {{ fig.max_width }}; height:auto;">
+        {% if fig.caption %}<figcaption>{{ fig.caption }}</figcaption>{% endif %}
+      </figure>
+    {% endfor %}
+    
+    {% for tbl in sec.tables %}
+      <h3>{{ tbl.caption }}</h3>
+      {{ tbl.html | safe }}
+    {% endfor %}
+  {% endfor %}
+</body>
+</html>

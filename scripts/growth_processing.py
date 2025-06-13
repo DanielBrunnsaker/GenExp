@@ -24,20 +24,21 @@ def save_plots(EXPERIMENT_DIR, growth_curves_filtered_smoothed, raw_growth_curve
     # Use a non-interactive backend
     plt.switch_backend('Agg')  # Ensures figures are not displayed, only saved
 
-    plot_group_averages_in_hours(growth_curves_filtered_smoothed, group_col = "Summary")
-    plt.savefig(EXPERIMENT_DIR / 'results/plots/averaged_growth_curves.png')   # save the figure to file
+    plot_group_averages_in_hours(growth_curves_filtered_smoothed, group_col = "Summary", out_pdf=EXPERIMENT_DIR / 'results/plots/averaged_curves.pdf')
+    #plt.savefig(EXPERIMENT_DIR / 'results/plots/averaged_growth_curves.png')   # save the figure to file
     plt.close('all')    # close the figure window
 
     # Plot a grid of them? along with the windows extracted for the growth rate calculation
-    plot_growth_curves(raw_growth_curves, annotations_df=mu_per_well)
-    plt.savefig(EXPERIMENT_DIR / 'results/plots/growth_curves.png')   # save the figure to file
+    plot_growth_curves(raw_growth_curves, annotations_df=mu_per_well, out_pdf=EXPERIMENT_DIR / 'results/plots/growth_curves.pdf')
+    #plt.savefig(EXPERIMENT_DIR / 'results/plots/growth_curves.png')   # save the figure to file
     plt.close('all')    # close the figure window
 
     # Prep boxplot/violinplots?
     
-    plot_boxplots(violinplot_df.drop('MaxOD', axis = 1))
+    #plot_boxplots(violinplot_df.drop('MaxOD', axis = 1), out_pdf=EXPERIMENT_DIR / 'results/plots/growth_metrics.pdf')
+    plot_boxplots(violinplot_df, out_pdf=EXPERIMENT_DIR / 'results/plots/growth_metrics.pdf')
     #plot_violinplots(violinplot_df.drop('MaxOD', axis = 1))
-    plt.savefig(EXPERIMENT_DIR / 'results/plots/growth_metrics.png')   # save the figure to file
+    #plt.savefig(EXPERIMENT_DIR / 'results/plots/growth_metrics.png')   # save the figure to file
     plt.close('all')    # close the figure window
 
 #@task

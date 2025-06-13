@@ -16,6 +16,9 @@ from croissance import process_curve
 import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib.lines import Line2D
+from matplotlib.patches import Patch
+import math
+
 
 from sklearn.isotonic import IsotonicRegression
 from scipy.interpolate import PchipInterpolator, UnivariateSpline
@@ -81,7 +84,7 @@ def extract_finalOD(layout, data):
             
         od_dict[well] = max_od
         
-    od_df = pd.DataFrame.from_dict(od_dict, orient = 'index', columns = ['MaxOD'])
+    od_df = pd.DataFrame.from_dict(od_dict, orient = 'index', columns = ['FinalOD'])
     return od_df
 
 
@@ -378,7 +381,7 @@ def compute_auc(df):
 
 # Plotting scripts
 
-def plot_group_averages_in_hours(df, group_col = "Summary"):
+def plot_group_averages_in_hours(df, group_col = "Summary", out_pdf = None):
 
     numeric_cols = df.select_dtypes(include=["float", "int"]).columns
     numeric_cols = numeric_cols.drop(group_col, errors="ignore")  # in case group_col is numeric dtype
@@ -408,9 +411,9 @@ def plot_group_averages_in_hours(df, group_col = "Summary"):
     )
 
     # Decorate plot
-    ax.set_title("Mean Growth Curves by Group (Hours)", fontsize=14, weight="bold")
+    ax.set_title("Averaged growth curves", fontsize=14, weight="bold")
     ax.set_xlabel("Time (hours)", fontsize=12)
-    ax.set_ylabel("Mean Growth (OD)", fontsize=12)
+    ax.set_ylabel("OD600", fontsize=12)
 
     # Legend inside the plot
     ax.legend(title=group_col, loc="best", fontsize=10, title_fontsize=11)
@@ -422,8 +425,11 @@ def plot_group_averages_in_hours(df, group_col = "Summary"):
     sns.despine()
 
     plt.tight_layout()
+    
+    if out_pdf:
+        plt.savefig(out_pdf, bbox_inches="tight")
+    
     #plt.show()
-
 
 def get_summary_color_map(df, palette_name="tab10"):
     """
@@ -433,153 +439,149 @@ def get_summary_color_map(df, palette_name="tab10"):
     palette = sns.color_palette(palette_name, len(groups))
     return {group: palette[i] for i, group in enumerate(groups)}
 
-
-def plot_growth_curves(growth_df, color_map=None, annotations_df=None):
+def plot_growth_curves(growth_df, color_map=None, annotations_df=None, out_pdf = None):
     """
-    Plots a grid of growth curves arranged as a 96-well plate.
-    
+    Plots a grid of growth curves arranged as a 96-well plate,
+    with each subplot’s border colored by its 'Summary' group.
+    Legend is placed just below the grid in 3 rows.
     """
-    # Generate a consistent color mapping if one is not provided.
     if color_map is None:
         color_map = get_summary_color_map(growth_df, palette_name="tab10")
-    
-    # Define expected rows and columns for a 96-well plate.
+
     rows = list("ABCDEFGH")
-    cols = list(range(1, 13))  # 1 to 12
-    
-    # Identify timepoint columns (all except "Summary").
-    time_cols = [col for col in growth_df.columns if col != "Summary"]
-    # Convert timepoints from seconds to hours.
+    cols = list(range(1, 13))
+    time_cols = [c for c in growth_df.columns if c != "Summary"]
     x_vals = [float(tp) / 3600 for tp in time_cols]
-    
-    # Create a grid of subplots.
-    fig, axes = plt.subplots(nrows=8, ncols=12, figsize=(14, 9), sharex=True, sharey=True)
-    
-    # Loop through each well position.
+
+    # Precompute global y-axis limit
+    global_max = growth_df[time_cols].to_numpy().max() + 0.25
+
+    fig, axes = plt.subplots(8, 12, figsize=(14, 9), sharex=True, sharey=True)
+
     for i, row in enumerate(rows):
         for j, col in enumerate(cols):
-            well = f"{row}{col}"  # e.g., "A1", "B5", etc.
+            well = f"{row}{col}"
             ax = axes[i, j]
-            
-            # Determine the curve color from the "Summary" column.
-            color = 'black'
-            if well in growth_df.index and "Summary" in growth_df.columns:
-                summary_val = growth_df.loc[well, "Summary"]
-                color = color_map.get(summary_val, 'black')
-            
-            # Plot the growth curve using only the timepoint columns.
+
+            # Determine border color
+            color = 'lightgray'
             if well in growth_df.index:
-                ax.plot(x_vals, growth_df.loc[well, time_cols], linestyle='-', color='black', linewidth=2)
-            
-            # Draw a shaded area for annotated wells if mu != 0.
+                summary = growth_df.loc[well, "Summary"]
+                color = color_map.get(summary, 'lightgray')
+                # Plot the curve
+                ax.plot(x_vals,
+                        growth_df.loc[well, time_cols],
+                        linestyle='-',
+                        color='black',
+                        linewidth=1.5)
+
+            # Annotated window shading
             if annotations_df is not None and well in annotations_df.index:
-                if annotations_df.loc[well]['mu'] != 0:
-                    start_time = float(annotations_df.loc[well, "start"])
-                    end_time = float(annotations_df.loc[well, "end"])
-                    ax.axvspan(start_time, end_time, color=color, alpha=0.4)
-            
-            # Hide tick labels on all subplots by default.
+                mu = annotations_df.loc[well, "mu"]
+                if mu != 0:
+                    start = float(annotations_df.loc[well, "start"])
+                    end   = float(annotations_df.loc[well, "end"])
+                    ax.axvspan(start, end, color=color, alpha=0.3)
+
+            # Color the spines
+            for spine in ax.spines.values():
+                spine.set_edgecolor(color)
+                spine.set_linewidth(1.5)
+
+            # Clean ticks and limits
             ax.tick_params(labelbottom=False, labelleft=False)
-            ax.set_ylim([0, growth_df.drop(columns='Summary').max().max()+0.25])
-            
-            # For the bottom row, add the column label.
+            ax.set_ylim(0, global_max)
+
+            # Row/column labels
             if i == 7:
                 ax.set_xlabel(str(col), fontsize=6)
-            # For the left column, add the row label.
             if j == 0:
                 ax.set_ylabel(row, fontsize=6)
-    
-    # Enable numeric tick labels only for the bottom left subplot ("H1").
-    bottom_left_ax = axes[7, 0]
-    bottom_left_ax.tick_params(labelbottom=True, labelleft=True, labelsize=10)
-    bottom_left_ax.set_xlabel(f"{cols[0]}\nTime (hours)", fontsize=8)
-    bottom_left_ax.set_ylabel(f"{rows[-1]}\nOD600", fontsize=8)
-    
-    # Add a legend below the grid.
-    legend_handles = [Line2D([0], [0], color=color, lw=2.5, label=str(summary))
-                      for summary, color in sorted(color_map.items())]
-    fig.legend(handles=legend_handles, loc='lower center', ncol=len(color_map),
-               fontsize=8, bbox_to_anchor=(0.5, -0.1))
-    fig.subplots_adjust(bottom=0.2)
-    
-    plt.tight_layout()
-    #plt.show()
 
-def plot_boxplots(df, color_map=None):
-    
-    # Generate a consistent color mapping if not provided.
-    if color_map is None:
-        color_map = get_summary_color_map(df, palette_name="tab10")
-    
-    # Create a figure with two subplots.
-    fig, axes = plt.subplots(1, 2, figsize=(12, 6))
-    
-    # Left subplot: AUC boxplot.
-    sns.boxplot(x="Summary", y="AUC", data=df, ax=axes[0], palette=color_map)
-    axes[0].set_title("AUC")
-    axes[0].set_xlabel("")
-    axes[0].set_xticklabels([])  # Remove x-axis tick labels.
-    axes[0].set_ylabel("AUC")
-    
-    # Right subplot: Growth rate (mu) boxplot.
-    sns.boxplot(x="Summary", y="mu", data=df, ax=axes[1], palette=color_map)
-    axes[1].set_title("Growth Rate (mu)")
-    axes[1].set_xlabel("")
-    axes[1].set_xticklabels([])  # Remove x-axis tick labels.
-    axes[1].set_ylabel("mu")
-    
-    # Create legend handles from the color_map.
+    # Only show axes labels on bottom‐left
+    bl = axes[7, 0]
+    bl.tick_params(labelbottom=True, labelleft=True, labelsize=8)
+    bl.set_xlabel(f"{cols[0]}\nTime (h)", fontsize=8)
+    bl.set_ylabel(f"{rows[-1]}\nOD600", fontsize=8)
+
+    # Build legend handles
     legend_handles = [
-        Line2D([0], [0], marker='o', color='w', label=str(group),
-               markerfacecolor=color, markersize=10)
-        for group, color in sorted(color_map.items())
+        Line2D([0], [0], color=col, lw=2, label=str(summary))
+        for summary, col in sorted(color_map.items())
     ]
-    
-    # Add the legend beneath the plots.
-    fig.legend(handles=legend_handles, loc='lower center',
-               ncol=min(len(color_map), 3), fontsize=9, frameon=False)
-    fig.subplots_adjust(bottom=0.25)
-    fig.tight_layout()
-    # plt.show() can be called outside the function if desired.
+
+    # Determine columns so legend forms 3 rows
+    n_items = len(legend_handles)
+    ncol = math.ceil(n_items / 3)
+
+    # Place legend just below the grid
+    fig.legend(
+        handles=legend_handles,
+        loc='lower center',
+        bbox_to_anchor=(0.5, -0.05),
+        ncol=ncol,
+        title="Summary",
+        frameon=False,
+        fontsize=8,
+        title_fontsize=9
+    )
+
+    # Adjust margins to bring legend closer
+    fig.subplots_adjust(bottom=0.1, top=0.98, left=0.02, right=0.98,
+                        hspace=0.2, wspace=0.1)
+    plt.tight_layout()
+
+    if out_pdf:
+        fig.savefig(out_pdf, bbox_inches="tight")
 
 
-def plot_violinplots(df, color_map=None):
-    """
-    Creates side-by-side violin plots for "AUC" and "mu" from a DataFrame,
-    using a color mapping based on the "Summary" column.
-    """
-    # Generate a consistent color mapping if not provided.
+def plot_boxplots(df, color_map=None, out_pdf=None):
     if color_map is None:
         color_map = get_summary_color_map(df, palette_name="tab10")
-    
-    # Create a figure with two subplots.
-    fig, axes = plt.subplots(1, 2, figsize=(12, 6))
-    
-    # Left subplot: AUC violin plot with a boxplot inside.
-    sns.boxplot(x="Summary", y="AUC", data=df, ax=axes[0],
-                   inner="box", palette=color_map)
-    axes[0].set_title("AUC")
-    axes[0].set_xlabel("")
-    axes[0].set_xticklabels([])  # Remove x-axis tick labels.
-    axes[0].set_ylabel("AUC")
-    
-    # Right subplot: Growth rate (mu) violin plot with a boxplot inside.
-    sns.boxplot(x="Summary", y="mu", data=df, ax=axes[1],
-                   inner="box", palette=color_map)
-    axes[1].set_title("Growth Rate (mu)")
-    axes[1].set_xlabel("")
-    axes[1].set_xticklabels([])  # Remove x-axis tick labels.
-    axes[1].set_ylabel("mu")
-    
-    # Create legend handles from the color_map.
-    legend_handles = [Line2D([0], [0], marker='o', color='w', label=str(group),
-                             markerfacecolor=color, markersize=10)
-                      for group, color in sorted(color_map.items())]
-    
-    # Add the legend naturally beneath the plots.
-    fig.legend(handles=legend_handles, loc='lower center',
-               ncol=min(len(color_map), 3), fontsize=9, frameon=False)
-    fig.subplots_adjust(bottom=0.25)
-    fig.tight_layout()
-    
-    #plt.show()
+
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+
+    # 1) AUC
+    sns.boxplot(x="Summary", y="AUC", data=df, ax=axes[0], palette=color_map, hue = "Summary", legend = False)
+    axes[0].set(xlabel="", ylabel="AUC")
+    axes[0].set_xticklabels([])
+    axes[0].tick_params(bottom=False)
+
+    # 2) Growth rate (mu)
+    sns.boxplot(x="Summary", y="mu", data=df, ax=axes[1], palette=color_map, hue = "Summary", legend = False)
+    axes[1].set(xlabel="", ylabel="mu")
+    axes[1].set_xticklabels([])
+    axes[1].tick_params(bottom=False)
+
+    # 3) Final OD600
+    sns.boxplot(x="Summary", y="FinalOD", data=df, ax=axes[2], palette=color_map, hue = "Summary", legend = False)
+    axes[2].set(xlabel="", ylabel="OD600")
+    axes[2].set_xticklabels([])
+    axes[2].tick_params(bottom=False)
+
+    sns.despine(fig=fig, bottom=True)
+
+    # Legend handles
+    legend_handles = [
+        Patch(facecolor=c, label=str(g))
+        for g, c in sorted(color_map.items())
+    ]
+
+    # Place legend just below the plots, in 3 columns → 3 rows for 8 items
+    fig.legend(
+        handles=legend_handles,
+        loc='lower center',
+        bbox_to_anchor=(0.5, -0.08),  # slightly below the axes
+        ncol=3,
+        title="Summary",
+        frameon=False,
+        fontsize=8,
+        title_fontsize=9
+    )
+
+    # Make room at the bottom for the legend
+    fig.subplots_adjust(left=0.05, right=0.95, top=0.9, bottom=0.18)
+
+    if out_pdf:
+        fig.savefig(out_pdf, bbox_inches="tight")
+

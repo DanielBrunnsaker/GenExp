@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>{{ title }}</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    h1 { border-bottom: 2px solid #444; }
+    figure { margin: 1.5rem 0; }
+    figcaption { font-size: 0.9em; color: #555; }
+    .report-table { border-collapse: collapse; margin-bottom: 1rem; }
+    .report-table th, .report-table td { border: 1px solid #ccc; padding: 0.5em 0.75em; }
+  </style>
+</head>
+<body>
+  <h1>{{ title }}</h1>s
+  {% for fig in figures %}
+    <figure>
+      <img src="{{ fig.path }}" alt="Figure" style="max-width:60%; height:auto;">
+      {% if fig.caption %}<figcaption>{{ fig.caption }}</figcaption>{% endif %}
+    </figure>
+  {% endfor %}
+  {% for tbl in tables %}
+    <h2>{{ tbl.caption }}</h2>
+    {{ tbl.html | safe }}
+  {% endfor %}
+</body>
+</html>

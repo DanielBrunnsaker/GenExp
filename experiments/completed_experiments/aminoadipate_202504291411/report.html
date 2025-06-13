@@ -1,0 +1,4404 @@
+<!DOCTYPE html>
+<html>
+<head>…</head>
+<body>
+  
+    <h2>Hypothesis Summary</h2>
+    <p>**Motivation:**
+The statement suggests an association between higher intracellular levels of aminoadipate and increased resistance to formic acid in Saccharomyces cerevisiae. Understanding this association could provide insights into metabolic pathways that confer resistance to toxic compounds, which is valuable for industrial applications where yeast is exposed to harsh chemical environments.
+
+**Hypothesis:**
+Increasing the intracellular levels of aminoadipate in Saccharomyces cerevisiae enhances its resistance to 10 mM formic acid. This could be due to aminoadipate&#39;s role in metabolic pathways that mitigate formic acid&#39;s toxic effects.
+
+**Experimental Plan:**
+
+1. **Strain and Media:**
+   - Use a reference/wild-type prototrophic strain of Saccharomyces cerevisiae.
+   - Baseline media: Minimal media without amino acids.
+
+2. **Supplementation Levels:**
+   - Control: No aminoadipate supplementation.
+   - Low aminoadipate: 1 mM aminoadipate.
+   - High aminoadipate: 5 mM aminoadipate (supraphysiological concentration).
+
+3. **Treatment Levels:**
+   - Control: No formic acid.
+   - Treatment: 10 mM formic acid.
+
+4. **Negative Control:**
+   - Proline supplementation at 5 mM in the absence of formic acid to serve as a negative control, ensuring it is equimolar to the highest aminoadipate concentration.
+
+5. **Experimental Conditions:**
+   - Total conditions: (3 aminoadipate levels x 2 formic acid levels) + 2 negative controls = 8 conditions.
+   - Each condition will be tested in a 96-well plate format with appropriate replicates.
+   - All supplementations and treatments are added at the start of the experiment (t=0h).
+
+6. **Measurements:**
+   - Measure OD600 every 20 minutes to assess growth and viability.
+   - At the end of 20 hours, perform mass spectrometry-based metabolomics to measure intracellular aminoadipate levels.
+
+**Expected Outcomes:**
+- If higher intracellular aminoadipate levels are associated with increased resistance to formic acid, we expect the yeast in the high aminoadipate condition to exhibit better growth and viability under 10 mM formic acid treatment compared to the control and low aminoadipate conditions.
+- In the absence of formic acid, aminoadipate supplementation might independently affect growth, which should be accounted for by comparing with the untreated control.
+- The proline negative control should not show increased resistance to formic acid, confirming the specific association with aminoadipate.
+- Mass spectrometry should verify increased intracellular aminoadipate levels corresponding to the supplementation levels.</p>
+    
+    
+    
+    
+      <h3>Summary statistics</h3>
+      <table class="dataframe report-table">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Variable</th>
+      <th>Beta</th>
+      <th>SE</th>
+      <th>CI(2.5%)</th>
+      <th>CI(97.5%)</th>
+      <th>exp(Beta)</th>
+      <th>Change(%)</th>
+      <th>Pval(empirical)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Intercept</td>
+      <td>10.944602</td>
+      <td>0.022797</td>
+      <td>10.898058</td>
+      <td>10.987401</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.000200</td>
+    </tr>
+    <tr>
+      <td>C(Treatment)[T.Formic acid]</td>
+      <td>-2.000424</td>
+      <td>0.127565</td>
+      <td>-2.258054</td>
+      <td>-1.757298</td>
+      <td>0.135278</td>
+      <td>-86.472206</td>
+      <td>0.000200</td>
+    </tr>
+    <tr>
+      <td>Q("Supplementation (per mM)")</td>
+      <td>-0.277627</td>
+      <td>0.008791</td>
+      <td>-0.295759</td>
+      <td>-0.261704</td>
+      <td>0.757579</td>
+      <td>-24.242086</td>
+      <td>0.000200</td>
+    </tr>
+    <tr>
+      <td>Supplement at 5.0 mM</td>
+      <td>-1.388136</td>
+      <td>0.043954</td>
+      <td>-1.478797</td>
+      <td>-1.308518</td>
+      <td>0.249540</td>
+      <td>-75.046008</td>
+      <td>0.000200</td>
+    </tr>
+    <tr>
+      <td>C(Treatment)[T.Formic acid]:Q("Supplementation (per mM)")</td>
+      <td>0.076813</td>
+      <td>0.042806</td>
+      <td>-0.008305</td>
+      <td>0.161031</td>
+      <td>1.079840</td>
+      <td>7.984044</td>
+      <td>0.038792</td>
+    </tr>
+    <tr>
+      <td>Formic acid×(Supplement at 5.0 mM)</td>
+      <td>0.384066</td>
+      <td>0.214030</td>
+      <td>-0.041524</td>
+      <td>0.805153</td>
+      <td>1.468243</td>
+      <td>46.824303</td>
+      <td>0.038792</td>
+    </tr>
+    <tr>
+      <td>Q("Negative control")</td>
+      <td>0.001107</td>
+      <td>0.038733</td>
+      <td>-0.074544</td>
+      <td>0.076966</td>
+      <td>1.001108</td>
+      <td>0.110761</td>
+      <td>0.478904</td>
+    </tr>
+    <tr>
+      <td>C(Treatment)[T.Formic acid]:Q("Negative control")</td>
+      <td>0.022482</td>
+      <td>0.369939</td>
+      <td>-0.758571</td>
+      <td>0.688994</td>
+      <td>1.022737</td>
+      <td>2.273692</td>
+      <td>0.456109</td>
+    </tr>
+  </tbody>
+</table>
+    
+      <h3>Metabolites</h3>
+      <table class="dataframe report-table">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Group1</th>
+      <th>Group2</th>
+      <th>Feature</th>
+      <th>U_stat</th>
+      <th>p_raw</th>
+      <th>Median1</th>
+      <th>Median2</th>
+      <th>p_corrected</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>6391.705649</td>
+      <td>1381.840263</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>6391.705649</td>
+      <td>258.827586</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>33.0</td>
+      <td>0.010101</td>
+      <td>6391.705649</td>
+      <td>3810.110911</td>
+      <td>0.047951</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>44.0</td>
+      <td>0.072106</td>
+      <td>295.576793</td>
+      <td>42.587766</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>36.0</td>
+      <td>0.164918</td>
+      <td>295.576793</td>
+      <td>27.225504</td>
+      <td>0.342268</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>15.0</td>
+      <td>0.445221</td>
+      <td>295.576793</td>
+      <td>940.475930</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>6391.705649</td>
+      <td>295.576793</td>
+      <td>0.012034</td>
+    </tr>
+  </tbody>
+</table>
+    
+  
+    <h2>Growth Data</h2>
+    <p>Summary of growth experiment...</p>
+    
+    
+      <figure>
+        <img src="/var/folders/rs/q13v2x3x47l22hkvh3svwj5c0000gn/T/report_images_m2j7fo5l/growth_curves.png" style="max-width: 50%; height:auto;">
+        <figcaption>Growth curves</figcaption>
+      </figure>
+    
+    
+    
+  
+    <h2>Metabolomics Data</h2>
+    <p>Overview of metabolomics results...</p>
+    
+    
+    
+    
+      <h3>Univariate analysis results (Mann-Whitney U)</h3>
+      <table class="dataframe report-table">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Group1</th>
+      <th>Group2</th>
+      <th>Feature</th>
+      <th>U_stat</th>
+      <th>p_raw</th>
+      <th>Median1</th>
+      <th>Median2</th>
+      <th>p_corrected</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]</td>
+      <td>47.0</td>
+      <td>0.002331</td>
+      <td>11422.664858</td>
+      <td>3380.352015</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>2'-Deoxyguanosine-5'-Monophosphate [[M+H]]</td>
+      <td>33.0</td>
+      <td>0.317599</td>
+      <td>10703.194079</td>
+      <td>8958.701473</td>
+      <td>0.524674</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>2'-Deoxyinosine [[M+H]]</td>
+      <td>45.0</td>
+      <td>0.006993</td>
+      <td>1643.848564</td>
+      <td>1258.375058</td>
+      <td>0.039029</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>2'-Deoxyuridine [[M+Na]]</td>
+      <td>44.0</td>
+      <td>0.011072</td>
+      <td>796.174504</td>
+      <td>309.525164</td>
+      <td>0.048135</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>3-Methylhistidine [[M+Na]]</td>
+      <td>34.0</td>
+      <td>0.259324</td>
+      <td>318.224335</td>
+      <td>108.773703</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>ATP [[M+H]]</td>
+      <td>45.0</td>
+      <td>0.006993</td>
+      <td>1683.192072</td>
+      <td>393.450738</td>
+      <td>0.039029</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Acetyl coenzyme A (Acetyl-CoA) [[M+H]]</td>
+      <td>27.0</td>
+      <td>0.804779</td>
+      <td>1034.608550</td>
+      <td>1174.993885</td>
+      <td>0.905650</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Ademetionine [[M+H]]</td>
+      <td>42.0</td>
+      <td>0.026224</td>
+      <td>2975.545344</td>
+      <td>822.377011</td>
+      <td>0.093366</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Adenine [[M+H]]</td>
+      <td>21.0</td>
+      <td>0.710373</td>
+      <td>9745.881202</td>
+      <td>9045.013129</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Adenosine phosphate [[M+H]]</td>
+      <td>30.0</td>
+      <td>0.534965</td>
+      <td>85033.110229</td>
+      <td>75025.901532</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Adenosine-3'-5'-Diphosphate [[M+H]]</td>
+      <td>47.0</td>
+      <td>0.002331</td>
+      <td>11018.725641</td>
+      <td>3181.929655</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Alpha-D-Glucose [[M+Na]]</td>
+      <td>5.0</td>
+      <td>0.011072</td>
+      <td>399.043240</td>
+      <td>1702.129162</td>
+      <td>0.048135</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>6391.705649</td>
+      <td>1381.840263</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Asparagine [[M+NH4]]</td>
+      <td>32.0</td>
+      <td>0.382867</td>
+      <td>4217.233975</td>
+      <td>3406.509717</td>
+      <td>0.581339</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Biotin [[M+H]]</td>
+      <td>36.0</td>
+      <td>0.164918</td>
+      <td>958.765922</td>
+      <td>355.008681</td>
+      <td>0.342268</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Choline [[M+H]]</td>
+      <td>45.0</td>
+      <td>0.006993</td>
+      <td>2754.933616</td>
+      <td>1136.744967</td>
+      <td>0.039029</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Cytidine [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.208625</td>
+      <td>12416.078102</td>
+      <td>8633.389414</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>D-(+)-Melibiose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]</td>
+      <td>26.0</td>
+      <td>0.901515</td>
+      <td>1882.374046</td>
+      <td>2338.990991</td>
+      <td>0.952240</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>D-(+)-Turanose [[M+Na]]/Palatinose [[M+Na]]</td>
+      <td>26.0</td>
+      <td>0.901515</td>
+      <td>1882.374046</td>
+      <td>2343.037688</td>
+      <td>0.952240</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>D-Fructose [[M+Na]]/D-Mannose [[M+Na]]</td>
+      <td>14.0</td>
+      <td>0.208625</td>
+      <td>278.469001</td>
+      <td>781.487016</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>D-Galactose [[M+Na]]</td>
+      <td>10.0</td>
+      <td>0.072844</td>
+      <td>378.429086</td>
+      <td>1256.154649</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>D-Glucose [[M+Na]]</td>
+      <td>5.0</td>
+      <td>0.011072</td>
+      <td>378.429086</td>
+      <td>1706.910423</td>
+      <td>0.048135</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Deoxyadenosine [[M+H]]</td>
+      <td>32.0</td>
+      <td>0.382867</td>
+      <td>60.825993</td>
+      <td>21.164114</td>
+      <td>0.581339</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Galactose [[M+Na]]</td>
+      <td>10.0</td>
+      <td>0.072844</td>
+      <td>378.429086</td>
+      <td>1256.154649</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Glucosamine [[M+H]]</td>
+      <td>4.0</td>
+      <td>0.006993</td>
+      <td>2972.870425</td>
+      <td>6113.750154</td>
+      <td>0.039029</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Glutamic Acid [[M-H2O+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>6875.684800</td>
+      <td>2009.325225</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Glutathione [[M+H]]</td>
+      <td>10.0</td>
+      <td>0.072844</td>
+      <td>56388.954656</td>
+      <td>75752.536105</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Histidine [[M+H]]</td>
+      <td>46.0</td>
+      <td>0.007226</td>
+      <td>1500.484045</td>
+      <td>332.297687</td>
+      <td>0.039792</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Homocitrate [[M+Na]]</td>
+      <td>14.0</td>
+      <td>0.208625</td>
+      <td>33.593182</td>
+      <td>56.710648</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Imidazoleacetic acid [[M+H]]</td>
+      <td>24.0</td>
+      <td>1.000000</td>
+      <td>55.254386</td>
+      <td>61.259638</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Indole-3-Ethanol [[M+H]]</td>
+      <td>21.0</td>
+      <td>0.710373</td>
+      <td>294.760643</td>
+      <td>321.539849</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Inositol [[M+Na]]</td>
+      <td>6.0</td>
+      <td>0.017483</td>
+      <td>314.664478</td>
+      <td>1720.058893</td>
+      <td>0.069529</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>L-2-Amino-4-[2-Aminophenyl]-4-Oxobutanoic Acid [[M+H]]</td>
+      <td>34.0</td>
+      <td>0.259324</td>
+      <td>77.494334</td>
+      <td>18.518600</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>L-Anserine [[M+H]]</td>
+      <td>0.0</td>
+      <td>0.000583</td>
+      <td>3.465468</td>
+      <td>2242.411733</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>L-Arginine [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>46589.454809</td>
+      <td>3259.273523</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>L-Citrulline [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>5364.068855</td>
+      <td>1592.907321</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>L-Lysine [[M+Na]]</td>
+      <td>24.0</td>
+      <td>1.000000</td>
+      <td>70.602827</td>
+      <td>91.143465</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>L-Threonine [[M+Na]]</td>
+      <td>17.0</td>
+      <td>0.382867</td>
+      <td>35.946420</td>
+      <td>226.632385</td>
+      <td>0.581339</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>L-Tryptophan [[M+NH4]]</td>
+      <td>28.0</td>
+      <td>0.710373</td>
+      <td>712.513435</td>
+      <td>732.807440</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>L-Valine [[M+H]]</td>
+      <td>27.0</td>
+      <td>0.804779</td>
+      <td>1612.543926</td>
+      <td>1079.369803</td>
+      <td>0.905650</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Levocarnitine [[M+H]]</td>
+      <td>28.0</td>
+      <td>0.710373</td>
+      <td>81.595389</td>
+      <td>56.653761</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Methionine [[M+H]]</td>
+      <td>20.0</td>
+      <td>0.620047</td>
+      <td>2452.983689</td>
+      <td>2563.178017</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]</td>
+      <td>0.0</td>
+      <td>0.000583</td>
+      <td>1527.003915</td>
+      <td>69280.396114</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>N2-Acetyl-L-ornithine [[M+H]]</td>
+      <td>48.0</td>
+      <td>0.001166</td>
+      <td>875.652519</td>
+      <td>34.033132</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Niacin [[M+H]]</td>
+      <td>14.0</td>
+      <td>0.208625</td>
+      <td>215.046777</td>
+      <td>424.164114</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Nicotinamide [[M+H]]</td>
+      <td>18.0</td>
+      <td>0.455711</td>
+      <td>1492.442079</td>
+      <td>1919.753159</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Nicotinamide ribotide [[M+H]]</td>
+      <td>1.0</td>
+      <td>0.001166</td>
+      <td>292.323634</td>
+      <td>819.347654</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>O-acetyl-L-serine [[M+H]]</td>
+      <td>17.0</td>
+      <td>0.382867</td>
+      <td>97.141200</td>
+      <td>186.949672</td>
+      <td>0.581339</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Phenylethyl alcohol [[M+H]]</td>
+      <td>18.0</td>
+      <td>0.455711</td>
+      <td>382.587647</td>
+      <td>515.549225</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Pidolic Acid [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>7451.156292</td>
+      <td>2730.711281</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Proline [[M+NH4]]</td>
+      <td>34.0</td>
+      <td>0.259324</td>
+      <td>5.751427</td>
+      <td>4.781262</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Pyridoxal [[M+H]]</td>
+      <td>31.0</td>
+      <td>0.455711</td>
+      <td>4566.500000</td>
+      <td>3490.315098</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Pyridoxamine [[M+H]]</td>
+      <td>33.0</td>
+      <td>0.317599</td>
+      <td>70.602827</td>
+      <td>44.870629</td>
+      <td>0.524674</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Sucrose [[M+Na]]</td>
+      <td>28.0</td>
+      <td>0.710373</td>
+      <td>1872.613588</td>
+      <td>1964.735230</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Thymine [[M+H]]</td>
+      <td>31.0</td>
+      <td>0.455711</td>
+      <td>72.650938</td>
+      <td>61.259638</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Trehalose [[M+Na]]</td>
+      <td>26.0</td>
+      <td>0.901515</td>
+      <td>1882.374046</td>
+      <td>2223.995624</td>
+      <td>0.952240</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>Xanthurenic acid [[M+H]]</td>
+      <td>33.0</td>
+      <td>0.317599</td>
+      <td>404.460634</td>
+      <td>207.583891</td>
+      <td>0.524674</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>d-Desthiobiotin [[M+K]]</td>
+      <td>28.0</td>
+      <td>0.710373</td>
+      <td>312.084959</td>
+      <td>315.843482</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosLow</td>
+      <td>gamma-Glutamylcysteine [[M+H]]</td>
+      <td>46.0</td>
+      <td>0.004079</td>
+      <td>1479.406565</td>
+      <td>689.170924</td>
+      <td>0.026742</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>11422.664858</td>
+      <td>2543.164207</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>2'-Deoxyguanosine-5'-Monophosphate [[M+H]]</td>
+      <td>33.0</td>
+      <td>0.010101</td>
+      <td>10703.194079</td>
+      <td>5641.572115</td>
+      <td>0.047951</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>2'-Deoxyinosine [[M+H]]</td>
+      <td>19.0</td>
+      <td>0.876263</td>
+      <td>1643.848564</td>
+      <td>1550.500000</td>
+      <td>0.942439</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>2'-Deoxyuridine [[M+Na]]</td>
+      <td>34.0</td>
+      <td>0.005051</td>
+      <td>796.174504</td>
+      <td>299.733862</td>
+      <td>0.032090</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>3-Methylhistidine [[M+Na]]</td>
+      <td>20.0</td>
+      <td>0.755051</td>
+      <td>318.224335</td>
+      <td>136.456579</td>
+      <td>0.863811</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>ATP [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>1683.192072</td>
+      <td>105.787274</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Acetyl coenzyme A (Acetyl-CoA) [[M+H]]</td>
+      <td>13.0</td>
+      <td>0.530303</td>
+      <td>1034.608550</td>
+      <td>1092.000000</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Ademetionine [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>2975.545344</td>
+      <td>653.971154</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Adenine [[M+H]]</td>
+      <td>24.0</td>
+      <td>0.343434</td>
+      <td>9745.881202</td>
+      <td>6286.954023</td>
+      <td>0.547639</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Adenosine phosphate [[M+H]]</td>
+      <td>34.0</td>
+      <td>0.005051</td>
+      <td>85033.110229</td>
+      <td>41552.870192</td>
+      <td>0.032090</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Adenosine-3'-5'-Diphosphate [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>11018.725641</td>
+      <td>2528.673243</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Alpha-D-Glucose [[M+Na]]</td>
+      <td>2.0</td>
+      <td>0.010101</td>
+      <td>399.043240</td>
+      <td>3372.663462</td>
+      <td>0.047951</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>6391.705649</td>
+      <td>258.827586</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Asparagine [[M+NH4]]</td>
+      <td>20.0</td>
+      <td>0.755051</td>
+      <td>4217.233975</td>
+      <td>3755.574874</td>
+      <td>0.863811</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Biotin [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>958.765922</td>
+      <td>14.000000</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Choline [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>2754.933616</td>
+      <td>23.166667</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Cytidine [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>12416.078102</td>
+      <td>637.000000</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>D-(+)-Melibiose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]</td>
+      <td>24.0</td>
+      <td>0.343434</td>
+      <td>1882.374046</td>
+      <td>713.942308</td>
+      <td>0.547639</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>D-(+)-Turanose [[M+Na]]/Palatinose [[M+Na]]</td>
+      <td>25.0</td>
+      <td>0.267677</td>
+      <td>1882.374046</td>
+      <td>713.942308</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>D-Fructose [[M+Na]]/D-Mannose [[M+Na]]</td>
+      <td>10.0</td>
+      <td>0.267677</td>
+      <td>278.469001</td>
+      <td>1227.980769</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>D-Galactose [[M+Na]]</td>
+      <td>9.0</td>
+      <td>0.202020</td>
+      <td>378.429086</td>
+      <td>2021.884615</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>D-Glucose [[M+Na]]</td>
+      <td>2.0</td>
+      <td>0.010101</td>
+      <td>378.429086</td>
+      <td>3361.240385</td>
+      <td>0.047951</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Deoxyadenosine [[M+H]]</td>
+      <td>2.0</td>
+      <td>0.010101</td>
+      <td>60.825993</td>
+      <td>541.168269</td>
+      <td>0.047951</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Galactose [[M+Na]]</td>
+      <td>9.0</td>
+      <td>0.202020</td>
+      <td>378.429086</td>
+      <td>2021.884615</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Glucosamine [[M+H]]</td>
+      <td>6.0</td>
+      <td>0.073232</td>
+      <td>2972.870425</td>
+      <td>5141.500000</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Glutamic Acid [[M-H2O+H]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>6875.684800</td>
+      <td>458.880531</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Glutathione [[M+H]]</td>
+      <td>30.0</td>
+      <td>0.047980</td>
+      <td>56388.954656</td>
+      <td>41077.384615</td>
+      <td>0.144640</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Histidine [[M+H]]</td>
+      <td>33.0</td>
+      <td>0.010101</td>
+      <td>1500.484045</td>
+      <td>150.501483</td>
+      <td>0.047951</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Homocitrate [[M+Na]]</td>
+      <td>6.0</td>
+      <td>0.073232</td>
+      <td>33.593182</td>
+      <td>75.250742</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Imidazoleacetic acid [[M+H]]</td>
+      <td>19.0</td>
+      <td>0.876263</td>
+      <td>55.254386</td>
+      <td>35.019830</td>
+      <td>0.942439</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Indole-3-Ethanol [[M+H]]</td>
+      <td>0.0</td>
+      <td>0.002525</td>
+      <td>294.760643</td>
+      <td>1506.105423</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Inositol [[M+Na]]</td>
+      <td>2.0</td>
+      <td>0.010101</td>
+      <td>314.664478</td>
+      <td>3131.085205</td>
+      <td>0.047951</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>L-2-Amino-4-[2-Aminophenyl]-4-Oxobutanoic Acid [[M+H]]</td>
+      <td>18.0</td>
+      <td>1.000000</td>
+      <td>77.494334</td>
+      <td>71.394231</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>L-Anserine [[M+H]]</td>
+      <td>0.0</td>
+      <td>0.002525</td>
+      <td>3.465468</td>
+      <td>7904.769231</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>L-Arginine [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>46589.454809</td>
+      <td>3108.311809</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>L-Citrulline [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>5364.068855</td>
+      <td>1035.310345</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>L-Lysine [[M+Na]]</td>
+      <td>12.0</td>
+      <td>0.431818</td>
+      <td>70.602827</td>
+      <td>139.000000</td>
+      <td>0.634665</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>L-Threonine [[M+Na]]</td>
+      <td>16.0</td>
+      <td>0.876263</td>
+      <td>35.946420</td>
+      <td>28.000000</td>
+      <td>0.942439</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>L-Tryptophan [[M+NH4]]</td>
+      <td>16.0</td>
+      <td>0.876263</td>
+      <td>712.513435</td>
+      <td>857.382045</td>
+      <td>0.942439</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>L-Valine [[M+H]]</td>
+      <td>13.0</td>
+      <td>0.530303</td>
+      <td>1612.543926</td>
+      <td>1610.653846</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Levocarnitine [[M+H]]</td>
+      <td>9.0</td>
+      <td>0.202020</td>
+      <td>81.595389</td>
+      <td>158.172414</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Methionine [[M+H]]</td>
+      <td>21.0</td>
+      <td>0.638889</td>
+      <td>2452.983689</td>
+      <td>1354.513349</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]</td>
+      <td>0.0</td>
+      <td>0.002525</td>
+      <td>1527.003915</td>
+      <td>229726.644231</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>N2-Acetyl-L-ornithine [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>875.652519</td>
+      <td>33.250000</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Niacin [[M+H]]</td>
+      <td>13.0</td>
+      <td>0.530303</td>
+      <td>215.046777</td>
+      <td>348.403846</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Nicotinamide [[M+H]]</td>
+      <td>10.0</td>
+      <td>0.267677</td>
+      <td>1492.442079</td>
+      <td>1610.000000</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Nicotinamide ribotide [[M+H]]</td>
+      <td>3.0</td>
+      <td>0.017677</td>
+      <td>292.323634</td>
+      <td>666.086962</td>
+      <td>0.069529</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>O-acetyl-L-serine [[M+H]]</td>
+      <td>25.0</td>
+      <td>0.267677</td>
+      <td>97.141200</td>
+      <td>19.321286</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Phenylethyl alcohol [[M+H]]</td>
+      <td>7.0</td>
+      <td>0.106061</td>
+      <td>382.587647</td>
+      <td>679.022989</td>
+      <td>0.246084</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Pidolic Acid [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.002525</td>
+      <td>7451.156292</td>
+      <td>1081.500000</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Proline [[M+NH4]]</td>
+      <td>16.0</td>
+      <td>0.876263</td>
+      <td>5.751427</td>
+      <td>6.390805</td>
+      <td>0.942439</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Pyridoxal [[M+H]]</td>
+      <td>18.0</td>
+      <td>1.000000</td>
+      <td>4566.500000</td>
+      <td>4132.298077</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Pyridoxamine [[M+H]]</td>
+      <td>9.0</td>
+      <td>0.202020</td>
+      <td>70.602827</td>
+      <td>208.471154</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Sucrose [[M+Na]]</td>
+      <td>24.0</td>
+      <td>0.343434</td>
+      <td>1872.613588</td>
+      <td>705.375000</td>
+      <td>0.547639</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Thymine [[M+H]]</td>
+      <td>22.0</td>
+      <td>0.530303</td>
+      <td>72.650938</td>
+      <td>35.019830</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Trehalose [[M+Na]]</td>
+      <td>24.0</td>
+      <td>0.343434</td>
+      <td>1882.374046</td>
+      <td>713.942308</td>
+      <td>0.547639</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>Xanthurenic acid [[M+H]]</td>
+      <td>31.0</td>
+      <td>0.030303</td>
+      <td>404.460634</td>
+      <td>9.995192</td>
+      <td>0.102583</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>d-Desthiobiotin [[M+K]]</td>
+      <td>16.0</td>
+      <td>0.876263</td>
+      <td>312.084959</td>
+      <td>411.152603</td>
+      <td>0.942439</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=PosHigh</td>
+      <td>gamma-Glutamylcysteine [[M+H]]</td>
+      <td>32.0</td>
+      <td>0.017677</td>
+      <td>1479.406565</td>
+      <td>743.219857</td>
+      <td>0.069529</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]</td>
+      <td>30.0</td>
+      <td>0.047980</td>
+      <td>11422.664858</td>
+      <td>6140.175457</td>
+      <td>0.144640</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>2'-Deoxyguanosine-5'-Monophosphate [[M+H]]</td>
+      <td>28.0</td>
+      <td>0.106061</td>
+      <td>10703.194079</td>
+      <td>7889.785465</td>
+      <td>0.246084</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>2'-Deoxyinosine [[M+H]]</td>
+      <td>25.0</td>
+      <td>0.267677</td>
+      <td>1643.848564</td>
+      <td>1513.536618</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>2'-Deoxyuridine [[M+Na]]</td>
+      <td>31.0</td>
+      <td>0.030303</td>
+      <td>796.174504</td>
+      <td>260.650649</td>
+      <td>0.102583</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>3-Methylhistidine [[M+Na]]</td>
+      <td>29.0</td>
+      <td>0.073232</td>
+      <td>318.224335</td>
+      <td>49.621292</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>ATP [[M+H]]</td>
+      <td>30.0</td>
+      <td>0.047980</td>
+      <td>1683.192072</td>
+      <td>669.011628</td>
+      <td>0.144640</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Acetyl coenzyme A (Acetyl-CoA) [[M+H]]</td>
+      <td>25.0</td>
+      <td>0.267677</td>
+      <td>1034.608550</td>
+      <td>487.023794</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Ademetionine [[M+H]]</td>
+      <td>24.0</td>
+      <td>0.343434</td>
+      <td>2975.545344</td>
+      <td>2679.662791</td>
+      <td>0.547639</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Adenine [[M+H]]</td>
+      <td>26.0</td>
+      <td>0.202020</td>
+      <td>9745.881202</td>
+      <td>5694.464949</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Adenosine phosphate [[M+H]]</td>
+      <td>29.0</td>
+      <td>0.073232</td>
+      <td>85033.110229</td>
+      <td>60521.317792</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Adenosine-3'-5'-Diphosphate [[M+H]]</td>
+      <td>30.0</td>
+      <td>0.047980</td>
+      <td>11018.725641</td>
+      <td>5287.424361</td>
+      <td>0.144640</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Alpha-D-Glucose [[M+Na]]</td>
+      <td>5.0</td>
+      <td>0.047980</td>
+      <td>399.043240</td>
+      <td>5958.990078</td>
+      <td>0.144640</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>33.0</td>
+      <td>0.010101</td>
+      <td>6391.705649</td>
+      <td>3810.110911</td>
+      <td>0.047951</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Asparagine [[M+NH4]]</td>
+      <td>21.0</td>
+      <td>0.638889</td>
+      <td>4217.233975</td>
+      <td>4049.027132</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Biotin [[M+H]]</td>
+      <td>17.0</td>
+      <td>1.000000</td>
+      <td>958.765922</td>
+      <td>1074.082142</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Choline [[M+H]]</td>
+      <td>26.0</td>
+      <td>0.202020</td>
+      <td>2754.933616</td>
+      <td>2042.504317</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Cytidine [[M+H]]</td>
+      <td>25.0</td>
+      <td>0.267677</td>
+      <td>12416.078102</td>
+      <td>9277.741127</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>D-(+)-Melibiose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]</td>
+      <td>0.0</td>
+      <td>0.002525</td>
+      <td>1882.374046</td>
+      <td>5640.286883</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>D-(+)-Turanose [[M+Na]]/Palatinose [[M+Na]]</td>
+      <td>0.0</td>
+      <td>0.002525</td>
+      <td>1882.374046</td>
+      <td>5725.500000</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>D-Fructose [[M+Na]]/D-Mannose [[M+Na]]</td>
+      <td>6.0</td>
+      <td>0.073232</td>
+      <td>278.469001</td>
+      <td>5136.699433</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>D-Galactose [[M+Na]]</td>
+      <td>6.0</td>
+      <td>0.073232</td>
+      <td>378.429086</td>
+      <td>5750.475081</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>D-Glucose [[M+Na]]</td>
+      <td>5.0</td>
+      <td>0.047980</td>
+      <td>378.429086</td>
+      <td>5395.898863</td>
+      <td>0.144640</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Deoxyadenosine [[M+H]]</td>
+      <td>24.0</td>
+      <td>0.343434</td>
+      <td>60.825993</td>
+      <td>32.546512</td>
+      <td>0.547639</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Galactose [[M+Na]]</td>
+      <td>6.0</td>
+      <td>0.073232</td>
+      <td>378.429086</td>
+      <td>5970.515205</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Glucosamine [[M+H]]</td>
+      <td>27.0</td>
+      <td>0.148990</td>
+      <td>2972.870425</td>
+      <td>2175.794574</td>
+      <td>0.325571</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Glutamic Acid [[M-H2O+H]]</td>
+      <td>26.0</td>
+      <td>0.202020</td>
+      <td>6875.684800</td>
+      <td>5374.188256</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Glutathione [[M+H]]</td>
+      <td>32.0</td>
+      <td>0.017677</td>
+      <td>56388.954656</td>
+      <td>36840.240310</td>
+      <td>0.069529</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Histidine [[M+H]]</td>
+      <td>27.0</td>
+      <td>0.148990</td>
+      <td>1500.484045</td>
+      <td>75.350851</td>
+      <td>0.325571</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Homocitrate [[M+Na]]</td>
+      <td>14.0</td>
+      <td>0.638889</td>
+      <td>33.593182</td>
+      <td>49.621292</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Imidazoleacetic acid [[M+H]]</td>
+      <td>7.0</td>
+      <td>0.106061</td>
+      <td>55.254386</td>
+      <td>115.720930</td>
+      <td>0.246084</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Indole-3-Ethanol [[M+H]]</td>
+      <td>11.0</td>
+      <td>0.343434</td>
+      <td>294.760643</td>
+      <td>471.247493</td>
+      <td>0.547639</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Inositol [[M+Na]]</td>
+      <td>5.0</td>
+      <td>0.047980</td>
+      <td>314.664478</td>
+      <td>3651.626532</td>
+      <td>0.144640</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>L-2-Amino-4-[2-Aminophenyl]-4-Oxobutanoic Acid [[M+H]]</td>
+      <td>25.0</td>
+      <td>0.267677</td>
+      <td>77.494334</td>
+      <td>29.911151</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>L-Anserine [[M+H]]</td>
+      <td>16.0</td>
+      <td>0.876263</td>
+      <td>3.465468</td>
+      <td>3.147955</td>
+      <td>0.942439</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>L-Arginine [[M+H]]</td>
+      <td>28.0</td>
+      <td>0.106061</td>
+      <td>46589.454809</td>
+      <td>39250.551918</td>
+      <td>0.246084</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>L-Citrulline [[M+H]]</td>
+      <td>28.0</td>
+      <td>0.106061</td>
+      <td>5364.068855</td>
+      <td>4079.054004</td>
+      <td>0.246084</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>L-Lysine [[M+Na]]</td>
+      <td>19.0</td>
+      <td>0.876263</td>
+      <td>70.602827</td>
+      <td>97.639535</td>
+      <td>0.942439</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>L-Threonine [[M+Na]]</td>
+      <td>15.0</td>
+      <td>0.755051</td>
+      <td>35.946420</td>
+      <td>59.729333</td>
+      <td>0.863811</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>L-Tryptophan [[M+NH4]]</td>
+      <td>18.0</td>
+      <td>1.000000</td>
+      <td>712.513435</td>
+      <td>764.870863</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>L-Valine [[M+H]]</td>
+      <td>21.0</td>
+      <td>0.638889</td>
+      <td>1612.543926</td>
+      <td>939.128901</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Levocarnitine [[M+H]]</td>
+      <td>20.0</td>
+      <td>0.755051</td>
+      <td>81.595389</td>
+      <td>63.887597</td>
+      <td>0.863811</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Methionine [[M+H]]</td>
+      <td>21.0</td>
+      <td>0.638889</td>
+      <td>2452.983689</td>
+      <td>2106.700699</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]</td>
+      <td>12.0</td>
+      <td>0.431818</td>
+      <td>1527.003915</td>
+      <td>2180.665348</td>
+      <td>0.634665</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>N2-Acetyl-L-ornithine [[M+H]]</td>
+      <td>27.0</td>
+      <td>0.148990</td>
+      <td>875.652519</td>
+      <td>345.511220</td>
+      <td>0.325571</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Niacin [[M+H]]</td>
+      <td>17.0</td>
+      <td>1.000000</td>
+      <td>215.046777</td>
+      <td>309.794574</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Nicotinamide [[M+H]]</td>
+      <td>24.0</td>
+      <td>0.343434</td>
+      <td>1492.442079</td>
+      <td>1244.207957</td>
+      <td>0.547639</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Nicotinamide ribotide [[M+H]]</td>
+      <td>23.0</td>
+      <td>0.431818</td>
+      <td>292.323634</td>
+      <td>225.393556</td>
+      <td>0.634665</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>O-acetyl-L-serine [[M+H]]</td>
+      <td>26.0</td>
+      <td>0.202020</td>
+      <td>97.141200</td>
+      <td>6.409532</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Phenylethyl alcohol [[M+H]]</td>
+      <td>17.0</td>
+      <td>1.000000</td>
+      <td>382.587647</td>
+      <td>443.232021</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Pidolic Acid [[M+H]]</td>
+      <td>30.0</td>
+      <td>0.047980</td>
+      <td>7451.156292</td>
+      <td>6034.364341</td>
+      <td>0.144640</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Proline [[M+NH4]]</td>
+      <td>19.0</td>
+      <td>0.876263</td>
+      <td>5.751427</td>
+      <td>45.778328</td>
+      <td>0.942439</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Pyridoxal [[M+H]]</td>
+      <td>26.0</td>
+      <td>0.202020</td>
+      <td>4566.500000</td>
+      <td>3517.750337</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Pyridoxamine [[M+H]]</td>
+      <td>19.0</td>
+      <td>0.876263</td>
+      <td>70.602827</td>
+      <td>97.639535</td>
+      <td>0.942439</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Sucrose [[M+Na]]</td>
+      <td>0.0</td>
+      <td>0.002525</td>
+      <td>1872.613588</td>
+      <td>5652.467451</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Thymine [[M+H]]</td>
+      <td>9.0</td>
+      <td>0.202020</td>
+      <td>72.650938</td>
+      <td>128.980620</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Trehalose [[M+Na]]</td>
+      <td>0.0</td>
+      <td>0.002525</td>
+      <td>1882.374046</td>
+      <td>5686.232524</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>Xanthurenic acid [[M+H]]</td>
+      <td>25.0</td>
+      <td>0.267677</td>
+      <td>404.460634</td>
+      <td>210.431036</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>d-Desthiobiotin [[M+K]]</td>
+      <td>21.0</td>
+      <td>0.638889</td>
+      <td>312.084959</td>
+      <td>219.620164</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=None, Supplement=NegHigh</td>
+      <td>gamma-Glutamylcysteine [[M+H]]</td>
+      <td>29.0</td>
+      <td>0.073232</td>
+      <td>1479.406565</td>
+      <td>260.650649</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]</td>
+      <td>30.0</td>
+      <td>0.866511</td>
+      <td>1390.000000</td>
+      <td>936.665544</td>
+      <td>0.942439</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>2'-Deoxyguanosine-5'-Monophosphate [[M+H]]</td>
+      <td>47.0</td>
+      <td>0.028904</td>
+      <td>2548.676908</td>
+      <td>1492.705340</td>
+      <td>0.099479</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>2'-Deoxyinosine [[M+H]]</td>
+      <td>22.0</td>
+      <td>0.535820</td>
+      <td>1093.182873</td>
+      <td>1432.726825</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>2'-Deoxyuridine [[M+Na]]</td>
+      <td>42.0</td>
+      <td>0.120591</td>
+      <td>343.946906</td>
+      <td>82.012581</td>
+      <td>0.275160</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>3-Methylhistidine [[M+Na]]</td>
+      <td>17.0</td>
+      <td>0.231857</td>
+      <td>160.198109</td>
+      <td>263.300300</td>
+      <td>0.431927</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>ATP [[M+H]]</td>
+      <td>34.0</td>
+      <td>0.535820</td>
+      <td>80.486862</td>
+      <td>29.180286</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Acetyl coenzyme A (Acetyl-CoA) [[M+H]]</td>
+      <td>28.0</td>
+      <td>1.000000</td>
+      <td>986.560976</td>
+      <td>912.326217</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Ademetionine [[M+H]]</td>
+      <td>36.0</td>
+      <td>0.396892</td>
+      <td>72.201965</td>
+      <td>83.207927</td>
+      <td>0.589627</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Adenine [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.463403</td>
+      <td>8306.610417</td>
+      <td>6900.068844</td>
+      <td>0.642233</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Adenosine phosphate [[M+H]]</td>
+      <td>51.0</td>
+      <td>0.005905</td>
+      <td>24132.609212</td>
+      <td>12184.302380</td>
+      <td>0.036952</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Adenosine-3'-5'-Diphosphate [[M+H]]</td>
+      <td>34.0</td>
+      <td>0.535820</td>
+      <td>1329.187500</td>
+      <td>870.098274</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Alpha-D-Glucose [[M+Na]]</td>
+      <td>17.0</td>
+      <td>0.231857</td>
+      <td>6416.949620</td>
+      <td>11866.831192</td>
+      <td>0.431927</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>44.0</td>
+      <td>0.072106</td>
+      <td>295.576793</td>
+      <td>42.587766</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Asparagine [[M+NH4]]</td>
+      <td>36.0</td>
+      <td>0.396892</td>
+      <td>3091.902439</td>
+      <td>2934.579489</td>
+      <td>0.589627</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Biotin [[M+H]]</td>
+      <td>44.0</td>
+      <td>0.072106</td>
+      <td>261.896341</td>
+      <td>7.326544</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Choline [[M+H]]</td>
+      <td>50.0</td>
+      <td>0.009324</td>
+      <td>153.429175</td>
+      <td>19.011738</td>
+      <td>0.047951</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Cytidine [[M+H]]</td>
+      <td>42.0</td>
+      <td>0.120591</td>
+      <td>1193.588730</td>
+      <td>652.270684</td>
+      <td>0.275160</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>D-(+)-Melibiose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]</td>
+      <td>3.0</td>
+      <td>0.002176</td>
+      <td>6334.594254</td>
+      <td>20140.876463</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>D-(+)-Turanose [[M+Na]]/Palatinose [[M+Na]]</td>
+      <td>3.0</td>
+      <td>0.002176</td>
+      <td>6543.489341</td>
+      <td>21611.969792</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>D-Fructose [[M+Na]]/D-Mannose [[M+Na]]</td>
+      <td>20.0</td>
+      <td>0.396892</td>
+      <td>8351.736645</td>
+      <td>11491.259010</td>
+      <td>0.589627</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>D-Galactose [[M+Na]]</td>
+      <td>19.0</td>
+      <td>0.335664</td>
+      <td>9006.066951</td>
+      <td>13502.400942</td>
+      <td>0.547639</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>D-Glucose [[M+Na]]</td>
+      <td>17.0</td>
+      <td>0.231857</td>
+      <td>5805.489231</td>
+      <td>11429.803127</td>
+      <td>0.431927</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Deoxyadenosine [[M+H]]</td>
+      <td>33.0</td>
+      <td>0.612587</td>
+      <td>55.279629</td>
+      <td>47.608194</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Galactose [[M+Na]]</td>
+      <td>18.0</td>
+      <td>0.280963</td>
+      <td>9161.752437</td>
+      <td>13763.418479</td>
+      <td>0.479496</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Glucosamine [[M+H]]</td>
+      <td>42.0</td>
+      <td>0.120591</td>
+      <td>2077.031997</td>
+      <td>1389.361437</td>
+      <td>0.275160</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Glutamic Acid [[M-H2O+H]]</td>
+      <td>56.0</td>
+      <td>0.000311</td>
+      <td>4973.532970</td>
+      <td>736.505369</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Glutathione [[M+H]]</td>
+      <td>48.0</td>
+      <td>0.020513</td>
+      <td>25407.944472</td>
+      <td>10489.675927</td>
+      <td>0.079176</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Histidine [[M+H]]</td>
+      <td>45.0</td>
+      <td>0.054079</td>
+      <td>162.166667</td>
+      <td>15.249734</td>
+      <td>0.155102</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Homocitrate [[M+Na]]</td>
+      <td>20.0</td>
+      <td>0.396892</td>
+      <td>68.310013</td>
+      <td>87.673541</td>
+      <td>0.589627</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Imidazoleacetic acid [[M+H]]</td>
+      <td>9.0</td>
+      <td>0.028904</td>
+      <td>45.768293</td>
+      <td>109.678255</td>
+      <td>0.099479</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Indole-3-Ethanol [[M+H]]</td>
+      <td>7.0</td>
+      <td>0.013986</td>
+      <td>307.986506</td>
+      <td>1118.576981</td>
+      <td>0.059549</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Inositol [[M+Na]]</td>
+      <td>15.0</td>
+      <td>0.151981</td>
+      <td>4284.420732</td>
+      <td>9674.071433</td>
+      <td>0.326918</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>L-2-Amino-4-[2-Aminophenyl]-4-Oxobutanoic Acid [[M+H]]</td>
+      <td>30.0</td>
+      <td>0.866511</td>
+      <td>111.030488</td>
+      <td>140.804160</td>
+      <td>0.942439</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>L-Anserine [[M+H]]</td>
+      <td>9.0</td>
+      <td>0.028904</td>
+      <td>3.616170</td>
+      <td>753.157423</td>
+      <td>0.099479</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>L-Arginine [[M+H]]</td>
+      <td>48.0</td>
+      <td>0.020513</td>
+      <td>5005.626840</td>
+      <td>538.747717</td>
+      <td>0.079176</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>L-Citrulline [[M+H]]</td>
+      <td>40.0</td>
+      <td>0.189277</td>
+      <td>651.562500</td>
+      <td>299.839579</td>
+      <td>0.390858</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>L-Lysine [[M+Na]]</td>
+      <td>20.0</td>
+      <td>0.396892</td>
+      <td>82.337134</td>
+      <td>132.203357</td>
+      <td>0.589627</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>L-Threonine [[M+Na]]</td>
+      <td>38.0</td>
+      <td>0.280963</td>
+      <td>499.741672</td>
+      <td>194.675773</td>
+      <td>0.479496</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>L-Tryptophan [[M+NH4]]</td>
+      <td>18.0</td>
+      <td>0.280963</td>
+      <td>441.019029</td>
+      <td>630.797128</td>
+      <td>0.479496</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>L-Valine [[M+H]]</td>
+      <td>41.0</td>
+      <td>0.151981</td>
+      <td>824.296480</td>
+      <td>729.034906</td>
+      <td>0.326918</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Levocarnitine [[M+H]]</td>
+      <td>34.0</td>
+      <td>0.535820</td>
+      <td>46.615854</td>
+      <td>55.389518</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Methionine [[M+H]]</td>
+      <td>36.0</td>
+      <td>0.396892</td>
+      <td>2294.668693</td>
+      <td>2260.360686</td>
+      <td>0.589627</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]</td>
+      <td>6.0</td>
+      <td>0.009324</td>
+      <td>84.756098</td>
+      <td>8336.528864</td>
+      <td>0.047951</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>N2-Acetyl-L-ornithine [[M+H]]</td>
+      <td>50.0</td>
+      <td>0.009324</td>
+      <td>71.430556</td>
+      <td>9.364535</td>
+      <td>0.047951</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Niacin [[M+H]]</td>
+      <td>29.0</td>
+      <td>0.955089</td>
+      <td>292.408537</td>
+      <td>289.686702</td>
+      <td>0.993582</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Nicotinamide [[M+H]]</td>
+      <td>41.0</td>
+      <td>0.151981</td>
+      <td>865.359756</td>
+      <td>489.225487</td>
+      <td>0.326918</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Nicotinamide ribotide [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.013986</td>
+      <td>291.979336</td>
+      <td>87.877998</td>
+      <td>0.059549</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>O-acetyl-L-serine [[M+H]]</td>
+      <td>47.0</td>
+      <td>0.028904</td>
+      <td>150.432689</td>
+      <td>4.435832</td>
+      <td>0.099479</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Phenylethyl alcohol [[M+H]]</td>
+      <td>31.0</td>
+      <td>0.778866</td>
+      <td>817.896341</td>
+      <td>729.019158</td>
+      <td>0.888595</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Pidolic Acid [[M+H]]</td>
+      <td>54.0</td>
+      <td>0.001243</td>
+      <td>4985.559742</td>
+      <td>922.854555</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Proline [[M+NH4]]</td>
+      <td>33.0</td>
+      <td>0.612587</td>
+      <td>59.305195</td>
+      <td>51.085499</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Pyridoxal [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.463403</td>
+      <td>3638.794872</td>
+      <td>2741.209344</td>
+      <td>0.642233</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Pyridoxamine [[M+H]]</td>
+      <td>21.0</td>
+      <td>0.450291</td>
+      <td>139.000000</td>
+      <td>144.516102</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Sucrose [[M+Na]]</td>
+      <td>2.0</td>
+      <td>0.001243</td>
+      <td>5012.388696</td>
+      <td>21020.527844</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Thymine [[M+H]]</td>
+      <td>11.0</td>
+      <td>0.054079</td>
+      <td>48.510695</td>
+      <td>114.903947</td>
+      <td>0.155102</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Trehalose [[M+Na]]</td>
+      <td>3.0</td>
+      <td>0.002176</td>
+      <td>5909.770947</td>
+      <td>21727.579717</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>Xanthurenic acid [[M+H]]</td>
+      <td>44.0</td>
+      <td>0.072106</td>
+      <td>123.555556</td>
+      <td>10.945734</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>d-Desthiobiotin [[M+K]]</td>
+      <td>18.0</td>
+      <td>0.280963</td>
+      <td>209.836960</td>
+      <td>285.887276</td>
+      <td>0.479496</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosLow</td>
+      <td>gamma-Glutamylcysteine [[M+H]]</td>
+      <td>45.0</td>
+      <td>0.054079</td>
+      <td>690.151710</td>
+      <td>156.744370</td>
+      <td>0.155102</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]</td>
+      <td>17.0</td>
+      <td>0.382867</td>
+      <td>1390.000000</td>
+      <td>1645.076638</td>
+      <td>0.581339</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>2'-Deoxyguanosine-5'-Monophosphate [[M+H]]</td>
+      <td>47.0</td>
+      <td>0.002331</td>
+      <td>2548.676908</td>
+      <td>833.857654</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>2'-Deoxyinosine [[M+H]]</td>
+      <td>14.5</td>
+      <td>0.224289</td>
+      <td>1093.182873</td>
+      <td>1436.744859</td>
+      <td>0.424915</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>2'-Deoxyuridine [[M+Na]]</td>
+      <td>34.0</td>
+      <td>0.259324</td>
+      <td>343.946906</td>
+      <td>249.636158</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>3-Methylhistidine [[M+Na]]</td>
+      <td>27.0</td>
+      <td>0.804779</td>
+      <td>160.198109</td>
+      <td>148.184447</td>
+      <td>0.905650</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>ATP [[M+H]]</td>
+      <td>28.0</td>
+      <td>0.710373</td>
+      <td>80.486862</td>
+      <td>69.414130</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Acetyl coenzyme A (Acetyl-CoA) [[M+H]]</td>
+      <td>41.0</td>
+      <td>0.037879</td>
+      <td>986.560976</td>
+      <td>225.513198</td>
+      <td>0.121271</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Ademetionine [[M+H]]</td>
+      <td>22.0</td>
+      <td>0.804779</td>
+      <td>72.201965</td>
+      <td>194.829134</td>
+      <td>0.905650</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Adenine [[M+H]]</td>
+      <td>42.0</td>
+      <td>0.026224</td>
+      <td>8306.610417</td>
+      <td>5341.882353</td>
+      <td>0.093366</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Adenosine phosphate [[M+H]]</td>
+      <td>46.0</td>
+      <td>0.004079</td>
+      <td>24132.609212</td>
+      <td>7208.600669</td>
+      <td>0.026742</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Adenosine-3'-5'-Diphosphate [[M+H]]</td>
+      <td>16.0</td>
+      <td>0.317599</td>
+      <td>1329.187500</td>
+      <td>1645.076638</td>
+      <td>0.524674</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Alpha-D-Glucose [[M+Na]]</td>
+      <td>25.0</td>
+      <td>1.000000</td>
+      <td>6416.949620</td>
+      <td>7189.321962</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>36.0</td>
+      <td>0.164918</td>
+      <td>295.576793</td>
+      <td>27.225504</td>
+      <td>0.342268</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Asparagine [[M+NH4]]</td>
+      <td>18.0</td>
+      <td>0.455711</td>
+      <td>3091.902439</td>
+      <td>3514.981985</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Biotin [[M+H]]</td>
+      <td>30.0</td>
+      <td>0.534965</td>
+      <td>261.896341</td>
+      <td>77.327705</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Choline [[M+H]]</td>
+      <td>41.0</td>
+      <td>0.037879</td>
+      <td>153.429175</td>
+      <td>18.684126</td>
+      <td>0.121271</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Cytidine [[M+H]]</td>
+      <td>43.0</td>
+      <td>0.017483</td>
+      <td>1193.588730</td>
+      <td>33.009870</td>
+      <td>0.069529</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>D-(+)-Melibiose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]</td>
+      <td>5.0</td>
+      <td>0.011072</td>
+      <td>6334.594254</td>
+      <td>16696.328992</td>
+      <td>0.048135</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>D-(+)-Turanose [[M+Na]]/Palatinose [[M+Na]]</td>
+      <td>4.0</td>
+      <td>0.006993</td>
+      <td>6543.489341</td>
+      <td>18220.631163</td>
+      <td>0.039029</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>D-Fructose [[M+Na]]/D-Mannose [[M+Na]]</td>
+      <td>28.0</td>
+      <td>0.710373</td>
+      <td>8351.736645</td>
+      <td>4424.533361</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>D-Galactose [[M+Na]]</td>
+      <td>28.0</td>
+      <td>0.710373</td>
+      <td>9006.066951</td>
+      <td>4934.817096</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>D-Glucose [[M+Na]]</td>
+      <td>23.0</td>
+      <td>0.901515</td>
+      <td>5805.489231</td>
+      <td>7232.576274</td>
+      <td>0.952240</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Deoxyadenosine [[M+H]]</td>
+      <td>18.0</td>
+      <td>0.455711</td>
+      <td>55.279629</td>
+      <td>131.776762</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Galactose [[M+Na]]</td>
+      <td>28.0</td>
+      <td>0.710373</td>
+      <td>9161.752437</td>
+      <td>5047.095247</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Glucosamine [[M+H]]</td>
+      <td>36.0</td>
+      <td>0.164918</td>
+      <td>2077.031997</td>
+      <td>1095.394332</td>
+      <td>0.342268</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Glutamic Acid [[M-H2O+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>4973.532970</td>
+      <td>15.065744</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Glutathione [[M+H]]</td>
+      <td>46.0</td>
+      <td>0.004079</td>
+      <td>25407.944472</td>
+      <td>6211.357342</td>
+      <td>0.026742</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Histidine [[M+H]]</td>
+      <td>37.0</td>
+      <td>0.128205</td>
+      <td>162.166667</td>
+      <td>2.333615</td>
+      <td>0.286209</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Homocitrate [[M+Na]]</td>
+      <td>13.0</td>
+      <td>0.164918</td>
+      <td>68.310013</td>
+      <td>79.890746</td>
+      <td>0.342268</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Imidazoleacetic acid [[M+H]]</td>
+      <td>24.0</td>
+      <td>1.000000</td>
+      <td>45.768293</td>
+      <td>34.435986</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Indole-3-Ethanol [[M+H]]</td>
+      <td>1.0</td>
+      <td>0.001166</td>
+      <td>307.986506</td>
+      <td>2108.031893</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Inositol [[M+Na]]</td>
+      <td>23.0</td>
+      <td>0.901515</td>
+      <td>4284.420732</td>
+      <td>6941.178804</td>
+      <td>0.952240</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>L-2-Amino-4-[2-Aminophenyl]-4-Oxobutanoic Acid [[M+H]]</td>
+      <td>31.0</td>
+      <td>0.455711</td>
+      <td>111.030488</td>
+      <td>72.159383</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>L-Anserine [[M+H]]</td>
+      <td>0.0</td>
+      <td>0.000583</td>
+      <td>3.616170</td>
+      <td>2921.927176</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>L-Arginine [[M+H]]</td>
+      <td>44.0</td>
+      <td>0.011072</td>
+      <td>5005.626840</td>
+      <td>2388.453806</td>
+      <td>0.048135</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>L-Citrulline [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.208625</td>
+      <td>651.562500</td>
+      <td>320.173059</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>L-Lysine [[M+Na]]</td>
+      <td>19.0</td>
+      <td>0.534965</td>
+      <td>82.337134</td>
+      <td>157.514411</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>L-Threonine [[M+Na]]</td>
+      <td>24.0</td>
+      <td>1.000000</td>
+      <td>499.741672</td>
+      <td>482.103806</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>L-Tryptophan [[M+NH4]]</td>
+      <td>7.0</td>
+      <td>0.026224</td>
+      <td>441.019029</td>
+      <td>821.831928</td>
+      <td>0.093366</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>L-Valine [[M+H]]</td>
+      <td>13.0</td>
+      <td>0.164918</td>
+      <td>824.296480</td>
+      <td>1008.121525</td>
+      <td>0.342268</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Levocarnitine [[M+H]]</td>
+      <td>8.0</td>
+      <td>0.037879</td>
+      <td>46.615854</td>
+      <td>264.117809</td>
+      <td>0.121271</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Methionine [[M+H]]</td>
+      <td>22.0</td>
+      <td>0.804779</td>
+      <td>2294.668693</td>
+      <td>2657.154860</td>
+      <td>0.905650</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]</td>
+      <td>5.0</td>
+      <td>0.011072</td>
+      <td>84.756098</td>
+      <td>11800.465305</td>
+      <td>0.048135</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>N2-Acetyl-L-ornithine [[M+H]]</td>
+      <td>42.0</td>
+      <td>0.026224</td>
+      <td>71.430556</td>
+      <td>12.241324</td>
+      <td>0.093366</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Niacin [[M+H]]</td>
+      <td>24.0</td>
+      <td>1.000000</td>
+      <td>292.408537</td>
+      <td>324.717224</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Nicotinamide [[M+H]]</td>
+      <td>16.0</td>
+      <td>0.317599</td>
+      <td>865.359756</td>
+      <td>1432.839390</td>
+      <td>0.524674</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Nicotinamide ribotide [[M+H]]</td>
+      <td>20.0</td>
+      <td>0.620047</td>
+      <td>291.979336</td>
+      <td>350.659264</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>O-acetyl-L-serine [[M+H]]</td>
+      <td>38.0</td>
+      <td>0.097319</td>
+      <td>150.432689</td>
+      <td>38.091720</td>
+      <td>0.239243</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Phenylethyl alcohol [[M+H]]</td>
+      <td>28.0</td>
+      <td>0.710373</td>
+      <td>817.896341</td>
+      <td>725.459512</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Pidolic Acid [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>4985.559742</td>
+      <td>486.683157</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Proline [[M+NH4]]</td>
+      <td>37.0</td>
+      <td>0.128205</td>
+      <td>59.305195</td>
+      <td>16.472095</td>
+      <td>0.286209</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Pyridoxal [[M+H]]</td>
+      <td>21.0</td>
+      <td>0.710373</td>
+      <td>3638.794872</td>
+      <td>4556.975481</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Pyridoxamine [[M+H]]</td>
+      <td>18.0</td>
+      <td>0.442787</td>
+      <td>139.000000</td>
+      <td>160.086529</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Sucrose [[M+Na]]</td>
+      <td>4.0</td>
+      <td>0.006993</td>
+      <td>5012.388696</td>
+      <td>18071.681088</td>
+      <td>0.039029</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Thymine [[M+H]]</td>
+      <td>23.0</td>
+      <td>0.901515</td>
+      <td>48.510695</td>
+      <td>29.855673</td>
+      <td>0.952240</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Trehalose [[M+Na]]</td>
+      <td>4.0</td>
+      <td>0.006993</td>
+      <td>5909.770947</td>
+      <td>18389.070034</td>
+      <td>0.039029</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>Xanthurenic acid [[M+H]]</td>
+      <td>36.0</td>
+      <td>0.164918</td>
+      <td>123.555556</td>
+      <td>15.065744</td>
+      <td>0.342268</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>d-Desthiobiotin [[M+K]]</td>
+      <td>20.0</td>
+      <td>0.620047</td>
+      <td>209.836960</td>
+      <td>194.572622</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=PosHigh</td>
+      <td>gamma-Glutamylcysteine [[M+H]]</td>
+      <td>35.0</td>
+      <td>0.208625</td>
+      <td>690.151710</td>
+      <td>451.449176</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]</td>
+      <td>10.0</td>
+      <td>0.137529</td>
+      <td>1390.000000</td>
+      <td>1513.698457</td>
+      <td>0.305374</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>2'-Deoxyguanosine-5'-Monophosphate [[M+H]]</td>
+      <td>34.0</td>
+      <td>0.073427</td>
+      <td>2548.676908</td>
+      <td>1603.057558</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>2'-Deoxyinosine [[M+H]]</td>
+      <td>8.0</td>
+      <td>0.073427</td>
+      <td>1093.182873</td>
+      <td>2386.952631</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>2'-Deoxyuridine [[M+Na]]</td>
+      <td>30.0</td>
+      <td>0.234266</td>
+      <td>343.946906</td>
+      <td>187.365068</td>
+      <td>0.431927</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>3-Methylhistidine [[M+Na]]</td>
+      <td>23.0</td>
+      <td>0.835664</td>
+      <td>160.198109</td>
+      <td>56.065571</td>
+      <td>0.927767</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>ATP [[M+H]]</td>
+      <td>17.0</td>
+      <td>0.628205</td>
+      <td>80.486862</td>
+      <td>125.948853</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Acetyl coenzyme A (Acetyl-CoA) [[M+H]]</td>
+      <td>34.0</td>
+      <td>0.073427</td>
+      <td>986.560976</td>
+      <td>430.365186</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Ademetionine [[M+H]]</td>
+      <td>20.0</td>
+      <td>0.945221</td>
+      <td>72.201965</td>
+      <td>98.475308</td>
+      <td>0.985799</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Adenine [[M+H]]</td>
+      <td>34.0</td>
+      <td>0.072557</td>
+      <td>8306.610417</td>
+      <td>5939.500000</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Adenosine phosphate [[M+H]]</td>
+      <td>39.0</td>
+      <td>0.008159</td>
+      <td>24132.609212</td>
+      <td>10067.677555</td>
+      <td>0.043759</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Adenosine-3'-5'-Diphosphate [[M+H]]</td>
+      <td>12.0</td>
+      <td>0.234266</td>
+      <td>1329.187500</td>
+      <td>1409.516619</td>
+      <td>0.431927</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Alpha-D-Glucose [[M+Na]]</td>
+      <td>35.0</td>
+      <td>0.051282</td>
+      <td>6416.949620</td>
+      <td>2669.735225</td>
+      <td>0.152370</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>15.0</td>
+      <td>0.445221</td>
+      <td>295.576793</td>
+      <td>940.475930</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Asparagine [[M+NH4]]</td>
+      <td>22.0</td>
+      <td>0.945221</td>
+      <td>3091.902439</td>
+      <td>3282.159645</td>
+      <td>0.985799</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Biotin [[M+H]]</td>
+      <td>21.0</td>
+      <td>1.000000</td>
+      <td>261.896341</td>
+      <td>141.329687</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Choline [[M+H]]</td>
+      <td>23.0</td>
+      <td>0.835664</td>
+      <td>153.429175</td>
+      <td>250.292271</td>
+      <td>0.927767</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Cytidine [[M+H]]</td>
+      <td>17.0</td>
+      <td>0.628205</td>
+      <td>1193.588730</td>
+      <td>4481.949551</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>D-(+)-Melibiose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]</td>
+      <td>9.0</td>
+      <td>0.101399</td>
+      <td>6334.594254</td>
+      <td>11329.944508</td>
+      <td>0.242067</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>D-(+)-Turanose [[M+Na]]/Palatinose [[M+Na]]</td>
+      <td>9.0</td>
+      <td>0.101399</td>
+      <td>6543.489341</td>
+      <td>12147.491893</td>
+      <td>0.242067</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>D-Fructose [[M+Na]]/D-Mannose [[M+Na]]</td>
+      <td>37.0</td>
+      <td>0.022145</td>
+      <td>8351.736645</td>
+      <td>2155.136879</td>
+      <td>0.081658</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>D-Galactose [[M+Na]]</td>
+      <td>37.0</td>
+      <td>0.022145</td>
+      <td>9006.066951</td>
+      <td>2501.260657</td>
+      <td>0.081658</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>D-Glucose [[M+Na]]</td>
+      <td>36.0</td>
+      <td>0.034965</td>
+      <td>5805.489231</td>
+      <td>2454.624542</td>
+      <td>0.115524</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Deoxyadenosine [[M+H]]</td>
+      <td>28.0</td>
+      <td>0.365967</td>
+      <td>55.279629</td>
+      <td>23.970792</td>
+      <td>0.576887</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Galactose [[M+Na]]</td>
+      <td>37.0</td>
+      <td>0.022145</td>
+      <td>9161.752437</td>
+      <td>2538.208396</td>
+      <td>0.081658</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Glucosamine [[M+H]]</td>
+      <td>29.0</td>
+      <td>0.294872</td>
+      <td>2077.031997</td>
+      <td>1240.279246</td>
+      <td>0.499107</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Glutamic Acid [[M-H2O+H]]</td>
+      <td>37.0</td>
+      <td>0.022145</td>
+      <td>4973.532970</td>
+      <td>2956.242684</td>
+      <td>0.081658</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Glutathione [[M+H]]</td>
+      <td>36.0</td>
+      <td>0.034965</td>
+      <td>25407.944472</td>
+      <td>11084.934670</td>
+      <td>0.115524</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Histidine [[M+H]]</td>
+      <td>27.0</td>
+      <td>0.445221</td>
+      <td>162.166667</td>
+      <td>79.995386</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Homocitrate [[M+Na]]</td>
+      <td>16.0</td>
+      <td>0.533800</td>
+      <td>68.310013</td>
+      <td>91.038354</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Imidazoleacetic acid [[M+H]]</td>
+      <td>25.0</td>
+      <td>0.628205</td>
+      <td>45.768293</td>
+      <td>17.936550</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Indole-3-Ethanol [[M+H]]</td>
+      <td>18.0</td>
+      <td>0.730769</td>
+      <td>307.986506</td>
+      <td>521.063914</td>
+      <td>0.845400</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Inositol [[M+Na]]</td>
+      <td>36.0</td>
+      <td>0.034965</td>
+      <td>4284.420732</td>
+      <td>1969.588676</td>
+      <td>0.115524</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>L-2-Amino-4-[2-Aminophenyl]-4-Oxobutanoic Acid [[M+H]]</td>
+      <td>25.0</td>
+      <td>0.628205</td>
+      <td>111.030488</td>
+      <td>119.362474</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>L-Anserine [[M+H]]</td>
+      <td>22.0</td>
+      <td>0.945221</td>
+      <td>3.616170</td>
+      <td>2.862809</td>
+      <td>0.985799</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>L-Arginine [[M+H]]</td>
+      <td>26.0</td>
+      <td>0.533800</td>
+      <td>5005.626840</td>
+      <td>3983.504343</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>L-Citrulline [[M+H]]</td>
+      <td>14.0</td>
+      <td>0.365967</td>
+      <td>651.562500</td>
+      <td>766.563538</td>
+      <td>0.576887</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>L-Lysine [[M+Na]]</td>
+      <td>17.0</td>
+      <td>0.628205</td>
+      <td>82.337134</td>
+      <td>96.565687</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>L-Threonine [[M+Na]]</td>
+      <td>25.0</td>
+      <td>0.628205</td>
+      <td>499.741672</td>
+      <td>281.238136</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>L-Tryptophan [[M+NH4]]</td>
+      <td>3.0</td>
+      <td>0.008159</td>
+      <td>441.019029</td>
+      <td>952.466224</td>
+      <td>0.043759</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>L-Valine [[M+H]]</td>
+      <td>26.0</td>
+      <td>0.533800</td>
+      <td>824.296480</td>
+      <td>838.528192</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Levocarnitine [[M+H]]</td>
+      <td>18.0</td>
+      <td>0.730769</td>
+      <td>46.615854</td>
+      <td>68.430639</td>
+      <td>0.845400</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Methionine [[M+H]]</td>
+      <td>23.0</td>
+      <td>0.835664</td>
+      <td>2294.668693</td>
+      <td>2567.136564</td>
+      <td>0.927767</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]</td>
+      <td>14.0</td>
+      <td>0.365967</td>
+      <td>84.756098</td>
+      <td>1739.584840</td>
+      <td>0.576887</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>N2-Acetyl-L-ornithine [[M+H]]</td>
+      <td>33.0</td>
+      <td>0.101399</td>
+      <td>71.430556</td>
+      <td>10.786767</td>
+      <td>0.242067</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Niacin [[M+H]]</td>
+      <td>17.0</td>
+      <td>0.628205</td>
+      <td>292.408537</td>
+      <td>396.964670</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Nicotinamide [[M+H]]</td>
+      <td>18.0</td>
+      <td>0.730769</td>
+      <td>865.359756</td>
+      <td>1030.375901</td>
+      <td>0.845400</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Nicotinamide ribotide [[M+H]]</td>
+      <td>24.0</td>
+      <td>0.730769</td>
+      <td>291.979336</td>
+      <td>278.732910</td>
+      <td>0.845400</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>O-acetyl-L-serine [[M+H]]</td>
+      <td>23.0</td>
+      <td>0.835664</td>
+      <td>150.432689</td>
+      <td>93.138330</td>
+      <td>0.927767</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Phenylethyl alcohol [[M+H]]</td>
+      <td>29.0</td>
+      <td>0.294872</td>
+      <td>817.896341</td>
+      <td>340.382598</td>
+      <td>0.499107</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Pidolic Acid [[M+H]]</td>
+      <td>37.0</td>
+      <td>0.022145</td>
+      <td>4985.559742</td>
+      <td>3020.680071</td>
+      <td>0.081658</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Proline [[M+NH4]]</td>
+      <td>19.0</td>
+      <td>0.835664</td>
+      <td>59.305195</td>
+      <td>153.740586</td>
+      <td>0.927767</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Pyridoxal [[M+H]]</td>
+      <td>27.0</td>
+      <td>0.445221</td>
+      <td>3638.794872</td>
+      <td>2946.320917</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Pyridoxamine [[M+H]]</td>
+      <td>22.0</td>
+      <td>0.942978</td>
+      <td>139.000000</td>
+      <td>113.249676</td>
+      <td>0.985799</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Sucrose [[M+Na]]</td>
+      <td>7.0</td>
+      <td>0.051282</td>
+      <td>5012.388696</td>
+      <td>11861.808941</td>
+      <td>0.152370</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Thymine [[M+H]]</td>
+      <td>22.0</td>
+      <td>0.945221</td>
+      <td>48.510695</td>
+      <td>34.958168</td>
+      <td>0.985799</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Trehalose [[M+Na]]</td>
+      <td>9.0</td>
+      <td>0.101399</td>
+      <td>5909.770947</td>
+      <td>12156.354173</td>
+      <td>0.242067</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>Xanthurenic acid [[M+H]]</td>
+      <td>27.0</td>
+      <td>0.445221</td>
+      <td>123.555556</td>
+      <td>17.313445</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>d-Desthiobiotin [[M+K]]</td>
+      <td>9.0</td>
+      <td>0.101399</td>
+      <td>209.836960</td>
+      <td>539.750542</td>
+      <td>0.242067</td>
+    </tr>
+    <tr>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=NegHigh</td>
+      <td>gamma-Glutamylcysteine [[M+H]]</td>
+      <td>30.0</td>
+      <td>0.234266</td>
+      <td>690.151710</td>
+      <td>357.736219</td>
+      <td>0.431927</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>2'-Deoxyguanosine-5'-Diphosphate [[M+H]]/Adenosine 5'-diphosphate (ADP) [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>11422.664858</td>
+      <td>1390.000000</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>2'-Deoxyguanosine-5'-Monophosphate [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>10703.194079</td>
+      <td>2548.676908</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>2'-Deoxyinosine [[M+H]]</td>
+      <td>39.0</td>
+      <td>0.072844</td>
+      <td>1643.848564</td>
+      <td>1093.182873</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>2'-Deoxyuridine [[M+Na]]</td>
+      <td>40.0</td>
+      <td>0.053030</td>
+      <td>796.174504</td>
+      <td>343.946906</td>
+      <td>0.155102</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>3-Methylhistidine [[M+Na]]</td>
+      <td>35.0</td>
+      <td>0.208625</td>
+      <td>318.224335</td>
+      <td>160.198109</td>
+      <td>0.397060</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>ATP [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>1683.192072</td>
+      <td>80.486862</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Acetyl coenzyme A (Acetyl-CoA) [[M+H]]</td>
+      <td>28.0</td>
+      <td>0.710373</td>
+      <td>1034.608550</td>
+      <td>986.560976</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Ademetionine [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>2975.545344</td>
+      <td>72.201965</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Adenine [[M+H]]</td>
+      <td>28.0</td>
+      <td>0.710373</td>
+      <td>9745.881202</td>
+      <td>8306.610417</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Adenosine phosphate [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>85033.110229</td>
+      <td>24132.609212</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Adenosine-3'-5'-Diphosphate [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>11018.725641</td>
+      <td>1329.187500</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Alpha-D-Glucose [[M+Na]]</td>
+      <td>2.0</td>
+      <td>0.002331</td>
+      <td>399.043240</td>
+      <td>6416.949620</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Aminoadipate [[M+Na]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>6391.705649</td>
+      <td>295.576793</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Asparagine [[M+NH4]]</td>
+      <td>36.0</td>
+      <td>0.164918</td>
+      <td>4217.233975</td>
+      <td>3091.902439</td>
+      <td>0.342268</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Biotin [[M+H]]</td>
+      <td>41.0</td>
+      <td>0.037879</td>
+      <td>958.765922</td>
+      <td>261.896341</td>
+      <td>0.121271</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Choline [[M+H]]</td>
+      <td>45.0</td>
+      <td>0.006993</td>
+      <td>2754.933616</td>
+      <td>153.429175</td>
+      <td>0.039029</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Cytidine [[M+H]]</td>
+      <td>43.0</td>
+      <td>0.017483</td>
+      <td>12416.078102</td>
+      <td>1193.588730</td>
+      <td>0.069529</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>D-(+)-Melibiose [[M+Na]]/Isomaltose [[M+Na]]/Maltose [[M+Na]]</td>
+      <td>6.0</td>
+      <td>0.017483</td>
+      <td>1882.374046</td>
+      <td>6334.594254</td>
+      <td>0.069529</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>D-(+)-Turanose [[M+Na]]/Palatinose [[M+Na]]</td>
+      <td>6.0</td>
+      <td>0.017483</td>
+      <td>1882.374046</td>
+      <td>6543.489341</td>
+      <td>0.069529</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>D-Fructose [[M+Na]]/D-Mannose [[M+Na]]</td>
+      <td>3.0</td>
+      <td>0.004079</td>
+      <td>278.469001</td>
+      <td>8351.736645</td>
+      <td>0.026742</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>D-Galactose [[M+Na]]</td>
+      <td>3.0</td>
+      <td>0.004079</td>
+      <td>378.429086</td>
+      <td>9006.066951</td>
+      <td>0.026742</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>D-Glucose [[M+Na]]</td>
+      <td>2.0</td>
+      <td>0.002331</td>
+      <td>378.429086</td>
+      <td>5805.489231</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Deoxyadenosine [[M+H]]</td>
+      <td>23.0</td>
+      <td>0.901515</td>
+      <td>60.825993</td>
+      <td>55.279629</td>
+      <td>0.952240</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Galactose [[M+Na]]</td>
+      <td>3.0</td>
+      <td>0.004079</td>
+      <td>378.429086</td>
+      <td>9161.752437</td>
+      <td>0.026742</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Glucosamine [[M+H]]</td>
+      <td>40.0</td>
+      <td>0.053030</td>
+      <td>2972.870425</td>
+      <td>2077.031997</td>
+      <td>0.155102</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Glutamic Acid [[M-H2O+H]]</td>
+      <td>30.0</td>
+      <td>0.534965</td>
+      <td>6875.684800</td>
+      <td>4973.532970</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Glutathione [[M+H]]</td>
+      <td>48.0</td>
+      <td>0.001166</td>
+      <td>56388.954656</td>
+      <td>25407.944472</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Histidine [[M+H]]</td>
+      <td>46.0</td>
+      <td>0.004079</td>
+      <td>1500.484045</td>
+      <td>162.166667</td>
+      <td>0.026742</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Homocitrate [[M+Na]]</td>
+      <td>17.0</td>
+      <td>0.382867</td>
+      <td>33.593182</td>
+      <td>68.310013</td>
+      <td>0.581339</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Imidazoleacetic acid [[M+H]]</td>
+      <td>30.0</td>
+      <td>0.534965</td>
+      <td>55.254386</td>
+      <td>45.768293</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Indole-3-Ethanol [[M+H]]</td>
+      <td>21.0</td>
+      <td>0.710373</td>
+      <td>294.760643</td>
+      <td>307.986506</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Inositol [[M+Na]]</td>
+      <td>2.0</td>
+      <td>0.002331</td>
+      <td>314.664478</td>
+      <td>4284.420732</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>L-2-Amino-4-[2-Aminophenyl]-4-Oxobutanoic Acid [[M+H]]</td>
+      <td>17.0</td>
+      <td>0.382867</td>
+      <td>77.494334</td>
+      <td>111.030488</td>
+      <td>0.581339</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>L-Anserine [[M+H]]</td>
+      <td>20.0</td>
+      <td>0.620047</td>
+      <td>3.465468</td>
+      <td>3.616170</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>L-Arginine [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>46589.454809</td>
+      <td>5005.626840</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>L-Citrulline [[M+H]]</td>
+      <td>49.0</td>
+      <td>0.000583</td>
+      <td>5364.068855</td>
+      <td>651.562500</td>
+      <td>0.012034</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>L-Lysine [[M+Na]]</td>
+      <td>19.0</td>
+      <td>0.534965</td>
+      <td>70.602827</td>
+      <td>82.337134</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>L-Threonine [[M+Na]]</td>
+      <td>11.0</td>
+      <td>0.097319</td>
+      <td>35.946420</td>
+      <td>499.741672</td>
+      <td>0.239243</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>L-Tryptophan [[M+NH4]]</td>
+      <td>39.0</td>
+      <td>0.072844</td>
+      <td>712.513435</td>
+      <td>441.019029</td>
+      <td>0.183789</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>L-Valine [[M+H]]</td>
+      <td>33.0</td>
+      <td>0.317599</td>
+      <td>1612.543926</td>
+      <td>824.296480</td>
+      <td>0.524674</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Levocarnitine [[M+H]]</td>
+      <td>24.0</td>
+      <td>1.000000</td>
+      <td>81.595389</td>
+      <td>46.615854</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Methionine [[M+H]]</td>
+      <td>28.0</td>
+      <td>0.710373</td>
+      <td>2452.983689</td>
+      <td>2294.668693</td>
+      <td>0.831116</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>N-(5-Amino-5-Carboxypentyl)Glutamic Acid [[M+H]]</td>
+      <td>30.0</td>
+      <td>0.534965</td>
+      <td>1527.003915</td>
+      <td>84.756098</td>
+      <td>0.700296</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>N2-Acetyl-L-ornithine [[M+H]]</td>
+      <td>48.0</td>
+      <td>0.001166</td>
+      <td>875.652519</td>
+      <td>71.430556</td>
+      <td>0.018624</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Niacin [[M+H]]</td>
+      <td>20.0</td>
+      <td>0.620047</td>
+      <td>215.046777</td>
+      <td>292.408537</td>
+      <td>0.785301</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Nicotinamide [[M+H]]</td>
+      <td>32.0</td>
+      <td>0.382867</td>
+      <td>1492.442079</td>
+      <td>865.359756</td>
+      <td>0.581339</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Nicotinamide ribotide [[M+H]]</td>
+      <td>18.0</td>
+      <td>0.455711</td>
+      <td>292.323634</td>
+      <td>291.979336</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>O-acetyl-L-serine [[M+H]]</td>
+      <td>24.0</td>
+      <td>1.000000</td>
+      <td>97.141200</td>
+      <td>150.432689</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Phenylethyl alcohol [[M+H]]</td>
+      <td>12.0</td>
+      <td>0.128205</td>
+      <td>382.587647</td>
+      <td>817.896341</td>
+      <td>0.286209</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Pidolic Acid [[M+H]]</td>
+      <td>32.0</td>
+      <td>0.382867</td>
+      <td>7451.156292</td>
+      <td>4985.559742</td>
+      <td>0.581339</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Proline [[M+NH4]]</td>
+      <td>12.0</td>
+      <td>0.128205</td>
+      <td>5.751427</td>
+      <td>59.305195</td>
+      <td>0.286209</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Pyridoxal [[M+H]]</td>
+      <td>28.5</td>
+      <td>0.654365</td>
+      <td>4566.500000</td>
+      <td>3638.794872</td>
+      <td>0.801938</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Pyridoxamine [[M+H]]</td>
+      <td>18.0</td>
+      <td>0.442787</td>
+      <td>70.602827</td>
+      <td>139.000000</td>
+      <td>0.635840</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Sucrose [[M+Na]]</td>
+      <td>5.0</td>
+      <td>0.011072</td>
+      <td>1872.613588</td>
+      <td>5012.388696</td>
+      <td>0.048135</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Thymine [[M+H]]</td>
+      <td>34.0</td>
+      <td>0.259324</td>
+      <td>72.650938</td>
+      <td>48.510695</td>
+      <td>0.464498</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Trehalose [[M+Na]]</td>
+      <td>5.0</td>
+      <td>0.011072</td>
+      <td>1882.374046</td>
+      <td>5909.770947</td>
+      <td>0.048135</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>Xanthurenic acid [[M+H]]</td>
+      <td>38.0</td>
+      <td>0.097319</td>
+      <td>404.460634</td>
+      <td>123.555556</td>
+      <td>0.239243</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>d-Desthiobiotin [[M+K]]</td>
+      <td>32.0</td>
+      <td>0.382867</td>
+      <td>312.084959</td>
+      <td>209.836960</td>
+      <td>0.581339</td>
+    </tr>
+    <tr>
+      <td>Treatment=None, Supplement=None</td>
+      <td>Treatment=Yes, Supplement=None</td>
+      <td>gamma-Glutamylcysteine [[M+H]]</td>
+      <td>39.0</td>
+      <td>0.072844</td>
+      <td>1479.406565</td>
+      <td>690.151710</td>
+      <td>0.183789</td>
+    </tr>
+  </tbody>
+</table>
+    
+  
+</body>
+</html>

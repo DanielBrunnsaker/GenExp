@@ -1,0 +1,843 @@
+2025-04-29 18:43:43.079 Venus software version: 6.0.1.3380
+2025-04-29 18:43:43.165 SYSTEM : Analyze method - start; Method file C:\Program Files (x86)\Hamilton\Methods\KingLabMethods\DB\genExp\genExp_viscous.hsl
+2025-04-29 18:43:43.578 Microlab STAR : Communication - progress; Connection to instrument is created.
+2025-04-29 18:43:44.978 SYSTEM : Analyze method - complete; 
+2025-04-29 18:44:12.511 SYSTEM : Start method - start; 
+2025-04-29 18:44:12.511 SYSTEM : Start method - progress; User name: Hamilton
+2025-04-29 18:44:12.511 SYSTEM : Start method - progress; Phoenix software version: 6.0.1.50042
+2025-04-29 18:44:12.519 SYSTEM : Start method - progress; Database version: Standard
+2025-04-29 18:44:12.520 SYSTEM : Start method - progress; Sample tracking: On
+2025-04-29 18:44:12.520 SYSTEM : Start method - progress; Vector Database: On
+2025-04-29 18:44:12.521 SYSTEM : Start method - progress; Vector Database connection: Database 'HamiltonVectorDB' on Microsoft SQL Server 'LOCALHOST\HAMILTON' with user 'Hamilton'
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - start;
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Microlab STAR software version: 6.0.1.50042
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Serial number of Instrument: 239K
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of main module: 8.7S 103 2023-04-04  
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of 1000µl channels: 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc)
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of 5ml channels: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of labware handling channels: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of auto load: 3.4S e 2016-05-02
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of iSWAP: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of washer 1: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of washer 2: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of temperature-controlled carrier 1: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of temperature-controlled carrier 2: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of CO-RE 96 Head: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of pump station 1: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of pump station 2: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of pump station 3: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of nano dispenser: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of nano dispenser pressure unit: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of CO-RE 384 Head: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of tube gripper: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of camera channel: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of gel card gripper: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of punch card gripper: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of puncher module: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of twister decapper station 1 module 1: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of twister decapper station 1 module 2: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of twister decapper station 2 module 1: not installed
+2025-04-29 18:44:12.787 Microlab STAR : Start method command - progress; Firmware version of twister decapper station 2 module 2: not installed
+2025-04-29 18:44:15.428 Microlab STAR : Start method command - complete;
+2025-04-29 18:44:15.500 SYSTEM : Start method - complete; 
+2025-04-29 18:44:15.502 SYSTEM : Execute method - start; Method file C:\Program Files (x86)\Hamilton\Methods\KingLabMethods\DB\genExp\genExp_viscous.hsl
+2025-04-29 18:44:15.577 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:44:16.054 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:44:16.061 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:44:16.064 Microlab STAR : Initialize - start;
+2025-04-29 18:44:16.128 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:44:16.137 Microlab STAR : TipPickUp - start;
+2025-04-29 18:44:23.944 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:44:23.963 Microlab STAR : Aspirate - start;
+2025-04-29 18:44:30.911 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:44:30.949 Microlab STAR : Aspirate - error;  > channel 1: DW_96_Praj_0001, A1, E:P1:17/80:Continue  > channel 2: DW_96_Praj_0001, B1, E:P2:17/80:Continue  > channel 3: DW_96_Praj_0001, C1, E:P3:17/80:Continue  > channel 4: DW_96_Praj_0001, D1, E:P4:17/80:Continue  > channel 5: DW_96_Praj_0001, E1, E:P5:17/80:Continue  > channel 6: DW_96_Praj_0001, F1, E:P6:17/80:Continue  > channel 7: DW_96_Praj_0001, G1, E:P7:17/80:Continue  > channel 8: DW_96_Praj_0001, H1, E:P8:17/80:Continue
+2025-04-29 18:44:31.987 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:44:32.060 Microlab STAR : Aspirate - complete;  > channel 1: DW_96_Praj_0001, A1, 99 uL > channel 2: DW_96_Praj_0001, B1, 99 uL > channel 3: DW_96_Praj_0001, C1, 120.6 uL > channel 4: DW_96_Praj_0001, D1, 9 uL > channel 5: DW_96_Praj_0001, E1, 30.6 uL > channel 6: DW_96_Praj_0001, F1, 36 uL > channel 7: DW_96_Praj_0001, G1, 135 uL > channel 8: DW_96_Praj_0001, H1, 126 uL
+2025-04-29 18:44:32.078 Microlab STAR : Dispense - start;
+2025-04-29 18:44:36.994 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A1, 99 uL > channel 2: KingLab_NUNC96F_0001, B1, 99 uL > channel 3: KingLab_NUNC96F_0001, C1, 120.6 uL > channel 4: KingLab_NUNC96F_0001, D1, 9 uL > channel 5: KingLab_NUNC96F_0001, E1, 30.6 uL > channel 6: KingLab_NUNC96F_0001, F1, 36 uL > channel 7: KingLab_NUNC96F_0001, G1, 135 uL > channel 8: KingLab_NUNC96F_0001, H1, 126 uL
+2025-04-29 18:44:36.994 Microlab STAR : TipEject - start;
+2025-04-29 18:44:45.204 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:44:45.204 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:44:45.242 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:44:45.454 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:44:45.458 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:44:45.459 Microlab STAR : Initialize - start;
+2025-04-29 18:44:45.528 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:44:45.535 Microlab STAR : TipPickUp - start;
+2025-04-29 18:44:50.989 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:44:51.001 Microlab STAR : Aspirate - start;
+2025-04-29 18:45:01.805 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:45:01.841 Microlab STAR : Aspirate - error;  > channel 2: DW_96_Praj_0001, B2, E:P2:17/80:Continue  > channel 3: DW_96_Praj_0001, C2, E:P3:17/80:Continue  > channel 4: DW_96_Praj_0001, D2, E:P4:17/80:Continue  > channel 6: DW_96_Praj_0001, F2, E:P6:17/80:Continue  > channel 7: DW_96_Praj_0001, G2, E:P7:17/80:Continue  > channel 8: DW_96_Praj_0001, H2, E:P8:17/80:Continue
+2025-04-29 18:45:02.628 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:45:02.688 Microlab STAR : Aspirate - complete;  > channel 1: DW_96_Praj_0001, A2, 135 uL > channel 2: DW_96_Praj_0001, B2, 30.6 uL > channel 3: DW_96_Praj_0001, C2, 9 uL > channel 4: DW_96_Praj_0001, D2, 36 uL > channel 5: DW_96_Praj_0001, E2, 135 uL > channel 6: DW_96_Praj_0001, F2, 99 uL > channel 7: DW_96_Praj_0001, G2, 126 uL > channel 8: DW_96_Praj_0001, H2, 120.6 uL
+2025-04-29 18:45:02.698 Microlab STAR : Dispense - start;
+2025-04-29 18:45:07.644 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A2, 135 uL > channel 2: KingLab_NUNC96F_0001, B2, 30.6 uL > channel 3: KingLab_NUNC96F_0001, C2, 9 uL > channel 4: KingLab_NUNC96F_0001, D2, 36 uL > channel 5: KingLab_NUNC96F_0001, E2, 135 uL > channel 6: KingLab_NUNC96F_0001, F2, 99 uL > channel 7: KingLab_NUNC96F_0001, G2, 126 uL > channel 8: KingLab_NUNC96F_0001, H2, 120.6 uL
+2025-04-29 18:45:07.644 Microlab STAR : TipEject - start;
+2025-04-29 18:45:15.857 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:45:15.857 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:45:15.893 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:45:16.105 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:45:16.109 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:45:16.111 Microlab STAR : Initialize - start;
+2025-04-29 18:45:16.177 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:45:16.186 Microlab STAR : TipPickUp - start;
+2025-04-29 18:45:21.648 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:45:21.657 Microlab STAR : Aspirate - start;
+2025-04-29 18:45:32.460 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:45:32.494 Microlab STAR : Aspirate - error;  > channel 6: DW_96_Praj_0001, F3, E:P6:17/80:Continue  > channel 7: DW_96_Praj_0001, G3, E:P7:17/80:Continue  > channel 8: DW_96_Praj_0001, H3, E:P8:17/80:Continue
+2025-04-29 18:45:32.911 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:45:32.970 Microlab STAR : Aspirate - complete;  > channel 1: DW_96_Praj_0001, A3, 120.6 uL > channel 2: DW_96_Praj_0001, B3, 99 uL > channel 3: DW_96_Praj_0001, C3, 126 uL > channel 4: DW_96_Praj_0001, D3, 135 uL > channel 5: DW_96_Praj_0001, E3, 99 uL > channel 6: DW_96_Praj_0001, F3, 9 uL > channel 7: DW_96_Praj_0001, G3, 36 uL > channel 8: DW_96_Praj_0001, H3, 30.6 uL
+2025-04-29 18:45:32.977 Microlab STAR : Dispense - start;
+2025-04-29 18:45:37.927 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A3, 120.6 uL > channel 2: KingLab_NUNC96F_0001, B3, 99 uL > channel 3: KingLab_NUNC96F_0001, C3, 126 uL > channel 4: KingLab_NUNC96F_0001, D3, 135 uL > channel 5: KingLab_NUNC96F_0001, E3, 99 uL > channel 6: KingLab_NUNC96F_0001, F3, 9 uL > channel 7: KingLab_NUNC96F_0001, G3, 36 uL > channel 8: KingLab_NUNC96F_0001, H3, 30.6 uL
+2025-04-29 18:45:37.927 Microlab STAR : TipEject - start;
+2025-04-29 18:45:46.137 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:45:46.137 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:45:46.180 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:45:46.390 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:45:46.393 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:45:46.394 Microlab STAR : Initialize - start;
+2025-04-29 18:45:46.462 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:45:46.464 Microlab STAR : TipPickUp - start;
+2025-04-29 18:45:51.919 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:45:51.927 Microlab STAR : Aspirate - start;
+2025-04-29 18:46:02.727 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:46:02.763 Microlab STAR : Aspirate - error;  > channel 2: DW_96_Praj_0001, B4, E:P2:17/80:Continue
+2025-04-29 18:46:02.927 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:46:02.987 Microlab STAR : Aspirate - complete;  > channel 1: DW_96_Praj_0001, A4, 99 uL > channel 2: DW_96_Praj_0001, B4, 9 uL > channel 3: DW_96_Praj_0001, C4, 135 uL > channel 4: DW_96_Praj_0001, D4, 126 uL > channel 5: DW_96_Praj_0001, E4, 99 uL > channel 6: DW_96_Praj_0001, F4, 135 uL > channel 7: DW_96_Praj_0001, G4, 9 uL > channel 8: DW_96_Praj_0001, H4, 120.6 uL
+2025-04-29 18:46:02.995 Microlab STAR : Dispense - start;
+2025-04-29 18:46:07.944 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A4, 99 uL > channel 2: KingLab_NUNC96F_0001, B4, 9 uL > channel 3: KingLab_NUNC96F_0001, C4, 135 uL > channel 4: KingLab_NUNC96F_0001, D4, 126 uL > channel 5: KingLab_NUNC96F_0001, E4, 99 uL > channel 6: KingLab_NUNC96F_0001, F4, 135 uL > channel 7: KingLab_NUNC96F_0001, G4, 9 uL > channel 8: KingLab_NUNC96F_0001, H4, 120.6 uL
+2025-04-29 18:46:07.944 Microlab STAR : TipEject - start;
+2025-04-29 18:46:16.154 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:46:16.154 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:46:16.190 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:46:16.389 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:46:16.392 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:46:16.393 Microlab STAR : Initialize - start;
+2025-04-29 18:46:16.453 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:46:16.461 Microlab STAR : TipPickUp - start;
+2025-04-29 18:46:21.911 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:46:21.921 Microlab STAR : Aspirate - start;
+2025-04-29 18:46:32.620 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:46:32.656 Microlab STAR : Aspirate - error;  > channel 2: DW_96_Praj_0001, B5, E:P2:17/80:Continue
+2025-04-29 18:46:32.816 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:46:32.877 Microlab STAR : Aspirate - complete;  > channel 1: DW_96_Praj_0001, A5, 9 uL > channel 2: DW_96_Praj_0001, B5, 135 uL > channel 3: DW_96_Praj_0001, C5, 99 uL > channel 4: DW_96_Praj_0001, D5, 126 uL > channel 5: DW_96_Praj_0001, E5, 9 uL > channel 6: DW_96_Praj_0001, F5, 120.6 uL > channel 7: DW_96_Praj_0001, G5, 99 uL > channel 8: DW_96_Praj_0001, H5, 36 uL
+2025-04-29 18:46:32.885 Microlab STAR : Dispense - start;
+2025-04-29 18:46:37.777 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A5, 9 uL > channel 2: KingLab_NUNC96F_0001, B5, 135 uL > channel 3: KingLab_NUNC96F_0001, C5, 99 uL > channel 4: KingLab_NUNC96F_0001, D5, 126 uL > channel 5: KingLab_NUNC96F_0001, E5, 9 uL > channel 6: KingLab_NUNC96F_0001, F5, 120.6 uL > channel 7: KingLab_NUNC96F_0001, G5, 99 uL > channel 8: KingLab_NUNC96F_0001, H5, 36 uL
+2025-04-29 18:46:37.777 Microlab STAR : TipEject - start;
+2025-04-29 18:46:45.987 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:46:45.987 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:46:46.026 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:46:46.220 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:46:46.220 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:46:46.222 Microlab STAR : Initialize - start;
+2025-04-29 18:46:46.293 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:46:46.297 Microlab STAR : TipPickUp - start;
+2025-04-29 18:46:51.750 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:46:51.760 Microlab STAR : Aspirate - start;
+2025-04-29 18:47:02.577 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:47:02.612 Microlab STAR : Aspirate - error;  > channel 2: DW_96_Praj_0001, B6, E:P2:17/80:Continue  > channel 3: DW_96_Praj_0001, C6, E:P3:17/80:Continue
+2025-04-29 18:47:02.893 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:47:02.953 Microlab STAR : Aspirate - complete;  > channel 1: DW_96_Praj_0001, A6, 30.6 uL > channel 2: DW_96_Praj_0001, B6, 9 uL > channel 3: DW_96_Praj_0001, C6, 36 uL > channel 4: DW_96_Praj_0001, D6, 9 uL > channel 5: DW_96_Praj_0001, E6, 126 uL > channel 6: DW_96_Praj_0001, F6, 99 uL > channel 7: DW_96_Praj_0001, G6, 120.6 uL > channel 8: DW_96_Praj_0001, H6, 135 uL
+2025-04-29 18:47:02.964 Microlab STAR : Dispense - start;
+2025-04-29 18:47:07.920 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A6, 30.6 uL > channel 2: KingLab_NUNC96F_0001, B6, 9 uL > channel 3: KingLab_NUNC96F_0001, C6, 36 uL > channel 4: KingLab_NUNC96F_0001, D6, 9 uL > channel 5: KingLab_NUNC96F_0001, E6, 126 uL > channel 6: KingLab_NUNC96F_0001, F6, 99 uL > channel 7: KingLab_NUNC96F_0001, G6, 120.6 uL > channel 8: KingLab_NUNC96F_0001, H6, 135 uL
+2025-04-29 18:47:07.920 Microlab STAR : TipEject - start;
+2025-04-29 18:47:16.077 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:47:16.077 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:47:16.118 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:47:16.328 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:47:16.330 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:47:16.331 Microlab STAR : Initialize - start;
+2025-04-29 18:47:16.403 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:47:16.408 Microlab STAR : TipPickUp - start;
+2025-04-29 18:47:21.860 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:47:21.869 Microlab STAR : Aspirate - start;
+2025-04-29 18:47:32.670 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:47:32.704 Microlab STAR : Aspirate - error;  > channel 7: DW_96_Praj_0001, G7, E:P7:17/80:Continue  > channel 8: DW_96_Praj_0001, H7, E:P8:17/80:Continue
+2025-04-29 18:47:32.987 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:47:33.043 Microlab STAR : Aspirate - complete;  > channel 1: DW_96_Praj_0001, A7, 9 uL > channel 2: DW_96_Praj_0001, B7, 135 uL > channel 3: DW_96_Praj_0001, C7, 99 uL > channel 4: DW_96_Praj_0001, D7, 120.6 uL > channel 5: DW_96_Praj_0001, E7, 36 uL > channel 6: DW_96_Praj_0001, F7, 126 uL > channel 7: DW_96_Praj_0001, G7, 30.6 uL > channel 8: DW_96_Praj_0001, H7, 9 uL
+2025-04-29 18:47:33.058 Microlab STAR : Dispense - start;
+2025-04-29 18:47:37.993 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A7, 9 uL > channel 2: KingLab_NUNC96F_0001, B7, 135 uL > channel 3: KingLab_NUNC96F_0001, C7, 99 uL > channel 4: KingLab_NUNC96F_0001, D7, 120.6 uL > channel 5: KingLab_NUNC96F_0001, E7, 36 uL > channel 6: KingLab_NUNC96F_0001, F7, 126 uL > channel 7: KingLab_NUNC96F_0001, G7, 30.6 uL > channel 8: KingLab_NUNC96F_0001, H7, 9 uL
+2025-04-29 18:47:38.003 Microlab STAR : TipEject - start;
+2025-04-29 18:47:46.210 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:47:46.210 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:47:46.245 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:47:46.453 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:47:46.458 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:47:46.460 Microlab STAR : Initialize - start;
+2025-04-29 18:47:46.526 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:47:46.529 Microlab STAR : TipPickUp - start;
+2025-04-29 18:47:51.987 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:47:52.006 Microlab STAR : Aspirate - start;
+2025-04-29 18:48:02.809 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:48:02.845 Microlab STAR : Aspirate - error;  > channel 4: DW_96_Praj_0001, D8, E:P4:17/80:Continue  > channel 7: DW_96_Praj_0001, G8, E:P7:17/80:Continue  > channel 8: DW_96_Praj_0001, H8, E:P8:17/80:Continue
+2025-04-29 18:48:03.260 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:48:03.319 Microlab STAR : Aspirate - complete;  > channel 1: DW_96_Praj_0001, A8, 126 uL > channel 2: DW_96_Praj_0001, B8, 99 uL > channel 3: DW_96_Praj_0001, C8, 135 uL > channel 4: DW_96_Praj_0001, D8, 30.6 uL > channel 5: DW_96_Praj_0001, E8, 99 uL > channel 6: DW_96_Praj_0001, F8, 36 uL > channel 7: DW_96_Praj_0001, G8, 9 uL > channel 8: DW_96_Praj_0001, H8, 9 uL
+2025-04-29 18:48:03.327 Microlab STAR : Dispense - start;
+2025-04-29 18:48:08.276 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A8, 126 uL > channel 2: KingLab_NUNC96F_0001, B8, 99 uL > channel 3: KingLab_NUNC96F_0001, C8, 135 uL > channel 4: KingLab_NUNC96F_0001, D8, 30.6 uL > channel 5: KingLab_NUNC96F_0001, E8, 99 uL > channel 6: KingLab_NUNC96F_0001, F8, 36 uL > channel 7: KingLab_NUNC96F_0001, G8, 9 uL > channel 8: KingLab_NUNC96F_0001, H8, 9 uL
+2025-04-29 18:48:08.276 Microlab STAR : TipEject - start;
+2025-04-29 18:48:16.476 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:48:16.476 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:48:16.515 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:48:16.721 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:48:16.723 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:48:16.724 Microlab STAR : Initialize - start;
+2025-04-29 18:48:16.793 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:48:16.799 Microlab STAR : TipPickUp - start;
+2025-04-29 18:48:22.252 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:48:22.268 Microlab STAR : Aspirate - start;
+2025-04-29 18:48:33.060 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:48:33.101 Microlab STAR : Aspirate - error;  > channel 3: DW_96_Praj_0001, C9, E:P3:17/80:Continue  > channel 5: DW_96_Praj_0001, E9, E:P5:17/80:Continue  > channel 7: DW_96_Praj_0001, G9, E:P7:17/80:Continue
+2025-04-29 18:48:33.514 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:48:33.578 Microlab STAR : Aspirate - complete;  > channel 1: DW_96_Praj_0001, A9, 9 uL > channel 2: DW_96_Praj_0001, B9, 120.6 uL > channel 3: DW_96_Praj_0001, C9, 36 uL > channel 4: DW_96_Praj_0001, D9, 99 uL > channel 5: DW_96_Praj_0001, E9, 30.6 uL > channel 6: DW_96_Praj_0001, F9, 135 uL > channel 7: DW_96_Praj_0001, G9, 9 uL > channel 8: DW_96_Praj_0001, H9, 99 uL
+2025-04-29 18:48:33.585 Microlab STAR : Dispense - start;
+2025-04-29 18:48:38.526 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A9, 9 uL > channel 2: KingLab_NUNC96F_0001, B9, 120.6 uL > channel 3: KingLab_NUNC96F_0001, C9, 36 uL > channel 4: KingLab_NUNC96F_0001, D9, 99 uL > channel 5: KingLab_NUNC96F_0001, E9, 30.6 uL > channel 6: KingLab_NUNC96F_0001, F9, 135 uL > channel 7: KingLab_NUNC96F_0001, G9, 9 uL > channel 8: KingLab_NUNC96F_0001, H9, 99 uL
+2025-04-29 18:48:38.526 Microlab STAR : TipEject - start;
+2025-04-29 18:48:46.736 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:48:46.736 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:48:46.779 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:48:46.970 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:48:46.972 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:48:46.973 Microlab STAR : Initialize - start;
+2025-04-29 18:48:47.043 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:48:47.048 Microlab STAR : TipPickUp - start;
+2025-04-29 18:48:52.501 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:48:52.511 Microlab STAR : Aspirate - start;
+2025-04-29 18:49:03.309 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:49:03.345 Microlab STAR : Aspirate - error;  > channel 2: DW_96_Praj_0001, B10, E:P2:17/80:Continue
+2025-04-29 18:49:03.509 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:49:03.569 Microlab STAR : Aspirate - complete;  > channel 1: DW_96_Praj_0001, A10, 135 uL > channel 2: DW_96_Praj_0001, B10, 36 uL > channel 3: DW_96_Praj_0001, C10, 99 uL > channel 4: DW_96_Praj_0001, D10, 99 uL > channel 5: DW_96_Praj_0001, E10, 9 uL > channel 6: DW_96_Praj_0001, F10, 30.6 uL > channel 7: DW_96_Praj_0001, G10, 135 uL > channel 8: DW_96_Praj_0001, H10, 120.6 uL
+2025-04-29 18:49:03.580 Microlab STAR : Dispense - start;
+2025-04-29 18:49:08.519 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A10, 135 uL > channel 2: KingLab_NUNC96F_0001, B10, 36 uL > channel 3: KingLab_NUNC96F_0001, C10, 99 uL > channel 4: KingLab_NUNC96F_0001, D10, 99 uL > channel 5: KingLab_NUNC96F_0001, E10, 9 uL > channel 6: KingLab_NUNC96F_0001, F10, 30.6 uL > channel 7: KingLab_NUNC96F_0001, G10, 135 uL > channel 8: KingLab_NUNC96F_0001, H10, 120.6 uL
+2025-04-29 18:49:08.525 Microlab STAR : TipEject - start;
+2025-04-29 18:49:16.730 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:49:16.730 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:49:16.772 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:49:16.992 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:49:16.998 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:49:17.000 Microlab STAR : Initialize - start;
+2025-04-29 18:49:17.064 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:49:17.076 Microlab STAR : TipPickUp - start;
+2025-04-29 18:49:22.529 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:49:22.539 Microlab STAR : Aspirate - start;
+2025-04-29 18:49:33.353 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:49:33.390 Microlab STAR : Aspirate - error;  > channel 1: DW_96_Praj_0001, A11, E:P1:17/80:Continue  > channel 3: DW_96_Praj_0001, C11, E:P3:17/80:Continue
+2025-04-29 18:49:33.676 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:49:33.736 Microlab STAR : Aspirate - complete;  > channel 1: DW_96_Praj_0001, A11, 9 uL > channel 2: DW_96_Praj_0001, B11, 99 uL > channel 3: DW_96_Praj_0001, C11, 30.6 uL > channel 4: DW_96_Praj_0001, D11, 135 uL > channel 5: DW_96_Praj_0001, E11, 120.6 uL > channel 6: DW_96_Praj_0001, F11, 126 uL > channel 7: DW_96_Praj_0001, G11, 9 uL > channel 8: DW_96_Praj_0001, H11, 135 uL
+2025-04-29 18:49:33.747 Microlab STAR : Dispense - start;
+2025-04-29 18:49:38.710 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A11, 9 uL > channel 2: KingLab_NUNC96F_0001, B11, 99 uL > channel 3: KingLab_NUNC96F_0001, C11, 30.6 uL > channel 4: KingLab_NUNC96F_0001, D11, 135 uL > channel 5: KingLab_NUNC96F_0001, E11, 120.6 uL > channel 6: KingLab_NUNC96F_0001, F11, 126 uL > channel 7: KingLab_NUNC96F_0001, G11, 9 uL > channel 8: KingLab_NUNC96F_0001, H11, 135 uL
+2025-04-29 18:49:38.710 Microlab STAR : TipEject - start;
+2025-04-29 18:49:46.869 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:49:46.869 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:49:46.902 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:49:47.102 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:49:47.106 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:49:47.107 Microlab STAR : Initialize - start;
+2025-04-29 18:49:47.176 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:49:47.180 Microlab STAR : TipPickUp - start;
+2025-04-29 18:49:52.634 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:49:52.644 Microlab STAR : Aspirate - start;
+2025-04-29 18:50:03.442 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:50:03.481 Microlab STAR : Aspirate - error;  > channel 1: DW_96_Praj_0001, A12, E:P1:17/80:Continue  > channel 3: DW_96_Praj_0001, C12, E:P3:17/80:Continue  > channel 4: DW_96_Praj_0001, D12, E:P4:17/80:Continue
+2025-04-29 18:50:03.895 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:50:03.956 Microlab STAR : Aspirate - complete;  > channel 1: DW_96_Praj_0001, A12, 36 uL > channel 2: DW_96_Praj_0001, B12, 126 uL > channel 3: DW_96_Praj_0001, C12, 9 uL > channel 4: DW_96_Praj_0001, D12, 30.6 uL > channel 5: DW_96_Praj_0001, E12, 135 uL > channel 6: DW_96_Praj_0001, F12, 9 uL > channel 7: DW_96_Praj_0001, G12, 99 uL > channel 8: DW_96_Praj_0001, H12, 99 uL
+2025-04-29 18:50:03.962 Microlab STAR : Dispense - start;
+2025-04-29 18:50:08.909 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A12, 36 uL > channel 2: KingLab_NUNC96F_0001, B12, 126 uL > channel 3: KingLab_NUNC96F_0001, C12, 9 uL > channel 4: KingLab_NUNC96F_0001, D12, 30.6 uL > channel 5: KingLab_NUNC96F_0001, E12, 135 uL > channel 6: KingLab_NUNC96F_0001, F12, 9 uL > channel 7: KingLab_NUNC96F_0001, G12, 99 uL > channel 8: KingLab_NUNC96F_0001, H12, 99 uL
+2025-04-29 18:50:08.909 Microlab STAR : TipEject - start;
+2025-04-29 18:50:17.110 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 1 > channel 2: ST_L_0001, 2 > channel 3: ST_L_0001, 3 > channel 4: ST_L_0001, 4 > channel 5: ST_L_0001, 5 > channel 6: ST_L_0001, 6 > channel 7: ST_L_0001, 7 > channel 8: ST_L_0001, 8
+2025-04-29 18:50:17.110 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:50:17.151 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:50:17.352 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:50:17.352 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:50:17.357 Microlab STAR : Initialize - start;
+2025-04-29 18:50:17.428 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:50:17.431 Microlab STAR : TipPickUp - start;
+2025-04-29 18:50:23.280 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:50:23.291 Microlab STAR : Aspirate - start;
+2025-04-29 18:50:34.075 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:50:34.110 Microlab STAR : Aspirate - error;  > channel 3: rgt_cont_60ml_BC_A00_0005, 3, E:P3:17/80:Continue  > channel 7: rgt_cont_60ml_BC_A00_0005, 7, E:P7:17/80:Continue
+2025-04-29 18:50:34.392 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:50:34.458 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 27 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 27 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 0 uL
+2025-04-29 18:50:34.473 Microlab STAR : Dispense - start;
+2025-04-29 18:50:38.448 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A1, 27 uL > channel 4: KingLab_NUNC96F_0001, D1, 27 uL
+2025-04-29 18:50:38.448 Microlab STAR : TipEject - start;
+2025-04-29 18:50:46.608 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:50:46.608 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:50:46.647 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:50:46.841 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:50:46.841 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:50:46.845 Microlab STAR : Initialize - start;
+2025-04-29 18:50:46.908 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:50:46.918 Microlab STAR : TipPickUp - start;
+2025-04-29 18:50:52.378 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:50:52.389 Microlab STAR : Aspirate - start;
+2025-04-29 18:51:02.918 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 0 uL
+2025-04-29 18:51:02.928 Microlab STAR : Dispense - start;
+2025-04-29 18:51:02.987 Microlab STAR : Dispense - complete;
+2025-04-29 18:51:02.989 Microlab STAR : TipEject - start;
+2025-04-29 18:51:11.142 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:51:11.142 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:51:11.183 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:51:11.387 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:51:11.387 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:51:11.389 Microlab STAR : Initialize - start;
+2025-04-29 18:51:11.458 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:51:11.463 Microlab STAR : TipPickUp - start;
+2025-04-29 18:51:16.913 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:51:16.937 Microlab STAR : Aspirate - start;
+2025-04-29 18:51:27.719 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:51:27.757 Microlab STAR : Aspirate - error;  > channel 3: rgt_cont_60ml_BC_A00_0005, 3, E:P3:17/80:Continue  > channel 7: rgt_cont_60ml_BC_A00_0005, 7, E:P7:17/80:Continue  > channel 8: rgt_cont_60ml_BC_A00_0005, 8, E:P8:17/80:Continue
+2025-04-29 18:51:28.170 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:51:28.235 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 27 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 27 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 0 uL
+2025-04-29 18:51:28.242 Microlab STAR : Dispense - start;
+2025-04-29 18:51:32.179 Microlab STAR : Dispense - complete;  > channel 2: KingLab_NUNC96F_0001, B3, 27 uL > channel 6: KingLab_NUNC96F_0001, F3, 27 uL
+2025-04-29 18:51:32.179 Microlab STAR : TipEject - start;
+2025-04-29 18:51:40.342 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:51:40.342 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:51:40.374 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:51:40.575 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:51:40.578 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:51:40.580 Microlab STAR : Initialize - start;
+2025-04-29 18:51:40.652 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:51:40.654 Microlab STAR : TipPickUp - start;
+2025-04-29 18:51:46.061 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:51:46.071 Microlab STAR : Aspirate - start;
+2025-04-29 18:51:56.852 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:51:56.888 Microlab STAR : Aspirate - error;  > channel 3: rgt_cont_60ml_BC_A00_0005, 3, E:P3:17/80:Continue
+2025-04-29 18:51:57.051 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:51:57.113 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 27 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 27 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 0 uL
+2025-04-29 18:51:57.120 Microlab STAR : Dispense - start;
+2025-04-29 18:52:01.058 Microlab STAR : Dispense - complete;  > channel 5: KingLab_NUNC96F_0001, E4, 27 uL > channel 7: KingLab_NUNC96F_0001, G4, 27 uL
+2025-04-29 18:52:01.058 Microlab STAR : TipEject - start;
+2025-04-29 18:52:09.208 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:52:09.208 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:52:09.253 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:52:09.454 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:52:09.456 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:52:09.458 Microlab STAR : Initialize - start;
+2025-04-29 18:52:09.525 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:52:09.534 Microlab STAR : TipPickUp - start;
+2025-04-29 18:52:14.997 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:52:15.009 Microlab STAR : Aspirate - start;
+2025-04-29 18:52:25.785 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:52:25.823 Microlab STAR : Aspirate - error;  > channel 8: rgt_cont_60ml_BC_A00_0005, 8, E:P8:17/80:Continue
+2025-04-29 18:52:25.975 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:52:26.034 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 27 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 27 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 0 uL
+2025-04-29 18:52:26.045 Microlab STAR : Dispense - start;
+2025-04-29 18:52:29.974 Microlab STAR : Dispense - complete;  > channel 3: KingLab_NUNC96F_0001, C5, 27 uL > channel 5: KingLab_NUNC96F_0001, E5, 27 uL
+2025-04-29 18:52:29.974 Microlab STAR : TipEject - start;
+2025-04-29 18:52:38.141 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:52:38.141 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:52:38.173 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:52:38.369 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:52:38.371 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:52:38.372 Microlab STAR : Initialize - start;
+2025-04-29 18:52:38.444 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:52:38.447 Microlab STAR : TipPickUp - start;
+2025-04-29 18:52:43.851 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:52:43.861 Microlab STAR : Aspirate - start;
+2025-04-29 18:52:54.641 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:52:54.675 Microlab STAR : Aspirate - error;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, E:P1:17/80:Continue
+2025-04-29 18:52:54.841 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:52:54.901 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 27 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 27 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 0 uL
+2025-04-29 18:52:54.913 Microlab STAR : Dispense - start;
+2025-04-29 18:52:58.844 Microlab STAR : Dispense - complete;  > channel 2: KingLab_NUNC96F_0001, B6, 27 uL > channel 6: KingLab_NUNC96F_0001, F6, 27 uL
+2025-04-29 18:52:58.844 Microlab STAR : TipEject - start;
+2025-04-29 18:53:07.008 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:53:07.008 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:53:07.045 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:53:07.234 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:53:07.234 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:53:07.238 Microlab STAR : Initialize - start;
+2025-04-29 18:53:07.308 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:53:07.315 Microlab STAR : TipPickUp - start;
+2025-04-29 18:53:12.770 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:53:12.779 Microlab STAR : Aspirate - start;
+2025-04-29 18:53:23.574 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:53:23.610 Microlab STAR : Aspirate - error;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, E:P1:17/80:Continue
+2025-04-29 18:53:23.774 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:53:23.841 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 27 uL
+2025-04-29 18:53:23.847 Microlab STAR : Dispense - start;
+2025-04-29 18:53:27.762 Microlab STAR : Dispense - complete;  > channel 8: KingLab_NUNC96F_0001, H7, 27 uL
+2025-04-29 18:53:27.762 Microlab STAR : TipEject - start;
+2025-04-29 18:53:35.924 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:53:35.924 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:53:35.966 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:53:36.174 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:53:36.176 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:53:36.178 Microlab STAR : Initialize - start;
+2025-04-29 18:53:36.241 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:53:36.253 Microlab STAR : TipPickUp - start;
+2025-04-29 18:53:41.711 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:53:41.720 Microlab STAR : Aspirate - start;
+2025-04-29 18:53:52.501 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:53:52.537 Microlab STAR : Aspirate - error;  > channel 4: rgt_cont_60ml_BC_A00_0005, 4, E:P4:17/80:Continue
+2025-04-29 18:53:52.700 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:53:52.766 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 27 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 27 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 0 uL
+2025-04-29 18:53:52.773 Microlab STAR : Dispense - start;
+2025-04-29 18:53:56.659 Microlab STAR : Dispense - complete;  > channel 5: KingLab_NUNC96F_0001, E8, 27 uL > channel 7: KingLab_NUNC96F_0001, G8, 27 uL
+2025-04-29 18:53:56.659 Microlab STAR : TipEject - start;
+2025-04-29 18:54:04.824 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:54:04.824 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:54:04.860 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:54:05.050 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:54:05.052 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:54:05.053 Microlab STAR : Initialize - start;
+2025-04-29 18:54:05.125 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:54:05.129 Microlab STAR : TipPickUp - start;
+2025-04-29 18:54:10.586 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:54:10.596 Microlab STAR : Aspirate - start;
+2025-04-29 18:54:21.391 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:54:21.428 Microlab STAR : Aspirate - error;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, E:P1:17/80:Continue  > channel 4: rgt_cont_60ml_BC_A00_0005, 4, E:P4:17/80:Continue
+2025-04-29 18:54:21.717 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:54:21.773 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 27 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 27 uL
+2025-04-29 18:54:21.786 Microlab STAR : Dispense - start;
+2025-04-29 18:54:25.682 Microlab STAR : Dispense - complete;  > channel 7: KingLab_NUNC96F_0001, G9, 27 uL > channel 8: KingLab_NUNC96F_0001, H9, 27 uL
+2025-04-29 18:54:25.690 Microlab STAR : TipEject - start;
+2025-04-29 18:54:33.850 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:54:33.850 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:54:33.897 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:54:34.107 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:54:34.107 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:54:34.110 Microlab STAR : Initialize - start;
+2025-04-29 18:54:34.173 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:54:34.183 Microlab STAR : TipPickUp - start;
+2025-04-29 18:54:39.639 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:54:39.649 Microlab STAR : Aspirate - start;
+2025-04-29 18:54:50.424 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:54:50.458 Microlab STAR : Aspirate - error;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, E:P1:17/80:Continue
+2025-04-29 18:54:50.624 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:54:50.677 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 27 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 0 uL
+2025-04-29 18:54:50.691 Microlab STAR : Dispense - start;
+2025-04-29 18:54:54.542 Microlab STAR : Dispense - complete;  > channel 4: KingLab_NUNC96F_0001, D10, 27 uL
+2025-04-29 18:54:54.544 Microlab STAR : TipEject - start;
+2025-04-29 18:55:02.691 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:55:02.701 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:55:02.727 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:55:02.919 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:55:02.920 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:55:02.921 Microlab STAR : Initialize - start;
+2025-04-29 18:55:02.990 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:55:02.997 Microlab STAR : TipPickUp - start;
+2025-04-29 18:55:08.448 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:55:08.457 Microlab STAR : Aspirate - start;
+2025-04-29 18:55:19.256 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 27 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 27 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 0 uL
+2025-04-29 18:55:19.267 Microlab STAR : Dispense - start;
+2025-04-29 18:55:23.149 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A11, 27 uL > channel 2: KingLab_NUNC96F_0001, B11, 27 uL
+2025-04-29 18:55:23.149 Microlab STAR : TipEject - start;
+2025-04-29 18:55:31.317 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:55:31.317 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:55:31.349 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:55:31.550 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:55:31.554 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:55:31.556 Microlab STAR : Initialize - start;
+2025-04-29 18:55:31.623 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:55:31.630 Microlab STAR : TipPickUp - start;
+2025-04-29 18:55:37.084 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:55:37.094 Microlab STAR : Aspirate - start;
+2025-04-29 18:55:47.873 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 18:55:47.911 Microlab STAR : Aspirate - error;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, E:P1:17/80:Continue
+2025-04-29 18:55:48.074 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 18:55:48.139 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 27 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 27 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 0 uL
+2025-04-29 18:55:48.147 Microlab STAR : Dispense - start;
+2025-04-29 18:55:52.081 Microlab STAR : Dispense - complete;  > channel 3: KingLab_NUNC96F_0001, C12, 27 uL > channel 7: KingLab_NUNC96F_0001, G12, 27 uL
+2025-04-29 18:55:52.081 Microlab STAR : TipEject - start;
+2025-04-29 18:56:00.239 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 9 > channel 2: ST_L_0001, 10 > channel 3: ST_L_0001, 11 > channel 4: ST_L_0001, 12 > channel 5: ST_L_0001, 13 > channel 6: ST_L_0001, 14 > channel 7: ST_L_0001, 15 > channel 8: ST_L_0001, 16
+2025-04-29 18:56:00.239 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:56:00.282 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:56:00.483 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:56:00.483 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:56:00.486 Microlab STAR : Initialize - start;
+2025-04-29 18:56:00.548 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:56:00.557 Microlab STAR : TipPickUp - start;
+2025-04-29 18:56:06.415 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:56:06.426 Microlab STAR : Aspirate - start;
+2025-04-29 18:56:17.883 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0004, 1, 126 uL > channel 2: rgt_cont_60ml_BC_A00_0004, 2, 126 uL > channel 3: rgt_cont_60ml_BC_A00_0004, 3, 126 uL > channel 4: rgt_cont_60ml_BC_A00_0004, 4, 126 uL > channel 5: rgt_cont_60ml_BC_A00_0004, 5, 126 uL > channel 6: rgt_cont_60ml_BC_A00_0004, 6, 126 uL > channel 7: rgt_cont_60ml_BC_A00_0004, 7, 135 uL > channel 8: rgt_cont_60ml_BC_A00_0004, 8, 126 uL
+2025-04-29 18:56:17.892 Microlab STAR : Dispense - start;
+2025-04-29 18:56:22.923 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A1, 126 uL > channel 2: KingLab_NUNC96F_0001, B1, 126 uL > channel 3: KingLab_NUNC96F_0001, C1, 126 uL > channel 4: KingLab_NUNC96F_0001, D1, 126 uL > channel 5: KingLab_NUNC96F_0001, E1, 126 uL > channel 6: KingLab_NUNC96F_0001, F1, 126 uL > channel 7: KingLab_NUNC96F_0001, G1, 135 uL > channel 8: KingLab_NUNC96F_0001, H1, 126 uL
+2025-04-29 18:56:22.933 Microlab STAR : TipEject - start;
+2025-04-29 18:56:31.089 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:56:31.089 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:56:31.119 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:56:31.316 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:56:31.316 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:56:31.319 Microlab STAR : Initialize - start;
+2025-04-29 18:56:31.383 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:56:31.388 Microlab STAR : TipPickUp - start;
+2025-04-29 18:56:36.854 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:56:36.871 Microlab STAR : Aspirate - start;
+2025-04-29 18:56:48.282 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0004, 1, 135 uL > channel 2: rgt_cont_60ml_BC_A00_0004, 2, 126 uL > channel 3: rgt_cont_60ml_BC_A00_0004, 3, 126 uL > channel 4: rgt_cont_60ml_BC_A00_0004, 4, 126 uL > channel 5: rgt_cont_60ml_BC_A00_0004, 5, 135 uL > channel 6: rgt_cont_60ml_BC_A00_0004, 6, 126 uL > channel 7: rgt_cont_60ml_BC_A00_0004, 7, 126 uL > channel 8: rgt_cont_60ml_BC_A00_0004, 8, 126 uL
+2025-04-29 18:56:48.290 Microlab STAR : Dispense - start;
+2025-04-29 18:56:53.372 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A2, 135 uL > channel 2: KingLab_NUNC96F_0001, B2, 126 uL > channel 3: KingLab_NUNC96F_0001, C2, 126 uL > channel 4: KingLab_NUNC96F_0001, D2, 126 uL > channel 5: KingLab_NUNC96F_0001, E2, 135 uL > channel 6: KingLab_NUNC96F_0001, F2, 126 uL > channel 7: KingLab_NUNC96F_0001, G2, 126 uL > channel 8: KingLab_NUNC96F_0001, H2, 126 uL
+2025-04-29 18:56:53.372 Microlab STAR : TipEject - start;
+2025-04-29 18:57:01.534 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:57:01.534 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:57:01.567 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:57:01.766 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:57:01.766 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:57:01.766 Microlab STAR : Initialize - start;
+2025-04-29 18:57:01.839 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:57:01.843 Microlab STAR : TipPickUp - start;
+2025-04-29 18:57:07.304 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:57:07.323 Microlab STAR : Aspirate - start;
+2025-04-29 18:57:18.772 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0004, 1, 126 uL > channel 2: rgt_cont_60ml_BC_A00_0004, 2, 126 uL > channel 3: rgt_cont_60ml_BC_A00_0004, 3, 126 uL > channel 4: rgt_cont_60ml_BC_A00_0004, 4, 135 uL > channel 5: rgt_cont_60ml_BC_A00_0004, 5, 126 uL > channel 6: rgt_cont_60ml_BC_A00_0004, 6, 126 uL > channel 7: rgt_cont_60ml_BC_A00_0004, 7, 126 uL > channel 8: rgt_cont_60ml_BC_A00_0004, 8, 126 uL
+2025-04-29 18:57:18.786 Microlab STAR : Dispense - start;
+2025-04-29 18:57:23.772 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A3, 126 uL > channel 2: KingLab_NUNC96F_0001, B3, 126 uL > channel 3: KingLab_NUNC96F_0001, C3, 126 uL > channel 4: KingLab_NUNC96F_0001, D3, 135 uL > channel 5: KingLab_NUNC96F_0001, E3, 126 uL > channel 6: KingLab_NUNC96F_0001, F3, 126 uL > channel 7: KingLab_NUNC96F_0001, G3, 126 uL > channel 8: KingLab_NUNC96F_0001, H3, 126 uL
+2025-04-29 18:57:23.772 Microlab STAR : TipEject - start;
+2025-04-29 18:57:31.932 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:57:31.932 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:57:31.972 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:57:32.184 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:57:32.184 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:57:32.184 Microlab STAR : Initialize - start;
+2025-04-29 18:57:32.256 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:57:32.256 Microlab STAR : TipPickUp - start;
+2025-04-29 18:57:37.722 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:57:37.732 Microlab STAR : Aspirate - start;
+2025-04-29 18:57:49.289 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0004, 1, 126 uL > channel 2: rgt_cont_60ml_BC_A00_0004, 2, 126 uL > channel 3: rgt_cont_60ml_BC_A00_0004, 3, 135 uL > channel 4: rgt_cont_60ml_BC_A00_0004, 4, 126 uL > channel 5: rgt_cont_60ml_BC_A00_0004, 5, 126 uL > channel 6: rgt_cont_60ml_BC_A00_0004, 6, 135 uL > channel 7: rgt_cont_60ml_BC_A00_0004, 7, 126 uL > channel 8: rgt_cont_60ml_BC_A00_0004, 8, 126 uL
+2025-04-29 18:57:49.299 Microlab STAR : Dispense - start;
+2025-04-29 18:57:54.282 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A4, 126 uL > channel 2: KingLab_NUNC96F_0001, B4, 126 uL > channel 3: KingLab_NUNC96F_0001, C4, 135 uL > channel 4: KingLab_NUNC96F_0001, D4, 126 uL > channel 5: KingLab_NUNC96F_0001, E4, 126 uL > channel 6: KingLab_NUNC96F_0001, F4, 135 uL > channel 7: KingLab_NUNC96F_0001, G4, 126 uL > channel 8: KingLab_NUNC96F_0001, H4, 126 uL
+2025-04-29 18:57:54.282 Microlab STAR : TipEject - start;
+2025-04-29 18:58:02.449 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:58:02.449 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:58:02.472 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:58:02.682 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:58:02.682 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:58:02.682 Microlab STAR : Initialize - start;
+2025-04-29 18:58:02.755 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:58:02.755 Microlab STAR : TipPickUp - start;
+2025-04-29 18:58:08.215 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:58:08.222 Microlab STAR : Aspirate - start;
+2025-04-29 18:58:19.782 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0004, 1, 126 uL > channel 2: rgt_cont_60ml_BC_A00_0004, 2, 135 uL > channel 3: rgt_cont_60ml_BC_A00_0004, 3, 126 uL > channel 4: rgt_cont_60ml_BC_A00_0004, 4, 126 uL > channel 5: rgt_cont_60ml_BC_A00_0004, 5, 126 uL > channel 6: rgt_cont_60ml_BC_A00_0004, 6, 126 uL > channel 7: rgt_cont_60ml_BC_A00_0004, 7, 126 uL > channel 8: rgt_cont_60ml_BC_A00_0004, 8, 126 uL
+2025-04-29 18:58:19.788 Microlab STAR : Dispense - start;
+2025-04-29 18:58:24.822 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A5, 126 uL > channel 2: KingLab_NUNC96F_0001, B5, 135 uL > channel 3: KingLab_NUNC96F_0001, C5, 126 uL > channel 4: KingLab_NUNC96F_0001, D5, 126 uL > channel 5: KingLab_NUNC96F_0001, E5, 126 uL > channel 6: KingLab_NUNC96F_0001, F5, 126 uL > channel 7: KingLab_NUNC96F_0001, G5, 126 uL > channel 8: KingLab_NUNC96F_0001, H5, 126 uL
+2025-04-29 18:58:24.822 Microlab STAR : TipEject - start;
+2025-04-29 18:58:32.989 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:58:32.989 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:58:33.021 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:58:33.218 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:58:33.218 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:58:33.222 Microlab STAR : Initialize - start;
+2025-04-29 18:58:33.289 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:58:33.289 Microlab STAR : TipPickUp - start;
+2025-04-29 18:58:38.755 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:58:38.765 Microlab STAR : Aspirate - start;
+2025-04-29 18:58:50.332 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0004, 1, 126 uL > channel 2: rgt_cont_60ml_BC_A00_0004, 2, 126 uL > channel 3: rgt_cont_60ml_BC_A00_0004, 3, 126 uL > channel 4: rgt_cont_60ml_BC_A00_0004, 4, 126 uL > channel 5: rgt_cont_60ml_BC_A00_0004, 5, 126 uL > channel 6: rgt_cont_60ml_BC_A00_0004, 6, 126 uL > channel 7: rgt_cont_60ml_BC_A00_0004, 7, 126 uL > channel 8: rgt_cont_60ml_BC_A00_0004, 8, 135 uL
+2025-04-29 18:58:50.338 Microlab STAR : Dispense - start;
+2025-04-29 18:58:55.338 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A6, 126 uL > channel 2: KingLab_NUNC96F_0001, B6, 126 uL > channel 3: KingLab_NUNC96F_0001, C6, 126 uL > channel 4: KingLab_NUNC96F_0001, D6, 126 uL > channel 5: KingLab_NUNC96F_0001, E6, 126 uL > channel 6: KingLab_NUNC96F_0001, F6, 126 uL > channel 7: KingLab_NUNC96F_0001, G6, 126 uL > channel 8: KingLab_NUNC96F_0001, H6, 135 uL
+2025-04-29 18:58:55.338 Microlab STAR : TipEject - start;
+2025-04-29 18:59:03.501 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:59:03.501 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:59:03.531 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:59:03.731 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:59:03.731 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:59:03.738 Microlab STAR : Initialize - start;
+2025-04-29 18:59:03.805 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:59:03.805 Microlab STAR : TipPickUp - start;
+2025-04-29 18:59:09.271 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:59:09.288 Microlab STAR : Aspirate - start;
+2025-04-29 18:59:20.838 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0004, 1, 126 uL > channel 2: rgt_cont_60ml_BC_A00_0004, 2, 135 uL > channel 3: rgt_cont_60ml_BC_A00_0004, 3, 126 uL > channel 4: rgt_cont_60ml_BC_A00_0004, 4, 126 uL > channel 5: rgt_cont_60ml_BC_A00_0004, 5, 126 uL > channel 6: rgt_cont_60ml_BC_A00_0004, 6, 126 uL > channel 7: rgt_cont_60ml_BC_A00_0004, 7, 126 uL > channel 8: rgt_cont_60ml_BC_A00_0004, 8, 126 uL
+2025-04-29 18:59:20.848 Microlab STAR : Dispense - start;
+2025-04-29 18:59:25.888 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A7, 126 uL > channel 2: KingLab_NUNC96F_0001, B7, 135 uL > channel 3: KingLab_NUNC96F_0001, C7, 126 uL > channel 4: KingLab_NUNC96F_0001, D7, 126 uL > channel 5: KingLab_NUNC96F_0001, E7, 126 uL > channel 6: KingLab_NUNC96F_0001, F7, 126 uL > channel 7: KingLab_NUNC96F_0001, G7, 126 uL > channel 8: KingLab_NUNC96F_0001, H7, 126 uL
+2025-04-29 18:59:25.888 Microlab STAR : TipEject - start;
+2025-04-29 18:59:34.038 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:59:34.038 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 18:59:34.064 Data Handling Steps : Import Worklist - start; 
+2025-04-29 18:59:34.265 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 18:59:34.265 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 18:59:34.271 Microlab STAR : Initialize - start;
+2025-04-29 18:59:34.338 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 18:59:34.338 Microlab STAR : TipPickUp - start;
+2025-04-29 18:59:39.793 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 18:59:39.814 Microlab STAR : Aspirate - start;
+2025-04-29 18:59:51.431 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0004, 1, 126 uL > channel 2: rgt_cont_60ml_BC_A00_0004, 2, 126 uL > channel 3: rgt_cont_60ml_BC_A00_0004, 3, 135 uL > channel 4: rgt_cont_60ml_BC_A00_0004, 4, 126 uL > channel 5: rgt_cont_60ml_BC_A00_0004, 5, 126 uL > channel 6: rgt_cont_60ml_BC_A00_0004, 6, 126 uL > channel 7: rgt_cont_60ml_BC_A00_0004, 7, 126 uL > channel 8: rgt_cont_60ml_BC_A00_0004, 8, 126 uL
+2025-04-29 18:59:51.438 Microlab STAR : Dispense - start;
+2025-04-29 18:59:56.371 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A8, 126 uL > channel 2: KingLab_NUNC96F_0001, B8, 126 uL > channel 3: KingLab_NUNC96F_0001, C8, 135 uL > channel 4: KingLab_NUNC96F_0001, D8, 126 uL > channel 5: KingLab_NUNC96F_0001, E8, 126 uL > channel 6: KingLab_NUNC96F_0001, F8, 126 uL > channel 7: KingLab_NUNC96F_0001, G8, 126 uL > channel 8: KingLab_NUNC96F_0001, H8, 126 uL
+2025-04-29 18:59:56.381 Microlab STAR : TipEject - start;
+2025-04-29 19:00:04.588 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 19:00:04.588 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:00:04.631 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:00:04.831 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:00:04.831 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:00:04.831 Microlab STAR : Initialize - start;
+2025-04-29 19:00:04.905 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:00:04.905 Microlab STAR : TipPickUp - start;
+2025-04-29 19:00:10.354 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 19:00:10.371 Microlab STAR : Aspirate - start;
+2025-04-29 19:00:21.981 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0004, 1, 126 uL > channel 2: rgt_cont_60ml_BC_A00_0004, 2, 126 uL > channel 3: rgt_cont_60ml_BC_A00_0004, 3, 126 uL > channel 4: rgt_cont_60ml_BC_A00_0004, 4, 126 uL > channel 5: rgt_cont_60ml_BC_A00_0004, 5, 126 uL > channel 6: rgt_cont_60ml_BC_A00_0004, 6, 135 uL > channel 7: rgt_cont_60ml_BC_A00_0004, 7, 126 uL > channel 8: rgt_cont_60ml_BC_A00_0004, 8, 126 uL
+2025-04-29 19:00:21.987 Microlab STAR : Dispense - start;
+2025-04-29 19:00:26.931 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A9, 126 uL > channel 2: KingLab_NUNC96F_0001, B9, 126 uL > channel 3: KingLab_NUNC96F_0001, C9, 126 uL > channel 4: KingLab_NUNC96F_0001, D9, 126 uL > channel 5: KingLab_NUNC96F_0001, E9, 126 uL > channel 6: KingLab_NUNC96F_0001, F9, 135 uL > channel 7: KingLab_NUNC96F_0001, G9, 126 uL > channel 8: KingLab_NUNC96F_0001, H9, 126 uL
+2025-04-29 19:00:26.931 Microlab STAR : TipEject - start;
+2025-04-29 19:00:35.088 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 19:00:35.088 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:00:35.121 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:00:35.314 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:00:35.314 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:00:35.314 Microlab STAR : Initialize - start;
+2025-04-29 19:00:35.388 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:00:35.388 Microlab STAR : TipPickUp - start;
+2025-04-29 19:00:40.848 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 19:00:40.854 Microlab STAR : Aspirate - start;
+2025-04-29 19:00:52.504 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0004, 1, 135 uL > channel 2: rgt_cont_60ml_BC_A00_0004, 2, 126 uL > channel 3: rgt_cont_60ml_BC_A00_0004, 3, 126 uL > channel 4: rgt_cont_60ml_BC_A00_0004, 4, 126 uL > channel 5: rgt_cont_60ml_BC_A00_0004, 5, 126 uL > channel 6: rgt_cont_60ml_BC_A00_0004, 6, 126 uL > channel 7: rgt_cont_60ml_BC_A00_0004, 7, 135 uL > channel 8: rgt_cont_60ml_BC_A00_0004, 8, 126 uL
+2025-04-29 19:00:52.514 Microlab STAR : Dispense - start;
+2025-04-29 19:00:57.467 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A10, 135 uL > channel 2: KingLab_NUNC96F_0001, B10, 126 uL > channel 3: KingLab_NUNC96F_0001, C10, 126 uL > channel 4: KingLab_NUNC96F_0001, D10, 126 uL > channel 5: KingLab_NUNC96F_0001, E10, 126 uL > channel 6: KingLab_NUNC96F_0001, F10, 126 uL > channel 7: KingLab_NUNC96F_0001, G10, 135 uL > channel 8: KingLab_NUNC96F_0001, H10, 126 uL
+2025-04-29 19:00:57.467 Microlab STAR : TipEject - start;
+2025-04-29 19:01:05.621 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 19:01:05.621 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:01:05.647 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:01:05.849 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:01:05.849 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:01:05.849 Microlab STAR : Initialize - start;
+2025-04-29 19:01:05.921 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:01:05.921 Microlab STAR : TipPickUp - start;
+2025-04-29 19:01:11.380 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 19:01:11.387 Microlab STAR : Aspirate - start;
+2025-04-29 19:01:23.064 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0004, 1, 126 uL > channel 2: rgt_cont_60ml_BC_A00_0004, 2, 126 uL > channel 3: rgt_cont_60ml_BC_A00_0004, 3, 126 uL > channel 4: rgt_cont_60ml_BC_A00_0004, 4, 135 uL > channel 5: rgt_cont_60ml_BC_A00_0004, 5, 126 uL > channel 6: rgt_cont_60ml_BC_A00_0004, 6, 126 uL > channel 7: rgt_cont_60ml_BC_A00_0004, 7, 126 uL > channel 8: rgt_cont_60ml_BC_A00_0004, 8, 135 uL
+2025-04-29 19:01:23.070 Microlab STAR : Dispense - start;
+2025-04-29 19:01:28.035 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A11, 126 uL > channel 2: KingLab_NUNC96F_0001, B11, 126 uL > channel 3: KingLab_NUNC96F_0001, C11, 126 uL > channel 4: KingLab_NUNC96F_0001, D11, 135 uL > channel 5: KingLab_NUNC96F_0001, E11, 126 uL > channel 6: KingLab_NUNC96F_0001, F11, 126 uL > channel 7: KingLab_NUNC96F_0001, G11, 126 uL > channel 8: KingLab_NUNC96F_0001, H11, 135 uL
+2025-04-29 19:01:28.037 Microlab STAR : TipEject - start;
+2025-04-29 19:01:36.198 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 19:01:36.198 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:01:36.237 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:01:36.449 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:01:36.449 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:01:36.449 Microlab STAR : Initialize - start;
+2025-04-29 19:01:36.521 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:01:36.521 Microlab STAR : TipPickUp - start;
+2025-04-29 19:01:41.970 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 19:01:41.997 Microlab STAR : Aspirate - start;
+2025-04-29 19:01:53.704 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0004, 1, 126 uL > channel 2: rgt_cont_60ml_BC_A00_0004, 2, 126 uL > channel 3: rgt_cont_60ml_BC_A00_0004, 3, 126 uL > channel 4: rgt_cont_60ml_BC_A00_0004, 4, 126 uL > channel 5: rgt_cont_60ml_BC_A00_0004, 5, 135 uL > channel 6: rgt_cont_60ml_BC_A00_0004, 6, 126 uL > channel 7: rgt_cont_60ml_BC_A00_0004, 7, 126 uL > channel 8: rgt_cont_60ml_BC_A00_0004, 8, 126 uL
+2025-04-29 19:01:53.704 Microlab STAR : Dispense - start;
+2025-04-29 19:01:58.658 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A12, 126 uL > channel 2: KingLab_NUNC96F_0001, B12, 126 uL > channel 3: KingLab_NUNC96F_0001, C12, 126 uL > channel 4: KingLab_NUNC96F_0001, D12, 126 uL > channel 5: KingLab_NUNC96F_0001, E12, 135 uL > channel 6: KingLab_NUNC96F_0001, F12, 126 uL > channel 7: KingLab_NUNC96F_0001, G12, 126 uL > channel 8: KingLab_NUNC96F_0001, H12, 126 uL
+2025-04-29 19:01:58.658 Microlab STAR : TipEject - start;
+2025-04-29 19:02:06.803 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 17 > channel 2: ST_L_0001, 18 > channel 3: ST_L_0001, 19 > channel 4: ST_L_0001, 20 > channel 5: ST_L_0001, 21 > channel 6: ST_L_0001, 22 > channel 7: ST_L_0001, 23 > channel 8: ST_L_0001, 24
+2025-04-29 19:02:06.803 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:02:06.837 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:02:07.030 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:02:07.032 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:02:07.032 Microlab STAR : Initialize - start;
+2025-04-29 19:02:07.104 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:02:07.104 Microlab STAR : TipPickUp - start;
+2025-04-29 19:02:12.964 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:02:12.980 Microlab STAR : Aspirate - start;
+2025-04-29 19:02:23.088 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0003, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0003, 2, 27 uL > channel 3: rgt_cont_60ml_BC_A00_0003, 3, 5.4 uL > channel 4: rgt_cont_60ml_BC_A00_0003, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0003, 5, 5.4 uL > channel 6: rgt_cont_60ml_BC_A00_0003, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0003, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0003, 8, 0 uL
+2025-04-29 19:02:23.088 Microlab STAR : Dispense - start;
+2025-04-29 19:02:27.213 Microlab STAR : Dispense - complete;  > channel 2: KingLab_NUNC96F_0001, B1, 27 uL > channel 3: KingLab_NUNC96F_0001, C1, 5.4 uL > channel 5: KingLab_NUNC96F_0001, E1, 5.4 uL
+2025-04-29 19:02:27.213 Microlab STAR : TipEject - start;
+2025-04-29 19:02:35.370 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:02:35.370 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:02:35.403 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:02:35.597 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:02:35.597 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:02:35.597 Microlab STAR : Initialize - start;
+2025-04-29 19:02:35.670 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:02:35.670 Microlab STAR : TipPickUp - start;
+2025-04-29 19:02:41.130 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:02:41.147 Microlab STAR : Aspirate - start;
+2025-04-29 19:02:51.231 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 19:02:51.264 Microlab STAR : Aspirate - error;  > channel 4: rgt_cont_60ml_BC_A00_0003, 4, E:P4:17/80:Continue
+2025-04-29 19:02:51.431 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 19:02:51.494 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0003, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0003, 2, 5.4 uL > channel 3: rgt_cont_60ml_BC_A00_0003, 3, 27 uL > channel 4: rgt_cont_60ml_BC_A00_0003, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0003, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0003, 6, 27 uL > channel 7: rgt_cont_60ml_BC_A00_0003, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0003, 8, 5.4 uL
+2025-04-29 19:02:51.494 Microlab STAR : Dispense - start;
+2025-04-29 19:02:55.636 Microlab STAR : Dispense - complete;  > channel 2: KingLab_NUNC96F_0001, B2, 5.4 uL > channel 3: KingLab_NUNC96F_0001, C2, 27 uL > channel 6: KingLab_NUNC96F_0001, F2, 27 uL > channel 8: KingLab_NUNC96F_0001, H2, 5.4 uL
+2025-04-29 19:02:55.636 Microlab STAR : TipEject - start;
+2025-04-29 19:03:03.803 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:03:03.803 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:03:03.830 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:03:04.030 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:03:04.030 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:03:04.030 Microlab STAR : Initialize - start;
+2025-04-29 19:03:04.092 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:03:04.092 Microlab STAR : TipPickUp - start;
+2025-04-29 19:03:09.553 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:03:09.570 Microlab STAR : Aspirate - start;
+2025-04-29 19:03:19.670 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0003, 1, 5.4 uL > channel 2: rgt_cont_60ml_BC_A00_0003, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0003, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0003, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0003, 5, 27 uL > channel 6: rgt_cont_60ml_BC_A00_0003, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0003, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0003, 8, 5.4 uL
+2025-04-29 19:03:19.680 Microlab STAR : Dispense - start;
+2025-04-29 19:03:23.896 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A3, 5.4 uL > channel 5: KingLab_NUNC96F_0001, E3, 27 uL > channel 8: KingLab_NUNC96F_0001, H3, 5.4 uL
+2025-04-29 19:03:23.896 Microlab STAR : TipEject - start;
+2025-04-29 19:03:32.063 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:03:32.063 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:03:32.086 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:03:32.281 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:03:32.281 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:03:32.281 Microlab STAR : Initialize - start;
+2025-04-29 19:03:32.353 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:03:32.353 Microlab STAR : TipPickUp - start;
+2025-04-29 19:03:37.813 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:03:37.819 Microlab STAR : Aspirate - start;
+2025-04-29 19:03:47.919 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0003, 1, 27 uL > channel 2: rgt_cont_60ml_BC_A00_0003, 2, 27 uL > channel 3: rgt_cont_60ml_BC_A00_0003, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0003, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0003, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0003, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0003, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0003, 8, 5.4 uL
+2025-04-29 19:03:47.929 Microlab STAR : Dispense - start;
+2025-04-29 19:03:52.146 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A4, 27 uL > channel 2: KingLab_NUNC96F_0001, B4, 27 uL > channel 8: KingLab_NUNC96F_0001, H4, 5.4 uL
+2025-04-29 19:03:52.146 Microlab STAR : TipEject - start;
+2025-04-29 19:04:00.303 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:04:00.303 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:04:00.336 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:04:00.536 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:04:00.536 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:04:00.536 Microlab STAR : Initialize - start;
+2025-04-29 19:04:00.603 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:04:00.603 Microlab STAR : TipPickUp - start;
+2025-04-29 19:04:06.056 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:04:06.069 Microlab STAR : Aspirate - start;
+2025-04-29 19:04:16.153 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 19:04:16.186 Microlab STAR : Aspirate - error;  > channel 4: rgt_cont_60ml_BC_A00_0003, 4, E:P4:17/80:Continue
+2025-04-29 19:04:16.346 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 19:04:16.402 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0003, 1, 27 uL > channel 2: rgt_cont_60ml_BC_A00_0003, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0003, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0003, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0003, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0003, 6, 5.4 uL > channel 7: rgt_cont_60ml_BC_A00_0003, 7, 27 uL > channel 8: rgt_cont_60ml_BC_A00_0003, 8, 0 uL
+2025-04-29 19:04:16.412 Microlab STAR : Dispense - start;
+2025-04-29 19:04:20.636 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A5, 27 uL > channel 6: KingLab_NUNC96F_0001, F5, 5.4 uL > channel 7: KingLab_NUNC96F_0001, G5, 27 uL
+2025-04-29 19:04:20.636 Microlab STAR : TipEject - start;
+2025-04-29 19:04:28.803 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:04:28.803 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:04:28.829 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:04:29.029 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:04:29.029 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:04:29.029 Microlab STAR : Initialize - start;
+2025-04-29 19:04:29.103 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:04:29.103 Microlab STAR : TipPickUp - start;
+2025-04-29 19:04:34.552 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:04:34.569 Microlab STAR : Aspirate - start;
+2025-04-29 19:04:44.669 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0003, 1, 5.4 uL > channel 2: rgt_cont_60ml_BC_A00_0003, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0003, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0003, 4, 27 uL > channel 5: rgt_cont_60ml_BC_A00_0003, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0003, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0003, 7, 5.4 uL > channel 8: rgt_cont_60ml_BC_A00_0003, 8, 0 uL
+2025-04-29 19:04:44.679 Microlab STAR : Dispense - start;
+2025-04-29 19:04:48.886 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A6, 5.4 uL > channel 4: KingLab_NUNC96F_0001, D6, 27 uL > channel 7: KingLab_NUNC96F_0001, G6, 5.4 uL
+2025-04-29 19:04:48.896 Microlab STAR : TipEject - start;
+2025-04-29 19:04:57.052 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:04:57.052 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:04:57.085 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:04:57.281 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:04:57.282 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:04:57.282 Microlab STAR : Initialize - start;
+2025-04-29 19:04:57.353 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:04:57.353 Microlab STAR : TipPickUp - start;
+2025-04-29 19:05:02.812 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:05:02.819 Microlab STAR : Aspirate - start;
+2025-04-29 19:05:12.936 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0003, 1, 27 uL > channel 2: rgt_cont_60ml_BC_A00_0003, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0003, 3, 27 uL > channel 4: rgt_cont_60ml_BC_A00_0003, 4, 5.4 uL > channel 5: rgt_cont_60ml_BC_A00_0003, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0003, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0003, 7, 5.4 uL > channel 8: rgt_cont_60ml_BC_A00_0003, 8, 0 uL
+2025-04-29 19:05:12.936 Microlab STAR : Dispense - start;
+2025-04-29 19:05:17.185 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A7, 27 uL > channel 3: KingLab_NUNC96F_0001, C7, 27 uL > channel 4: KingLab_NUNC96F_0001, D7, 5.4 uL > channel 7: KingLab_NUNC96F_0001, G7, 5.4 uL
+2025-04-29 19:05:17.185 Microlab STAR : TipEject - start;
+2025-04-29 19:05:25.345 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:05:25.345 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:05:25.369 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:05:25.562 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:05:25.562 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:05:25.562 Microlab STAR : Initialize - start;
+2025-04-29 19:05:25.636 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:05:25.636 Microlab STAR : TipPickUp - start;
+2025-04-29 19:05:31.095 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:05:31.102 Microlab STAR : Aspirate - start;
+2025-04-29 19:05:41.202 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 19:05:41.236 Microlab STAR : Aspirate - error;  > channel 6: rgt_cont_60ml_BC_A00_0003, 6, E:P6:17/80:Continue
+2025-04-29 19:05:41.396 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 19:05:41.463 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0003, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0003, 2, 27 uL > channel 3: rgt_cont_60ml_BC_A00_0003, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0003, 4, 5.4 uL > channel 5: rgt_cont_60ml_BC_A00_0003, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0003, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0003, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0003, 8, 27 uL
+2025-04-29 19:05:41.469 Microlab STAR : Dispense - start;
+2025-04-29 19:05:45.602 Microlab STAR : Dispense - complete;  > channel 2: KingLab_NUNC96F_0001, B8, 27 uL > channel 4: KingLab_NUNC96F_0001, D8, 5.4 uL > channel 8: KingLab_NUNC96F_0001, H8, 27 uL
+2025-04-29 19:05:45.602 Microlab STAR : TipEject - start;
+2025-04-29 19:05:53.762 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:05:53.762 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:05:53.795 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:05:53.995 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:05:53.995 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:05:53.995 Microlab STAR : Initialize - start;
+2025-04-29 19:05:54.069 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:05:54.069 Microlab STAR : TipPickUp - start;
+2025-04-29 19:05:59.524 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:05:59.552 Microlab STAR : Aspirate - start;
+2025-04-29 19:06:09.652 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0003, 1, 27 uL > channel 2: rgt_cont_60ml_BC_A00_0003, 2, 5.4 uL > channel 3: rgt_cont_60ml_BC_A00_0003, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0003, 4, 27 uL > channel 5: rgt_cont_60ml_BC_A00_0003, 5, 5.4 uL > channel 6: rgt_cont_60ml_BC_A00_0003, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0003, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0003, 8, 0 uL
+2025-04-29 19:06:09.662 Microlab STAR : Dispense - start;
+2025-04-29 19:06:13.902 Microlab STAR : Dispense - complete;  > channel 1: KingLab_NUNC96F_0001, A9, 27 uL > channel 2: KingLab_NUNC96F_0001, B9, 5.4 uL > channel 4: KingLab_NUNC96F_0001, D9, 27 uL > channel 5: KingLab_NUNC96F_0001, E9, 5.4 uL
+2025-04-29 19:06:13.912 Microlab STAR : TipEject - start;
+2025-04-29 19:06:22.069 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:06:22.069 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:06:22.101 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:06:22.297 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:06:22.297 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:06:22.297 Microlab STAR : Initialize - start;
+2025-04-29 19:06:22.369 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:06:22.369 Microlab STAR : TipPickUp - start;
+2025-04-29 19:06:27.822 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:06:27.835 Microlab STAR : Aspirate - start;
+2025-04-29 19:06:37.919 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 19:06:37.952 Microlab STAR : Aspirate - error;  > channel 4: rgt_cont_60ml_BC_A00_0003, 4, E:P4:17/80:Continue
+2025-04-29 19:06:38.118 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 19:06:38.178 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0003, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0003, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0003, 3, 27 uL > channel 4: rgt_cont_60ml_BC_A00_0003, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0003, 5, 27 uL > channel 6: rgt_cont_60ml_BC_A00_0003, 6, 5.4 uL > channel 7: rgt_cont_60ml_BC_A00_0003, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0003, 8, 5.4 uL
+2025-04-29 19:06:38.185 Microlab STAR : Dispense - start;
+2025-04-29 19:06:42.228 Microlab STAR : Dispense - complete;  > channel 3: KingLab_NUNC96F_0001, C10, 27 uL > channel 5: KingLab_NUNC96F_0001, E10, 27 uL > channel 6: KingLab_NUNC96F_0001, F10, 5.4 uL > channel 8: KingLab_NUNC96F_0001, H10, 5.4 uL
+2025-04-29 19:06:42.228 Microlab STAR : TipEject - start;
+2025-04-29 19:06:50.385 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:06:50.385 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:06:50.418 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:06:50.612 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:06:50.612 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:06:50.612 Microlab STAR : Initialize - start;
+2025-04-29 19:06:50.685 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:06:50.685 Microlab STAR : TipPickUp - start;
+2025-04-29 19:06:56.135 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:06:56.162 Microlab STAR : Aspirate - start;
+2025-04-29 19:07:06.235 Microlab STAR : User input requested - progress; Start error handling in walkaway mode (no dialog).
+2025-04-29 19:07:06.268 Microlab STAR : Aspirate - error;  > channel 4: rgt_cont_60ml_BC_A00_0003, 4, E:P4:17/80:Continue
+2025-04-29 19:07:06.435 Microlab STAR : User input requested - progress; Error automatically recovered depending of custom error configuration (Walk-Away).
+2025-04-29 19:07:06.501 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0003, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0003, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0003, 3, 5.4 uL > channel 4: rgt_cont_60ml_BC_A00_0003, 4, 0 uL > channel 5: rgt_cont_60ml_BC_A00_0003, 5, 5.4 uL > channel 6: rgt_cont_60ml_BC_A00_0003, 6, 0 uL > channel 7: rgt_cont_60ml_BC_A00_0003, 7, 27 uL > channel 8: rgt_cont_60ml_BC_A00_0003, 8, 0 uL
+2025-04-29 19:07:06.501 Microlab STAR : Dispense - start;
+2025-04-29 19:07:10.535 Microlab STAR : Dispense - complete;  > channel 3: KingLab_NUNC96F_0001, C11, 5.4 uL > channel 5: KingLab_NUNC96F_0001, E11, 5.4 uL > channel 7: KingLab_NUNC96F_0001, G11, 27 uL
+2025-04-29 19:07:10.535 Microlab STAR : TipEject - start;
+2025-04-29 19:07:18.701 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:07:18.701 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:07:18.734 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:07:18.945 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:07:18.945 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:07:18.945 Microlab STAR : Initialize - start;
+2025-04-29 19:07:19.011 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:07:19.018 Microlab STAR : TipPickUp - start;
+2025-04-29 19:07:24.468 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:07:24.478 Microlab STAR : Aspirate - start;
+2025-04-29 19:07:34.595 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0003, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0003, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0003, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0003, 4, 5.4 uL > channel 5: rgt_cont_60ml_BC_A00_0003, 5, 0 uL > channel 6: rgt_cont_60ml_BC_A00_0003, 6, 27 uL > channel 7: rgt_cont_60ml_BC_A00_0003, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0003, 8, 27 uL
+2025-04-29 19:07:34.601 Microlab STAR : Dispense - start;
+2025-04-29 19:07:38.534 Microlab STAR : Dispense - complete;  > channel 4: KingLab_NUNC96F_0001, D12, 5.4 uL > channel 6: KingLab_NUNC96F_0001, F12, 27 uL > channel 8: KingLab_NUNC96F_0001, H12, 27 uL
+2025-04-29 19:07:38.534 Microlab STAR : TipEject - start;
+2025-04-29 19:07:46.697 Microlab STAR : TipEject - complete;  > channel 1: ST_L_0001, 25 > channel 2: ST_L_0001, 26 > channel 3: ST_L_0001, 27 > channel 4: ST_L_0001, 28 > channel 5: ST_L_0001, 29 > channel 6: ST_L_0001, 30 > channel 7: ST_L_0001, 31 > channel 8: ST_L_0001, 32
+2025-04-29 19:07:46.697 USER : Trace - complete; Power Step Transfer samples from worklist - complete
+2025-04-29 19:07:46.734 Data Handling Steps : Import Worklist - start; 
+2025-04-29 19:07:46.934 Data Handling Steps : Import Worklist - complete; # records imported 8
+2025-04-29 19:07:46.934 USER : Trace - complete; Power Step Transfer samples from worklist - start
+2025-04-29 19:07:46.934 Microlab STAR : Initialize - start;
+2025-04-29 19:07:47.001 Microlab STAR : Initialize - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-04-29 19:07:47.001 Microlab STAR : TipPickUp - start;
+2025-04-29 19:07:52.867 Microlab STAR : TipPickUp - complete;  > channel 1: ST_L_0001, 33 > channel 2: ST_L_0001, 34 > channel 3: ST_L_0001, 35 > channel 4: ST_L_0001, 36 > channel 5: ST_L_0001, 37 > channel 6: ST_L_0001, 38 > channel 7: ST_L_0001, 39 > channel 8: ST_L_0001, 40
+2025-04-29 19:07:52.877 Microlab STAR : Aspirate - start;
+2025-04-29 19:08:03.768 Microlab STAR : User input requested - progress; Error handling waiting for manual recovery!
+2025-04-29 19:08:03.851 Microlab STAR : User input requested - progress; On start error dialog, following eMail was sent: 'Microlab STAR : User input requested; '.
+2025-04-29 19:08:19.700 Microlab STAR : Aspirate - error;  > channel 4: rgt_cont_60ml_BC_A00_0002, 4, E:P4:04/81:Continue  > channel 5: rgt_cont_60ml_BC_A00_0002, 5, E:P5:04/81:Continue  > channel 6: rgt_cont_60ml_BC_A00_0002, 6, E:P6:04/81:Continue
+2025-04-29 19:08:21.918 Microlab STAR : User input requested - progress; Error manually recovered by user.
+2025-04-29 19:08:21.997 Microlab STAR : Aspirate - complete;  > channel 1: rgt_cont_60ml_BC_A00_0002, 1, 0 uL > channel 2: rgt_cont_60ml_BC_A00_0002, 2, 0 uL > channel 3: rgt_cont_60ml_BC_A00_0002, 3, 0 uL > channel 4: rgt_cont_60ml_BC_A00_0002, 4, 90 uL > channel 5: rgt_cont_60ml_BC_A00_0002, 5, 90 uL > channel 6: rgt_cont_60ml_BC_A00_0002, 6, 90 uL > channel 7: rgt_cont_60ml_BC_A00_0002, 7, 0 uL > channel 8: rgt_cont_60ml_BC_A00_0002, 8, 0 uL
+2025-04-29 19:08:22.004 Microlab STAR : Dispense - start;
+2025-04-29 19:08:24.534 Microlab STAR : User input requested - progress; Error handling waiting for manual recovery!
+2025-04-29 19:08:24.534 Microlab STAR : User input requested - progress; On start error dialog, following eMail was sent: 'Microlab STAR : User input requested; '.
+2025-04-29 19:08:48.569 Microlab STAR :  - progress; User action: Message box 'Abort command' message 'Are you sure you want to abort the run?' was closed with button 'Yes'.
+2025-04-29 19:08:48.570 Microlab STAR : Dispense - error;  > channel 4: KingLab_NUNC96F_0001, D1, E:P4:104/54:Abort  > channel 5: KingLab_NUNC96F_0001, E1, E:P5:104/54:Abort  > channel 6: KingLab_NUNC96F_0001, F1, E:P6:104/54:Abort
+2025-04-29 19:08:48.574 Microlab STAR : Main - error; An error occurred while running Vector.  The error description is: Step aborted.  The method should be restarted.  ([P4: Plunger drive, Position out of permitted area.]  [P5: Plunger drive, Position out of permitted area.]  [P6: Plunger drive, Position out of permitted area.]) (0x28 - 0x1 - 0x804) 
+2025-04-29 19:08:48.574 Microlab STAR : User input requested - progress; Error manually recovered by user.
+2025-04-29 19:08:48.603 Microlab STAR : Dispense - complete with error; An error occurred while running Vector.  The error description is: Step aborted.  The method should be restarted.  ([P4: Plunger drive, Position out of permitted area.]  [P5: Plunger drive, Position out of permitted area.]  [P6: Plunger drive, Position out of permitted area.]) (0x28 - 0x1 - 0x804) , 
+2025-04-29 19:08:48.604 SYSTEM : Method has been aborted by the user - complete; 
+2025-04-29 19:08:48.604 SYSTEM : Abort method - start; 
+2025-04-29 19:08:48.606 Microlab STAR : Abort requested command - start;
+2025-04-29 19:08:48.606 Microlab STAR : Abort requested command - complete;
+2025-04-29 19:08:48.606 Microlab STAR : Start Method Abort Handler command - start;
+2025-04-29 19:08:48.651 Microlab STAR : Clean up instrument - progress; Move up 1000ul channels
+2025-04-29 19:08:49.222 Microlab STAR : Clean up instrument - progress; Move down auto load Y drive
+2025-04-29 19:08:54.132 Microlab STAR :  - progress; User action: Message box 'Clean up instrument' message 'Please check the traverse height!   Is there any indication for a collision when moving horizontally?' was closed with button 'No'.
+2025-04-29 19:08:54.159 Microlab STAR : Start Method Abort Handler command - complete;
+2025-04-29 19:08:54.160 Microlab STAR : Abort command - start;
+2025-04-29 19:08:54.164 Microlab STAR : Abort command - complete;
+2025-04-29 19:08:54.268 SYSTEM : Abort method - complete; 
+2025-04-29 19:08:54.268 SYSTEM : Execute method - complete; 
+2025-04-29 19:08:54.268 SYSTEM : End method - start; 
+2025-04-29 19:08:54.318 Microlab STAR : End method command - start;
+2025-04-29 19:08:54.513 Microlab STAR : Clean up instrument - progress; Move up 1000ul channels
+2025-04-29 19:08:54.636 Microlab STAR : Clean up instrument - progress; Move down auto load Y drive
+2025-04-29 19:08:56.436 Microlab STAR : Clean up instrument - progress; Eject picked up needle from channel
+2025-04-29 19:08:56.465 Microlab STAR : Clean up instrument - progress; Eject picked up tip from channel
+2025-04-29 19:09:04.950 Microlab STAR : Clean up instrument - progress; Move up 1000ul channels
+2025-04-29 19:09:05.069 Microlab STAR : Clean up instrument - progress; Move down auto load Y drive
+2025-04-29 19:09:06.834 Microlab STAR : Clean up instrument - progress; Spreading channels
+2025-04-29 19:09:08.336 Microlab STAR : Clean up instrument - progress; Switch off loading lights
+2025-04-29 19:09:08.702 Microlab STAR : End method command - complete;
+2025-04-29 19:09:08.800 SYSTEM : End method - complete; 
+2025-04-29 19:09:08.883 SYSTEM : File checksum - written; $$author=Hamilton$$valid=0$$time=2025-04-29 19:09$$checksum=feccc2db$$length=140$$

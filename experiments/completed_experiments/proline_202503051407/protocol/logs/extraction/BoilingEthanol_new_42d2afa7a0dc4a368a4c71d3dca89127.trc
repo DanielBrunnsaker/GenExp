@@ -1,0 +1,500 @@
+2025-03-17 10:41:34.875 Venus software version: 6.0.1.3380
+2025-03-17 10:41:34.875 SYSTEM : Analyze method - start; Method file C:\Program Files (x86)\Hamilton\Methods\KingLabMethods\BoilingEthanol\BoilingEthanol_new.hsl
+2025-03-17 10:41:35.283 Microlab STAR : Communication - progress; Connection to instrument is created.
+2025-03-17 10:41:36.783 SYSTEM : Analyze method - complete; 
+2025-03-17 10:41:40.449 SYSTEM : Start method - start; 
+2025-03-17 10:41:40.449 SYSTEM : Start method - progress; User name: Hamilton
+2025-03-17 10:41:40.449 SYSTEM : Start method - progress; Phoenix software version: 6.0.1.50042
+2025-03-17 10:41:40.466 SYSTEM : Start method - progress; Database version: Standard
+2025-03-17 10:41:40.467 SYSTEM : Start method - progress; Sample tracking: On
+2025-03-17 10:41:40.467 SYSTEM : Start method - progress; Vector Database: On
+2025-03-17 10:41:40.469 SYSTEM : Start method - progress; Vector Database connection: Database 'HamiltonVectorDB' on Microsoft SQL Server 'LOCALHOST\HAMILTON' with user 'Hamilton'
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - start;
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Microlab STAR software version: 6.0.1.50042
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Serial number of Instrument: 239K
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of main module: 8.7S 103 2023-04-04  
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of 1000µl channels: 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc), 6.0S 03 2023-01-24 (PipChannelRpc)
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of 5ml channels: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of labware handling channels: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of auto load: 3.4S e 2016-05-02
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of iSWAP: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of washer 1: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of washer 2: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of temperature-controlled carrier 1: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of temperature-controlled carrier 2: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of CO-RE 96 Head: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of pump station 1: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of pump station 2: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of pump station 3: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of nano dispenser: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of nano dispenser pressure unit: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of CO-RE 384 Head: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of tube gripper: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of camera channel: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of gel card gripper: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of punch card gripper: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of puncher module: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of twister decapper station 1 module 1: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of twister decapper station 1 module 2: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of twister decapper station 2 module 1: not installed
+2025-03-17 10:41:40.782 Microlab STAR : Start method command - progress; Firmware version of twister decapper station 2 module 2: not installed
+2025-03-17 10:41:43.418 Microlab STAR : Start method command - complete;
+2025-03-17 10:41:43.434 SYSTEM : Start method - complete; 
+2025-03-17 10:41:43.434 SYSTEM : Execute method - start; Method file C:\Program Files (x86)\Hamilton\Methods\KingLabMethods\BoilingEthanol\BoilingEthanol_new.hsl
+2025-03-17 10:41:43.482 Microlab STAR : Initialize (Single Step) - start;
+2025-03-17 10:41:43.533 Microlab STAR : Initialize (Single Step) - complete;  > channel 1: Waste,  > channel 2: Waste,  > channel 3: Waste,  > channel 4: Waste,  > channel 5: Waste,  > channel 6: Waste,  > channel 7: Waste,  > channel 8: Waste, 
+2025-03-17 10:41:43.554 SYSTEM : HSLHamHeaterShakerLib - progress; Version: V4.4
+2025-03-17 10:41:43.554 SYSTEM : HSLHamHeaterShakerLib - CreateStarDevice - start; 
+2025-03-17 10:41:43.559 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1QU
+2025-03-17 10:41:43.560 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:41:43.569 Microlab STAR : Firmware Command (Single Step) - complete;  > QU: au0 0 0 0 0 0 0 0 0 0
+2025-03-17 10:41:43.570 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Received answere = T1QUau0 0 0 0 0 0 0 0 0 0
+2025-03-17 10:41:43.571 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1QW
+2025-03-17 10:41:43.572 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:41:43.579 Microlab STAR : Firmware Command (Single Step) - complete;  > QW: qw1
+2025-03-17 10:41:43.579 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Received answere = T1QWqw1
+2025-03-17 10:41:43.581 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1RF
+2025-03-17 10:41:43.581 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:41:43.590 Microlab STAR : Firmware Command (Single Step) - complete;  > RF: rf3.2S e 2015-08-17 (Heater Shaker)
+2025-03-17 10:41:43.592 SYSTEM : HSLHamHeaterShakerLib - CreateStarDevice - progress; ML_Star node '1' firmware version = 3.2S e 2015-08-17 (Heater Shaker)
+2025-03-17 10:41:43.593 SYSTEM : HSLHamHeaterShakerLib - CreateStarDevice - complete; 
+2025-03-17 10:41:43.600 SYSTEM : HSLHamHeaterCoolerLib - progress; Version: V4.4
+2025-03-17 10:41:43.601 SYSTEM : Connect - start; 
+2025-03-17 10:41:43.605 SYSTEM : HSLHamHeaterCoolerLib::SendToStar - progress; Send message = T2QU
+2025-03-17 10:41:43.605 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:41:43.614 Microlab STAR : Firmware Command (Single Step) - complete;  > QU: er00au1 0 1 0 0 0 0 0 0 0
+2025-03-17 10:41:43.614 SYSTEM : HSLHamHeaterCoolerLib::SendToStar - progress; Received answere = T2QUer00au1 0 1 0 0 0 0 0 0 0
+2025-03-17 10:41:43.615 SYSTEM : SetSelfDiagnostic - start; 
+2025-03-17 10:41:43.617 SYSTEM : SetSelfDiagnostic - progress; Send command to ML_Star node ( 2 ).
+2025-03-17 10:41:43.618 SYSTEM : HSLHamHeaterCoolerLib::SendToStar - progress; Send message = T2SDsd1
+2025-03-17 10:41:43.618 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:41:43.649 Microlab STAR : Firmware Command (Single Step) - complete;  > SD: er00
+2025-03-17 10:41:43.649 SYSTEM : HSLHamHeaterCoolerLib::SendToStar - progress; Received answere = T2SDer00
+2025-03-17 10:41:43.651 SYSTEM : SetSelfDiagnostic - complete; 
+2025-03-17 10:41:43.651 SYSTEM : Connect - complete; 
+2025-03-17 10:41:43.653 LIBRARY: Hamilton MPE : ConnectUsingCOM - start;  i_intComPort = 8, i_intBaudRate = 921600, i_boolSimulationMode = 0, i_MpeOptions = 0
+2025-03-17 10:41:43.658 LIBRARY: Hamilton MPE : ConnectUsingCOM - progress;  Object created
+2025-03-17 10:41:45.964 LIBRARY: Hamilton MPE : ConnectUsingCOM - complete;  o_intDeviceId = 1
+2025-03-17 10:41:45.964 LIBRARY: Hamilton MPE : Initialize - start;  i_intDeviceId = 1
+2025-03-17 10:41:59.995 LIBRARY: Hamilton MPE : Initialize - complete;  
+2025-03-17 10:41:59.995 SYSTEM : HSLHamHeaterShakerLib - StartTempCtrl - start; 
+2025-03-17 10:42:00.001 SYSTEM : HSLHamHeaterShakerLib - StartTempCtrl - progress; Send command to ML_Star node ( 1 ).
+2025-03-17 10:42:00.004 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1TAta1000tb1800tc0020td0060
+2025-03-17 10:42:00.005 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:42:00.032 Microlab STAR : Firmware Command (Single Step) - complete;  > TA: er00
+2025-03-17 10:42:00.033 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Received answere = T1TAer00
+2025-03-17 10:42:00.034 SYSTEM : HSLHamHeaterShakerLib - StartTempCtrl - complete; 
+2025-03-17 10:42:00.048 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:42:00.120 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:42:07.807 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0005, 1 > channel 2: ST_L_0005, 2 > channel 3: ST_L_0005, 3 > channel 4: ST_L_0005, 4 > channel 5: ST_L_0005, 5 > channel 6: ST_L_0005, 6 > channel 7: ST_L_0005, 7 > channel 8: ST_L_0005, 8
+2025-03-17 10:42:07.807 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:42:17.547 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 150 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 150 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 150 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 150 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 150 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 150 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 150 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 150 uL
+2025-03-17 10:42:17.563 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:42:17.572 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:42:17.573 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:42:22.921 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A1, 150 uL > channel 2: DW_96_Praj_onHSS, B1, 150 uL > channel 3: DW_96_Praj_onHSS, C1, 150 uL > channel 4: DW_96_Praj_onHSS, D1, 150 uL > channel 5: DW_96_Praj_onHSS, E1, 150 uL > channel 6: DW_96_Praj_onHSS, F1, 150 uL > channel 7: DW_96_Praj_onHSS, G1, 150 uL > channel 8: DW_96_Praj_onHSS, H1, 150 uL
+2025-03-17 10:42:22.964 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:42:31.037 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0005, 1 > channel 2: ST_L_0005, 2 > channel 3: ST_L_0005, 3 > channel 4: ST_L_0005, 4 > channel 5: ST_L_0005, 5 > channel 6: ST_L_0005, 6 > channel 7: ST_L_0005, 7 > channel 8: ST_L_0005, 8
+2025-03-17 10:42:31.065 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:42:31.074 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:42:31.141 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:42:37.005 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0005, 9 > channel 2: ST_L_0005, 10 > channel 3: ST_L_0005, 11 > channel 4: ST_L_0005, 12 > channel 5: ST_L_0005, 13 > channel 6: ST_L_0005, 14 > channel 7: ST_L_0005, 15 > channel 8: ST_L_0005, 16
+2025-03-17 10:42:37.005 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:42:46.669 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 150 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 150 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 150 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 150 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 150 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 150 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 150 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 150 uL
+2025-03-17 10:42:46.669 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:42:46.687 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:42:46.688 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:42:52.038 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A2, 150 uL > channel 2: DW_96_Praj_onHSS, B2, 150 uL > channel 3: DW_96_Praj_onHSS, C2, 150 uL > channel 4: DW_96_Praj_onHSS, D2, 150 uL > channel 5: DW_96_Praj_onHSS, E2, 150 uL > channel 6: DW_96_Praj_onHSS, F2, 150 uL > channel 7: DW_96_Praj_onHSS, G2, 150 uL > channel 8: DW_96_Praj_onHSS, H2, 150 uL
+2025-03-17 10:42:52.067 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:43:00.093 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0005, 9 > channel 2: ST_L_0005, 10 > channel 3: ST_L_0005, 11 > channel 4: ST_L_0005, 12 > channel 5: ST_L_0005, 13 > channel 6: ST_L_0005, 14 > channel 7: ST_L_0005, 15 > channel 8: ST_L_0005, 16
+2025-03-17 10:43:00.120 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:43:00.130 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:43:00.199 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:43:06.056 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0005, 17 > channel 2: ST_L_0005, 18 > channel 3: ST_L_0005, 19 > channel 4: ST_L_0005, 20 > channel 5: ST_L_0005, 21 > channel 6: ST_L_0005, 22 > channel 7: ST_L_0005, 23 > channel 8: ST_L_0005, 24
+2025-03-17 10:43:06.056 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:43:15.765 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 150 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 150 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 150 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 150 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 150 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 150 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 150 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 150 uL
+2025-03-17 10:43:15.765 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:43:15.782 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:43:15.782 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:43:21.117 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A3, 150 uL > channel 2: DW_96_Praj_onHSS, B3, 150 uL > channel 3: DW_96_Praj_onHSS, C3, 150 uL > channel 4: DW_96_Praj_onHSS, D3, 150 uL > channel 5: DW_96_Praj_onHSS, E3, 150 uL > channel 6: DW_96_Praj_onHSS, F3, 150 uL > channel 7: DW_96_Praj_onHSS, G3, 150 uL > channel 8: DW_96_Praj_onHSS, H3, 150 uL
+2025-03-17 10:43:21.157 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:43:29.184 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0005, 17 > channel 2: ST_L_0005, 18 > channel 3: ST_L_0005, 19 > channel 4: ST_L_0005, 20 > channel 5: ST_L_0005, 21 > channel 6: ST_L_0005, 22 > channel 7: ST_L_0005, 23 > channel 8: ST_L_0005, 24
+2025-03-17 10:43:29.212 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:43:29.222 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:43:29.284 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:43:35.146 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0005, 25 > channel 2: ST_L_0005, 26 > channel 3: ST_L_0005, 27 > channel 4: ST_L_0005, 28 > channel 5: ST_L_0005, 29 > channel 6: ST_L_0005, 30 > channel 7: ST_L_0005, 31 > channel 8: ST_L_0005, 32
+2025-03-17 10:43:35.146 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:43:44.856 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 150 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 150 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 150 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 150 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 150 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 150 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 150 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 150 uL
+2025-03-17 10:43:44.856 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:43:44.873 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:43:44.873 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:43:50.209 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A4, 150 uL > channel 2: DW_96_Praj_onHSS, B4, 150 uL > channel 3: DW_96_Praj_onHSS, C4, 150 uL > channel 4: DW_96_Praj_onHSS, D4, 150 uL > channel 5: DW_96_Praj_onHSS, E4, 150 uL > channel 6: DW_96_Praj_onHSS, F4, 150 uL > channel 7: DW_96_Praj_onHSS, G4, 150 uL > channel 8: DW_96_Praj_onHSS, H4, 150 uL
+2025-03-17 10:43:50.252 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:43:58.282 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0005, 25 > channel 2: ST_L_0005, 26 > channel 3: ST_L_0005, 27 > channel 4: ST_L_0005, 28 > channel 5: ST_L_0005, 29 > channel 6: ST_L_0005, 30 > channel 7: ST_L_0005, 31 > channel 8: ST_L_0005, 32
+2025-03-17 10:43:58.311 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:43:58.321 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:43:58.381 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:44:04.243 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0005, 33 > channel 2: ST_L_0005, 34 > channel 3: ST_L_0005, 35 > channel 4: ST_L_0005, 36 > channel 5: ST_L_0005, 37 > channel 6: ST_L_0005, 38 > channel 7: ST_L_0005, 39 > channel 8: ST_L_0005, 40
+2025-03-17 10:44:04.244 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:44:14.015 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 150 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 150 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 150 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 150 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 150 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 150 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 150 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 150 uL
+2025-03-17 10:44:14.015 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:44:14.028 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:44:14.029 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:44:19.315 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A5, 150 uL > channel 2: DW_96_Praj_onHSS, B5, 150 uL > channel 3: DW_96_Praj_onHSS, C5, 150 uL > channel 4: DW_96_Praj_onHSS, D5, 150 uL > channel 5: DW_96_Praj_onHSS, E5, 150 uL > channel 6: DW_96_Praj_onHSS, F5, 150 uL > channel 7: DW_96_Praj_onHSS, G5, 150 uL > channel 8: DW_96_Praj_onHSS, H5, 150 uL
+2025-03-17 10:44:19.351 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:44:27.379 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0005, 33 > channel 2: ST_L_0005, 34 > channel 3: ST_L_0005, 35 > channel 4: ST_L_0005, 36 > channel 5: ST_L_0005, 37 > channel 6: ST_L_0005, 38 > channel 7: ST_L_0005, 39 > channel 8: ST_L_0005, 40
+2025-03-17 10:44:27.407 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:44:27.418 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:44:27.474 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:44:33.340 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0005, 41 > channel 2: ST_L_0005, 42 > channel 3: ST_L_0005, 43 > channel 4: ST_L_0005, 44 > channel 5: ST_L_0005, 45 > channel 6: ST_L_0005, 46 > channel 7: ST_L_0005, 47 > channel 8: ST_L_0005, 48
+2025-03-17 10:44:33.340 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:44:43.169 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 150 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 150 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 150 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 150 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 150 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 150 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 150 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 150 uL
+2025-03-17 10:44:43.169 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:44:43.185 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:44:43.185 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:44:48.465 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A6, 150 uL > channel 2: DW_96_Praj_onHSS, B6, 150 uL > channel 3: DW_96_Praj_onHSS, C6, 150 uL > channel 4: DW_96_Praj_onHSS, D6, 150 uL > channel 5: DW_96_Praj_onHSS, E6, 150 uL > channel 6: DW_96_Praj_onHSS, F6, 150 uL > channel 7: DW_96_Praj_onHSS, G6, 150 uL > channel 8: DW_96_Praj_onHSS, H6, 150 uL
+2025-03-17 10:44:48.506 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:44:56.533 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0005, 41 > channel 2: ST_L_0005, 42 > channel 3: ST_L_0005, 43 > channel 4: ST_L_0005, 44 > channel 5: ST_L_0005, 45 > channel 6: ST_L_0005, 46 > channel 7: ST_L_0005, 47 > channel 8: ST_L_0005, 48
+2025-03-17 10:44:56.562 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:44:56.572 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:44:56.632 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:45:02.500 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0005, 49 > channel 2: ST_L_0005, 50 > channel 3: ST_L_0005, 51 > channel 4: ST_L_0005, 52 > channel 5: ST_L_0005, 53 > channel 6: ST_L_0005, 54 > channel 7: ST_L_0005, 55 > channel 8: ST_L_0005, 56
+2025-03-17 10:45:02.501 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:45:12.321 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 150 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 150 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 150 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 150 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 150 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 150 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 150 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 150 uL
+2025-03-17 10:45:12.321 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:45:12.342 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:45:12.343 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:45:17.628 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A7, 150 uL > channel 2: DW_96_Praj_onHSS, B7, 150 uL > channel 3: DW_96_Praj_onHSS, C7, 150 uL > channel 4: DW_96_Praj_onHSS, D7, 150 uL > channel 5: DW_96_Praj_onHSS, E7, 150 uL > channel 6: DW_96_Praj_onHSS, F7, 150 uL > channel 7: DW_96_Praj_onHSS, G7, 150 uL > channel 8: DW_96_Praj_onHSS, H7, 150 uL
+2025-03-17 10:45:17.666 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:45:25.691 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0005, 49 > channel 2: ST_L_0005, 50 > channel 3: ST_L_0005, 51 > channel 4: ST_L_0005, 52 > channel 5: ST_L_0005, 53 > channel 6: ST_L_0005, 54 > channel 7: ST_L_0005, 55 > channel 8: ST_L_0005, 56
+2025-03-17 10:45:25.719 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:45:25.729 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:45:25.791 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:45:31.650 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0005, 57 > channel 2: ST_L_0005, 58 > channel 3: ST_L_0005, 59 > channel 4: ST_L_0005, 60 > channel 5: ST_L_0005, 61 > channel 6: ST_L_0005, 62 > channel 7: ST_L_0005, 63 > channel 8: ST_L_0005, 64
+2025-03-17 10:45:31.650 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:45:41.502 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 150 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 150 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 150 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 150 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 150 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 150 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 150 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 150 uL
+2025-03-17 10:45:41.502 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:45:41.520 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:45:41.521 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:45:46.856 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A8, 150 uL > channel 2: DW_96_Praj_onHSS, B8, 150 uL > channel 3: DW_96_Praj_onHSS, C8, 150 uL > channel 4: DW_96_Praj_onHSS, D8, 150 uL > channel 5: DW_96_Praj_onHSS, E8, 150 uL > channel 6: DW_96_Praj_onHSS, F8, 150 uL > channel 7: DW_96_Praj_onHSS, G8, 150 uL > channel 8: DW_96_Praj_onHSS, H8, 150 uL
+2025-03-17 10:45:46.898 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:45:54.925 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0005, 57 > channel 2: ST_L_0005, 58 > channel 3: ST_L_0005, 59 > channel 4: ST_L_0005, 60 > channel 5: ST_L_0005, 61 > channel 6: ST_L_0005, 62 > channel 7: ST_L_0005, 63 > channel 8: ST_L_0005, 64
+2025-03-17 10:45:54.952 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:45:54.962 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:45:55.025 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:46:00.883 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0005, 65 > channel 2: ST_L_0005, 66 > channel 3: ST_L_0005, 67 > channel 4: ST_L_0005, 68 > channel 5: ST_L_0005, 69 > channel 6: ST_L_0005, 70 > channel 7: ST_L_0005, 71 > channel 8: ST_L_0005, 72
+2025-03-17 10:46:00.883 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:46:10.745 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 150 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 150 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 150 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 150 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 150 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 150 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 150 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 150 uL
+2025-03-17 10:46:10.745 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:46:10.762 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:46:10.762 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:46:16.099 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A9, 150 uL > channel 2: DW_96_Praj_onHSS, B9, 150 uL > channel 3: DW_96_Praj_onHSS, C9, 150 uL > channel 4: DW_96_Praj_onHSS, D9, 150 uL > channel 5: DW_96_Praj_onHSS, E9, 150 uL > channel 6: DW_96_Praj_onHSS, F9, 150 uL > channel 7: DW_96_Praj_onHSS, G9, 150 uL > channel 8: DW_96_Praj_onHSS, H9, 150 uL
+2025-03-17 10:46:16.139 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:46:24.170 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0005, 65 > channel 2: ST_L_0005, 66 > channel 3: ST_L_0005, 67 > channel 4: ST_L_0005, 68 > channel 5: ST_L_0005, 69 > channel 6: ST_L_0005, 70 > channel 7: ST_L_0005, 71 > channel 8: ST_L_0005, 72
+2025-03-17 10:46:24.199 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:46:24.209 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:46:24.279 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:46:30.127 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0005, 73 > channel 2: ST_L_0005, 74 > channel 3: ST_L_0005, 75 > channel 4: ST_L_0005, 76 > channel 5: ST_L_0005, 77 > channel 6: ST_L_0005, 78 > channel 7: ST_L_0005, 79 > channel 8: ST_L_0005, 80
+2025-03-17 10:46:30.127 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:46:39.985 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 150 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 150 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 150 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 150 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 150 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 150 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 150 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 150 uL
+2025-03-17 10:46:39.985 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:46:40.006 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:46:40.007 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:46:45.288 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A10, 150 uL > channel 2: DW_96_Praj_onHSS, B10, 150 uL > channel 3: DW_96_Praj_onHSS, C10, 150 uL > channel 4: DW_96_Praj_onHSS, D10, 150 uL > channel 5: DW_96_Praj_onHSS, E10, 150 uL > channel 6: DW_96_Praj_onHSS, F10, 150 uL > channel 7: DW_96_Praj_onHSS, G10, 150 uL > channel 8: DW_96_Praj_onHSS, H10, 150 uL
+2025-03-17 10:46:45.327 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:46:53.350 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0005, 73 > channel 2: ST_L_0005, 74 > channel 3: ST_L_0005, 75 > channel 4: ST_L_0005, 76 > channel 5: ST_L_0005, 77 > channel 6: ST_L_0005, 78 > channel 7: ST_L_0005, 79 > channel 8: ST_L_0005, 80
+2025-03-17 10:46:53.377 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:46:53.387 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:46:53.447 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:46:59.303 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0005, 81 > channel 2: ST_L_0005, 82 > channel 3: ST_L_0005, 83 > channel 4: ST_L_0005, 84 > channel 5: ST_L_0005, 85 > channel 6: ST_L_0005, 86 > channel 7: ST_L_0005, 87 > channel 8: ST_L_0005, 88
+2025-03-17 10:46:59.303 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:47:09.217 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 150 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 150 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 150 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 150 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 150 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 150 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 150 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 150 uL
+2025-03-17 10:47:09.217 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:47:09.235 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:47:09.236 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:47:14.520 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A11, 150 uL > channel 2: DW_96_Praj_onHSS, B11, 150 uL > channel 3: DW_96_Praj_onHSS, C11, 150 uL > channel 4: DW_96_Praj_onHSS, D11, 150 uL > channel 5: DW_96_Praj_onHSS, E11, 150 uL > channel 6: DW_96_Praj_onHSS, F11, 150 uL > channel 7: DW_96_Praj_onHSS, G11, 150 uL > channel 8: DW_96_Praj_onHSS, H11, 150 uL
+2025-03-17 10:47:14.560 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:47:22.587 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0005, 81 > channel 2: ST_L_0005, 82 > channel 3: ST_L_0005, 83 > channel 4: ST_L_0005, 84 > channel 5: ST_L_0005, 85 > channel 6: ST_L_0005, 86 > channel 7: ST_L_0005, 87 > channel 8: ST_L_0005, 88
+2025-03-17 10:47:22.615 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:47:22.625 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:47:22.692 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:47:28.549 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0005, 89 > channel 2: ST_L_0005, 90 > channel 3: ST_L_0005, 91 > channel 4: ST_L_0005, 92 > channel 5: ST_L_0005, 93 > channel 6: ST_L_0005, 94 > channel 7: ST_L_0005, 95 > channel 8: ST_L_0005, 96
+2025-03-17 10:47:28.550 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:47:38.515 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: rgt_cont_60ml_BC_A00_0005, 1, 150 uL > channel 2: rgt_cont_60ml_BC_A00_0005, 2, 150 uL > channel 3: rgt_cont_60ml_BC_A00_0005, 3, 150 uL > channel 4: rgt_cont_60ml_BC_A00_0005, 4, 150 uL > channel 5: rgt_cont_60ml_BC_A00_0005, 5, 150 uL > channel 6: rgt_cont_60ml_BC_A00_0005, 6, 150 uL > channel 7: rgt_cont_60ml_BC_A00_0005, 7, 150 uL > channel 8: rgt_cont_60ml_BC_A00_0005, 8, 150 uL
+2025-03-17 10:47:38.515 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:47:38.535 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:47:38.536 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:47:43.820 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A12, 150 uL > channel 2: DW_96_Praj_onHSS, B12, 150 uL > channel 3: DW_96_Praj_onHSS, C12, 150 uL > channel 4: DW_96_Praj_onHSS, D12, 150 uL > channel 5: DW_96_Praj_onHSS, E12, 150 uL > channel 6: DW_96_Praj_onHSS, F12, 150 uL > channel 7: DW_96_Praj_onHSS, G12, 150 uL > channel 8: DW_96_Praj_onHSS, H12, 150 uL
+2025-03-17 10:47:43.860 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:47:51.936 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0005, 89 > channel 2: ST_L_0005, 90 > channel 3: ST_L_0005, 91 > channel 4: ST_L_0005, 92 > channel 5: ST_L_0005, 93 > channel 6: ST_L_0005, 94 > channel 7: ST_L_0005, 95 > channel 8: ST_L_0005, 96
+2025-03-17 10:47:51.964 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:47:51.964 SYSTEM : HSLHamHeaterShakerLib - StartShaker - start; 
+2025-03-17 10:47:51.967 SYSTEM : HSLHamHeaterShakerLib - StartShaker - progress; Send command to ML_Star node ( 1 ).
+2025-03-17 10:47:51.969 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1LPlp1
+2025-03-17 10:47:51.970 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:47:53.376 Microlab STAR : Firmware Command (Single Step) - complete;  > LP: er00
+2025-03-17 10:47:53.376 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Received answere = T1LPer00
+2025-03-17 10:47:53.376 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1SBst0sv1600sr01000
+2025-03-17 10:47:53.376 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:47:53.408 Microlab STAR : Firmware Command (Single Step) - complete;  > SB: er00
+2025-03-17 10:47:53.409 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Received answere = T1SBer00
+2025-03-17 10:47:53.410 SYSTEM : HSLHamHeaterShakerLib - StartShaker - complete; 
+2025-03-17 10:47:53.410 SYSTEM : Trace - start; > Timer Start - <t_hdlTimerShaker>; Shaker; Remaining: 0 00:02:00; End: 2025-03-17 10:49:53
+2025-03-17 10:49:53.421 SYSTEM : Trace - complete; > Timer End - <t_hdlTimerShaker>; Shaker; Elapsed: 0 00:02:00; Remaining: 0 00:00:00; Start: 2025-03-17 10:47:53; End: 2025-03-17 10:49:53; Timer completed
+2025-03-17 10:49:53.421 SYSTEM : HSLHamHeaterShakerLib - StopShaker - start; 
+2025-03-17 10:49:53.421 SYSTEM : HSLHamHeaterShakerLib - StopShaker - progress; Send command to ML_Star node ( 1 ).
+2025-03-17 10:49:53.421 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1SC
+2025-03-17 10:49:53.431 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:49:55.889 Microlab STAR : Firmware Command (Single Step) - complete;  > SC: er00
+2025-03-17 10:49:55.904 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Received answere = T1SCer00
+2025-03-17 10:49:55.904 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1LPlp0
+2025-03-17 10:49:55.904 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:49:57.309 Microlab STAR : Firmware Command (Single Step) - complete;  > LP: er00
+2025-03-17 10:49:57.309 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Received answere = T1LPer00
+2025-03-17 10:49:57.318 SYSTEM : HSLHamHeaterShakerLib - StopShaker - complete; 
+2025-03-17 10:49:57.318 SYSTEM : HSLHamHeaterShakerLib - GetTemperature - start; 
+2025-03-17 10:49:57.322 SYSTEM : HSLHamHeaterShakerLib - GetTemperature - progress; Send command to ML_Star node ( 1 ).
+2025-03-17 10:49:57.325 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1RT
+2025-03-17 10:49:57.325 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:49:57.333 Microlab STAR : Firmware Command (Single Step) - complete;  > RT: rt+0998 +1007
+2025-03-17 10:49:57.335 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Received answere = T1RTrt+0998 +1007
+2025-03-17 10:49:57.337 SYSTEM : HSLHamHeaterShakerLib - GetTemperature - complete; 
+2025-03-17 10:49:57.346 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:49:57.411 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:50:04.239 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0004, 1 > channel 2: ST_L_0004, 2 > channel 3: ST_L_0004, 3 > channel 4: ST_L_0004, 4 > channel 5: ST_L_0004, 5 > channel 6: ST_L_0004, 6 > channel 7: ST_L_0004, 7 > channel 8: ST_L_0004, 8
+2025-03-17 10:50:04.239 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:50:12.169 Microlab STAR : 1000ul Channel Aspirate (Single Step) - progress; Error handling waiting for manual recovery!
+2025-03-17 10:50:12.252 Microlab STAR : 1000ul Channel Aspirate (Single Step) - progress; On start error dialog, following eMail was sent: 'Microlab STAR : 1000ul Channel Aspirate (Single Step); '.
+2025-03-17 10:50:27.594 Microlab STAR : 1000ul Channel Aspirate (Single Step) - error;  > channel 3: DW_96_Praj_onHSS, C1, E:P3:04/81:Continue
+2025-03-17 10:50:28.362 Microlab STAR : 1000ul Channel Aspirate (Single Step) - progress; Error manually recovered by user.
+2025-03-17 10:50:28.423 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A1, 150 uL > channel 2: DW_96_Praj_onHSS, B1, 150 uL > channel 3: DW_96_Praj_onHSS, C1, 150 uL > channel 4: DW_96_Praj_onHSS, D1, 150 uL > channel 5: DW_96_Praj_onHSS, E1, 150 uL > channel 6: DW_96_Praj_onHSS, F1, 150 uL > channel 7: DW_96_Praj_onHSS, G1, 150 uL > channel 8: DW_96_Praj_onHSS, H1, 150 uL
+2025-03-17 10:50:28.423 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:50:28.443 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:50:28.443 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:50:32.942 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: PallFilterPlateV2_0001, A1, 150 uL > channel 2: PallFilterPlateV2_0001, B1, 150 uL > channel 3: PallFilterPlateV2_0001, C1, 150 uL > channel 4: PallFilterPlateV2_0001, D1, 150 uL > channel 5: PallFilterPlateV2_0001, E1, 150 uL > channel 6: PallFilterPlateV2_0001, F1, 150 uL > channel 7: PallFilterPlateV2_0001, G1, 150 uL > channel 8: PallFilterPlateV2_0001, H1, 150 uL
+2025-03-17 10:50:32.986 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:50:40.759 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0004, 1 > channel 2: ST_L_0004, 2 > channel 3: ST_L_0004, 3 > channel 4: ST_L_0004, 4 > channel 5: ST_L_0004, 5 > channel 6: ST_L_0004, 6 > channel 7: ST_L_0004, 7 > channel 8: ST_L_0004, 8
+2025-03-17 10:50:40.786 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:50:40.796 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:50:40.857 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:50:46.717 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0004, 9 > channel 2: ST_L_0004, 10 > channel 3: ST_L_0004, 11 > channel 4: ST_L_0004, 12 > channel 5: ST_L_0004, 13 > channel 6: ST_L_0004, 14 > channel 7: ST_L_0004, 15 > channel 8: ST_L_0004, 16
+2025-03-17 10:50:46.717 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:50:54.661 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A2, 150 uL > channel 2: DW_96_Praj_onHSS, B2, 150 uL > channel 3: DW_96_Praj_onHSS, C2, 150 uL > channel 4: DW_96_Praj_onHSS, D2, 150 uL > channel 5: DW_96_Praj_onHSS, E2, 150 uL > channel 6: DW_96_Praj_onHSS, F2, 150 uL > channel 7: DW_96_Praj_onHSS, G2, 150 uL > channel 8: DW_96_Praj_onHSS, H2, 150 uL
+2025-03-17 10:50:54.661 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:50:54.681 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:50:54.682 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:50:59.167 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: PallFilterPlateV2_0001, A2, 150 uL > channel 2: PallFilterPlateV2_0001, B2, 150 uL > channel 3: PallFilterPlateV2_0001, C2, 150 uL > channel 4: PallFilterPlateV2_0001, D2, 150 uL > channel 5: PallFilterPlateV2_0001, E2, 150 uL > channel 6: PallFilterPlateV2_0001, F2, 150 uL > channel 7: PallFilterPlateV2_0001, G2, 150 uL > channel 8: PallFilterPlateV2_0001, H2, 150 uL
+2025-03-17 10:50:59.205 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:51:06.975 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0004, 9 > channel 2: ST_L_0004, 10 > channel 3: ST_L_0004, 11 > channel 4: ST_L_0004, 12 > channel 5: ST_L_0004, 13 > channel 6: ST_L_0004, 14 > channel 7: ST_L_0004, 15 > channel 8: ST_L_0004, 16
+2025-03-17 10:51:07.002 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:51:07.012 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:51:07.073 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:51:12.937 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0004, 17 > channel 2: ST_L_0004, 18 > channel 3: ST_L_0004, 19 > channel 4: ST_L_0004, 20 > channel 5: ST_L_0004, 21 > channel 6: ST_L_0004, 22 > channel 7: ST_L_0004, 23 > channel 8: ST_L_0004, 24
+2025-03-17 10:51:12.937 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:51:20.886 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A3, 150 uL > channel 2: DW_96_Praj_onHSS, B3, 150 uL > channel 3: DW_96_Praj_onHSS, C3, 150 uL > channel 4: DW_96_Praj_onHSS, D3, 150 uL > channel 5: DW_96_Praj_onHSS, E3, 150 uL > channel 6: DW_96_Praj_onHSS, F3, 150 uL > channel 7: DW_96_Praj_onHSS, G3, 150 uL > channel 8: DW_96_Praj_onHSS, H3, 150 uL
+2025-03-17 10:51:20.886 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:51:20.906 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:51:20.907 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:51:25.394 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: PallFilterPlateV2_0001, A3, 150 uL > channel 2: PallFilterPlateV2_0001, B3, 150 uL > channel 3: PallFilterPlateV2_0001, C3, 150 uL > channel 4: PallFilterPlateV2_0001, D3, 150 uL > channel 5: PallFilterPlateV2_0001, E3, 150 uL > channel 6: PallFilterPlateV2_0001, F3, 150 uL > channel 7: PallFilterPlateV2_0001, G3, 150 uL > channel 8: PallFilterPlateV2_0001, H3, 150 uL
+2025-03-17 10:51:25.432 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:51:33.157 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0004, 17 > channel 2: ST_L_0004, 18 > channel 3: ST_L_0004, 19 > channel 4: ST_L_0004, 20 > channel 5: ST_L_0004, 21 > channel 6: ST_L_0004, 22 > channel 7: ST_L_0004, 23 > channel 8: ST_L_0004, 24
+2025-03-17 10:51:33.176 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:51:33.193 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:51:33.260 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:51:40.519 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0004, 25 > channel 2: ST_L_0004, 26 > channel 3: ST_L_0004, 27 > channel 4: ST_L_0004, 28 > channel 5: ST_L_0004, 29 > channel 6: ST_L_0004, 30 > channel 7: ST_L_0004, 31 > channel 8: ST_L_0004, 32
+2025-03-17 10:51:40.520 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:51:48.468 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A4, 150 uL > channel 2: DW_96_Praj_onHSS, B4, 150 uL > channel 3: DW_96_Praj_onHSS, C4, 150 uL > channel 4: DW_96_Praj_onHSS, D4, 150 uL > channel 5: DW_96_Praj_onHSS, E4, 150 uL > channel 6: DW_96_Praj_onHSS, F4, 150 uL > channel 7: DW_96_Praj_onHSS, G4, 150 uL > channel 8: DW_96_Praj_onHSS, H4, 150 uL
+2025-03-17 10:51:48.468 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:51:48.482 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:51:48.483 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:51:52.968 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: PallFilterPlateV2_0001, A4, 150 uL > channel 2: PallFilterPlateV2_0001, B4, 150 uL > channel 3: PallFilterPlateV2_0001, C4, 150 uL > channel 4: PallFilterPlateV2_0001, D4, 150 uL > channel 5: PallFilterPlateV2_0001, E4, 150 uL > channel 6: PallFilterPlateV2_0001, F4, 150 uL > channel 7: PallFilterPlateV2_0001, G4, 150 uL > channel 8: PallFilterPlateV2_0001, H4, 150 uL
+2025-03-17 10:51:53.003 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:52:00.731 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0004, 25 > channel 2: ST_L_0004, 26 > channel 3: ST_L_0004, 27 > channel 4: ST_L_0004, 28 > channel 5: ST_L_0004, 29 > channel 6: ST_L_0004, 30 > channel 7: ST_L_0004, 31 > channel 8: ST_L_0004, 32
+2025-03-17 10:52:00.759 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:52:00.769 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:52:00.826 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:52:08.154 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0004, 33 > channel 2: ST_L_0004, 34 > channel 3: ST_L_0004, 35 > channel 4: ST_L_0004, 36 > channel 5: ST_L_0004, 37 > channel 6: ST_L_0004, 38 > channel 7: ST_L_0004, 39 > channel 8: ST_L_0004, 40
+2025-03-17 10:52:08.154 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:52:16.101 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A5, 150 uL > channel 2: DW_96_Praj_onHSS, B5, 150 uL > channel 3: DW_96_Praj_onHSS, C5, 150 uL > channel 4: DW_96_Praj_onHSS, D5, 150 uL > channel 5: DW_96_Praj_onHSS, E5, 150 uL > channel 6: DW_96_Praj_onHSS, F5, 150 uL > channel 7: DW_96_Praj_onHSS, G5, 150 uL > channel 8: DW_96_Praj_onHSS, H5, 150 uL
+2025-03-17 10:52:16.101 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:52:16.116 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:52:16.116 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:52:20.604 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: PallFilterPlateV2_0001, A5, 150 uL > channel 2: PallFilterPlateV2_0001, B5, 150 uL > channel 3: PallFilterPlateV2_0001, C5, 150 uL > channel 4: PallFilterPlateV2_0001, D5, 150 uL > channel 5: PallFilterPlateV2_0001, E5, 150 uL > channel 6: PallFilterPlateV2_0001, F5, 150 uL > channel 7: PallFilterPlateV2_0001, G5, 150 uL > channel 8: PallFilterPlateV2_0001, H5, 150 uL
+2025-03-17 10:52:20.642 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:52:28.364 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0004, 33 > channel 2: ST_L_0004, 34 > channel 3: ST_L_0004, 35 > channel 4: ST_L_0004, 36 > channel 5: ST_L_0004, 37 > channel 6: ST_L_0004, 38 > channel 7: ST_L_0004, 39 > channel 8: ST_L_0004, 40
+2025-03-17 10:52:28.391 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:52:28.401 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:52:28.463 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:52:35.782 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0004, 41 > channel 2: ST_L_0004, 42 > channel 3: ST_L_0004, 43 > channel 4: ST_L_0004, 44 > channel 5: ST_L_0004, 45 > channel 6: ST_L_0004, 46 > channel 7: ST_L_0004, 47 > channel 8: ST_L_0004, 48
+2025-03-17 10:52:35.782 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:52:43.729 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A6, 150 uL > channel 2: DW_96_Praj_onHSS, B6, 150 uL > channel 3: DW_96_Praj_onHSS, C6, 150 uL > channel 4: DW_96_Praj_onHSS, D6, 150 uL > channel 5: DW_96_Praj_onHSS, E6, 150 uL > channel 6: DW_96_Praj_onHSS, F6, 150 uL > channel 7: DW_96_Praj_onHSS, G6, 150 uL > channel 8: DW_96_Praj_onHSS, H6, 150 uL
+2025-03-17 10:52:43.729 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:52:43.746 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:52:43.746 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:52:48.236 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: PallFilterPlateV2_0001, A6, 150 uL > channel 2: PallFilterPlateV2_0001, B6, 150 uL > channel 3: PallFilterPlateV2_0001, C6, 150 uL > channel 4: PallFilterPlateV2_0001, D6, 150 uL > channel 5: PallFilterPlateV2_0001, E6, 150 uL > channel 6: PallFilterPlateV2_0001, F6, 150 uL > channel 7: PallFilterPlateV2_0001, G6, 150 uL > channel 8: PallFilterPlateV2_0001, H6, 150 uL
+2025-03-17 10:52:48.277 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:52:55.998 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0004, 41 > channel 2: ST_L_0004, 42 > channel 3: ST_L_0004, 43 > channel 4: ST_L_0004, 44 > channel 5: ST_L_0004, 45 > channel 6: ST_L_0004, 46 > channel 7: ST_L_0004, 47 > channel 8: ST_L_0004, 48
+2025-03-17 10:52:56.025 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:52:56.035 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:52:56.106 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:53:03.407 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0004, 49 > channel 2: ST_L_0004, 50 > channel 3: ST_L_0004, 51 > channel 4: ST_L_0004, 52 > channel 5: ST_L_0004, 53 > channel 6: ST_L_0004, 54 > channel 7: ST_L_0004, 55 > channel 8: ST_L_0004, 56
+2025-03-17 10:53:03.407 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:53:11.361 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A7, 150 uL > channel 2: DW_96_Praj_onHSS, B7, 150 uL > channel 3: DW_96_Praj_onHSS, C7, 150 uL > channel 4: DW_96_Praj_onHSS, D7, 150 uL > channel 5: DW_96_Praj_onHSS, E7, 150 uL > channel 6: DW_96_Praj_onHSS, F7, 150 uL > channel 7: DW_96_Praj_onHSS, G7, 150 uL > channel 8: DW_96_Praj_onHSS, H7, 150 uL
+2025-03-17 10:53:11.361 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:53:11.361 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:53:11.374 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:53:15.861 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: PallFilterPlateV2_0001, A7, 150 uL > channel 2: PallFilterPlateV2_0001, B7, 150 uL > channel 3: PallFilterPlateV2_0001, C7, 150 uL > channel 4: PallFilterPlateV2_0001, D7, 150 uL > channel 5: PallFilterPlateV2_0001, E7, 150 uL > channel 6: PallFilterPlateV2_0001, F7, 150 uL > channel 7: PallFilterPlateV2_0001, G7, 150 uL > channel 8: PallFilterPlateV2_0001, H7, 150 uL
+2025-03-17 10:53:15.899 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:53:23.628 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0004, 49 > channel 2: ST_L_0004, 50 > channel 3: ST_L_0004, 51 > channel 4: ST_L_0004, 52 > channel 5: ST_L_0004, 53 > channel 6: ST_L_0004, 54 > channel 7: ST_L_0004, 55 > channel 8: ST_L_0004, 56
+2025-03-17 10:53:23.655 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:53:23.665 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:53:23.737 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:53:30.994 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0004, 57 > channel 2: ST_L_0004, 58 > channel 3: ST_L_0004, 59 > channel 4: ST_L_0004, 60 > channel 5: ST_L_0004, 61 > channel 6: ST_L_0004, 62 > channel 7: ST_L_0004, 63 > channel 8: ST_L_0004, 64
+2025-03-17 10:53:30.994 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:53:38.937 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A8, 150 uL > channel 2: DW_96_Praj_onHSS, B8, 150 uL > channel 3: DW_96_Praj_onHSS, C8, 150 uL > channel 4: DW_96_Praj_onHSS, D8, 150 uL > channel 5: DW_96_Praj_onHSS, E8, 150 uL > channel 6: DW_96_Praj_onHSS, F8, 150 uL > channel 7: DW_96_Praj_onHSS, G8, 150 uL > channel 8: DW_96_Praj_onHSS, H8, 150 uL
+2025-03-17 10:53:38.937 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:53:38.958 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:53:38.959 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:53:43.446 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: PallFilterPlateV2_0001, A8, 150 uL > channel 2: PallFilterPlateV2_0001, B8, 150 uL > channel 3: PallFilterPlateV2_0001, C8, 150 uL > channel 4: PallFilterPlateV2_0001, D8, 150 uL > channel 5: PallFilterPlateV2_0001, E8, 150 uL > channel 6: PallFilterPlateV2_0001, F8, 150 uL > channel 7: PallFilterPlateV2_0001, G8, 150 uL > channel 8: PallFilterPlateV2_0001, H8, 150 uL
+2025-03-17 10:53:43.485 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:53:51.212 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0004, 57 > channel 2: ST_L_0004, 58 > channel 3: ST_L_0004, 59 > channel 4: ST_L_0004, 60 > channel 5: ST_L_0004, 61 > channel 6: ST_L_0004, 62 > channel 7: ST_L_0004, 63 > channel 8: ST_L_0004, 64
+2025-03-17 10:53:51.240 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:53:51.248 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:53:51.314 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:53:58.574 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0004, 65 > channel 2: ST_L_0004, 66 > channel 3: ST_L_0004, 67 > channel 4: ST_L_0004, 68 > channel 5: ST_L_0004, 69 > channel 6: ST_L_0004, 70 > channel 7: ST_L_0004, 71 > channel 8: ST_L_0004, 72
+2025-03-17 10:53:58.574 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:54:06.528 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A9, 150 uL > channel 2: DW_96_Praj_onHSS, B9, 150 uL > channel 3: DW_96_Praj_onHSS, C9, 150 uL > channel 4: DW_96_Praj_onHSS, D9, 150 uL > channel 5: DW_96_Praj_onHSS, E9, 150 uL > channel 6: DW_96_Praj_onHSS, F9, 150 uL > channel 7: DW_96_Praj_onHSS, G9, 150 uL > channel 8: DW_96_Praj_onHSS, H9, 150 uL
+2025-03-17 10:54:06.528 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:54:06.528 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:54:06.542 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:54:11.021 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: PallFilterPlateV2_0001, A9, 150 uL > channel 2: PallFilterPlateV2_0001, B9, 150 uL > channel 3: PallFilterPlateV2_0001, C9, 150 uL > channel 4: PallFilterPlateV2_0001, D9, 150 uL > channel 5: PallFilterPlateV2_0001, E9, 150 uL > channel 6: PallFilterPlateV2_0001, F9, 150 uL > channel 7: PallFilterPlateV2_0001, G9, 150 uL > channel 8: PallFilterPlateV2_0001, H9, 150 uL
+2025-03-17 10:54:11.060 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:54:18.786 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0004, 65 > channel 2: ST_L_0004, 66 > channel 3: ST_L_0004, 67 > channel 4: ST_L_0004, 68 > channel 5: ST_L_0004, 69 > channel 6: ST_L_0004, 70 > channel 7: ST_L_0004, 71 > channel 8: ST_L_0004, 72
+2025-03-17 10:54:18.814 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:54:18.824 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:54:18.894 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:54:24.742 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0004, 73 > channel 2: ST_L_0004, 74 > channel 3: ST_L_0004, 75 > channel 4: ST_L_0004, 76 > channel 5: ST_L_0004, 77 > channel 6: ST_L_0004, 78 > channel 7: ST_L_0004, 79 > channel 8: ST_L_0004, 80
+2025-03-17 10:54:24.742 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:54:32.691 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A10, 150 uL > channel 2: DW_96_Praj_onHSS, B10, 150 uL > channel 3: DW_96_Praj_onHSS, C10, 150 uL > channel 4: DW_96_Praj_onHSS, D10, 150 uL > channel 5: DW_96_Praj_onHSS, E10, 150 uL > channel 6: DW_96_Praj_onHSS, F10, 150 uL > channel 7: DW_96_Praj_onHSS, G10, 150 uL > channel 8: DW_96_Praj_onHSS, H10, 150 uL
+2025-03-17 10:54:32.691 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:54:32.710 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:54:32.710 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:54:37.197 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: PallFilterPlateV2_0001, A10, 150 uL > channel 2: PallFilterPlateV2_0001, B10, 150 uL > channel 3: PallFilterPlateV2_0001, C10, 150 uL > channel 4: PallFilterPlateV2_0001, D10, 150 uL > channel 5: PallFilterPlateV2_0001, E10, 150 uL > channel 6: PallFilterPlateV2_0001, F10, 150 uL > channel 7: PallFilterPlateV2_0001, G10, 150 uL > channel 8: PallFilterPlateV2_0001, H10, 150 uL
+2025-03-17 10:54:37.235 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:54:44.961 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0004, 73 > channel 2: ST_L_0004, 74 > channel 3: ST_L_0004, 75 > channel 4: ST_L_0004, 76 > channel 5: ST_L_0004, 77 > channel 6: ST_L_0004, 78 > channel 7: ST_L_0004, 79 > channel 8: ST_L_0004, 80
+2025-03-17 10:54:44.989 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:54:44.998 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:54:45.052 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:54:50.917 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0004, 81 > channel 2: ST_L_0004, 82 > channel 3: ST_L_0004, 83 > channel 4: ST_L_0004, 84 > channel 5: ST_L_0004, 85 > channel 6: ST_L_0004, 86 > channel 7: ST_L_0004, 87 > channel 8: ST_L_0004, 88
+2025-03-17 10:54:50.917 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:54:58.860 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A11, 150 uL > channel 2: DW_96_Praj_onHSS, B11, 150 uL > channel 3: DW_96_Praj_onHSS, C11, 150 uL > channel 4: DW_96_Praj_onHSS, D11, 150 uL > channel 5: DW_96_Praj_onHSS, E11, 150 uL > channel 6: DW_96_Praj_onHSS, F11, 150 uL > channel 7: DW_96_Praj_onHSS, G11, 150 uL > channel 8: DW_96_Praj_onHSS, H11, 150 uL
+2025-03-17 10:54:58.860 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:54:58.879 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:54:58.880 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:55:03.368 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: PallFilterPlateV2_0001, A11, 150 uL > channel 2: PallFilterPlateV2_0001, B11, 150 uL > channel 3: PallFilterPlateV2_0001, C11, 150 uL > channel 4: PallFilterPlateV2_0001, D11, 150 uL > channel 5: PallFilterPlateV2_0001, E11, 150 uL > channel 6: PallFilterPlateV2_0001, F11, 150 uL > channel 7: PallFilterPlateV2_0001, G11, 150 uL > channel 8: PallFilterPlateV2_0001, H11, 150 uL
+2025-03-17 10:55:03.407 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:55:11.130 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0004, 81 > channel 2: ST_L_0004, 82 > channel 3: ST_L_0004, 83 > channel 4: ST_L_0004, 84 > channel 5: ST_L_0004, 85 > channel 6: ST_L_0004, 86 > channel 7: ST_L_0004, 87 > channel 8: ST_L_0004, 88
+2025-03-17 10:55:11.158 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:55:11.168 Microlab STAR : 1000ul Channel Aspirate - start;
+2025-03-17 10:55:11.227 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - start;
+2025-03-17 10:55:17.085 Microlab STAR : 1000ul Channel Tip Pick Up (Single Step) - complete;  > channel 1: ST_L_0004, 89 > channel 2: ST_L_0004, 90 > channel 3: ST_L_0004, 91 > channel 4: ST_L_0004, 92 > channel 5: ST_L_0004, 93 > channel 6: ST_L_0004, 94 > channel 7: ST_L_0004, 95 > channel 8: ST_L_0004, 96
+2025-03-17 10:55:17.086 Microlab STAR : 1000ul Channel Aspirate (Single Step) - start;
+2025-03-17 10:55:25.031 Microlab STAR : 1000ul Channel Aspirate (Single Step) - complete;  > channel 1: DW_96_Praj_onHSS, A12, 150 uL > channel 2: DW_96_Praj_onHSS, B12, 150 uL > channel 3: DW_96_Praj_onHSS, C12, 150 uL > channel 4: DW_96_Praj_onHSS, D12, 150 uL > channel 5: DW_96_Praj_onHSS, E12, 150 uL > channel 6: DW_96_Praj_onHSS, F12, 150 uL > channel 7: DW_96_Praj_onHSS, G12, 150 uL > channel 8: DW_96_Praj_onHSS, H12, 150 uL
+2025-03-17 10:55:25.031 Microlab STAR : 1000ul Channel Aspirate - complete;
+2025-03-17 10:55:25.047 Microlab STAR : 1000ul Channel Dispense - start;
+2025-03-17 10:55:25.047 Microlab STAR : 1000ul Channel Dispense (Single Step) - start;
+2025-03-17 10:55:29.536 Microlab STAR : 1000ul Channel Dispense (Single Step) - complete;  > channel 1: PallFilterPlateV2_0001, A12, 150 uL > channel 2: PallFilterPlateV2_0001, B12, 150 uL > channel 3: PallFilterPlateV2_0001, C12, 150 uL > channel 4: PallFilterPlateV2_0001, D12, 150 uL > channel 5: PallFilterPlateV2_0001, E12, 150 uL > channel 6: PallFilterPlateV2_0001, F12, 150 uL > channel 7: PallFilterPlateV2_0001, G12, 150 uL > channel 8: PallFilterPlateV2_0001, H12, 150 uL
+2025-03-17 10:55:29.574 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - start;
+2025-03-17 10:55:37.346 Microlab STAR : 1000ul Channel Tip Eject (Single Step) - complete;  > channel 1: ST_L_0004, 89 > channel 2: ST_L_0004, 90 > channel 3: ST_L_0004, 91 > channel 4: ST_L_0004, 92 > channel 5: ST_L_0004, 93 > channel 6: ST_L_0004, 94 > channel 7: ST_L_0004, 95 > channel 8: ST_L_0004, 96
+2025-03-17 10:55:37.373 Microlab STAR : 1000ul Channel Dispense - complete;
+2025-03-17 10:55:37.374 SYSTEM : HSLHamHeaterShakerLib - StopTempCtrl - start; 
+2025-03-17 10:55:37.375 SYSTEM : HSLHamHeaterShakerLib - StopTempCtrl - progress; Send command to ML_Star node ( 1 ).
+2025-03-17 10:55:37.378 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1TO
+2025-03-17 10:55:37.379 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:55:37.385 Microlab STAR : Firmware Command (Single Step) - complete;  > TO: er00
+2025-03-17 10:55:37.386 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Received answere = T1TOer00
+2025-03-17 10:55:37.387 SYSTEM : HSLHamHeaterShakerLib - StopTempCtrl - complete; 
+2025-03-17 10:55:37.395 Microlab STAR : 1000ul Channel CO-RE Grip Transport - start;
+2025-03-17 10:55:37.413 Microlab STAR : 1000ul Channel CO-RE Grip Get Plate (Single Step) - start;
+2025-03-17 10:55:47.845 Microlab STAR : 1000ul Channel CO-RE Grip Get Plate (Single Step) - complete;  > PallFilterPlateV2_0001:
+2025-03-17 10:55:47.845 Microlab STAR : 1000ul Channel CO-RE Grip Place Plate (Single Step) - start;
+2025-03-17 10:55:53.791 Microlab STAR : 1000ul Channel CO-RE Grip Place Plate (Single Step) - complete;  > PallFilterPlate_onScaffold:
+2025-03-17 10:55:53.791 Microlab STAR : 1000ul Channel CO-RE Grip Transport - complete;
+2025-03-17 10:55:53.791 LIBRARY: Hamilton MPE : FilterPlatePlaced - start;  i_intDeviceId = 1, i_floatFilterHeight = 33.00000, i_floatNozzleHeight = 0.000000
+2025-03-17 10:55:53.935 LIBRARY: Hamilton MPE : FilterPlatePlaced - complete;  
+2025-03-17 10:55:53.942 LIBRARY: Hamilton MPE : ClampFilterPlate - start;  i_intDeviceId = 1
+2025-03-17 10:56:09.958 LIBRARY: Hamilton MPE : ClampFilterPlate - complete;  
+2025-03-17 10:56:09.970 Microlab STAR : 1000ul Channel CO-RE Grip Transport - start;
+2025-03-17 10:56:10.002 Microlab STAR : 1000ul Channel CO-RE Grip Get Plate (Single Step) - start;
+2025-03-17 10:56:13.491 Microlab STAR : 1000ul Channel CO-RE Grip Get Plate (Single Step) - complete;  > DW_96_Praj_0001:
+2025-03-17 10:56:13.491 Microlab STAR : 1000ul Channel CO-RE Grip Place Plate (Single Step) - start;
+2025-03-17 10:56:24.458 Microlab STAR : 1000ul Channel CO-RE Grip Place Plate (Single Step) - complete;  > DW_96_Praj_collection:
+2025-03-17 10:56:24.458 Microlab STAR : 1000ul Channel CO-RE Grip Transport - complete;
+2025-03-17 10:56:24.458 LIBRARY: Hamilton MPE : CollectionPlatePlaced - start;  i_intDeviceId = 1, i_floatCollectionPlateHeight = 27.00000, i_floatOffsetFromNozzles = 10.00000
+2025-03-17 10:56:24.602 LIBRARY: Hamilton MPE : CollectionPlatePlaced - complete;  
+2025-03-17 10:56:24.604 LIBRARY: Hamilton MPE : RetrieveFilterPlate - start;  i_intDeviceId = 1
+2025-03-17 10:56:37.045 LIBRARY: Hamilton MPE : RetrieveFilterPlate - complete;  
+2025-03-17 10:56:37.045 LIBRARY: Hamilton MPE : ClampFilterPlate - start;  i_intDeviceId = 1
+2025-03-17 10:56:55.357 LIBRARY: Hamilton MPE : ClampFilterPlate - complete;  
+2025-03-17 10:56:55.357 LIBRARY: Hamilton MPE : ProcessFilterToCollectionPlate - start;  i_intDeviceId = 1, i_stringControlPoints = 'pressure,40,60', i_boolReturnPlateToIntegrationArea = 0
+2025-03-17 10:58:15.253 LIBRARY: Hamilton MPE : ProcessFilterToCollectionPlate - complete;  
+2025-03-17 10:58:15.265 Microlab STAR : 1000ul Channel CO-RE Grip Transport - start;
+2025-03-17 10:58:15.295 Microlab STAR : 1000ul Channel CO-RE Grip Get Plate (Single Step) - start;
+2025-03-17 10:58:26.398 Microlab STAR : 1000ul Channel CO-RE Grip Get Plate (Single Step) - complete;  > DW_96_Praj_collection:
+2025-03-17 10:58:26.399 Microlab STAR : 1000ul Channel CO-RE Grip Place Plate (Single Step) - start;
+2025-03-17 10:58:32.434 Microlab STAR : 1000ul Channel CO-RE Grip Place Plate (Single Step) - complete;  > DW_96_Praj_0001:
+2025-03-17 10:58:32.434 Microlab STAR : 1000ul Channel CO-RE Grip Transport - complete;
+2025-03-17 10:58:32.450 LIBRARY: Hamilton MPE : CollectionPlateRemoved - start;  i_intDeviceId = 1
+2025-03-17 10:58:32.585 LIBRARY: Hamilton MPE : CollectionPlateRemoved - complete;  
+2025-03-17 10:58:32.593 LIBRARY: Hamilton MPE : RetrieveFilterPlate - start;  i_intDeviceId = 1
+2025-03-17 10:58:42.849 LIBRARY: Hamilton MPE : RetrieveFilterPlate - complete;  
+2025-03-17 10:58:42.862 Microlab STAR : 1000ul Channel CO-RE Grip Transport - start;
+2025-03-17 10:58:42.891 Microlab STAR : 1000ul Channel CO-RE Grip Get Plate (Single Step) - start;
+2025-03-17 10:58:47.157 Microlab STAR : 1000ul Channel CO-RE Grip Get Plate (Single Step) - complete;  > PallFilterPlate_onScaffold:
+2025-03-17 10:58:47.158 Microlab STAR : 1000ul Channel CO-RE Grip Place Plate (Single Step) - start;
+2025-03-17 10:58:56.839 Microlab STAR : 1000ul Channel CO-RE Grip Place Plate (Single Step) - complete;  > PallFilterPlateV2_0001:
+2025-03-17 10:58:56.839 Microlab STAR : 1000ul Channel CO-RE Grip Transport - complete;
+2025-03-17 10:58:56.839 LIBRARY: Hamilton MPE : FilterPlateRemoved - start;  i_intDeviceId = 1
+2025-03-17 10:58:56.976 LIBRARY: Hamilton MPE : FilterPlateRemoved - complete;  
+2025-03-17 10:58:56.983 LIBRARY: Hamilton MPE : Disconnect - start;  i_intDeviceId = 1
+2025-03-17 10:58:58.172 LIBRARY: Hamilton MPE : Disconnect - complete;  
+2025-03-17 10:58:58.172 SYSTEM : Method has been aborted by the method - complete; 
+2025-03-17 10:58:58.172 SYSTEM : Abort method - start; 
+2025-03-17 10:58:58.184 Microlab STAR : Abort requested command - start;
+2025-03-17 10:58:58.184 Microlab STAR : Abort requested command - complete;
+2025-03-17 10:58:58.184 Microlab STAR : Start Method Abort Handler command - start;
+2025-03-17 10:58:58.228 Microlab STAR : Start Method Abort Handler command - complete;
+2025-03-17 10:58:58.228 LIBRARY: Hamilton MPE : _CleanUp (OnAbort) - complete;  
+2025-03-17 10:58:58.228 SYSTEM : HSLHamHeaterShakerLib - StopShaker - start; 
+2025-03-17 10:58:58.239 SYSTEM : HSLHamHeaterShakerLib - StopShaker - progress; Send command to ML_Star node ( 1 ).
+2025-03-17 10:58:58.241 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1SC
+2025-03-17 10:58:58.241 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:58:58.960 Microlab STAR : Firmware Command (Single Step) - complete;  > SC: er00
+2025-03-17 10:58:58.963 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Received answere = T1SCer00
+2025-03-17 10:58:58.967 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1LPlp0
+2025-03-17 10:58:58.968 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:58:59.025 Microlab STAR : Firmware Command (Single Step) - complete;  > LP: er00
+2025-03-17 10:58:59.028 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Received answere = T1LPer00
+2025-03-17 10:58:59.030 SYSTEM : HSLHamHeaterShakerLib - StopShaker - complete; 
+2025-03-17 10:58:59.031 SYSTEM : HSLHamHeaterShakerLib - StopTempCtrl - start; 
+2025-03-17 10:58:59.036 SYSTEM : HSLHamHeaterShakerLib - StopTempCtrl - progress; Send command to ML_Star node ( 1 ).
+2025-03-17 10:58:59.039 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Send message = T1TO
+2025-03-17 10:58:59.039 Microlab STAR : Firmware Command (Single Step) - start;
+2025-03-17 10:58:59.045 Microlab STAR : Firmware Command (Single Step) - complete;  > TO: er00
+2025-03-17 10:58:59.047 SYSTEM : HSLHamHeaterShakerLib::SendToStar - progress; Received answere = T1TOer00
+2025-03-17 10:58:59.047 SYSTEM : HSLHamHeaterShakerLib - StopTempCtrl - complete; 
+2025-03-17 10:58:59.050 SYSTEM : HSLHamHeaterShakerLib - Terminate - start; 
+2025-03-17 10:58:59.051 SYSTEM : HSLHamHeaterShakerLib - Terminate - complete; 
+2025-03-17 10:58:59.051 Microlab STAR : Abort command - start;
+2025-03-17 10:58:59.056 Microlab STAR : Abort command - complete;
+2025-03-17 10:58:59.159 SYSTEM : Abort method - complete; 
+2025-03-17 10:58:59.159 SYSTEM : Execute method - complete; 
+2025-03-17 10:58:59.161 SYSTEM : End method - start; 
+2025-03-17 10:58:59.209 Microlab STAR : End method command - start;
+2025-03-17 10:58:59.409 Microlab STAR : Clean up instrument - progress; Move up 1000ul channels
+2025-03-17 10:59:00.379 Microlab STAR : Clean up instrument - progress; Move down auto load Y drive
+2025-03-17 10:59:02.144 Microlab STAR : Clean up instrument - progress; Spreading channels
+2025-03-17 10:59:03.893 Microlab STAR : Clean up instrument - progress; Switch off loading lights
+2025-03-17 10:59:04.260 Microlab STAR : End method command - complete;
+2025-03-17 10:59:04.343 SYSTEM : End method - complete; 
+2025-03-17 10:59:04.429 SYSTEM : File checksum - written; $$author=Hamilton$$valid=0$$time=2025-03-17 10:59$$checksum=bff3cefa$$length=140$$
