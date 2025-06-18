@@ -43,10 +43,6 @@ python analysis.py --output_folder <string> --metabolomics_analysis <bool>
 ```
 This will automatically run outlier curation, processing, normalization and statistical testing on the growth data and metabolomics data. It will also generate a result report.
 
-## TODO:
-- Database integration scripts (alec)
-- Database querying/resue (alec)
-
 ### References:
 1. https://www.sciencedirect.com/science/article/pii/S266731852300017X?via%3Dihub
 2. https://pubs.acs.org/doi/10.1021/jasms.3c00396
