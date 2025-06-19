@@ -29,10 +29,10 @@ From the `/script` folder, run the following command in the terminal (fill in th
 python genexp.py --target <string> --N <integer> --alpha <float>
 ```
 
-- `target` denotes the metabolite observable used for the implication (an amino acid, in this case).
+- `target` denotes the metabolite observable used for learning the association (an amino acid, in this case).
 - `N` denotes the number of patterns passed to the hypothesis generation step (a higher number will allow for more variance, but lower ranked patterns are less likely to be true). Default at 10.
 - `alpha` is a float between 0 and 1 that is used to penalize patterns not unique to the specific metabolite observable (a number closer to 1 will ensure that patterns that are only deemed important for your specific target will rank higher). Default at 0.0
-- `override` is an optional parameter, if you want to manually override the selected logic program with one of your own.
+- `override` is an optional parameter, if you want to manually override the selected logic program with one of your own (does not necessarily need to be a logic program, but has not been properly tested).
 
 This will create a folder in `/experiments` with all of the details regarding the experiments (e.g. hypothesis, protocol, liquid handling scripts, ...). Note that you will be prompted for stock concentrations (if compounds are not present in the library) during the run. 
 
