@@ -2,7 +2,7 @@
 
 ## Install Python dependencies
 
-Using Python 3.10.13 the dependencies can be installed from the requirements.txt file, e.g. using conda and the following commands:
+Using Python 3.10.13 and R 4.2.3 the dependencies can be installed from the requirements.txt file, e.g. using conda and the following commands:
 ```
 $ conda create --name genExp python=3.10.13 r-base=4.2.3 && \\
     conda activate genExp && \\
@@ -14,7 +14,7 @@ Follow download and install instructions [here](https://www.swi-prolog.org/downl
 
 ## Setting up an API-key
 
-Add a key.txt file (see .gitignore) containing only the API key ("sk-proj---XXXXXXXX...") for GPT4 in the root folder. Easiest to generate personal one (I can also give you one if you prefer to use the same).
+Add a key.txt file (see .gitignore) containing only the API key ("sk-proj---XXXXXXXX...") for OpenAI in the root folder.
 
 ## Generation and experiment execution parameters
 
@@ -41,7 +41,7 @@ When the scripts have been run on the Hamilton, EVE and via AutonoMS [2] and dat
 ```
 python analysis.py --output_folder <string> --metabolomics_analysis <bool>
 ```
-This will automatically run outlier curation, processing, normalization and statistical testing on the growth data and metabolomics data. It will also generate a result report.
+This will automatically run outlier curation, processing, normalization and statistical testing on the growth data and metabolomics data. It will also generate a basic result report.
 
 ### References:
 1. https://www.sciencedirect.com/science/article/pii/S266731852300017X?via%3Dihub
