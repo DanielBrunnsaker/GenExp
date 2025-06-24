@@ -3,8 +3,8 @@
     - [x] Resistance to chemicals
     - [x] Metal resistance
     - [ ] Accumulation of chemical
-- [ ] Currently the state has observable triples for the reference state are written to the phenotypes graph, but should be in the states graph
-- [ ] The function for amino acid is mid-draft and will break if tried to run. Needs rewriting.
+- [x] Currently the state has observable triples for the reference state are written to the phenotypes graph, but should be in the states graph
+- [x] The function for amino acid is mid-draft and will break if tried to run. Needs rewriting.
 
 ## Future
 
