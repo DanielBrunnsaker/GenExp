@@ -1,5 +1,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
@@ -23,34 +24,398 @@
 #     "summary": "Baseline condition with no supplementation or treatment."
 # }
 
-[]
+<#StudyHypothesisMap>
     a rr:TriplesMap ;
     rml:logicalSource [
-        rml:source "experiments/completed_experiments/arginine_202503131539/protocol/protocol.json" ;
+        rml:source "$HYPOTHESIS_JSON" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$" ;
+    ] ;
+    rr:subjectMap [
+        rr:constant "http://hypo.project-genesis.io/STUDY-$LAST_DIR" ;
+        rr:graph <http://hypo.project-genesis.io/experiments> ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant obo:OBI_0500000 ; ] ; # OBI Study
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "hypothesis_text" ;
+            rr:datatype xsd:string ;
+        ] ;
+    ] .
+
+<#StudyExperimentsMap>
+    a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "$PROTOCOL_JSON" ;
         rml:referenceFormulation ql:JSONPath ;
         rml:iterator "$.experiments[*]" 
     ] ;
     rr:subjectMap [
-        # This doesn't work as the UUID function is not defined. I don't
-        # think that runtime generation of UUIDs is the way to go.
-        # rr:template "http://hypo.project-genesis.io/E-{uuid}" ;
-        # fnml:functionValue [
-        #     rr:predicateObjectMap [
-        #         rr:predicate fno:executes ;
-        #         rr:objectMap [ rr:constant grel:UUID ; ] ;
-        #     ]
-        # ]
-        # Example UUID instead
-        rr:constant "http://hypo.project-genesis.io/E-123e4567-e89b-12d3-a456-426614174000" ;
+        rr:constant "http://hypo.project-genesis.io/STUDY-$LAST_DIR" ;
+        rr:graph <http://hypo.project-genesis.io/experiments> ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:object obo:OBI_0500000 ; # OBI Study design
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000051 ; # BFO "has part"
+        rr:objectMap [
+            rr:template "http://hypo.project-genesis.io/EXP-$LAST_DIR-{experiment}" ;
+        ] ;
+    ] .
+
+<#ExperimentsMap>
+    a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "$PROTOCOL_JSON" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.experiments[*]" 
+    ] ;
+    rr:subjectMap [
+        rr:template "http://hypo.project-genesis.io/EXP-$LAST_DIR-{experiment}" ;
         rr:graph <http://hypo.project-genesis.io/experiments> ;
     ] ;
 
+    # Each experiment is a type of `assay`
     rr:predicateObjectMap [
         rr:predicate rdf:type ;
-        rr:objectMap [ rr:constant obo:OBI_0000316 ; ] ;
+        rr:objectMap [ rr:constant obo:OBI_0000070 ; ] ;
+    ] ;
+
+    # Put the summary of the experiment as a label
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rr:template "{type}: {summary}" ;
+            rr:datatype xsd:string ;
+        ] ;
     ] ;
     
+    # Each experiment has specified inputs of a yeast culture...
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000293 ; # has specified input
+        rr:objectMap [
+            rr:parentTriplesMap <#CellCultureMap>
+        ] ;
+    ] ;
+    
+    # ...and media
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000293 ; # has specified input
+        rr:objectMap [
+            rr:parentTriplesMap <#CultureMediumMap>
+        ] ;
+    ] ;
+    
+    # ... and treatment if applicable
+    rr:predicateObjectMap [
+        rr:predicate obo:OBI_0000293 ; # has specified input
+        rr:objectMap [
+            rr:parentTriplesMap <#ExperimentTreatmentMap>
+        ] ;
+    ] ;
+    .
+
+<#ExperimentMediaSupplementationMap>
+    a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "$PROTOCOL_JSON" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.experiments[*].media_supplementation" 
+    ] ;
+    rr:subjectMap [
+        rr:template "http://hypo.project-genesis.io/EXP-$LAST_DIR-{experiment}-media-supplementation" ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant obo:OBI_0000048 ] ; # culture medium supplementation
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "media_supplementation" ;
+            rr:datatype xsd:string ;
+        ] ;
+    ] .
+
+<#CellCultureMap>
+    a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "$PROTOCOL_JSON" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.experiments[*]" 
+    ] ;
+    rr:subjectMap [
+        rr:template "http://hypo.project-genesis.io/EXP-$LAST_DIR-{experiment}-cellculture" ;
+        rr:graph <http://hypo.project-genesis.io/experiments> ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant obo:OBI_0001876 ] ; # Cell culture
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000051 ; # has part
+        rr:objectMap [ 
+            rr:constant <http://hypo.project-genesis.io/saccaharomyces-cerevisiae-population> 
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate obo:BFO_0000051 ; # has part
+        rr:objectMap [
+            rr:template "http://hypo.project-genesis.io/EXP-$LAST_DIR-{experiment}-medium"
+        ] ;
+    ] .
+
+<#CultureCulturedCellMap>
+    a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "$PROTOCOL_JSON" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.experiments[*]" 
+    ] ;
+    rr:subjectMap [
+        rr:constant <http://hypo.project-genesis.io/saccaharomyces-cerevisiae-population> ;
+        rr:graph <http://hypo.project-genesis.io/experiments> ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant obo:NCBITaxon_4932 ] ; # S. cerevisiae
+    ] .
+
+<#CultureMediumMap>
+    a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "$PROTOCOL_JSON" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.experiments[*]" 
+    ] ;
+    rr:subjectMap [
+        rr:template "http://hypo.project-genesis.io/EXP-$LAST_DIR-{experiment}-medium" ;
+        rr:graph <http://hypo.project-genesis.io/experiments> ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ rr:constant obo:OBI_0000079 ] ; # culture medium
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "media_description" ;
+            rr:datatype xsd:string ;
+        ] ;
+    ] ;
+    # TODO: Model with proper OBI terms
     rr:predicateObjectMap [
         rr:predicate :baselineMedia ;
-        rr:objectMap [ rml:reference "baseline_media" ; ] ;
+        rr:objectMap [
+            rml:reference "baseline_media" ;
+            rr:datatype xsd:string ;
+        ] ;
+    ] ;
+    # TODO: Model with proper OBI terms
+    rr:predicateObjectMap [
+        rr:predicate :mediaSupplementation ;
+        rr:objectMap [
+            rr:termType rr:IRI ;
+            rml:reference "media_supplementation_chebi" ;
+        ] ;
+    ] ;
+    # TODO: Model with proper OBI terms
+    rr:predicateObjectMap [
+        rr:predicate :mediaSupplementationDosesValue ;
+        rr:objectMap [
+            rml:reference "media_supplementation_doses_value" ;
+            rr:datatype xsd:float ;
+        ] ;
+    ] ;
+    # TODO: Model with proper OBI terms
+    rr:predicateObjectMap [
+        rr:predicate :mediaSupplementationDosesUnit ;
+        rr:objectMap [
+            rml:reference "media_supplementation_doses_unit" ;
+            rr:datatype xsd:string ;
+        ] ;
+    ] .
+
+<#ExperimentTreatmentMap>
+    a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "$PROTOCOL_JSON" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.experiments[*]" 
+    ] ;
+    rr:subjectMap [
+        rr:template "http://hypo.project-genesis.io/EXP-$LAST_DIR-{experiment}-treatment" ;
+        rr:graph <http://hypo.project-genesis.io/experiments> ;
+    ] ;
+    # TODO: Model with proper OBI terms
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:object :treatment ;
+    ] ;
+    # TODO: Model with proper OBI terms
+    rr:predicateObjectMap [
+        rr:predicate :treatmentWithChemical ;
+        rr:objectMap [
+            rr:termType rr:IRI ;
+            rml:reference "treatment_chebi" ;
+        ] ;
+    ] ;
+    # TODO: Model with proper OBI terms
+    rr:predicateObjectMap [
+        rr:predicate :treatmentParametersValue ;
+        rr:objectMap [
+            rml:reference "treatment_parameters_value" ;
+            rr:datatype xsd:float ;
+        ] ;
+    ] ;
+    # TODO: Model with proper OBI terms
+    rr:predicateObjectMap [
+        rr:predicate :treatmentParametersUnit ;
+        rr:objectMap [
+            rml:reference "treatment_parameters_unit" ;
+            rr:datatype xsd:string ;
+        ] ;
+    ] .
+
+###### Experimental Data
+#
+#
+
+<#GrowthDataTestMap>
+    a rr:TriplesMap ;
+        rml:logicalSource [
+            rml:source "$GROWTH_DATA_AUC_FOREST" ;
+            rml:referenceFormulation ql:CSV ;
+        ] ;
+    rr:subjectMap [
+        rr:template "http://hypo.project-genesis.io/GROWTH-$LAST_DIR-auc-forest-{i}" ;
+        rr:graph <http://hypo.project-genesis.io/growth-data> ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:object :AUCForestComparativeTest ;
+    ] ;
+    # TODO: Link Test to assay
+    # ...
+    #
+    # TODO: Link Test to assay
+    # ...
+    #
+    rr:predicateObjectMap [
+        rr:predicate :referenceCondition ;
+        rr:objectMap [
+            rr:parentTriplesMap <#GrowthDataTestReferenceConditionMap> ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate :testCondition ;
+        rr:objectMap [
+            rr:parentTriplesMap <#GrowthDataTestTestConditionMap> ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate :GLMCoefficient ;
+        rr:objectMap [
+            rml:reference "estimate" ;
+            rr:datatype xsd:float ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate :pValue ;
+        rr:objectMap [
+            rml:reference "p_empirical" ;
+            rr:datatype xsd:float ;
+        ] ;
+    ] .
+
+<#GrowthDataTestReferenceConditionMap>
+    a rr:TriplesMap ;
+        rml:logicalSource [
+            rml:source "$GROWTH_DATA_AUC_FOREST" ;
+            rml:referenceFormulation ql:CSV ;
+        ] ;
+    rr:subjectMap [
+        rr:template "http://hypo.project-genesis.io/GROWTH-$LAST_DIR-auc-forest-{i}-reference-condition" ;
+        rr:graph <http://hypo.project-genesis.io/growth-data> ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:object :growthDataTestCondition ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate :growthDataFromAssay ;
+        rr:objectMap [
+            rr:termType rr:IRI ;
+            rr:constant "http://hypo.project-genesis.io/EXP-$LAST_DIR-1" ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rr:constant "Treatment=None, Supplement=None" ;
+            rr:datatype xsd:string ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate :testConditionHasTreatment ;
+        rr:objectMap [
+            rml:reference "Treatment" ;
+            rr:datatype xsd:string ;
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate :testConditionHasSupplement ;
+        rr:objectMap [
+            rml:reference "Supplement" ;
+            rr:datatype xsd:string ;
+        ]
+    ] .
+
+<#GrowthDataTestTestConditionMap>
+    a rr:TriplesMap ;
+        rml:logicalSource [
+            rml:source "$GROWTH_DATA_AUC_FOREST" ;
+            rml:referenceFormulation ql:CSV ;
+        ] ;
+    rr:subjectMap [
+        rr:template "http://hypo.project-genesis.io/GROWTH-$LAST_DIR-auc-forest-{i}-test-condition" ;
+        rr:graph <http://hypo.project-genesis.io/growth-data> ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:object :growthDataTestCondition ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate :growthDataFromAssay ;
+        rr:objectMap [
+            rr:termType rr:IRI ;
+            rr:template "http://hypo.project-genesis.io/EXP-$LAST_DIR-{assay_number}" ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "link" ;
+            rr:datatype xsd:string ;
+        ] ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate :testConditionHasTreatment ;
+        rr:objectMap [
+            rml:reference "Treatment" ;
+            rr:datatype xsd:string ;
+        ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate :testConditionHasSupplement ;
+        rr:objectMap [
+            rml:reference "Supplement" ;
+            rr:datatype xsd:string ;
+        ]
     ] .
