@@ -172,5 +172,11 @@ cython_debug/
 
 # Profiling statistics
 *.stats
+
+
 ontology-files/chebi-lite.owl
 ontology-files/outputs/db.trig
+.vscode/settings.json
+
+/tmp
+**/protocol/study.trig
