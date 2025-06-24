@@ -130,7 +130,7 @@ def generate_overlord_script(output_folder):
     EXPERIMENT_DIR = Path(output_folder)
     dir_name = str(EXPERIMENT_DIR).split('/')[-1]
     
-    # Define the value you want to replace 60 with
+    # Define the value you want to replace default cultivation time with
     cultivation_time = config.CULTIVATION_TIME  # Change this to whatever value you need
     
     # Read the XML file for the main cultivation
@@ -142,7 +142,7 @@ def generate_overlord_script(output_folder):
         content_loop = file.read()
 
     # replace with cultivation params
-    modified_content = re.sub(r';defaultValue&gt;\d+&lt;/', f';defaultValue&gt;{ cultivation_time}&lt;/', content)
+    modified_content = re.sub(r'replace_with_cultivation_time', f'{cultivation_time}', content)
     modified_content = re.sub('replace_with_folder', dir_name, modified_content)
     content_loop = re.sub('replace_with_folder', dir_name, content_loop)
 

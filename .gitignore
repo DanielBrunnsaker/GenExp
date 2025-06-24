@@ -4,3 +4,4 @@ key.txt
 experiments/archived/
 scripts/archived/
 scripts/plotting_scripts/
+scripts/__pycache__

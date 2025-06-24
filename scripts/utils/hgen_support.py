@@ -38,12 +38,19 @@ def create_experiment_folder(target, alpha, N, EXPERIMENTS_DIR): #genexp.py
         "protocol": {
             "EVE": {},
             "hamilton": {},
+            "logs": {
+                "autonoms": {},
+                "cultivation": {},
+                "extraction": {},
+                "preparation": {},
+                },
             "plate_layout": {},
             "mass_spectrometry": {},
         },
         "results": {
             "metabolomics": {
                 "processed": {},
+                "coefficients": {},
                 "raw": {},
                 "tests": {
                     "models": {}}},

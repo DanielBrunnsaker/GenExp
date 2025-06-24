@@ -118,7 +118,7 @@
       <Time>0</Time>
     </Action>
     <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
-      <Parameters>&lt;UserInput&gt;&lt;inputType&gt;Variable&lt;/inputType&gt;&lt;messageText&gt;Number of measurement iterations (cultivation time divided by 3)&lt;/messageText&gt;&lt;inputVariable&gt;[LLM.NrOfMeasurements]&lt;/inputVariable&gt;&lt;variableInputType&gt;Integer&lt;/variableInputType&gt;&lt;showAdvanced&gt;False&lt;/showAdvanced&gt;&lt;showAdvancedFile&gt;False&lt;/showAdvancedFile&gt;&lt;defaultValue&gt;60&lt;/defaultValue&gt;&lt;soundFile /&gt;&lt;loopSound&gt;False&lt;/loopSound&gt;&lt;fileOperation&gt;Open&lt;/fileOperation&gt;&lt;caption /&gt;&lt;fileType /&gt;&lt;extension /&gt;&lt;useDropDown&gt;False&lt;/useDropDown&gt;&lt;/UserInput&gt;</Parameters>
+      <Parameters>&lt;UserInput&gt;&lt;inputType&gt;Variable&lt;/inputType&gt;&lt;messageText&gt;Number of measurement iterations (cultivation time divided by 3)&lt;/messageText&gt;&lt;inputVariable&gt;[LLM.NrOfMeasurements]&lt;/inputVariable&gt;&lt;variableInputType&gt;Integer&lt;/variableInputType&gt;&lt;showAdvanced&gt;False&lt;/showAdvanced&gt;&lt;showAdvancedFile&gt;False&lt;/showAdvancedFile&gt;&lt;defaultValue&gt;replace_with_cultivation_time&lt;/defaultValue&gt;&lt;soundFile /&gt;&lt;loopSound&gt;False&lt;/loopSound&gt;&lt;fileOperation&gt;Open&lt;/fileOperation&gt;&lt;caption /&gt;&lt;fileType /&gt;&lt;extension /&gt;&lt;useDropDown&gt;False&lt;/useDropDown&gt;&lt;/UserInput&gt;</Parameters>
       <ID>40fe102f-df15-4435-b7a1-97a1d623ad1c</ID>
       <Groups />
       <WaitUntilIdle>
