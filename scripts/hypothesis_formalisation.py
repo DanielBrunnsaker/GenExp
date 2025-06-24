@@ -576,3 +576,12 @@ if __name__ == "__main__":
                         'number': i, 'reason': '<blank>'} for (i, p) in enumerate(test_patterns)]
 
     load_hypotheses(hypo_ds, os.path.join(BASE_DIR, "experiments"))
+
+    ds = rdflib.Dataset()
+    for ctx in hypo_ds.contexts():
+        if ctx.identifier != ontology.identifier:
+            # Add the context to the dataset
+            ds.add_graph(ctx)
+
+    with open(os.path.join(BASE_DIR, "ontology-files", "outputs", "db.trig"), "wb") as fo:
+        ds.serialize(fo, format="trig")
