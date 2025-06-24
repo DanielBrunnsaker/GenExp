@@ -1,6 +1,7 @@
 
 
 import matplotlib.pyplot as plt
+from growth_stat_testing import growth_testing  # , two_way_anova_testing
 import pandas as pd
 from pathlib import Path
 import argparse
@@ -13,13 +14,15 @@ from metabolomics_processing import *
 from metabolomics_analysis import *
 
 def save_plots(EXPERIMENT_DIR, growth_curves_filtered_smoothed, raw_growth_curves, violinplot_df, mu_per_well, layout):
-    
-    raw_growth_curves.index = raw_growth_curves.index.map(lambda x: unify_well_format(str(x)))
+
+    raw_growth_curves.index = raw_growth_curves.index.map(
+        lambda x: unify_well_format(str(x)))
     layout = layout.copy()
     layout['well'] = layout['well'].astype(str).apply(unify_well_format)
-    
+
     # Merge layout information (e.g. Summary) into the data.
-    raw_growth_curves = raw_growth_curves.merge(layout[['well', 'Summary']], left_index=True, right_on='well').set_index('well')
+    raw_growth_curves = raw_growth_curves.merge(
+        layout[['well', 'Summary']], left_index=True, right_on='well').set_index('well')
 
     # Use a non-interactive backend
     plt.switch_backend('Agg')  # Ensures figures are not displayed, only saved
@@ -41,26 +44,31 @@ def save_plots(EXPERIMENT_DIR, growth_curves_filtered_smoothed, raw_growth_curve
     #plt.savefig(EXPERIMENT_DIR / 'results/plots/growth_metrics.png')   # save the figure to file
     plt.close('all')    # close the figure window
 
-#@task
+# @task
+
+
 def save_growth_properties(EXPERIMENT_DIR, mu_per_well, auc_per_well,
                            finalOD_per_well, growth_curves_filtered_smoothed):
-    
+
     # Save file with properties
-    violinplot_df = pd.merge(mu_per_well['mu'], auc_per_well, 
-                             left_index = True, right_index = True).merge(finalOD_per_well, 
-                                                      left_index = True, right_index = True).merge(growth_curves_filtered_smoothed['Summary'], 
-                                                                          left_index = True, right_index = True)
-    violinplot_df.to_csv(EXPERIMENT_DIR / 'results/growth/processed/growth_parameters.tsv', sep = '\t')
-    
+    violinplot_df = pd.merge(mu_per_well['mu'], auc_per_well,
+                             left_index=True, right_index=True).merge(finalOD_per_well,
+                                                                      left_index=True, right_index=True).merge(growth_curves_filtered_smoothed['Summary'],
+                                                                                                               left_index=True, right_index=True)
+    violinplot_df.to_csv(
+        EXPERIMENT_DIR / 'results/growth/processed/growth_parameters.tsv', sep='\t')
+
     return violinplot_df
 
-#@task
+# @task
+
+
 def extract_growth_properties(growth_curves_filtered_smoothed, layout):
-    
-    auc_per_well = compute_auc(growth_curves_filtered_smoothed.iloc[:,:-1])
+
+    auc_per_well = compute_auc(growth_curves_filtered_smoothed.iloc[:, :-1])
     mu_per_well = extract_growth_rates(layout, growth_curves_filtered_smoothed)
     finalOD_per_well = extract_finalOD(layout, growth_curves_filtered_smoothed)
-    
+
     return auc_per_well, mu_per_well, finalOD_per_well
 
     
@@ -69,10 +77,14 @@ def save_interim_data(EXPERIMENT_DIR, raw_growth_curves,
                       blanked_growth_curves, 
                       smoothed_growth_curves):
     # Save the processed curves and unprocessed curves?
-    raw_growth_curves.to_csv(EXPERIMENT_DIR / 'results/growth/processed/raw_growth_curves.tsv', sep = '\t')
-    curated_growth_curves.to_csv(EXPERIMENT_DIR / 'results/growth/processed/curated_growth_curves.tsv', sep = '\t')
-    blanked_growth_curves.to_csv(EXPERIMENT_DIR / 'results/growth/processed/blanked_growth_curves.tsv', sep = '\t')
-    smoothed_growth_curves.to_csv(EXPERIMENT_DIR / 'results/growth/processed/curated_smoothed_growth_curves.tsv', sep = '\t')
+    raw_growth_curves.to_csv(
+        EXPERIMENT_DIR / 'results/growth/processed/raw_growth_curves.tsv', sep='\t')
+    curated_growth_curves.to_csv(
+        EXPERIMENT_DIR / 'results/growth/processed/curated_growth_curves.tsv', sep='\t')
+    blanked_growth_curves.to_csv(
+        EXPERIMENT_DIR / 'results/growth/processed/blanked_growth_curves.tsv', sep='\t')
+    smoothed_growth_curves.to_csv(
+        EXPERIMENT_DIR / 'results/growth/processed/curated_smoothed_growth_curves.tsv', sep='\t')
 
 #@task
 def smooth(growth_curves_filtered, growth_curves, loess_frac):
@@ -86,16 +98,23 @@ def filter_curves(layout, growth_curves, group_col, threshold):
     growth_curves_filtered = filter_outlier_growth_curves(layout, growth_curves, group_col="Summary", threshold=threshold)
     return growth_curves_filtered
 
-#@task   
+# @task
+
+
 def read_growth_data(EXPERIMENT_DIR):
     # Read in the data and metadata
-    layout = pd.read_excel(EXPERIMENT_DIR / 'protocol/hamilton/pipetting_layout.xlsx')
-    raw_growth_curves = process_measurement_data(EXPERIMENT_DIR / 'results/growth/raw')
+    layout = pd.read_excel(
+        EXPERIMENT_DIR / 'protocol/hamilton/pipetting_layout.xlsx')
+    raw_growth_curves = process_measurement_data(
+        EXPERIMENT_DIR / 'results/growth/raw')
     return layout, raw_growth_curves
 
-#@task   
+# @task
+
+
 def blank_processing(layout, raw_growth_curves, n, fillin_value, blank_bool):
-    growth_curves = subtract_and_impute_blanks(layout, raw_growth_curves, n, fillin_value, blank_bool)
+    growth_curves = subtract_and_impute_blanks(
+        layout, raw_growth_curves, n, fillin_value, blank_bool)
     return growth_curves
 
 #@flow
@@ -123,17 +142,21 @@ def run_growth_processing(EXPERIMENT_DIR, met_bool):
     growth_curves_filtered_smoothed, unfiltered_growth_curves_smoothed = smooth(filtered_blanked_growth_curves, filtered_growth_curves, loess_frac)
     
     # Save growth curves in different stages of processing
-    save_interim_data(EXPERIMENT_DIR, raw_growth_curves, filtered_growth_curves, filtered_blanked_growth_curves, growth_curves_filtered_smoothed)
-    
+    save_interim_data(EXPERIMENT_DIR, raw_growth_curves, filtered_growth_curves,
+                      filtered_blanked_growth_curves, growth_curves_filtered_smoothed)
+
     # Extract growth parameters
-    auc_per_well, mu_per_well, finalOD_per_well = extract_growth_properties(growth_curves_filtered_smoothed, layout)
-    
+    auc_per_well, mu_per_well, finalOD_per_well = extract_growth_properties(
+        growth_curves_filtered_smoothed, layout)
+
     # Save growth parameters
-    violinplot_df = save_growth_properties(EXPERIMENT_DIR, mu_per_well, auc_per_well, finalOD_per_well, growth_curves_filtered_smoothed)
-    
+    violinplot_df = save_growth_properties(
+        EXPERIMENT_DIR, mu_per_well, auc_per_well, finalOD_per_well, growth_curves_filtered_smoothed)
+
     # Save partial report
-    save_plots(EXPERIMENT_DIR, growth_curves_filtered_smoothed, raw_growth_curves, violinplot_df, mu_per_well, layout)
-    
+    save_plots(EXPERIMENT_DIR, growth_curves_filtered_smoothed,
+               raw_growth_curves, violinplot_df, mu_per_well, layout)
+
     # if we want to run some basic sign testing
     growth_testing(EXPERIMENT_DIR)
     
@@ -144,8 +167,9 @@ def run_growth_processing(EXPERIMENT_DIR, met_bool):
         
     
 if __name__ == "__main__":
-    
-    parser = argparse.ArgumentParser(description="Run growth processing pipeline.")
+
+    parser = argparse.ArgumentParser(
+        description="Run growth processing pipeline.")
     parser.add_argument('--output_folder', required=True,
                         help="folder")
     parser.add_argument('--metabolomics_analysis', required=True,
@@ -160,7 +184,6 @@ if __name__ == "__main__":
     # python growth_processing.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/aminoadipate_202504291411" --testing yes
     # python growth_processing.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756" --metabolomics_analysis TRUE
     # python growth_processing.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_202501281618" --testing yes
-
 
     # EXPERIMENT_DIR = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_202504291411'
    

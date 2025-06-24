@@ -17,8 +17,8 @@ from utils.plate_utils import *
 from utils.hgen_support import *
 import config
 
-def hamilton_protocol(output_folder):
 
+def hamilton_protocol(output_folder):
     """
     Calculate and return the concentrations and volumes to dispense into each well.
     Logic seems robust, but could be prettier. Someone please fix?
@@ -46,9 +46,10 @@ def hamilton_protocol(output_folder):
     supplement_name = compound_dict['supplement'][0]
     negative_control_name = compound_dict['negative_control'][0]
     treatment_name = compound_dict['treatment'][0]
-    treatment_name  = treatment_name.replace('Aluminium','Aluminum') # Stupid languages
+    treatment_name = treatment_name.replace(
+        'Aluminium', 'Aluminum')  # Stupid languages
 
-    ## Not he nicest block ever, but works
+    # Not he nicest block ever, but works
     try:
         supplement_concentrations = find_rows_by_inchikey(EXPERIMENT_DIR / '../../data/compound_library/library.xlsx',
                                                           pcp.get_compounds(supplement_name, 'name')[0].inchikey)
@@ -56,7 +57,8 @@ def hamilton_protocol(output_folder):
                                                                    compound_dict['supplement'][1], ureg)['Available concentrations']
         print('  -Rescue-agent found in compound library!')
     except:
-        supplement_stock_concentration = input(f"  -Please provide {supplement_name} stock concentration (recommended at least {5*compound_dict['supplement'][1]}): ")
+        supplement_stock_concentration = input(
+            f"  -Please provide {supplement_name} stock concentration (recommended at least {5*compound_dict['supplement'][1]}): ")
 
     try:
         negative_concentrations = find_rows_by_inchikey(EXPERIMENT_DIR / '../../data/compound_library/library.xlsx',
@@ -65,31 +67,37 @@ def hamilton_protocol(output_folder):
                                                                  compound_dict['negative_control'][1], ureg)['Available concentrations']
         print('  -Negative control found in compound library!')
     except:
-        negative_stock_concentration = input(f"  -Please provide {negative_control_name} stock concentration (recommended at least {5*compound_dict['negative_control'][1]}): ")
+        negative_stock_concentration = input(
+            f"  -Please provide {negative_control_name} stock concentration (recommended at least {5*compound_dict['negative_control'][1]}): ")
 
     try:
         treatment_concentrations = find_rows_by_inchikey(EXPERIMENT_DIR / '../../data/compound_library/library.xlsx',
-                                                         pcp.get_compounds(treatment_name.replace(' derivative',''), 'name')[0].inchikey)
+                                                         pcp.get_compounds(treatment_name.replace(' derivative', ''), 'name')[0].inchikey)
         treatment_stock_concentration = get_closest_concentration(treatment_concentrations,
                                                                   compound_dict['treatment'][1], ureg)['Available concentrations']
         print('  -Treatment compound found in compound library! \n')
     except:
-        treatment_stock_concentration = input(f"  -Please provide {treatment_name} stock concentration (recommended at least {5*compound_dict['treatment'][1]}): ")
-
+        treatment_stock_concentration = input(
+            f"  -Please provide {treatment_name} stock concentration (recommended at least {5*compound_dict['treatment'][1]}): ")
 
     # Initialize dosing table with necessary columns
     dosing_table = pd.DataFrame(columns=['Summary', 'Media (uL)', 'Inoculated Media (uL)',
-                                         'Supplement (uL)', 'Negative Control (uL)','Treatment (uL)', 'MilliQ (uL)'])
+                                         'Supplement (uL)', 'Negative Control (uL)', 'Treatment (uL)', 'MilliQ (uL)'])
 
     # Define fixed parameters
-    V_total = Q_(config.WELL_VOLUME, config.WELL_VOLUME_UNIT)  # Total final volume per well
+    # Total final volume per well
+    V_total = Q_(config.WELL_VOLUME, config.WELL_VOLUME_UNIT)
     D_pre_culture = config.DILUTION_FACTOR  # Pre-culture dilution factor
-    V_pre_culture = (V_total / D_pre_culture).to('microliter').magnitude  # Calculated inoculation volume
+    # Calculated inoculation volume
+    V_pre_culture = (V_total / D_pre_culture).to('microliter').magnitude
 
     # Parse stock concentrations
-    s_stock_type, s_C_stock, s_stock_percentage_type = parse_concentration(supplement_stock_concentration, Q_)
-    t_stock_type, t_C_stock, t_stock_percentage_type = parse_concentration(treatment_stock_concentration, Q_)
-    n_stock_type, n_C_stock, n_stock_percentage_type = parse_concentration(negative_stock_concentration, Q_)
+    s_stock_type, s_C_stock, s_stock_percentage_type = parse_concentration(
+        supplement_stock_concentration, Q_)
+    t_stock_type, t_C_stock, t_stock_percentage_type = parse_concentration(
+        treatment_stock_concentration, Q_)
+    n_stock_type, n_C_stock, n_stock_percentage_type = parse_concentration(
+        negative_stock_concentration, Q_)
 
     # Adjust stock_percentage handling
     if s_stock_type == 'percentage':
@@ -121,10 +129,13 @@ def hamilton_protocol(output_folder):
 
         if 'negative' in experiment_type:
             n_conc_str = experiment.get('media_supplementation_doses', '0')
-            n_C_final_type, n_C_final, n_final_percentage_type = parse_concentration(n_conc_str, Q_)
+            n_C_final_type, n_C_final, n_final_percentage_type = parse_concentration(
+                n_conc_str, Q_)
 
-        s_C_final_type, s_C_final, s_final_percentage_type = parse_concentration(s_conc_str, Q_)
-        t_C_final_type, t_C_final, t_final_percentage_type = parse_concentration(t_conc_str, Q_)
+        s_C_final_type, s_C_final, s_final_percentage_type = parse_concentration(
+            s_conc_str, Q_)
+        t_C_final_type, t_C_final, t_final_percentage_type = parse_concentration(
+            t_conc_str, Q_)
 
         # Handle negative control
         if 'negative' in experiment_type:
@@ -159,7 +170,7 @@ def hamilton_protocol(output_folder):
 
         # Handle treatment
         t_V1 = compute_volume_for_compound(
-            treatment_name.replace(' derivative',''),
+            treatment_name.replace(' derivative', ''),
             t_C_final,
             t_C_final_type,
             t_final_percentage_type,
@@ -204,7 +215,8 @@ def hamilton_protocol(output_folder):
         }
 
         # Append to table
-        dosing_table = pd.concat([dosing_table, pd.DataFrame([new_row])], ignore_index=True)
+        dosing_table = pd.concat(
+            [dosing_table, pd.DataFrame([new_row])], ignore_index=True)
 
     # Add Media Control (no pre-culture, supplement, or treatment)
     media_control_row = {
@@ -216,25 +228,31 @@ def hamilton_protocol(output_folder):
         'Treatment (uL)': 0.0,
         'MilliQ (uL)': (V_total / 2).magnitude  # Complete to total volume (µL)
     }
-    dosing_table = pd.concat([dosing_table, pd.DataFrame([media_control_row])], ignore_index=True)
+    dosing_table = pd.concat(
+        [dosing_table, pd.DataFrame([media_control_row])], ignore_index=True)
 
     # Merge dosing table with plate layout
     plate_layout = plate_layout.reset_index()  # Ensure 'Summary' is a column
-    merged_df = pd.merge(dosing_table, plate_layout[['Summary', 'well']], on='Summary', how='left')
-    merged_df['well'] = merged_df['well'].str.replace(r'(\D)0*(\d+)', r'\1\2', regex=True)
+    merged_df = pd.merge(
+        dosing_table, plate_layout[['Summary', 'well']], on='Summary', how='left')
+    merged_df['well'] = merged_df['well'].str.replace(
+        r'(\D)0*(\d+)', r'\1\2', regex=True)
 
     # Step 2: Sort by letter and then by number
     merged_df['letter'] = merged_df['well'].str[0]  # Extract letter part
-    merged_df['number'] = merged_df['well'].str[1:].astype(int)  # Extract number part as integer
-    merged_df = merged_df.sort_values(by=['number', 'letter']).reset_index(drop=True)
+    merged_df['number'] = merged_df['well'].str[1:].astype(
+        int)  # Extract number part as integer
+    merged_df = merged_df.sort_values(
+        by=['number', 'letter']).reset_index(drop=True)
 
     # Iterate over each column and create a new column
     for col in merged_df.columns[1:-3]:
         # Add a new column with the logic: 1 if value != 0, else 0
-        merged_df[f'{col}_ch'] = merged_df[col].apply(lambda x: 1 if x != 0 else 0)
+        merged_df[f'{col}_ch'] = merged_df[col].apply(
+            lambda x: 1 if x != 0 else 0)
 
     create_folder_structure(EXPERIMENT_DIR / 'protocol/hamilton', "channels", {
-        'milliq': [], 
+        'milliq': [],
         'media': [],
         'supplement': [],
         'negative': [],
@@ -246,30 +264,37 @@ def hamilton_protocol(output_folder):
     with pd.ExcelWriter(EXPERIMENT_DIR / 'protocol/hamilton/runlist.xlsx') as writer:
         for num in range(1, 13):
             # Filter rows for the current number
-            group_df = merged_df[merged_df['number'] == num].drop(columns=['letter', 'number'])
+            group_df = merged_df[merged_df['number'] ==
+                                 num].drop(columns=['letter', 'number'])
 
             # Write to a sheet named after the number (e.g., "Group 1", "Group 2", ...)
             group_df.to_excel(writer, sheet_name=f'{num}', index=False)
 
             # Write channel-value
-            for i, ch in enumerate(['media','inoculant','supplement','negative','treatment','milliq']):
-                channels = group_df.iloc[:,8+i]
-                save_series_to_file(channels, EXPERIMENT_DIR / f"protocol/hamilton/channels/{ch}/{num}.txt")
+            for i, ch in enumerate(['media', 'inoculant', 'supplement', 'negative', 'treatment', 'milliq']):
+                channels = group_df.iloc[:, 8+i]
+                save_series_to_file(
+                    channels, EXPERIMENT_DIR / f"protocol/hamilton/channels/{ch}/{num}.txt")
 
-    merged_df.to_excel(EXPERIMENT_DIR / 'protocol/hamilton/pipetting_layout.xlsx', index = False)
+    merged_df.to_excel(
+        EXPERIMENT_DIR / 'protocol/hamilton/pipetting_layout.xlsx', index=False)
 
     # Group by "Summary" in df1 and aggregate the "well" values into a list
     result = merged_df.groupby('Summary')['well'].apply(list).reset_index()
 
     # Merge the result back into df1 to keep the original structure
-    dosing_with_wells = pd.merge(dosing_table, result, on='Summary', how='left')
-    dosing_with_wells.iloc[:, [1, 2, 3]] = dosing_with_wells.iloc[:, [1, 2, 3]].apply(pd.to_numeric, errors='coerce')
+    dosing_with_wells = pd.merge(
+        dosing_table, result, on='Summary', how='left')
+    dosing_with_wells.iloc[:, [1, 2, 3]] = dosing_with_wells.iloc[:, [
+        1, 2, 3]].apply(pd.to_numeric, errors='coerce')
+
 
 if __name__ == "__main__":
 
     import argparse
     parser = argparse.ArgumentParser(description="Hamilton protocol generator")
-    parser.add_argument("--output_folder", required=True, type=str, help="Experiment folder")
+    parser.add_argument("--output_folder", required=True,
+                        type=str, help="Experiment folder")
 
     args = parser.parse_args()
     hamilton_protocol(args.output_folder)

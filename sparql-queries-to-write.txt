@@ -1,0 +1,2 @@
+TRIGGER: New data added to database, for example growth data from an experiment.
+RETURN:  Hypotheses to which this data would be pertinent, and appropriate statistical tests to run.

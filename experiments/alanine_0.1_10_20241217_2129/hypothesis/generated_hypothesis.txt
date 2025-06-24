@@ -1,0 +1,53 @@
+**Selected Statement:**  
+5. Cells with lower than normal levels of intracellular alanine in standard conditions (grown on minimal media without any amino acids) associate with the following phenotype, described as a prolog program: Cell(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).
+
+**Motivation:**  
+The selected statement pertains to the association between low intracellular alanine levels and increased resistance to fenpropimorph. This statement is intriguing because it suggests that manipulating a basic metabolite like alanine could influence chemical resistance, a phenotype with potential industrial and clinical implications. Understanding this association could provide insights into cellular resistance mechanisms and metabolic regulation.
+
+**Hypothesis:**  
+Lowering intracellular alanine levels in Saccharomyces cerevisiae results in increased resistance to the chemical fenpropimorph.
+
+**Experimental Plan:**  
+
+1. **Objective:** To test the association between intracellular alanine levels and resistance to fenpropimorph.
+   
+2. **Strain:** Use a reference wild-type Saccharomyces cerevisiae strain.
+   
+3. **Media and Culture Conditions:**
+   - Use minimal media without amino acids as the baseline condition.
+   - Cultures will be inoculated at an initial OD600 of 0.05.
+   - Incubate at 30°C with shaking.
+
+4. **Experimental Groups:**
+   - **Control Group:** No alanine supplementation.
+   - **Treatment Group 1:** Supplement with 0.5 mM Alanine.
+   - **Treatment Group 2:** Supplement with 2 mM Alanine.
+
+5. **Assumption Verification:**
+   - Measure intracellular alanine concentrations at experiment termination using mass-spectrometry-based metabolomics.
+   - Confirm that alanine supplementation effectively modulates intracellular alanine levels.
+
+6. **Chemical Resistance Test:**
+   - At t=0h, add fenpropimorph to all groups at concentrations of 0, 5, and 10 µg/mL.
+   - Measure OD600 every 20 minutes to monitor growth and resistance.
+
+7. **Controls:**
+   - Include a no-fenpropimorph control for each alanine condition to assess the independent effects of alanine on growth.
+
+8. **Termination and Sampling:**
+   - Terminate experiments at 12 hours.
+   - Collect samples for final intracellular alanine concentration measurement.
+
+**Expected Outcomes:**  
+
+- **Assumption Testing:** 
+  - Intracellular alanine levels should vary according to supplementation levels, with the control group showing the lowest and Treatment Group 2 showing the highest.
+
+- **Resistance Assessment:**
+  - If the hypothesis is correct, the group with lower intracellular alanine (Control Group) will exhibit higher OD600 readings in the presence of fenpropimorph, indicating increased resistance.
+  - Higher supplementation groups might show reduced resistance, showing a dose-response relationship.
+
+- **Independent Effects:**
+  - Alanine supplementation might have independent effects on growth unrelated to fenpropimorph, observable in no-fenpropimorph controls.
+
+By carefully controlling alanine levels and using a systematic approach, this experiment aims to clarify whether intracellular alanine levels affect fenpropimorph resistance, while ensuring that observed effects are specifically due to changes in alanine and not other confounding factors.

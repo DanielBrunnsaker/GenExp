@@ -1,0 +1,13 @@
+{
+    "notebook.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[python]": {
+        "editor.formatOnSave": false
+    }
+}

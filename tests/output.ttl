@@ -1,0 +1,13 @@
+@prefix : <http://hypo.project-genesis.io/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+
+:experiments {
+  :E-123e4567-e89b-12d3-a456-426614174000 a obo:OBI_0000316;
+    :baselineMedia "Minimal media without amino acids" .
+}
