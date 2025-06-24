@@ -4,6 +4,7 @@
 # Workflow settings
 PRINT_HYPOTHESIS_DURING_WORKFLOW = True
 ALLOW_FOR_CHOICE = True
+CULTIVATION_TIME = 20 # In hours
 
 # Logic program prioritization settings
 REUSE_LOGIC_PROGRAM = False # Below logic can be changed if you want to bias the experiments differently

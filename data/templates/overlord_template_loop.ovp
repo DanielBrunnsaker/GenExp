@@ -1,0 +1,1157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Procedure>
+  <Author />
+  <Notes />
+  <Actions>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>Start</Parameters>
+      <ID>ac4879db-1a0f-4fc8-9b22-859a85fa198a</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;BMGReader&gt;&lt;action&gt;0&lt;/action&gt;&lt;robotPosition&gt;False&lt;/robotPosition&gt;&lt;protocol /&gt;&lt;measureData /&gt;&lt;id1 /&gt;&lt;id2 /&gt;&lt;id3 /&gt;&lt;temperature /&gt;&lt;/BMGReader&gt;</Parameters>
+      <ID>a89e06f8-a049-4930-bc48-3117b973b383</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>false</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="Set the shaker plate to 1 and the polar star plate to zero">
+      <Parameters>&lt;setVarCommand&gt;&lt;equation&gt;&lt;leftSide&gt;[RIFseq.BackPlate]&lt;/leftSide&gt;&lt;rightSide&gt;1&lt;/rightSide&gt;&lt;comment /&gt;&lt;/equation&gt;&lt;equation&gt;&lt;leftSide&gt;[RIFseq.LeadPlate]&lt;/leftSide&gt;&lt;rightSide&gt;0&lt;/rightSide&gt;&lt;comment /&gt;&lt;/equation&gt;&lt;/setVarCommand&gt;</Parameters>
+      <ID>41a6a1c7-5ea3-419f-8109-7d944d199b55</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;loop type="Conditional"&gt;&lt;evaluatePosition&gt;StartOfLoop&lt;/evaluatePosition&gt;&lt;conditionalType&gt;Variable&lt;/conditionalType&gt;&lt;variable&gt;[RIFseq.LeadPlate]&lt;/variable&gt;&lt;operator&gt;Less_than_or_equal_to&lt;/operator&gt;&lt;value&gt;[RIFseq.NumberOfPlates]&lt;/value&gt;&lt;useVariableCounter&gt;False&lt;/useVariableCounter&gt;&lt;loopCounter /&gt;&lt;/loop&gt;</Parameters>
+      <ID>1eae95ce-6b0c-4dd8-9897-ab694af9fea4</ID>
+      <Groups>
+        <Group Comment="">
+          <Action Comment="">
+            <Parameters>&lt;timerCommand&gt;&lt;duration&gt;&lt;timer&gt;RIFSeq plate delay&lt;/timer&gt;&lt;option&gt;RunTimerFor&lt;/option&gt;&lt;hours /&gt;&lt;minutes&gt;4&lt;/minutes&gt;&lt;seconds /&gt;&lt;waitForTimerToComplete&gt;False&lt;/waitForTimerToComplete&gt;&lt;/duration&gt;&lt;/timerCommand&gt;</Parameters>
+            <ID>130c8fac-ce56-492f-b0ae-c912986f5b34</ID>
+            <Groups />
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;decision type="Variable"&gt;&lt;variable&gt;[RIFseq.BackPlate]&lt;/variable&gt;&lt;conditions&gt;&lt;condition operator="Less_than_or_equal_to" value="[RIFseq.NumberOfPlates]" /&gt;&lt;/conditions&gt;&lt;/decision&gt;</Parameters>
+            <ID>ccad56e5-57a8-4db4-9143-151800ba4103</ID>
+            <Groups>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters />
+                  <ID>0b01fcad-53dc-4405-8b56-652c4c80bd95</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters>&lt;ThermoCytomat&gt;&lt;actionType&gt;MoveToGate&lt;/actionType&gt;&lt;position /&gt;&lt;linearPosition /&gt;&lt;linearPositionName /&gt;&lt;/ThermoCytomat&gt;</Parameters>
+                  <ID>dc3354aa-f99e-41b1-8d6b-08eb6de69e8a</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;ThermoCytomat&gt;&lt;actionType&gt;UnloadPlate&lt;/actionType&gt;&lt;position&gt;[RIFseq.BackPlate]&lt;/position&gt;&lt;linearPosition /&gt;&lt;linearPositionName /&gt;&lt;/ThermoCytomat&gt;</Parameters>
+                  <ID>dc3354aa-f99e-41b1-8d6b-08eb6de69e8a</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;ThermoCytomat&gt;&lt;actionType&gt;MoveToAccess&lt;/actionType&gt;&lt;position /&gt;&lt;linearPosition /&gt;&lt;linearPositionName /&gt;&lt;/ThermoCytomat&gt;</Parameters>
+                  <ID>dc3354aa-f99e-41b1-8d6b-08eb6de69e8a</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>1;0;CY44GP96;0;;</Parameters>
+                  <ID>1f93a0df-b94e-43dd-91dc-b491bc1fb23a</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>1;0;SH2PP96;0;;</Parameters>
+                  <ID>1f93a0df-b94e-43dd-91dc-b491bc1fb23a</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+            </Groups>
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;waitForCommands&gt;&lt;device&gt;&lt;id&gt;a89e06f8-a049-4930-bc48-3117b973b383&lt;/id&gt;&lt;alias&gt;BMG Polarstar&lt;/alias&gt;&lt;/device&gt;&lt;operator&gt;0&lt;/operator&gt;&lt;/waitForCommands&gt;</Parameters>
+            <ID>c960492a-a45d-4615-b567-d0c4e778e2c0</ID>
+            <Groups />
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;decision type="Variable"&gt;&lt;variable&gt;[RIFseq.LeadPlate]&lt;/variable&gt;&lt;conditions&gt;&lt;condition operator="Greater_than" value="0" /&gt;&lt;/conditions&gt;&lt;/decision&gt;</Parameters>
+            <ID>ccad56e5-57a8-4db4-9143-151800ba4103</ID>
+            <Groups>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters />
+                  <ID>0b01fcad-53dc-4405-8b56-652c4c80bd95</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters>&lt;BMGReader&gt;&lt;action&gt;1&lt;/action&gt;&lt;robotPosition&gt;True&lt;/robotPosition&gt;&lt;protocol /&gt;&lt;measureData /&gt;&lt;id1 /&gt;&lt;id2 /&gt;&lt;id3 /&gt;&lt;temperature /&gt;&lt;/BMGReader&gt;</Parameters>
+                  <ID>a89e06f8-a049-4930-bc48-3117b973b383</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>true</RetryOnError>
+                    <RetryCount>5</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>1;0;POLARGP96;0;;</Parameters>
+                  <ID>1f93a0df-b94e-43dd-91dc-b491bc1fb23a</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>false</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+            </Groups>
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;decision type="Variable"&gt;&lt;variable&gt;[RIFseq.BackPlate]&lt;/variable&gt;&lt;conditions&gt;&lt;condition operator="Less_than_or_equal_to" value="[RIFseq.NumberOfPlates]" /&gt;&lt;/conditions&gt;&lt;/decision&gt;</Parameters>
+            <ID>ccad56e5-57a8-4db4-9143-151800ba4103</ID>
+            <Groups>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters />
+                  <ID>0b01fcad-53dc-4405-8b56-652c4c80bd95</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters>&lt;ThermoVariomagTeleshake&gt;&lt;actionType&gt;Initialise&lt;/actionType&gt;&lt;device&gt;1&lt;/device&gt;&lt;shakingType&gt;Clockwise&lt;/shakingType&gt;&lt;shakingSpeed /&gt;&lt;hours /&gt;&lt;minutes /&gt;&lt;seconds /&gt;&lt;/ThermoVariomagTeleshake&gt;</Parameters>
+                  <ID>de010eb8-db9b-4d6a-87a1-07eccb7a3b8e</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;timerCommand&gt;&lt;duration&gt;&lt;timer&gt;Wait&lt;/timer&gt;&lt;option&gt;RunTimerFor&lt;/option&gt;&lt;hours /&gt;&lt;minutes /&gt;&lt;seconds&gt;3&lt;/seconds&gt;&lt;waitForTimerToComplete&gt;True&lt;/waitForTimerToComplete&gt;&lt;/duration&gt;&lt;/timerCommand&gt;</Parameters>
+                  <ID>130c8fac-ce56-492f-b0ae-c912986f5b34</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;ThermoVariomagTeleshake&gt;&lt;actionType&gt;Start&lt;/actionType&gt;&lt;device&gt;1&lt;/device&gt;&lt;shakingType&gt;AntiClockwise&lt;/shakingType&gt;&lt;shakingSpeed&gt;800&lt;/shakingSpeed&gt;&lt;hours&gt;0&lt;/hours&gt;&lt;minutes&gt;0&lt;/minutes&gt;&lt;seconds&gt;15&lt;/seconds&gt;&lt;/ThermoVariomagTeleshake&gt;</Parameters>
+                  <ID>de010eb8-db9b-4d6a-87a1-07eccb7a3b8e</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>true</RetryOnError>
+                    <RetryCount>5</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>1</Time>
+                </Action>
+              </Group>
+            </Groups>
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;decision type="Variable"&gt;&lt;variable&gt;[RIFseq.LeadPlate]&lt;/variable&gt;&lt;conditions&gt;&lt;condition operator="Greater_than" value="0" /&gt;&lt;/conditions&gt;&lt;/decision&gt;</Parameters>
+            <ID>ccad56e5-57a8-4db4-9143-151800ba4103</ID>
+            <Groups>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters />
+                  <ID>0b01fcad-53dc-4405-8b56-652c4c80bd95</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters>&lt;ThermoCytomat&gt;&lt;actionType&gt;MoveToAccess&lt;/actionType&gt;&lt;position /&gt;&lt;linearPosition /&gt;&lt;linearPositionName /&gt;&lt;/ThermoCytomat&gt;</Parameters>
+                  <ID>dc3354aa-f99e-41b1-8d6b-08eb6de69e8a</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;waitForCommands&gt;&lt;device&gt;&lt;id&gt;1f93a0df-b94e-43dd-91dc-b491bc1fb23a&lt;/id&gt;&lt;alias&gt;Robot 2&lt;/alias&gt;&lt;/device&gt;&lt;operator&gt;0&lt;/operator&gt;&lt;/waitForCommands&gt;</Parameters>
+                  <ID>c960492a-a45d-4615-b567-d0c4e778e2c0</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;BMGReader&gt;&lt;action&gt;2&lt;/action&gt;&lt;robotPosition&gt;False&lt;/robotPosition&gt;&lt;protocol /&gt;&lt;measureData /&gt;&lt;id1 /&gt;&lt;id2 /&gt;&lt;id3 /&gt;&lt;temperature /&gt;&lt;/BMGReader&gt;</Parameters>
+                  <ID>a89e06f8-a049-4930-bc48-3117b973b383</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>true</RetryOnError>
+                    <RetryCount>5</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>1;0;CY44PP96;0;;</Parameters>
+                  <ID>1f93a0df-b94e-43dd-91dc-b491bc1fb23a</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>false</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+            </Groups>
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;decision type="Variable"&gt;&lt;variable&gt;[RIFseq.BackPlate]&lt;/variable&gt;&lt;conditions&gt;&lt;condition operator="Less_than_or_equal_to" value="[RIFseq.NumberOfPlates]" /&gt;&lt;/conditions&gt;&lt;/decision&gt;</Parameters>
+            <ID>ccad56e5-57a8-4db4-9143-151800ba4103</ID>
+            <Groups>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters />
+                  <ID>0b01fcad-53dc-4405-8b56-652c4c80bd95</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters>&lt;timerCommand&gt;&lt;duration&gt;&lt;timer&gt;Wait&lt;/timer&gt;&lt;option&gt;RunTimerFor&lt;/option&gt;&lt;hours /&gt;&lt;minutes /&gt;&lt;seconds&gt;3&lt;/seconds&gt;&lt;waitForTimerToComplete&gt;True&lt;/waitForTimerToComplete&gt;&lt;/duration&gt;&lt;/timerCommand&gt;</Parameters>
+                  <ID>130c8fac-ce56-492f-b0ae-c912986f5b34</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;ThermoVariomagTeleshake&gt;&lt;actionType&gt;Start&lt;/actionType&gt;&lt;device&gt;1&lt;/device&gt;&lt;shakingType&gt;Clockwise&lt;/shakingType&gt;&lt;shakingSpeed&gt;800&lt;/shakingSpeed&gt;&lt;hours&gt;0&lt;/hours&gt;&lt;minutes&gt;0&lt;/minutes&gt;&lt;seconds&gt;15&lt;/seconds&gt;&lt;/ThermoVariomagTeleshake&gt;</Parameters>
+                  <ID>de010eb8-db9b-4d6a-87a1-07eccb7a3b8e</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>true</RetryOnError>
+                    <RetryCount>5</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>1</Time>
+                </Action>
+              </Group>
+            </Groups>
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;decision type="Variable"&gt;&lt;variable&gt;[RIFseq.BackPlate]&lt;/variable&gt;&lt;conditions&gt;&lt;condition operator="Less_than_or_equal_to" value="[RIFseq.NumberOfPlates]" /&gt;&lt;/conditions&gt;&lt;/decision&gt;</Parameters>
+            <ID>ccad56e5-57a8-4db4-9143-151800ba4103</ID>
+            <Groups>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters />
+                  <ID>0b01fcad-53dc-4405-8b56-652c4c80bd95</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters>&lt;waitForCommands&gt;&lt;device&gt;&lt;id&gt;1f93a0df-b94e-43dd-91dc-b491bc1fb23a&lt;/id&gt;&lt;alias&gt;Robot 2&lt;/alias&gt;&lt;/device&gt;&lt;operator&gt;0&lt;/operator&gt;&lt;/waitForCommands&gt;</Parameters>
+                  <ID>c960492a-a45d-4615-b567-d0c4e778e2c0</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>1;0;SH2GP96;0;;</Parameters>
+                  <ID>1f93a0df-b94e-43dd-91dc-b491bc1fb23a</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>false</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+            </Groups>
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;decision type="Variable"&gt;&lt;variable&gt;[RIFseq.LeadPlate]&lt;/variable&gt;&lt;conditions&gt;&lt;condition operator="Greater_than" value="0" /&gt;&lt;/conditions&gt;&lt;/decision&gt;</Parameters>
+            <ID>ccad56e5-57a8-4db4-9143-151800ba4103</ID>
+            <Groups>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters />
+                  <ID>0b01fcad-53dc-4405-8b56-652c4c80bd95</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters>&lt;waitForCommands&gt;&lt;device&gt;&lt;id&gt;1f93a0df-b94e-43dd-91dc-b491bc1fb23a&lt;/id&gt;&lt;alias&gt;Robot 2&lt;/alias&gt;&lt;/device&gt;&lt;operator&gt;0&lt;/operator&gt;&lt;/waitForCommands&gt;</Parameters>
+                  <ID>c960492a-a45d-4615-b567-d0c4e778e2c0</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;ThermoCytomat&gt;&lt;actionType&gt;MoveToGate&lt;/actionType&gt;&lt;position /&gt;&lt;linearPosition /&gt;&lt;linearPositionName /&gt;&lt;/ThermoCytomat&gt;</Parameters>
+                  <ID>dc3354aa-f99e-41b1-8d6b-08eb6de69e8a</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;ThermoCytomat&gt;&lt;actionType&gt;LoadPlate&lt;/actionType&gt;&lt;position&gt;[RIFseq.LeadPlate]&lt;/position&gt;&lt;linearPosition /&gt;&lt;linearPositionName /&gt;&lt;/ThermoCytomat&gt;</Parameters>
+                  <ID>dc3354aa-f99e-41b1-8d6b-08eb6de69e8a</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>false</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+            </Groups>
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;decision type="Variable"&gt;&lt;variable&gt;[RIFseq.BackPlate]&lt;/variable&gt;&lt;conditions&gt;&lt;condition operator="Less_than_or_equal_to" value="[RIFseq.NumberOfPlates]" /&gt;&lt;/conditions&gt;&lt;/decision&gt;</Parameters>
+            <ID>ccad56e5-57a8-4db4-9143-151800ba4103</ID>
+            <Groups>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters />
+                  <ID>0b01fcad-53dc-4405-8b56-652c4c80bd95</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters>&lt;waitForCommands&gt;&lt;device&gt;&lt;id&gt;1f93a0df-b94e-43dd-91dc-b491bc1fb23a&lt;/id&gt;&lt;alias&gt;Robot 2&lt;/alias&gt;&lt;/device&gt;&lt;operator&gt;0&lt;/operator&gt;&lt;/waitForCommands&gt;</Parameters>
+                  <ID>c960492a-a45d-4615-b567-d0c4e778e2c0</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;waitForCommands&gt;&lt;device&gt;&lt;id&gt;1f93a0df-b94e-43dd-91dc-b491bc1fb23a&lt;/id&gt;&lt;alias&gt;Robot 2&lt;/alias&gt;&lt;/device&gt;&lt;operator&gt;0&lt;/operator&gt;&lt;/waitForCommands&gt;</Parameters>
+                  <ID>c960492a-a45d-4615-b567-d0c4e778e2c0</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;BMGReader&gt;&lt;action&gt;1&lt;/action&gt;&lt;robotPosition&gt;True&lt;/robotPosition&gt;&lt;protocol /&gt;&lt;measureData /&gt;&lt;id1 /&gt;&lt;id2 /&gt;&lt;id3 /&gt;&lt;temperature /&gt;&lt;/BMGReader&gt;</Parameters>
+                  <ID>a89e06f8-a049-4930-bc48-3117b973b383</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>true</RetryOnError>
+                    <RetryCount>5</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>1;0;POLARPP96;0;;</Parameters>
+                  <ID>1f93a0df-b94e-43dd-91dc-b491bc1fb23a</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;BMGReader&gt;&lt;action&gt;2&lt;/action&gt;&lt;robotPosition&gt;False&lt;/robotPosition&gt;&lt;protocol /&gt;&lt;measureData /&gt;&lt;id1 /&gt;&lt;id2 /&gt;&lt;id3 /&gt;&lt;temperature /&gt;&lt;/BMGReader&gt;</Parameters>
+                  <ID>a89e06f8-a049-4930-bc48-3117b973b383</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>true</RetryOnError>
+                    <RetryCount>5</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;timerCommand&gt;&lt;duration&gt;&lt;timer&gt;Wait&lt;/timer&gt;&lt;option&gt;RunTimerFor&lt;/option&gt;&lt;hours /&gt;&lt;minutes /&gt;&lt;seconds&gt;3&lt;/seconds&gt;&lt;waitForTimerToComplete&gt;True&lt;/waitForTimerToComplete&gt;&lt;/duration&gt;&lt;/timerCommand&gt;</Parameters>
+                  <ID>130c8fac-ce56-492f-b0ae-c912986f5b34</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;VBScript&gt;&lt;scriptFile&gt;C:\Program Files\PAA\Overlord2\Scripts\RIFseq_MeasurementLabel.cs&lt;/scriptFile&gt;&lt;/VBScript&gt;</Parameters>
+                  <ID>d21fb5fa-5b39-4c43-94cc-72dc6a7a174d</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+                <Action Comment="">
+                  <Parameters>&lt;BMGReader&gt;&lt;action&gt;3&lt;/action&gt;&lt;robotPosition&gt;False&lt;/robotPosition&gt;&lt;protocol&gt;OD600X96NUNC&lt;/protocol&gt;&lt;measureData&gt;C:\Documents and Settings\robot\Desktop\LLM Exp\replace_with_folder&lt;/measureData&gt;&lt;id1&gt;[RIFseq.PolarMeasurementLabel]&lt;/id1&gt;&lt;id2 /&gt;&lt;id3 /&gt;&lt;temperature /&gt;&lt;/BMGReader&gt;</Parameters>
+                  <ID>a89e06f8-a049-4930-bc48-3117b973b383</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>false</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>true</RetryOnError>
+                    <RetryCount>3</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+            </Groups>
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;waitForCommands&gt;&lt;device&gt;&lt;id&gt;dc3354aa-f99e-41b1-8d6b-08eb6de69e8a&lt;/id&gt;&lt;alias&gt;Cytomat 2C15&lt;/alias&gt;&lt;/device&gt;&lt;operator&gt;0&lt;/operator&gt;&lt;/waitForCommands&gt;</Parameters>
+            <ID>c960492a-a45d-4615-b567-d0c4e778e2c0</ID>
+            <Groups />
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;decision type="Variable"&gt;&lt;variable&gt;[RIFseq.BackPlate]&lt;/variable&gt;&lt;conditions&gt;&lt;condition operator="Greater_than" value="[RIFseq.NumberOfPlates]" /&gt;&lt;/conditions&gt;&lt;/decision&gt;</Parameters>
+            <ID>ccad56e5-57a8-4db4-9143-151800ba4103</ID>
+            <Groups>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters />
+                  <ID>0b01fcad-53dc-4405-8b56-652c4c80bd95</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+              <Group Comment="">
+                <Action Comment="">
+                  <Parameters>Exit Procedure</Parameters>
+                  <ID>5b077d06-0e54-4785-a540-6643638f6368</ID>
+                  <Groups />
+                  <WaitUntilIdle>
+                    <Wait>true</Wait>
+                  </WaitUntilIdle>
+                  <ErrorRecovery>
+                    <RetryOnError>false</RetryOnError>
+                    <RetryCount>0</RetryCount>
+                  </ErrorRecovery>
+                  <Breakpoint>false</Breakpoint>
+                  <Enabled>true</Enabled>
+                  <TextEnabled>false</TextEnabled>
+                  <ErrorResponse>None</ErrorResponse>
+                  <Validate>All</Validate>
+                  <Simulate>false</Simulate>
+                  <Time>0</Time>
+                </Action>
+              </Group>
+            </Groups>
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;setVarCommand&gt;&lt;equation&gt;&lt;leftSide&gt;[RIFseq.LeadPlate]&lt;/leftSide&gt;&lt;rightSide&gt;[RIFseq.LeadPlate]+1&lt;/rightSide&gt;&lt;comment&gt;Increment LeadPlate&lt;/comment&gt;&lt;/equation&gt;&lt;equation&gt;&lt;leftSide&gt;[RIFseq.BackPlate]&lt;/leftSide&gt;&lt;rightSide&gt;[RIFseq.BackPlate]+1&lt;/rightSide&gt;&lt;comment&gt;Increment BackPlate&lt;/comment&gt;&lt;/equation&gt;&lt;/setVarCommand&gt;</Parameters>
+            <ID>41a6a1c7-5ea3-419f-8109-7d944d199b55</ID>
+            <Groups />
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;timerCommand&gt;&lt;waitFor&gt;&lt;timer&gt;RIFSeq plate delay&lt;/timer&gt;&lt;/waitFor&gt;&lt;/timerCommand&gt;</Parameters>
+            <ID>130c8fac-ce56-492f-b0ae-c912986f5b34</ID>
+            <Groups />
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+        </Group>
+      </Groups>
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>End</Parameters>
+      <ID>1f075630-10d3-46f0-8d31-761287c5efa0</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+  </Actions>
+</Procedure>

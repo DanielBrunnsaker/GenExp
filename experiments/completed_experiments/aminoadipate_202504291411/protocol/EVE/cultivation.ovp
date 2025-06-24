@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Procedure>
+  <Author />
+  <Notes />
+  <Actions>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>Start</Parameters>
+      <ID>ac4879db-1a0f-4fc8-9b22-859a85fa198a</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;UserInput&gt;&lt;inputType&gt;YesNo&lt;/inputType&gt;&lt;messageText&gt;Has the Bravo been initialized, and the quenching procedures (e.g. tip counts) set?&lt;/messageText&gt;&lt;inputVariable&gt;[bInitialise]&lt;/inputVariable&gt;&lt;variableInputType&gt;String&lt;/variableInputType&gt;&lt;showAdvanced&gt;False&lt;/showAdvanced&gt;&lt;showAdvancedFile&gt;False&lt;/showAdvancedFile&gt;&lt;defaultValue /&gt;&lt;soundFile /&gt;&lt;loopSound&gt;False&lt;/loopSound&gt;&lt;fileOperation&gt;Open&lt;/fileOperation&gt;&lt;caption /&gt;&lt;fileType /&gt;&lt;extension /&gt;&lt;useDropDown&gt;False&lt;/useDropDown&gt;&lt;/UserInput&gt;</Parameters>
+      <ID>40fe102f-df15-4435-b7a1-97a1d623ad1c</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;ThermoCytomat&gt;&lt;actionType&gt;Initialise&lt;/actionType&gt;&lt;position /&gt;&lt;linearPosition /&gt;&lt;linearPositionName /&gt;&lt;/ThermoCytomat&gt;</Parameters>
+      <ID>dc3354aa-f99e-41b1-8d6b-08eb6de69e8a</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;BMGReader&gt;&lt;action&gt;0&lt;/action&gt;&lt;robotPosition&gt;False&lt;/robotPosition&gt;&lt;protocol /&gt;&lt;measureData /&gt;&lt;id1 /&gt;&lt;id2 /&gt;&lt;id3 /&gt;&lt;temperature /&gt;&lt;/BMGReader&gt;</Parameters>
+      <ID>a89e06f8-a049-4930-bc48-3117b973b383</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;waitForCommands&gt;&lt;device&gt;&lt;id&gt;a89e06f8-a049-4930-bc48-3117b973b383&lt;/id&gt;&lt;alias&gt;BMG Polarstar&lt;/alias&gt;&lt;/device&gt;&lt;device&gt;&lt;id&gt;dc3354aa-f99e-41b1-8d6b-08eb6de69e8a&lt;/id&gt;&lt;alias&gt;Cytomat 2C15&lt;/alias&gt;&lt;/device&gt;&lt;operator&gt;0&lt;/operator&gt;&lt;/waitForCommands&gt;</Parameters>
+      <ID>c960492a-a45d-4615-b567-d0c4e778e2c0</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;UserInput&gt;&lt;inputType&gt;Variable&lt;/inputType&gt;&lt;messageText&gt;Select number of plates to load.&lt;/messageText&gt;&lt;inputVariable&gt;[RIFseq.NumberOfPlates]&lt;/inputVariable&gt;&lt;variableInputType&gt;Integer&lt;/variableInputType&gt;&lt;showAdvanced&gt;False&lt;/showAdvanced&gt;&lt;showAdvancedFile&gt;False&lt;/showAdvancedFile&gt;&lt;defaultValue&gt;69&lt;/defaultValue&gt;&lt;soundFile /&gt;&lt;loopSound&gt;False&lt;/loopSound&gt;&lt;fileOperation&gt;Open&lt;/fileOperation&gt;&lt;caption /&gt;&lt;fileType /&gt;&lt;extension /&gt;&lt;useDropDown&gt;False&lt;/useDropDown&gt;&lt;/UserInput&gt;</Parameters>
+      <ID>40fe102f-df15-4435-b7a1-97a1d623ad1c</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;UserInput&gt;&lt;inputType&gt;Variable&lt;/inputType&gt;&lt;messageText&gt;Number of measurement iterations (cultivation time divided by 3)&lt;/messageText&gt;&lt;inputVariable&gt;[LLM.NrOfMeasurements]&lt;/inputVariable&gt;&lt;variableInputType&gt;Integer&lt;/variableInputType&gt;&lt;showAdvanced&gt;False&lt;/showAdvanced&gt;&lt;showAdvancedFile&gt;False&lt;/showAdvancedFile&gt;&lt;defaultValue&gt;69&lt;/defaultValue&gt;&lt;soundFile /&gt;&lt;loopSound&gt;False&lt;/loopSound&gt;&lt;fileOperation&gt;Open&lt;/fileOperation&gt;&lt;caption /&gt;&lt;fileType /&gt;&lt;extension /&gt;&lt;useDropDown&gt;False&lt;/useDropDown&gt;&lt;/UserInput&gt;</Parameters>
+      <ID>40fe102f-df15-4435-b7a1-97a1d623ad1c</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;loop type="Fixed"&gt;&lt;loopType&gt;Fixed&lt;/loopType&gt;&lt;loopFrom&gt;1&lt;/loopFrom&gt;&lt;loopTo&gt;[LLM.NrOfMeasurements]&lt;/loopTo&gt;&lt;loopStep&gt;1&lt;/loopStep&gt;&lt;useVariableCounter&gt;True&lt;/useVariableCounter&gt;&lt;loopCounter&gt;[RIFseq.MeasurementLoopCounter]&lt;/loopCounter&gt;&lt;showAdvanced&gt;False&lt;/showAdvanced&gt;&lt;/loop&gt;</Parameters>
+      <ID>1eae95ce-6b0c-4dd8-9897-ab694af9fea4</ID>
+      <Groups>
+        <Group Comment="">
+          <Action Comment="">
+            <Parameters>&lt;timerCommand&gt;&lt;duration&gt;&lt;timer&gt;Between measurements&lt;/timer&gt;&lt;option&gt;RunTimerFor&lt;/option&gt;&lt;hours /&gt;&lt;minutes&gt;20&lt;/minutes&gt;&lt;seconds /&gt;&lt;waitForTimerToComplete&gt;False&lt;/waitForTimerToComplete&gt;&lt;/duration&gt;&lt;/timerCommand&gt;</Parameters>
+            <ID>130c8fac-ce56-492f-b0ae-c912986f5b34</ID>
+            <Groups />
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;callProcedure&gt;&lt;procedure&gt;C:\Program Files\PAA\Overlord2\Procedures\Chalmers_2024_LLM_OneMeasurementCycle_Split.ovp&lt;/procedure&gt;&lt;/callProcedure&gt;</Parameters>
+            <ID>592b25f7-e40e-46d8-b07f-33497d6951da</ID>
+            <Groups />
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+          <Action Comment="">
+            <Parameters>&lt;timerCommand&gt;&lt;waitFor&gt;&lt;timer&gt;Between measurements&lt;/timer&gt;&lt;/waitFor&gt;&lt;/timerCommand&gt;</Parameters>
+            <ID>130c8fac-ce56-492f-b0ae-c912986f5b34</ID>
+            <Groups />
+            <WaitUntilIdle>
+              <Wait>true</Wait>
+            </WaitUntilIdle>
+            <ErrorRecovery>
+              <RetryOnError>false</RetryOnError>
+              <RetryCount>0</RetryCount>
+            </ErrorRecovery>
+            <Breakpoint>false</Breakpoint>
+            <Enabled>true</Enabled>
+            <TextEnabled>false</TextEnabled>
+            <ErrorResponse>None</ErrorResponse>
+            <Validate>All</Validate>
+            <Simulate>false</Simulate>
+            <Time>0</Time>
+          </Action>
+        </Group>
+      </Groups>
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;UserInput&gt;&lt;inputType&gt;YesNo&lt;/inputType&gt;&lt;messageText&gt;Are you ready for sampling, and Is the Bravo in proper position?&lt;/messageText&gt;&lt;inputVariable&gt;[bInitialise]&lt;/inputVariable&gt;&lt;variableInputType&gt;String&lt;/variableInputType&gt;&lt;showAdvanced&gt;False&lt;/showAdvanced&gt;&lt;showAdvancedFile&gt;False&lt;/showAdvancedFile&gt;&lt;defaultValue /&gt;&lt;soundFile /&gt;&lt;loopSound&gt;False&lt;/loopSound&gt;&lt;fileOperation&gt;Open&lt;/fileOperation&gt;&lt;caption /&gt;&lt;fileType /&gt;&lt;extension /&gt;&lt;useDropDown&gt;False&lt;/useDropDown&gt;&lt;/UserInput&gt;</Parameters>
+      <ID>40fe102f-df15-4435-b7a1-97a1d623ad1c</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;ThermoCytomat&gt;&lt;actionType&gt;MoveToGate&lt;/actionType&gt;&lt;position&gt;1&lt;/position&gt;&lt;linearPosition /&gt;&lt;linearPositionName /&gt;&lt;/ThermoCytomat&gt;</Parameters>
+      <ID>dc3354aa-f99e-41b1-8d6b-08eb6de69e8a</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;ThermoCytomat&gt;&lt;actionType&gt;UnloadPlate&lt;/actionType&gt;&lt;position&gt;1&lt;/position&gt;&lt;linearPosition /&gt;&lt;linearPositionName /&gt;&lt;/ThermoCytomat&gt;</Parameters>
+      <ID>dc3354aa-f99e-41b1-8d6b-08eb6de69e8a</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;ThermoCytomat&gt;&lt;actionType&gt;MoveToAccess&lt;/actionType&gt;&lt;position /&gt;&lt;linearPosition /&gt;&lt;linearPositionName /&gt;&lt;/ThermoCytomat&gt;</Parameters>
+      <ID>dc3354aa-f99e-41b1-8d6b-08eb6de69e8a</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>1;0;CY44GP96;0;;</Parameters>
+      <ID>1f93a0df-b94e-43dd-91dc-b491bc1fb23a</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>1;0;SH2PP96;0;;</Parameters>
+      <ID>1f93a0df-b94e-43dd-91dc-b491bc1fb23a</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;ThermoVariomagTeleshake&gt;&lt;actionType&gt;Initialise&lt;/actionType&gt;&lt;device&gt;1&lt;/device&gt;&lt;shakingType&gt;Clockwise&lt;/shakingType&gt;&lt;shakingSpeed /&gt;&lt;hours /&gt;&lt;minutes /&gt;&lt;seconds /&gt;&lt;/ThermoVariomagTeleshake&gt;</Parameters>
+      <ID>de010eb8-db9b-4d6a-87a1-07eccb7a3b8e</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;timerCommand&gt;&lt;duration&gt;&lt;timer&gt;Wait&lt;/timer&gt;&lt;option&gt;RunTimerFor&lt;/option&gt;&lt;hours /&gt;&lt;minutes /&gt;&lt;seconds&gt;3&lt;/seconds&gt;&lt;waitForTimerToComplete&gt;True&lt;/waitForTimerToComplete&gt;&lt;/duration&gt;&lt;/timerCommand&gt;</Parameters>
+      <ID>130c8fac-ce56-492f-b0ae-c912986f5b34</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;ThermoVariomagTeleshake&gt;&lt;actionType&gt;Start&lt;/actionType&gt;&lt;device&gt;1&lt;/device&gt;&lt;shakingType&gt;AntiClockwise&lt;/shakingType&gt;&lt;shakingSpeed&gt;800&lt;/shakingSpeed&gt;&lt;hours /&gt;&lt;minutes /&gt;&lt;seconds&gt;15&lt;/seconds&gt;&lt;/ThermoVariomagTeleshake&gt;</Parameters>
+      <ID>de010eb8-db9b-4d6a-87a1-07eccb7a3b8e</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;timerCommand&gt;&lt;duration&gt;&lt;timer&gt;Wait&lt;/timer&gt;&lt;option&gt;RunTimerFor&lt;/option&gt;&lt;hours /&gt;&lt;minutes /&gt;&lt;seconds&gt;3&lt;/seconds&gt;&lt;waitForTimerToComplete&gt;True&lt;/waitForTimerToComplete&gt;&lt;/duration&gt;&lt;/timerCommand&gt;</Parameters>
+      <ID>130c8fac-ce56-492f-b0ae-c912986f5b34</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;ThermoVariomagTeleshake&gt;&lt;actionType&gt;Start&lt;/actionType&gt;&lt;device&gt;1&lt;/device&gt;&lt;shakingType&gt;Clockwise&lt;/shakingType&gt;&lt;shakingSpeed&gt;800&lt;/shakingSpeed&gt;&lt;hours /&gt;&lt;minutes /&gt;&lt;seconds&gt;15&lt;/seconds&gt;&lt;/ThermoVariomagTeleshake&gt;</Parameters>
+      <ID>de010eb8-db9b-4d6a-87a1-07eccb7a3b8e</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>1;0;SH2GP96;0;;</Parameters>
+      <ID>1f93a0df-b94e-43dd-91dc-b491bc1fb23a</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;BMGReader&gt;&lt;action&gt;1&lt;/action&gt;&lt;robotPosition&gt;True&lt;/robotPosition&gt;&lt;protocol /&gt;&lt;measureData /&gt;&lt;id1 /&gt;&lt;id2 /&gt;&lt;id3 /&gt;&lt;temperature /&gt;&lt;/BMGReader&gt;</Parameters>
+      <ID>a89e06f8-a049-4930-bc48-3117b973b383</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>1;0;POLARPP96;0;;</Parameters>
+      <ID>1f93a0df-b94e-43dd-91dc-b491bc1fb23a</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;BMGReader&gt;&lt;action&gt;2&lt;/action&gt;&lt;robotPosition&gt;False&lt;/robotPosition&gt;&lt;protocol /&gt;&lt;measureData /&gt;&lt;id1 /&gt;&lt;id2 /&gt;&lt;id3 /&gt;&lt;temperature /&gt;&lt;/BMGReader&gt;</Parameters>
+      <ID>a89e06f8-a049-4930-bc48-3117b973b383</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;timerCommand&gt;&lt;duration&gt;&lt;timer&gt;Wait&lt;/timer&gt;&lt;option&gt;RunTimerFor&lt;/option&gt;&lt;hours /&gt;&lt;minutes /&gt;&lt;seconds&gt;3&lt;/seconds&gt;&lt;waitForTimerToComplete&gt;True&lt;/waitForTimerToComplete&gt;&lt;/duration&gt;&lt;/timerCommand&gt;</Parameters>
+      <ID>130c8fac-ce56-492f-b0ae-c912986f5b34</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;BMGReader&gt;&lt;action&gt;3&lt;/action&gt;&lt;robotPosition&gt;False&lt;/robotPosition&gt;&lt;protocol&gt;OD600X96NUNC&lt;/protocol&gt;&lt;measureData&gt;C:\Documents and Settings\robot\Desktop\LLM Exp\GlutamateFormicAcid_20250311&lt;/measureData&gt;&lt;id1 /&gt;&lt;id2 /&gt;&lt;id3 /&gt;&lt;temperature /&gt;&lt;/BMGReader&gt;</Parameters>
+      <ID>a89e06f8-a049-4930-bc48-3117b973b383</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;timerCommand&gt;&lt;duration&gt;&lt;timer&gt;Wait&lt;/timer&gt;&lt;option&gt;RunTimerFor&lt;/option&gt;&lt;hours /&gt;&lt;minutes /&gt;&lt;seconds&gt;3&lt;/seconds&gt;&lt;waitForTimerToComplete&gt;True&lt;/waitForTimerToComplete&gt;&lt;/duration&gt;&lt;/timerCommand&gt;</Parameters>
+      <ID>130c8fac-ce56-492f-b0ae-c912986f5b34</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;BMGReader&gt;&lt;action&gt;1&lt;/action&gt;&lt;robotPosition&gt;True&lt;/robotPosition&gt;&lt;protocol /&gt;&lt;measureData /&gt;&lt;id1 /&gt;&lt;id2 /&gt;&lt;id3 /&gt;&lt;temperature /&gt;&lt;/BMGReader&gt;</Parameters>
+      <ID>a89e06f8-a049-4930-bc48-3117b973b383</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>1;0;POLARGP96;0;;</Parameters>
+      <ID>1f93a0df-b94e-43dd-91dc-b491bc1fb23a</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;BMGReader&gt;&lt;action&gt;2&lt;/action&gt;&lt;robotPosition&gt;False&lt;/robotPosition&gt;&lt;protocol /&gt;&lt;measureData /&gt;&lt;id1 /&gt;&lt;id2 /&gt;&lt;id3 /&gt;&lt;temperature /&gt;&lt;/BMGReader&gt;</Parameters>
+      <ID>a89e06f8-a049-4930-bc48-3117b973b383</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>1;0;BRAVOPP96;0;;</Parameters>
+      <ID>1f93a0df-b94e-43dd-91dc-b491bc1fb23a</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;UserInput&gt;&lt;inputType&gt;YesNo&lt;/inputType&gt;&lt;messageText&gt;Is everything in place and delidded if needed? (Quenching plate, tips and tip waste)&lt;/messageText&gt;&lt;inputVariable&gt;[bInitialise]&lt;/inputVariable&gt;&lt;variableInputType&gt;String&lt;/variableInputType&gt;&lt;showAdvanced&gt;False&lt;/showAdvanced&gt;&lt;showAdvancedFile&gt;False&lt;/showAdvancedFile&gt;&lt;defaultValue /&gt;&lt;soundFile /&gt;&lt;loopSound&gt;False&lt;/loopSound&gt;&lt;fileOperation&gt;Open&lt;/fileOperation&gt;&lt;caption /&gt;&lt;fileType /&gt;&lt;extension /&gt;&lt;useDropDown&gt;False&lt;/useDropDown&gt;&lt;/UserInput&gt;</Parameters>
+      <ID>40fe102f-df15-4435-b7a1-97a1d623ad1c</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>&lt;Velocity11VWorks&gt;&lt;actionType&gt;Run&lt;/actionType&gt;&lt;status /&gt;&lt;method&gt;C:\Program Files\Velocity11\V11_Applications\Protocols\LLM\quenching.pro&lt;/method&gt;&lt;wait&gt;False&lt;/wait&gt;&lt;timeout&gt;300&lt;/timeout&gt;&lt;cleanup&gt;True&lt;/cleanup&gt;&lt;/Velocity11VWorks&gt;</Parameters>
+      <ID>c7ce5874-7a32-4a4a-a23e-f449c9281277</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+    <Action xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Comment="">
+      <Parameters>End</Parameters>
+      <ID>1f075630-10d3-46f0-8d31-761287c5efa0</ID>
+      <Groups />
+      <WaitUntilIdle>
+        <Wait>true</Wait>
+      </WaitUntilIdle>
+      <ErrorRecovery>
+        <RetryOnError>false</RetryOnError>
+        <RetryCount>0</RetryCount>
+      </ErrorRecovery>
+      <Breakpoint>false</Breakpoint>
+      <Enabled>true</Enabled>
+      <TextEnabled>false</TextEnabled>
+      <ErrorResponse>None</ErrorResponse>
+      <Validate>All</Validate>
+      <Simulate>false</Simulate>
+      <Time>0</Time>
+    </Action>
+  </Actions>
+</Procedure>

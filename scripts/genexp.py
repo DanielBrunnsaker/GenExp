@@ -12,6 +12,7 @@ from pathlib import Path
 import argparse
 import os
 import config
+import re
 
 # Import functions from utility scripts
 from pattern_selection import pattern_selection
@@ -124,6 +125,34 @@ def add_logic_program_to_list(list_of_programs, output_folder, target):
         for line in lines:
             file.write(line + "\n")  # Write each item followed by a newline
 
+def generate_overlord_script(output_folder):
+
+    EXPERIMENT_DIR = Path(output_folder)
+    dir_name = str(EXPERIMENT_DIR).split('/')[-1]
+    
+    # Define the value you want to replace 60 with
+    cultivation_time = config.CULTIVATION_TIME  # Change this to whatever value you need
+    
+    # Read the XML file for the main cultivation
+    with open(EXPERIMENT_DIR / '../../data/templates/overlord_template_main.ovp', 'r', encoding='utf-8') as file:
+        content = file.read()
+    
+    # Read the XML file for the nested measurement loop
+    with open(EXPERIMENT_DIR / '../../data/templates/overlord_template_loop.ovp', 'r', encoding='utf-8') as file:
+        content_loop = file.read()
+
+    # replace with cultivation params
+    modified_content = re.sub(r';defaultValue&gt;\d+&lt;/', f';defaultValue&gt;{ cultivation_time}&lt;/', content)
+    modified_content = re.sub('replace_with_folder', dir_name, modified_content)
+    content_loop = re.sub('replace_with_folder', dir_name, content_loop)
+
+    # Write down the modified protocol
+    with open(EXPERIMENT_DIR / 'protocol/EVE/cultivation.ovp', 'w', encoding='utf-8') as file:
+        file.write(modified_content)
+        
+    with open(EXPERIMENT_DIR / 'protocol/EVE/measurement_loop.ovp', 'w', encoding='utf-8') as file:
+        file.write(modified_content)
+
 
 #@flow
 def experiment_pipeline(target, alpha, N, override, override_negative):
@@ -184,7 +213,11 @@ def experiment_pipeline(target, alpha, N, override, override_negative):
     finalize_layout(output_folder)
     design_dispensing_layout(output_folder)
     print("✅ Experimental plan finalized! \n")
-
+    
+    print("Generating overlord script...")
+    generate_overlord_script(output_folder)
+    print("✅ Overlord script generated! \n")
+    
     # Generate a randomized order mass-spec runlist and rapidfire settings
     # (e.g. cartridge, polarity, ...)
     if config.PERFORM_MASS_SPEC:
