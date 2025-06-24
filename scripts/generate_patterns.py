@@ -153,7 +153,7 @@ def main():
     #assert len(duplicates_dict) == full_frequent_dataset.shape[1], "Mismatch between dict keys and DataFrame columns!"
     
 import os
-os.chdir('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/scripts')
+os.chdir(os.environ["GEN_EXP_ROOT_DIR"] + '/scripts')
 import pandas as pd
 from sklearn.feature_selection import VarianceThreshold
 import warnings
