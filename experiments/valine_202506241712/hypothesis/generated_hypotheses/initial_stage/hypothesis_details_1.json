@@ -1,0 +1,7 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,increased oxidative stress resistance,B,C),compound_name(B,paraquat)",
+    "observable": "valine",
+    "qualifier": "higher",
+    "coefficient": 0.2626987650342838,
+    "initial_prompt": "2. Cells with higher levels of intracellular valine in standard conditions associate with:Cell(A):-exhibits_phenotype(A,'increased oxidative stress resistance',B,C),compound_name(B,paraquat)"
+}

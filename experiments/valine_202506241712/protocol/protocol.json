@@ -1,0 +1,93 @@
+{
+    "logic_program": "Cell(A):-exhibits_phenotype(A,increased oxidative stress resistance,B,C),compound_name(B,paraquat)",
+    "experiments": [
+        {
+            "experiment": 1,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "control",
+            "summary": "Baseline control with no valine or paraquat."
+        },
+        {
+            "experiment": 2,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": null,
+            "media_supplementation_doses": null,
+            "treatment": "Paraquat",
+            "treatment_parameters": "1 mM",
+            "sampling_time": 20.0,
+            "type": "treatment control",
+            "summary": "Control with paraquat treatment only."
+        },
+        {
+            "experiment": 3,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Valine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Physiological level valine supplementation without paraquat."
+        },
+        {
+            "experiment": 4,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Valine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "supplementation control",
+            "summary": "Supraphysiological level valine supplementation without paraquat."
+        },
+        {
+            "experiment": 5,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Valine",
+            "media_supplementation_doses": "0.5 mM",
+            "treatment": "Paraquat",
+            "treatment_parameters": "1 mM",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Physiological level valine supplementation with paraquat treatment."
+        },
+        {
+            "experiment": 6,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Valine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Paraquat",
+            "treatment_parameters": "1 mM",
+            "sampling_time": 20.0,
+            "type": "experiment",
+            "summary": "Supraphysiological level valine supplementation with paraquat treatment."
+        },
+        {
+            "experiment": 7,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Lysine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": null,
+            "treatment_parameters": null,
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Negative control with lysine supplementation without paraquat."
+        },
+        {
+            "experiment": 8,
+            "baseline_media": "Minimal media without amino acids",
+            "media_supplementation": "Lysine",
+            "media_supplementation_doses": "5 mM",
+            "treatment": "Paraquat",
+            "treatment_parameters": "1 mM",
+            "sampling_time": 20.0,
+            "type": "negative control",
+            "summary": "Negative control with lysine supplementation and paraquat treatment."
+        }
+    ]
+}

@@ -1,0 +1,251 @@
+####### OPTION 1 #######
+
+### Motivation
+
+The statement suggests an association between higher intracellular levels of valine and increased oxidative stress resistance in Saccharomyces cerevisiae. Paraquat is a known inducer of oxidative stress, which allows us to use it to test this association. By modulating intracellular valine levels and subjecting the cells to paraquat-induced oxidative stress, we can evaluate whether higher valine levels correlate with increased resistance.
+
+### Hypothesis
+
+Increasing intracellular valine levels in Saccharomyces cerevisiae enhances resistance to paraquat-induced oxidative stress by potentially modulating antioxidant pathways or stress response mechanisms.
+
+### Experimental Plan
+
+1. **Media Preparation:**
+   - Use minimal media without amino acids as the base.
+   - Prepare three valine supplementation levels:
+     - Control: 0 mM valine
+     - Physiological level: 0.5 mM valine
+     - Supraphysiological level: 5 mM valine
+
+2. **Negative Control:**
+   - Include lysine as a negative control at 5 mM, equimolar to the highest valine concentration, to ensure any effects are specific to valine.
+
+3. **Paraquat Treatment:**
+   - Prepare two paraquat treatment levels:
+     - Control: 0 mM paraquat
+     - Treatment: 1 mM paraquat (a known concentration to induce oxidative stress in yeast)
+
+4. **Experimental Conditions:**
+   - Combine valine supplementation levels with paraquat treatment levels:
+     - 0 mM valine + 0 mM paraquat
+     - 0 mM valine + 1 mM paraquat
+     - 0.5 mM valine + 0 mM paraquat
+     - 0.5 mM valine + 1 mM paraquat
+     - 5 mM valine + 0 mM paraquat
+     - 5 mM valine + 1 mM paraquat
+   - Include lysine negative control conditions:
+     - 5 mM lysine + 0 mM paraquat
+     - 5 mM lysine + 1 mM paraquat
+
+5. **Culture Conditions:**
+   - Inoculate each well with a standardized concentration of the wild-type prototrophic strain.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes to monitor growth.
+
+6. **Metabolomics Analysis:**
+   - At 20 hours, terminate the experiment and perform mass spectrometry-based metabolomics to measure intracellular valine concentrations.
+
+### Expected Outcomes
+
+- If higher valine levels confer increased oxidative stress resistance, we expect to see:
+  - Improved growth rates and viability in the 0.5 mM and 5 mM valine conditions with paraquat compared to the 0 mM valine condition with paraquat.
+  - No significant change in growth in the lysine control with paraquat, supporting valine's specific role.
+- If valine does not affect oxidative stress resistance:
+  - Similar growth inhibition in all paraquat-treated conditions regardless of valine supplementation.
+- Independent effects of valine supplementation may include altered growth rates or metabolite profiles in non-stressed conditions, which should be accounted for during data analysis.
+
+####### OPTION 2 #######
+**Motivation:**
+The aim of this experiment is to investigate the association between intracellular valine levels and increased oxidative stress resistance in Saccharomyces cerevisiae when exposed to paraquat, a known inducer of oxidative stress. Understanding this relationship could provide insights into the metabolic pathways that contribute to stress resistance, potentially revealing targets for enhancing stress tolerance in yeast.
+
+**Hypothesis:**
+Higher intracellular levels of valine enhance the oxidative stress resistance of Saccharomyces cerevisiae when exposed to paraquat, possibly by modulating antioxidant pathways or stress response mechanisms.
+
+**Experimental Plan:**
+
+1. **Strain and Media:**
+   - Use a reference/wild-type prototrophic Saccharomyces cerevisiae strain.
+   - Baseline media: Minimal media without amino acids.
+
+2. **Supplementation Levels:**
+   - Valine supplementation at two concentrations:
+     - Control: 0 mM (no supplementation).
+     - Physiological level: 2 mM.
+     - Supraphysiological level: 10 mM.
+
+3. **Oxidative Stress Treatment:**
+   - Paraquat treatment at a concentration of 1 mM to induce oxidative stress.
+   - Control: No paraquat treatment.
+
+4. **Negative Control:**
+   - Use lysine as a negative control at an equimolar concentration to the highest valine supplementation (10 mM).
+
+5. **Experimental Conditions:**
+   - Total conditions: 3 valine levels x 2 paraquat levels + 2 negative controls = 8 conditions.
+   - Incubate all conditions at 30°C with shaking.
+   - Add all supplementations and treatments at the start of the experiment (t=0h).
+
+6. **Measurements:**
+   - Measure OD600 every 20 minutes to monitor growth and viability.
+   - At experiment termination (20 hours), perform mass spectrometry-based metabolomics to measure intracellular valine concentrations.
+
+**Expected Outcomes:**
+
+- **Increased Valine Levels:**
+  - It is expected that higher concentrations of valine will correlate with increased oxidative stress resistance in the presence of paraquat, as indicated by better growth and viability compared to controls.
+  - The control condition (0 mM valine with paraquat) should show reduced growth due to oxidative stress.
+
+- **Negative Control:**
+  - The lysine control should not significantly alter oxidative stress resistance, confirming that the observed effects are specific to valine.
+
+- **Independent Effects:**
+  - The presence of paraquat is expected to decrease growth in all conditions, but the extent of this decrease should be less in conditions with higher valine supplementation if the hypothesis is correct.
+
+This experimental setup will allow us to assess the association between valine levels and oxidative stress resistance, while controlling for potential confounders and ensuring the specificity of the observed effects.
+
+####### OPTION 3 #######
+### Motivation
+The statement suggests that higher intracellular levels of valine are associated with increased oxidative stress resistance, as tested using paraquat, a known inducer of oxidative stress. The goal of this experiment is to determine whether increasing intracellular valine levels in Saccharomyces cerevisiae enhances resistance to oxidative stress induced by paraquat.
+
+### Hypothesis
+Increased intracellular levels of valine enhance oxidative stress resistance in Saccharomyces cerevisiae by modulating cellular pathways that mitigate oxidative damage. This can be tested by supplementing media with valine and assessing the yeast's growth and viability in the presence of paraquat.
+
+### Experimental Plan
+
+1. **Base Media Preparation:**
+   - Use minimal media without amino acids as the base for all conditions.
+
+2. **Valine Supplementation Levels:**
+   - Control (0 mM valine)
+   - Physiologically relevant concentration (1 mM valine)
+   - Supraphysiological concentration (10 mM valine)
+
+3. **Paraquat Treatment Levels:**
+   - Control (0 mM paraquat)
+   - Treatment (0.5 mM paraquat)
+
+4. **Negative Control:**
+   - Use lysine as a negative control (10 mM lysine) in conditions without valine and paraquat.
+
+5. **Experimental Conditions:**
+   - For each valine supplementation level, test with and without paraquat, resulting in the following conditions:
+     1. 0 mM valine + 0 mM paraquat
+     2. 0 mM valine + 0.5 mM paraquat
+     3. 1 mM valine + 0 mM paraquat
+     4. 1 mM valine + 0.5 mM paraquat
+     5. 10 mM valine + 0 mM paraquat
+     6. 10 mM valine + 0.5 mM paraquat
+   - Include negative control with lysine:
+     7. 10 mM lysine + 0 mM paraquat
+     8. 10 mM lysine + 0.5 mM paraquat
+
+6. **Experimental Execution:**
+   - Inoculate all wells with an equal concentration of S. cerevisiae cells.
+   - Incubate at 30°C with shaking.
+   - Measure OD600 every 20 minutes to monitor growth.
+   - Terminate the experiment at 20 hours.
+   - Use mass spectrometry-based metabolomics to measure intracellular valine levels at the end of the experiment.
+
+### Expected Outcomes
+
+- **Increased Valine Levels:** If higher intracellular valine levels confer increased oxidative stress resistance, we expect to see better growth and viability in conditions with 0.5 mM paraquat and higher valine concentrations (1 mM and 10 mM) compared to the control (0 mM valine with paraquat).
+- **Negative Control:** The lysine control should show no improvement in oxidative stress resistance when exposed to paraquat, confirming that the observed effect is specific to valine.
+- **Independent Effects:** Growth patterns in conditions without paraquat will help determine any independent effects of valine supplementation on yeast growth, ensuring that any observed resistance is not due to general growth enhancement.
+
+####### OPTION 4 #######
+### Motivation
+
+The statement suggests an association between higher intracellular levels of valine and increased oxidative stress resistance in Saccharomyces cerevisiae when exposed to paraquat. Paraquat is a known inducer of oxidative stress, and understanding how valine levels influence stress resistance could provide insights into metabolic regulation and stress response mechanisms.
+
+### Hypothesis
+
+Increased intracellular valine levels enhance the oxidative stress resistance of Saccharomyces cerevisiae when exposed to paraquat. This may occur due to valine's role in modulating cellular metabolism, potentially influencing pathways involved in oxidative stress defense.
+
+### Experimental Plan
+
+1. **Strain and Media**: 
+   - Use a wild-type, prototrophic Saccharomyces cerevisiae strain.
+   - Grow cells in minimal media without amino acids unless specified otherwise.
+
+2. **Valine Supplementation Levels**:
+   - Control: No valine supplementation.
+   - Low: 50 µM valine.
+   - High: 500 µM valine (supraphysiological concentration).
+
+3. **Paraquat Treatment Levels**:
+   - Control: No paraquat.
+   - Treatment: 1 mM paraquat to induce oxidative stress.
+
+4. **Negative Control**:
+   - Use lysine at 500 µM as a negative control, as it is not directly involved in oxidative stress pathways.
+
+5. **Experimental Setup**:
+   - Total conditions: 3 valine levels x 2 paraquat levels + 2 lysine controls = 8 conditions.
+   - Each condition will be tested in a separate set of wells in a 96-well plate format.
+   - All supplementations and treatments are added at t=0h.
+
+6. **Measurements**:
+   - Measure OD600 every 20 minutes to monitor growth.
+   - Use mass spectrometry-based metabolomics at 20 hours to measure intracellular valine concentrations.
+   - Assess viability and oxidative stress resistance by comparing growth curves under paraquat treatment.
+
+### Expected Outcomes
+
+- **Increased Valine Levels**: 
+  - If increased valine enhances oxidative stress resistance, expect higher growth rates and viability in the high valine + paraquat condition compared to the control valine + paraquat condition.
+  - Intracellular valine concentrations should correlate with increased resistance.
+
+- **Paraquat Treatment**:
+  - Reduced growth and viability in paraquat-treated conditions compared to untreated controls, highlighting oxidative stress effects.
+
+- **Negative Control (Lysine)**:
+  - Lysine supplementation should not significantly alter oxidative stress resistance, serving as a baseline for comparison.
+
+By comparing the growth and viability across different conditions, the experiment will elucidate the potential role of valine in modulating oxidative stress resistance in Saccharomyces cerevisiae.
+
+####### OPTION 5 #######
+### Motivation
+
+The statement suggests an association between higher intracellular valine levels and increased oxidative stress resistance in Saccharomyces cerevisiae, particularly when exposed to paraquat. Valine is a branched-chain amino acid that could potentially influence stress response pathways. Investigating this association can provide insights into the metabolic and stress response mechanisms within yeast cells.
+
+### Hypothesis
+
+Increased intracellular valine levels enhance oxidative stress resistance in Saccharomyces cerevisiae by modulating antioxidant pathways, which could lead to increased survival and growth rates under paraquat-induced oxidative stress conditions.
+
+### Experimental Plan
+
+1. **Baseline Conditions:**
+   - Use minimal media without amino acids as the baseline condition.
+
+2. **Valine Supplementation:**
+   - Level 1 (Control): No valine supplementation.
+   - Level 2: 5 mM valine.
+   - Level 3: 20 mM valine (supraphysiological concentration).
+
+3. **Oxidative Stress Induction:**
+   - Paraquat Treatment:
+     - Level 1 (Control): No paraquat.
+     - Level 2: 0.1 mM paraquat.
+
+4. **Negative Control:**
+   - Use lysine at 20 mM as a negative control, as lysine is not directly involved in the pathways associated with oxidative stress resistance.
+
+5. **Experimental Conditions:**
+   - Total combinations: 3 valine levels x 2 paraquat levels + negative control = 7 conditions.
+   - Each condition will be set up in a 96-well plate format with appropriate replicates.
+
+6. **Measurements:**
+   - Monitor OD600 every 20 minutes to assess growth.
+   - Terminate experiment at 20 hours.
+   - Perform mass spectrometry-based metabolomics to measure intracellular valine and other relevant metabolites.
+   - Assess cell viability and oxidative stress markers post-experiment.
+
+### Expected Outcomes
+
+- **Control Conditions (No Valine, No Paraquat):** Baseline growth and stress resistance.
+- **Increased Valine Levels (No Paraquat):** Potential increase in growth due to enhanced metabolic activity.
+- **Paraquat Treatment (No Valine):** Reduced growth and viability due to oxidative stress.
+- **Increased Valine + Paraquat:** If the hypothesis holds, expect improved growth and viability compared to paraquat-only treatment, indicating increased oxidative stress resistance.
+- **Negative Control (Lysine + Paraquat):** No significant change in oxidative stress resistance compared to paraquat-only treatment, confirming that lysine does not influence the stress response pathway.
+
+This experimental setup will test whether valine supplementation can enhance oxidative stress resistance in yeast and provide insights into the metabolic pathways involved.
