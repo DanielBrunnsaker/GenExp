@@ -1,91 +1,87 @@
-	mu	AUC	MaxOD	Summary
-A1	0.19431333815598478	22028.292511715375	1.1577796294949072	Growth with 50 mM (S)-lactic acid, no proline supplementation.
-A2	0.0	738.6222227685283	0.0	Media control
-A3	0.2570969419846895	35453.433356406626	1.7378656886657742	Growth with 10 mM proline supplementation, no lactic acid.
-A4	0.2678306912589045	44181.7029602627	1.9506926436390177	Growth with 20 mM proline supplementation, no lactic acid.
-A5	0.2044166304905254	30722.223699228976	1.5737411876357033	Growth with 20 mM alanine supplementation, no lactic acid.
-A6	0.2097572068924677	21500.61055175775	1.2413079344614524	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
-A8	0.24654346606053923	34239.60708724547	1.6898336603174227	Baseline growth without any supplementation or treatment.
-A9	0.20816628462296127	22080.056420075132	1.196484081730996	Growth with 20 mM alanine supplementation, no lactic acid.
-A11	0.16697035072080862	22806.773420119887	1.06219055827958	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
-A12	0.19632957055190203	21390.06998465775	1.146796949205612	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
-B1	0.2483481603181675	38811.066184581505	1.8431639382598646	Growth with 20 mM proline supplementation, no lactic acid.
-B2	0.21588206469483043	31927.010386050624	1.6011705453113576	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
-B3	0.3765619734640257	26150.207977757527	1.5339498830206413	Growth with 50 mM (S)-lactic acid, no proline supplementation.
-B4	0.21315542966087703	26939.615126188284	1.47123971709427	Growth with 20 mM alanine supplementation, no lactic acid.
-B5	0.0	520.9875106690727	0.0	Media control
-B6	0.1862824079647029	15318.56167597505	0.7999831889710898	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
-B7	0.0	698.3586137369836	0.0	Media control
-B8	0.2411095539071174	29327.625234185594	1.5468438821309585	Growth with 20 mM proline supplementation, no lactic acid.
-B9	0.2442274108876011	40948.64625614305	1.90178054692532	Growth with 10 mM proline supplementation, no lactic acid.
-B10	0.1938281529566731	29815.236357934715	1.4960518104093041	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
-B11	0.24402936814000958	30960.33644548968	1.5649329310006332	Growth with 50 mM (S)-lactic acid, no proline supplementation.
-B12	0.25160621639271785	33407.15685602293	1.742643976788222	Baseline growth without any supplementation or treatment.
-C1	0.23533021849694008	44093.94820585481	1.8932350490611494	Growth with 10 mM proline supplementation, no lactic acid.
-C2	0.20135443562632338	29655.66848381264	1.55461070993313	Growth with 20 mM alanine supplementation, no lactic acid.
-C3	0.25151271668613684	56399.02059724746	2.1178448378988333	Baseline growth without any supplementation or treatment.
-C4	0.0	461.7252359166563	0.0	Media control
-C5	0.20481702705243182	22799.104303006665	1.172608392927914	Growth with 50 mM (S)-lactic acid, no proline supplementation.
-C6	0.20181571934043957	23118.74237015233	1.2558952790015785	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
-C7	0.2511907654167239	32115.33414716261	1.6107796739120006	Growth with 20 mM proline supplementation, no lactic acid.
-C8	0.0	719.9999999999997	0.0	Media control
-C9	0.2211413386501915	36106.24990533314	1.675242334378123	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
-C10	0.23878311829661744	33284.35594915911	1.6461429534693948	Growth with 20 mM proline supplementation, no lactic acid.
-C11	0.19670350907504333	29597.195520862362	1.4859750677737789	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
-C12	0.1750835276178459	12352.975606142076	0.6001918313900272	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
-D1	0.18484565549584853	14613.985704633786	0.7347645739884081	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
-D2	0.2045586772945437	35359.97215526929	1.659499629978713	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
-D3	0.0	421.856964350608	0.0	Media control
-D4	0.2292650999198424	51913.789436198786	2.128354399119263	Baseline growth without any supplementation or treatment.
-D5	0.2520773293588021	40259.539516541176	1.9137741741276815	Baseline growth without any supplementation or treatment.
-D6	0.21465473063278506	28600.95883475604	1.5089994152932726	Growth with 20 mM alanine supplementation, no lactic acid.
-D7	0.2478195181867864	41763.458356629635	1.8847390957973076	Growth with 10 mM proline supplementation, no lactic acid.
-D9	0.259735022787272	37481.981426563565	1.827379759197822	Growth with 20 mM proline supplementation, no lactic acid.
-D11	0.0	1177.9787777047497	0.0	Media control
-D12	0.1773384114942563	21691.756450069915	1.0905546596015672	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
-E1	0.23463607937127012	28720.28350569056	1.3304073404409948	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
-E2	0.0	719.9999999999987	0.0	Media control
-E3	0.20390814543554334	37703.069619966125	1.9057777567445722	Growth with 20 mM proline supplementation, no lactic acid.
-E4	0.20346217164595917	34416.67825474078	1.704091862739162	Growth with 50 mM (S)-lactic acid, no proline supplementation.
-E5	0.17579951782613173	20916.644507408528	1.0158138069976625	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
-E6	0.2448935398892632	50846.58289382257	2.1666001204181935	Baseline growth without any supplementation or treatment.
-E7	0.20815784568881002	31330.63316417999	1.5845960251918494	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
-E8	0.18563977825245562	34001.44472133202	1.6158010130377023	Growth with 50 mM (S)-lactic acid, no proline supplementation.
-E9	0.22002426728882896	32298.763057428634	1.6289877615617745	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
-E10	0.212079228745892	34136.36989665386	1.710558675627874	Growth with 20 mM alanine supplementation, no lactic acid.
-E11	0.24547752557562535	41612.103638444394	1.852718259177332	Growth with 10 mM proline supplementation, no lactic acid.
-E12	0.0	656.0000000000009	0.0	Media control
-F1	0.19226702534197196	29238.760426775727	1.4683685407697011	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
-F2	0.23363989115806616	46081.2340487991	2.043442598412491	Growth with 20 mM proline supplementation, no lactic acid.
-F3	0.172184446401178	21549.116362377707	1.0463276294800254	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
+	mu	AUC	FinalOD	Summary
+A2	0.0	1123.52217620945	0.0	Media control
+A4	0.2663427671481505	44406.285613028274	1.9538618885260524	Growth with 20 mM proline supplementation, no lactic acid.
+A5	0.20485649607106757	30539.700494802786	1.572625821032635	Growth with 20 mM alanine supplementation, no lactic acid.
+A6	0.21039568890098384	21452.187218385992	1.2417234599259928	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
+A8	0.24669431347685755	34021.585299953185	1.685499835357696	Baseline growth without any supplementation or treatment.
+A9	0.20947268630587376	22079.488978535686	1.200553676094313	Growth with 20 mM alanine supplementation, no lactic acid.
+A11	0.16666230818739527	22813.2595225618	1.0715219820423203	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
+A12	0.19776310720031742	21155.17140711819	1.1455952693664817	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
+B1	0.24661001092339513	39186.76310703435	1.8447792536401448	Growth with 20 mM proline supplementation, no lactic acid.
+B2	0.21451597854402443	32296.694935386367	1.6066140605258998	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
+B3	0.37303263330948216	26492.63718962249	1.5402896612146464	Growth with 50 mM (S)-lactic acid, no proline supplementation.
+B4	0.2124892339010873	27148.95018788818	1.473073285253309	Growth with 20 mM alanine supplementation, no lactic acid.
+B5	0.0	567.8343425326285	0.0	Media control
+B6	0.18686154234292598	15225.682356125943	0.8004109252310937	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
+B7	0.0	635.0270920329028	0.0	Media control
+B8	0.24674238136153973	29115.99172165842	1.5423342264566036	Growth with 20 mM proline supplementation, no lactic acid.
+B9	0.24189630441335047	40967.165869557	1.9042977223818616	Growth with 10 mM proline supplementation, no lactic acid.
+B10	0.19553184063290624	29813.76518285465	1.4970371559843783	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
+B11	0.244516888311818	30695.45597134315	1.5614902500738317	Growth with 50 mM (S)-lactic acid, no proline supplementation.
+B12	0.25244434810802135	33144.59462633705	1.737251703376963	Baseline growth without any supplementation or treatment.
+C1	0.23518730527074835	43979.743400301864	1.8893203120613073	Growth with 10 mM proline supplementation, no lactic acid.
+C2	0.1999611627313802	30029.792573302257	1.5582052202935808	Growth with 20 mM alanine supplementation, no lactic acid.
+C3	0.24917332999712907	56779.52785993037	2.1238194191352138	Baseline growth without any supplementation or treatment.
+C4	0.0	536.4100758446431	0.0	Media control
+C6	0.20376336266112394	23379.782482502877	1.259047769873421	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
+C7	0.2492729334973473	31924.576033780813	1.609721794473227	Growth with 20 mM proline supplementation, no lactic acid.
+C9	0.21901100303372567	36133.96091210926	1.6834342440483434	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
+C10	0.23950061195873676	33017.400280317306	1.6410539594355544	Growth with 20 mM proline supplementation, no lactic acid.
+C11	0.19757479661239855	29341.263597418398	1.4803543832116781	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
+C12	0.17722818023767947	12100.0056477845	0.597753814706186	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
+D1	0.1918547270541608	14239.239489859128	0.7293816420787389	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
+D2	0.20580745326734076	35267.926288453076	1.659720014241843	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
+D3	0.0	527.4506289044693	0.0	Media control
+D4	0.2297786374648855	51922.92498432371	2.1278908761414432	Baseline growth without any supplementation or treatment.
+D5	0.25075213202242674	40621.623835846825	1.9212070041189075	Baseline growth without any supplementation or treatment.
+D6	0.21188308857123547	28967.702784754714	1.5136401145414948	Growth with 20 mM alanine supplementation, no lactic acid.
+D7	0.24419214193922018	41855.87946841849	1.8795015879150858	Growth with 10 mM proline supplementation, no lactic acid.
+D9	0.26235449161313534	36928.52639448739	1.8221031782285197	Growth with 20 mM proline supplementation, no lactic acid.
+D11	0.0	1122.609282653807	0.0	Media control
+D12	0.17702051744737193	21602.307326529284	1.087697465101467	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
+E1	0.2530557317748286	28865.064450738028	1.3327178014133447	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
+E2	0.0	719.9999999999997	0.0	Media control
+E3	0.20514742404489192	37252.18636674193	1.8991887624070931	Growth with 20 mM proline supplementation, no lactic acid.
+E4	0.20420244624969036	34451.21321386634	1.7051201235328541	Growth with 50 mM (S)-lactic acid, no proline supplementation.
+E5	0.1734946568741362	20924.578630736898	1.01704468457927	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
+E6	0.2489364914573498	50082.50918872049	2.15286377012566	Baseline growth without any supplementation or treatment.
+E7	0.21022330180704799	30896.8522947179	1.5754737961053484	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
+E8	0.18997324651600692	33095.53297560302	1.6031631359799143	Growth with 50 mM (S)-lactic acid, no proline supplementation.
+E9	0.21782427994160083	31703.591074917116	1.623165019641223	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
+E10	0.2078817077612801	34039.75564428182	1.707499895334595	Growth with 20 mM alanine supplementation, no lactic acid.
+E11	0.2449001708949395	41509.1351722537	1.8491540713982564	Growth with 10 mM proline supplementation, no lactic acid.
+E12	0.0	645.3415544592368	0.0	Media control
+F1	0.18869463758115593	29404.364775867354	1.4709843311610609	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
+F2	0.23573387451180616	45720.46604218701	2.037546721694914	Growth with 20 mM proline supplementation, no lactic acid.
+F3	0.17397737757543297	21092.88691411293	1.0394754239854325	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
 F4	0.0	719.9999999999997	0.0	Media control
-F5	0.2536263486415282	50034.393545765866	2.1554509570712095	Growth with 10 mM proline supplementation, no lactic acid.
-F6	0.19359033911838291	39048.349907598495	1.7141808261687654	Growth with 50 mM (S)-lactic acid, no proline supplementation.
-F7	0.23409405432717312	50065.57888702487	2.048941309484655	Baseline growth without any supplementation or treatment.
-F8	0.2088180187668773	35947.73192958623	1.707041910839918	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
+F5	0.2536598754322111	49980.80593356655	2.1566077621061783	Growth with 10 mM proline supplementation, no lactic acid.
+F6	0.19301269076310376	38433.75385728441	1.7026163458368393	Growth with 50 mM (S)-lactic acid, no proline supplementation.
+F7	0.23732321605183623	49592.34033295193	2.0416376701065975	Baseline growth without any supplementation or treatment.
+F8	0.21090716616831245	35732.40033269827	1.706724145681922	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
 F9	0.0	719.9999999999997	0.0	Media control
-F11	0.24106755317109627	33550.84743952763	1.7017216752626294	Baseline growth without any supplementation or treatment.
-F12	0.21877787977214314	22133.985567460044	1.2349994396484079	Growth with 20 mM alanine supplementation, no lactic acid.
-G1	0.0	1159.9979466687053	0.0	Media control
-G2	0.2354199292474462	43754.61580723569	1.9355115827907932	Baseline growth without any supplementation or treatment.
-G3	0.20565123879856254	36542.494960226475	1.7068862483151768	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
-G4	0.16627659693388586	26592.88655998533	1.2652896661715525	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
-G5	0.2530135795919336	42412.95755403056	1.9652487953117295	Growth with 20 mM proline supplementation, no lactic acid.
-G6	0.23969651558996338	50379.602920012236	2.1671246008003098	Growth with 10 mM proline supplementation, no lactic acid.
-G7	0.20254507322184384	25223.440383327128	1.382523716694588	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
-G8	0.18351171386800333	15216.05553838104	0.7881706822937361	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
-G9	0.17802230819528814	11102.02609534311	0.5525312232789842	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
-G10	0.0	753.0232100294222	0.0	Media control
-G11	0.19827515956348	24197.310048093488	1.301532593402817	Growth with 20 mM alanine supplementation, no lactic acid.
-G12	0.17146546346971855	33837.10374738833	1.6217530725132254	Growth with 50 mM (S)-lactic acid, no proline supplementation.
-H1	0.21737281006018483	34035.9702021075	1.6724513128625487	Baseline growth without any supplementation or treatment.
-H2	0.2337790816067991	44813.5833813776	2.0314504240263194	Growth with 10 mM proline supplementation, no lactic acid.
-H3	0.25896408692271844	19864.611065792542	0.8382000000000267	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
-H4	0.22964997742653837	44895.128579385106	1.985002372244431	Growth with 10 mM proline supplementation, no lactic acid.
-H5	0.1927353403137553	26286.16176417114	1.3561503843514682	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
-H6	0.0	856.082968391727	0.0	Media control
-H7	0.17645108383913935	16173.448322849601	0.8088087184179298	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
-H8	0.20555021904159207	23603.0495362378	1.3250569361117133	Growth with 20 mM alanine supplementation, no lactic acid.
-H10	0.23914879438679842	44079.688508076884	2.0147357545581066	Growth with 10 mM proline supplementation, no lactic acid.
-H11	0.0	418.1032672385391	0.0	Media control
-H12	0.2671985103963276	32588.559525878358	1.850057454693276	Growth with 20 mM proline supplementation, no lactic acid.
+F11	0.2369513491123377	34000.2968304006	1.7087722615978322	Baseline growth without any supplementation or treatment.
+F12	0.21508436853309812	22594.573337213715	1.2429643293091224	Growth with 20 mM alanine supplementation, no lactic acid.
+G1	0.0	805.6082283131065	0.0	Media control
+G2	0.2365182787167707	43539.54736542187	1.9309670704707003	Baseline growth without any supplementation or treatment.
+G3	0.20671616291401862	36366.73717327656	1.7065235712724611	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
+G4	0.16806348754775108	26100.990936394428	1.2577551637950655	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
+G5	0.2529873040289241	42329.073661578455	1.9667161208724973	Growth with 20 mM proline supplementation, no lactic acid.
+G6	0.2419473311401132	49933.655079056894	2.1628094610924435	Growth with 10 mM proline supplementation, no lactic acid.
+G7	0.20256211032839533	25331.151644001555	1.3876112717174531	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
+G8	0.18318373213090705	15309.858437651264	0.7904786032815656	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
+G9	0.18363151481156	10677.445568579898	0.5453511961062159	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
+G10	0.0	469.2679581170398	0.0	Media control
+G11	0.19887608581701782	24224.854154492645	1.3009252933213251	Growth with 20 mM alanine supplementation, no lactic acid.
+G12	0.17177539765551253	33874.46034255308	1.6193456191397466	Growth with 50 mM (S)-lactic acid, no proline supplementation.
+H1	0.21845970690950725	33832.656759123616	1.6696823910543428	Baseline growth without any supplementation or treatment.
+H2	0.23502853771482793	44605.79251538158	2.0259724424540035	Growth with 10 mM proline supplementation, no lactic acid.
+H3	0.25970005737997404	19873.027394291414	0.8260799999999326	Growth with 20 mM proline supplementation and 50 mM (S)-lactic acid.
+H4	0.22967846073990564	44911.68885554488	1.9859591635894964	Growth with 10 mM proline supplementation, no lactic acid.
+H5	0.19303144006661901	26288.9928746078	1.3588840873625994	Growth with 10 mM proline supplementation and 50 mM (S)-lactic acid.
+H6	0.0	488.90325873092087	0.0	Media control
+H7	0.17646636445343572	16283.166569228923	0.8134019303191317	Growth with 20 mM alanine supplementation and 50 mM (S)-lactic acid.
+H8	0.2020787983117452	23713.256314585375	1.331028991262974	Growth with 20 mM alanine supplementation, no lactic acid.
+H10	0.23971285087308639	43914.35971882617	2.010924808208383	Growth with 10 mM proline supplementation, no lactic acid.
+H11	0.0	609.3924693527377	0.0	Media control
+H12	0.2694361195455788	32627.411059253092	1.8497961706097827	Growth with 20 mM proline supplementation, no lactic acid.

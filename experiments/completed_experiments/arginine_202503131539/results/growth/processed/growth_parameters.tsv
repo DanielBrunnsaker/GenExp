@@ -1,80 +1,77 @@
-	mu	AUC	MaxOD	Summary
-A1	0.1682176468348969	27424.656694385445	1.2899558263153597	Caffeine treatment without arginine supplementation.
-A3	0.24200846844091123	69101.46934831879	2.3031419080511393	Low arginine supplementation without caffeine treatment.
-A4	0.25291774159878666	40755.86575117102	1.7760290667160041	High arginine supplementation without caffeine treatment.
-A5	0.23223089202571504	49110.64566737999	1.9679695772790688	Negative control with alanine supplementation without caffeine.
-A6	0.16208836969399465	7252.29201437804	0.30314938056903007	High arginine supplementation with caffeine treatment.
-A7	0.2210991341494047	54625.800171780036	2.039195823478845	Negative control with alanine supplementation without caffeine.
-A10	0.0	807.3685205587025	0.0	Media control
-A11	0.16998256086922373	16291.777539006576	0.7861223501723376	Negative control with alanine supplementation with caffeine.
-A12	0.17202302464988975	24058.837500926573	1.0951887020245739	Low arginine supplementation with caffeine treatment.
-B1	0.2526553146568852	53522.8576437437	2.0248105283389464	High arginine supplementation without caffeine treatment.
-B2	0.18482926581634132	5742.61161791489	0.2605714864523721	High arginine supplementation with caffeine treatment.
-B3	0.17333201037553253	28694.565776455303	1.320586675622349	Caffeine treatment without arginine supplementation.
-B5	0.0	678.7599999999989	0.0	Media control
-B6	0.17883861808526025	13443.867503714922	0.6749176140845572	Negative control with alanine supplementation with caffeine.
-B7	0.0	501.73662492741335	0.0	Media control
-B8	0.3207516105739682	42761.590032598026	1.7740515017302187	High arginine supplementation without caffeine treatment.
-B9	0.22744322213211726	63112.32898283599	2.1120660363389123	Low arginine supplementation without caffeine treatment.
-B11	0.18151788433501395	27721.577761063807	1.2790224470437832	Caffeine treatment without arginine supplementation.
-C1	0.2375408995133611	72897.96985150017	2.2816003781959306	Low arginine supplementation without caffeine treatment.
-C2	0.21223679158513167	69126.88908755632	2.26243211492485	Negative control with alanine supplementation without caffeine.
-C3	0.23008123337478403	77562.21179879432	2.372471070537942	Baseline condition with no supplementation or treatment.
-C4	0.0	615.5499157351283	0.0	Media control
-C5	0.17036869987916936	31250.45060205737	1.4536111924577373	Caffeine treatment without arginine supplementation.
-C6	0.18249532858163545	27973.791495653015	1.3518721820315522	Low arginine supplementation with caffeine treatment.
-C7	0.23590949226770455	61280.59622839613	2.2359254208911317	High arginine supplementation without caffeine treatment.
-C8	0.0	711.5999999999956	0.0	Media control
-C9	0.18195348616958643	32066.727565582252	1.4763196868932615	Low arginine supplementation with caffeine treatment.
-C10	0.062349381683957816	65263.05018880996	2.3593405792364273	High arginine supplementation without caffeine treatment.
-C11	0.14535969773890353	9877.60197571965	0.39180221204354554	High arginine supplementation with caffeine treatment.
-C12	0.1674872041532342	28494.5235704188	1.3028027635079427	Negative control with alanine supplementation with caffeine.
-D2	0.1851657679761567	29273.125052820174	1.3912062722900462	Low arginine supplementation with caffeine treatment.
-D3	0.0	438.1104619060622	0.0	Media control
-D4	0.22818603550832514	69716.02733152383	2.2516048514209954	Baseline condition with no supplementation or treatment.
-D5	0.2321591027252109	63295.62474355791	2.1743832169357464	Baseline condition with no supplementation or treatment.
-D6	0.23470499792089497	51975.7639144844	1.9849410629424569	Negative control with alanine supplementation without caffeine.
-D7	0.2296193986824931	52665.26448192617	2.0093937700828177	Low arginine supplementation without caffeine treatment.
-D8	0.14559571196376908	10571.837124485175	0.43535452708410616	High arginine supplementation with caffeine treatment.
-D9	0.24024144573702325	54627.284793660154	2.1321810895955333	High arginine supplementation without caffeine treatment.
-D10	0.1791610736592391	32923.91425006221	1.5133314052074023	Caffeine treatment without arginine supplementation.
-D12	0.15824285462753884	8564.74920501091	0.33090718632159527	High arginine supplementation with caffeine treatment.
-E1	0.170607632766761	10995.413703054839	0.4361847625429469	High arginine supplementation with caffeine treatment.
+	mu	AUC	FinalOD	Summary
+A1	0.1657508111716352	27901.913467172166	1.2939698004124631	Caffeine treatment without arginine supplementation.
+A3	0.23951505371809537	69402.77846181764	2.3080515612092034	Low arginine supplementation without caffeine treatment.
+A5	0.23084578103984124	49292.94334009548	1.9691237366214283	Negative control with alanine supplementation without caffeine.
+A6	0.16644530503326752	7250.321888403927	0.30299987617707425	High arginine supplementation with caffeine treatment.
+A7	0.22718586797976684	54258.27155824804	2.035059308391376	Negative control with alanine supplementation without caffeine.
+A10	0.0	1039.0192839484494	0.0	Media control
+A11	0.16714822163728185	16578.834189482917	0.786567917285949	Negative control with alanine supplementation with caffeine.
+B1	0.2514892380943433	53674.81701521379	2.0252106366986364	High arginine supplementation without caffeine treatment.
+B2	0.18858005738290984	6224.725790521458	0.26545305498490646	High arginine supplementation with caffeine treatment.
+B3	0.17193985101463213	28999.44647209177	1.3254655646475064	Caffeine treatment without arginine supplementation.
+B5	0.0	620.2880758835136	0.0	Media control
+B6	0.17642682918415953	13637.373480161767	0.6765445066631799	Negative control with alanine supplementation with caffeine.
+B7	0.0	694.0621271466086	0.0	Media control
+B8	0.32289723890086924	42725.09880039837	1.7728810919984723	High arginine supplementation without caffeine treatment.
+B9	0.2252529590975309	63384.02543679817	2.1131178400694774	Low arginine supplementation without caffeine treatment.
+B11	0.18067330925810998	28212.869269677158	1.2838709080176334	Caffeine treatment without arginine supplementation.
+C1	0.03991583616744188	73055.13599760502	2.282926931151795	Low arginine supplementation without caffeine treatment.
+C2	0.21148719011652273	69263.89248789735	2.2609672905384675	Negative control with alanine supplementation without caffeine.
+C3	0.2272448497966267	78049.98628713028	2.3790079453046733	Baseline condition with no supplementation or treatment.
+C4	0.0	1049.5687752155875	0.0	Media control
+C5	0.16934223821581249	31440.428810250432	1.4548411971581037	Caffeine treatment without arginine supplementation.
+C6	0.1812110563050957	28158.317281082516	1.3521319978116901	Low arginine supplementation with caffeine treatment.
+C7	0.23888660257571717	60882.87144825817	2.2315510958692863	High arginine supplementation without caffeine treatment.
+C8	0.0	720.0000000000001	0.0	Media control
+C9	0.1800396082905825	32342.182704469204	1.4793621483331023	Low arginine supplementation with caffeine treatment.
+C10	0.062142925799938215	65738.89640059104	2.363532704746661	High arginine supplementation without caffeine treatment.
+C11	0.14576666440848002	10026.594766945118	0.39517554339803906	High arginine supplementation with caffeine treatment.
+C12	0.16680771058673818	28656.359794603737	1.3055484643418598	Negative control with alanine supplementation with caffeine.
+D2	0.18421911265841043	29418.424709237708	1.3918356859577847	Low arginine supplementation with caffeine treatment.
+D3	0.0	385.5899532222737	0.0	Media control
+D4	0.22631028485011043	70003.22645394744	2.2548931893030737	Baseline condition with no supplementation or treatment.
+D5	0.23031222214373484	63506.63018367511	2.1772752406413236	Baseline condition with no supplementation or treatment.
+D6	0.23202195036397938	52324.6985021	1.9871165365826906	Negative control with alanine supplementation without caffeine.
+D7	0.22991742967962336	52608.5835358026	2.0081881048949377	Low arginine supplementation without caffeine treatment.
+D8	0.14997612472165722	10269.102630753841	0.43202781658976974	High arginine supplementation with caffeine treatment.
+D9	0.24210297536969688	54497.836803854945	2.1303790191537155	High arginine supplementation without caffeine treatment.
+D10	0.17851516675013188	33080.12374691473	1.518696146363987	Caffeine treatment without arginine supplementation.
+D12	0.1574169785110867	8636.361879506147	0.33083985140673056	High arginine supplementation with caffeine treatment.
+E1	0.17025336928018528	10630.015614986525	0.4321432538722617	High arginine supplementation with caffeine treatment.
 E2	0.0	719.9999999999997	0.0	Media control
-E3	0.2455529449001473	57940.260659382875	2.1861536604183964	High arginine supplementation without caffeine treatment.
-E4	0.17696655810876263	33348.52244241553	1.5278691750296958	Caffeine treatment without arginine supplementation.
-E5	0.16982382028786028	18083.028444172316	0.8755366133233754	Negative control with alanine supplementation with caffeine.
-E6	0.2313581666750802	51604.76171219289	1.9901285001687643	Baseline condition with no supplementation or treatment.
-E7	0.18366081863092268	29999.639198712994	1.4441179376193498	Low arginine supplementation with caffeine treatment.
-E9	0.15250792814277905	9353.129263969244	0.3906178951813507	High arginine supplementation with caffeine treatment.
-E10	0.22141213257406178	61836.33835676743	2.2543413263544796	Negative control with alanine supplementation without caffeine.
-E11	0.22313947336421266	47786.88008619571	1.8848887209571004	Low arginine supplementation without caffeine treatment.
-F1	0.17910392525378868	24388.647230703573	1.1835134253717183	Low arginine supplementation with caffeine treatment.
-F2	0.25094918648161313	54247.4912946497	2.1218130758803833	High arginine supplementation without caffeine treatment.
-F3	0.17204722951822463	12661.552606087924	0.617234806515067	Negative control with alanine supplementation with caffeine.
-F4	0.0	680.4523306726413	0.0	Media control
-F5	0.22511641899904486	58183.769883848276	2.1314938012540563	Low arginine supplementation without caffeine treatment.
-F6	0.1781190605276046	27544.618710093673	1.3002667172870783	Caffeine treatment without arginine supplementation.
-F7	0.23326073638569297	57447.40618221843	2.1305271738668905	Baseline condition with no supplementation or treatment.
-F8	0.18355264276077526	29441.861036248323	1.4020205858252486	Low arginine supplementation with caffeine treatment.
-F9	0.0	471.3103570116238	0.0	Media control
-F12	0.21378995538100032	53285.82132997582	2.0517925055447175	Negative control with alanine supplementation without caffeine.
-G2	0.06567969517278062	68354.05060912638	2.4085227013846335	Baseline condition with no supplementation or treatment.
-G3	0.17633292021800756	29760.294092610922	1.3976554685748317	Low arginine supplementation with caffeine treatment.
-G4	0.16088440466052026	24238.573317620456	1.113503473682204	Negative control with alanine supplementation with caffeine.
-G5	0.06879660703251896	65584.3853594716	2.409526801947035	High arginine supplementation without caffeine treatment.
-G6	0.22703521885162342	56311.838706579336	2.1227041956108104	Low arginine supplementation without caffeine treatment.
-G7	0.14734037587690887	13015.310572361223	0.5445500417115465	High arginine supplementation with caffeine treatment.
-G8	0.16299851208119204	16304.542242331125	0.7618962820721241	Negative control with alanine supplementation with caffeine.
-G9	0.17111894700120786	25622.382351364082	1.2054739624681081	Negative control with alanine supplementation with caffeine.
-G10	0.0	646.640000000001	0.0	Media control
-G12	0.16690316567172664	26927.245961484758	1.2511649025589942	Caffeine treatment without arginine supplementation.
-H1	0.22140287115786839	70285.26961273755	2.344974228894634	Baseline condition with no supplementation or treatment.
-H2	0.22801518849155855	68736.27358943167	2.2746724814010464	Low arginine supplementation without caffeine treatment.
-H4	0.22801486887448205	64592.84377995438	2.2522525232333215	Low arginine supplementation without caffeine treatment.
-H6	0.0	230.73584393684996	0.0	Media control
-H7	0.16040752168848516	17598.147728890803	0.8171795151634633	Negative control with alanine supplementation with caffeine.
-H8	0.277914985113435	69956.80068087012	2.008656632742153	Negative control with alanine supplementation without caffeine.
-H9	0.17716075904862588	34820.678736652386	1.5341585109096818	Caffeine treatment without arginine supplementation.
-H10	0.20576697917770934	66467.48810208136	2.2131281149199475	Low arginine supplementation without caffeine treatment.
-H11	0.0	423.73483315894305	0.0	Media control
+E3	0.24837125364265678	57565.4027782009	2.1838219060721658	High arginine supplementation without caffeine treatment.
+E4	0.17783082452604598	33621.31675875909	1.5260417932538186	Caffeine treatment without arginine supplementation.
+E5	0.16708437461542372	18370.95557615734	0.8788351981503444	Negative control with alanine supplementation with caffeine.
+E6	0.23064230571950592	51649.96621971204	1.9876315240847553	Baseline condition with no supplementation or treatment.
+E7	0.18303102030622576	30086.195843967347	1.444551030809869	Low arginine supplementation with caffeine treatment.
+E9	0.1532579737084501	9098.137885196495	0.38898953562123917	High arginine supplementation with caffeine treatment.
+E10	0.2244924314116393	61430.4217216104	2.2506283009855284	Negative control with alanine supplementation without caffeine.
+F1	0.18133985908087163	24067.229080471792	1.1799790585063383	Low arginine supplementation with caffeine treatment.
+F2	0.25315903440356635	53922.842571846624	2.1184505958013697	High arginine supplementation without caffeine treatment.
+F3	0.1754836845235341	12337.434031216224	0.6138256162873688	Negative control with alanine supplementation with caffeine.
+F4	0.0	719.9999999999987	0.0	Media control
+F5	0.2256513730176118	58103.613458224274	2.1306352269393125	Low arginine supplementation without caffeine treatment.
+F6	0.18048430328135523	27209.077464082795	1.2973018971427792	Caffeine treatment without arginine supplementation.
+F7	0.23357334395375082	57492.95364503031	2.1314201996352287	Baseline condition with no supplementation or treatment.
+F8	0.18450568741833906	29316.3264396942	1.400381497904489	Low arginine supplementation with caffeine treatment.
+F9	0.0	594.8598729100277	0.0	Media control
+F12	0.2167772729701073	52876.67153650457	2.0475134857419155	Negative control with alanine supplementation without caffeine.
+G2	0.06506027634312764	68030.74831637433	2.4049960142172986	Baseline condition with no supplementation or treatment.
+G3	0.1781251802691579	29437.285532583883	1.3934444325715436	Low arginine supplementation with caffeine treatment.
+G4	0.16342566496559047	23741.140508101384	1.1072143779584658	Negative control with alanine supplementation with caffeine.
+G5	0.06909696065851255	65508.449614919606	2.409424809989778	High arginine supplementation without caffeine treatment.
+G6	0.2283059983121513	56262.659428536375	2.1237374985489854	Low arginine supplementation without caffeine treatment.
+G7	0.14793112979065956	12940.607197984205	0.5430196068224632	High arginine supplementation with caffeine treatment.
+G8	0.16463920178081112	16181.8867787583	0.7617220283180108	Negative control with alanine supplementation with caffeine.
+G9	0.17173008229371292	25476.89954398471	1.2024925781066163	Negative control with alanine supplementation with caffeine.
+G10	0.0	696.7919999999993	0.0	Media control
+G12	0.1689963210704986	26787.709638008866	1.2463393757246148	Caffeine treatment without arginine supplementation.
+H1	0.2228214186197424	69963.76802448285	2.3418873574400014	Baseline condition with no supplementation or treatment.
+H2	0.23136622044061556	68260.08736684066	2.2732880018584534	Low arginine supplementation without caffeine treatment.
+H4	0.23156301269063997	64104.071384615905	2.2476066607656695	Low arginine supplementation without caffeine treatment.
+H6	0.0	337.0270740098099	0.0	Media control
+H7	0.16092304337250934	17533.020402945545	0.8143421772318732	Negative control with alanine supplementation with caffeine.
+H8	0.27806400947119875	69894.39456179176	2.0074390704193807	Negative control with alanine supplementation without caffeine.
+H9	0.17783197792455854	34677.788379889316	1.5320155422063066	Caffeine treatment without arginine supplementation.
+H10	0.20363291404535597	66366.37022067777	2.2115801054740496	Low arginine supplementation without caffeine treatment.
+H11	0.0	436.4996542300863	0.0	Media control

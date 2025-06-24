@@ -45,35 +45,12 @@ def met_analysis(exp_path, ms_filename):
 
     ms_filename = 'ms_output_imputed.tsv'
 
-    # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/glutamine_202504251440' # glutamine_acetate
-    # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/lysine_202504291748' # lysine sucrose
-    # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/partially_completed/aminoadipate_202504291411' #aminoadpiate
-    # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756' # FA
-    # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503131539' # Caffeine
-    # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202501281618' # Spermine
-    # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/proline_202503051407' # Lactic acid
-    # exp_path = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503141655' # LiCl
-    
+
     # decide on components, move this to config?
     n_components = 5
-    
-    #exp_paths = [
-    #    '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202501281618',
-    #    '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756',
-    #    '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503131539',
-    #    '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/arginine_202503141655',
-    #    '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/proline_202503051407',
-    #    '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamine_202504251440', # glutamine_acetate
-    #    '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/lysine_202504291748', # lysine sucrose
-    #    '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/aminoadipate_202504291411' # aminoadipate
-    #]
-    
-    #for exp_path in exp_paths:
-        
-        
         
     EXPERIMENT_DIR = Path(exp_path)
-    print('\nProcessing metabolomics data...\n')
+    print('\nAnalysing metabolomics data...\n')
     
     # Load data
     df, feats = load_data(EXPERIMENT_DIR, ms_filename)

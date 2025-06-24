@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-
-
-#warnings.simplefilter("ignore", category=ConvergenceWarning)
 
 def greedily_select_first_examples(df, n_FE):
     import pandas as pd
@@ -43,7 +37,7 @@ def greedily_select_first_examples(df, n_FE):
     print("Selected Genes:", selected_genes)
     return selected_genes
 
-def main():
+def generate_new_patterns():
     
     warnings.filterwarnings("ignore")
     os.environ["PYTHONWARNINGS"] = "ignore" # Also affect subprocesses
@@ -65,6 +59,7 @@ def main():
     phenotypes = pd.read_csv('../data/phenotypes_manual_curation_v2.tsv', sep = '\t')
     
     # Remove some of the phenotypes, do this in the actual tsv before publication or similar
+    # We cant measure these with our setup
     
     subset = phenotypes[phenotypes['Gene > Phenotypes > Observable'] == 'chemical compound accumulation']
     terms_to_avoid = ['zinc cation', 'cadmium cation','calcium ion', 'cobalt cation','copper cation','gadolinium(3+)',
@@ -146,12 +141,9 @@ def main():
         full_frequent_dataset.reset_index().to_feather('../results/patterns/datasets/frequent_20241114.feather')
     
     
-    ## Rerun this?
-    
-    
     # Final verification step
     #assert len(duplicates_dict) == full_frequent_dataset.shape[1], "Mismatch between dict keys and DataFrame columns!"
-    
+
 import os
 os.chdir('/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/scripts')
 import pandas as pd
@@ -164,4 +156,6 @@ from pattern_generation_utils import *
 import pandas as pd
 import argparse
 
-main()
+
+if __name__ == '__main__':
+    generate_new_patterns()

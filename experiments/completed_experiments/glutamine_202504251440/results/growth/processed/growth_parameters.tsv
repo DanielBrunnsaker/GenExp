@@ -1,89 +1,86 @@
-	mu	AUC	MaxOD	Summary
-A1	0.16491909269720456	11183.628792688387	0.5227371290527032	No glutamine supplementation with acetic acid treatment.
-A2	0.0	1186.7084079637048	0.0	Media control
-A3	0.25301729216307783	49659.529189565	2.182114319009057	Low glutamine supplementation without acetic acid treatment.
-A4	0.2601276222119453	47367.04083828352	2.1205289914223133	High glutamine supplementation without acetic acid treatment.
-A5	0.17932356882199477	21828.5628961808	1.086784990753503	Leucine supplementation without acetic acid treatment.
-A6	0.20126566941690927	7780.946709395824	0.429910766337279	High glutamine supplementation with acetic acid treatment.
-A7	0.1825286938602484	24556.765580046267	1.212320476172924	Leucine supplementation without acetic acid treatment.
-A8	0.21963580347444067	37498.86976228476	1.809041660871147	Baseline condition with no supplementation or treatment.
-A9	0.1862803149304569	17066.427861285796	0.8794080588153098	Leucine supplementation without acetic acid treatment.
-A10	0.0	1128.8210241617892	0.0	Media control
-A11	0.10294520715192147	2837.7593706015214	0.09149428028123507	Leucine supplementation with acetic acid treatment.
-A12	0.1765001871700718	18401.678918536658	0.9090805105517941	Low glutamine supplementation with acetic acid treatment.
-B2	0.22135022601094595	8863.556248417985	0.49703193553413233	High glutamine supplementation with acetic acid treatment.
-B3	0.18841649791027706	20052.911954191295	1.0675466593065372	No glutamine supplementation with acetic acid treatment.
-B4	0.21618706587351647	18728.169573065075	1.1249707585396889	Leucine supplementation without acetic acid treatment.
-B5	0.0	661.3899999999992	0.0	Media control
-B6	0.19846579389155025	1847.664316842983	0.0694111348009763	Leucine supplementation with acetic acid treatment.
-B7	0.0	296.36134190541156	0.0	Media control
-B8	0.2543979737518086	38361.413503074946	1.8413077970489478	High glutamine supplementation without acetic acid treatment.
-B9	0.25455173822104044	42879.812609119545	1.925573783602333	Low glutamine supplementation without acetic acid treatment.
-B10	0.48760430948827826	5663.359158507085	0.14969319100621503	Low glutamine supplementation with acetic acid treatment.
-B11	0.17728978095835443	17407.44274285703	0.8732102925840323	No glutamine supplementation with acetic acid treatment.
-C1	0.26119040231764157	41594.74669561077	1.926981145537252	Low glutamine supplementation without acetic acid treatment.
-C2	0.19913400855810218	12908.277445649092	0.7074553939170043	Leucine supplementation without acetic acid treatment.
-C3	0.23920615022599764	41182.52780044121	1.9021664429831862	Baseline condition with no supplementation or treatment.
-C5	0.18787278503591562	22237.497219550747	1.1212697110780498	No glutamine supplementation with acetic acid treatment.
-C6	0.22076667200094624	8841.393661152706	0.5345372181528102	Low glutamine supplementation with acetic acid treatment.
-C7	0.23574997505841727	50015.18316844383	2.2312987601401018	High glutamine supplementation without acetic acid treatment.
+	mu	AUC	FinalOD	Summary
+A1	0.16077286930995463	11566.500402301033	0.528164797194404	No glutamine supplementation with acetic acid treatment.
+A3	0.2493063797758363	50201.264466041765	2.188982764518377	Low glutamine supplementation without acetic acid treatment.
+A4	0.25636969116886016	47961.4127235119	2.1272142501961118	High glutamine supplementation without acetic acid treatment.
+A5	0.177499076718619	22162.94265962748	1.0900319989310376	Leucine supplementation without acetic acid treatment.
+A6	0.20967892409466257	7328.840415612375	0.42128885715024006	High glutamine supplementation with acetic acid treatment.
+A7	0.18520390114804752	24055.208563252978	1.2042215061069905	Leucine supplementation without acetic acid treatment.
+A8	0.219444368303176	37541.68579819462	1.810836319767066	Baseline condition with no supplementation or treatment.
+A9	0.18583405158113755	17110.751895427362	0.8808246339054926	Leucine supplementation without acetic acid treatment.
+A10	0.0	1213.6377790398565	0.0	Media control
+A11	0.11240338001016159	3111.7121143341587	0.09490026119177741	Leucine supplementation with acetic acid treatment.
+B2	0.20950150246032767	9381.011618414019	0.5045872887504471	High glutamine supplementation with acetic acid treatment.
+B3	0.1876898817274414	20566.659433436864	1.0740855509097744	No glutamine supplementation with acetic acid treatment.
+B4	0.21286386280266134	19277.62014956049	1.1318496351467524	Leucine supplementation without acetic acid treatment.
+B5	0.0	648.413999999998	0.0	Media control
+B6	0.22040664016548916	1634.6280824120288	0.06117409769139184	Leucine supplementation with acetic acid treatment.
+B7	0.0	704.6759999999991	0.0	Media control
+B8	0.25402418951457023	38392.58731714227	1.8416782677263854	High glutamine supplementation without acetic acid treatment.
+B9	0.2544453282130289	42927.64336807607	1.928619469603401	Low glutamine supplementation without acetic acid treatment.
+B10	0.6360068248799042	5923.888184336559	0.15279174434242757	Low glutamine supplementation with acetic acid treatment.
+B11	0.17558713411856852	17691.683274206778	0.8767591656759809	No glutamine supplementation with acetic acid treatment.
+C1	0.25711447865324294	42087.675042847295	1.9345871658875717	Low glutamine supplementation without acetic acid treatment.
+C2	0.19391943687678037	13414.80178134974	0.7161914715251751	Leucine supplementation without acetic acid treatment.
+C3	0.23570184001193561	41723.23509256697	1.9093125923340062	Baseline condition with no supplementation or treatment.
+C5	0.1876388087885034	22254.662817515415	1.120557362309225	No glutamine supplementation with acetic acid treatment.
+C6	0.2246422048219135	8630.5059283892	0.5276484956275708	Low glutamine supplementation with acetic acid treatment.
+C7	0.23805862358428334	49576.35531267445	2.223609064539796	High glutamine supplementation without acetic acid treatment.
 C8	0.0	719.9999999999997	0.0	Media control
-C9	0.20719439677668097	9129.843626103844	0.5208351572883696	Low glutamine supplementation with acetic acid treatment.
-C10	0.24779904875082392	46764.385345619776	2.1379067084094383	High glutamine supplementation without acetic acid treatment.
-C11	0.21358158038000943	10654.695847822897	0.6297014571350178	High glutamine supplementation with acetic acid treatment.
-C12	0.13924431864073494	1867.0707293515281	0.07928847285529096	Leucine supplementation with acetic acid treatment.
-D1	0.1480293128590339	3761.7693317107673	0.1579237255057645	Leucine supplementation with acetic acid treatment.
-D2	0.20573862263074638	11181.044775002088	0.6280644812929149	Low glutamine supplementation with acetic acid treatment.
-D3	0.0	236.7798382489829	0.0	Media control
-D4	0.24150205779927034	28725.162924646273	1.5110512998147945	Baseline condition with no supplementation or treatment.
-D5	0.25594999787769795	43894.40080220983	2.0511979415459805	Baseline condition with no supplementation or treatment.
-D6	0.17488922194635376	24184.815192610626	1.1934863390206658	Leucine supplementation without acetic acid treatment.
-D7	0.2474891325157825	55339.37945869806	2.2682748390344116	Low glutamine supplementation without acetic acid treatment.
-D8	0.19508604183722641	6983.267814584413	0.3742549675072182	High glutamine supplementation with acetic acid treatment.
-D9	0.2436476180630598	44339.700284626764	2.023732018494999	High glutamine supplementation without acetic acid treatment.
-D10	0.19609638029623477	12199.689640310475	0.6763195058193854	No glutamine supplementation with acetic acid treatment.
-D11	0.0	407.0573553973536	0.0	Media control
-D12	0.2154316289907398	6998.54698430243	0.41746332369200245	High glutamine supplementation with acetic acid treatment.
-E1	0.21828781306523706	4832.464346166951	0.28731479059520726	High glutamine supplementation with acetic acid treatment.
-E2	0.0	719.9999999999997	0.0	Media control
-E3	0.25313161359080816	37878.920739854715	1.9248204833935478	High glutamine supplementation without acetic acid treatment.
-E4	0.18664804119682746	16961.068396364833	0.9010216714639125	No glutamine supplementation with acetic acid treatment.
-E5	0.1396226006715269	3462.97125919827	0.12667369092053773	Leucine supplementation with acetic acid treatment.
-E6	0.2251757278708407	47168.23325427213	2.0928243114693896	Baseline condition with no supplementation or treatment.
-E7	0.2145190638095128	4974.082423606971	0.12674567284913274	Low glutamine supplementation with acetic acid treatment.
-E9	0.22367856227848995	6459.497363422194	0.2679309697218622	High glutamine supplementation with acetic acid treatment.
-E10	0.17876301559334676	17714.83680139284	0.8899624275432456	Leucine supplementation without acetic acid treatment.
-E11	0.23063910630876192	59141.82460110794	2.398219850519938	Low glutamine supplementation without acetic acid treatment.
+C9	0.20783433439942497	9084.621975526676	0.5204061103833916	Low glutamine supplementation with acetic acid treatment.
+C10	0.2459163073386912	47040.979057260985	2.1407634671553253	High glutamine supplementation without acetic acid treatment.
+C11	0.21069875880229172	10909.194306718071	0.6333017500167192	High glutamine supplementation with acetic acid treatment.
+C12	0.13327674189791083	2115.1336286753963	0.08308258568004162	Leucine supplementation with acetic acid treatment.
+D1	0.14399463228854759	3847.37566230733	0.15888459177297973	Leucine supplementation with acetic acid treatment.
+D2	0.20369073281056427	11265.197682323791	0.6322026630787793	Low glutamine supplementation with acetic acid treatment.
+D3	0.0	277.4123019620251	0.0	Media control
+D5	0.25546203638682907	44156.56273338352	2.055863066315619	Baseline condition with no supplementation or treatment.
+D6	0.17680062661181706	23811.04131101097	1.1863685601956226	Leucine supplementation without acetic acid treatment.
+D7	0.249040789255107	55044.92371817862	2.2622857086801265	Low glutamine supplementation without acetic acid treatment.
+D8	0.2024161161039442	6568.90071701308	0.3684529819375518	High glutamine supplementation with acetic acid treatment.
+D9	0.24506114420990963	44100.185483578454	2.020615226431802	High glutamine supplementation without acetic acid treatment.
+D10	0.20014700696084065	11859.847473266269	0.6708911566095395	No glutamine supplementation with acetic acid treatment.
+D11	0.0	290.984263575472	0.0	Media control
+D12	0.21035650898705113	7179.374813286289	0.41980574411484306	High glutamine supplementation with acetic acid treatment.
+E1	0.21647474176084808	4908.970751913468	0.28820041844392835	High glutamine supplementation with acetic acid treatment.
+E2	0.0	638.6039999999986	0.0	Media control
+E3	0.2521774669749625	38007.131237878144	1.9269900463124543	High glutamine supplementation without acetic acid treatment.
+E4	0.18540293165175467	17072.280382420722	0.9033067680442963	No glutamine supplementation with acetic acid treatment.
+E5	0.1476895010765466	3651.15093418539	0.12945401458791084	Leucine supplementation with acetic acid treatment.
+E6	0.22524286695168752	47181.783381958674	2.0936903539994938	Baseline condition with no supplementation or treatment.
+E7	0.19961060090724694	4858.403950734353	0.12476603340836712	Low glutamine supplementation with acetic acid treatment.
+E9	0.2247798318335623	6735.389709471074	0.2740565618166485	High glutamine supplementation with acetic acid treatment.
+E10	0.17681881462038404	18022.81267353095	0.8934134162494041	Leucine supplementation without acetic acid treatment.
+E11	0.2293287745089065	59397.3815941697	2.4011815316021683	Low glutamine supplementation without acetic acid treatment.
 E12	0.0	719.9999999999997	0.0	Media control
-F1	0.19576387615439556	4154.461950947631	0.22541022565131102	Low glutamine supplementation with acetic acid treatment.
-F2	0.254121953813549	35422.3222926297	1.8298513789608541	High glutamine supplementation without acetic acid treatment.
-F3	0.1364336543325162	4720.875305914788	0.1873669162045532	Leucine supplementation with acetic acid treatment.
-F4	0.0	259.24389395254826	0.0	Media control
-F5	0.2542271327388889	50514.785585303754	2.2386344790146193	Low glutamine supplementation without acetic acid treatment.
-F7	0.22560976325409937	46322.73528675695	2.0350554435729107	Baseline condition with no supplementation or treatment.
-F8	0.18385906393161616	8962.404278702086	0.3999918106960348	Low glutamine supplementation with acetic acid treatment.
-F9	0.0	272.68379981147024	0.0	Media control
-F11	0.21594589903603745	40523.83074589235	1.9472443399722628	Baseline condition with no supplementation or treatment.
-F12	0.195058408635674	15040.689614611221	0.7240904666493381	Leucine supplementation without acetic acid treatment.
-G1	0.0	691.771307808614	0.0	Media control
-G3	0.186200799153957	8158.617468017694	0.4172011143973197	Low glutamine supplementation with acetic acid treatment.
-G4	0.1481993720402033	2351.2749623270784	0.09891422487098298	Leucine supplementation with acetic acid treatment.
-G5	0.25693054407633226	46182.503988463875	2.1363545793998875	High glutamine supplementation without acetic acid treatment.
-G6	0.24038400593645526	54166.24256979539	2.360704788748621	Low glutamine supplementation without acetic acid treatment.
-G7	0.19266700914226134	8241.7117255499	0.4326842922946853	High glutamine supplementation with acetic acid treatment.
-G8	0.22613705956816485	3627.8421685404446	0.09379036537968169	Leucine supplementation with acetic acid treatment.
-G9	0.17866254031182513	1916.068865813306	0.0659155564518126	Leucine supplementation with acetic acid treatment.
+F1	0.19732186926391168	4208.550416625163	0.22599493143426702	Low glutamine supplementation with acetic acid treatment.
+F2	0.25301790992980616	35586.43476570721	1.8321345456256517	High glutamine supplementation without acetic acid treatment.
+F3	0.13202534552156922	4838.3722059404045	0.19093867375858706	Leucine supplementation with acetic acid treatment.
+F4	0.0	499.51424760003727	0.0	Media control
+F5	0.25358169370252975	50656.85862475077	2.24399790496677	Low glutamine supplementation without acetic acid treatment.
+F7	0.2237294724309471	46657.49123618175	2.0386593412767224	Baseline condition with no supplementation or treatment.
+F8	0.181063020191197	8853.021345357496	0.3996482210848543	Low glutamine supplementation with acetic acid treatment.
+F9	0.0	412.75327116056144	0.0	Media control
+F11	0.21672274905736094	40442.057738794385	1.9464371161167668	Baseline condition with no supplementation or treatment.
+F12	0.19680077561244752	14958.984621353065	0.7241176857369843	Leucine supplementation without acetic acid treatment.
+G1	0.0	542.1139358689122	0.0	Media control
+G3	0.18378066780112676	8334.956065391978	0.4193035977584221	Low glutamine supplementation with acetic acid treatment.
+G4	0.15531686887842397	2278.5508788456473	0.09741051061586675	Leucine supplementation with acetic acid treatment.
+G5	0.2569548918571312	46121.259646589446	2.1371538103882357	High glutamine supplementation without acetic acid treatment.
+G6	0.23966534410157767	54272.46404418549	2.3607571070513735	Low glutamine supplementation without acetic acid treatment.
+G7	0.19517939271926635	8095.999620410972	0.4308451924144234	High glutamine supplementation with acetic acid treatment.
+G8	0.30157355831100763	3680.171137955853	0.09524571919583415	Leucine supplementation with acetic acid treatment.
+G9	0.12909931770779445	1782.1380079420671	0.06589225452703343	Leucine supplementation with acetic acid treatment.
 G10	0.0	719.9999999999997	0.0	Media control
-G11	0.1928248912044058	18696.530822491546	0.9956819164498611	Leucine supplementation without acetic acid treatment.
-G12	0.18949583416805071	19156.058748209216	1.0136966358787212	No glutamine supplementation with acetic acid treatment.
-H1	0.2186661308941996	54195.23873294001	2.195543264207884	Baseline condition with no supplementation or treatment.
-H2	0.25086791434593964	52365.330197800904	2.162567250423626	Low glutamine supplementation without acetic acid treatment.
-H4	0.24831797297471322	39361.068909471986	1.910175170697556	Low glutamine supplementation without acetic acid treatment.
-H5	0.22465186231208606	2916.4173344519104	0.1733694575327327	Low glutamine supplementation with acetic acid treatment.
-H6	0.0	720.0000000000001	0.0	Media control
-H7	0.14085657622216038	3859.9921810392498	0.1462283867059195	Leucine supplementation with acetic acid treatment.
-H8	0.1796035107357987	23076.062255636294	1.1004591711361553	Leucine supplementation without acetic acid treatment.
-H9	0.16618641836735493	17579.69177502487	0.8009765165658782	No glutamine supplementation with acetic acid treatment.
-H10	0.2437421114800862	46419.70320113267	2.0507242308839833	Low glutamine supplementation without acetic acid treatment.
-H11	0.0	527.912775767585	0.0	Media control
-H12	0.254498641159451	43262.24951633949	2.0288453090009018	High glutamine supplementation without acetic acid treatment.
+G11	0.19501020753233803	18348.482956497573	0.9918482369857471	Leucine supplementation without acetic acid treatment.
+G12	0.19145240196287047	18814.631591910293	1.008965129218867	No glutamine supplementation with acetic acid treatment.
+H1	0.21812326012738678	54370.433361601725	2.1976076495492602	Baseline condition with no supplementation or treatment.
+H2	0.2501545732892132	52525.70897204755	2.1649431124097687	Low glutamine supplementation without acetic acid treatment.
+H4	0.2486849248560338	39350.90018343126	1.9106899413102953	Low glutamine supplementation without acetic acid treatment.
+H5	0.22817348903088774	2853.0993921517647	0.1723966397427062	Low glutamine supplementation with acetic acid treatment.
+H6	0.0	719.9999999999997	0.0	Media control
+H7	0.1370274764802336	3667.30079015943	0.1434379024562018	Leucine supplementation with acetic acid treatment.
+H8	0.18109355329393292	22878.640272687102	1.0974590511790434	Leucine supplementation without acetic acid treatment.
+H9	0.16565240308165227	17628.4277511783	0.8023739553789513	No glutamine supplementation with acetic acid treatment.
+H10	0.2431586095979414	46471.14538397388	2.052057937729896	Low glutamine supplementation without acetic acid treatment.
+H11	0.0	648.1965748204761	0.0	Media control
+H12	0.25749247509217627	42924.785539904435	2.0259552593185255	High glutamine supplementation without acetic acid treatment.

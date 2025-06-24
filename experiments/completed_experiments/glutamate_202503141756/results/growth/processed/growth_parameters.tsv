@@ -1,4 +1,4 @@
-	mu	AUC	MaxOD	Summary
+	mu	AUC	FinalOD	Summary
 A1	0.13456051148097317	10115.255372440286	0.36875006054415294	Formic acid treatment without glutamate supplementation.
 A2	0.0	470.70347690784126	0.0	Media control
 A3	0.2605632145370128	44005.34191209666	1.883466670151217	Low glutamate supplementation without formic acid treatment.

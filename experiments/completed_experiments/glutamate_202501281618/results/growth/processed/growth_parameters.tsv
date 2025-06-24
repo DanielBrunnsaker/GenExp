@@ -1,4 +1,4 @@
-	mu	AUC	MaxOD	Summary
+	mu	AUC	FinalOD	Summary
 A1	0.22360495111286324	9474.618468671868	0.5294712789090846	Growth with alanine supplementation, no spermine treatment.
 A3	0.28025937524343497	11491.224424676886	0.719062259551683	Growth with low glutamate supplementation, no spermine treatment.
 A4	0.30416078706363264	10097.211953529339	0.6404035971447428	Growth with high glutamate supplementation, no spermine treatment.

@@ -11,6 +11,7 @@ from utils.processing_utils import *
 from growth_stat_testing import growth_testing#, two_way_anova_testing
 from metabolomics_processing import *
 from metabolomics_analysis import *
+from reports import *
 
 def save_plots(EXPERIMENT_DIR, growth_curves_filtered_smoothed, raw_growth_curves, violinplot_df, mu_per_well, layout):
     
@@ -24,20 +25,22 @@ def save_plots(EXPERIMENT_DIR, growth_curves_filtered_smoothed, raw_growth_curve
     # Use a non-interactive backend
     plt.switch_backend('Agg')  # Ensures figures are not displayed, only saved
 
-    plot_group_averages_in_hours(growth_curves_filtered_smoothed, group_col = "Summary")
-    plt.savefig(EXPERIMENT_DIR / 'results/plots/averaged_growth_curves.png')   # save the figure to file
+    plot_group_averages_in_hours(growth_curves_filtered_smoothed, "Summary", EXPERIMENT_DIR / 'results/plots/averaged_growth_curves.pdf')
+    #plt.savefig(EXPERIMENT_DIR / 'results/plots/averaged_growth_curves.pdf')   # save the figure to file
     plt.close('all')    # close the figure window
 
     # Plot a grid of them? along with the windows extracted for the growth rate calculation
-    plot_growth_curves(raw_growth_curves, annotations_df=mu_per_well)
-    plt.savefig(EXPERIMENT_DIR / 'results/plots/growth_curves.png')   # save the figure to file
+    #plot_growth_curves(growth_df, color_map=None, annotations_df=None, out_pdf = None)
+    plot_growth_curves(raw_growth_curves, None, mu_per_well, EXPERIMENT_DIR / 'results/plots/growth_curves.pdf')
+    #plt.savefig(EXPERIMENT_DIR / 'results/plots/growth_curves.pdf')   # save the figure to file
     plt.close('all')    # close the figure window
 
     # Prep boxplot/violinplots?
-    
-    plot_boxplots(violinplot_df.drop('MaxOD', axis = 1))
+    # plot_boxplots(df, color_map=None, out_pdf=None)
+    plot_boxplots(violinplot_df, None, EXPERIMENT_DIR / 'results/plots/growth_metrics.pdf')
+    #plot_boxplots(violinplot_df.drop('MaxOD', axis = 1))
     #plot_violinplots(violinplot_df.drop('MaxOD', axis = 1))
-    plt.savefig(EXPERIMENT_DIR / 'results/plots/growth_metrics.png')   # save the figure to file
+    #plt.savefig(EXPERIMENT_DIR / 'results/plots/growth_metrics.pdf')   # save the figure to file
     plt.close('all')    # close the figure window
 
 #@task
@@ -141,6 +144,12 @@ def run_processing(EXPERIMENT_DIR, met_bool):
         met_processing(EXPERIMENT_DIR)
         met_analysis(EXPERIMENT_DIR, 'ms_output_imputed.tsv')
         
+        # create a html report
+        print('\nGenerating results report...')
+        run_report_generator(EXPERIMENT_DIR)
+        
+        
+        
     
 if __name__ == "__main__":
     
@@ -152,13 +161,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     run_processing(args.output_folder, args.metabolomics_analysis)
-
-
-    # Example:
-    # python analysis.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202501281618" --metabolomics_analysis TRUE
-    # python analysis.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/aminoadipate_202504291411" --metabolomics_analysis TRUE
-    # python analysis.py --output_folder "/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/completed_experiments/glutamate_202503141756" --metabolomics_analysis TRUE
-
-
-    # EXPERIMENT_DIR = '/Users/danbru/Library/CloudStorage/OneDrive-Chalmers/Desktop/GenExp/experiments/glutamate_202504291411'
-   
