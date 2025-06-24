@@ -12,9 +12,9 @@ from scripts.hypothesis_formalisation import (
 
 # Load the JSON file given as a command line argument
 args = sys.argv[1:]
-print(args, file=sys.stderr)
+# print(args, file=sys.stderr)
 if len(args) != 1:
-    print("Usage: python protocol_preprocessing.py <path_to_json_file>")
+    print("Usage: python protocol_preprocessing.py <path_to_json_file>", file=sys.stderr)
     sys.exit(1)
 json_file_path = args[0]
 print(json_file_path, file=sys.stderr)
@@ -23,13 +23,13 @@ try:
         data = json.load(file)
         print(f"Loaded JSON data from {json_file_path}", file=sys.stderr)
 except FileNotFoundError:
-    print(f"Error: The file {json_file_path} does not exist.")
+    print(f"Error: The file {json_file_path} does not exist.", file=sys.stderr)
     sys.exit(1)
 except json.JSONDecodeError:
-    print(f"Error: The file {json_file_path} is not a valid JSON file.")
+    print(f"Error: The file {json_file_path} is not a valid JSON file.", file=sys.stderr)
     sys.exit(1)
 except Exception as e:
-    print(f"An unexpected error occurred: {e}")
+    print(f"An unexpected error occurred: {e}", file=sys.stderr)
     sys.exit(1)
 
 # Create a new data structure to hold the modified data
@@ -76,15 +76,25 @@ for (i, exp) in enumerate(data['experiments']):
 
     # Separate the `media_supplementation_doses` field into the value and the unit
     if exp["media_supplementation_doses"] is not None:
-        exp["media_supplementation_doses_value"], exp["media_supplementation_doses_unit"] = (
-            exp["media_supplementation_doses"].split(" ")
-        )
+        if '%' in exp["media_supplementation_doses"]:
+            i = exp["media_supplementation_doses"].find("%")
+            exp["media_supplementation_doses_value"] = exp["media_supplementation_doses"][:i]
+            exp["media_supplementation_doses_unit"] = exp["media_supplementation_doses"][i:]
+        else:
+            exp["media_supplementation_doses_value"], exp["media_supplementation_doses_unit"] = (
+                exp["media_supplementation_doses"].split(" ")
+            )
 
     # Same for `treatment_parameters`
     if exp["treatment_parameters"] is not None:
-        exp["treatment_parameters_value"], exp["treatment_parameters_unit"] = (
-            exp["treatment_parameters"].split(" ")
-        )
+        if '%' in exp["treatment_parameters"]:
+            i = exp["treatment_parameters"].find("%")
+            exp["treatment_parameters_value"] = exp["treatment_parameters"][:i]
+            exp["treatment_parameters_unit"] = exp["treatment_parameters"][i:]
+        else:
+            exp["treatment_parameters_value"], exp["treatment_parameters_unit"] = (
+                exp["treatment_parameters"].split(" ")
+            )
 
     # If the `treatment` field is not None, convert it to a Chebi term
     if exp["treatment"] is not None:
