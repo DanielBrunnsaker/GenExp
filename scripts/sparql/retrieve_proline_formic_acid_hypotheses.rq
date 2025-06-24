@@ -4,7 +4,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX : <http://hypo.project-genesis.io#>
 
-SELECT ?hypothesis ?title ?creator ?created ?state1 ?state2 ?accArgin
+SELECT ?hypothesis ?title ?creator ?created ?state1 ?state2 ?accProline
 WHERE {
     GRAPH ?hypothesis {
         ?state1 rdfs:subClassOf ?r1 .
@@ -17,15 +17,15 @@ WHERE {
         ?state1 rdfs:subClassOf ?r2 .
         ?r2 a owl:Restriction ;
             owl:onProperty :stateHasObservable ;
-            owl:someValuesFrom ?accArgin .
+            owl:someValuesFrom ?accProline .
     }
 
     GRAPH <http://hypo.project-genesis.io/phenotypes> {
-        ?accArgin rdfs:subClassOf <http://purl.obolibrary.org/obo/APO_0000095> .
-        ?accArgin rdfs:subClassOf ?r3 .
+        ?accProline rdfs:subClassOf <http://purl.obolibrary.org/obo/APO_0000095> .
+        ?accProline rdfs:subClassOf ?r3 .
         ?r3 a owl:Restriction ;
             owl:onProperty :accumulationOfChemical ;
-            owl:someValuesFrom <http://purl.obolibrary.org/obo/CHEBI_29016> .
+            owl:someValuesFrom <http://purl.obolibrary.org/obo/CHEBI_26271> .
     }
 
     GRAPH <http://hypo.project-genesis.io/hypothesis-metadata> {
