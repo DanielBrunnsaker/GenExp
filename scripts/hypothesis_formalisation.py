@@ -2,10 +2,12 @@ from copy import copy, deepcopy
 import datetime
 from itertools import groupby
 import os
+import sys
 import json
 import re
 from typing import Optional
 from pprint import pprint
+import subprocess
 
 from rdflib import Graph, Literal, URIRef, BNode
 import rdflib.graph
@@ -15,7 +17,10 @@ from rdflib.namespace import RDFS, RDF, OWL
 import requests
 import uuid6
 
-from config import CHEBI_QUERY_ENDPOINT
+try:
+    from config import CHEBI_QUERY_ENDPOINT
+except ModuleNotFoundError:
+    from scripts.config import CHEBI_QUERY_ENDPOINT
 # from config import HYPO_DATASET_PATH
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -240,7 +245,7 @@ def find_or_create_node(
     qres = dataset.query(query)
 
     if len(qres) == 0:
-        # print("Need to add this node.")
+        # print("Need to add this node.", file=sys.stderr)
         node_uri = namespace[create_id(prefix=id_prefix)]
         node_triples = [
             tuple(map(lambda v: node_uri if v is None else v, t)) for t in triples
@@ -269,7 +274,7 @@ def logic_program_to_state(logic_program, h_graph, reference_state=DEFAULT_REFER
 
     atoms = {k: list(g) for k, g in groupby(
         sorted(atoms, key=keyfunc), keyfunc)}
-    # print(atoms)
+    # print(atoms, file=sys.stderr)
     phenotype_uri_tuple, phen_quads_list = zip(*[
         write_exhibits_phenotype_to_graph(
             args, atoms, h_graph, reference_state=reference_state)
@@ -453,7 +458,7 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
 def hypothesis_to_quads(hypo_ds, h, h_graph):
     # Match the amino acid
     amino_acid = term_from_label(h["observable"], CHEBI)  # Case-sensitive?
-    # print(amino_acid)
+    # print(amino_acid, file=sys.stderr)
     state_1, state_1_quads = amino_acid_and_qualifier_to_state(
         hypo_ds, amino_acid, h["qualifier"], reference_state=DEFAULT_REFERENCE_STATE, phenotype_namespace=HYPO)
 
@@ -508,7 +513,7 @@ def add_hypothesis_as_new_graph_in_hypo_ds(hypo_ds, h, **kwargs):
     # This is not good for future, we want to include
     # all triples related to the hypothesis
     if len(h_graph) == 0:
-        print("No triples were added to the graph.")
+        print("No triples were added to the graph.", file=sys.stderr)
         hypo_ds.remove_graph(h_graphid)
 
     # Add the hypothesis to the metadata graph
@@ -537,7 +542,7 @@ def add_hypothesis_as_new_graph_in_hypo_ds(hypo_ds, h, **kwargs):
     return quads
 
 
-def load_hypothesis_from_top_folder(hypo_ds, root_dir, folder):
+def load_hypothesis_from_top_folder(hypo_ds, root_dir, folder, include_experimental_data=True):
     with open(
         os.path.join(root_dir, folder,
                      "hypothesis/selected_hypothesis/hypothesis_details.json"),
@@ -551,28 +556,60 @@ def load_hypothesis_from_top_folder(hypo_ds, root_dir, folder):
         # Extract creation date from folder name and load into datetime object
         # (Example folder names: "arginine_202503131539" or "arginine_202503131539 copy")
         DATE_EXTRACTOR = re.compile(r"_(\d{8}\d{4})")
-        creation_date_str = DATE_EXTRACTOR.search(folder).group(1)
-        creation_date = datetime.datetime.strptime(
-            creation_date_str, "%Y%m%d%H%M")
+        match = DATE_EXTRACTOR.search(folder)
+        if not match:
+            print(f"Could not extract creation date from folder name: {folder}. Check and fix the REGEX.", file=sys.stderr)
+            sys.exit(1)
+        creation_date_str = match.group(1)
+        creation_date = datetime.datetime.strptime(creation_date_str, "%Y%m%d%H%M")
 
         print(
-            f"Loading hypothesis from {os.path.join(root_dir, folder)} (created on {creation_date.strftime('%Y-%m-%d %H:%M:%S')})")
-        return add_hypothesis_as_new_graph_in_hypo_ds(
+            f"Loading hypothesis from {os.path.join(root_dir, folder)} (created on {creation_date.strftime('%Y-%m-%d %H:%M:%S')})", file=sys.stderr)
+        hypothesis = add_hypothesis_as_new_graph_in_hypo_ds(
             hypo_ds, h, creation_date=creation_date, creator="Genesis")
+    
+        if include_experimental_data:
+            # Run the map_protocols.sh script with folder as the argument
+            folder_path = os.path.join(root_dir, folder)
+            try:
+                subprocess.run(
+                    ["bash", "scripts/map_protocols.sh", folder_path],
+                    check=True
+                )
+                print(f"Successfully stored protocol and experimental data in: {os.path.join(folder_path, 'protocol', 'study.trig')}", file=sys.stderr)
+            except subprocess.CalledProcessError as e:
+                print(f"Error running map_protocols.sh for {folder_path}: {e}", file=sys.stderr)
+
+        return hypothesis
 
 
 def load_hypotheses(hypo_ds, root_dir="experiments"):
     """Searches through the `root_dir` for hypothesis folders and loads them into the dataset."""
     for folder in os.listdir(root_dir):
         try:
-            load_hypothesis_from_top_folder(hypo_ds, root_dir, folder)
+            load_hypothesis_from_top_folder(hypo_ds, root_dir, folder, include_experimental_data=False)
         except FileNotFoundError:
-            print(f"Could not load hypothesis from {folder}")
+            print(f"Could not load hypothesis from {folder}", file=sys.stderr)
             # Check next level down in the directory tree
             load_hypotheses(hypo_ds, os.path.join(root_dir, folder))
             continue
         except NotADirectoryError:
-            print(f"{folder} is not a directory, ending search.")
+            print(f"{folder} is not a directory, ending search.", file=sys.stderr)
+            continue
+
+
+def load_hypotheses_and_experimental_data(hypo_ds, root_dir="experiments"):
+    """Searches through the `root_dir` for hypothesis folders and loads them into the dataset."""
+    for folder in os.listdir(root_dir):
+        try:
+            load_hypothesis_from_top_folder(hypo_ds, root_dir, folder, include_experimental_data=True)
+        except FileNotFoundError:
+            print(f"Could not load hypothesis from {folder}", file=sys.stderr)
+            # Check next level down in the directory tree
+            load_hypotheses_and_experimental_data(hypo_ds, os.path.join(root_dir, folder))
+            continue
+        except NotADirectoryError:
+            print(f"{folder} is not a directory, ending search.", file=sys.stderr)
             continue
 
 
@@ -583,10 +620,19 @@ def save_hypothesis_as_trig(BASE_DIR, hypo_ds, ontology):
             # Add the context to the dataset
             ds.add_graph(ctx)
 
-    with open(os.path.join(BASE_DIR, "ontology-files", "outputs", "db.trig"), "wb") as fo:
+    db_path = os.path.join(BASE_DIR, "experiments", "hypotheses.trig")
+
+    with open(db_path, "wb") as fo:
         ds.serialize(fo, format="trig")
+
+    return db_path
 
 
 if __name__ == "__main__":
-    load_hypotheses(HYPO_DS, os.path.join(BASE_DIR, "experiments"))
-    save_hypothesis_as_trig(BASE_DIR, HYPO_DS, ONTOLOGY)
+    try:
+        load_hypotheses_and_experimental_data(HYPO_DS, os.path.join(BASE_DIR, "experiments"))
+        db_path = save_hypothesis_as_trig(BASE_DIR, HYPO_DS, ONTOLOGY)
+        print(db_path, file=sys.stdout) # print so the database file name can be reused
+    except Exception as e:
+        print(f"Fatal error: {e}", file=sys.stderr)
+        sys.exit(1)
