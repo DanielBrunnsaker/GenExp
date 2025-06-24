@@ -15,8 +15,9 @@ from rdflib.namespace import RDFS, RDF, OWL
 import requests
 import uuid6
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from config import CHEBI_QUERY_ENDPOINT
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OBO = rdflib.Namespace("http://purl.obolibrary.org/obo/")
 HYPO = rdflib.Namespace("http://hypo.project-genesis.io#")
 OBOINOWL = rdflib.Namespace("http://www.geneontology.org/formats/oboInOwl#")
@@ -68,41 +69,45 @@ def term_from_label(label, g):
 
 
 # Set up Fuseki endpoint to create new SPARQL store
-HOST = "localhost"
-CHEBI_FUSEKI_PORT = 3037
 try:
-    requests.get(
-        f"http://{HOST}:{CHEBI_FUSEKI_PORT}/genesis/query", timeout=10)
+    requests.get(CHEBI_QUERY_ENDPOINT, timeout=10)
 except requests.exceptions.ConnectionError:
-    # Perhaps we are in a docker container (ensure that the correct port is forwarded)
-    HOST = "host.docker.internal"
-    requests.get(
-        f"http://{HOST}:{CHEBI_FUSEKI_PORT}/genesis/query", timeout=10)
+    HOST = "localhost"
+    CHEBI_FUSEKI_PORT = 3037
+    CHEBI_QUERY_ENDPOINT = f"http://{HOST}:{CHEBI_FUSEKI_PORT}/genesis/query"
+    try:
+        requests.get(
+            CHEBI_QUERY_ENDPOINT, timeout=10)
+    except requests.exceptions.ConnectionError:
+        # Perhaps we are in a docker container (ensure that the correct port is forwarded)
+        HOST = "host.docker.internal"
+        CHEBI_QUERY_ENDPOINT = f"http://{HOST}:{CHEBI_FUSEKI_PORT}/genesis/query"
+        requests.get(
+            CHEBI_QUERY_ENDPOINT, timeout=10)
 
-chebi_query_endpoint = f"http://{HOST}:{CHEBI_FUSEKI_PORT}/genesis/query"
-chebi_store = sparqlstore.SPARQLStore(chebi_query_endpoint)
 
-chebi = Graph(chebi_store, rdflib.graph.DATASET_DEFAULT_GRAPH_ID)
+CHEBI_STORE = sparqlstore.SPARQLStore(CHEBI_QUERY_ENDPOINT)
+CHEBI = Graph(CHEBI_STORE, rdflib.graph.DATASET_DEFAULT_GRAPH_ID)
 
 # Create a local dataset for hypotheses
-hypo_ds = rdflib.Dataset()
-hypo_ds.bind("hypo", HYPO)
+HYPO_DS = rdflib.Dataset()
+HYPO_DS.bind("hypo", HYPO)
 
 # Create local graph for hypothesis ontology
-ontology = hypo_ds.graph(
+ONTOLOGY = HYPO_DS.graph(
     rdflib.URIRef("http://hypo.project-genesis.io"))
-ontology.parse(os.path.join(
+ONTOLOGY.parse(os.path.join(
     BASE_DIR, "ontology-files/hypo.ttl"), format="turtle")
 
-phenotypes = hypo_ds.graph(
+PHENOTYPES = HYPO_DS.graph(
     rdflib.URIRef("http://hypo.project-genesis.io/phenotypes"))
-states = hypo_ds.graph(
+STATES = HYPO_DS.graph(
     rdflib.URIRef("http://hypo.project-genesis.io/states"))
-hmeta = hypo_ds.graph(
+HMETA = HYPO_DS.graph(
     rdflib.URIRef("http://hypo.project-genesis.io/hypothesis-metadata"))
 
 # Bind namespaces
-for g in hypo_ds.graphs():
+for g in HYPO_DS.graphs():
     g.bind("obo", OBO)
     g.bind("owl", OWL)
     g.bind("rdf", RDF)
@@ -121,34 +126,34 @@ for t in role_between_classes(OBO.A, HYPO.B, HYPO.rel):
 
 """
 
-hypotheses_dir = os.path.join(BASE_DIR, "experiments")
+# hypotheses_dir = os.path.join(BASE_DIR, "experiments")
 
-hypotheses = []
+# hypotheses = []
 
-for folder in os.listdir(hypotheses_dir):
-    try:
-        with open(
-            os.path.join(hypotheses_dir, folder,
-                         "hypothesis/hypothesis_details.json"),
-            "r",
-            encoding="utf-8",
-        ) as fi:
-            hypotheses.append(json.load(fi))
-    except (FileNotFoundError, NotADirectoryError):
-        continue
+# for folder in os.listdir(hypotheses_dir):
+#     try:
+#         with open(
+#             os.path.join(hypotheses_dir, folder,
+#                          "hypothesis/hypothesis_details.json"),
+#             "r",
+#             encoding="utf-8",
+#         ) as fi:
+#             hypotheses.append(json.load(fi))
+#     except (FileNotFoundError, NotADirectoryError):
+#         continue
 
 CHEM_COMP_ACC = term_from_label(
-    "chemical compound accumulation", ontology)
-CHEM_ACC_OF = term_from_label("accumulationOfChemical", ontology)
-RESISTANCE_TO_CHEM = term_from_label("resistanceToChemical", ontology)
+    "chemical compound accumulation", ONTOLOGY)
+CHEM_ACC_OF = term_from_label("accumulationOfChemical", ONTOLOGY)
+RESISTANCE_TO_CHEM = term_from_label("resistanceToChemical", ONTOLOGY)
 # For now, we are using the relation that is defined from the
 # `resistance to chemicals` phenotype in APO, of which metal
 # resistance is a subclass.
-METAL_RESISTANCE = term_from_label("resistanceToChemical", ontology)
-STATE_HAS_OBSERVABLE = term_from_label("stateHasObservable", ontology)
+METAL_RESISTANCE = term_from_label("resistanceToChemical", ONTOLOGY)
+STATE_HAS_OBSERVABLE = term_from_label("stateHasObservable", ONTOLOGY)
 DEFAULT_REFERENCE_STATE = HYPO[create_id(prefix="S-REF")]
-ORGANISM_STATE = term_from_label("organismState", ontology)
-states.add((DEFAULT_REFERENCE_STATE, RDFS.subClassOf, ORGANISM_STATE))
+ORGANISM_STATE = term_from_label("organismState", ONTOLOGY)
+STATES.add((DEFAULT_REFERENCE_STATE, RDFS.subClassOf, ORGANISM_STATE))
 
 TEST_LOGIC_PROGRAMS = [
     "Cell(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'zinc dichloride').",
@@ -276,13 +281,13 @@ def logic_program_to_state(logic_program, h_graph, reference_state=DEFAULT_REFER
         for t in role_between_classes(None, uri_pair[1], STATE_HAS_OBSERVABLE)
     ] + [(None, RDFS.subClassOf, ORGANISM_STATE)]
     state, state_triples = find_or_create_node(
-        hypo_ds, state_query_triples, id_prefix="S", namespace=HYPO
+        HYPO_DS, state_query_triples, id_prefix="S", namespace=HYPO
     )
     for t in state_triples:
-        states.add(t)
+        STATES.add(t)
 
     quads = [q for l in phen_quads_list for q in l] + \
-        [t + (states.identifier,) for t in state_triples]
+        [t + (STATES.identifier,) for t in state_triples]
 
     # TODO: Add Label or other property to make querying easier
     return state, quads
@@ -292,7 +297,7 @@ def write_exhibits_phenotype_to_graph(
     args,
     atoms,
     h_graph,
-    ontology=ontology,
+    ontology=ONTOLOGY,
     reference_state=DEFAULT_REFERENCE_STATE,
     phenotype_namespace=HYPO,
 ):
@@ -309,7 +314,7 @@ def write_exhibits_phenotype_to_graph(
                     next(filter(lambda t: t[1][0] == args[2], atoms.get("compound_name")))[
                         1
                     ][1],
-                    chebi,
+                    CHEBI,
                 )
                 additional_ref_triples = role_between_classes(
                     None, compound_name, RESISTANCE_TO_CHEM
@@ -326,7 +331,7 @@ def write_exhibits_phenotype_to_graph(
                     next(filter(lambda t: t[1][0] == args[2], atoms.get("compound_name")))[
                         1
                     ][1],
-                    chebi,
+                    CHEBI,
                 )
                 additional_ref_triples = role_between_classes(
                     None, compound_name, METAL_RESISTANCE
@@ -350,14 +355,14 @@ def write_exhibits_phenotype_to_graph(
         + additional_ref_triples
     )
     ref_phtype, ref_trips = find_or_create_node(
-        hypo_ds, ref_query_trips, id_prefix="P-REF", namespace=phenotype_namespace
+        HYPO_DS, ref_query_trips, id_prefix="P-REF", namespace=phenotype_namespace
     )
     # Now we are adding the reference state to the states graph
     for t in ref_trips[:4]:
-        states.add(t)
+        STATES.add(t)
 
     for t in ref_trips[4:]:
-        phenotypes.add(t)
+        PHENOTYPES.add(t)
 
     # Fetch the compared phenotype from the graph if it exists,
     # create it if it doesn't exist.
@@ -368,14 +373,14 @@ def write_exhibits_phenotype_to_graph(
         + role_between_classes(None, ref_phtype, qualifying_relation)
     )
     comp_phtype, comp_trips = find_or_create_node(
-        hypo_ds, comp_query_trips, id_prefix="P", namespace=phenotype_namespace
+        HYPO_DS, comp_query_trips, id_prefix="P", namespace=phenotype_namespace
     )
     for t in comp_trips:
-        phenotypes.add(t)
+        PHENOTYPES.add(t)
 
     return (ref_phtype, comp_phtype), [
-        t + (states.identifier,) for t in ref_trips[:4]] + [
-        t + (phenotypes.identifier,) for t in ref_trips[4:] + comp_trips
+        t + (STATES.identifier,) for t in ref_trips[:4]] + [
+        t + (PHENOTYPES.identifier,) for t in ref_trips[4:] + comp_trips
     ]
 
 
@@ -387,7 +392,7 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
                  "higher": "increased"}.get(qualifier, qualifier)
 
     qualifying_relation = term_from_label(
-        qualifier + "ComparedTo", ontology)
+        qualifier + "ComparedTo", ONTOLOGY)
 
     # Fetch the reference phenotype from the graph if it exists,
     # create it if it doesn't exist. (Link to reference state defined
@@ -399,7 +404,7 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
         + role_between_classes(None, amino_acid, CHEM_ACC_OF)
     )
     ref_phtype, ref_trips = find_or_create_node(
-        hypo_ds, ref_query_trips, id_prefix="P-REF", namespace=phenotype_namespace
+        HYPO_DS, ref_query_trips, id_prefix="P-REF", namespace=phenotype_namespace
     )
     # Now we are adding the reference state to the states graph
     for t in ref_trips[:4]:
@@ -416,7 +421,7 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
         + role_between_classes(None, ref_phtype, qualifying_relation)
     )
     comp_phtype, comp_trips = find_or_create_node(
-        hypo_ds, comp_query_trips, id_prefix="P", namespace=phenotype_namespace
+        HYPO_DS, comp_query_trips, id_prefix="P", namespace=phenotype_namespace
     )
     for t in comp_trips:
         phenotypes.add(t)
@@ -428,7 +433,7 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
         + [(None, RDFS.subClassOf, ORGANISM_STATE)]
     )
     state, state_triples = find_or_create_node(
-        hypo_ds, state_query_triples, id_prefix="S", namespace=HYPO
+        HYPO_DS, state_query_triples, id_prefix="S", namespace=HYPO
     )
     for t in state_triples:
         states.add(t)
@@ -444,7 +449,7 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
 
 def hypothesis_to_quads(hypo_ds, h, h_graph):
     # Match the amino acid
-    amino_acid = term_from_label(h["observable"], chebi)  # Case-sensitive?
+    amino_acid = term_from_label(h["observable"], CHEBI)  # Case-sensitive?
     # print(amino_acid)
     state_1, state_1_quads = amino_acid_and_qualifier_to_state(
         hypo_ds, amino_acid, h["qualifier"], reference_state=DEFAULT_REFERENCE_STATE, phenotype_namespace=HYPO)
@@ -523,8 +528,8 @@ def add_hypothesis_as_new_graph_in_hypo_ds(hypo_ds, h, **kwargs):
         meta_trips.append((h_graphid, DCT.creator, Literal("Genesis")))
 
     for t in meta_trips:
-        hmeta.add(t)
-        quads.append(t + (hmeta.identifier,))
+        HMETA.add(t)
+        quads.append(t + (HMETA.identifier,))
 
     return quads
 
@@ -568,15 +573,7 @@ def load_hypothesis_from_top_folder(hypo_ds, root_dir, folder):
             hypo_ds, h, creation_date=creation_date, creator="Genesis")
 
 
-if __name__ == "__main__":
-    with open("experiments/test-patterns.txt", "r") as fi:
-        test_patterns = [l.rstrip().split(':', 1) for l in fi]
-
-    test_hypotheses = [{'logic_program': p[1], 'observable': p[0], 'qualifier': 'higher',
-                        'number': i, 'reason': '<blank>'} for (i, p) in enumerate(test_patterns)]
-
-    load_hypotheses(hypo_ds, os.path.join(BASE_DIR, "experiments"))
-
+def save_hypothesis_as_trig(BASE_DIR, hypo_ds, ontology):
     ds = rdflib.Dataset()
     for ctx in hypo_ds.contexts():
         if ctx.identifier != ontology.identifier:
@@ -585,3 +582,8 @@ if __name__ == "__main__":
 
     with open(os.path.join(BASE_DIR, "ontology-files", "outputs", "db.trig"), "wb") as fo:
         ds.serialize(fo, format="trig")
+
+
+if __name__ == "__main__":
+    load_hypotheses(HYPO_DS, os.path.join(BASE_DIR, "experiments"))
+    save_hypothesis_as_trig(BASE_DIR, HYPO_DS, ONTOLOGY)

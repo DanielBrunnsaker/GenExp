@@ -67,3 +67,6 @@ BLANK_FILLIN_VALUE = 0.01
 OUTLIER_METHOD = 'mad'
 ROLLING_MEAN_WINDOWSIZE = 3  # Windowsize for smoothing
 THRESHOLD = 3.5  # MAD-threshold to use for curve fitering. #3 for MAD, 1.5 for IQR?
+
+# SPARQL services
+CHEBI_QUERY_ENDPOINT = "http://localhost:3037/genesis/query"
