@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.abspath(
     os.path.join(os.path.dirname(__file__), '../..')))
 
 from scripts.hypothesis_formalisation import (
-    chebi,
+    CHEBI,
     term_from_label
 )
 
@@ -56,13 +56,22 @@ for (i, exp) in enumerate(data['experiments']):
     if exp["media_supplementation"] is not None:
         # Convert the media_supplementation to a Chebi term
         chebi_term = term_from_label(
-            f"L-{exp['media_supplementation']}", chebi)
+            f"L-{exp['media_supplementation']}", CHEBI)
+        if chebi_term is None:  # Could be a case issue
+            print(
+                f"Chebi term 'L-{exp['media_supplementation']} not found, trying 'L-{exp['media_supplementation'].lower()}'", file=sys.stderr)
+            chebi_term = term_from_label(
+            f"L-{exp['media_supplementation'].lower()}", CHEBI)
         if chebi_term is None:  # Could be not an amino acid
             print(
                 f"Chebi term 'L-{exp['media_supplementation']} not found, trying '{exp['media_supplementation']}'", file=sys.stderr)
-            chebi_term = term_from_label(exp['media_supplementation'], chebi)
+            chebi_term = term_from_label(exp['media_supplementation'], CHEBI)
+        if chebi_term is None:  # Could be not an amino acid
+            print(
+                f"Chebi term '{exp['media_supplementation']} not found, trying '{exp['media_supplementation'].lower()}'", file=sys.stderr)
+            chebi_term = term_from_label(exp['media_supplementation'].lower(), CHEBI)
         if chebi_term is None and exp['media_supplementation'].lower() == "aminoadipate":  # Aminoadipate
-            chebi_term = term_from_label("L-2-aminoadipate(2-)", chebi)
+            chebi_term = term_from_label("L-2-aminoadipate(2-)", CHEBI)
         exp["media_supplementation_chebi"] = chebi_term
 
     # Separate the `media_supplementation_doses` field into the value and the unit
@@ -80,7 +89,7 @@ for (i, exp) in enumerate(data['experiments']):
     # If the `treatment` field is not None, convert it to a Chebi term
     if exp["treatment"] is not None:
         # Convert the treatment to a Chebi term
-        chebi_term = term_from_label(exp["treatment"], chebi)
+        chebi_term = term_from_label(exp["treatment"], CHEBI)
         exp["treatment_chebi"] = chebi_term
 
     exp["media_description"] = exp["baseline_media"] + (
