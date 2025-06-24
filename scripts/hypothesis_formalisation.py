@@ -16,8 +16,11 @@ import requests
 import uuid6
 
 from config import CHEBI_QUERY_ENDPOINT
+# from config import HYPO_DATASET_PATH
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+HYPO_DATASET_PATH = os.path.join(BASE_DIR, "ontology-files", "outputs", "hypo_ds.sqlite")
+
 OBO = rdflib.Namespace("http://purl.obolibrary.org/obo/")
 HYPO = rdflib.Namespace("http://hypo.project-genesis.io#")
 OBOINOWL = rdflib.Namespace("http://www.geneontology.org/formats/oboInOwl#")
@@ -534,21 +537,6 @@ def add_hypothesis_as_new_graph_in_hypo_ds(hypo_ds, h, **kwargs):
     return quads
 
 
-def load_hypotheses(hypo_ds, root_dir="experiments"):
-    """Searches through the `root_dir` for hypothesis folders and loads them into the dataset."""
-    for folder in os.listdir(root_dir):
-        try:
-            load_hypothesis_from_top_folder(hypo_ds, root_dir, folder)
-        except FileNotFoundError:
-            print(f"Could not load hypothesis from {folder}")
-            # Check next level down in the directory tree
-            load_hypotheses(hypo_ds, os.path.join(root_dir, folder))
-            continue
-        except NotADirectoryError:
-            print(f"{folder} is not a directory, ending search.")
-            continue
-
-
 def load_hypothesis_from_top_folder(hypo_ds, root_dir, folder):
     with open(
         os.path.join(root_dir, folder,
@@ -571,6 +559,21 @@ def load_hypothesis_from_top_folder(hypo_ds, root_dir, folder):
             f"Loading hypothesis from {os.path.join(root_dir, folder)} (created on {creation_date.strftime('%Y-%m-%d %H:%M:%S')})")
         return add_hypothesis_as_new_graph_in_hypo_ds(
             hypo_ds, h, creation_date=creation_date, creator="Genesis")
+
+
+def load_hypotheses(hypo_ds, root_dir="experiments"):
+    """Searches through the `root_dir` for hypothesis folders and loads them into the dataset."""
+    for folder in os.listdir(root_dir):
+        try:
+            load_hypothesis_from_top_folder(hypo_ds, root_dir, folder)
+        except FileNotFoundError:
+            print(f"Could not load hypothesis from {folder}")
+            # Check next level down in the directory tree
+            load_hypotheses(hypo_ds, os.path.join(root_dir, folder))
+            continue
+        except NotADirectoryError:
+            print(f"{folder} is not a directory, ending search.")
+            continue
 
 
 def save_hypothesis_as_trig(BASE_DIR, hypo_ds, ontology):
