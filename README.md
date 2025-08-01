@@ -1,4 +1,4 @@
-# GenExp
+# Agentic AI Integrated with Scientific Knowledge: Laboratory Validation in Systems Biology
 
 ## Install Python dependencies
 
