@@ -80,4 +80,4 @@ PARAMS = {
 }
 
 # SPARQL services
-CHEBI_QUERY_ENDPOINT = "http://localhost:3037/genesis/query"
+CHEBI_QUERY_ENDPOINT = "http://localhost:3033/genesis/query"

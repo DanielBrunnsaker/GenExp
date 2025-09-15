@@ -52,6 +52,7 @@ def role_between_classes(a, b, r):
 
 
 def term_from_label(label, g):
+    # print(f"Looking up `{label}` in `{g}`.", file=sys.stderr, flush=True)
     term = g.value(
         predicate=RDFS.label,
         object=rdflib.Literal(
@@ -78,20 +79,18 @@ def term_from_label(label, g):
 
 # Set up Fuseki endpoint to create new SPARQL store
 try:
-    requests.get(CHEBI_QUERY_ENDPOINT, timeout=10)
+    requests.get(f"{CHEBI_QUERY_ENDPOINT}?query={requests.utils.quote('SELECT * WHERE {?s ?p ?o} LIMIT 1')}", timeout=10)
 except requests.exceptions.ConnectionError:
     HOST = "localhost"
-    CHEBI_FUSEKI_PORT = 3037
+    CHEBI_FUSEKI_PORT = 3033
     CHEBI_QUERY_ENDPOINT = f"http://{HOST}:{CHEBI_FUSEKI_PORT}/genesis/query"
     try:
-        requests.get(
-            CHEBI_QUERY_ENDPOINT, timeout=10)
+        requests.get(f"{CHEBI_QUERY_ENDPOINT}?query={requests.utils.quote('SELECT * WHERE {?s ?p ?o} LIMIT 1')}", timeout=10)
     except requests.exceptions.ConnectionError:
         # Perhaps we are in a docker container (ensure that the correct port is forwarded)
         HOST = "host.docker.internal"
         CHEBI_QUERY_ENDPOINT = f"http://{HOST}:{CHEBI_FUSEKI_PORT}/genesis/query"
-        requests.get(
-            CHEBI_QUERY_ENDPOINT, timeout=10)
+        requests.get(f"{CHEBI_QUERY_ENDPOINT}?query={requests.utils.quote('SELECT * WHERE {?s ?p ?o} LIMIT 1')}", timeout=10)
 
 
 CHEBI_STORE = sparqlstore.SPARQLStore(CHEBI_QUERY_ENDPOINT)
@@ -558,9 +557,42 @@ def load_hypothesis_from_top_folder(hypo_ds, root_dir, folder, include_experimen
         DATE_EXTRACTOR = re.compile(r"_(\d{8}\d{4})")
         match = DATE_EXTRACTOR.search(folder)
         if not match:
-            print(f"Could not extract creation date from folder name: {folder}. Check and fix the REGEX.", file=sys.stderr)
-            sys.exit(1)
-        creation_date_str = match.group(1)
+            # print(f"Could not extract creation date from folder name: {folder}. Check and fix the REGEX.", file=sys.stderr)
+            print(f"Could not extract creation date from folder name: {folder}.", file=sys.stderr)
+            print(f"\nContents of '{os.path.join(root_dir, folder)}':", file=sys.stderr)
+            for dirpath, dirnames, filenames in os.walk(os.path.join(root_dir, folder)):
+                level = dirpath.replace(os.path.join(root_dir, folder), '').count(os.sep)
+                indent = ' ' * 4 * level
+                print(f"{indent}{os.path.basename(dirpath)}/", file=sys.stderr)
+                for f in filenames:
+                    print(f"{indent}    {f}", file=sys.stderr)
+            while True:
+                print(
+                    "\nOptions:\n"
+                    "  [a] Abort\n"
+                    "  [s] Skip this directory\n"
+                    "  [d] Enter a date string (format: YYYYMMDDHHMM)\n",
+                    file=sys.stdout, flush=True
+                )
+                response = input("Enter your choice ([a]/s/d): ").strip().lower()
+                if response in ("a", ""):
+                    print("Aborting.", file=sys.stderr)
+                    sys.exit(1)
+                elif response == "s":
+                    print(f"Skipping {folder}.", file=sys.stderr)
+                    return  # skip this directory
+                elif response == "d":
+                    date_str = input("Enter date string (YYYYMMDDHHMM): ").strip()
+                    try:
+                        datetime.datetime.strptime(date_str, "%Y%m%d%H%M")
+                        creation_date_str = date_str
+                        break
+                    except ValueError:
+                        print("Invalid date format. Please try again.", file=sys.stdout, flush=True)
+                else:
+                    print("Invalid option. Please enter 's', 'd', or 'a'.", file=sys.stdout, flush=True)
+        else:
+            creation_date_str = match.group(1)
         creation_date = datetime.datetime.strptime(creation_date_str, "%Y%m%d%H%M")
 
         print(
@@ -632,7 +664,8 @@ if __name__ == "__main__":
     try:
         load_hypotheses_and_experimental_data(HYPO_DS, os.path.join(BASE_DIR, "experiments"))
         db_path = save_hypothesis_as_trig(BASE_DIR, HYPO_DS, ONTOLOGY)
-        print(db_path, file=sys.stdout) # print so the database file name can be reused
+        with open("tmp/ds_filename.txt", "w") as fo:
+            print(db_path, file=fo) # print so the database file name can be reused
     except Exception as e:
         print(f"Fatal error: {e}", file=sys.stderr)
         sys.exit(1)

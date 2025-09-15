@@ -2,6 +2,7 @@
 import json
 import sys
 import os
+from tqdm.auto import tqdm
 sys.path.insert(0, os.path.abspath(
     os.path.join(os.path.dirname(__file__), '../..')))
 
@@ -72,6 +73,8 @@ for (i, exp) in enumerate(data['experiments']):
             chebi_term = term_from_label(exp['media_supplementation'].lower(), CHEBI)
         if chebi_term is None and exp['media_supplementation'].lower() == "aminoadipate":  # Aminoadipate
             chebi_term = term_from_label("L-2-aminoadipate(2-)", CHEBI)
+        if chebi_term is not None:
+            print(f"Found! {chebi_term}", file=sys.stderr, flush=True)
         exp["media_supplementation_chebi"] = chebi_term
 
     # Separate the `media_supplementation_doses` field into the value and the unit

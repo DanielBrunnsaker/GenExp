@@ -1,4 +1,6 @@
 EXPERIMENT_DIRECTORY="experiments"
+TMP_DELETED_DIR=$(mktemp -d)
+
 # Check connections before proceeding
 if ! python scripts/check_connections.py; then
     echo "check_connections.py failed. Exiting."
@@ -17,9 +19,11 @@ if [ -n "$files_found" ]; then
     done <<<"$files_found"
     read -p "Do you want to delete these files? (y/N): " confirm
     if [[ "$confirm" =~ ^[Yy]$ ]]; then
-        # Proceed with deletion
-        find "$EXPERIMENT_DIRECTORY" -type f \( -name "study.trig" -o -name "hypotheses.trig" -o -name "merged_dataset.trig" \) -delete
-        echo "Files deleted."
+        # Move files to temp directory instead of deleting
+        while IFS= read -r file; do
+            mv "$file" "$TMP_DELETED_DIR/"
+        done <<<"$files_found"
+        echo "Files moved to temporary directory: $TMP_DELETED_DIR"
     else
         echo "Database creation aborted. No files were deleted."
         exit 0
@@ -29,7 +33,22 @@ else
 fi
 
 echo "Creating hypothesis database from \`./$EXPERIMENT_DIRECTORY\` directory..." >&2
-HYPO_DS_TRIG=$(python scripts/hypothesis_formalisation.py)
-ls $HYPO_DS_TRIG >/dev/null &&
-    echo "Hypotheses stored in: "$HYPO_DS_TRIG" ("$(ls -lh $HYPO_DS_TRIG | awk '{print $5}')"B)" >&2
-python scripts/collect-db-files.py
+python scripts/hypothesis_formalisation.py
+status=$?
+HYPO_DS_TRIG=$(cat tmp/ds_filename.txt)
+if [ $status -ne 0 ]; then
+    echo "Error: Database creation failed. Restoring deleted files..." >&2
+    # Move files back to their original locations
+    for file in "$TMP_DELETED_DIR"/*; do
+        orig_path="$EXPERIMENT_DIRECTORY/$(basename "$file")"
+        mv "$file" "$orig_path"
+    done
+    rm -rf "$TMP_DELETED_DIR"
+    exit 1
+else
+    ls $HYPO_DS_TRIG >/dev/null &&
+        echo "Hypotheses stored in: "$HYPO_DS_TRIG" ("$(ls -lh $HYPO_DS_TRIG | awk '{print $5}')"B)" >&2
+    python scripts/collect-db-files.py
+    # If successful, remove the temp directory and its contents
+    rm -rf "$TMP_DELETED_DIR"
+fi

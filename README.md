@@ -1,6 +1,8 @@
 # Agentic AI Integrated with Scientific Knowledge: Laboratory Validation in Systems Biology
 
-## Install Python dependencies
+## Install and setup
+
+### Install Python dependencies
 
 Using Python 3.10.13 and R 4.2.3 the dependencies can be installed from the requirements.txt file, e.g. using conda and the following commands:
 ```
@@ -8,20 +10,39 @@ $ conda create --name genExp python=3.10.13 r-base=4.2.3 && \\
     conda activate genExp && \\
     pip install -r requirements.txt
 ```
-## Install SWI-Prolog
+### Install SWI-Prolog
 
 Follow download and install instructions [here](https://www.swi-prolog.org/download/stable). It can also be installed using package managers such as apt, snap, and brew. For more instructions on how to generate the patterns used for the hypothesis generation steps, see the `/prolog` folder.
 
-## Setting up an API-key
+### Install RMLMapper
+
+Run `scripts/install_rml.sh` to install the RMLMapper JAR in `/opt/tools`. If you decide to install this somewhere else in your filesystem, you will need to change the `RMLMAPPER_JAR` variable in `map_protocols.sh`.
+
+### Setting up a ChEBI SPARQL endpoint
+
+Currently the database creation programmes rely on a privately hosted SPARQL endpoint for ChEBI to look up compounds for inclusion in the graph database.
+
+We recommend these steps.
+
+1. Follow the instructions for our (recently tested) [containerised Fuseki server implementation](https://github.com/TW-Genesis/genesis-database-system) to build the Docker image locally.
+2. Download the `chebi.ttl` file from the Zenodo store and save in the `data/` directory.
+3. Again following the instructions, run ```DATA=chebi.ttl docker compose up load-data```.
+4. Once the data loading is complete, run ```docker compose up start-server -d```.
+
+We are investigating publically hosted options that have the same functionality, which should simplify this process.
+
+### Setting up an API-key
 
 Add a key.txt file (see .gitignore) containing only the API key ("sk-proj---XXXXXXXX...") for OpenAI in the root folder.
 
-## Generation and experiment execution parameters
+## Usage
+
+### Generation and experiment execution parameters
 
 Settings regarding the runs can be found in `scripts/config.py`.
 Note that you will need to change paths to relevant executables in the config-file.
 
-## Generating an hypothesis, experimental design and liquid handling scripts
+### Generating an hypothesis, experimental design and liquid handling scripts
 
 From the `/script` folder, run the following command in the terminal (fill in the blanks):
 
@@ -41,6 +62,6 @@ python analysis.py --output_folder <string> --metabolomics_analysis <bool>
 ```
 This will automatically run outlier curation, processing, normalization and statistical testing on the growth data and metabolomics data. It will also generate a basic result report.
 
-### References:
+## References:
 1. https://www.sciencedirect.com/science/article/pii/S266731852300017X?via%3Dihub
 2. https://pubs.acs.org/doi/10.1021/jasms.3c00396
