@@ -181,3 +181,5 @@ ontology-files/outputs/db.trig
 
 /tmp
 **/protocol/study.trig
+experiments/hypotheses.trig
+experiments/merged_dataset.trig
