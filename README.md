@@ -2,9 +2,9 @@
 
 ## Install and setup
 
-### Install Python dependencies
+### Install Python and R dependencies
 
-Using Python 3.10.13 and R 4.2.3 the dependencies can be installed from the requirements.txt file, e.g. using conda and the following commands:
+Using Python (3.10.13) and R (4.2.3) the dependencies can be installed from the requirements.txt file, e.g. using conda and the following commands:
 ```
 $ conda create --name genExp python=3.10.13 r-base=4.2.3 && \\
     conda activate genExp && \\
