@@ -13,7 +13,7 @@ from rdflib import Graph, Literal, URIRef, BNode
 import rdflib.graph
 from rdflib.plugins.stores import sparqlstore
 import rdflib
-from rdflib.namespace import RDFS, RDF, OWL
+from rdflib.namespace import RDFS, RDF, OWL, XSD
 import requests
 import uuid6
 
@@ -521,18 +521,18 @@ def add_hypothesis_as_new_graph_in_hypo_ds(hypo_ds, h, **kwargs):
     # If creation date is provided, add it to the metadata graph
     if "creation_date" in kwargs:
         meta_trips.append(
-            (h_graphid, DCT.created, Literal(kwargs["creation_date"])))
+            (h_graphid, DCT.created, Literal(kwargs["creation_date"], datatype=XSD.dateTime)))
     # Else, add the current date
     else:
         meta_trips.append((h_graphid, DCT.created, Literal(
-            rdflib.Literal(datetime.datetime.now().isoformat()))))
+            rdflib.Literal(datetime.datetime.now().isoformat()), datatype=XSD.dateTime)))
 
     # If a creator is provided, add it to the metadata graph
     if "creator" in kwargs:
-        meta_trips.append((h_graphid, DCT.creator, Literal(kwargs["creator"])))
+        meta_trips.append((h_graphid, DCT.creator, Literal(kwargs["creator"], datatype=XSD.string)))
     # Else, add 'Genesis' as the creator
     else:
-        meta_trips.append((h_graphid, DCT.creator, Literal("Genesis")))
+        meta_trips.append((h_graphid, DCT.creator, Literal("Genesis", datatype=XSD.string)))
 
     for t in meta_trips:
         HMETA.add(t)
