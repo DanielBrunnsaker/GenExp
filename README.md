@@ -37,6 +37,10 @@ Add a key.txt file (see .gitignore) containing only the API key ("sk-proj---XXXX
 
 ## Usage
 
+### Prompts
+
+The template prompts used for the examples in the manuscript are available in `/context`. Investigation-specific contexts/prompts (i.e. the ones actually used for the different investigations) can be found inside the experiments folder. e.g. `experiments/completed_experiments/arginine_202503131539/versions`.
+
 ### Generation and experiment execution parameters
 
 Settings regarding the runs can be found in `scripts/config.py`.
