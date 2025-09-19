@@ -12,7 +12,7 @@ $ conda create --name genExp python=3.10.13 r-base=4.2.3 && \\
 ```
 ### Install SWI-Prolog
 
-Follow download and install instructions [here](https://www.swi-prolog.org/download/stable). It can also be installed using package managers such as apt, snap, and brew. For more instructions on how to generate the patterns used for the hypothesis generation steps, see the `/prolog` folder.
+Follow download and install instructions [here](https://www.swi-prolog.org/download/stable). It can also be installed using package managers such as apt, snap, and brew.
 
 ### Install RMLMapper
 
