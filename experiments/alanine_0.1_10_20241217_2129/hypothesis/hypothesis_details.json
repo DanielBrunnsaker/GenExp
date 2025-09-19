@@ -1,7 +1,0 @@
-{
-    "logic_program": "Cell(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
-    "observable": "alanine",
-    "qualifier": "lower",
-    "number": 5,
-    "reason": "This experiment is feasible in a 96 well format as it involves testing resistance to a single chemical, fenpropimorph, which is manageable in terms of safety and cost. The observable change in resistance can be assessed through growth assays."
-}
