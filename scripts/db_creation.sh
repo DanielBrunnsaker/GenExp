@@ -1,5 +1,6 @@
 EXPERIMENT_DIRECTORY="experiments"
 TMP_DELETED_DIR=$(mktemp -d)
+mkdir -p tmp
 
 # Check connections before proceeding
 if ! python scripts/check_connections.py; then
