@@ -1,0 +1,96 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX : <http://hypo.project-genesis.io/>
+
+SELECT
+    ?study
+    ?studyLabel
+    ?GLMCoeff_aa_test
+    ?pVal_aa_test
+    ?GLMCoeff_aa_supp_test
+    ?pVal_aa_supp_test
+WHERE
+{
+    GRAPH :experiments {
+        ?study a obo:OBI_0500000 ;
+            rdfs:label ?studyLabel ;
+            obo:BFO_0000051
+                ?assay_base,
+                ?assay_aa,
+                ?assay_aa_supp .
+
+        ?assay_base a obo:OBI_0000070 ;
+            obo:OBI_0000293 ?cellculture_base,
+                ?medium_base,
+                ?treatment_base .
+
+        ?cellculture_base a obo:OBI_0001876 ;
+            obo:BFO_0000051 ?medium_base ,
+                :saccaharomyces-cerevisiae-population .
+
+        ?medium_base a obo:OBI_0000079 ;
+            :baselineMedia "Minimal media without amino acids" .
+
+        ?treatment_base a :treatment .
+
+        FILTER NOT EXISTS { ?medium_base :mediaSupplementation ?_base_supp_miss }
+        FILTER NOT EXISTS { ?treatment_base :treatmentWithChemical ?_base_treat_miss }
+        
+        ?assay_aa a obo:OBI_0000070 ;
+            obo:OBI_0000293 ?cellculture_aa,
+                ?medium_aa,
+                ?treatment_aa .
+
+        ?cellculture_aa a obo:OBI_0001876 ;
+            obo:BFO_0000051 ?medium_aa ,
+                :saccaharomyces-cerevisiae-population .
+
+        ?medium_aa a obo:OBI_0000079 ;
+            :baselineMedia "Minimal media without amino acids" ;
+            :mediaSupplementation $AA_OBO_URI .
+
+        ?treatment_aa a :treatment .
+
+        FILTER NOT EXISTS { ?treatment_aa :treatmentWithChemical ?_aa_treat_miss }
+
+        ?assay_aa_supp a obo:OBI_0000070 ;
+            obo:OBI_0000293 ?cellculture_aa_supp,
+                ?medium_aa_supp,
+                ?treatment_aa_supp .
+
+        ?cellculture_aa_supp a obo:OBI_0001876 ;
+            obo:BFO_0000051 ?medium_aa_supp ,
+                :saccaharomyces-cerevisiae-population .
+
+        ?medium_aa_supp a obo:OBI_0000079 ;
+            :baselineMedia "Minimal media without amino acids" ;
+            :mediaSupplementation $AA_OBO_URI .
+
+        ?treatment_aa_supp a :treatment ;
+            :treatmentWithChemical $SUPP_OBO_URI .
+    }
+
+    GRAPH :growth-data {
+
+        ?test_aa a :AUCForestComparativeTest ;
+            :referenceCondition ?ref_growth_aa_test ;
+            :testCondition ?test_growth_aa_test ;
+            :GLMCoefficient ?GLMCoeff_aa_test ;
+            :pValue ?pVal_aa_test .
+
+        ?ref_growth_aa_test :growthDataFromAssay ?assay_base .
+        ?test_growth_aa_test :growthDataFromAssay ?assay_aa .
+
+        ?test_aa_supp a :AUCForestComparativeTest ;
+            :referenceCondition ?ref_growth_aa_supp_test ;
+            :testCondition ?test_growth_aa_supp_test ;
+            :GLMCoefficient ?GLMCoeff_aa_supp_test ;
+            :pValue ?pVal_aa_supp_test .
+
+        ?ref_growth_aa_supp_test :growthDataFromAssay ?assay_base .
+        ?test_growth_aa_supp_test :growthDataFromAssay ?assay_aa_supp .
+    }
+}
