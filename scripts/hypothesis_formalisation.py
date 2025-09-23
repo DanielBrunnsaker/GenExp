@@ -6,7 +6,7 @@ import sys
 import json
 import re
 from typing import Optional
-from pprint import pprint
+from pprint import pprint, pformat
 import subprocess
 
 from rdflib import Graph, Literal, URIRef, BNode
@@ -318,42 +318,32 @@ def write_exhibits_phenotype_to_graph(
         qualifier + "ComparedTo", ontology)
 
     match phtype_label:
-        case "resistance to chemicals":
+        case "resistance to chemicals" | "metal resistance" | "hyperosmotic stress resistance":
             try:
-                compound_name = term_from_label(
-                    next(filter(lambda t: t[1][0] == args[2], atoms.get("compound_name")))[
-                        1
-                    ][1],
-                    CHEBI,
-                )
-                additional_ref_triples = role_between_classes(
-                    None, compound_name, RESISTANCE_TO_CHEM
-                )
-                additional_comp_triples = role_between_classes(
-                    None, compound_name, RESISTANCE_TO_CHEM
-                )
+                compound_name = next(filter(lambda t: t[1][0] == args[2], atoms.get("compound_name")))[1][1]
+                try:
+                    compound = term_from_label(
+                        compound_name, CHEBI
+                    )
+                    assert compound is not None
+                    
+                    additional_ref_triples = role_between_classes(
+                        None, compound, RESISTANCE_TO_CHEM
+                    )
+                    additional_comp_triples = role_between_classes(
+                        None, compound, RESISTANCE_TO_CHEM
+                    )
+                except AssertionError:
+                    print(
+                        "[WARN]", f"Could not find compound '{compound_name}' in ChEBI.",
+                        file=sys.stderr,
+                    )
+                    additional_ref_triples = []
+                    additional_comp_triples = []
             except TypeError:
-                "Could not find compound name in atoms."
-
-        case "metal resistance":
-            try:
-                compound_name = term_from_label(
-                    next(filter(lambda t: t[1][0] == args[2], atoms.get("compound_name")))[
-                        1
-                    ][1],
-                    CHEBI,
-                )
-                additional_ref_triples = role_between_classes(
-                    None, compound_name, METAL_RESISTANCE
-                )
-                additional_comp_triples = role_between_classes(
-                    None, compound_name, METAL_RESISTANCE
-                )
-            except TypeError:
-                "Could not find compound name in atoms."
-        case _:
-            additional_ref_triples = []
-            additional_comp_triples = []
+                print("[WARN]", f"Could not find compound name in atoms\n\t{pformat(atoms)}.", file=sys.stderr)
+                additional_ref_triples = []
+                additional_comp_triples = []
 
     # Fetch the reference phenotype from the graph if it exists,
     # create it if it doesn't exist. (Link to reference state defined
@@ -459,8 +449,30 @@ def amino_acid_and_qualifier_to_state(dataset, amino_acid, qualifier, reference_
 
 def hypothesis_to_quads(hypo_ds, h, h_graph):
     # Match the amino acid
-    amino_acid = term_from_label(h["observable"], CHEBI)  # Case-sensitive?
-    # print(amino_acid, file=sys.stderr)
+        # If the `media_supplementation`field is not None, convert it to a Chebi term
+    if h['observable'] is not None:
+        # Convert the media_supplementation to a Chebi term
+        amino_acid = term_from_label(
+            f"L-{h['observable']}", CHEBI)
+        if amino_acid is None:  # Could be a case issue
+            print(
+                f"Chebi term 'L-{h['observable']} not found, trying 'L-{h['observable'].lower()}'", file=sys.stderr)
+            amino_acid = term_from_label(
+            f"L-{h['observable'].lower()}", CHEBI)
+        if amino_acid is None:  # Could be not an amino acid
+            print(
+                f"Chebi term 'L-{h['observable']} not found, trying '{h['observable']}'", file=sys.stderr)
+            amino_acid = term_from_label(h['observable'], CHEBI)
+        if amino_acid is None:  # Could be not an amino acid
+            print(
+                f"Chebi term '{h['observable']} not found, trying '{h['observable'].lower()}'", file=sys.stderr)
+            amino_acid = term_from_label(h['observable'].lower(), CHEBI)
+        if amino_acid is None and h['observable'].lower() == "aminoadipate":  # Aminoadipate
+            amino_acid = term_from_label("L-2-aminoadipate(2-)", CHEBI)
+
+    if amino_acid is None:
+        raise ValueError(
+            f"Could not find amino acid '{h['observable']}' in ChEBI.")
     state_1, state_1_quads = amino_acid_and_qualifier_to_state(
         hypo_ds, amino_acid, h["qualifier"], reference_state=DEFAULT_REFERENCE_STATE, phenotype_namespace=HYPO)
 
