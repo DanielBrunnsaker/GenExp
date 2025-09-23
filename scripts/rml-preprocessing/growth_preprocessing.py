@@ -4,16 +4,16 @@ import pandas
 args = sys.argv[1:]
 # print(args, file=sys.stderr)
 if len(args) != 1:
-    print("Usage: python growth_preprocessing.py <path_to_csv_file>", file=sys.stderr)
+    print("[!ERR] Usage: python growth_preprocessing.py <path_to_csv_file>", file=sys.stderr)
     sys.exit(1)
 csv_file_path = args[0]
-print(csv_file_path, file=sys.stderr)
+# print(csv_file_path, file=sys.stderr)
 
 # Load in the growth data
 try:
     gd = pandas.read_csv(csv_file_path, index_col=0)
 except FileNotFoundError:
-    print("No growth data for this experiment.", file=sys.stderr)
+    print("[INFO] No growth data for this experiment.", file=sys.stderr)
     sys.exit()
 gd.reset_index(inplace=True)
 gd.index.name = "i"

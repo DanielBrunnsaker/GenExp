@@ -18,7 +18,7 @@ if [ -n "$files_found" ]; then
     while IFS= read -r file; do
         echo -e "\t- $file"
     done <<<"$files_found"
-    read -p "Do you want to delete these files? (y/N): " confirm
+    read -p "Do you want to overwrite these files? (y/N): " confirm
     if [[ "$confirm" =~ ^[Yy]$ ]]; then
         # Move files to temp directory instead of deleting
         while IFS= read -r file; do
@@ -30,11 +30,13 @@ if [ -n "$files_found" ]; then
         exit 0
     fi
 else
-    echo "No matching files found. Nothing to delete."
+    echo "No existing database files found."
 fi
 
 echo "Creating hypothesis database from \`./$EXPERIMENT_DIRECTORY\` directory..." >&2
+echo "" >&2
 python scripts/hypothesis_formalisation.py
+echo "" >&2
 status=$?
 HYPO_DS_TRIG=$(cat tmp/ds_filename.txt)
 if [ $status -ne 0 ]; then

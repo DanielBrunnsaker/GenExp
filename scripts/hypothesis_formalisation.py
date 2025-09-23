@@ -51,7 +51,7 @@ def role_between_classes(a, b, r):
     return trips
 
 
-def term_from_label(label, g):
+def term_from_label(label, g, warn=True):
     # print(f"Looking up `{label}` in `{g}`.", file=sys.stderr, flush=True)
     term = g.value(
         predicate=RDFS.label,
@@ -76,8 +76,9 @@ def term_from_label(label, g):
         )
     if term is not None:
         print("[INFO]", f"Found! '{label}' -> {term}", file=sys.stderr, flush=True)
-    else:
+    elif warn:
         print("[WARN]", f"Could not find term for label '{label}'", file=sys.stderr, flush=True)
+
     return term
 
 
@@ -453,20 +454,20 @@ def hypothesis_to_quads(hypo_ds, h, h_graph):
     if h['observable'] is not None:
         # Convert the media_supplementation to a Chebi term
         amino_acid = term_from_label(
-            f"L-{h['observable']}", CHEBI)
+            f"L-{h['observable']}", CHEBI, warn=False)
         if amino_acid is None:  # Could be a case issue
             print(
-                f"Chebi term 'L-{h['observable']} not found, trying 'L-{h['observable'].lower()}'", file=sys.stderr)
+                f"[INFO] Chebi term 'L-{h['observable']} not found, trying 'L-{h['observable'].lower()}'", file=sys.stderr)
             amino_acid = term_from_label(
-            f"L-{h['observable'].lower()}", CHEBI)
+            f"L-{h['observable'].lower()}", CHEBI, warn=False)
         if amino_acid is None:  # Could be not an amino acid
             print(
-                f"Chebi term 'L-{h['observable']} not found, trying '{h['observable']}'", file=sys.stderr)
-            amino_acid = term_from_label(h['observable'], CHEBI)
+                f"[INFO] Chebi term 'L-{h['observable']} not found, trying '{h['observable']}'", file=sys.stderr)
+            amino_acid = term_from_label(h['observable'], CHEBI, warn=False)
         if amino_acid is None:  # Could be not an amino acid
             print(
-                f"Chebi term '{h['observable']} not found, trying '{h['observable'].lower()}'", file=sys.stderr)
-            amino_acid = term_from_label(h['observable'].lower(), CHEBI)
+                f"[INFO] Chebi term '{h['observable']} not found, trying '{h['observable'].lower()}'", file=sys.stderr)
+            amino_acid = term_from_label(h['observable'].lower(), CHEBI, warn=False)
         if amino_acid is None and h['observable'].lower() == "aminoadipate":  # Aminoadipate
             amino_acid = term_from_label("L-2-aminoadipate(2-)", CHEBI)
 
@@ -527,7 +528,7 @@ def add_hypothesis_as_new_graph_in_hypo_ds(hypo_ds, h, **kwargs):
     # This is not good for future, we want to include
     # all triples related to the hypothesis
     if len(h_graph) == 0:
-        print("No triples were added to the graph.", file=sys.stderr)
+        print("[WARN] No triples were added to the graph.", file=sys.stderr)
         hypo_ds.remove_graph(h_graphid)
 
     # Add the hypothesis to the metadata graph
@@ -611,7 +612,7 @@ def load_hypothesis_from_top_folder(hypo_ds, root_dir, folder, include_experimen
         creation_date = datetime.datetime.strptime(creation_date_str, "%Y%m%d%H%M")
 
         print(
-            f"Loading hypothesis from {os.path.join(root_dir, folder)} (created on {creation_date.strftime('%Y-%m-%d %H:%M:%S')})", file=sys.stderr)
+            f"\n[INFO] Loading hypothesis from {os.path.join(root_dir, folder)} (created on {creation_date.strftime('%Y-%m-%d %H:%M:%S')})", file=sys.stderr)
         hypothesis = add_hypothesis_as_new_graph_in_hypo_ds(
             hypo_ds, h, creation_date=creation_date, creator="Genesis")
     
@@ -623,9 +624,9 @@ def load_hypothesis_from_top_folder(hypo_ds, root_dir, folder, include_experimen
                     ["bash", "scripts/map_protocols.sh", folder_path],
                     check=True
                 )
-                print(f"Successfully stored protocol and experimental data in: {os.path.join(folder_path, 'protocol', 'study.trig')}", file=sys.stderr)
+                print(f"[INFO] Successfully stored protocol and experimental data in: {os.path.join(folder_path, 'protocol', 'study.trig')}", file=sys.stderr)
             except subprocess.CalledProcessError as e:
-                print(f"Error running map_protocols.sh for {folder_path}: {e}", file=sys.stderr)
+                print(f"[!ERR] Error running map_protocols.sh for {folder_path}: {e}", file=sys.stderr)
 
         return hypothesis
 
@@ -636,12 +637,12 @@ def load_hypotheses(hypo_ds, root_dir="experiments"):
         try:
             load_hypothesis_from_top_folder(hypo_ds, root_dir, folder, include_experimental_data=False)
         except FileNotFoundError:
-            print(f"Could not load hypothesis from {folder}", file=sys.stderr)
+            # print(f"Could not load hypothesis from {folder}", file=sys.stderr)
             # Check next level down in the directory tree
             load_hypotheses(hypo_ds, os.path.join(root_dir, folder))
             continue
         except NotADirectoryError:
-            print(f"{folder} is not a directory, ending search.", file=sys.stderr)
+            # print(f"{folder} is not a directory, ending search.", file=sys.stderr)
             continue
 
 
@@ -651,12 +652,12 @@ def load_hypotheses_and_experimental_data(hypo_ds, root_dir="experiments"):
         try:
             load_hypothesis_from_top_folder(hypo_ds, root_dir, folder, include_experimental_data=True)
         except FileNotFoundError:
-            print(f"Could not load hypothesis from {folder}", file=sys.stderr)
+            # print(f"Could not load hypothesis from {folder}", file=sys.stderr)
             # Check next level down in the directory tree
             load_hypotheses_and_experimental_data(hypo_ds, os.path.join(root_dir, folder))
             continue
         except NotADirectoryError:
-            print(f"{folder} is not a directory, ending search.", file=sys.stderr)
+            # print(f"{folder} is not a directory, ending search.", file=sys.stderr)
             continue
 
 
@@ -682,7 +683,7 @@ if __name__ == "__main__":
         with open("tmp/ds_filename.txt", "w") as fo:
             print(db_path, file=fo) # print so the database file name can be reused
     except Exception as e:
-        print(f"Fatal error: {e}", file=sys.stderr)
+        print(f"[!ERR] Fatal error: {e}", file=sys.stderr)
         # print stack trace
         import traceback
         traceback.print_exc()

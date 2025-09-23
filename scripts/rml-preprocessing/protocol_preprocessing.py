@@ -15,22 +15,22 @@ from scripts.hypothesis_formalisation import (
 args = sys.argv[1:]
 # print(args, file=sys.stderr)
 if len(args) != 1:
-    print("Usage: python protocol_preprocessing.py <path_to_json_file>", file=sys.stderr)
+    print("[!ERR] Usage: python protocol_preprocessing.py <path_to_json_file>", file=sys.stderr)
     sys.exit(1)
 json_file_path = args[0]
-print(json_file_path, file=sys.stderr)
+# print(json_file_path, file=sys.stderr)
 try:
     with open(json_file_path, 'r') as file:
         data = json.load(file)
-        print(f"Loaded JSON data from {json_file_path}", file=sys.stderr)
+        print(f"[INFO] Loaded JSON data from {json_file_path}", file=sys.stderr)
 except FileNotFoundError:
-    print(f"Error: The file {json_file_path} does not exist.", file=sys.stderr)
-    sys.exit(1)
+    print(f"[WARN] The file {json_file_path} does not exist.", file=sys.stderr)
+    sys.exit()
 except json.JSONDecodeError:
-    print(f"Error: The file {json_file_path} is not a valid JSON file.", file=sys.stderr)
+    print(f"[!ERR] The file {json_file_path} is not a valid JSON file.", file=sys.stderr)
     sys.exit(1)
 except Exception as e:
-    print(f"An unexpected error occurred: {e}", file=sys.stderr)
+    print(f"[!ERR] An unexpected error occurred: {e}", file=sys.stderr)
     sys.exit(1)
 
 # Create a new data structure to hold the modified data
@@ -57,22 +57,25 @@ for (i, exp) in enumerate(data['experiments']):
     if exp["media_supplementation"] is not None:
         # Convert the media_supplementation to a Chebi term
         chebi_term = term_from_label(
-            f"L-{exp['media_supplementation']}", CHEBI)
+            f"L-{exp['media_supplementation']}", CHEBI, warn=False)
         if chebi_term is None:  # Could be a case issue
             print(
-                f"Chebi term 'L-{exp['media_supplementation']} not found, trying 'L-{exp['media_supplementation'].lower()}'", file=sys.stderr)
+                f"[INFO] Chebi term 'L-{exp['media_supplementation']} not found, trying 'L-{exp['media_supplementation'].lower()}'", file=sys.stderr)
             chebi_term = term_from_label(
-            f"L-{exp['media_supplementation'].lower()}", CHEBI)
+            f"L-{exp['media_supplementation'].lower()}", CHEBI, warn=False)
         if chebi_term is None:  # Could be not an amino acid
             print(
-                f"Chebi term 'L-{exp['media_supplementation']} not found, trying '{exp['media_supplementation']}'", file=sys.stderr)
-            chebi_term = term_from_label(exp['media_supplementation'], CHEBI)
+                f"[INFO] Chebi term 'L-{exp['media_supplementation']} not found, trying '{exp['media_supplementation']}'", file=sys.stderr)
+            chebi_term = term_from_label(exp['media_supplementation'], CHEBI, warn=False)
         if chebi_term is None:  # Could be not an amino acid
             print(
-                f"Chebi term '{exp['media_supplementation']} not found, trying '{exp['media_supplementation'].lower()}'", file=sys.stderr)
-            chebi_term = term_from_label(exp['media_supplementation'].lower(), CHEBI)
+                f"[INFO] Chebi term '{exp['media_supplementation']} not found, trying '{exp['media_supplementation'].lower()}'", file=sys.stderr)
+            chebi_term = term_from_label(exp['media_supplementation'].lower(), CHEBI, warn=False)
         if chebi_term is None and exp['media_supplementation'].lower() == "aminoadipate":  # Aminoadipate
             chebi_term = term_from_label("L-2-aminoadipate(2-)", CHEBI)
+        if chebi_term is None:
+            print(
+                f"[WARN] Chebi term for media_supplementation '{exp['media_supplementation']}' not found", file=sys.stderr)
         exp["media_supplementation_chebi"] = chebi_term
 
     # Separate the `media_supplementation_doses` field into the value and the unit
