@@ -8,7 +8,7 @@ import builtins
 import traceback
 
 def rprint(*objs, **kwargs):
-    my_prefix = len(traceback.format_stack())*" "
+    my_prefix = len(traceback.format_stack())*"\t"
     builtins.print(my_prefix, *objs, **kwargs)
 
 store = pox.Store()
@@ -26,8 +26,13 @@ elif isinstance(results, pox.QuerySolutions):
     try:
         # pprint(json.loads(results.serialize(format=pox.QueryResultsFormat.JSON).decode()))
         tsv_string = results.serialize(format=pox.QueryResultsFormat.TSV).decode().strip()
-        for ln in transpose_tsv(tsv_string).split('\n'):
-            rprint(ln)
+        # if len(tsv_string.split('\n')) <= 2:
+        #     for ln in transpose_tsv(tsv_string).split('\n'):
+        #         rprint(ln)
+        # else:
+        #     for ln in tsv_string.split('\n'):
+        #         rprint(ln)
+        print(tsv_string)
 
     except AttributeError:
         rprint("No results")
