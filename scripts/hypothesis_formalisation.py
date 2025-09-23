@@ -671,4 +671,7 @@ if __name__ == "__main__":
             print(db_path, file=fo) # print so the database file name can be reused
     except Exception as e:
         print(f"Fatal error: {e}", file=sys.stderr)
+        # print stack trace
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
