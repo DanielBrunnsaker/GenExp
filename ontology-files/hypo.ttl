@@ -1,4 +1,4 @@
-@prefix : <http://hypo.project-genesis.io#> .
+@prefix : <http://hypo.project-genesis.io/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix apo: <http://purl.obolibrary.org/obo/apo#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
@@ -9,10 +9,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
-@base <http://hypo.project-genesis.io#> .
+@base <http://hypo.project-genesis.io/> .
 
-<http://hypo.project-genesis.io#> rdf:type owl:Ontology ;
-                                   owl:versionIRI <http://hypo.project-genesis.io#0.0.1> ;
+<http://hypo.project-genesis.io/> rdf:type owl:Ontology ;
+                                   owl:versionIRI <http://hypo.project-genesis.io/0.0.1> ;
                                    dc:contributor "Alexander Gower" ,
                                                   "Filip Kronström" ;
                                    dc:title "Genesis Hypothesis Ontology" ;

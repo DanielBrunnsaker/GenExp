@@ -27,7 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HYPO_DATASET_PATH = os.path.join(BASE_DIR, "ontology-files", "outputs", "hypo_ds.sqlite")
 
 OBO = rdflib.Namespace("http://purl.obolibrary.org/obo/")
-HYPO = rdflib.Namespace("http://hypo.project-genesis.io#")
+HYPO = rdflib.Namespace("http://hypo.project-genesis.io/")
 OBOINOWL = rdflib.Namespace("http://www.geneontology.org/formats/oboInOwl#")
 DCT = rdflib.Namespace("http://purl.org/dc/terms/")
 
