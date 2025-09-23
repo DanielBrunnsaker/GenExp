@@ -66,6 +66,22 @@ python analysis.py --output_folder <string> --metabolomics_analysis <bool>
 ```
 This will automatically run outlier curation, processing, normalization and statistical testing on the growth data and metabolomics data. It will also generate a basic result report.
 
+### Creating graph database
+
+To process the generated hypotheses, and the associated experimental plans and data, run `scripts/db_creation.sh` and follow the prompts. This will create TrIG files for each study, and one for all hypotheses, in the `experiments` directory. A merged file with all quads from each file, and those from the ontology, is created at `experiments/merged_dataset.trig`.
+
+### Querying the database
+
+For one-off queries to the database file (`experiments/merged_dataset.trig`), pipe the SPARQL query to the `scripts/pyoxi_query.py` script. For example:
+
+```bash
+echo "SELECT * WHERE { GRAPH ?g { ?s ?p ?o } } LIMIT 10" | python scripts/pyoxi_query.py
+```
+
+It is also possible to host a SPARQL endpoint using Jena Fuseki by following the same steps outlined above for the ChEBI endpoint.
+
+The sample query `examples-for-manuscript/sparql/hypotheses_test_support.rq`, which is used for the manuscript example of efficient reuse of experimental data.
+
 ## References:
 1. https://www.sciencedirect.com/science/article/pii/S266731852300017X?via%3Dihub
 2. https://pubs.acs.org/doi/10.1021/jasms.3c00396
