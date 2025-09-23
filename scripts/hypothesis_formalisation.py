@@ -74,6 +74,10 @@ def term_from_label(label, g):
             predicate=OBOINOWL.hasRelatedSynonym, object=rdflib.Literal(
                 label), any=False
         )
+    if term is not None:
+        print("[INFO]", f"Found! '{label}' -> {term}", file=sys.stderr, flush=True)
+    else:
+        print("[WARN]", f"Could not find term for label '{label}'", file=sys.stderr, flush=True)
     return term
 
 
@@ -165,9 +169,12 @@ STATES.add((DEFAULT_REFERENCE_STATE, RDFS.subClassOf, ORGANISM_STATE))
 TEST_LOGIC_PROGRAMS = [
     "Cell(A):-exhibits_phenotype(A,'decreased metal resistance',B,C),compound_name(B,'zinc dichloride').",
     "Cell(A):-exhibits_phenotype(A,'increased resistance to chemicals',B,C),compound_name(B,fenpropimorph).",
+    "Cell(A):-exhibits_phenotype(A,increased resistance to chemicals,B,C),compound_name(B,(S)-lactic acid)",
 ]
-ATOM_FINDER = re.compile(r"([A-z0-9]+\(.+?\))(?:,|.|$)")
-ATOM_PARSER = re.compile(r"^(\w+)\((.+)\)$")
+
+sys.path.append(os.path.join(os.path.dirname(__file__)))
+from utils.prolog_processing_utils import parse_clause
+
 
 
 def replace_blank_nodes_with_queried_ones(triples, query_result):
@@ -261,19 +268,15 @@ def find_or_create_node(
 
 def logic_program_to_state(logic_program, h_graph, reference_state=DEFAULT_REFERENCE_STATE):
     triples = []
-    atoms = []
-    head, body = logic_program.split(":-", 1)
-    for atom in ATOM_FINDER.findall(body):
-        predicate, arguments = ATOM_PARSER.match(atom).groups()
-        atoms.append((predicate, [a.replace("'", "")
-                     for a in arguments.split(",")]))
+        
+    head, atoms = parse_clause(logic_program)
 
     def keyfunc(t):
         return t[0]
 
     atoms = {k: list(g) for k, g in groupby(
         sorted(atoms, key=keyfunc), keyfunc)}
-    # print(atoms, file=sys.stderr)
+    
     phenotype_uri_tuple, phen_quads_list = zip(*[
         write_exhibits_phenotype_to_graph(
             args, atoms, h_graph, reference_state=reference_state)
