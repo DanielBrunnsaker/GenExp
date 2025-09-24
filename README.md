@@ -89,3 +89,4 @@ The sample query `examples-for-manuscript/sparql/hypotheses_test_support.rq`, wh
 ## References:
 1. https://www.sciencedirect.com/science/article/pii/S266731852300017X?via%3Dihub
 2. https://pubs.acs.org/doi/10.1021/jasms.3c00396
+3. M. A. Francisco Rodríguez, J. Carreras Puigvert, and O. Spjuth. Designing Microplate Layouts Using Artificial Intelligence, Volume 3, 2023. DOI: 10.1016/j.ailsci.2023.100073
