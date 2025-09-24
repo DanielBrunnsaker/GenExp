@@ -14,6 +14,10 @@ $ conda create --name genExp python=3.10.13 r-base=4.2.3 && \\
 
 Follow download and install instructions [here](https://www.swi-prolog.org/download/stable). It can also be installed using package managers such as apt, snap, and brew.
 
+### Install MiniZinc
+
+At parts of the experiment planning process, the workflow makes use of PLAID [3]. In order to run this, one needs to have Minizinc installed. Instructions can be found on the [PLAID GitHub]( https://github.com/pharmbio/plaid).
+
 ### Install RMLMapper
 
 Run `scripts/install_rml.sh` to install the RMLMapper JAR in `/opt/tools`. If you decide to install this somewhere else in your filesystem, you will need to change the `RMLMAPPER_JAR` variable in `map_protocols.sh`.
