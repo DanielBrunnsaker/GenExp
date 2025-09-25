@@ -16,7 +16,7 @@ Follow download and install instructions [here](https://www.swi-prolog.org/downl
 
 ### Install MiniZinc
 
-At parts of the experiment planning process, the workflow makes use of PLAID [1]. In order to run this, one needs to have Minizinc installed. Instructions can be found on the [PLAID GitHub]( https://github.com/pharmbio/plaid).
+At parts of the experiment planning process, the workflow makes use of PLAID [1]. In order to run this, one needs to have Minizinc (tested with v.2.8.7) installed. Instructions can be found on the [PLAID GitHub]( https://github.com/pharmbio/plaid).
 
 ### Install RMLMapper
 
