@@ -1,4 +1,4 @@
-pkgs <- readLines("R-requirements.txt")
+pkgs <- readLines("r-requirements.txt")
 # cran <- readLines("R-requirements-cran.txt")
 # bioc <- readLines("R-requirements-bioc.txt")
 
