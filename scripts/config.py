@@ -28,7 +28,7 @@ WELL_VOLUME_UNIT = 'microliter'
 DILUTION_FACTOR = 15  # Dilution factor for preculture
 
 # Layout generation settings
-MINIZINC_PATH = "/Applications/MiniZincIDE.app/Contents/Resources/minizinc"
+MINIZINC_PATH = "/usr/local/bin/minizinc"
 
 # Generation settings
 LLM_PATTERN_SELECTION_MODEL = 'gpt-4o'

@@ -4,7 +4,7 @@
 
 ### Install Python and R dependencies
 
-Using Python (3.10.13) and R (4.2.3) the dependencies can be installed from the requirements.txt file, e.g. using conda and the following commands:
+Using Python (3.10.18) and R (4.2.3) the dependencies can be installed from the requirements.txt file, e.g. using conda and the following commands:
 ```
 $ conda create --name genExp python=3.10.13 r-base=4.2.3 && \\
     conda activate genExp && \\
@@ -52,7 +52,7 @@ Note that you will need to change paths to relevant executables in the config-fi
 
 ### Generating an hypothesis, experimental design and liquid handling scripts
 
-From the `/script` folder, run the following command in the terminal (fill in the blanks):
+From the `scripts` folder, run the following command in the terminal (fill in the blanks):
 
 ```
 python genexp.py --target <string> --N <integer> --alpha <float>
