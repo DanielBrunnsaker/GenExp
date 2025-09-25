@@ -14,7 +14,7 @@
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "24.0.1"
-		},
+		}
 		// // R 4.2.3
 		// "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
 		// 	"version": "4.2.3"
@@ -23,6 +23,8 @@
 
 	// // Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [3033],
+
+	"otherPortsAttributes": { "onAutoForward" : "ignore" },
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "pip3 install --user -r requirements.txt && Rscript scripts/install_requirements.R && cd /workspaces/GenExp"

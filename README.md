@@ -2,23 +2,41 @@
 
 ## Install and setup
 
-### Install Python and R dependencies
+### Option 1: using prebuilt image
+
+A prebuilt image is provided.
+
+```bash
+docker run -it --platform=linux/amd64 --rm --user=vscode docker.io/alecgower/genexp:prebuilt /bin/bash
+sudo mkdir /workspaces && sudo chown vscode /workspaces && cd /workspaces
+git clone -b experimental https://github.com/DanielBrunnsaker/GenExp.git && cd GenExp
+pip3 install --user -r requirements.txt && Rscript scripts/install_requirements.R
+```
+
+### Option 2: using Development Container files
+
+To build yourself, clone the Git repository and use the provided configuration in the `.devcontainer` directory to build and run a container with all software and packages installed. A list of supporting tools and services for Development Containers is provided at https://containers.dev/supporting.
+
+### Option 3: manual installation
+
+#### Install Python and R dependencies
 
 Using Python (3.10.18) and R (4.2.3) the dependencies can be installed from the requirements.txt file, e.g. using conda and the following commands:
 ```
 $ conda create --name genExp python=3.10.13 r-base=4.2.3 && \\
     conda activate genExp && \\
-    pip install -r requirements.txt
+    pip install -r requirements.txt && \\
+    Rscript scripts/install_requirements.R
 ```
-### Install SWI-Prolog
+#### Install SWI-Prolog
 
 Follow download and install instructions [here](https://www.swi-prolog.org/download/stable). It can also be installed using package managers such as apt, snap, and brew.
 
-### Install MiniZinc
+#### Install MiniZinc
 
 At parts of the experiment planning process, the workflow makes use of PLAID [1]. In order to run this, one needs to have Minizinc (tested with v.2.8.7) installed. Instructions can be found on the [PLAID GitHub]( https://github.com/pharmbio/plaid).
 
-### Install RMLMapper
+#### Install RMLMapper
 
 Run `scripts/install_rml.sh` to install the RMLMapper JAR in `/opt/tools`. If you decide to install this somewhere else in your filesystem, you will need to change the `RMLMAPPER_JAR` variable in `map_protocols.sh`.
 
