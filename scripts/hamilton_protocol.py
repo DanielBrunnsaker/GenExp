@@ -58,7 +58,7 @@ def hamilton_protocol(output_folder):
         print('  -Rescue-agent found in compound library!')
     except:
         supplement_stock_concentration = input(
-            f"  -Please provide {supplement_name} stock concentration (recommended at least {5*compound_dict['supplement'][1]}): ")
+            f'  -Please provide {supplement_name} stock concentration (5× higher concentration than suggested is recommended, in a parseable form, e.g. 5mM or "150% (w/v)"): ')
 
     try:
         negative_concentrations = find_rows_by_inchikey(EXPERIMENT_DIR / '../../data/compound_library/library.xlsx',
@@ -68,7 +68,7 @@ def hamilton_protocol(output_folder):
         print('  -Negative control found in compound library!')
     except:
         negative_stock_concentration = input(
-            f"  -Please provide {negative_control_name} stock concentration (recommended at least {5*compound_dict['negative_control'][1]}): ")
+            f'  -Please provide {negative_control_name} stock concentration (5× higher concentration than suggested is recommended, in a parseable form, e.g. 5mM or "150% (w/v)"): ')
 
     try:
         treatment_concentrations = find_rows_by_inchikey(EXPERIMENT_DIR / '../../data/compound_library/library.xlsx',
@@ -78,7 +78,7 @@ def hamilton_protocol(output_folder):
         print('  -Treatment compound found in compound library! \n')
     except:
         treatment_stock_concentration = input(
-            f"  -Please provide {treatment_name} stock concentration (recommended at least {5*compound_dict['treatment'][1]}): ")
+            f'  -Please provide {treatment_name} stock concentration (a 5× higher concentration than suggested is recommended, in a parseable form, e.g. 5mM or "150% (w/v)"): ')
 
     # Initialize dosing table with necessary columns
     dosing_table = pd.DataFrame(columns=['Summary', 'Media (uL)', 'Inoculated Media (uL)',

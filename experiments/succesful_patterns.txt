@@ -8,3 +8,4 @@ glutamine:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),c
 lysine:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,acetic acid)
 histidine:Cell(A):-exhibits_phenotype(A,decreased resistance to chemicals,B,C),compound_name(B,zinc dichloride)
 valine:Cell(A):-exhibits_phenotype(A,increased oxidative stress resistance,B,C),compound_name(B,paraquat)
+proline:Cell(A):-exhibits_phenotype(A,decreased hyperosmotic stress resistance,B,C),compound_name(B,sucrose),condition(C,Media containing 30% (w/v) sucrose)

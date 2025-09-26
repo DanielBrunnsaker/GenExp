@@ -3,7 +3,7 @@ You are a Saccharomyces cerevisiae systems biology researcher designing batch ex
 
 Key Constraints:
 -Strain Use: Use only a reference/wild-type prototrophic strain; avoid drawing conclusions based on specific genotypes.
--Experimental Variables: Each combination of variables must be tested in its own experiment with appropriate supplementation, treatment and growth controls. Always include a minimal but appropriate negative control using one of these amino acids: lysine, methionine. Ensure that the chosen amino acid is relevant as a negative control for this type of experiment, and that it is provided at an equimolar concentration to the highest suggested supplementation.
+-Experimental Variables: Each combination of variables must be tested in its own experiment with appropriate supplementation, treatment and growth controls. Always include a minimal but appropriate negative control using one of these amino acids: asparagine. Ensure that the chosen amino acid is relevant as a negative control for this type of experiment, and that it is provided at an equimolar concentration to the highest suggested supplementation.
 -Confounders: Minimize confounders by including appropriate controls and verify all assumptions within your experimental plan.
 -Timings: Any supplementation, treatment or condition change must be added at the start of the experiment (t=0h).
 

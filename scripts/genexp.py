@@ -13,6 +13,7 @@ import argparse
 import os
 import config
 import re
+import sys
 
 # Import functions from utility scripts
 from pattern_selection import pattern_selection
@@ -211,8 +212,21 @@ def experiment_pipeline(target, alpha, N, override, override_negative):
     # metadata derived from the autoformalized experimental protocol
     print("Generating plate layout...")
     finalize_layout(output_folder)
-    design_dispensing_layout(output_folder)
-    print("✅ Experimental plan finalized! \n")
+    
+    while True:
+        try:
+            design_dispensing_layout(output_folder)
+            print("✅ Experimental plan finalized! \n")
+            break
+        except Exception as e:
+            print(f"Error: {e}")
+            if input("Retry? (y/n): ").strip().lower() != "y":
+                sys.exit("Aborting script.")
+            
+    
+    
+    #design_dispensing_layout(output_folder)
+    #print("✅ Experimental plan finalized! \n")
     
     print("Generating overlord script...")
     generate_overlord_script(output_folder)
